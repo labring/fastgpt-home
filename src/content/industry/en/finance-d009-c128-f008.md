@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Shipping and Port Research
-meta_description: Data sources for shipping and port research reports include public statistical data from transportation authorities, operational reports released by
+meta_description: Tool Calling and Plugins for Shipping and Port Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

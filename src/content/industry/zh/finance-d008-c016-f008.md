@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光伏智能尽调报告的工具调用与插件
-meta_description: 光伏尽调的数据来源包括项目备案系统、设备厂商出厂检测报告、电站运维平台、区域电网并网数据库。更新节奏：基础备案数据随项目立项进度更新，设备参数数据随厂商批次
+meta_description: 光伏智能尽调报告的工具调用与插件：光伏智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 光伏、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

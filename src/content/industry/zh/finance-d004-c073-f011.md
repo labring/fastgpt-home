@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 操作规程合规的文档解析与分块
-meta_description: 来源为金融、保险、理财机构内部合规部门发布的操作规程文档，随监管政策调整、内部流程优化不定期更新。文档多为章节式结构化文件，包含条款编号、适用场景、操作步骤
+meta_description: 操作规程合规的文档解析与分块：操作规程合规的文档解析与分块，涵盖配置与验证建议。
 keywords: 操作规程、合规与内部制度问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

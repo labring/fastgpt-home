@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 固废处理收益率的HTTP 接口与外部系统
-meta_description: 本场景属于金融理财领域的收益率与行情日报播报细分方向，核心品类为固废处理，其数据源包含企业内部ERP系统的处置台账、物联网称重与能耗监测设备的实时数据、当地
+meta_description: 固废处理收益率的HTTP 接口与外部系统：固废处理收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 固废处理、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

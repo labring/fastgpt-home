@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 汽车零部件智能尽调报告的工作流编排
-meta_description: 汽车零部件智能尽调的数据主要来自主机厂BOM系统、供应商出厂质检报告、海关通关单证及第三方合规检测报告。数据更新节奏因来源不同存在差异，主机厂BOM每季度同
+meta_description: 汽车零部件智能尽调报告的工作流编排：汽车零部件智能尽调报告的工作流编排，涵盖配置与验证建议
 keywords: 汽车零部件、智能尽调报告、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

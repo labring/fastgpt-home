@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 投资平台营销内容的部署与升级
-meta_description: 投资平台的营销内容数据主要来源于官方投研报告、产品说明书、用户常见问答库、活动规则文档。数据更新节奏随运营活动调整，常规投研内容按季度或月度更新，活动类内容
+meta_description: 投资平台营销内容的部署与升级：投资平台营销内容的部署与升级，涵盖配置与验证建议。
 keywords: 投资平台、营销内容与获客、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

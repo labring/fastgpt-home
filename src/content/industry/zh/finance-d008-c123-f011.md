@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 能源金属智能尽调报告的文档解析与分块
-meta_description: 能源金属智能尽调报告的数据来源涵盖行业协会月度/季度供需简报、矿山企业年度储量报告、海关进出口统计文档、现货市场价格台账及第三方调研纪要。数据更新节奏差异明
+meta_description: 能源金属智能尽调报告的文档解析与分块：能源金属智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 能源金属、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

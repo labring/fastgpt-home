@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c100-f001
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: HTTP Interfaces and External Systems for Property Management
-meta_description: Data related to property management yield rates is sourced from three core business systems: property project fee management systems, operation cost
+meta_title: HTTP Interfaces and External Systems for Property
+meta_description: HTTP Interfaces and External Systems for Property Management Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

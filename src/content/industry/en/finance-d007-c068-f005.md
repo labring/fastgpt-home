@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompting for Investment Platform
-meta_description: Market and yield daily report data for investment platforms comes from exchange market data push APIs, reconciliation data from custody and clearing
+meta_description: Multi-turn Dialogue and Prompting for Investment Platform Yield Data
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

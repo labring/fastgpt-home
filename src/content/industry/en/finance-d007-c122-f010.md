@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Database and Operations for Joint-Stock Bank Yield Rates
-meta_description: Data sources for joint-stock bank yield rate data include the bank’s own asset and liability management system, wealth management subsidiary product
+meta_description: Database and Operations for Joint-Stock Bank Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 房建工程研报检索的知识库检索与召回
-meta_description: 房建工程研报的数据主要来自中国建筑装饰协会公开行业分析报告、各地住建部门发布的房建工程统计公报、专业建筑咨询机构的定制研报、上市房企的工程板块公告。更新节奏
+meta_description: 房建工程研报检索的知识库检索与召回：房建工程研报检索的知识库检索与召回，涵盖配置与验证建议
 keywords: 房建工程、研报检索与问答、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

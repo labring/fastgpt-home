@@ -4,8 +4,8 @@ slug: /en/industry/finance-d006-c134-f013
 page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
-meta_title: Knowledge Base Retrieval and Recall for Condiment Investment
-meta_description: Condiment investment research data sources include China Condiment Association public datasets, regular reports of listed condiment enterprises
+meta_title: Knowledge Base Retrieval and Recall for Condiment
+meta_description: Knowledge Base Retrieval and Recall for Condiment Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

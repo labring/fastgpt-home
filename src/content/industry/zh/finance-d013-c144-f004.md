@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通信服务融资日报的向量模型与索引
-meta_description: 通信服务融资日报的数据来源包括运营商公开招投标公告、通信设备商及服务商的融资备案公示、行业监测平台的公开披露信息。更新节奏为每日更新，覆盖当日披露的全品类通
+meta_description: 通信服务融资日报的向量模型与索引：通信服务融资日报的向量模型与索引，涵盖配置与验证建议
 keywords: 通信服务、融资日报、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

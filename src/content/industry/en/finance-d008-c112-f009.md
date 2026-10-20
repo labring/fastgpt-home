@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for White Goods Smart Due
-meta_description: White goods data sources cover multiple types of official public documents and business data. These include public test reports from the National
+meta_description: Citation Sources and Traceability for White Goods Smart Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -27,7 +27,7 @@ Additionally, white goods model hierarchies are complex. Precise SKU matching is
 ## Configuration Settings
 | Configuration Item | Recommended Value | Rationale |
 | --- | --- | --- |
-| `REFERENCE_TEMPLATE` | `{{content}} (Source: {{source_name}}, {{publish_date}}, {{document_type}})` | Adapts to traceability labeling for multiple white goods data sources, clearly displays required source information for compliance, and meets due diligence report archiving requirements |
+| `traceability details` | `the configured value (the configured source field, the configured value, the configured value)` | Adapts to traceability labeling for multiple white goods data sources, clearly displays required source information for compliance, and meets due diligence report archiving requirements |
 | `SIMILARITY_THRESHOLD` | `0.75-0.85` | White goods have many SKU models and high parameter similarity. A threshold that is too low will recall irrelevant model data, while a threshold that is too high will miss valid parameter sources |
 | `RECALL_LIMIT` | `Top 8 entries` | White goods parameter documents typically have long individual content. Too many recalled entries will cause context redundancy, while too few will fail to cover all parameter dimensions required for complete due diligence |
 | `PARSE_FILE_TIMEOUT_SECONDS` | `600 seconds` | Some large brand quality inspection PDF documents include multi-page charts and seal verification, resulting in long parsing times. A timeout setting that is too short will cause parsing failures |

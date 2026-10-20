@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interfaces and External Systems for State-owned Large
-meta_description: Yield data for state-owned large banks originates from public disclosure channels of official self-operated financial products. These channels include
+meta_description: HTTP Interfaces and External Systems for State-owned Large Bank Yield Data
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

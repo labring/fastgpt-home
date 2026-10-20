@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 综合服务收益率的多轮对话与提示词
-meta_description: 综合服务收益率行情日报的数据来源为合规金融行情接口与交易所公开披露信息，更新节奏为每日收盘后生成当日数据集，次个交易日上午完成全量更新。文档以结构化表格为核
+meta_description: 综合服务收益率的多轮对话与提示词：综合服务收益率的多轮对话与提示词，涵盖配置与验证建议
 keywords: 综合服务、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

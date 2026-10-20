@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 游戏投研知识库建设的向量模型与索引
-meta_description: 游戏投研的数据来源包括游戏厂商官方公告、第三方行业研究报告、玩家社区讨论内容、版号审批公开信息、竞品研发拆解文档。更新节奏随数据类型差异较大：官方版本公告随
+meta_description: 游戏投研知识库建设的向量模型与索引：游戏投研知识库建设的向量模型与索引，涵盖配置与验证建议
 keywords: 游戏、投研知识库建设与治理、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 炼化投研知识库建设的引用来源与溯源
-meta_description: 炼化领域的投研数据源主要包括炼化装置实时运行日志、进料与产品质检报告、行业工艺标准文档、区域能源政策文件、炼化产品市场报价数据。实时运行数据按小时或分钟级更
+meta_description: 炼化投研知识库建设的引用来源与溯源：炼化投研知识库建设的引用来源与溯源，涵盖配置与验证建议
 keywords: 炼化、投研知识库建设与治理、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

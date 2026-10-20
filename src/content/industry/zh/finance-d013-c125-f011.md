@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航天装备融资日报的文档解析与分块
-meta_description: 航天装备融资日报的数据主要来自军工集团公开公告、航天院所项目公示、证券市场军工行业研报及政府采购航天装备采购信息。更新节奏为每个工作日更新单份日报，部分月度
+meta_description: 航天装备融资日报的文档解析与分块：航天装备融资日报的文档解析与分块，涵盖配置与验证建议
 keywords: 航天装备、融资日报、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

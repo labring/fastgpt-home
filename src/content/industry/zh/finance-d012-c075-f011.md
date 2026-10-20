@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 整车营销内容的文档解析与分块
-meta_description: 整车营销内容的数据主要来自汽车金融品牌官方营销物料库、经销商推广文档、车型参数公告及线下活动讲稿。更新节奏随新车发布、改款及季度营销方案调整，频率集中在车型
+meta_description: 整车营销内容的文档解析与分块：整车营销内容的文档解析与分块，涵盖配置与验证建议。
 keywords: 整车、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

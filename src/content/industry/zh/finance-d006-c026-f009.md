@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 出版投研知识库建设的引用来源与溯源
-meta_description: 出版投研的数据主要来自行业协会发布的产业监测报告、出版机构内部的经营台账、版权交易档案、专业期刊刊载的出版业态分析文章，以及已公开的上市出版企业财报片段。数
+meta_description: 出版投研知识库建设的引用来源与溯源：出版投研知识库建设的引用来源与溯源，涵盖配置与验证建议
 keywords: 出版、投研知识库建设与治理、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

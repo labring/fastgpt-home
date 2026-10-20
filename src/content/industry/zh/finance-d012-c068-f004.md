@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 投资平台营销内容的向量模型与索引
-meta_description: 投资平台的营销内容包含合规投教文章、理财产品推广文案、活动规则说明等物料，来源为平台内部运营物料库与合规审核后的发布稿件。更新随新产品上线、营销活动启动、合
+meta_description: 投资平台营销内容的向量模型与索引：投资平台营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 投资平台、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

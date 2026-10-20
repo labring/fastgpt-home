@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 证券财报分析的HTTP 接口与外部系统
-meta_description: 证券财报的数据来源为沪深北交易所披露的公开定期报告与临时公告，更新节奏集中在季度末、年度结束后的固定披露窗口期，临时公告随对应事件触发更新。文档结构包含结构
+meta_description: 证券财报分析的HTTP 接口与外部系统：证券财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 证券、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

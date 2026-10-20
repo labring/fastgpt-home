@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 包装印刷智能尽调报告的部署与升级
-meta_description: 包装印刷智能尽调报告的数据来源包括企业内部印刷生产ERP导出的订单表、物料领用明细、质检报告单，以及上游纸材供应商的供货结算单。数据更新节奏随业务类型区分：
+meta_description: 包装印刷智能尽调报告的部署与升级：包装印刷智能尽调报告的部署与升级，涵盖配置与验证建议
 keywords: 包装印刷、智能尽调报告、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

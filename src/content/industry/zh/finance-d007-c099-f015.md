@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 燃气收益率的部署与升级
-meta_description: 燃气收益率与行情数据主要来自公用事业行业监管平台、区域燃气交易中心及上游气源供应商公开渠道。数据更新节奏为每日更新一次，覆盖当日交易时段的价格变动与收益率测
+meta_description: 燃气收益率的部署与升级：燃气收益率的部署与升级，涵盖配置与验证建议。。。。。。。
 keywords: 燃气、收益率与行情日报播报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

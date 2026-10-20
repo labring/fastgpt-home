@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 消费建材智能尽调报告的HTTP 接口与外部系统
-meta_description: 消费建材智能尽调报告的数据主要来自品牌厂商SKU台账、住建部门建材备案数据库、工程招投标中标公示及项目进场验收记录。数据更新节奏因类型不同：SKU基础信息每
+meta_description: 消费建材智能尽调报告的HTTP 接口与外部系统：消费建材智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 消费建材、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

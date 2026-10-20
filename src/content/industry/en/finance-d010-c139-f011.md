@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Bidding and Tender Reports
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Qualification Compliance
-meta_description: Qualification compliance bidding-related data comes primarily from two types of documents. First, qualification review lists released by bidders
+meta_description: Document Parsing and Chunking for Qualification Compliance Bidding
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 特钢营销内容的工作流编排
-meta_description: 特钢相关数据主要来自生产管理系统、质检部门报送台账、销售询价记录与库存管理模块。生产类数据每日更新，库存数据每4小时同步更新，客户询价记录实时录入。数据以结
+meta_description: 特钢营销内容的工作流编排：特钢营销内容的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 特钢、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

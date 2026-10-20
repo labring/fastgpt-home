@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光模块财报分析的向量模型与索引
-meta_description: 光模块财报的数据来源包括上市公司公开披露的定期报告、光模块行业研究机构发布的专项报告、厂商自主披露的经营简报。更新节奏为上市公司按季度、年度固定更新，行业报
+meta_description: 光模块财报分析的向量模型与索引：光模块财报分析的向量模型与索引，涵盖配置与验证建议
 keywords: 光模块、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Aquaculture
-meta_description: Aquaculture financing daily report data comes from three sources: financing application materials submitted by breeding entities, breeding record
+meta_description: Multi-turn Dialogue and Prompt Engineering for Aquaculture Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

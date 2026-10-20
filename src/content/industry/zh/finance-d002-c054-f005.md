@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多应用路由一体化 AI 平台的多轮对话与提示词
-meta_description: 面向金融保险理财场景的多应用路由，数据来源包括平台内已部署的子应用元数据、用户对话流转记录、路由匹配规则配置，还包含用户风险等级、交易场景等专属标签。数据更
+meta_description: 多应用路由一体化 AI 平台的多轮对话与提示词：多应用路由一体化 AI 平台的多轮对话与提示词，涵盖配置与验证建议
 keywords: 多应用路由、一体化 AI 平台与多应用编排、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

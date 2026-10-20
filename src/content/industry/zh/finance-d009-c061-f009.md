@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程机械研报检索的引用来源与溯源
-meta_description: 工程机械研报的来源包括中国工程机械工业协会、头部整机厂商公开披露内容、第三方行业咨询机构的公开与定制研报。更新节奏按季度发布行业整体市场报告，月度发布挖掘机
+meta_description: 工程机械研报检索的引用来源与溯源：工程机械研报检索的引用来源与溯源，涵盖配置与验证建议
 keywords: 工程机械、研报检索与问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

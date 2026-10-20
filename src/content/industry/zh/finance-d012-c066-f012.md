@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 房建工程营销内容的模型接入与配置
-meta_description: 房建工程的营销内容数据主要来自项目立项台账、预售许可公示、在售户型参数表、施工进度节点文档、样板间实拍资料等。数据更新随项目阶段性节点推进，从拿地到交付期间
+meta_description: 房建工程营销内容的模型接入与配置：房建工程营销内容的模型接入与配置，涵盖配置与验证建议
 keywords: 房建工程、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 白酒研报检索的文档解析与分块
-meta_description: 白酒研报的数据主要来自券商研究所、食品饮料行业协会、上市酒企公开财报与公告。更新节奏随行业动态与财报周期调整，月度发布深度分析报告，周度发布行业跟踪报告。文
+meta_description: 白酒研报检索的文档解析与分块：白酒研报检索的文档解析与分块，涵盖配置与验证建议。
 keywords: 白酒、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

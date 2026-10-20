@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物业管理融资日报的工具调用与插件
-meta_description: 物业管理融资日报的数据主要来自物业项目的物业费收缴台账、合作银行的放款流水、区域融资服务平台的审批回执。更新节奏为每日凌晨更新前一日的全量数据，单次导出的文
+meta_description: 物业管理融资日报的工具调用与插件：物业管理融资日报的工具调用与插件，涵盖配置与验证建议
 keywords: 物业管理、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

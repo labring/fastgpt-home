@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 燃气研报检索的向量模型与索引
-meta_description: 燃气研报的数据主要来自行业协会公开报告、能源监管机构公示数据、燃气上市企业年度及季度报告、第三方能源咨询机构的专项分析文档。更新节奏包含固定月度/季度常规更
+meta_description: 燃气研报检索的向量模型与索引：燃气研报检索的向量模型与索引，涵盖配置与验证建议。
 keywords: 燃气、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

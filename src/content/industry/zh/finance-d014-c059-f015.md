@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工业金属财报分析的部署与升级
-meta_description: 工业金属财报及行业数据主要来源于境内外期货交易所公开报告、上市企业定期年报、行业协会月度供需调研数据。更新节奏分为年度完整财报、季度经营数据、月度行业动态更
+meta_description: 工业金属财报分析的部署与升级：工业金属财报分析的部署与升级，涵盖配置与验证建议。
 keywords: 工业金属、财报分析与报告生成、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

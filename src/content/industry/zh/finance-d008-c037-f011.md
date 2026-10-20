@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 卫星通信智能尽调报告的文档解析与分块
-meta_description: 卫星通信智能尽调报告的数据主要来源于卫星测控链路日志、地面站接收的帧数据、行业合规性文档及卫星运营商提供的运维台账。数据更新节奏分为准实时链路状态数据、按周
+meta_description: 卫星通信智能尽调报告的文档解析与分块：卫星通信智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 卫星通信、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

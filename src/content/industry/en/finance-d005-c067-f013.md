@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Customer Service and Account Enquiries
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for Complaint Ticket
-meta_description: Complaint ticket data primarily comes from enterprise customer service systems, CRM ticket modules, and internal business flow records. Updates occur
+meta_description: Knowledge Base Retrieval and Recall for Complaint Ticket Customer Service
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -23,7 +23,7 @@ Multi-source heterogeneous data sources require configuring cross-system field m
 | Configuration Item | Recommended Value | Rationale |
 | --- | --- | --- |
 | `PARSE_FILE_MAX_SIZE` | 20 MB | Complaint ticket attachments are mostly chat records and screenshot-transcribed text. Single file size is moderate, which avoids parsing timeouts. |
-| `Incremental Sync Interval` | 5 minutes | Complaint tickets have high update frequency. Latest ticket content must be synchronized to the knowledge base in a timely manner. Applies to FastGPT V4.14.3 and later versions. |
+Reference only; verify against the target FastGPT release and deployment documentation.
 | `Chunk Length` | 800–1200 characters | Complaint request text has moderate length. Too long chunks damage semantic coherence, too short chunks lose context information. |
 | `Recall Count` | Top 10 entries | Standardized solutions for complaint tickets have a concentrated coverage scope. A small number of recall entries meets customer service query needs. |
 | `Similarity Threshold` | 0.75–0.85 | Balances recall precision and coverage, avoids incorrectly recalling irrelevant historical tickets or general solutions. |

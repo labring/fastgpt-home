@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医疗器械研报检索的向量模型与索引
-meta_description: 医疗器械研报的数据主要来源于医药行业专业数据库、医疗器械监管机构公开注册文件、药企研发进度公告及第三方医药咨询机构报告。更新节奏分为不定期（如监管政策变动、
+meta_description: 医疗器械研报检索的向量模型与索引：医疗器械研报检索的向量模型与索引，涵盖配置与验证建议
 keywords: 医疗器械、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

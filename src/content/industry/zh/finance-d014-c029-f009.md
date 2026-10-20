@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 包装印刷财报分析的引用来源与溯源
-meta_description: 包装印刷行业的财报数据来源包括上市公司法定披露的定期报告、全国包装印刷相关行业协会的月度统计资料，以及企业公开的投资者关系记录。数据更新节奏遵循法定披露周期
+meta_description: 包装印刷财报分析的引用来源与溯源：包装印刷财报分析的引用来源与溯源，涵盖配置与验证建议
 keywords: 包装印刷、财报分析与报告生成、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c043-f005
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Dialogue and Prompting for Commercial Real Estate
-meta_description: Commercial real estate yield and market trend data primarily comes from commercial building operation management systems, regional business district
+meta_title: Multi-turn Dialogue and Prompting for Commercial Real
+meta_description: Multi-turn Dialogue and Prompting for Commercial Real Estate Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -27,7 +27,7 @@ Additionally, batch returns of structured data may consume significant context w
 | Configuration Item | Recommended Value Range | Rationale |
 |---|---|---|
 | `maxContext` | 8000–12000 characters | Commercial real estate data has many fields and long individual project data. Sufficient historical context must be retained to track project and time dimensions across multi-turn queries |
-| `prompt_template` | "Please reply to user questions based on the following commercial real estate data. Each returned data item must be marked with its corresponding unit. Only use content from the provided data sources, and no external information may be introduced. Current time: {{current_time}}" | Mandatory constraints for unit marking and data source scope are required. System time variables must also be bound to ensure accurate timestamping |
+| `prompt_template` | "Please reply to user questions based on the following commercial real estate data. Each returned data item must be marked with its corresponding unit. Only use content from the provided data sources, and no external information may be introduced. Current time: example value" | Mandatory constraints for unit marking and data source scope are required. System time variables must also be bound to ensure accurate timestamping |
 | `recall_top_k` | 3–5 entries | Commercial real estate data is grouped by business district or project. Only a small number of core project data of interest to the user need to be recalled per query to avoid context overload |
 | `history_save_mode` | Full save of conversation context | Multi-turn dialogue must track query conditions such as projects, time, and indicators that the user refines step-by-step. Complete historical records ensure context consistency for subsequent queries |
 | `PARSE_FILE_TIMEOUT_SECONDS` | 300 seconds | Commercial real estate data documents may contain a large number of structured entries, which require longer parsing time. Sufficient processing time must be reserved |
@@ -38,7 +38,7 @@ Additionally, batch returns of structured data may consume significant context w
 ## Three Common Misconfiguration Issues
 - Symptom: Conversation history is not saved, and auto-replied content is empty when the session is reopened. Cause: Full save for `history_save_mode` is not enabled, or the configuration is set to only save user questions and ignore AI reply content.
 - Symptom: Replies from a previous AI conversation in the workflow are carried over to the final result without being filtered. Cause: No context filtering rules are configured in the prompt for the second AI conversation, or only the current round of input content is not specified.
-- Symptom: The `{{current_time}}` variable called in the prompt does not return the current day’s date, or the format does not meet requirements. Cause: The output format of the system time variable is not correctly bound, the prompt does not explicitly require the use of the current system date, or custom time is not specified.
+- Symptom: The `example value` variable called in the prompt does not return the current day’s date, or the format does not meet requirements. Cause: The output format of the system time variable is not correctly bound, the prompt does not explicitly require the use of the current system date, or custom time is not specified.
 
 ## How to Verify Proper Configuration
 - Initiate a test conversation, ask about the rental return rate of a specific commercial real estate project, then close and reopen the session. Confirm that historical conversations and AI replies are still displayed normally.

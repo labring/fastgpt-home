@@ -4,8 +4,8 @@ slug: /en/industry/finance-d006-c131-f013
 page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
-meta_title: Knowledge Base Retrieval and Recall for Decoration and
-meta_description: The data for decoration and fit-out investment research comes mainly from industry construction specification atlases, material supplier quotation
+meta_title: Knowledge Base Retrieval and Recall for Decoration
+meta_description: Knowledge Base Retrieval and Recall for Decoration and Fit-Out Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

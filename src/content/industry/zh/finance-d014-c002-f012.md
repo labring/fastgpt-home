@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专业服务财报分析的模型接入与配置
-meta_description: 专业服务场景下的财报数据主要来自交易所官方披露平台、第三方合规财报数据库与上市公司公开公告。数据更新节奏分为固定周期与临时触发两类：季度报、年报按监管要求在
+meta_description: 专业服务财报分析的模型接入与配置：专业服务财报分析的模型接入与配置，涵盖配置与验证建议
 keywords: 专业服务、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

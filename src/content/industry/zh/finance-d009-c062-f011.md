@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 广告营销研报检索的文档解析与分块
-meta_description: 广告营销研报的数据主要来自行业协会发布的月度/季度行业分析文档、广告主内部的投放结案报告、第三方监测机构的媒体曝光与转化数据文档、营销平台的投放效果报表。更
+meta_description: 广告营销研报检索的文档解析与分块：广告营销研报检索的文档解析与分块，涵盖配置与验证建议
 keywords: 广告营销、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

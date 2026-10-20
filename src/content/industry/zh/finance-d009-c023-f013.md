@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 军工电子研报检索的知识库检索与召回
-meta_description: 军工电子研报的数据来源包括行业协会公开文档、券商军工行业研究报告、国防科技领域期刊及军工集团披露的业务公告。更新节奏随军工型号立项、定型、量产节点动态调整，
+meta_description: 军工电子研报检索的知识库检索与召回：军工电子研报检索的知识库检索与召回，涵盖配置与验证建议
 keywords: 军工电子、研报检索与问答、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

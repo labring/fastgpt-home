@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 酒店餐饮融资日报的模型接入与配置
-meta_description: 酒店餐饮融资日报数据主要来自商户自有经营系统（PMS、POS收银端）、供应链采购台账及地方餐饮经营报备平台。数据更新节奏为每日晚间完成当日全量数据归集，次日
+meta_description: 酒店餐饮融资日报的模型接入与配置：酒店餐饮融资日报的模型接入与配置，涵盖配置与验证建议
 keywords: 酒店餐饮、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

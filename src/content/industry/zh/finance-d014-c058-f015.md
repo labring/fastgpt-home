@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小金属财报分析的部署与升级
-meta_description: 小金属财报分析的数据主要来自上市企业年度/季度报告、国内合规大宗商品交易平台公告、行业协会公开统计文件。数据更新以季度、年度为固定周期，临时公告随市场异动发
+meta_description: 小金属财报分析的部署与升级：小金属财报分析的部署与升级，涵盖配置与验证建议。。。
 keywords: 小金属、财报分析与报告生成、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

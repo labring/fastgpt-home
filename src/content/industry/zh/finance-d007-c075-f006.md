@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 整车收益率的对话日志与审计
-meta_description: 整车品类的收益率与行情数据，主要来自国内证券交易所公开交易数据、第三方汽车行业数据服务商的产销与财务披露信息，以及上市整车企业的官方公告。数据以每日更新的结
+meta_description: 整车收益率的对话日志与审计：整车收益率的对话日志与审计，涵盖配置与验证建议。。。
 keywords: 整车、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

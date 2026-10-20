@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 炼化研报检索的部署与升级
-meta_description: 炼化研报数据主要来自金融领域机构发布的行业专题研报、国内炼化企业公开年报、行业协会月度运行简报。更新节奏以月度、季度为主，部分装置动态报告随项目进度更新。文
+meta_description: 炼化研报检索的部署与升级：炼化研报检索的部署与升级，涵盖配置与验证建议。。。。。
 keywords: 炼化、研报检索与问答、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

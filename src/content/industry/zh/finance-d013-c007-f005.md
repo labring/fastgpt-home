@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 乳制品融资日报的多轮对话与提示词
-meta_description: 数据来源为公开工商变更信息、行业媒体融资专栏、第三方企业融资监测平台。更新节奏为每日更新，遇法定节假日顺延至第一个工作日发布。文档结构为单条融资条目包含企业
+meta_description: 乳制品融资日报的多轮对话与提示词：乳制品融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 乳制品、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

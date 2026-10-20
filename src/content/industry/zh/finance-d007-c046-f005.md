@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 固废处理收益率的多轮对话与提示词
-meta_description: 固废处理收益率相关数据主要来自项目运营台账、环保监管上报数据、资源化产品（再生建材、沼气等）的交易行情。更新节奏：项目日度运营数据按日更新，资源化产品行情随
+meta_description: 固废处理收益率的多轮对话与提示词：固废处理收益率的多轮对话与提示词，涵盖配置与验证建议
 keywords: 固废处理、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

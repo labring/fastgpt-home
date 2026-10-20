@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 煤化工智能尽调报告的工具调用与插件
-meta_description: 煤化工领域的数据源包括行业协会月度报送的生产台账、大宗商品现货平台的日度成交数据、生态环境部门的季度合规检测报告，以及企业内部的月度能耗记录。数据更新节奏分
+meta_description: 煤化工智能尽调报告的工具调用与插件：煤化工智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 煤化工、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

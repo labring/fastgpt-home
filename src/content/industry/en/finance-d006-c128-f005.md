@@ -4,8 +4,8 @@ slug: /en/industry/finance-d006-c128-f005
 page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Dialogue and Prompt Engineering for Maritime Port
-meta_description: Maritime port investment research data originates from structured reports from port operation management systems, freight rate and capacity data
+meta_title: Multi-turn Dialogue and Prompt Engineering for Maritime
+meta_description: Multi-turn Dialogue and Prompt Engineering for Maritime Port Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

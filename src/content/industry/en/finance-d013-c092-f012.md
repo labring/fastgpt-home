@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for Consumer Electronics
-meta_description: Data comes primarily from public industry monitoring platforms, brand supply chain disclosure information, and payment collection records from offline
+meta_description: Model Access and Configuration for Consumer Electronics Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -33,7 +33,7 @@ The daily full update feature requires scheduled trigger task configuration duri
 > The parameter values provided on this page are common recommended starting points for configuration. Actual values are affected by material form, data volume, and business rules. Specific issues require individual analysis. It is recommended to test on your own samples before finalizing settings.
 
 ## Three Common Misconfigurations
-- Phenomenon: Model calls throw errors. OneAPI logs display the request token as "fastgpt". Cause: The token parameter in FastGPT model access configuration was not properly filled, or was overwritten by the default placeholder.
+- Phenomenon: Model calls throw errors. OneAPI logs display the request token as "fastgpt". Cause: The token parameter in FastGPT model access configuration was not properly filled, or was overwritten by the default pending verification.
 - Phenomenon: Model extracts text content correctly, but cannot assign extracted values to target fields. Cause: Structured field mapping rules were not configured, or the system prompt did not clarify field assignment logic.
 - Phenomenon: Scheduled model parsing tasks time out and fail. Cause: The `PARSE_FILE_TIMEOUT_SECONDS` parameter was not adjusted, and the default timeout duration is insufficient for processing full consumer electronics financing daily report data.
 

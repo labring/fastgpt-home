@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade of Intelligent Due Diligence Reports
-meta_description: The data for building construction intelligent due diligence reports comes from project construction logs, supervision on-site inspection records
+meta_description: Deployment and Upgrade of Intelligent Due Diligence Reports for Building Construction Projects
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

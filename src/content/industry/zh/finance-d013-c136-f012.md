@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 贵金属融资日报的模型接入与配置
-meta_description: 贵金属融资日报数据主要来自国内贵金属交易所行情接口、商业银行贵金属融资业务系统及行业自律组织公开统计端口。每日固定在次日凌晨完成全量更新，单份日报文档包含当
+meta_description: 贵金属融资日报的模型接入与配置：贵金属融资日报的模型接入与配置，涵盖配置与验证建议
 keywords: 贵金属、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

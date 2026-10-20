@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Commercial
-meta_description: Data related to commercial property yield rates comes from rent collection records in internal property operation management systems, public area
+meta_description: Multi-turn Dialogue and Prompt Engineering for Commercial Property Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

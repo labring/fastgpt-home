@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 炼化研报检索的引用来源与溯源
-meta_description: 炼化研报数据主要来自中国石油和化学工业联合会、地方石化行业协会、专业第三方咨询机构及头部炼化企业公开披露文件。更新节奏分三类：行业周报每周更新，月度供需分析
+meta_description: 炼化研报检索的引用来源与溯源：炼化研报检索的引用来源与溯源，涵盖配置与验证建议。
 keywords: 炼化、研报检索与问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

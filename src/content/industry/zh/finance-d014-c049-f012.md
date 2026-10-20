@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 基建工程财报分析的模型接入与配置
-meta_description: 基建工程财报数据主要来源于项目台账、招投标文件、月度进度报表、季度及年度结算报告，更新节奏随项目周期与官方披露要求调整。单项目财报文档通常包含项目概况、工程
+meta_description: 基建工程财报分析的模型接入与配置：基建工程财报分析的模型接入与配置，涵盖配置与验证建议
 keywords: 基建工程、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

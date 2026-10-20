@@ -4,8 +4,8 @@ slug: /en/industry/finance-d013-c049-f005
 page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Conversation and Prompt Engineering for
-meta_description: The data sources for infrastructure construction financing daily reports primarily include public infrastructure project approval announcements from
+meta_title: Multi-turn Conversation and Prompt Engineering
+meta_description: Multi-turn Conversation and Prompt Engineering for Infrastructure Construction Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

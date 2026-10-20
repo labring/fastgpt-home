@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 整车研报检索的工作流编排
-meta_description: 整车研报数据主要来自持牌证券研究机构、汽车行业第三方数据平台及车企官方公告。更新节奏随核心事件触发，车企新车发布、财报披露、行业展会期间会集中更新，常规行业
+meta_description: 整车研报检索的工作流编排：整车研报检索的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 整车、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

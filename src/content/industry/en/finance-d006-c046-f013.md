@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for Solid Waste
-meta_description: Solid waste treatment investment research data is sourced from solid waste disposal ledgers and hazardous waste management permit platform data
+meta_description: Knowledge Base Retrieval and Recall for Solid Waste Treatment Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

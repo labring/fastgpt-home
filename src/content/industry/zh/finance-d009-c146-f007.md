@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通用设备研报检索的工作流编排
-meta_description: 通用设备研报的数据主要来自券商机械设备行业研究报告、行业协会月度运行数据、上市公司定期公告。更新随行业事件调整，常规跟踪报告定期发布，深度研报随财报披露周期
+meta_description: 通用设备研报检索的工作流编排：通用设备研报检索的工作流编排，涵盖配置与验证建议。
 keywords: 通用设备、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

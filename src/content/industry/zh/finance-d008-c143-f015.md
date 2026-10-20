@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 软件开发智能尽调报告的部署与升级
-meta_description: 软件开发智能尽调报告的数据来源包括项目代码仓库、第三方代码扫描工具输出、需求文档、测试报告、运维日志及合规性检查文件。数据更新节奏随项目迭代调整，每次版本发
+meta_description: 软件开发智能尽调报告的部署与升级：软件开发智能尽调报告的部署与升级，涵盖配置与验证建议
 keywords: 软件开发、智能尽调报告、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

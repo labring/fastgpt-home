@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 热力财报分析的知识库检索与召回
-meta_description: 热力品类的财报数据主要来自公用热力企业公开披露的季度、年度正式财报及临时运营公告，更新节奏与财报披露周期一致，按季度、年度固定更新，同时包含临时运营调整公告
+meta_description: 热力财报分析的知识库检索与召回：热力财报分析的知识库检索与召回，涵盖配置与验证建议
 keywords: 热力、财报分析与报告生成、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

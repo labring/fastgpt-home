@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦煤财报分析的向量模型与索引
-meta_description: 焦煤财报数据主要来自上市焦煤企业的金融披露定期财报、国内煤炭行业协会的月度产销统计报告、港口焦煤现货交易台账。更新节奏分为季度级的企业财报、月度级的行业供需
+meta_description: 焦煤财报分析的向量模型与索引：焦煤财报分析的向量模型与索引，涵盖配置与验证建议。
 keywords: 焦煤、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

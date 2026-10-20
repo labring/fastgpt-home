@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 免税智能尽调报告的向量模型与索引
-meta_description: 免税智能尽调报告的数据来源包括海关离岛免税监管台账、免税经营主体资质备案文件、离岛免税政策官方文档、月度经营统计报表。更新节奏分为两类：经营台账每日更新，政
+meta_description: 免税智能尽调报告的向量模型与索引：免税智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 免税、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c060-f006
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: Conversation Logging and Auditing for Engineering Consulting
-meta_description: This covers engineering consulting yield and market data for finance, wealth management, and insurance industries. Data sources include current
+meta_title: Conversation Logging and Auditing for Engineering
+meta_description: Conversation Logging and Auditing for Engineering Consulting Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

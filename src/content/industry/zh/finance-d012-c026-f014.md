@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 出版营销内容的表单与交互
-meta_description: 出版品类的核心数据来自金融机构内部选题管理系统、读者调研表单、电商渠道的金融类图书互动数据与内容分发后台。数据更新节奏分两类：选题库按季度同步调整，读者互动
+meta_description: 出版营销内容的表单与交互：出版营销内容的表单与交互，涵盖配置与验证建议。。。。。
 keywords: 出版、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 担保材料风控的知识库检索与召回
-meta_description: 担保材料的数据来源包括线下纸质扫描件、电子签约平台导出的合同文件、担保机构内部台账导出的结构化数据。更新节奏为随单笔授信业务提交触发，存量材料仅在担保关系变
+meta_description: 担保材料风控的知识库检索与召回：担保材料风控的知识库检索与召回，涵盖配置与验证建议
 keywords: 担保材料、风控与授信材料审核、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

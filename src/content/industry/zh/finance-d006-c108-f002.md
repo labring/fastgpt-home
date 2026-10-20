@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电商服务投研知识库建设的上下文与 token
-meta_description: 电商服务投研的数据主要来自电商平台开放接口、第三方合规采集的交易日志、用户评价文本、竞品动态监控数据。数据更新节奏覆盖小时级交易指标、分钟级用户互动数据，部
+meta_description: 电商服务投研知识库建设的上下文与 token：电商服务投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 电商服务、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 住宅开发收益率的工作流编排
-meta_description: 住宅开发相关的收益率数据来源包括企业内部项目管理系统、国土部门备案的土地出让信息、住建部门预售备案数据、合作金融机构的融资台账。数据更新节奏随项目关键节点推
+meta_description: 住宅开发收益率的工作流编排：住宅开发收益率的工作流编排，涵盖配置与验证建议。。。
 keywords: 住宅开发、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for Optoelectronics
-meta_description: Optoelectronics financing daily report data mainly comes from public enterprise financing announcements released by provincial and municipal financial
+meta_description: Citation Sources and Traceability for Optoelectronics Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -24,7 +24,7 @@ The daily update feature requires the traceability link to precisely match the d
 | --- | --- | --- |
 | `Recall Count` | `Top 8 entries` | Optoelectronics financing daily reports have limited daily entries. Excessive recall causes information redundancy, while insufficient recall may miss key financing records |
 | `Similarity Threshold` | `0.75–0.85` | Requires precise matching of optoelectronics sub-sector keywords to filter non-category financing information and avoid cross-industry interference |
-| `Citation Template` | `{{content}}\n> Source: {{source}} \| Disclosure Date: {{publish_date}}` | Fully retains official announcement links and disclosure dates as core traceability information, complies with industry traceability standards |
+| `Traceability details` | `the configured value\n> the configured source field \| the configured disclosure-date field` | Fully retains official announcement links and disclosure dates as core traceability information, complies with industry traceability standards |
 | `Knowledge Base Filter Rule` | `Filter Field: industry = "Optoelectronics"` | Directly limits the data source scope, completely excludes financing records from other industries, and ensures category accuracy of recalled data |
 | `Reranked Return Count` | `Top 3 entries` | Financing daily core information is concentrated, a small number of entries covers user query needs and avoids excessive content distracting attention |
 | `Source Data Format Validation` | `Enabled` | Ensures correct formatting of disclosure dates, announcement links and other fields to prevent traceability failures due to formatting errors |

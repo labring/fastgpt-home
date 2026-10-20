@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 动力煤收益率的数据库与运维
-meta_description: 动力煤行情数据主要来源于国内煤炭交易中心公开报价、秦皇岛港等核心港口的实时监测数据，以及行业第三方监测机构的整合信息。数据更新节奏分为两类：日度全量行情每日
+meta_description: 动力煤收益率的数据库与运维：动力煤收益率的数据库与运维，涵盖配置与验证建议。。。
 keywords: 动力煤、收益率与行情日报播报、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interfaces and External Systems for Photovoltaic
-meta_description: Photovoltaic research report data comes primarily from publicly available research documents published by securities firm research institutes
+meta_description: HTTP Interfaces and External Systems for Photovoltaic Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

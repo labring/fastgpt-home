@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦炭研报检索的模型接入与配置
-meta_description: 焦炭研报的数据主要来自国内炼焦行业协会、期货交易所行情数据库、头部大宗商品研究团队、专业资讯平台。更新节奏分为两类：行业供需、价格类数据每日更新，专题研报随
+meta_description: 焦炭研报检索的模型接入与配置：焦炭研报检索的模型接入与配置，涵盖配置与验证建议。
 keywords: 焦炭、研报检索与问答、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

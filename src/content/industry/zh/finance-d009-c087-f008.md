@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 汽车零部件研报检索的工具调用与插件
-meta_description: 汽车零部件研报的数据来源主要包括券商研究所行业报告、国内汽车行业协会公开数据、车企供应链披露文件及第三方供应链咨询机构报告。更新节奏随行业事件波动，常规月度
+meta_description: 汽车零部件研报检索的工具调用与插件：汽车零部件研报检索的工具调用与插件，涵盖配置与验证建议
 keywords: 汽车零部件、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

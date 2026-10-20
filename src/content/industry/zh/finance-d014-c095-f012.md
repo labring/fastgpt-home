@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 热力财报分析的模型接入与配置
-meta_description: 热力品类的财报数据主要来自企业内部热力生产运营台账、能源监管部门的行业报送报表，以及公开披露的年度/季度财报文档。数据更新节奏分为两类：月度运营类数据于每月
+meta_description: 热力财报分析的模型接入与配置：热力财报分析的模型接入与配置，涵盖配置与验证建议。
 keywords: 热力、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

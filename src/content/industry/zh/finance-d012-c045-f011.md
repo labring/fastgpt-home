@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商用车营销内容的文档解析与分块
-meta_description: 商用车营销相关文档主要来自品牌方内部的产品手册、区域营销方案、促销政策文件、客户沟通话术模板。更新节奏随新品发布、区域政策调整或营销节点变动，无固定周期。文
+meta_description: 商用车营销内容的文档解析与分块：商用车营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 商用车、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

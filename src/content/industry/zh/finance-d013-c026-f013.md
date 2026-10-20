@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 出版融资日报的知识库检索与召回
-meta_description: 出版融资日报的数据来源为行业监管披露的出版机构融资公告、专业财经媒体的行业汇总报道、出版协会发布的产业动态。更新节奏为每日工作日更新，非工作日无新增条目。文
+meta_description: 出版融资日报的知识库检索与召回：出版融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 出版、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

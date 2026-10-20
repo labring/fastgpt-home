@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 鞋类智能尽调报告的文档解析与分块
-meta_description: 鞋类智能尽调报告的数据主要来自品牌方供应链台账、第三方质检机构出具的PDF格式质检报告、跨境电商平台的商品备案文档以及行业协会抽检档案。数据更新节奏随新SK
+meta_description: 鞋类智能尽调报告的文档解析与分块：鞋类智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 鞋类、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

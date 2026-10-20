@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油气开采研报检索的模型接入与配置
-meta_description: 油气开采研报的数据来源包括油气行业协会公开报告、油气生产企业勘探开发文档、第三方专业咨询机构的行业分析文档。更新节奏以常规季度更新为主，伴随油价波动、新开采
+meta_description: 油气开采研报检索的模型接入与配置：油气开采研报检索的模型接入与配置，涵盖配置与验证建议
 keywords: 油气开采、研报检索与问答、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

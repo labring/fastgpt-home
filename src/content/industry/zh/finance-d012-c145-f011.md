@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通信设备营销内容的文档解析与分块
-meta_description: 金融行业用于获客的通信设备营销文档，来源包含设备规格书、运营商对接文档、金融场景适配方案文档、营销话术手册四类。更新节奏随新品发布、季度营销活动调整，无固定
+meta_description: 通信设备营销内容的文档解析与分块：通信设备营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 通信设备、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

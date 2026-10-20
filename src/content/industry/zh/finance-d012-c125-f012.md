@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航天装备营销内容的模型接入与配置
-meta_description: 航天装备营销相关的数据主要来源于研发设计文档、生产台账、参展物料、客户沟通纪要四类。更新节奏随新品立项、定型、列装节点调整，营销物料则随市场活动不定期更新。
+meta_description: 航天装备营销内容的模型接入与配置：航天装备营销内容的模型接入与配置，涵盖配置与验证建议
 keywords: 航天装备、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

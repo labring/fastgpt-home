@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 影视院线智能尽调报告的工作流编排
-meta_description: 影视院线尽调数据来源包含广电总局影视备案平台、院线官方排片接口、影院终端售票系统、版权方披露文档等。数据更新节奏差异明显：排片信息提前1至7天更新，单日票房
+meta_description: 影视院线智能尽调报告的工作流编排：影视院线智能尽调报告的工作流编排，涵盖配置与验证建议
 keywords: 影视院线、智能尽调报告、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

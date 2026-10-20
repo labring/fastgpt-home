@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 家居用品研报检索的工具调用与插件
-meta_description: 家居用品研报数据主要来自券商轻工制造行业研报、线下零售监测机构的终端动销数据、上游原材料供应商的报价周报。更新节奏分为两类：券商研报随项目进度发布，无固定周
+meta_description: 家居用品研报检索的工具调用与插件：家居用品研报检索的工具调用与插件，涵盖配置与验证建议
 keywords: 家居用品、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

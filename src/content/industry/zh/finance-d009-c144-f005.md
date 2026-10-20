@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通信服务研报检索的多轮对话与提示词
-meta_description: 通信服务研报的数据来源主要包括国内通信行业协会、三大基础运营商公开披露的运营数据、第三方专业咨询机构的专项调研内容。更新节奏以季度为核心周期，伴随5G部署、
+meta_description: 通信服务研报检索的多轮对话与提示词：通信服务研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 通信服务、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

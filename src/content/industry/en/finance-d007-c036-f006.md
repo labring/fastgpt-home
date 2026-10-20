@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Semiconductor Yield and Market Daily Report Conversation
-meta_description: Semiconductor yield and market daily report data comes from public market APIs of securities exchanges and daily release documents from industry index
+meta_description: Semiconductor Yield and Market Daily Report Conversation Logs and Auditing
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

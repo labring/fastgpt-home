@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水处理融资日报的多轮对话与提示词
-meta_description: 水处理融资日报的数据主要来自环保主管部门项目公示、持牌金融机构授信公告、水务工程招投标公开平台。更新节奏为每日更新，覆盖当日发布的水处理相关融资项目。单份文
+meta_description: 水处理融资日报的多轮对话与提示词：水处理融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 水处理、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 产业园区营销内容的多轮对话与提示词
-meta_description: 产业园区的核心数据来自运营方的招商管理系统、入驻企业台账、场地租赁档案、配套设施登记册，以及线下招商活动的报名记录。数据更新节奏：入驻企业变更、租赁到期、场
+meta_description: 产业园区营销内容的多轮对话与提示词：产业园区营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 产业园区、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 出版营销内容的工作流编排
-meta_description: 出版行业的营销内容数据来源包括书稿原稿、排版文件、营销物料三类。书稿原稿多为PDF、EPUB格式，包含书名、作者、ISBN、章节内容等结构化字段；营销物料则
+meta_description: 出版营销内容的工作流编排：出版营销内容的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 出版、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

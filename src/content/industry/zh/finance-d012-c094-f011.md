@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 炼化营销内容的文档解析与分块
-meta_description: 炼化营销相关的文档主要来源于炼化企业的产品规格书、季度营销方案、区域客户报价台账、合规性告知函与行业会议纪要。更新节奏随内容类型差异明显：产品规格随产能调整
+meta_description: 炼化营销内容的文档解析与分块：炼化营销内容的文档解析与分块，涵盖配置与验证建议。
 keywords: 炼化、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

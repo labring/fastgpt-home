@@ -4,8 +4,8 @@ slug: /en/industry/finance-d008-c043-f009
 page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
-meta_title: Citation Sources and Traceability for Commercial Real Estate
-meta_description: Data sources for commercial real estate due diligence include real estate registration archives, project operation ledgers, business district
+meta_title: Citation Sources and Traceability for Commercial Real
+meta_description: Citation Sources and Traceability for Commercial Real Estate Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

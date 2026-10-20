@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电网设备收益率的数据库与运维
-meta_description: 电网设备收益率相关数据是电力资产理财、电网企业成本核算等金融场景的核心数据源，主要来源于电力交易中心公开API、电网运维管理系统及电力现货市场交易接口。数据
+meta_description: 电网设备收益率的数据库与运维：电网设备收益率的数据库与运维，涵盖配置与验证建议。
 keywords: 电网设备、收益率与行情日报播报、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

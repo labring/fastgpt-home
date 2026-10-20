@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 厨卫电器收益率的对话日志与审计
-meta_description: 厨卫电器的收益率与行情数据主要来源于品牌方进销存系统、主流电商平台实时售价接口、线下零售终端日结数据。线上渠道售价每小时同步更新，线下终端日结数据每日凌晨完
+meta_description: 厨卫电器收益率的对话日志与审计：厨卫电器收益率的对话日志与审计，涵盖配置与验证建议
 keywords: 厨卫电器、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

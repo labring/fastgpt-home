@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 旅游景区收益率的部署与升级
-meta_description: 旅游景区的收益率数据核心来源于自有售票系统、入园闸机、商户POS终端及文旅监管平台接口。数据更新节奏为每日一次，于次日凌晨完成前一日全量数据的跑批汇总。单条
+meta_description: 旅游景区收益率的部署与升级：旅游景区收益率的部署与升级，涵盖配置与验证建议。。。
 keywords: 旅游景区、收益率与行情日报播报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

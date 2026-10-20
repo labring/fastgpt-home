@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 城商行收益率的模型接入与配置
-meta_description: 城商行收益率日报的数据来源为内部理财运营系统、区域同业数据共享平台。更新节奏为每日18:00后完成当日全量产品数据更新，次日凌晨对外发布。文档结构为固定格式
+meta_description: 城商行收益率的模型接入与配置：城商行收益率的模型接入与配置，涵盖配置与验证建议。
 keywords: 城商行、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

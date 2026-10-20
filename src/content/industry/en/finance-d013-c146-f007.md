@@ -4,8 +4,8 @@ slug: /en/industry/finance-d013-c146-f007
 page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
-meta_title: Workflow Orchestration for General Equipment Financing Daily
-meta_description: Data sources for general equipment financing daily reports include daily loan ledgers from financial leasing institutions, shipment and payment
+meta_title: Workflow Orchestration for General Equipment Financing
+meta_description: Workflow Orchestration for General Equipment Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

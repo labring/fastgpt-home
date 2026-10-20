@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade of Marketing Content for Investment
-meta_description: The marketing content data for investment platforms primarily originates from official investment research reports, product manuals, user FAQ
+meta_description: Deployment and Upgrade of Marketing Content for Investment Platforms
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

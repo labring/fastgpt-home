@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光学光电子融资日报的向量模型与索引
-meta_description: 光学光电子融资日报的数据主要来自境内外证券交易所公开披露公告、行业协会备案融资信息及企业官方披露文件。数据按交易日更新，非交易日顺延至下一交易日发布。单份日
+meta_description: 光学光电子融资日报的向量模型与索引：光学光电子融资日报的向量模型与索引，涵盖配置与验证建议
 keywords: 光学光电子、融资日报、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

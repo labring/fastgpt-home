@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interfaces and External Systems for Carbon Steel
-meta_description: Carbon steel intelligent due diligence report data mainly comes from steel mill production ledgers, real-time quotes from spot trading platforms, and
+meta_description: HTTP Interfaces and External Systems for Carbon Steel Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

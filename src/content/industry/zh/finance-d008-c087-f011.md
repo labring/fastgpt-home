@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 汽车零部件智能尽调报告的文档解析与分块
-meta_description: 汽车零部件智能尽调报告的数据来源主要包括主机厂配套技术文档、供应链BOM表、第三方质量检测报告、海关报关单及季度产能更新文件。更新节奏随文档类型不同：主机厂
+meta_description: 汽车零部件智能尽调报告的文档解析与分块：汽车零部件智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 汽车零部件、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

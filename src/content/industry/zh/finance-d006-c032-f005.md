@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学原料投研知识库建设的多轮对话与提示词
-meta_description: 化学原料投研数据主要来源于行业协会公开报告、生产企业合规文档、海关进出口统计、现货报价平台及MSDS安全技术说明书。数据更新节奏存在差异：现货报价每日更新，
+meta_description: 化学原料投研知识库建设的多轮对话与提示词：化学原料投研知识库建设的多轮对话与提示词，涵盖配置与验证建议
 keywords: 化学原料、投研知识库建设与治理、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

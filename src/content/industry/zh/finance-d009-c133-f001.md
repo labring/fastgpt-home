@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 证券研报检索的HTTP 接口与外部系统
-meta_description: 证券研报数据主要来自持牌券商研究所、持牌证券金融数据服务商。更新节奏分两类：常规个股与行业研报每日盘后更新，季度、年度策略研报按财报周期固定发布。文档结构包
+meta_description: 证券研报检索的HTTP 接口与外部系统：证券研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 证券、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小金属财报分析的工作流编排
-meta_description: 小金属财报相关数据主要来自国内小金属行业协会月度统计、对应上市公司公开财报、海关总署进出口报关数据及现货交易平台报价。更新节奏分为三类：年度/季度财报按法定
+meta_description: 小金属财报分析的工作流编排：小金属财报分析的工作流编排，涵盖配置与验证建议。。。
 keywords: 小金属、财报分析与报告生成、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

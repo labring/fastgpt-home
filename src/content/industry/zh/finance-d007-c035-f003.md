@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医美收益率的分享与嵌入
-meta_description: 医美收益率相关数据主要来源于医美机构内部运营台账、区域医美行业监测数据库及合作供应链报价更新。数据更新节奏以月度为核心周期，热门项目的临时调价会同步更新至临
+meta_description: 医美收益率的分享与嵌入：医美收益率的分享与嵌入，涵盖配置与验证建议。。。。。。。
 keywords: 医美、收益率与行情日报播报、分享与嵌入
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

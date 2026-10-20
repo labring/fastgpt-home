@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化纤智能尽调报告的知识库检索与召回
-meta_description: 化纤品类的数据源覆盖生产端出厂质检报告、行业协会供需周报、海关进出口台账、期货交易所现货报价。数据更新节奏覆盖日度（现货价格、批次质检）、月度（行业供需数据
+meta_description: 化纤智能尽调报告的知识库检索与召回：化纤智能尽调报告的知识库检索与召回，涵盖配置与验证建议
 keywords: 化纤、智能尽调报告、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

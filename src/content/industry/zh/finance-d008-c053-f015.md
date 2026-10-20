@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多元金融智能尽调报告的部署与升级
-meta_description: 多元金融智能尽调报告的数据主要来自公开监管公示、标的主体工商档案、同业舆情监测、季度年度财报及交易对手公开披露信息。数据更新节奏随来源类型差异较大，监管公示
+meta_description: 多元金融智能尽调报告的部署与升级：多元金融智能尽调报告的部署与升级，涵盖配置与验证建议
 keywords: 多元金融、智能尽调报告、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

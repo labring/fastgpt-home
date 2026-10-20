@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 融资租赁智能尽调报告的部署与升级
-meta_description: 融资租赁智能尽调报告的数据来源包括承租人工商登记信息、租赁物权属证明文件、近两期财务审计报告、央行征信报告及历史租赁履约记录。数据随项目立项节点触发更新，单
+meta_description: 融资租赁智能尽调报告的部署与升级：融资租赁智能尽调报告的部署与升级，涵盖配置与验证建议
 keywords: 融资租赁、智能尽调报告、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

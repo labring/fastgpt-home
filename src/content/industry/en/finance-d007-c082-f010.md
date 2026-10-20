@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Database and Operations for Aquaculture Profit Margins
-meta_description: Data related to aquaculture profit margins is used for daily financial reporting. Data sources include real-time water quality monitoring devices at
+meta_description: Database and Operations for Aquaculture Profit Margins
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

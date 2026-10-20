@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 特钢研报检索的HTTP 接口与外部系统
-meta_description: 特钢研报的数据主要来自中国特钢企业协会公开披露信息、国内特钢生产企业官网公告、第三方钢铁行业资讯平台的整理内容。更新节奏分为三类：现货价格数据每日更新，行业
+meta_description: 特钢研报检索的HTTP 接口与外部系统：特钢研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 特钢、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

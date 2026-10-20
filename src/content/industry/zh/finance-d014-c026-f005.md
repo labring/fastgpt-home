@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 出版财报分析的多轮对话与提示词
-meta_description: 出版行业财报数据主要来自上市公司公开披露的定期报告、临时公告及行业监管平台。更新节奏为年度报告每年披露一次，半年度、季度报告按监管要求发布，重大经营变动伴随
+meta_description: 出版财报分析的多轮对话与提示词：出版财报分析的多轮对话与提示词，涵盖配置与验证建议
 keywords: 出版、财报分析与报告生成、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

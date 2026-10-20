@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水泥财报分析的文档解析与分块
-meta_description: 水泥企业的财报数据主要来源于证券交易所披露的上市公司年报、季度报告，以及行业协会发布的运行数据文档。更新节奏为年度报告每年披露一次，季度报告每季度更新，临时
+meta_description: 水泥财报分析的文档解析与分块：水泥财报分析的文档解析与分块，涵盖配置与验证建议。
 keywords: 水泥、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -4,7 +4,7 @@ slug: /zh/industry/fin-step-c058-2
 page_type: 行业作业环节页
 article_section: 银行理财
 is_part_of: FastGPT 技术中心
-meta_title: 非现金管理类理财投资与运营的对信用、权益、跨资产或衍生品头寸
+meta_title: 非现金管理类理财投资与运营的对信用、权益、跨资产或衍生品头寸完成研究：哪一部分能交给系统
 meta_description: 非现金管理类理财投资与运营的对信用、权益、跨资产或衍生品头寸完成研究：哪一部分能交给系统
 keywords: 非现金管理类理财投资与运营、银行理财、环节2
 source_type: 金融业务分类与作业事实取自行业研究报告（含监管文件来源编号）

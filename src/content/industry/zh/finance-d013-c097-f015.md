@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦煤融资日报的部署与升级
-meta_description: 焦煤融资日报的数据来自上海期货交易所焦煤合约交易台账、国内煤炭贸易商融资结算系统、北方港口焦煤出库融资记录，更新节奏为每个交易日17:00前发布当日数据，节
+meta_description: 焦煤融资日报的部署与升级：焦煤融资日报的部署与升级，涵盖配置与验证建议。。。。。
 keywords: 焦煤、融资日报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

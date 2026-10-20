@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学制药财报分析的工具调用与插件
-meta_description: 化学制药行业的财报数据主要来自境内外上市公司公开披露的年度报告、季度报告及临时公告，部分细分数据可通过行业公开数据库获取。更新节奏遵循监管要求：年度报告需在
+meta_description: 化学制药财报分析的工具调用与插件：化学制药财报分析的工具调用与插件，涵盖配置与验证建议
 keywords: 化学制药、财报分析与报告生成、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

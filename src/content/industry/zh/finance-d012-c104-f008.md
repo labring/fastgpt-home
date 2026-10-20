@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 玻璃营销内容的工具调用与插件
-meta_description: 玻璃相关营销内容的数据主要来自生产厂商的质检报告、建筑设计规范参数库与供应链报价系统。核心字段包含产品型号、厚度（单位：毫米）、透光性能数值区间、抗风压等级
+meta_description: 玻璃营销内容的工具调用与插件：玻璃营销内容的工具调用与插件，涵盖配置与验证建议。
 keywords: 玻璃、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化妆品财报分析的模型接入与配置
-meta_description: 数据来源为上市美妆企业披露的定期报告、品牌公开的运营简报。更新节奏匹配年度、半年度、季度的法定披露节点。文档结构包含合并财务报表、业务经营分析板块、渠道与品
+meta_description: 化妆品财报分析的模型接入与配置：化妆品财报分析的模型接入与配置，涵盖配置与验证建议
 keywords: 化妆品、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Coking Coal Financing Daily
-meta_description: Coking coal financing daily report data mainly comes from public quotes of domestic coal trading markets, pledge registration data of futures delivery
+meta_description: Vector Models and Indexing for Coking Coal Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

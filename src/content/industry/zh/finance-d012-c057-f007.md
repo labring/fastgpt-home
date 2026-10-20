@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小家电营销内容的工作流编排
-meta_description: 小家电的核心数据来自官方产品说明书、电商平台详情页参数库、品牌售后系统的维修记录与用户反馈文档。更新随新品上市、能效标准更新或营销素材调整不定期推进，单次更
+meta_description: 小家电营销内容的工作流编排：小家电营销内容的工作流编排，涵盖配置与验证建议。。。
 keywords: 小家电、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

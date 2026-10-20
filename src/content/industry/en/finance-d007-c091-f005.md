@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Consumer
-meta_description: Market trend data for consumer construction materials comes from public statistical data released by the China Building Materials Federation, quotes
+meta_description: Multi-turn Dialogue and Prompt Engineering for Consumer Construction Materials Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

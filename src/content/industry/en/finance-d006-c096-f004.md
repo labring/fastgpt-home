@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Coke Investment Research
-meta_description: Coke investment research data sources include domestic commodity exchange futures market data, industry monitoring data from national coking industry
+meta_description: Vector Models and Indexing for Coke Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

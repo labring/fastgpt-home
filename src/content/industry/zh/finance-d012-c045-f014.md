@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商用车营销内容的表单与交互
-meta_description: 商用车金融营销相关的数据来源包括线下门店登记系统、线上官网留资表单、经销商管理系统（DMS）、生产端车型公告系统以及车联网终端上报数据。客户留资数据实时更新
+meta_description: 商用车营销内容的表单与交互：商用车营销内容的表单与交互，涵盖配置与验证建议。。。
 keywords: 商用车、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

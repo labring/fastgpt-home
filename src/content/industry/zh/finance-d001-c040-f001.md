@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 受益所有人KYC 的HTTP 接口与外部系统
-meta_description: 受益所有人KYC的数据主要来自工商行政管理部门的公开登记档案、第三方合规核验数据源，以及企业提交的股权结构说明文档。数据更新节奏随主体股权变更触发，通常在变
+meta_description: 受益所有人KYC 的HTTP 接口与外部系统：受益所有人KYC 的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 受益所有人、KYC 与反洗钱资料核验、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

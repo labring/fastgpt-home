@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for Minor Metals Financial
-meta_description: Data for minor metals financial report analysis primarily serves financial investment research scenarios. Sources include public annual and quarterly
+meta_description: Model Access and Configuration for Minor Metals Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

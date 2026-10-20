@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 动力煤营销内容的模型接入与配置
-meta_description: 动力煤相关数据主要来自中国煤炭工业协会、主要港口交易所及铁路运输部门的公开公示信息，适配动力煤产业链金融营销内容与获客场景。现货价格与运力数据每日更新，月度
+meta_description: 动力煤营销内容的模型接入与配置：动力煤营销内容的模型接入与配置，涵盖配置与验证建议
 keywords: 动力煤、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

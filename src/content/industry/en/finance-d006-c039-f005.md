@@ -4,8 +4,8 @@ slug: /en/industry/finance-d006-c039-f005
 page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Dialogue and Prompt Engineering for Kitchen and
-meta_description: Kitchen and bath appliance investment research data primarily comes from official brand product manuals, e-commerce platform parameter pages, industry
+meta_title: Multi-turn Dialogue and Prompt Engineering for Kitchen
+meta_description: Multi-turn Dialogue and Prompt Engineering for Kitchen and Bath Appliance Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

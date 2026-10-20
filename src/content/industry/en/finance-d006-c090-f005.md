@@ -4,8 +4,8 @@ slug: /en/industry/finance-d006-c090-f005
 page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Dialogue and Prompt Engineering for Coatings and
-meta_description: Coatings and inks investment research data is primarily sourced from public technical reports from industry associations, quality inspection reports
+meta_title: Multi-turn Dialogue and Prompt Engineering for Coatings
+meta_description: Multi-turn Dialogue and Prompt Engineering for Coatings and Inks Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 风电融资日报的知识库检索与召回
-meta_description: 风电融资日报的数据来源为风电项目备案信息、金融机构授信台账、地方能源局公开的风电融资动态，更新频率为每日更新。单条文档包含项目名称、装机规模、融资金额、合作
+meta_description: 风电融资日报的知识库检索与召回：风电融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 风电、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

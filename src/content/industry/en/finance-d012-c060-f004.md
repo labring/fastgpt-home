@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Engineering Consulting
-meta_description: Marketing content data for engineering consulting is sourced from engineering project case documents provided by supporting financial institutions
+meta_description: Vector Models and Indexing for Engineering Consulting Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

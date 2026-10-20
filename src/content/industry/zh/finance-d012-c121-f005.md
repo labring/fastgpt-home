@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 耐火材料营销内容的多轮对话与提示词
-meta_description: 耐火材料相关数据主要来源于行业标准手册、生产企业出厂检验报告及工程项目现场运维日志。出厂检验报告随每批次产品更新，行业标准手册按年度修订，现场运维日志按项目
+meta_description: 耐火材料营销内容的多轮对话与提示词：耐火材料营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 耐火材料、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

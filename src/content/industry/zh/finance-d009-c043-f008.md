@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商业地产研报检索的工具调用与插件
-meta_description: 商业地产研报的数据主要来自商圈运营监测平台、房企商业板块财报、行业协会调研数据及物业运营后台。更新节奏分为定期与实时两类：定期报告以月度、季度为周期发布固定
+meta_description: 商业地产研报检索的工具调用与插件：商业地产研报检索的工具调用与插件，涵盖配置与验证建议
 keywords: 商业地产、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦煤投研知识库建设的模型接入与配置
-meta_description: 焦煤投研数据主要来自国内期货交易所的日度行情数据、行业协会的周度供需监测报告、产地与港口的月度产销库存数据，以及上市煤企的公开产销公告。数据更新节奏覆盖日度
+meta_description: 焦煤投研知识库建设的模型接入与配置：焦煤投研知识库建设的模型接入与配置，涵盖配置与验证建议
 keywords: 焦煤、投研知识库建设与治理、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Aerospace Equipment Financial
-meta_description: Data sources include official announcements of listed companies, public statistics from the National Defense Science, Technology and Industry
+meta_description: Workflow Orchestration for Aerospace Equipment Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -32,7 +32,7 @@ Some data has non-standard formats. Preset outlier handling logic is required.
 | `LOOP_END_CONDITION` | `Terminate when processed report identifier is detected` | Adapts to batch processing scenarios for multiple financial reports, avoiding invalid loops that consume resources |
 | `VAR_FILTER_RULE` | `Filter by military/civilian business classification` | Financial reports require splitting revenue and delivery data for the two business types, requiring precise matching of field classifications |
 | `SCHEDULE_CRON` | `0 0 2 30 4 *` (annual report), `0 0 2 31 8 *` (semi-annual report) | Meets stock exchange disclosure time requirements, ensuring data pulling and analysis are triggered at fixed nodes |
-| `HTTP_NODE_VAR_PATTERN` | `{{variable name}} format` | Version V4.8.18-FIX2 fixed compatibility issues with this format. The latest version's variable reference rules must be adapted |
+| `HTTP_NODE_VAR_PATTERN` | `example value format` | Version V4.8.18-FIX2 fixed compatibility issues with this format. The latest version's variable reference rules must be adapted |
 | `UPLOAD_FILE_MAX_SIZE` | `1000 MB` | Some annual financial report PDFs include complete R&D project documents, resulting in large individual file sizes |
 
 > The parameter values provided on this page are common starting points for configuration. Actual values are affected by material form, data volume, and business rules. Specific issues require targeted analysis. It is recommended to test on applicable local samples before finalizing settings.

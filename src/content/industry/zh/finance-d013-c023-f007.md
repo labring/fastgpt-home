@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 军工电子融资日报的工作流编排
-meta_description: 军工电子融资日报的数据来源包括军工电子企业公开披露的定向增发、股权融资公告，军民融合产业基金投资公示，以及第三方投融资数据库的军工细分赛道跟踪数据。更新节奏
+meta_description: 军工电子融资日报的工作流编排：军工电子融资日报的工作流编排，涵盖配置与验证建议。
 keywords: 军工电子、融资日报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

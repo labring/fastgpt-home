@@ -4,8 +4,8 @@ slug: /en/industry/finance-d013-c102-f004
 page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
-meta_title: Vector Models and Indexing for Special Steel Financing Daily
-meta_description: Data for special steel financing daily reports comes primarily from domestic special steel industry spot trading platforms, official credit granting
+meta_title: Vector Models and Indexing for Special Steel Financing
+meta_description: Vector Models and Indexing for Special Steel Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

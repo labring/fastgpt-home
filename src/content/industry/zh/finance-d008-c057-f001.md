@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小家电智能尽调报告的HTTP 接口与外部系统
-meta_description: 小家电智能尽调报告的数据主要来源于品牌方官方规格书、电商平台商品参数页、国家质检机构的合规检测报告。数据更新无固定周期，新品上市、合规标准调整时会触发更新。
+meta_description: 小家电智能尽调报告的HTTP 接口与外部系统：小家电智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 小家电、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

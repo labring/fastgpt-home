@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 个护用品营销内容的工具调用与插件
-meta_description: 个护用品的核心数据来源包括品牌官方产品页、国家化妆品监督管理信息平台、主流电商平台的商品详情与用户评价。数据更新节奏分两类：备案类数据随官方合规调整，季度更
+meta_description: 个护用品营销内容的工具调用与插件：个护用品营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 个护用品、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

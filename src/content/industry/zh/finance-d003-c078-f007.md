@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 既往症判定保险理赔初审的工作流编排
-meta_description: 既往症判定所需的数据主要来自投保时的健康告知存档、理赔阶段提交的门诊/住院病历、医保经办机构的结算明细，以及既往投保的核保档案。数据随单个理赔案件触发更新，
+meta_description: 既往症判定保险理赔初审的工作流编排：既往症判定保险理赔初审的工作流编排，涵盖配置与验证建议
 keywords: 既往症判定、保险理赔初审、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

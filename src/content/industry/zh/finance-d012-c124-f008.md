@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 自动化设备营销内容的工具调用与插件
-meta_description: 自动化设备的数据主要来自设备内置传感器、PLC控制系统、运维工单系统与设备台账数据库，面向金融租赁场景的设备数据还包含租赁合约字段。实时运行数据如转速、温度
+meta_description: 自动化设备营销内容的工具调用与插件：自动化设备营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 自动化设备、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

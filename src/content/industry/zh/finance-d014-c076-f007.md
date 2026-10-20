@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 文娱用品财报分析的工作流编排
-meta_description: 文娱用品财报数据主要来自证券交易所公开披露的定期报告，更新节奏为季度报告季后15个工作日内、年度报告年后4个月内。文档以PDF格式为主，包含合并资产负债表、
+meta_description: 文娱用品财报分析的工作流编排：文娱用品财报分析的工作流编排，涵盖配置与验证建议。
 keywords: 文娱用品、财报分析与报告生成、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

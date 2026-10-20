@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 装修装饰融资日报的引用来源与溯源
-meta_description: 装修装饰融资日报的数据来源包括建筑装饰行业协会的每日融资备案数据、合作金融机构的对公装修贷授信明细、装饰企业自主上报的项目融资台账。更新节奏为每日更新前一日
+meta_description: 装修装饰融资日报的引用来源与溯源：装修装饰融资日报的引用来源与溯源，涵盖配置与验证建议
 keywords: 装修装饰、融资日报、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

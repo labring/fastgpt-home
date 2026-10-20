@@ -4,8 +4,8 @@ slug: /en/industry/finance-d009-c030-f007
 page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
-meta_title: Workflow Orchestration for Cosmetic Industry Research Report
-meta_description: Cosmetic research report data comes from industry association public reports, brand product filing documents, third-party consulting firm segmented
+meta_title: Workflow Orchestration for Cosmetic Industry Research
+meta_description: Workflow Orchestration for Cosmetic Industry Research Report Retrieval and Q&A
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 贵金属财报分析的多轮对话与提示词
-meta_description: 贵金属相关企业的财报数据主要来自境内外证券交易所披露的上市公司定期报告，以及上海黄金交易所、伦敦金银市场协会的行业监测数据。更新节奏分为季度、年度的企业财报
+meta_description: 贵金属财报分析的多轮对话与提示词：贵金属财报分析的多轮对话与提示词，涵盖配置与验证建议
 keywords: 贵金属、财报分析与报告生成、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 厨卫电器营销内容的HTTP 接口与外部系统
-meta_description: 厨卫电器的营销内容数据主要来源于品牌官方产品数据库、电商平台sku详情页，以及合作金融机构的分期政策数据库，用于金融场景下的厨卫电器营销获客。数据更新节奏分
+meta_description: 厨卫电器营销内容的HTTP 接口与外部系统：厨卫电器营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 厨卫电器、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

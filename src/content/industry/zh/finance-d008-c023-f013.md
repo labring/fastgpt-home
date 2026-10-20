@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 军工电子智能尽调报告的知识库检索与召回
-meta_description: 军工电子领域的尽调数据来源包括国军标（GJB）技术标准、型号研制档案、元器件选型手册、行业技术白皮书，更新节奏随型号立项、标准修订动态调整，无固定周期。文档
+meta_description: 军工电子智能尽调报告的知识库检索与召回：军工电子智能尽调报告的知识库检索与召回，涵盖配置与验证建议
 keywords: 军工电子、智能尽调报告、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

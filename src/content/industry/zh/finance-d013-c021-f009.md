@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 其他综合融资日报的引用来源与溯源
-meta_description: 其他综合融资日报的数据主要来自地方金融监管局的机构报送、行业协会公开统计及第三方征信聚合数据。每日更新前一日的全量数据，文档以结构化CSV格式存储，包含融资
+meta_description: 其他综合融资日报的引用来源与溯源：其他综合融资日报的引用来源与溯源，涵盖配置与验证建议
 keywords: 其他综合、融资日报、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

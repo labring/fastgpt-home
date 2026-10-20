@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Energy Storage Yield Daily
-meta_description: Data related to energy storage yield is mainly sourced from public APIs of national power trading centers and local data collection systems of energy
+meta_description: Workflow Orchestration for Energy Storage Yield Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

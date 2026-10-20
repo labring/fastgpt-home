@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 钢铁贸易投研知识库建设的上下文与 token
-meta_description: 钢铁贸易投研数据来源包括钢厂出厂价台账、港口现货交易系统、行业协会月度供需报告、海运运价数据库、贸易商内部成交记录。更新节奏分为三类：现货价格每交易日更新，
+meta_description: 钢铁贸易投研知识库建设的上下文与 token：钢铁贸易投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 钢铁贸易、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 房建工程财报分析的HTTP 接口与外部系统
-meta_description: 房建工程财报数据主要来自住建部门项目备案系统、企业内部造价台账及年度/季度公开财报。数据更新节奏为季度同步项目进度节点，年度出具完整财报文档。文档结构包含项
+meta_description: 房建工程财报分析的HTTP 接口与外部系统：房建工程财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 房建工程、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15
@@ -24,7 +24,7 @@ date_modified: 2026-09-15
 | 配置项 | 建议取法 | 这样取的依据 |
 | --- | --- | --- |
 | `request_timeout` | `600 秒` | 房建工程财报数据量较大，单次拉取全量项目数据需较长处理周期，600秒可覆盖请求与解析流程 |
-| `request_body_template` | `{"project_id": "{{vars.project_id}}", "update_cycle": "{{vars.period}}", "required_fields": ["total_cost", "completed_output"]}` | 房建财报需按项目ID、更新周期拉取指定字段，模板可绑定工作流变量实现精准请求 |
+| `request_body_template` | `{"project_id": "待核验值", "update_cycle": "待核验值", "required_fields": ["total_cost", "completed_output"]}` | 房建财报需按项目ID、更新周期拉取指定字段，模板可绑定工作流变量实现精准请求 |
 | `header_auth_type` | `API_KEY` | 房建财报属于企业内部敏感业务数据，API_KEY认证可有效限制接口访问权限 |
 | `incremental_sync_field` | `update_time` | 房建财报按季度更新进度数据，以update_time作为增量字段可仅拉取最近周期的更新内容，降低请求负载 |
 | `response_parse_mode` | `field_mapping` | 房建财报字段有固定命名与单位规则，字段映射可直接将接口返回值对应到工作流变量，避免解析偏差 |

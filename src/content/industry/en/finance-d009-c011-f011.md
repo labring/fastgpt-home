@@ -4,8 +4,8 @@ slug: /en/industry/finance-d009-c011-f011
 page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
-meta_title: Document Parsing and Chunking for Snack Food Research Report
-meta_description: Data sources for snack food research reports include brokerage industry research reports, monthly monitoring reports from food and beverage industry
+meta_title: Document Parsing and Chunking for Snack Food Research
+meta_description: Document Parsing and Chunking for Snack Food Research Report Retrieval and Question Answering
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

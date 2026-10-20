@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Dairy Industry Research
-meta_description: Data for dairy industry research reports primarily comes from monthly operation reports released by the China Dairy Industry Association, quarterly
+meta_description: Document Parsing and Chunking for Dairy Industry Research Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -22,7 +22,7 @@ Most documents include structured tables, embedded line charts, and text analysi
 The multi-source format, high density of structured content, and segmented field characteristics of dairy industry research reports create multiple constraints for the parsing and chunking process. Differences in multi-source document formats require parsing logic to adapt to various carriers, including PDF-embedded tables and Word-embedded Excel files. Merged cell header structures require preserving the connection between headers and data during parsing to prevent field misalignment. Embedded Excel files with multiple worksheets and multi-row SKU data per table require chunking by worksheet or row to avoid mixing unrelated content. Large quarterly research report files require the parsing process to have sufficient timeout fault tolerance and parallel processing capabilities.
 
 ## Configuration Settings
-This configuration applies to the FastGPT v4.8.12-alpha open source version. Specific parameter settings are listed below:
+Reference only; verify against the target FastGPT release and deployment documentation.
 
 | Configuration Item | Recommended Setting | Rationale |
 | --- | --- | --- |

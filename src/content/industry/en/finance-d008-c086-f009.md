@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for Auto Service
-meta_description: Auto service intelligent due diligence report data mainly comes from motor vehicle registration service systems, maintenance archives uploaded by
+meta_description: Citation Sources and Traceability for Auto Service Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -35,14 +35,14 @@ Fields with clear units require retaining original field units during traceabili
 > The parameter values provided on this page are common starting points for configuration. Actual values are affected by material form, data volume and business rules. Specific issues require individual analysis. It is recommended to test on your own samples before finalizing settings.
 
 ## Three Common Misconfigurations
-- Phenomenon: Using the `[{datasetId: xxx}]` format when referencing configuration variables triggers variable parsing failure and returns empty traceability information. Reason: Auto service due diligence reports require binding VIN code as the retrieval anchor. The standard variable format should be a combined reference of `{{datasetId}}` and `{{vin_code}}`, and nested object formats are not used.
+- Phenomenon: Using the `[{datasetId: xxx}]` format when referencing configuration variables triggers variable parsing failure and returns empty traceability information. Reason: Auto service due diligence reports require binding VIN code as the retrieval anchor. The standard variable format should be a combined reference of `example value` and `example value`, and nested object formats are not used.
 - Phenomenon: After configuring knowledge base recall parameters, the returned response uses only generalized content instead of knowledge base original text. Reason: The `strict_mode` parameter is not enabled, or recalled knowledge base entries are not bound to the response generation link, resulting in the AI not being forced to use recalled content.
 - Phenomenon: Due diligence reports have been uploaded to the knowledge base, but source data entries cannot be displayed during traceability. Reason: The `parse_structured_field_enable` parameter is not enabled. Structured fields are not extracted by the system, so traceability anchors cannot be matched and source documents cannot be associated.
 
 ## How to Confirm Configuration Is Successfully Applied
 - Upload a standard auto service due diligence report, perform a retrieval, and check if the returned results include document paths and structured field names to confirm that the `source_display_format` configuration takes effect.
 - Adjust the value of `similarity_threshold`, observe changes in the number of recalled entries, and verify that the parameter configuration can normally affect recall results.
-- Check the variable reference format, use the combination of `{{datasetId}}` and `{{vin_code}}` for calls, and confirm there are no parsing errors.
+- Check the variable reference format, use the combination of `example value` and `example value` for calls, and confirm there are no parsing errors.
 - Check system operation logs to confirm that `recall_timeout` does not trigger timeout errors, and verify that the recall workflow completes normally.
 
 > Question material comes from public community discussions. Configuration values are common starting points and should be measured against your own samples. Verified on 2026-09-14.

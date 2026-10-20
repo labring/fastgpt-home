@@ -4,8 +4,8 @@ slug: /zh/industry/finance-d009-c119-f001
 page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
-meta_title: 综合服务研报检索的HTTP 接口与外部系统
-meta_description: 综合服务类研报检索的数据来源包含合规金融资讯接口、券商研报数据库、行业研究平台公开接口。数据更新节奏为每个工作日实时推送，非工作日无更新。单篇研报文档结构包
+meta_title: 综合服务研报检索的HTTP接口与外部系统
+meta_description: 综合服务研报检索的HTTP接口与外部系统：综合服务研报检索的HTTP接口与外部系统，涵盖配置与验证建议
 keywords: 综合服务、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

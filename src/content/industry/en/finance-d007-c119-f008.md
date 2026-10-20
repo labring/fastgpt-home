@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Comprehensive Service Yield
-meta_description: Data sources for this category cover exchange public market APIs, standardized APIs from licensed financial data service providers, and official net
+meta_description: Tool Calling and Plugins for Comprehensive Service Yield Reporting
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

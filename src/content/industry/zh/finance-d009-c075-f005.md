@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 整车研报检索的多轮对话与提示词
-meta_description: 整车研报数据主要来自券商研究所发布的行业深度报告、车企公开披露的产销公告、工信部机动车产品公告及汽车行业协会统计资料。更新节奏随报告类型变动，常规行业研报按
+meta_description: 整车研报检索的多轮对话与提示词：整车研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 整车、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

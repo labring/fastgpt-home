@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专业连锁营销内容的工具调用与插件
-meta_description: 专业连锁的营销内容数据主要来自总部统一管理的品牌营销素材库、各门店上传的本地化促销物料、会员系统的用户标签字段，以及区域运营团队的活动配置记录。数据更新节奏
+meta_description: 专业连锁营销内容的工具调用与插件：专业连锁营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 专业连锁、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

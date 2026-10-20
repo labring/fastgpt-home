@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 涂料油墨融资日报的模型接入与配置
-meta_description: 涂料油墨融资日报的数据来源包括国内涂料油墨行业协会公开披露的企业融资台账、大宗商品供应链金融平台的融资备案信息、地方金融监管局公示的行业融资补贴数据。数据每
+meta_description: 涂料油墨融资日报的模型接入与配置：涂料油墨融资日报的模型接入与配置，涵盖配置与验证建议
 keywords: 涂料油墨、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

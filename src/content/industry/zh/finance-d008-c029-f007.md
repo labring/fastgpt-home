@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 包装印刷智能尽调报告的工作流编排
-meta_description: 包装印刷智能尽调的数据来源包括印刷设备运行日志、原辅材料出入库台账、成品质检报告、客户订单档案与环保监测记录。数据更新节奏随单批次生产完成后同步生成，或按每
+meta_description: 包装印刷智能尽调报告的工作流编排：包装印刷智能尽调报告的工作流编排，涵盖配置与验证建议
 keywords: 包装印刷、智能尽调报告、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

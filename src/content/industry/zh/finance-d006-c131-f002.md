@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 装修装饰投研知识库建设的上下文与 token
-meta_description: 装修装饰投研的数据主要来自公开招投标公告、施工过程日志、材料供应商报价库、国家及行业施工标准文档、项目结算台账。数据更新随项目推进节奏波动，单次项目相关文档
+meta_description: 装修装饰投研知识库建设的上下文与 token：装修装饰投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 装修装饰、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

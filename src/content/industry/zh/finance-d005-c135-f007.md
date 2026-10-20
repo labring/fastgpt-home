@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 账户问题客户服务的工作流编排
-meta_description: 账户问题客户服务的数据主要来源于用户端的对话请求、账户管理系统的实时流水、权限校验日志与历史交互记录。数据更新节奏为实时或准实时，用户发起查询后数秒内即可生
+meta_description: 账户问题客户服务的工作流编排：账户问题客户服务的工作流编排，涵盖配置与验证建议。
 keywords: 账户问题、客户服务与账户咨询、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

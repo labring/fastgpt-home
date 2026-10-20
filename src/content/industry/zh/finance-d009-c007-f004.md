@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 乳制品研报检索的向量模型与索引
-meta_description: 乳制品研报的数据主要来自国内食品饮料行业协会、券商研究所食品饮料团队、第三方行业调研机构。更新节奏以月度行业动态报告、季度全品类复盘报告为主，同时伴随奶源价
+meta_description: 乳制品研报检索的向量模型与索引：乳制品研报检索的向量模型与索引，涵盖配置与验证建议
 keywords: 乳制品、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医美财报分析的HTTP 接口与外部系统
-meta_description: 医美财报分析的数据主要来自医美机构的官方定期财报、内部经营台账及属地卫生监管部门的报备数据。数据更新节奏分为两类：公开定期财报按季度、年度更新，内部经营类数
+meta_description: 医美财报分析的HTTP 接口与外部系统：医美财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 医美、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

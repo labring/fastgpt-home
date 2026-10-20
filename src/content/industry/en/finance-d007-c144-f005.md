@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c144-f005
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Dialogue and Prompt Engineering for
-meta_description: The market and yield rate data for the telecommunications services category comes from public securities market APIs and industry operation reporting
+meta_title: Multi-turn Dialogue and Prompt Engineering
+meta_description: Multi-turn Dialogue and Prompt Engineering for Telecommunications Service Yield and Market Data
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

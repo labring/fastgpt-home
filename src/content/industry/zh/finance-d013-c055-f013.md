@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 大气治理融资日报的知识库检索与召回
-meta_description: 大气治理融资日报的数据主要来自地方生态环境部门项目公示、发改委融资备案公告、专业环保产业咨询机构的公开调研数据。更新节奏为每个工作日更新，覆盖当日及近3个工
+meta_description: 大气治理融资日报的知识库检索与召回：大气治理融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 大气治理、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

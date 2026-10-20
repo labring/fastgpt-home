@@ -4,8 +4,8 @@ slug: /en/industry/finance-d008-c090-f004
 page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
-meta_title: Vector Models and Indexing for Paint and Ink Intelligent Due
-meta_description: Data sources for due diligence reports in the paint and ink industry include internal quality inspection archives of manufacturing enterprises
+meta_title: Vector Models and Indexing for Paint and Ink Intelligent
+meta_description: Vector Models and Indexing for Paint and Ink Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

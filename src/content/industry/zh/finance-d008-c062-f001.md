@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 广告营销智能尽调报告的HTTP 接口与外部系统
-meta_description: 广告营销智能尽调报告的数据主要来自广告投放平台API、媒体监测工具接口、第三方舆情系统以及合规备案数据库。数据更新节奏差异明显，广告投放的实时曝光、转化数据
+meta_description: 广告营销智能尽调报告的HTTP 接口与外部系统：广告营销智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 广告营销、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

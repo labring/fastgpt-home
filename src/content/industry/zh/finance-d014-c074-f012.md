@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 教育服务财报分析的模型接入与配置
-meta_description: 教育服务品类的财报数据主要来自机构自主披露的经审计年度/半年度财务报告、办学备案公示信息，以及行业监管部门公开的办学运营数据。数据更新节奏为年度审计报告每年
+meta_description: 教育服务财报分析的模型接入与配置：教育服务财报分析的模型接入与配置，涵盖配置与验证建议
 keywords: 教育服务、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 出版财报分析的向量模型与索引
-meta_description: 出版行业财报数据主要来自公开监管披露的年度、半年度经审计报告，以及内部经营台账与季度快报。文档包含结构化财务表格、经营分析段落与附注说明，包含营收金额、同比
+meta_description: 出版财报分析的向量模型与索引：出版财报分析的向量模型与索引，涵盖配置与验证建议。
 keywords: 出版、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

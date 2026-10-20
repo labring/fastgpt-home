@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for Refractory Materials
-meta_description: Refractory materials data used for financial due diligence primarily comes from factory quality inspection reports from production enterprises
+meta_description: Model Access and Configuration for Refractory Materials Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

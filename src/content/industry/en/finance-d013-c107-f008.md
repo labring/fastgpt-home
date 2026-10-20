@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Power Financing Daily Reports
-meta_description: The data for power financing daily reports comes primarily from three sources: the National Energy Administration Power Investment and Financing
+meta_description: Tool Calling and Plugins for Power Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

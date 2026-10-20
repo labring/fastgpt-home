@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 涂料油墨研报检索的引用来源与溯源
-meta_description: 涂料油墨行业研报数据主要来自中国涂料工业协会公开统计、上市涂料企业定期公告、第三方化工咨询机构的专项调研文档。文档多为PDF格式，包含原材料单价、产能数据、
+meta_description: 涂料油墨研报检索的引用来源与溯源：涂料油墨研报检索的引用来源与溯源，涵盖配置与验证建议
 keywords: 涂料油墨、研报检索与问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

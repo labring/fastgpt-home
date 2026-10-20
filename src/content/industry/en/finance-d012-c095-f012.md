@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Model Integration and Configuration for Thermal Marketing
-meta_description: Thermal marketing data mainly comes from offline thermal spot passenger flow collection systems, user online behavior tracking APIs, and store
+meta_description: Model Integration and Configuration for Thermal Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 耐火材料营销内容的表单与交互
-meta_description: 耐火材料相关数据主要来源于企业内部生产台账、第三方检测机构报告、行业标准文档及客户采购需求文档。生产批次数据随每一批次的生产完成实时更新，行业标准文档按行业
+meta_description: 耐火材料营销内容的表单与交互：耐火材料营销内容的表单与交互，涵盖配置与验证建议。
 keywords: 耐火材料、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

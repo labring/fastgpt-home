@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通信服务收益率的模型接入与配置
-meta_description: 通信服务收益率的数据源主要来自通信行业公开行情接口、运营商内部业务计费报表及通信服务提供商的营收数据接口。数据更新节奏为每日一次，通常在次日凌晨完成前一日全
+meta_description: 通信服务收益率的模型接入与配置：通信服务收益率的模型接入与配置，涵盖配置与验证建议
 keywords: 通信服务、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

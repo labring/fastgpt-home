@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 造纸营销内容的向量模型与索引
-meta_description: 在金融/保险/理财行业的营销内容与获客场景中，造纸品类的营销数据主要来自合作造纸企业的内部产品规格书、定制化方案文档、营销话术库、行业展会宣传物料及经销商反
+meta_description: 造纸营销内容的向量模型与索引：造纸营销内容的向量模型与索引，涵盖配置与验证建议。
 keywords: 造纸、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

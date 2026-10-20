@@ -4,8 +4,8 @@ slug: /zh/industry/finance-d008-c053-f001
 page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
-meta_title: 多元金融智能尽调报告的HTTP 接口与外部系统
-meta_description: 多元金融智能尽调报告的数据来源于工商公示系统、非银金融机构登记平台、同业交易披露系统、第三方征信专项数据库。更新节奏：工商主体信息按季度更新，同业交易数据每
+meta_title: 多元金融智能尽调报告的HTTP接口与外部系统
+meta_description: 多元金融智能尽调报告的HTTP接口与外部系统：多元金融智能尽调报告的HTTP接口与外部系统，涵盖配置与验证建议
 keywords: 多元金融、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

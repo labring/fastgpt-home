@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 燃气收益率的HTTP 接口与外部系统
-meta_description: 燃气收益率的数据源主要来自全国城市燃气协会公开行情接口、地方能源监管部门的每日报送数据。数据更新节奏为每日滞后自然日12小时左右，完成前一日全量行情的汇总发
+meta_description: 燃气收益率的HTTP 接口与外部系统：燃气收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 燃气、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

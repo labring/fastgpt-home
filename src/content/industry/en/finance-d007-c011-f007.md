@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Snack Food Profit Margins
-meta_description: Data sources for snack food profit margin and market trend data include brand supplier settlement APIs, POS sales ledgers from offline retail
+meta_description: Workflow Orchestration for Snack Food Profit Margins
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Model Integration and Configuration for Kitchen and Bath
-meta_description: Profit margin and market trend-related data for kitchen and bath appliances comes primarily from retail monitoring databases of home appliance
+meta_description: Model Integration and Configuration for Kitchen and Bath Appliance Profit Margin and Market Trend Daily Reporting
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

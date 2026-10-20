@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calls and Plugins for Optoelectronics Industry Yield
-meta_description: Data for this category primarily comes from domestic stock exchange industry sector market APIs, official optoelectronics industry index APIs, and
+meta_description: Tool Calls and Plugins for Optoelectronics Industry Yield and Market Daily Report
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

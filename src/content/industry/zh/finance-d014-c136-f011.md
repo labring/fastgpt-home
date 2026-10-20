@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 贵金属财报分析的文档解析与分块
-meta_description: 贵金属财报数据主要来自上海黄金交易所、伦敦金银市场协会的公开交易公告、境内外贵金属上市公司的年度/季度报告，以及行业协会发布的供需分析文档。数据更新节奏覆盖
+meta_description: 贵金属财报分析的文档解析与分块：贵金属财报分析的文档解析与分块，涵盖配置与验证建议
 keywords: 贵金属、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

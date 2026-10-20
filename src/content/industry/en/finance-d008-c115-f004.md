@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Crop Farming Intelligent Due
-meta_description: Data sources for crop farming intelligent due diligence reports include farmland soil test reports, crop growth monitoring records, satellite remote
+meta_description: Vector Models and Indexing for Crop Farming Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

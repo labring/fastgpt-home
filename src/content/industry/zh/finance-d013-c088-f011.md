@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油服工程融资日报的文档解析与分块
-meta_description: 油服工程融资日报的数据来源包括公开交易所披露的油服企业融资公告、行业资讯平台的每日融资汇总、油服主体自主发布的项目文件。更新节奏为每日更新，当日汇总前一自然
+meta_description: 油服工程融资日报的文档解析与分块：油服工程融资日报的文档解析与分块，涵盖配置与验证建议
 keywords: 油服工程、融资日报、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

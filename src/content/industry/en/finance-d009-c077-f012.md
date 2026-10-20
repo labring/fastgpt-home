@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for Tourist Attraction
-meta_description: Financial institutions’ tourist attraction research reports for cultural and tourism industry analysis are mainly sourced from public information
+meta_description: Model Access and Configuration for Tourist Attraction Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

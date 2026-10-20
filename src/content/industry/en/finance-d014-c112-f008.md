@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for White Goods Financial Report
-meta_description: Data related to white goods financial reports comes primarily from periodic disclosures filed with the Shenzhen and Shanghai Stock Exchanges, public
+meta_description: Tool Calling and Plugins for White Goods Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

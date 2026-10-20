@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航空装备研报检索的工作流编排
-meta_description: 航空装备研报主要来自券商军工行业研究报告、航空工业相关集团公开披露的行业分析文档、航空专业行业协会的研究资料，以及公开的军工产业链调研内容。更新节奏随行业事
+meta_description: 航空装备研报检索的工作流编排：航空装备研报检索的工作流编排，涵盖配置与验证建议。
 keywords: 航空装备、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

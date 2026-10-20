@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 军工电子融资日报的多轮对话与提示词
-meta_description: 军工电子融资日报的数据主要来自国防军工领域的公开招标公告、上市企业及未上市军工电子企业的融资披露公告、行业协会的每日跟踪简报。更新节奏为工作日每日更新，遇重
+meta_description: 军工电子融资日报的多轮对话与提示词：军工电子融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 军工电子、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

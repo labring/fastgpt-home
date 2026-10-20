@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光学光电子营销内容的向量模型与索引
-meta_description: 面向金融行业的光学光电子营销内容，来源包括研发部门输出的技术参数文档、电商运营生成的营销素材、线下推广的宣传物料。更新节奏随新品上市、参数迭代、营销活动启动
+meta_description: 光学光电子营销内容的向量模型与索引：光学光电子营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 光学光电子、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

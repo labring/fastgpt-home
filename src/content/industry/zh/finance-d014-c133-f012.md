@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 证券财报分析的模型接入与配置
-meta_description: 证券财报数据来源为证券监管机构要求的公开披露渠道、上市公司官方公告，更新节奏分为定期披露（季度、半年度、年度）与临时公告触发的即时更新。文档结构包含标准化的
+meta_description: 证券财报分析的模型接入与配置：证券财报分析的模型接入与配置，涵盖配置与验证建议。
 keywords: 证券、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

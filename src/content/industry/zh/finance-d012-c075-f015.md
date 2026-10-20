@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 整车营销内容的部署与升级
-meta_description: 整车营销内容的数据主要来源于车企官方车型配置库、经销商活动管理系统、线下投放素材库三类渠道。数据文档以结构化JSON或Markdown格式存储，核心字段包含
+meta_description: 整车营销内容的部署与升级：整车营销内容的部署与升级，涵盖配置与验证建议。。。。。
 keywords: 整车、营销内容与获客、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

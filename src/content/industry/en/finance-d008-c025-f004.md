@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Rural Commercial Bank
-meta_description: Data for rural commercial bank intelligent due diligence reports comes from internal credit approval archives, financial statements of local
+meta_description: Vector Models and Indexing for Rural Commercial Bank Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

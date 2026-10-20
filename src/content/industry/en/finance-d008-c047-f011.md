@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for State-owned Large Bank
-meta_description: Data for state-owned large bank intelligent due diligence reports comes primarily from internal credit approval archives, annual audit reports
+meta_description: Document Parsing and Chunking for State-owned Large Bank Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

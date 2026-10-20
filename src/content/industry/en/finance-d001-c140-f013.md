@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: KYC and AML Document Verification
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for Funding Source KYC
-meta_description: Funding source KYC data primarily comes from user-submitted bank transaction statements, tax returns, asset ownership certificates, scanned trade
+meta_description: Knowledge Base Retrieval and Recall for Funding Source KYC
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

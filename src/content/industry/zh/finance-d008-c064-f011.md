@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 影视院线智能尽调报告的文档解析与分块
-meta_description: 影视院线智能尽调报告的数据来源包括院线年度运营报表、版权许可合同、票房结算明细、影院排片计划、行业备案文件等。更新节奏随文档类型差异明显：票房报表按周或月更
+meta_description: 影视院线智能尽调报告的文档解析与分块：影视院线智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 影视院线、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15
@@ -35,7 +35,7 @@ date_modified: 2026-09-15
 ## 容易做错的三处
 - 集成pdf-marker后解析大文件一直等待结果，最终触发超时。现象：任务状态停留在「解析中」直至超时失败。原因：未配置队列化解析机制，大文件解析占用系统资源导致后续任务阻塞，且未调整`PARSE_FILE_TIMEOUT_SECONDS`参数适配长耗时场景。
 - 调用doc2x解析数百页PDF时报错，仅几十页可正常完成。现象：接口返回504状态码或解析失败提示。原因：未调整`PARSE_FILE_TIMEOUT_SECONDS`参数，大文件解析耗时超出默认阈值，触发超时。
-- 本地部署pdf-marker后，调用页面报错Cannot read properties of undefined (reading 'xxx')。现象：前端控制台出现该报错，解析任务无响应。原因：本地部署的pdf-marker版本与FastGPT 4.9.0不兼容，缺少依赖包或接口路径配置错误。
+仅作参考；请以目标 FastGPT 发布版本与部署文档核验。
 
 ## 怎么确认配好了
 - 上传一份典型的影视院线尽调PDF文件，查看解析任务的耗时日志，确认`PARSE_FILE_TIMEOUT_SECONDS`的设置可覆盖该文件的实际解析时长。

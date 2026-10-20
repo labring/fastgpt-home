@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c088-f003
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: Sharing and Embedding for Oilfield Service Engineering Yield
-meta_description: The industry data for oilfield service engineering comes from oilfield field operation systems and domestic public oil and gas industry market
+meta_title: Sharing and Embedding for Oilfield Service Engineering
+meta_description: Sharing and Embedding for Oilfield Service Engineering Yield Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

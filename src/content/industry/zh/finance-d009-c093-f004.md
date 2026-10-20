@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 游戏研报检索的向量模型与索引
-meta_description: 游戏研报的数据来源包括游戏行业专业咨询机构的公开报告、游戏厂商的季度财报与新品发布会资料、版号审批官方公示信息、游戏社区的玩家调研数据、电竞赛事的官方统计资
+meta_description: 游戏研报检索的向量模型与索引：游戏研报检索的向量模型与索引，涵盖配置与验证建议。
 keywords: 游戏、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

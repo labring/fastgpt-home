@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for Vehicle Intelligent
-meta_description: Data for vehicle intelligent due diligence reports primarily comes from official product manuals of vehicle manufacturers, Ministry of Industry and
+meta_description: Citation Sources and Traceability for Vehicle Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -25,7 +25,7 @@ Data sources for the vehicle category are scattered and involve compliance quali
 | `enable_source_tracing` | Enabled | Vehicle intelligent due diligence reports must meet compliance traceability requirements, so source tracing functionality must be enabled |
 | `top_k` | Top 3-5 entries | Vehicle data sources are authoritative and fields are clearly defined. Too many results will introduce redundant information, while too few may fail to cover core compliance parameters |
 | `similarity_threshold` | 0.75-0.85 | High precision is required for vehicle parameter matching, so low-match irrelevant data must be filtered to avoid citing information from incorrect vehicle batches |
-| `source_citation_template` | `{{source_name}} | {{publish_date}} | {{vin_code}}` | Vehicle reports must be bound to a unique VIN code and source release time to establish clear traceability anchors and avoid parameter confusion across different batches of the same vehicle model |
+| `source_citation_template` | `example value | example value | example value` | Vehicle reports must be bound to a unique VIN code and source release time to establish clear traceability anchors and avoid parameter confusion across different batches of the same vehicle model |
 | `max_source_age` | 90 days | Vehicle compliance data is time-sensitive. Announcements older than 90 days may have undergone recalls or parameter adjustments, so traceability data sources must be updated promptly |
 | `reference_field_whitelist` | `["vin_code", "range_km", "curb_weight_kg", "certificate_no"]` | Only retain core traceability fields, filter non-essential information, and ensure cited content aligns with the core requirements of vehicle due diligence |
 

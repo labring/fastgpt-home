@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油气开采智能尽调报告的向量模型与索引
-meta_description: 油气开采智能尽调报告的数据来源包括地质勘查文档、钻井施工日志、试采生产台账、环保合规批复文件。更新节奏根据项目阶段差异显著，勘探阶段文档按季度更新，钻井阶段
+meta_description: 油气开采智能尽调报告的向量模型与索引：油气开采智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 油气开采、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

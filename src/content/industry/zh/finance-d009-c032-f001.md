@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学原料研报检索的HTTP 接口与外部系统
-meta_description: 这个品类的研报数据主要来自公开券商研报库、专业化工行业协会报告、授权化工资讯平台内容。更新节奏随行业动态、政策调整、现货价格波动调整，无固定周期，重大节点更
+meta_description: 化学原料研报检索的HTTP 接口与外部系统：化学原料研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 化学原料、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

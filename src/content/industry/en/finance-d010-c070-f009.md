@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Bidding and Tender Reports
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for Tender Bidding
-meta_description: Tender announcement data primarily originates from official websites of government procurement public service platforms, public resource trading
+meta_description: Citation Sources and Traceability for Tender Bidding Announcements
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -34,7 +34,7 @@ First, most data sources use official domains. When tracing sources, verify the 
 ## Three Common Misconfigurations
 - Phenomenon: When the chat interface is called, it returns the citation list first and then the answer, and the return order cannot be adjusted. Cause: The `return_reference_order` parameter is not configured correctly, and the default value uses the pre-return mode.
 - Phenomenon: Timeout errors occur when tender announcements are parsed, with error code 504. Cause: The configured value of `PARSE_FILE_TIMEOUT_SECONDS` is less than the actual time required for parsing, resulting in parsing timeout.
-- Phenomenon: Cited tender announcement fields cannot be rendered into readable text normally, and `{{field_name}}` is output as-is. Cause: The {{}} format configuration for `variable_render_mode` is not enabled, or the version is lower than V4.8.18-FIX2, which has variable parsing compatibility issues.
+- Phenomenon: Cited tender announcement fields cannot be rendered into readable text normally, and `example value` is output as-is. Cause: The {{}} format configuration for `variable_render_mode` is not enabled, or the version is lower than V4.8.18-FIX2, which has variable parsing compatibility issues.
 
 ## How to Verify Proper Configuration
 - A single tender announcement document is uploaded to the knowledge base, automatic parsing is triggered, and the parsed chunked content is checked to confirm whether it retains the association relationship between core fields such as project name and tender number.

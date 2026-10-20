@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航空装备研报检索的HTTP 接口与外部系统
-meta_description: 航空装备研报检索面向金融领域用户，数据来源主要为券商军工行业研报、航空整机及配套厂商公开披露的公告、行业协会发布的产业分析文档。更新节奏包含定期的季度/年度
+meta_description: 航空装备研报检索的HTTP 接口与外部系统：航空装备研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 航空装备、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

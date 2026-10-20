@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 钢铁贸易智能尽调报告的工作流编排
-meta_description: 钢铁贸易智能尽调的数据来源包括购销双方的合同文件、钢厂出库单、物流运单、银行付款水单、海关报关单以及行业协会的产能流通数据。数据更新节奏分为两类：单笔贸易的
+meta_description: 钢铁贸易智能尽调报告的工作流编排：钢铁贸易智能尽调报告的工作流编排，涵盖配置与验证建议
 keywords: 钢铁贸易、智能尽调报告、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

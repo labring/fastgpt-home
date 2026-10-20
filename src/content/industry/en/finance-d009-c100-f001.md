@@ -4,8 +4,8 @@ slug: /en/industry/finance-d009-c100-f001
 page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
-meta_title: HTTP Interfaces and External Systems for Property Management
-meta_description: Data sources include industry research reports published by property management industry associations, monthly operation ledgers of managed projects
+meta_title: HTTP Interfaces and External Systems for Property
+meta_description: HTTP Interfaces and External Systems for Property Management Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

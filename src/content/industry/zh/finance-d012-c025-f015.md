@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 农商行营销内容的部署与升级
-meta_description: 农商行营销内容的数据主要来源于内部业务系统、线下活动物料与客户分层运营记录。数据更新节奏随业务类型调整：理财产品说明书每周更新，信贷政策文档每季度修订，线下
+meta_description: 农商行营销内容的部署与升级：农商行营销内容的部署与升级，涵盖配置与验证建议。。。
 keywords: 农商行、营销内容与获客、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

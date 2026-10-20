@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油气开采智能尽调报告的部署与升级
-meta_description: 油气开采智能尽调报告的数据来源包含油气开采企业内部生产系统、第三方地质勘探机构的公开报告、行业监管部门的备案数据。数据更新节奏存在差异：钻井实时数据按小时更
+meta_description: 油气开采智能尽调报告的部署与升级：油气开采智能尽调报告的部署与升级，涵盖配置与验证建议
 keywords: 油气开采、智能尽调报告、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

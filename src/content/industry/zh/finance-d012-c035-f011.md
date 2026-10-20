@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医美营销内容的文档解析与分块
-meta_description: 医美营销内容的数据源主要来自机构内部的项目手册、活动策划方案、种草文案初稿、飞书多维表格式的客户反馈与价格台账，以及合作机构的授权资质文档。更新节奏随营销节
+meta_description: 医美营销内容的文档解析与分块：医美营销内容的文档解析与分块，涵盖配置与验证建议。
 keywords: 医美、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

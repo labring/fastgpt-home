@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商业物业研报检索的工具调用与插件
-meta_description: 商业物业研报的数据来源包括商业物业行业监测机构、项目运营方公开披露文件、区域商管部门公示信息。更新节奏以月度或季度为主，重点商圈的客流数据支持周度更新。文档
+meta_description: 商业物业研报检索的工具调用与插件：商业物业研报检索的工具调用与插件，涵盖配置与验证建议
 keywords: 商业物业、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

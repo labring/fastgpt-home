@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商用车融资日报的模型接入与配置
-meta_description: 商用车融资日报的数据来自合作金融机构的放款台账、货运平台的运营数据、车管所的车辆登记信息。更新节奏为每日更新，当日生成前一日的全量或增量数据。文档结构以结构
+meta_description: 商用车融资日报的模型接入与配置：商用车融资日报的模型接入与配置，涵盖配置与验证建议
 keywords: 商用车、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

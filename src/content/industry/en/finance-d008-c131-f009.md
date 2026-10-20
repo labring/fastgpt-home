@@ -4,8 +4,8 @@ slug: /en/industry/finance-d008-c131-f009
 page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
-meta_title: Citation Sources and Traceability for Decoration and
-meta_description: The data for decoration and renovation intelligent due diligence reports mainly comes from decoration qualification documents filed by housing and
+meta_title: Citation Sources and Traceability for Decoration
+meta_description: Citation Sources and Traceability for Decoration and Renovation Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

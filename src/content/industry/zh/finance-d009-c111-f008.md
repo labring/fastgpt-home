@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 畜禽养殖研报检索的工具调用与插件
-meta_description: 畜禽养殖研报的数据来源包括农业农村部畜牧兽医局公开监测数据、行业协会月度监测报告、券商农林牧渔研究团队研报、养殖企业公开调研公告。更新节奏分为常规周期与临时
+meta_description: 畜禽养殖研报检索的工具调用与插件：畜禽养殖研报检索的工具调用与插件，涵盖配置与验证建议
 keywords: 畜禽养殖、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

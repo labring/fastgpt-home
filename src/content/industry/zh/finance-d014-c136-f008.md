@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 贵金属财报分析的工具调用与插件
-meta_description: 贵金属财报与交易数据的来源包括伦敦金银市场协会（LBMA）的定盘价数据、上海黄金交易所的国内交易数据、国家统计局的贵金属行业统计数据，以及上市金企的公开财报
+meta_description: 贵金属财报分析的工具调用与插件：贵金属财报分析的工具调用与插件，涵盖配置与验证建议
 keywords: 贵金属、财报分析与报告生成、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15
@@ -25,7 +25,7 @@ date_modified: 2026-09-15
 | ---- | ---- | ---- |
 | `PLUGIN_API_TIMEOUT` | `30 秒` | 贵金属日内交易数据接口响应通常在10秒内，超时设置过长会阻塞流水线运行 |
 | `PARSE_PDF_TIMEOUT_SECONDS` | `600 秒` | 上市金企的财报PDF通常包含多页表格与图表，解析耗时较长 |
-| `PLUGIN_REQUEST_HEADERS` | `{"Content-Type": "application/json", "X-API-Key": "{{user_secret}}"}` | 多数贵金属数据源API要求JSON格式请求体与API密钥鉴权 |
+| `PLUGIN_REQUEST_HEADERS` | `{"Content-Type": "application/json", "X-API-Key": "待核验值"}` | 多数贵金属数据源API要求JSON格式请求体与API密钥鉴权 |
 | `DATA_UNIT_CONVERSION` | `启用，目标单位为人民币/克` | 国内主流贵金属交易计价单位为人民币/克，统一单位可简化后续分析逻辑 |
 | `PLUGIN_SCHEDULE_POLICY` | `按数据类型分组配置：日内数据每15分钟拉取，月度库存数据每月1次，季度财报数据每季度1次` | 匹配不同数据源的官方更新节奏，避免无效请求与数据过期 |
 | `HTTP_RETRY_MAX_TIMES` | `3 次` | 贵金属数据源接口偶发波动，有限重试可降低请求失败率 |

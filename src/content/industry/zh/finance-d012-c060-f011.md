@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程咨询营销内容的文档解析与分块
-meta_description: 工程咨询的营销文档主要来源于项目投标文件、可行性研究报告、年度营销案例集、技术方案书。数据更新无固定周期，随新中标项目、行业规范更新或年度营销计划调整触发。
+meta_description: 工程咨询营销内容的文档解析与分块：工程咨询营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 工程咨询、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

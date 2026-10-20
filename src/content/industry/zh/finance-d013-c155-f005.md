@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饲料融资日报的多轮对话与提示词
-meta_description: 饲料融资日报的数据来源为地方农业农村部门融资备案公示、饲料行业协会每日更新的行业融资台账、公开披露的企业融资公告。更新节奏为每日更新，当日发布前一工作日的融
+meta_description: 饲料融资日报的多轮对话与提示词：饲料融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 饲料、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

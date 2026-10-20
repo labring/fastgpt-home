@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航天装备融资日报的工作流编排
-meta_description: 航天装备融资日报的数据来自国防科工局公开配套项目融资公示、航天院所官方披露公告及第三方军工行业数据库。每日更新一次，单条数据包含项目名称、承制单位、融资金额
+meta_description: 航天装备融资日报的工作流编排：航天装备融资日报的工作流编排，涵盖配置与验证建议。
 keywords: 航天装备、融资日报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

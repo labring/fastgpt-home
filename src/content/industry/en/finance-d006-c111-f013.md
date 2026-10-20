@@ -4,8 +4,8 @@ slug: /en/industry/finance-d006-c111-f013
 page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
-meta_title: Knowledge Base Retrieval and Recall for Livestock and
-meta_description: Livestock and poultry farming investment research data comes from multiple sources. These include publicly available industry association survey data
+meta_title: Knowledge Base Retrieval and Recall for Livestock
+meta_description: Knowledge Base Retrieval and Recall for Livestock and Poultry Farming Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

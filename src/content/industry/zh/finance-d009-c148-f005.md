@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 酒店餐饮研报检索的多轮对话与提示词
-meta_description: 酒店餐饮研报的数据来源包含公开行业调研数据集、连锁餐饮企业公开披露的运营数据、区域商务局商圈监测报告、第三方餐饮供应链数据平台。更新节奏分为多档：商圈客流数
+meta_description: 酒店餐饮研报检索的多轮对话与提示词：酒店餐饮研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 酒店餐饮、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

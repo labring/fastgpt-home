@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水务财报分析的工作流编排
-meta_description: 水务行业财报数据主要来自上市公司公开年报、地方公用事业监管平台披露的运营月报及年度行业统计公报。数据更新节奏为月度运营数据每月更新，季度、年度财报按监管要求
+meta_description: 水务财报分析的工作流编排：水务财报分析的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 水务、财报分析与报告生成、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for State-owned Large Bank
-meta_description: Data originates from internal core business modules including corporate credit management systems, interbank business trading systems, and capital
+meta_description: Model Access and Configuration for State-owned Large Bank Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 证券研报检索的多轮对话与提示词
-meta_description: 证券研报数据主要来自国内持牌证券研究机构、第三方金融数据平台的公开授权内容。更新以工作日为主要节奏，盘中突发行业事件或上市公司财报发布后会生成即时研报。文档
+meta_description: 证券研报检索的多轮对话与提示词：证券研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 证券、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

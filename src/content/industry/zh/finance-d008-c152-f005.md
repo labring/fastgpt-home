@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 鞋类智能尽调报告的多轮对话与提示词
-meta_description: 鞋类智能尽调的数据来源包括品牌官方供应链档案、第三方质检机构报告、跨境电商销售台账、线下门店铺货记录。更新节奏为：供应链数据按生产批次更新，质检报告随抽检批
+meta_description: 鞋类智能尽调报告的多轮对话与提示词：鞋类智能尽调报告的多轮对话与提示词，涵盖配置与验证建议
 keywords: 鞋类、智能尽调报告、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

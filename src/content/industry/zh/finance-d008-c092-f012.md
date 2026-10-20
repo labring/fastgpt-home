@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 消费电子智能尽调报告的模型接入与配置
-meta_description: 消费电子智能尽调报告的数据主要来自品牌方公开供应链文档、电商平台SKU监测数据、工信部入网许可公示、经销商出货统计文件。数据更新节奏存在差异：SKU参数与出
+meta_description: 消费电子智能尽调报告的模型接入与配置：消费电子智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 消费电子、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

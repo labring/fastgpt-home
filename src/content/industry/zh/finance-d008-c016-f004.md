@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光伏智能尽调报告的向量模型与索引
-meta_description: 光伏智能尽调报告的数据主要来自项目立项审批文件、组件出厂检测报告、电站并网验收资料、季度运维台账与辐照监测数据。数据更新节奏分为两类：新建项目数据为一次性批
+meta_description: 光伏智能尽调报告的向量模型与索引：光伏智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 光伏、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

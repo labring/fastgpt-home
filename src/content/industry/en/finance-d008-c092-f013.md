@@ -4,8 +4,8 @@ slug: /en/industry/finance-d008-c092-f013
 page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
-meta_title: Knowledge Base Retrieval and Recall for Consumer Electronics
-meta_description: Consumer electronics data sources include brand official SKU parameter documents, contract manufacturer quality inspection reports, Ministry of
+meta_title: Knowledge Base Retrieval and Recall for Consumer
+meta_description: Knowledge Base Retrieval and Recall for Consumer Electronics Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

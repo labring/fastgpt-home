@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光模块融资日报的向量模型与索引
-meta_description: 光模块融资日报数据来源于一级市场融资信息平台、行业协会公开披露的招投标与合作公告、上市企业定期财报及企业自主披露的融资动态。更新节奏为每日更新，单日报文档包
+meta_description: 光模块融资日报的向量模型与索引：光模块融资日报的向量模型与索引，涵盖配置与验证建议
 keywords: 光模块、融资日报、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 厨卫电器收益率的工作流编排
-meta_description: 厨卫电器收益率相关数据来源于品牌内部ERP系统的供货台账、电商平台公开的成交记录、第三方家电行业监测数据库。数据更新节奏存在差异：单品供货成本每季度随供应链
+meta_description: 厨卫电器收益率的工作流编排：厨卫电器收益率的工作流编排，涵盖配置与验证建议。。。
 keywords: 厨卫电器、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

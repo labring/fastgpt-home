@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 中药智能尽调报告的工作流编排
-meta_description: 中药尽调报告的数据来源涵盖中国药典、地方炮制规范、批次检验报告、种植溯源档案等。数据更新节奏差异显著：中国药典每5年正式修订一次，地方炮制规范随区域监管要求
+meta_description: 中药智能尽调报告的工作流编排：中药智能尽调报告的工作流编排，涵盖配置与验证建议。
 keywords: 中药、智能尽调报告、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

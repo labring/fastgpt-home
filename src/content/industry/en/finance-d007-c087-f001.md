@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interfaces and External Systems for Auto Parts Yield
-meta_description: This category’s market and yield rate data draws primarily from daily transaction settlement data for auto parts subcategories on public bulk
+meta_description: HTTP Interfaces and External Systems for Auto Parts Yield Rate Data
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plug-ins for Energy Metals Financing Daily
-meta_description: The energy metals financing daily report draws data from listed financing information on domestic commodity exchanges, public financing announcements
+meta_description: Tool Calling and Plug-ins for Energy Metals Financing Daily Report
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

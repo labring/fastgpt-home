@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 装修装饰营销内容的工具调用与插件
-meta_description: 装修装饰场景的营销内容数据主要来自金融机构内部装修贷客户的需求文档、合作装修企业的案例库、建材供应商的参数文档。数据更新节奏为建材参数每月同步一次，装修案例
+meta_description: 装修装饰营销内容的工具调用与插件：装修装饰营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 装修装饰、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

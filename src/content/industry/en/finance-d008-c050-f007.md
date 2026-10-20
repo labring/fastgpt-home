@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Plastics and Rubber Intelligent
-meta_description: Data for due diligence in the plastics and rubber industry comes from customs import and export declaration forms, commodity spot trading platform
+meta_description: Workflow Orchestration for Plastics and Rubber Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

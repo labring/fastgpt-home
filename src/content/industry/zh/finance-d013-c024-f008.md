@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 农化制品融资日报的工具调用与插件
-meta_description: 农化制品融资日报的数据主要来源于行业资讯平台的每日融资动态汇总、地方金融监管局的企业融资备案数据、第三方征信机构的企业融资公开信息。数据更新节奏为T+1，即
+meta_description: 农化制品融资日报的工具调用与插件：农化制品融资日报的工具调用与插件，涵盖配置与验证建议
 keywords: 农化制品、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

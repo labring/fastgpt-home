@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商业地产收益率的分享与嵌入
-meta_description: 商业地产收益率数据主要来源于自持物业运营管理系统、第三方不动产数据服务机构。数据更新节奏为每日更新前一自然日的运营统计结果。数据文档为结构化表格格式，每行对
+meta_description: 商业地产收益率的分享与嵌入：商业地产收益率的分享与嵌入，涵盖配置与验证建议。。。
 keywords: 商业地产、收益率与行情日报播报、分享与嵌入
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

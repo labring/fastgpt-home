@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专业连锁研报检索的模型接入与配置
-meta_description: 专业连锁研报的数据主要来自券商零售行业研报、连锁品牌公开年报及行业协会月度运营监测报告。更新节奏分为季度常规研报、月度运营数据更新及临时事件公告。文档结构包
+meta_description: 专业连锁研报检索的模型接入与配置：专业连锁研报检索的模型接入与配置，涵盖配置与验证建议
 keywords: 专业连锁、研报检索与问答、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

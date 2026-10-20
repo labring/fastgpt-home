@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 文娱用品收益率的HTTP 接口与外部系统
-meta_description: 面向金融理财场景的文娱用品收益率相关数据，主要来自国内文娱衍生品交易平台、版权合作方的结算接口与线下展会交易数据。常规SKU每日固定更新一次，热门限定款、首
+meta_description: 文娱用品收益率的HTTP 接口与外部系统：文娱用品收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 文娱用品、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

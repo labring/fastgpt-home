@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 耐火材料研报检索的引用来源与溯源
-meta_description: 耐火材料研报数据主要来自行业协会公开报告、上市企业技术研发公告、专业检测机构测试数据及行业期刊，供金融机构的行业分析、理财顾问的产品定价参考。更新节奏以季度
+meta_description: 耐火材料研报检索的引用来源与溯源：耐火材料研报检索的引用来源与溯源，涵盖配置与验证建议
 keywords: 耐火材料、研报检索与问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

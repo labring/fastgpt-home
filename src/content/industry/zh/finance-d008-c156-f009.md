@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 黑色家电智能尽调报告的引用来源与溯源
-meta_description: 黑色家电的参数数据主要来自品牌官方产品页、国家能效标识备案数据库、第三方权威检测机构报告。更新节奏为品牌新品参数实时同步，能效数据每季度更新，售后政策随品牌
+meta_description: 黑色家电智能尽调报告的引用来源与溯源：黑色家电智能尽调报告的引用来源与溯源，涵盖配置与验证建议
 keywords: 黑色家电、智能尽调报告、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

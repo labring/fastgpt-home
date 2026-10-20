@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦煤研报检索的多轮对话与提示词
-meta_description: 焦煤研报数据主要来自中国煤炭工业协会、各煤炭主产区行业协会、大连商品交易所、第三方煤炭咨询机构。更新节奏覆盖每日现货价格、每周港口库存与运输数据、每月供需平
+meta_description: 焦煤研报检索的多轮对话与提示词：焦煤研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 焦煤、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

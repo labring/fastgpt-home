@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 纺织制造收益率的HTTP 接口与外部系统
-meta_description: 纺织制造的收益率关联数据主要来自全国棉花交易市场的公开原料行情接口、企业内部MES系统的生产台账数据。公开原料行情数据每日16点更新，生产端的合格产出、原料
+meta_description: 纺织制造收益率的HTTP 接口与外部系统：纺织制造收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 纺织制造、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

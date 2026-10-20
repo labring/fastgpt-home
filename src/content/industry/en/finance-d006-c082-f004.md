@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Aquaculture Investment
-meta_description: Aquaculture investment research data comes primarily from pond sensor monitoring, daily operation records of breeding entities, sampling reports from
+meta_description: Vector Models and Indexing for Aquaculture Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for Minor Metal Financing
-meta_description: Data for minor metal financing daily reports comes from daily publicly monitored data from the domestic non-ferrous metal industry association, as
+meta_description: Model Access and Configuration for Minor Metal Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

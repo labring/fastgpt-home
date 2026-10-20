@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 国有大行财报分析的文档解析与分块
-meta_description: 国有大行财报数据主要来自年度、半年度、季度官方披露报告，以及银行业监管机构要求的标准化报送文档。更新节奏固定，年度报告于每年会计年度结束后固定周期发布，半年
+meta_description: 国有大行财报分析的文档解析与分块：国有大行财报分析的文档解析与分块，涵盖配置与验证建议
 keywords: 国有大行、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

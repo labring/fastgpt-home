@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Wind Power Intelligent Due
-meta_description: Data for wind power intelligent due diligence reports comes from real-time wind turbine operation logs, regular inspection reports for towers and
+meta_description: Vector Models and Indexing for Wind Power Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

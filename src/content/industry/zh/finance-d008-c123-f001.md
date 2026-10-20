@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 能源金属智能尽调报告的HTTP 接口与外部系统
-meta_description: 能源金属品类的尽调报告数据来源涵盖国内有色金属工业协会公开披露数据、上海期货交易所与伦敦金属交易所的行情数据、海关总署进出口备案数据，以及矿山、冶炼企业的公
+meta_description: 能源金属智能尽调报告的HTTP 接口与外部系统：能源金属智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 能源金属、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

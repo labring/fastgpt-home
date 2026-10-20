@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 国有大行研报检索的文档解析与分块
-meta_description: 国有大行研报的数据来源主要包括本行宏观与金融市场研究部门产出的内部研报、合作第三方机构的公开行业研报，以及央行、监管机构发布的公开金融数据附件。更新节奏分为
+meta_description: 国有大行研报检索的文档解析与分块：国有大行研报检索的文档解析与分块，涵盖配置与验证建议
 keywords: 国有大行、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

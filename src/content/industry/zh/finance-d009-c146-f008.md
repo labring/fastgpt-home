@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通用设备研报检索的工具调用与插件
-meta_description: 通用设备研报的数据来源为国内头部券商机械设备行业研究团队、中国通用机械工业协会公开行业报告。更新频率包含月度跟踪报告、季度深度研报及突发政策事件即时报告。文
+meta_description: 通用设备研报检索的工具调用与插件：通用设备研报检索的工具调用与插件，涵盖配置与验证建议
 keywords: 通用设备、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

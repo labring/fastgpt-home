@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医疗器械收益率的表单与交互
-meta_description: 用于金融理财场景下医疗器械投资与行情分析的收益率相关数据，来源包括公开集中采购中标公告、上市医疗器械企业定期经营披露文件、区域医疗设备采购备案台账。更新节奏
+meta_description: 医疗器械收益率的表单与交互：医疗器械收益率的表单与交互，涵盖配置与验证建议。。。
 keywords: 医疗器械、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

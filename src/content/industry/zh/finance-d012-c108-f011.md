@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电商服务营销内容的文档解析与分块
-meta_description: 电商服务的营销内容数据主要来源于电商平台后台导出的销售报表、商品详情页话术文档、营销活动的运营手册、客户咨询历史工单。数据更新节奏随营销活动周期调整，日常商
+meta_description: 电商服务营销内容的文档解析与分块：电商服务营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 电商服务、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

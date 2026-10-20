@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 包装印刷研报检索的向量模型与索引
-meta_description: 包装印刷行业研报的来源主要包括中国包装联合会发布的行业白皮书、券商研究所的细分行业研报、上市包装印刷企业的定期报告及专业行业数据库。更新节奏以季度常规更新为
+meta_description: 包装印刷研报检索的向量模型与索引：包装印刷研报检索的向量模型与索引，涵盖配置与验证建议
 keywords: 包装印刷、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 贵金属收益率的表单与交互
-meta_description: 贵金属的行情与收益率数据主要来自合规的场内交易市场官方接口与第三方合规行情数据源。交易时段内数据高频更新，非交易时段仅更新结算类数据。标准数据文档包含品种标
+meta_description: 贵金属收益率的表单与交互：贵金属收益率的表单与交互，涵盖配置与验证建议。。。。。
 keywords: 贵金属、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

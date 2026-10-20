@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 动力煤营销内容的文档解析与分块
-meta_description: 动力煤营销相关数据主要来自国内主产区煤炭生产企业的质检报告、沿海港口现货交易台账、行业自律组织的供需简报，用于向下游用煤企业制作营销报价、行业分析内容以获客
+meta_description: 动力煤营销内容的文档解析与分块：动力煤营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 动力煤、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

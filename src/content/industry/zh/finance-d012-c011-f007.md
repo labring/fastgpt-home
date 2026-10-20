@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 休闲食品营销内容的工作流编排
-meta_description: 休闲食品相关数据主要来源于品牌自有电商后台SKU台账、线下门店动销报表、公开社交平台用户评论、品牌内部营销素材库，以及与合作金融机构共享的消费分期活动数据。
+meta_description: 休闲食品营销内容的工作流编排：休闲食品营销内容的工作流编排，涵盖配置与验证建议。
 keywords: 休闲食品、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

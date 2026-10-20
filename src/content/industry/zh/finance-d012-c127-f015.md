@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航空装备营销内容的部署与升级
-meta_description: 航空装备营销内容的数据源主要包括整机厂商公开机型手册、民航运营合规文件、行业科普公开资料与航司运营案例文档。更新节奏以新机型发布、合规政策更新为触发节点，无
+meta_description: 航空装备营销内容的部署与升级：航空装备营销内容的部署与升级，涵盖配置与验证建议。
 keywords: 航空装备、营销内容与获客、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

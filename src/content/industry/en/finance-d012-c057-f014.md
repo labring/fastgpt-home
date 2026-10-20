@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Forms and Interactions for Small Home Appliance Marketing
-meta_description: Small home appliance data comes from official brand product documentation, e-commerce platform detail page parameters, and third-party compliance test
+meta_description: Forms and Interactions for Small Home Appliance Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

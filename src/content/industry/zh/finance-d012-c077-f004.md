@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 旅游景区营销内容的向量模型与索引
-meta_description: 旅游景区的营销内容数据主要来自官方运营的营销物料库，包括活动策划文案、票务政策说明、周边业态介绍、节假日推广推文、临时通知及与金融机构合作的联名活动规则。数
+meta_description: 旅游景区营销内容的向量模型与索引：旅游景区营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 旅游景区、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

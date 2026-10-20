@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c089-f006
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: Conversation Logging and Auditing for Oil and Gas Extraction
-meta_description: Revenue and market data for the oil and gas extraction industry primarily comes from oil and gas production IoT platforms, domestic oil trading market
+meta_title: Conversation Logging and Auditing for Oil and Gas
+meta_description: Conversation Logging and Auditing for Oil and Gas Extraction Revenue and Daily Market Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

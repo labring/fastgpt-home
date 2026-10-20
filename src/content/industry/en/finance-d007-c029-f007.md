@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Packaging and Printing Yield
-meta_description: Packaging and printing yield and market data comes primarily from enterprise ERP systems, production work order ledgers, raw material procurement
+meta_description: Workflow Orchestration for Packaging and Printing Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

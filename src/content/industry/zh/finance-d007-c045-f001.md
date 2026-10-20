@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商用车收益率的HTTP 接口与外部系统
-meta_description: 商用车收益率相关数据主要来源于车载OBD终端、车队管理系统、能源补给平台及维保服务商。核心日度收益率汇总数据每日凌晨更新前一日的运营数据，实时运营状态数据每
+meta_description: 商用车收益率的HTTP 接口与外部系统：商用车收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 商用车、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

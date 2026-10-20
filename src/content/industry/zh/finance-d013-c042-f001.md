@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 品牌代运营融资日报的HTTP 接口与外部系统
-meta_description: 品牌代运营融资日报的数据来源为代运营服务商的客户融资对接台账、品牌方的资金流水系统及合作金融机构的放款接口。数据更新节奏为每日凌晨同步前一日的融资明细，单份
+meta_description: 品牌代运营融资日报的HTTP 接口与外部系统：品牌代运营融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 品牌代运营、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

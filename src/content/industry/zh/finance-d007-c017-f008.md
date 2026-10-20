@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光学光电子收益率的工具调用与插件
-meta_description: 这个品类的数据主要来自国内证券交易所行业板块行情接口、中证指数有限公司发布的光学光电子行业指数API，以及成分股的每日交易披露数据。日度行情数据的更新节奏为
+meta_description: 光学光电子收益率的工具调用与插件：光学光电子收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 光学光电子、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

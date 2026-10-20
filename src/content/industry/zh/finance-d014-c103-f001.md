@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 环境监测财报分析的HTTP 接口与外部系统
-meta_description: 环境监测财报分析的数据主要来自生态环境主管部门公开的区域环境监测数据集、企业内部环保设施的实时监测日志、第三方合规检测机构出具的检测报告。数据更新节奏分为实
+meta_description: 环境监测财报分析的HTTP 接口与外部系统：环境监测财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 环境监测、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

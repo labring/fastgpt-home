@@ -4,8 +4,8 @@ slug: /en/industry/finance-d014-c099-f005
 page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Dialogue and Prompt Engineering for Gas Financial
-meta_description: The financial report data for the gas category mainly comes from periodic reports publicly disclosed by listed gas enterprises, operational statistics
+meta_title: Multi-turn Dialogue and Prompt Engineering for Gas
+meta_description: Multi-turn Dialogue and Prompt Engineering for Gas Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

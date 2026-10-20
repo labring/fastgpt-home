@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医美投研知识库建设的引用来源与溯源
-meta_description: 医美投研数据主要来自国家药监局医美产品备案数据库、医美机构公开执业备案信息、行业协会发布的诊疗规范、脱敏的临床诊疗记录与学术期刊研究文献。数据更新节奏存在差
+meta_description: 医美投研知识库建设的引用来源与溯源：医美投研知识库建设的引用来源与溯源，涵盖配置与验证建议
 keywords: 医美、投研知识库建设与治理、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物流营销内容的知识库检索与召回
-meta_description: 物流营销相关的数据主要来源于物流运单系统、配送路线规划文档、线下网点服务手册、线上营销活动物料四类。数据更新节奏差异明显：运单数据随订单生成实时更新，网点信
+meta_description: 物流营销内容的知识库检索与召回：物流营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 物流、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

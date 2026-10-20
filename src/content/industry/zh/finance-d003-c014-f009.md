@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 保障责任保险理赔初审的引用来源与溯源
-meta_description: 保障责任的数据主要来源于保险产品正式条款文本、投保时的告知确认文档、监管发布的险种规范文件。数据更新节奏随产品条款修订、监管政策调整触发，无固定周期，单次修
+meta_description: 保障责任保险理赔初审的引用来源与溯源：保障责任保险理赔初审的引用来源与溯源，涵盖配置与验证建议
 keywords: 保障责任、保险理赔初审、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

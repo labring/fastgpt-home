@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程机械融资日报的文档解析与分块
-meta_description: 这个品类的数据主要来自融资租赁公司的每日放款台账、银行工程机械专项融资的日报导出文件，更新节奏为每日一次。文档以Excel格式为主，包含设备型号、设备序列号
+meta_description: 工程机械融资日报的文档解析与分块：工程机械融资日报的文档解析与分块，涵盖配置与验证建议
 keywords: 工程机械、融资日报、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

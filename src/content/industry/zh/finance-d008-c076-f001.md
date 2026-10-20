@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 文娱用品智能尽调报告的HTTP 接口与外部系统
-meta_description: 文娱用品属于轻工制造范畴，尽调数据来源包括中国玩具和婴童用品协会的合规备案库、主流电商平台的SKU详情页、国家版权局的文创作品登记系统。更新节奏差异明显：新
+meta_description: 文娱用品智能尽调报告的HTTP 接口与外部系统：文娱用品智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 文娱用品、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

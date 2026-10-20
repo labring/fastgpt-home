@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 房建工程智能尽调报告的模型接入与配置
-meta_description: 房建工程智能尽调报告是金融机构开展工程类信贷业务的核心支撑材料，数据来源包括住建部门备案的施工许可文件、施工日志、监理周报、造价结算台账、现场测绘扫描件等。
+meta_description: 房建工程智能尽调报告的模型接入与配置：房建工程智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 房建工程、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

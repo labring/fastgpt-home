@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程咨询营销内容的表单与交互
-meta_description: 工程咨询的数据主要来自内部项目台账、过往咨询方案文档、客户前期沟通记录。数据更新节奏随单个项目落地或季度复盘同步更新。单份文档通常包含项目概况、技术参数、报
+meta_description: 工程咨询营销内容的表单与交互：工程咨询营销内容的表单与交互，涵盖配置与验证建议。
 keywords: 工程咨询、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

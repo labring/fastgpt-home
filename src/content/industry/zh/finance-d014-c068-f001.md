@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 投资平台财报分析的HTTP 接口与外部系统
-meta_description: 投资平台的财报数据来自境内外证券交易所公开披露文件、上市公司官方公告及合规第三方数据源。数据按季度、半年度、年度固定周期更新，临时公告触发即时更新。文档包含
+meta_description: 投资平台财报分析的HTTP 接口与外部系统：投资平台财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 投资平台、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

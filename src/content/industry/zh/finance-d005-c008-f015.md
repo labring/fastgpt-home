@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 交易规则客户服务的部署与升级
-meta_description: 交易规则数据主要来源于金融机构官方业务手册、合规监管文件与核心交易系统的后台配置。更新节奏无固定周期，随监管政策调整、业务流程优化或客群规则变更触发。文档结
+meta_description: 交易规则客户服务的部署与升级：交易规则客户服务的部署与升级，涵盖配置与验证建议。
 keywords: 交易规则、客户服务与账户咨询、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

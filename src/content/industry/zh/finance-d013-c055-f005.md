@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 大气治理融资日报的多轮对话与提示词
-meta_description: 大气治理融资日报的数据主要来自生态环境部门项目审批公示、政策性银行及商业银行的绿色信贷披露、第三方环保产业信息平台。数据按自然日每日更新，单份日报文档结构固
+meta_description: 大气治理融资日报的多轮对话与提示词：大气治理融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 大气治理、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

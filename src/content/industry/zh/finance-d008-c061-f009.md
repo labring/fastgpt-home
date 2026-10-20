@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程机械智能尽调报告的引用来源与溯源
-meta_description: 工程机械的数据源主要包括出厂合格证、年度维保档案、现场工况监测终端数据、第三方质检报告。静态数据如设备型号、出厂编号、额定功率随设备生命周期固定，首次录入后
+meta_description: 工程机械智能尽调报告的引用来源与溯源：工程机械智能尽调报告的引用来源与溯源，涵盖配置与验证建议
 keywords: 工程机械、智能尽调报告、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

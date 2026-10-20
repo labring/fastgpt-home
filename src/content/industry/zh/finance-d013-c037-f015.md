@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 卫星通信融资日报的部署与升级
-meta_description: 该品类的数据来源为卫星通信项目融资备案公示、公开招投标平台的融资公告及行业监测机构的每日汇总。更新节奏为每日1次，更新当日0点至24点收录的卫星通信领域融资
+meta_description: 卫星通信融资日报的部署与升级：卫星通信融资日报的部署与升级，涵盖配置与验证建议。
 keywords: 卫星通信、融资日报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

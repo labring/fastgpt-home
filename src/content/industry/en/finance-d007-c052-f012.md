@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for Multi-Holding Yield Data
-meta_description: Data sources are daily financial accounting systems and third-party market data interfaces from affiliated business segments and invested entities.
+meta_description: Model Access and Configuration for Multi-Holding Yield Data
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

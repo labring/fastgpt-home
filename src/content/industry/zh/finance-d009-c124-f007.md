@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 自动化设备研报检索的工作流编排
-meta_description: 自动化设备研报数据主要来自中国机械工业联合会公开报告、头部设备厂商技术白皮书、第三方行业咨询机构的公开分析文档，同时包含金融机构自用的自动化设备赛道投资分析
+meta_description: 自动化设备研报检索的工作流编排：自动化设备研报检索的工作流编排，涵盖配置与验证建议
 keywords: 自动化设备、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

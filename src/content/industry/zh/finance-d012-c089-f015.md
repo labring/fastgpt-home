@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油气开采营销内容的部署与升级
-meta_description: 油气开采营销内容的数据主要来自井况监测日志、钻井技术文档、行业合规标准、油气田客户需求反馈等。更新节奏随业务场景变化：井况数据为实时更新，技术文档与合规标准
+meta_description: 油气开采营销内容的部署与升级：油气开采营销内容的部署与升级，涵盖配置与验证建议。
 keywords: 油气开采、营销内容与获客、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 融资租赁投研知识库建设的部署与升级
-meta_description: 融资租赁投研数据主要来自项目尽调档案、租赁物权属登记文件、租金支付台账、承租人经营财报及行业监管政策文档。单份文档长度跨度较大，单笔项目尽调报告可达数十页，
+meta_description: 融资租赁投研知识库建设的部署与升级：融资租赁投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 融资租赁、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

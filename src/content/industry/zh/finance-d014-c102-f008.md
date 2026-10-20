@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 特钢财报分析的工具调用与插件
-meta_description: 特钢财报数据主要来自境内外证券交易所公开披露文件、行业协会月度调研数据及企业官方公告。更新节奏以季度报告、年度报告为固定周期，同时伴随产能调整、原料价格波动
+meta_description: 特钢财报分析的工具调用与插件：特钢财报分析的工具调用与插件，涵盖配置与验证建议。
 keywords: 特钢、财报分析与报告生成、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

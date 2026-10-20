@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦炭收益率的部署与升级
-meta_description: 焦炭的行情与收益率数据主要来自大连商品交易所官方行情接口与合规大宗商品资讯数据源。更新节奏覆盖交易日内每15分钟的盘间快照，以及每日收盘后生成的当日完整收益
+meta_description: 焦炭收益率的部署与升级：焦炭收益率的部署与升级，涵盖配置与验证建议。。。。。。。
 keywords: 焦炭、收益率与行情日报播报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

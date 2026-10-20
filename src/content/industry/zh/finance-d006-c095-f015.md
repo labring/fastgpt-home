@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 热力投研知识库建设的部署与升级
-meta_description: 热力投研数据主要来自热力企业的SCADA系统采集的管网运行时序数据、气象监测站的环境数据、行业监管政策文件、上市热力企业的季度财报与运维日志。数据更新节奏存
+meta_description: 热力投研知识库建设的部署与升级：热力投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 热力、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -4,8 +4,8 @@ slug: /en/industry/finance-d006-c098-f005
 page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Dialogue and Prompt Engineering for Coal Chemical
-meta_description: Data sources include public monitoring data from coal industry associations, production ledgers of coal chemical enterprises, public quotes from
+meta_title: Multi-turn Dialogue and Prompt Engineering for Coal
+meta_description: Multi-turn Dialogue and Prompt Engineering for Coal Chemical Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

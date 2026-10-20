@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: KYC and AML Document Verification
 is_part_of: FastGPT Tech Center
 meta_title: Beneficial Owner KYC Multi-turn Dialogue and Prompting
-meta_description: Sources of beneficial owner data include public information from administrative departments for industry and commerce, equity structure explanation
+meta_description: Beneficial Owner KYC Multi-turn Dialogue and Prompting: covering configuration and validation guidance.
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化妆品财报分析的HTTP 接口与外部系统
-meta_description: 化妆品财报的数据来源包括品牌方公开的季度/年度财报、官方经营公告，以及第三方监测机构的线下专柜、线上电商渠道销售数据。更新节奏为季度财报固定按自然季度披露，
+meta_description: 化妆品财报分析的HTTP 接口与外部系统：化妆品财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 化妆品、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

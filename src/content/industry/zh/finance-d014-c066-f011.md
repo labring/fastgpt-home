@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 房建工程财报分析的文档解析与分块
-meta_description: 房建工程财报数据主要来源于项目立项文件、月度进度台账、竣工结算报告及年度审计报告。更新节奏随项目节点与财报周期推进，覆盖项目全周期。文档形式包含PDF审计报
+meta_description: 房建工程财报分析的文档解析与分块：房建工程财报分析的文档解析与分块，涵盖配置与验证建议
 keywords: 房建工程、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

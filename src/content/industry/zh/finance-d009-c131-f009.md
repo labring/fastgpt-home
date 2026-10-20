@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 装修装饰研报检索的引用来源与溯源
-meta_description: 装修装饰研报的来源主要包括中国建筑装饰协会发布的行业动态报告、上市装饰企业的年度与季度经营报告、建材厂商的产品规格手册，以及住建部门发布的行业政策文件。更新
+meta_description: 装修装饰研报检索的引用来源与溯源：装修装饰研报检索的引用来源与溯源，涵盖配置与验证建议
 keywords: 装修装饰、研报检索与问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

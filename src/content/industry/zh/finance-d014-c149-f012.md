@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 钢铁贸易财报分析的模型接入与配置
-meta_description: 钢铁贸易企业的财报分析数据主要来自内部进销存台账、上游钢厂供货合同、下游客户结算单，以及行业公开的钢材价格指数、海关进出口贸易数据。内部台账按日更新，行业指
+meta_description: 钢铁贸易财报分析的模型接入与配置：钢铁贸易财报分析的模型接入与配置，涵盖配置与验证建议
 keywords: 钢铁贸易、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

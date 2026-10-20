@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 种植业融资日报的引用来源与溯源
-meta_description: 这个品类的数据来自政策性银行涉农信贷日报系统、地方农业农村部门的种植主体融资备案台账、农业保险承保机构的配套融资记录。更新节奏为每日凌晨同步前一日的全量数据
+meta_description: 种植业融资日报的引用来源与溯源：种植业融资日报的引用来源与溯源，涵盖配置与验证建议
 keywords: 种植业、融资日报、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

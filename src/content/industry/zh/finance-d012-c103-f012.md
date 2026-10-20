@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 环境监测营销内容的模型接入与配置
-meta_description: 环境监测的数据来源包括固定点位传感器、移动监测车、卫星遥感设备与手持监测终端，这类数据多用于生成面向金融客户的绿色金融、绿色保险相关的营销内容。数据更新节奏
+meta_description: 环境监测营销内容的模型接入与配置：环境监测营销内容的模型接入与配置，涵盖配置与验证建议
 keywords: 环境监测、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

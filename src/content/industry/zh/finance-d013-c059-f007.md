@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工业金属融资日报的工作流编排
-meta_description: 工业金属融资日报的数据来源涵盖国内上海期货交易所、伦敦金属交易所的公开交易数据，以及国内现货贸易平台的每日报送信息。更新节奏为每个交易日16:00后更新，非
+meta_description: 工业金属融资日报的工作流编排：工业金属融资日报的工作流编排，涵盖配置与验证建议。
 keywords: 工业金属、融资日报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

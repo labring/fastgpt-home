@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饲料融资日报的HTTP 接口与外部系统
-meta_description: 饲料融资日报的数据来源为饲料生产企业的融资备案系统、地方农业信贷担保平台的每日报送数据，更新节奏为每日完成前一日全量数据的更新。数据文档采用结构化表格格式，
+meta_description: 饲料融资日报的HTTP 接口与外部系统：饲料融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 饲料、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

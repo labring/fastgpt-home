@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 教育服务财报分析的文档解析与分块
-meta_description: 教育服务品类的财报数据来源于机构自主披露的年度、半年度财务报告，以及教育主管部门要求报送的办学财务报表。更新节奏为每季度末或年度末集中生成与提交。文档多为P
+meta_description: 教育服务财报分析的文档解析与分块：教育服务财报分析的文档解析与分块，涵盖配置与验证建议
 keywords: 教育服务、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

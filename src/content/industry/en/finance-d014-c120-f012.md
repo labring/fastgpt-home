@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for Cybersecurity Financial
-meta_description: Cybersecurity financial report data sources include public annual and quarterly reports from listed companies, and security operation compliance
+meta_description: Model Access and Configuration for Cybersecurity Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -34,7 +34,7 @@ Cybersecurity financial report data characteristics create three types of config
 ## Three Common Configuration Mistakes
 - Model outputs include extra meaningless numbers, such as an extra zero at the end. This occurs because field unit mapping rules are not clarified in the prompt, leading to deviations in unit conversion for monetary fields.
 - Model invocation returns status code `413 Request Entity Too Large`. This occurs because the configured `maxContext` parameter is too small, which does not match the long text length of cybersecurity financial reports, leading to request truncation by the server.
-- Extracted fields are empty with no corresponding error prompt. This occurs because labeling rules for missing fields are not clarified in the prompt, so the model does not output placeholder information as required.
+- Extracted fields are empty with no corresponding error prompt. This occurs because labeling rules for missing fields are not clarified in the prompt, so the model does not output pending verification information as required.
 
 ## How to Confirm Successful Configuration
 - Upload a single cybersecurity financial report text, and verify that model output field extraction results match the format and unit requirements specified in the prompt.

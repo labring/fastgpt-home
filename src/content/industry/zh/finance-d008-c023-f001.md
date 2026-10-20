@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 军工电子智能尽调报告的HTTP 接口与外部系统
-meta_description: 金融机构开展军工电子企业智能尽调时，所需的数据主要来自军工集团公开披露文件、国军标认证供应商公示文档、行业协会公开统计、军工电子元器件检测机构报告。数据更新
+meta_description: 军工电子智能尽调报告的HTTP 接口与外部系统：军工电子智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 军工电子、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

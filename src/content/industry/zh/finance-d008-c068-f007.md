@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 投资平台智能尽调报告的工作流编排
-meta_description: 投资平台的智能尽调报告数据主要来自公开上市公司财报、行业监管机构披露文件、项目方提交的尽职调查材料及第三方征信数据源。数据更新节奏随数据源类型差异，公开财报
+meta_description: 投资平台智能尽调报告的工作流编排：投资平台智能尽调报告的工作流编排，涵盖配置与验证建议
 keywords: 投资平台、智能尽调报告、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

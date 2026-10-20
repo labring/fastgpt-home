@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interfaces and External Systems for Residential
-meta_description: Residential construction marketing content data primarily comes from ERP management systems of properties partnered with financial institutions, sales
+meta_description: HTTP Interfaces and External Systems for Residential Construction Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

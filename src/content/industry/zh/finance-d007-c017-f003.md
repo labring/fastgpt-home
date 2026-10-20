@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光学光电子收益率的分享与嵌入
-meta_description: 光学光电子行业的行情与收益率数据主要来自沪深北交易所公开行情API、中证指数有限公司的行业指数数据源。数据更新节奏为交易日每日收盘后1小时内完成当日全量数据
+meta_description: 光学光电子收益率的分享与嵌入：光学光电子收益率的分享与嵌入，涵盖配置与验证建议。
 keywords: 光学光电子、收益率与行情日报播报、分享与嵌入
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

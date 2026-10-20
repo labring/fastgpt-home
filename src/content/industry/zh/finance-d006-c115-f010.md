@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 种植业投研知识库建设的数据库与运维
-meta_description: 种植业投研数据来源包含农业农村部公开监测数据、种业企业育种试验记录、田间物联网采集的土壤与气象数据、行业研报结构化内容。更新节奏差异明显：田间物联网数据为分
+meta_description: 种植业投研知识库建设的数据库与运维：种植业投研知识库建设的数据库与运维，涵盖配置与验证建议
 keywords: 种植业、投研知识库建设与治理、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

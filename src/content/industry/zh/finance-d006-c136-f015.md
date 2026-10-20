@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 贵金属投研知识库建设的部署与升级
-meta_description: 贵金属投研数据主要来自上海黄金交易所实时行情、伦敦金银市场协会（LBMA）每日定盘价、国内期货交易所合约数据、行业研报及矿企公开财报。实时行情数据更新频率为
+meta_description: 贵金属投研知识库建设的部署与升级：贵金属投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 贵金属、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

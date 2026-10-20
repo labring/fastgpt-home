@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 种植业收益率的模型接入与配置
-meta_description: 种植业收益率相关数据主要来自农业农村部公开监测数据、地方农技推广站每日上报的种植台账与市场收购价数据。数据更新节奏为每日更新，覆盖当日作物种植、采收、交易全
+meta_description: 种植业收益率的模型接入与配置：种植业收益率的模型接入与配置，涵盖配置与验证建议。
 keywords: 种植业、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

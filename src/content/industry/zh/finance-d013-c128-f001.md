@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航运港口融资日报的HTTP 接口与外部系统
-meta_description: 航运港口融资日报的数据来源主要为港口运营管理系统、国际航运货代平台及属地金融监管部门的航运融资备案数据库。数据更新节奏为每日更新一次，覆盖前一自然日的全量航
+meta_description: 航运港口融资日报的HTTP 接口与外部系统：航运港口融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 航运港口、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

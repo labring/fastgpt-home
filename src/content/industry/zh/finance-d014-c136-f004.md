@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 贵金属财报分析的向量模型与索引
-meta_description: 贵金属财报相关数据来源包括相关矿业企业的定期公开财报、上海黄金交易所、伦敦金银市场协会的行业披露数据，以及第三方供需分析报告。数据更新节奏分层：企业财报按季
+meta_description: 贵金属财报分析的向量模型与索引：贵金属财报分析的向量模型与索引，涵盖配置与验证建议
 keywords: 贵金属、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

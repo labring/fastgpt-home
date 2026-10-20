@@ -4,8 +4,8 @@ slug: /en/industry/finance-d013-c023-f001
 page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
-meta_title: HTTP Interfaces and External Systems for Defense Electronics
-meta_description: The data for defense electronics financing daily reports originates from official defense and military industry disclosure platforms, industry
+meta_title: HTTP Interfaces and External Systems for Defense
+meta_description: HTTP Interfaces and External Systems for Defense Electronics Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化妆品营销内容的多轮对话与提示词
-meta_description: 面向金融行业获客场景的化妆品营销相关数据，主要来源于品牌官方产品库、合规备案平台、电商平台用户评价、美妆内容平台的测评素材。品牌产品库包含成分占比、适用肤质
+meta_description: 化妆品营销内容的多轮对话与提示词：化妆品营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 化妆品、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

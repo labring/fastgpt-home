@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Cement Financing Daily
-meta_description: Cement financing daily report data mainly comes from cement supply chain financing ledgers on regional bulk commodity trading platforms, financing
+meta_description: Document Parsing and Chunking for Cement Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

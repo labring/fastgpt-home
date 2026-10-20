@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 住宅开发融资日报的工具调用与插件
-meta_description: 住宅开发融资日报的数据来源包括地方住建部门的房地产开发项目监管平台、合作金融机构的信贷台账系统、企业内部的融资管理系统。更新节奏为每日固定时段更新，覆盖前一
+meta_description: 住宅开发融资日报的工具调用与插件：住宅开发融资日报的工具调用与插件，涵盖配置与验证建议
 keywords: 住宅开发、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

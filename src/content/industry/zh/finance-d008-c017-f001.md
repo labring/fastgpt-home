@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光学光电子智能尽调报告的HTTP 接口与外部系统
-meta_description: 用于金融尽调的光学光电子智能尽调报告的数据来源包括公开供应链披露信息、行业第三方数据库、企业官方产品参数页与财报公告。更新节奏分为三类：原材料报价、订单异动
+meta_description: 光学光电子智能尽调报告的HTTP 接口与外部系统：光学光电子智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 光学光电子、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

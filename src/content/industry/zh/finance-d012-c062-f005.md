@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 广告营销营销内容的多轮对话与提示词
-meta_description: 金融行业广告营销的数据来源包括广告投放平台后台的曝光、点击、转化数据，金融产品合规文档库，以及用户与营销素材的互动日志。更新节奏分为实时增量更新的投放互动数
+meta_description: 广告营销营销内容的多轮对话与提示词：广告营销营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 广告营销、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

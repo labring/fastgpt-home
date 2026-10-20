@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 生物制品智能尽调报告的模型接入与配置
-meta_description: 生物制品数据的来源包含药品监管机构公开审评档案、企业上市申报文件、批签发质检报告、公开临床试验数据集。数据更新随药品获批、批次放行、临床试验阶段推进，无固定
+meta_description: 生物制品智能尽调报告的模型接入与配置：生物制品智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 生物制品、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

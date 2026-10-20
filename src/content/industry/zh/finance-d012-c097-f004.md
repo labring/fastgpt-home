@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦煤营销内容的向量模型与索引
-meta_description: 焦煤营销相关数据主要来自现货交易台账、行业供需周报、定制化营销话术库、线下路演PPT及客户对接记录。数据更新节奏随物料类型差异明显：现货报价类每日更新，供需
+meta_description: 焦煤营销内容的向量模型与索引：焦煤营销内容的向量模型与索引，涵盖配置与验证建议。
 keywords: 焦煤、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

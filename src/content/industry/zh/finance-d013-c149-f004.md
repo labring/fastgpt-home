@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 钢铁贸易融资日报的向量模型与索引
-meta_description: 数据主要来自钢铁贸易企业的进销存管理系统、合作银行的授信台账、当日现货市场成交数据。更新节奏为每日更新，单份日报为结构化表格文件。文档包含贸易主体名称、钢材
+meta_description: 钢铁贸易融资日报的向量模型与索引：钢铁贸易融资日报的向量模型与索引，涵盖配置与验证建议
 keywords: 钢铁贸易、融资日报、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Agrochemical Product Research
-meta_description: Agrochemical product research report data mainly comes from domestic agrochemical industry associations, R&D and marketing departments of leading
+meta_description: Workflow Orchestration for Agrochemical Product Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

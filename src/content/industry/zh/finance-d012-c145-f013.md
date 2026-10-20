@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通信设备营销内容的知识库检索与召回
-meta_description: 面向金融/保险/理财场景的通信设备，数据源包含企业内部设备规格库、营销素材管理系统、运营商合作文档、新品迭代公告。更新节奏随新品发布、合规要求调整，无固定周
+meta_description: 通信设备营销内容的知识库检索与召回：通信设备营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 通信设备、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

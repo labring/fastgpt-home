@@ -4,8 +4,8 @@ slug: /en/industry/finance-d009-c076-f011
 page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
-meta_title: Document Parsing and Chunking for Cultural and Entertainment
-meta_description: Data for cultural and entertainment product research reports comes primarily from public reports released by industry consulting institutions, public
+meta_title: Document Parsing and Chunking for Cultural
+meta_description: Document Parsing and Chunking for Cultural and Entertainment Product Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

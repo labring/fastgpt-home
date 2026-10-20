@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 住宅开发智能尽调报告的HTTP 接口与外部系统
-meta_description: 住宅开发智能尽调报告的数据主要来自自然资源部门土地出让公示、住建部门施工许可备案、项目开发主体的资质公示等公开数据源。数据更新节奏随类型区分：土地出让信息按
+meta_description: 住宅开发智能尽调报告的HTTP 接口与外部系统：住宅开发智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 住宅开发、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

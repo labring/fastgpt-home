@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 军工电子研报检索的模型接入与配置
-meta_description: 军工电子研报主要来自券商军工行业研究部门、国防科技情报机构、军工电子上市公司公开披露文件，是金融行业机构开展行业分析的重要参考资料。更新节奏随行业事件、季度
+meta_description: 军工电子研报检索的模型接入与配置：军工电子研报检索的模型接入与配置，涵盖配置与验证建议
 keywords: 军工电子、研报检索与问答、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

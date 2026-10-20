@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化妆品融资日报的多轮对话与提示词
-meta_description: 化妆品融资日报的数据主要来自公开财经媒体披露、企业工商融资公告、行业投融资数据库的公开信息。更新节奏为事件触发式，当日披露的融资事件当日更新，历史数据批量导
+meta_description: 化妆品融资日报的多轮对话与提示词：化妆品融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 化妆品、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

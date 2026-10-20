@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油气开采智能尽调报告的工具调用与插件
-meta_description: 油气开采智能尽调报告的数据主要来自油气藏地质勘探数据库、钻井作业实时采集系统、生产测井终端及油气田供应链管理平台。数据更新节奏分为两类：静态地质数据按季度更
+meta_description: 油气开采智能尽调报告的工具调用与插件：油气开采智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 油气开采、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

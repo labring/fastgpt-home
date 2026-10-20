@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 乳制品营销内容的工作流编排
-meta_description: 乳制品品类的数据来源主要包含供应链生产端、终端动销端、用户反馈端与金融端客户标签四类。生产端数据包含SKU编码、生产日期、保质期、单份净含量等字段，按生产批
+meta_description: 乳制品营销内容的工作流编排：乳制品营销内容的工作流编排，涵盖配置与验证建议。。。
 keywords: 乳制品、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

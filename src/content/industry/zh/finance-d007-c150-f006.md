@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁矿石收益率的对话日志与审计
-meta_description: 铁矿石行情数据主要来源于国内大宗商品期货交易所的铁矿石期货合约交易数据，更新节奏为每个交易日收盘后1小时内完成当日全量数据更新，非交易日无新增数据。数据文档
+meta_description: 铁矿石收益率的对话日志与审计：铁矿石收益率的对话日志与审计，涵盖配置与验证建议。
 keywords: 铁矿石、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

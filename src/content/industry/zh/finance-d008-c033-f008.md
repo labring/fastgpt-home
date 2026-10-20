@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化纤智能尽调报告的工具调用与插件
-meta_description: 化纤品类的行业数据主要来源于中国化纤工业协会公开监测数据、大宗商品现货交易平台行情、海关总署进出口报关数据及上游炼化企业月度运营公告。现货类数据（如PTA、
+meta_description: 化纤智能尽调报告的工具调用与插件：化纤智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 化纤、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Commercial Vehicle Financing
-meta_description: Data for commercial vehicle financing daily reports comes from commercial vehicle operation filing platforms and loan systems of cooperating financial
+meta_description: Vector Models and Indexing for Commercial Vehicle Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

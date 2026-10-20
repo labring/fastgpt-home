@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Power Grid Equipment Marketing
-meta_description: Power grid equipment data comes from enterprise PLM systems, equipment ledger management systems, on-site operation and maintenance logs, and bidding
+meta_description: Workflow Orchestration for Power Grid Equipment Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Special Steel Marketing Content
-meta_description: Special steel related data mainly comes from production management systems, quality inspection department submission ledgers, sales inquiry records
+meta_description: Workflow Orchestration for Special Steel Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

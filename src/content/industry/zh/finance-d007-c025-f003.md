@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 农商行收益率的分享与嵌入
-meta_description: 农商行的收益率与行情数据来源于核心业务系统每日营业终了后的清算报表，更新节奏为每日凌晨完成当日全量数据汇总并发布。文档以产品类别为一级分类节点，下设产品标识
+meta_description: 农商行收益率的分享与嵌入：农商行收益率的分享与嵌入，涵盖配置与验证建议。。。。。
 keywords: 农商行、收益率与行情日报播报、分享与嵌入
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

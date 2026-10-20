@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工业金属研报检索的HTTP 接口与外部系统
-meta_description: 工业金属研报的数据来源包括上海期货交易所、伦敦金属交易所、中国有色金属工业协会及头部券商有色金属行业研究团队的公开研报。更新节奏差异明显：现货价格数据每15
+meta_description: 工业金属研报检索的HTTP 接口与外部系统：工业金属研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 工业金属、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

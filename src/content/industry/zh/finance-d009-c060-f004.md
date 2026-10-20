@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程咨询研报检索的向量模型与索引
-meta_description: 工程咨询的研报数据主要来自建筑装饰领域的项目立项文件、造价分析报告、招投标技术规范、行业专项调研报告。数据更新无固定周期，随项目推进或行业政策调整不定期新增
+meta_description: 工程咨询研报检索的向量模型与索引：工程咨询研报检索的向量模型与索引，涵盖配置与验证建议
 keywords: 工程咨询、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

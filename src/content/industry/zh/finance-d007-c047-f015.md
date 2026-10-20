@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 国有大行收益率的部署与升级
-meta_description: 国有大行收益率与行情日报的数据来源为国有大行官方官网、央行公开披露的金融数据平台，更新节奏为每日固定时段发布前一工作日的完整数据。文档格式多为内嵌结构化表格
+meta_description: 国有大行收益率的部署与升级：国有大行收益率的部署与升级，涵盖配置与验证建议。。。
 keywords: 国有大行、收益率与行情日报播报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

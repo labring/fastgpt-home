@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 网络安全融资日报的部署与升级
-meta_description: 网络安全融资日报的数据来源为公开的安全厂商投融资信息、行业合规报告及第三方安全赛道数据平台。更新节奏为每日更新，每份日报为结构化文档，包含融资方名称、安全赛
+meta_description: 网络安全融资日报的部署与升级：网络安全融资日报的部署与升级，涵盖配置与验证建议。
 keywords: 网络安全、融资日报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

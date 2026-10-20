@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 汽车零部件收益率的工作流编排
-meta_description: 数据源来自国内汽车零部件行业协会的公开报价数据库、上游金属原材料期货盘面数据、金融行情接口的联动数据，以及合作厂商的月度供货结算台账。更新节奏分为三类：核心
+meta_description: 汽车零部件收益率的工作流编排：汽车零部件收益率的工作流编排，涵盖配置与验证建议。
 keywords: 汽车零部件、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

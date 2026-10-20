@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多元金融收益率的工具调用与插件
-meta_description: 多元金融品类的收益率与行情数据，来源包括公开披露的非银金融产品净值公告、行业指数行情接口、机构报送的自营产品数据。数据更新节奏为交易日收盘后1.5小时内完成
+meta_description: 多元金融收益率的工具调用与插件：多元金融收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 多元金融、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

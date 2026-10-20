@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 资质符合性竞价的知识库检索与召回
-meta_description: 资质符合性竞价的数据来源包括投标方提交的资质文件、行业监管部门的合规公示文档、招标方发布的合规要求细则，以及过往中标项目的资质核验记录。数据更新节奏随招标项
+meta_description: 资质符合性竞价的知识库检索与召回：资质符合性竞价的知识库检索与召回，涵盖配置与验证建议
 keywords: 资质符合性、竞价与投标报告、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

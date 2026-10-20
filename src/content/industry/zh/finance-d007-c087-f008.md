@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 汽车零部件收益率的工具调用与插件
-meta_description: 汽车零部件相关收益率与行情数据是金融机构开展汽车产业链理财、供应链金融业务的核心参考依据，来源包括国内汽车零部件行业协会公开数据集、供应链协同平台的结构化上
+meta_description: 汽车零部件收益率的工具调用与插件：汽车零部件收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 汽车零部件、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

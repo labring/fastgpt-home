@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 炼化财报分析的向量模型与索引
-meta_description: 炼化财报的数据来源为上市炼化企业的定期报告、半年度报告、年度报告中的炼化板块专项披露内容，以及行业协会发布的月度运行简报。更新节奏分为定期更新与临时更新：定
+meta_description: 炼化财报分析的向量模型与索引：炼化财报分析的向量模型与索引，涵盖配置与验证建议。
 keywords: 炼化、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

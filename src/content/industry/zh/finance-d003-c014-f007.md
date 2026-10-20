@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 保障责任保险理赔初审的工作流编排
-meta_description: 保障责任数据主要来自保险公司核心业务系统的结构化存储，以及理赔申请人上传的保单PDF、投保确认书等纸质材料扫描件的解析文本。数据随理赔案件创建时同步拉取，案
+meta_description: 保障责任保险理赔初审的工作流编排：保障责任保险理赔初审的工作流编排，涵盖配置与验证建议
 keywords: 保障责任、保险理赔初审、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

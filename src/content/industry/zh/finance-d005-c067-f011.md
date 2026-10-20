@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 投诉工单客户服务的文档解析与分块
-meta_description: 投诉工单数据主要来自企业客服CRM系统的工单模块，通过API同步或手动导出获取。更新节奏随工单流转节点触发，包括创建、分配、处理中、已办结等节点同步更新。单
+meta_description: 投诉工单客户服务的文档解析与分块：投诉工单客户服务的文档解析与分块，涵盖配置与验证建议
 keywords: 投诉工单、客户服务与账户咨询、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

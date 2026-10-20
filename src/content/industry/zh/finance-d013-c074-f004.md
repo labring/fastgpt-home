@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 教育服务融资日报的向量模型与索引
-meta_description: 数据主要来自公开投融资披露渠道、教育行业监管公示平台及合作方每日报送的融资信息，更新节奏为每日凌晨完成前一日全量数据更新。文档分为结构化字段与非结构化备注两
+meta_description: 教育服务融资日报的向量模型与索引：教育服务融资日报的向量模型与索引，涵盖配置与验证建议
 keywords: 教育服务、融资日报、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

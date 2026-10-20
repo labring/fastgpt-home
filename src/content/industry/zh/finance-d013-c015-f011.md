@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 储能融资日报的文档解析与分块
-meta_description: 储能融资日报的数据来源于公开行业监测平台、券商整理的融资公示信息、地方能源项目备案文件。更新节奏为每日更新，覆盖当日及近7日的储能项目融资动态。文档多为结构
+meta_description: 储能融资日报的文档解析与分块：储能融资日报的文档解析与分块，涵盖配置与验证建议。
 keywords: 储能、融资日报、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

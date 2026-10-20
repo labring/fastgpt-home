@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物业管理收益率的工具调用与插件
-meta_description: 该品类的数据主要来自单个物业项目的财务台账、业主收费系统、公共区域经营流水及运维成本台账。更新节奏为每日固定时段同步前一自然日的全量项目数据。单条数据对应单
+meta_description: 物业管理收益率的工具调用与插件：物业管理收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 物业管理、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

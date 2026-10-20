@@ -4,8 +4,8 @@ slug: /en/industry/finance-d009-c147-f004
 page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
-meta_title: Vector Models and Indexing for Papermaking Industry Research
-meta_description: Papermaking industry research report data comes primarily from authoritative industry institutions, securities firm research departments, public
+meta_title: Vector Models and Indexing for Papermaking Industry
+meta_description: Vector Models and Indexing for Papermaking Industry Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

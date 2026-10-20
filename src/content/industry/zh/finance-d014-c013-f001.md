@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 保险财报分析的HTTP 接口与外部系统
-meta_description: 保险财报数据主要来源于保险公司官方披露的年度、半年度、季度报告，以及银保监会公开的监管报送数据。更新节奏固定：年度报告需在每年4月30日前披露，季度报告于季
+meta_description: 保险财报分析的HTTP 接口与外部系统：保险财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 保险、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

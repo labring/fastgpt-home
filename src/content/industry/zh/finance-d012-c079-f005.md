@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 普钢营销内容的多轮对话与提示词
-meta_description: 普钢相关数据主要来自钢厂ERP系统、大宗商品现货交易平台、官方出厂价公示渠道及下游制造业需求调研数据。出厂指导价每日更新，现货交易价格每小时刷新，库存与产能
+meta_description: 普钢营销内容的多轮对话与提示词：普钢营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 普钢、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

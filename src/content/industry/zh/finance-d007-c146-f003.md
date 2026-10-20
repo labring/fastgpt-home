@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通用设备收益率的分享与嵌入
-meta_description: 通用设备收益率数据来源于设备运行工况采集终端、工业互联网运维平台及设备厂商的官方数据接口，多用于金融领域的设备资产收益分析场景。数据以每日更新的结构化文档形
+meta_description: 通用设备收益率的分享与嵌入：通用设备收益率的分享与嵌入，涵盖配置与验证建议。。。
 keywords: 通用设备、收益率与行情日报播报、分享与嵌入
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

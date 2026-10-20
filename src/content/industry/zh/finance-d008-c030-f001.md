@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化妆品智能尽调报告的HTTP 接口与外部系统
-meta_description: 化妆品智能尽调的数据源主要来自国家药品监督管理局化妆品备案公开数据库、第三方合规检测机构报告、品牌方官方公示资料。数据更新节奏：备案信息随产品上市备案完成实
+meta_description: 化妆品智能尽调报告的HTTP 接口与外部系统：化妆品智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 化妆品、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

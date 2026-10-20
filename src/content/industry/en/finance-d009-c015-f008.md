@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Energy Storage Research Report
-meta_description: Energy storage research report data comes from public statistics from domestic energy storage industry associations, research reports on power
+meta_description: Tool Calling and Plugins for Energy Storage Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

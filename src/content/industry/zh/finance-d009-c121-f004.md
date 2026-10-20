@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 耐火材料研报检索的向量模型与索引
-meta_description: 耐火材料研报的来源包括金融机构发布的行业配置研报、行业协会发布的运行简报、上市耐火材料企业的技术研发报告、建材专业期刊的专题文章、国家相关部门发布的应用标准
+meta_description: 耐火材料研报检索的向量模型与索引：耐火材料研报检索的向量模型与索引，涵盖配置与验证建议
 keywords: 耐火材料、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

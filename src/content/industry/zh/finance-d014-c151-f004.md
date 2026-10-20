@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁路公路财报分析的向量模型与索引
-meta_description: 铁路公路行业的财报数据主要来自上市公司定期披露报告、行业协会公开统计资料。披露节奏固定，年报每年更新一次，季报每季度更新，月度运营数据按月同步。文档结构包含
+meta_description: 铁路公路财报分析的向量模型与索引：铁路公路财报分析的向量模型与索引，涵盖配置与验证建议
 keywords: 铁路公路、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

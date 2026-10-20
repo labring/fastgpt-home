@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 炼化投研知识库建设的数据库与运维
-meta_description: 炼化投研的数据来源包括勘探开发技术报告、炼化装置工艺规程、原油质检批次数据、成品油出厂指标文档、行业供需分析周报，以及实时采集的装置运行参数。更新节奏差异较
+meta_description: 炼化投研知识库建设的数据库与运维：炼化投研知识库建设的数据库与运维，涵盖配置与验证建议
 keywords: 炼化、投研知识库建设与治理、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

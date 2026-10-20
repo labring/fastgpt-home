@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 住宅开发营销内容的部署与升级
-meta_description: 住宅开发营销相关数据主要来自售楼处运营台账、官方户型图PDF、预售证公示文件、周边配套区位图、楼书长文档及朋友圈营销文案。数据更新节奏随项目节点变化：开盘前
+meta_description: 住宅开发营销内容的部署与升级：住宅开发营销内容的部署与升级，涵盖配置与验证建议。
 keywords: 住宅开发、营销内容与获客、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Database and Operations for Consumer Building Materials
-meta_description: Consumer building materials market data comes from daily sampling of regional building material markets, manufacturer shipping ledgers, and public
+meta_description: Database and Operations for Consumer Building Materials Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

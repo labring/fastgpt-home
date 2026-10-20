@@ -4,8 +4,8 @@ slug: /zh/industry/fin-step-c009-3
 page_type: 行业作业环节页
 article_section: 保险
 is_part_of: FastGPT 技术中心
-meta_title: 企业财产保险承保与理赔的出险后将台账、购置凭证、残值：哪一部
-meta_description: 企业财产保险承保与理赔的出险后将台账、购置凭证、残值：哪一部分能交给系统
+meta_title: 企业财产保险承保与理赔的出险后将台账、购置凭证、残值：哪一部分能交给系统
+meta_description: 企业财产保险承保与理赔的出险后将台账、购置凭证、残值：哪一部分能交给系统：企业财产保险承保与理赔的出险后将台账、购置凭证、残值：哪一部分能交给系统，涵盖配置与验证建议
 keywords: 企业财产保险承保与理赔、保险、环节3
 source_type: 金融业务分类与作业事实取自行业研究报告（含监管文件来源编号）
 date_published: 2026-09-15

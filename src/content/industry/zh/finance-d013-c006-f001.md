@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 中药融资日报的HTTP 接口与外部系统
-meta_description: 数据来源为公开医药投融资披露渠道、中药产业链企业公告，更新频率为每日凌晨更新前一日的全量增量数据。单条融资记录的文档结构包含：融资主体名称（涵盖中药细分品类
+meta_description: 中药融资日报的HTTP 接口与外部系统：中药融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 中药、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

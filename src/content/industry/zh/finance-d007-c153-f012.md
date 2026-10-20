@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 风电收益率的模型接入与配置
-meta_description: 风电收益率日报的数据来源包含风电场站SCADA监控系统、区域电网结算平台、气象观测站点三类，主要用于金融机构的风电资产收益播报与估值参考。数据更新节奏为每日
+meta_description: 风电收益率的模型接入与配置：风电收益率的模型接入与配置，涵盖配置与验证建议。。。
 keywords: 风电、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

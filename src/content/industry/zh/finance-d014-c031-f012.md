@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学制药财报分析的模型接入与配置
-meta_description: 化学制药财报的数据来源主要为境内外证券交易所的法定披露平台、药企官方发布的年度、半年度与季度报告，以及行业公开的研发管线数据库。更新节奏遵循法定披露周期，按
+meta_description: 化学制药财报分析的模型接入与配置：化学制药财报分析的模型接入与配置，涵盖配置与验证建议
 keywords: 化学制药、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

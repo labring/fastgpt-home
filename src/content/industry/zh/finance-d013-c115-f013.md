@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 种植业融资日报的知识库检索与召回
-meta_description: 数据来源为地方农业农村主管部门每日归集的种植主体融资备案数据、涉农银行机构的放款台账，更新频率为每日凌晨更新前一日全量数据。单篇文档为单种植主体的当日融资明
+meta_description: 种植业融资日报的知识库检索与召回：种植业融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 种植业、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

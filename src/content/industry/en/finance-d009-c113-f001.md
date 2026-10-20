@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interfaces and External Systems for Baijiu Research
-meta_description: The data source for baijiu research reports is public industry research content published by securities firm food and beverage research teams. Updates
+meta_description: HTTP Interfaces and External Systems for Baijiu Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

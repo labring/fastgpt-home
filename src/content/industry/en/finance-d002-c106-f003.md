@@ -4,8 +4,8 @@ slug: /en/industry/finance-d002-c106-f003
 page_type: Industry scenario page
 article_section: Unified AI Platform and Multi-App Orchestration
 is_part_of: FastGPT Tech Center
-meta_title: Usage Statistics for Unified AI Platforms: Sharing and
-meta_description: Usage statistics data comes from the platform's application call logs, session interaction records, and resource consumption monitoring data. It is
+meta_title: Usage Statistics for Unified AI Platforms: Sharing
+meta_description: Usage Statistics for Unified AI Platforms: Sharing and Embedding
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

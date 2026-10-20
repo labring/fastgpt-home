@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商业物业研报检索的部署与升级
-meta_description: 商业物业研报的数据源主要来自商业地产行业协会、专业咨询机构公开披露的商圈运营数据、物业租赁报告。更新节奏以月度常规报告为主，季度、年度会发布专项大盘分析。文
+meta_description: 商业物业研报检索的部署与升级：商业物业研报检索的部署与升级，涵盖配置与验证建议。
 keywords: 商业物业、研报检索与问答、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

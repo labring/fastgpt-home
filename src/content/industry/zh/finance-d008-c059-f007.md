@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工业金属智能尽调报告的工作流编排
-meta_description: 工业金属的数据源主要包括全球主流商品交易所的公开行情数据、行业协会发布的库存与进出口数据、上游矿山及冶炼厂的出货公告。数据更新节奏存在差异：现货行情日内实时
+meta_description: 工业金属智能尽调报告的工作流编排：工业金属智能尽调报告的工作流编排，涵盖配置与验证建议
 keywords: 工业金属、智能尽调报告、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

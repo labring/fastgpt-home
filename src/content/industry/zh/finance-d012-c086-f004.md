@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 汽车服务营销内容的向量模型与索引
-meta_description: 汽车金融服务的营销内容数据主要来源于线下汽车金融门店的分期套餐介绍、车型贴息活动文案、车主服务问答库，以及合作汽车品牌的官方科普内容。数据更新节奏随新车型贴
+meta_description: 汽车服务营销内容的向量模型与索引：汽车服务营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 汽车服务、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

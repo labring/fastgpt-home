@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Game Financial Report Analysis
-meta_description: Data sources include periodic reports of listed game companies publicly disclosed by stock exchanges, and game business segment data from third-party
+meta_description: Tool Calling and Plugins for Game Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

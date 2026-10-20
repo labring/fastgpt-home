@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 网络安全研报检索的部署与升级
-meta_description: 网络安全研报的来源包括国家信息安全漏洞共享平台公开报告、头部安全厂商技术研报、开源社区漏洞公告、金融机构内部安全合规文档与行业监测文档。更新节奏随内容类型差
+meta_description: 网络安全研报检索的部署与升级：网络安全研报检索的部署与升级，涵盖配置与验证建议。
 keywords: 网络安全、研报检索与问答、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

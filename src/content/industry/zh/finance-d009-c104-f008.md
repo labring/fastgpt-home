@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 玻璃研报检索的工具调用与插件
-meta_description: 玻璃研报的数据主要来自中国建筑玻璃与工业玻璃协会的行业统计数据、大宗商品现货交易平台的实时报价、券商研究所的建材板块研报，以及海关总署的进出口统计资料。更新
+meta_description: 玻璃研报检索的工具调用与插件：玻璃研报检索的工具调用与插件，涵盖配置与验证建议。
 keywords: 玻璃、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

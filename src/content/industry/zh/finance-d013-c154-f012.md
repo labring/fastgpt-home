@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饰品融资日报的模型接入与配置
-meta_description: 饰品融资日报的数据来自国内纺织服饰辅料交易市场的公开交易数据、品牌方的铺货回款记录、第三方供应链金融平台的融资申请与放款数据。每日更新单份日报文档，单份文档
+meta_description: 饰品融资日报的模型接入与配置：饰品融资日报的模型接入与配置，涵盖配置与验证建议。
 keywords: 饰品、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

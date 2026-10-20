@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 钢铁贸易智能尽调报告的文档解析与分块
-meta_description: 钢铁贸易智能尽调报告的数据来源包括贸易商进销存台账、钢厂出货单、海关报关单、银行授信文件及行业供需简报。更新节奏随单笔交易或定期报告调整，单笔交易单据随交易
+meta_description: 钢铁贸易智能尽调报告的文档解析与分块：钢铁贸易智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 钢铁贸易、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

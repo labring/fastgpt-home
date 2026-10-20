@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: IT 服务收益率的工具调用与插件
-meta_description: IT服务赛道的收益率与行情日报数据，主要对接专业金融行情聚合接口与赛道细分监测数据源。数据更新节奏为每日固定时段完成全量刷新，适配日报播报的业务需求。文档以
+meta_description: IT 服务收益率的工具调用与插件：IT 服务收益率的工具调用与插件，涵盖配置与验证建议
 keywords: IT 服务、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

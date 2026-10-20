@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通信设备营销内容的模型接入与配置
-meta_description: 通信设备营销内容的数据源包含设备运行日志、官方技术手册、销售线索记录与客户咨询对话。数据更新节奏区分场景：实时告警数据秒级更新，每日销售汇总报表定时更新，批
+meta_description: 通信设备营销内容的模型接入与配置：通信设备营销内容的模型接入与配置，涵盖配置与验证建议
 keywords: 通信设备、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

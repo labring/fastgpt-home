@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 农化制品收益率的部署与升级
-meta_description: 农化制品收益率相关数据主要来自行业协会公开报价库、上游原料厂商出厂价台账与农资经销商实时台账。数据更新节奏分为两类：基础农化原料的现货价格每2小时更新一次，
+meta_description: 农化制品收益率的部署与升级：农化制品收益率的部署与升级，涵盖配置与验证建议。。。
 keywords: 农化制品、收益率与行情日报播报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

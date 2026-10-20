@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医疗器械融资日报的工作流编排
-meta_description: 医疗器械融资日报的数据来源涵盖国内医疗器械行业协会公开披露信息、上市公司定期公告、一级市场融资数据库及地方药监部门备案公示。数据更新节奏为每日更新，覆盖前一
+meta_description: 医疗器械融资日报的工作流编排：医疗器械融资日报的工作流编排，涵盖配置与验证建议。
 keywords: 医疗器械、融资日报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

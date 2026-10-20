@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 费用清单保险理赔初审的部署与升级
-meta_description: 费用清单数据来源于定点医疗机构的诊疗结算系统、医保经办机构的报销台账，或理赔申请人上传的纸质单据扫描件。每份单据对应单条理赔申请，更新节奏随理赔提交触发，提
+meta_description: 费用清单保险理赔初审的部署与升级：费用清单保险理赔初审的部署与升级，涵盖配置与验证建议
 keywords: 费用清单、保险理赔初审、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

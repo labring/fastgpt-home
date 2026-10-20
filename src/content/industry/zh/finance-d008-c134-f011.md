@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 调味品智能尽调报告的文档解析与分块
-meta_description: 调味品品类的数据主要来源于企业内部进销存台账、第三方检测机构出具的合规报告、行业协会发布的品类监测文档以及监管部门要求提交的备案材料。数据更新节奏覆盖月度进
+meta_description: 调味品智能尽调报告的文档解析与分块：调味品智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 调味品、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

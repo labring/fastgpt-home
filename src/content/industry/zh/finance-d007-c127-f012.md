@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航空装备收益率的模型接入与配置
-meta_description: 航空装备相关数据主要来自上市公司公开财报、军工行业协会月度运行报告、二级市场行情平台。公开财报按季度披露，临时公告随订单签订、交付节点发布，二级市场行情数据
+meta_description: 航空装备收益率的模型接入与配置：航空装备收益率的模型接入与配置，涵盖配置与验证建议
 keywords: 航空装备、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

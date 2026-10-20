@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 废标项竞价的部署与升级
-meta_description: 废标项竞价相关数据主要来源于公共资源交易平台、政府采购网的废标公示公告及投标审核存档。数据按每日批次更新，单条数据包含项目编号、项目名称、废标原因、废标时间
+meta_description: 废标项竞价的部署与升级：废标项竞价的部署与升级，涵盖配置与验证建议。。。。。。。
 keywords: 废标项、竞价与投标报告、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

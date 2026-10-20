@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学制药投研知识库建设的上下文与 token
-meta_description: 这个品类的数据主要来自公开临床试验数据库、药企年度报告、专利授权文本、药典标准文档及行业技术研报。更新节奏随数据类型差异明显：临床试验数据随试验阶段阶段性更
+meta_description: 化学制药投研知识库建设的上下文与 token：化学制药投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 化学制药、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

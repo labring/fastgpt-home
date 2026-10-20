@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Chemical Raw Material Yield Rates
-meta_description: Market and yield rate data for chemical raw materials comes primarily from domestic bulk commodity spot trading platforms, industry association
+meta_description: Deployment and Upgrade for Chemical Raw Material Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

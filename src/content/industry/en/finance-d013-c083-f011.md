@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Water Utility Financing
-meta_description: Water utility financing daily report data is sourced from internal financing ledgers of local water utility groups, financing information for water
+meta_description: Document Parsing and Chunking for Water Utility Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

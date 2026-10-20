@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 生物制品收益率的模型接入与配置
-meta_description: 生物制品收益率相关数据的来源包括国家药监局批签发公开接口、医药行业第三方数据服务平台。数据更新节奏分为两类：批签发数据每月更新一次，终端销售数据每周更新一次
+meta_description: 生物制品收益率的模型接入与配置：生物制品收益率的模型接入与配置，涵盖配置与验证建议
 keywords: 生物制品、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

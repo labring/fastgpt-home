@@ -4,7 +4,7 @@ slug: /zh/industry/fin-step-c039-3
 page_type: 行业作业环节页
 article_section: 公募基金
 is_part_of: FastGPT 技术中心
-meta_title: 混合基金多资产配置与运营的核对多资产估值、合同比例和披露分类
+meta_title: 混合基金多资产配置与运营的核对多资产估值、合同比例和披露分类：哪一部分能交给系统
 meta_description: 混合基金多资产配置与运营的核对多资产估值、合同比例和披露分类：哪一部分能交给系统
 keywords: 混合基金多资产配置与运营、公募基金、环节3
 source_type: 金融业务分类与作业事实取自行业研究报告（含监管文件来源编号）

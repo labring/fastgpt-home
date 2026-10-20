@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 造纸投研知识库建设的上下文与 token
-meta_description: 造纸投研数据主要来自轻工制造行业协会月度报告、上市公司季度/年度财报、木浆等原材料现货与期货报价平台、环保监管政策文件。数据更新节奏存在差异：原材料报价每日
+meta_description: 造纸投研知识库建设的上下文与 token：造纸投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 造纸、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 贵金属研报检索的部署与升级
-meta_description: 贵金属研报数据主要来自券商研究所专项报告、第三方金融数据服务商的贵金属板块研报，以及交易所公开的行业监测文档。更新节奏包含每日盘后行情简报、每周行业周报、每
+meta_description: 贵金属研报检索的部署与升级：贵金属研报检索的部署与升级，涵盖配置与验证建议。。。
 keywords: 贵金属、研报检索与问答、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

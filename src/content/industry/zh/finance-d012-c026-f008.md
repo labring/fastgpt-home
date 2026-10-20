@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 出版营销内容的工具调用与插件
-meta_description: 金融/保险/理财领域的出版营销内容的数据来源包括内部内容管理系统的理财书籍、保险产品宣传册、基金经理访谈文案的物料库，版权授权素材库，第三方行业书评平台、电
+meta_description: 出版营销内容的工具调用与插件：出版营销内容的工具调用与插件，涵盖配置与验证建议。
 keywords: 出版、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

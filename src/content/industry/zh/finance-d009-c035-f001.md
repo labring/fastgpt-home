@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医美研报检索的HTTP 接口与外部系统
-meta_description: 医美研报数据主要来自行业协会公开合规公示、持牌医美机构的经营公开报告、第三方合规医美数据服务商的采集内容。更新节奏为月度更新核心经营数据，季度更新行业趋势与
+meta_description: 医美研报检索的HTTP 接口与外部系统：医美研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 医美、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

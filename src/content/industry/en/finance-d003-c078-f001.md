@@ -4,8 +4,8 @@ slug: /en/industry/finance-d003-c078-f001
 page_type: Industry scenario page
 article_section: Insurance Claim First-Level Review
 is_part_of: FastGPT Tech Center
-meta_title: HTTP Interfaces and External Systems for Pre-Assessment of
-meta_description: Data sources primarily include medical insurance settlement details, outpatient and inpatient electronic medical records, and historical insurance
+meta_title: HTTP Interfaces and External Systems for Pre-Assessment
+meta_description: HTTP Interfaces and External Systems for Pre-Assessment of Insurance Claims for Pre-Existing Condition Determination
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

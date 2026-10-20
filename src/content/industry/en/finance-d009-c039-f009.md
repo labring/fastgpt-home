@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Citation Source and Traceability for Kitchen and Bath
-meta_description: Data sources for kitchen and bath appliance research reports include special research reports released by industry research institutions, product
+meta_description: Citation Source and Traceability for Kitchen and Bath Appliance Research Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Large State-Owned Bank
-meta_description: Data for large state-owned bank intelligent due diligence reports comes from four primary sources: internal credit management systems, People's Bank
+meta_description: Tool Calling and Plugins for Large State-Owned Bank Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Metallurgical Coal
-meta_description: Data for metallurgical coal financing daily reports comes from official daily delivery data released by domestic coal trading centers, daily report
+meta_description: Document Parsing and Chunking for Metallurgical Coal Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

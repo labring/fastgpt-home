@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 耐火材料营销内容的工作流编排
-meta_description: 面向金融行业的耐火材料营销内容数据来源包括企业内部产品手册、行业标准规范文档、客户询价沟通记录与供应商原料参数文件。数据更新节奏随业务场景调整：原料参数随原
+meta_description: 耐火材料营销内容的工作流编排：耐火材料营销内容的工作流编排，涵盖配置与验证建议。
 keywords: 耐火材料、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

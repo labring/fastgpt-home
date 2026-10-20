@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 白色家电财报分析的向量模型与索引
-meta_description: 白色家电财报的数据来源为证券交易所公开披露的上市公司定期报告、临时公告，以及行业公开的经营数据文档。更新节奏遵循法定披露规则，定期报告按年度、半年度、季度发
+meta_description: 白色家电财报分析的向量模型与索引：白色家电财报分析的向量模型与索引，涵盖配置与验证建议
 keywords: 白色家电、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

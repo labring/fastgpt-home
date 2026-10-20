@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 教育服务融资日报的多轮对话与提示词
-meta_description: 教育服务融资日报的数据主要来自公开融资公告、地方教育监管备案公示、行业合规数据库。更新节奏为每日汇总当日披露的教育领域融资事件，含突发追加融资的补录。单份日
+meta_description: 教育服务融资日报的多轮对话与提示词：教育服务融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 教育服务、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

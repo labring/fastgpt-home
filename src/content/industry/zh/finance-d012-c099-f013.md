@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 燃气营销内容的知识库检索与召回
-meta_description: 燃气营销相关数据主要来自燃气运营方的官方物料，包含三类核心内容：阶梯气价调整通知、开户/续费/储值优惠活动文案、安全用气与客服问答文档。数据更新节奏差异明显
+meta_description: 燃气营销内容的知识库检索与召回：燃气营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 燃气、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

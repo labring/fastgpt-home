@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 环境监测营销内容的工具调用与插件
-meta_description: 环境监测数据主要来源于地面固定监测站、移动监测车、物联网微型传感器及卫星遥感设备，可用于金融机构绿色金融产品、环保主题保险的营销内容生成。数据更新节奏覆盖实
+meta_description: 环境监测营销内容的工具调用与插件：环境监测营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 环境监测、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

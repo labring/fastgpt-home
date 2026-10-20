@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 文娱用品收益率的工具调用与插件
-meta_description: 文娱用品收益率相关数据主要来自国内合规的文娱品类流通监测平台及品牌方授权的终端销售数据库。数据更新节奏为周度，按自然周汇总当周期的销售与流通信息。数据文档为
+meta_description: 文娱用品收益率的工具调用与插件：文娱用品收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 文娱用品、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

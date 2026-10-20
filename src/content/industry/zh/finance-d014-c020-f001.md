@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 兵器装备财报分析的HTTP 接口与外部系统
-meta_description: 这个品类的数据主要来自上市公司公开公告、国防科技工业主管部门公开信息及军工集团官方披露。更新节奏分为定期与不定期：年度报告于每年4月前完成披露，季度报告于每
+meta_description: 兵器装备财报分析的HTTP 接口与外部系统：兵器装备财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 兵器装备、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医疗器械研报检索的工具调用与插件
-meta_description: 面向金融领域的医疗器械研报，来源涵盖医疗器械监管机构公开的审评档案、厂商发布的临床试验报告、专业医药生物数据库的行业分析文档。更新节奏随监管政策调整、临床试
+meta_description: 医疗器械研报检索的工具调用与插件：医疗器械研报检索的工具调用与插件，涵盖配置与验证建议
 keywords: 医疗器械、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

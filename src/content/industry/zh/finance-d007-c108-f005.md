@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电商服务收益率的多轮对话与提示词
-meta_description: 这个品类的数据来自电商服务商后台交易系统、电商平台开放的商家经营接口，更新节奏为每日固定时段更新前一自然日的完整数据。单份数据文档以结构化表格形式呈现，包含
+meta_description: 电商服务收益率的多轮对话与提示词：电商服务收益率的多轮对话与提示词，涵盖配置与验证建议
 keywords: 电商服务、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 软件开发研报检索的知识库检索与召回
-meta_description: 软件开发领域的研报数据主要来源于专业技术咨询机构、开源社区技术复盘文档、行业标准规范文件及厂商技术白皮书。数据更新节奏随核心技术迭代调整，在关键技术版本发布
+meta_description: 软件开发研报检索的知识库检索与召回：软件开发研报检索的知识库检索与召回，涵盖配置与验证建议
 keywords: 软件开发、研报检索与问答、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

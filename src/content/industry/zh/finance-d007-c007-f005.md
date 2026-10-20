@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 乳制品收益率的多轮对话与提示词
-meta_description: 乳制品收益率与行情日报的数据来自全国乳制品零售监测数据库、各品牌官方供货平台及线下商超POS汇总数据。更新节奏为每日T+1更新，次日凌晨完成当日全量数据同步
+meta_description: 乳制品收益率的多轮对话与提示词：乳制品收益率的多轮对话与提示词，涵盖配置与验证建议
 keywords: 乳制品、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

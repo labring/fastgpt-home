@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Minor Metal Financing Daily
-meta_description: Minor metal financing daily report data sources include domestic minor metal spot trading platforms, local nonferrous metal industry associations
+meta_description: Vector Models and Indexing for Minor Metal Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

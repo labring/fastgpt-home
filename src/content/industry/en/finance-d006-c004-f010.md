@@ -4,8 +4,8 @@ slug: /en/industry/finance-d006-c004-f010
 page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
-meta_title: Database and Operations for Specialized Equipment Investment
-meta_description: Data sources for specialized equipment investment research include public technical whitepapers from domestic specialized equipment manufacturers
+meta_title: Database and Operations for Specialized Equipment
+meta_description: Database and Operations for Specialized Equipment Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -38,7 +38,7 @@ Segmented storage of long documents must match the granularity of investment res
 > The parameter values provided on this page are all conventional recommendations used to determine the starting point for configuration. Actual values are affected by material form, data volume and business rules. Specific issues require specific analysis. It is recommended to test on your own samples before finalizing the configuration.
 
 ## Three Common Misconfigurations
-- Symptom: Database calls return `SQL syntax error`, manual SQL execution shows no errors, and failures occur after passing variable parameters. Cause: Variable placeholder format is not configured correctly. Fields in specialized equipment data include special characters such as μm and kW, and no escape processing is performed during variable parsing.
+- Symptom: Database calls return `SQL syntax error`, manual SQL execution shows no errors, and failures occur after passing variable parameters. Cause: Variable pending verification format is not configured correctly. Fields in specialized equipment data include special characters such as μm and kW, and no escape processing is performed during variable parsing.
 - Symptom: Workflows cannot call database tools in a containerized deployment environment. Cause: The container network does not open database access ports. Real-time operation and maintenance data synchronization requires cross-container network communication, and un-mapped ports lead to connection failures.
 - Symptom: MongoDB connections cannot read equipment operation and maintenance data. Cause: The collection name matching the equipment category is not specified. Specialized equipment operation and maintenance data is stored split by equipment model, and the default collection does not cover the corresponding data range.
 

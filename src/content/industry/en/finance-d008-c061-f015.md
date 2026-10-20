@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade of Intelligent Due Diligence Reports
-meta_description: Construction machinery intelligent due diligence data sources include equipment factory archives, on-site operation and maintenance ledgers
+meta_description: Deployment and Upgrade of Intelligent Due Diligence Reports for Construction Machinery
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

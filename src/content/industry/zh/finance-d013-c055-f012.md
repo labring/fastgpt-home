@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 大气治理融资日报的模型接入与配置
-meta_description: 大气治理融资日报的数据主要来源于生态环境部门的大气治理项目备案库、商业银行绿色信贷报送系统、地方公共资源交易平台的环保项目融资公告。数据更新节奏为每日更新，
+meta_description: 大气治理融资日报的模型接入与配置：大气治理融资日报的模型接入与配置，涵盖配置与验证建议
 keywords: 大气治理、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

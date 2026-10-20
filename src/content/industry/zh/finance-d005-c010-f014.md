@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 产品咨询客户服务的表单与交互
-meta_description: 产品咨询的数据来源于持牌金融机构官方合规文档，包括产品说明书、费率表、投保/申购规则、风险评级报告等。数据更新节奏随产品调整同步触发，如新理财产品上线、保险
+meta_description: 产品咨询客户服务的表单与交互：产品咨询客户服务的表单与交互，涵盖配置与验证建议。
 keywords: 产品咨询、客户服务与账户咨询、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

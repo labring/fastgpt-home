@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 房建工程研报检索的工具调用与插件
-meta_description: 房建工程研报的数据源主要包括住建主管部门公开的工程定额文件、行业协会发布的季度工程分析报告、设计院出具的专项研报，以及招投标平台的中标公示文档。文档一般包含
+meta_description: 房建工程研报检索的工具调用与插件：房建工程研报检索的工具调用与插件，涵盖配置与验证建议
 keywords: 房建工程、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

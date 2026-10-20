@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Infrastructure Construction
-meta_description: Data for infrastructure construction project financing daily reports comes primarily from internal ledgers of project contractors, loan details from
+meta_description: Workflow Orchestration for Infrastructure Construction Project Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

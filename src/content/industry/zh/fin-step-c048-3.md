@@ -4,7 +4,7 @@ slug: /zh/industry/fin-step-c048-3
 page_type: 行业作业环节页
 article_section: 证券交易与服务
 is_part_of: FastGPT 技术中心
-meta_title: 证券期货经营机构私募资产管理计划的核对估值、托管数据、投资者
+meta_title: 证券期货经营机构私募资产管理计划的核对估值、托管数据、投资者报告及清算数据：哪一部分能交给系统
 meta_description: 证券期货经营机构私募资产管理计划的核对估值、托管数据、投资者报告及清算数据：哪一部分能交给系统
 keywords: 证券期货经营机构私募资产管理计划、证券交易与服务、环节3
 source_type: 金融业务分类与作业事实取自行业研究报告（含监管文件来源编号）

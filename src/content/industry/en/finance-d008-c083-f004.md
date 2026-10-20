@@ -4,8 +4,8 @@ slug: /en/industry/finance-d008-c083-f004
 page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
-meta_title: Vector Models and Indexing for Water Utility Intelligent Due
-meta_description: Data sources for water utility intelligent due diligence reports include daily operation ledgers of water utility operators, data exported from pipe
+meta_title: Vector Models and Indexing for Water Utility Intelligent
+meta_description: Vector Models and Indexing for Water Utility Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 煤化工智能尽调报告的文档解析与分块
-meta_description: 煤化工智能尽调报告的数据主要来自公开行业统计公报、煤炭加工企业年度披露文件、环评审批公示、产能核定报告。更新节奏分为两类：常规行业数据按季度或年度更新，单个
+meta_description: 煤化工智能尽调报告的文档解析与分块：煤化工智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 煤化工、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 汽车零部件融资日报的工作流编排
-meta_description: 数据来源为汽车主机厂配套供应链金融管理系统、合作商业银行的供应链融资台账接口、地方汽车产业链征信服务平台。更新节奏为每日生成前一自然日的汇总数据，固定在当日
+meta_description: 汽车零部件融资日报的工作流编排：汽车零部件融资日报的工作流编排，涵盖配置与验证建议
 keywords: 汽车零部件、融资日报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

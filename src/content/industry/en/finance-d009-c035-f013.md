@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Reranking for Medical
-meta_description: Medical aesthetics research report data comes primarily from public industry association reports, monthly monitoring reports from third-party medical
+meta_description: Knowledge Base Retrieval and Reranking for Medical Aesthetics Research Report Search
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

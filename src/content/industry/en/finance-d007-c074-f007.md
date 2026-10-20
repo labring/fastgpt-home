@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Education Service Yield Reporting
-meta_description: Daily yield and market trend data for education services comes from three sources: public datasets released by third-party education industry
+meta_description: Workflow Orchestration for Education Service Yield Reporting
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -41,7 +41,7 @@ The requirement to sort by statistics cycle requires adding a sorting node. The 
 > The parameter values provided on this page are common recommended starting points for configuration. Actual values are affected by material form, data volume, and business rules. Specific issues require targeted analysis, and it is recommended to test on your own samples before finalizing settings.
 
 ## Three Common Configuration Mistakes
-- Phenomenon: When the workflow calls knowledge base search, the service category field referenced by the variable is empty, and the search result has no matching content. Cause: The field parsed from the data source is not bound in the workflow variable configuration, and an unassigned placeholder variable is used directly.
+- Phenomenon: When the workflow calls knowledge base search, the service category field referenced by the variable is empty, and the search result has no matching content. Cause: The field parsed from the data source is not bound in the workflow variable configuration, and an unassigned pending verification variable is used directly.
 - Phenomenon: The workflow execution returns status code 429, prompting interface call rate limiting. Cause: No reasonable scheduled trigger time period is set, and the data source interface is called during peak business hours, exceeding the interface call quota.
 - Phenomenon: Column alignment is abnormal and fields are misaligned in the generated yield report. Cause: No structured parsing field mapping rule is configured, and raw unstandardized table data is used directly for output.
 

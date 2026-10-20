@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 生物制品收益率的工具调用与插件
-meta_description: 这个品类的数据来自合规的医药生物行业行情与估值数据源，更新节奏为每个交易日收盘后1小时内完成当日全量标的数据更新。数据采用结构化二维文档形式，每行对应单一款
+meta_description: 生物制品收益率的工具调用与插件：生物制品收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 生物制品、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

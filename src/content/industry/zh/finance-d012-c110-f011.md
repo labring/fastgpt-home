@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电网设备营销内容的文档解析与分块
-meta_description: 用于金融/保险/理财行业的电网设备项目融资、合作营销的相关文档，主要来自厂商内部产品手册、公开招投标技术规范书、行业协会标准文件及项目案例资料。更新节奏随产
+meta_description: 电网设备营销内容的文档解析与分块：电网设备营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 电网设备、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

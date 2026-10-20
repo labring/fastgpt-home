@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 涂料油墨研报检索的模型接入与配置
-meta_description: 涂料油墨研报的数据源主要包括行业协会公开报告、券商化工行业研报、上市公司定期报告及第三方化工咨询机构数据。更新节奏随数据源类型有所差异，券商研报随行业事件不
+meta_description: 涂料油墨研报检索的模型接入与配置：涂料油墨研报检索的模型接入与配置，涵盖配置与验证建议
 keywords: 涂料油墨、研报检索与问答、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

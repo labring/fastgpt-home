@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 教育服务融资日报的工作流编排
-meta_description: 教育服务融资日报的数据主要来自民办教育机构的官方融资公告、各地教育主管部门的办学融资备案公示，以及第三方行业数据平台的每日采集更新。单份日报文档为结构化格式
+meta_description: 教育服务融资日报的工作流编排：教育服务融资日报的工作流编排，涵盖配置与验证建议。
 keywords: 教育服务、融资日报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

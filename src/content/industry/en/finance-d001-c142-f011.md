@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: KYC and AML Document Verification
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for ID Card KYC
-meta_description: ID card data originates from public security household registration systems, offline branch scan archives, or user self-uploads via online channels.
+meta_description: Document Parsing and Chunking for ID Card KYC
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

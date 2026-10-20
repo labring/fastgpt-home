@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 旅游景区研报检索的引用来源与溯源
-meta_description: 面向金融行业的旅游景区研报检索数据主要来自文旅主管部门公开公示信息、景区官方运营公告、第三方文旅咨询机构专项调研成果及在线旅游平台运营数据。数据更新节奏分两
+meta_description: 旅游景区研报检索的引用来源与溯源：旅游景区研报检索的引用来源与溯源，涵盖配置与验证建议
 keywords: 旅游景区、研报检索与问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

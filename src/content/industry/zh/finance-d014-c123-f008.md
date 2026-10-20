@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 能源金属财报分析的工具调用与插件
-meta_description: 能源金属财报相关数据主要来源于境内外证券交易所公开披露文件、有色金属行业协会公开报告、专业大宗商品数据平台。定期财报按季度、年度固定周期披露，现货与产能数据
+meta_description: 能源金属财报分析的工具调用与插件：能源金属财报分析的工具调用与插件，涵盖配置与验证建议
 keywords: 能源金属、财报分析与报告生成、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

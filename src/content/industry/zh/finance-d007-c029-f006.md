@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 包装印刷收益率的对话日志与审计
-meta_description: 包装印刷行业的收益率数据主要来源于生产ERP系统、原材料采购台账与订单结算系统。数据更新节奏为每日凌晨同步前一日完成的生产批次数据，月度末汇总全月累计核算结
+meta_description: 包装印刷收益率的对话日志与审计：包装印刷收益率的对话日志与审计，涵盖配置与验证建议
 keywords: 包装印刷、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

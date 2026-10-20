@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Optical Module Financing
-meta_description: Optical module financing daily report data comes from primary market financing information platforms, public bidding and cooperation announcements
+meta_description: Vector Models and Indexing for Optical Module Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

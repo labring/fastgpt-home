@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油服工程营销内容的文档解析与分块
-meta_description: 油服工程营销相关的数据主要来源于项目执行报告、年度经营年报、技术方案文档、招投标文件与现场作业台账。数据更新节奏随项目周期与年度财报节点推进，单份项目报告可
+meta_description: 油服工程营销内容的文档解析与分块：油服工程营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 油服工程、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

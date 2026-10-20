@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁路公路融资日报的多轮对话与提示词
-meta_description: 铁路公路融资日报的数据来源于交通运输主管部门的项目融资公示平台、银行授信台账系统及项目承建方的内部融资台账。更新节奏为每日凌晨更新前一日的融资交易数据。单份
+meta_description: 铁路公路融资日报的多轮对话与提示词：铁路公路融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 铁路公路、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

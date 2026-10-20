@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航天装备融资日报的多轮对话与提示词
-meta_description: 航天装备融资日报的数据来源于国防军工领域公开招投标公示、军工集团官方公告、上市公司融资披露文件。每日更新一次，单份日报文档包含单条或多条融资项目条目，每条条
+meta_description: 航天装备融资日报的多轮对话与提示词：航天装备融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 航天装备、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

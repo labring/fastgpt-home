@@ -4,8 +4,8 @@ slug: /en/industry/finance-d013-c113-f009
 page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
-meta_title: Citation Sources and Traceability for Baijiu Financing Daily
-meta_description: The data for Baijiu Financing Daily Reports comes primarily from National Equities Exchange and Quotations announcements, public financing filing
+meta_title: Citation Sources and Traceability for Baijiu Financing
+meta_description: Citation Sources and Traceability for Baijiu Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

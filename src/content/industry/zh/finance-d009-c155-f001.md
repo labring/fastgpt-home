@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饲料研报检索的HTTP 接口与外部系统
-meta_description: 这个品类的数据主要来自农业主管部门月度监测报告、全国饲料工业协会的行业调研数据、饲料生产企业公开的产销公告。更新节奏为月度更新核心产销数据，每季度发布深度分
+meta_description: 饲料研报检索的HTTP 接口与外部系统：饲料研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 饲料、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

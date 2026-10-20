@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 热力研报检索的向量模型与索引
-meta_description: 热力行业研报数据主要来自行业协会公开报告、热力供应企业季度财报、监管机构政策文件及券商行业分析报告。更新节奏随行业动态调整，季度财报季集中更新，政策发布后追
+meta_description: 热力研报检索的向量模型与索引：热力研报检索的向量模型与索引，涵盖配置与验证建议。
 keywords: 热力、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

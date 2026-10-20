@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 模型分配一体化 AI 平台的数据库与运维
-meta_description: 模型分配的数据主要来源于平台工作流的调用请求、应用的模型调度配置、模型服务的返回日志。数据更新节奏分为实时生成与定时同步两类：实时生成对应单次模型调用的全链
+meta_description: 模型分配一体化 AI 平台的数据库与运维：模型分配一体化 AI 平台的数据库与运维，涵盖配置与验证建议
 keywords: 模型分配、一体化 AI 平台与多应用编排、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 鞋类融资日报的工具调用与插件
-meta_description: 鞋类融资日报的数据来自鞋服供应链金融SaaS平台、合作银行对公授信系统及仓配物流台账。更新节奏为每日凌晨同步前一自然日的全量数据。文档为结构化表格格式，单条
+meta_description: 鞋类融资日报的工具调用与插件：鞋类融资日报的工具调用与插件，涵盖配置与验证建议。
 keywords: 鞋类、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15
@@ -26,7 +26,7 @@ date_modified: 2026-09-15
 | `tool_call_filter_fields` | `["sku_code", "financing_amount"]` | 仅保留鞋类融资日报所需的核心字段，减少工具返回的无效数据量 |
 | `max_tool_calls_per_round` | `3` | 鞋类SKU分类较少，单轮调用最多3次即可覆盖核心品类的融资数据查询 |
 | `tool_timeout_seconds` | `600 秒` | 全量SKU数据拉取可能耗时较长，设置较长超时避免中途中断 |
-| `mcp_input_mapping` | `{"target_sku": "{{input.sku_code}}", "date_range": "yesterday"}` | 将用户输入的SKU编码映射为MCP服务的入参，适配鞋类按SKU查询的需求 |
+| `mcp_input_mapping` | `{"target_sku": "待核验值", "date_range": "yesterday"}` | 将用户输入的SKU编码映射为MCP服务的入参，适配鞋类按SKU查询的需求 |
 | `workflow_tool_split_rule` | 按输入包含`sku_code`触发工具调用，否则调用知识库 | 区分融资日报数据查询与通用鞋类融资知识咨询的分流逻辑 |
 | `python_api_request_timeout` | `1200 秒` | 批量SKU数据拉取时，Python接口调用需预留足够的响应时间 |
 

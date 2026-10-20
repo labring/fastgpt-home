@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 自动化设备投研知识库建设的上下文与 token
-meta_description: 自动化设备投研数据主要来自厂商公开产品手册、行业协会标准文档、专利数据库、第三方供应链报价数据及面向金融投研的月度行业研报。数据更新节奏差异较大，厂商产品手
+meta_description: 自动化设备投研知识库建设的上下文与 token：自动化设备投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 自动化设备、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

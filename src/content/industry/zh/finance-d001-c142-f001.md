@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 身份证件KYC 的HTTP 接口与外部系统
-meta_description: 身份证件KYC的数据主要来源于公安身份核验接口、用户上传的实体证件扫描件或实拍照片。结构化数据包含姓名、18位身份证号码、性别、民族、户籍住址、签发机关、有
+meta_description: 身份证件KYC 的HTTP 接口与外部系统：身份证件KYC 的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 身份证件、KYC 与反洗钱资料核验、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

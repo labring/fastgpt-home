@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专用设备财报分析的HTTP 接口与外部系统
-meta_description: 专用设备品类的财报数据主要来自两类渠道：一是专用设备制造企业公开披露的季度、年度财报，二是设备运维台账的结构化运行数据，以及行业协会发布的产能、营收统计数据
+meta_description: 专用设备财报分析的HTTP 接口与外部系统：专用设备财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 专用设备、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

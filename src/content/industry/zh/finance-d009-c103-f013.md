@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 环境监测研报检索的知识库检索与召回
-meta_description: 环境监测研报数据主要来自生态环境主管部门公开公报、第三方监测机构合规报告、企业自主监测日志。更新节奏依监测类型区分，常规区域监测按月度或季度更新，重点污染源
+meta_description: 环境监测研报检索的知识库检索与召回：环境监测研报检索的知识库检索与召回，涵盖配置与验证建议
 keywords: 环境监测、研报检索与问答、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

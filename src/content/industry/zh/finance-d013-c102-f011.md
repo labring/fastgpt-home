@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 特钢融资日报的文档解析与分块
-meta_description: 特钢融资日报的数据主要来自全国特钢行业协会的每日融资统计报送、区域钢贸企业的融资报备台账，以及合作银行的授信放款凭证。文档常见格式为内嵌多嵌套表格的PDF、
+meta_description: 特钢融资日报的文档解析与分块：特钢融资日报的文档解析与分块，涵盖配置与验证建议。
 keywords: 特钢、融资日报、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 软件开发收益率的对话日志与审计
-meta_description: 该品类的数据来源为合规金融市场行情接口与官方披露文件，更新节奏为每个交易日收盘后批量生成当日批次数据。文档为结构化格式，包含标的唯一标识、标的全称、交易日期
+meta_description: 软件开发收益率的对话日志与审计：软件开发收益率的对话日志与审计，涵盖配置与验证建议
 keywords: 软件开发、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

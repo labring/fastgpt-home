@@ -4,8 +4,8 @@ slug: /en/industry/finance-d014-c043-f009
 page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
-meta_title: Citation Sources and Traceability for Commercial Real Estate
-meta_description: Commercial real estate financial report data is sourced from public periodic reports of listed commercial real estate enterprises and self-owned
+meta_title: Citation Sources and Traceability for Commercial Real
+meta_description: Citation Sources and Traceability for Commercial Real Estate Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

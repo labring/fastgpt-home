@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Crop Farming
-meta_description: Data sources for crop farming financing daily reports include planting financing ledgers from local agricultural and rural affairs departments, daily
+meta_description: Multi-turn Dialogue and Prompt Engineering for Crop Farming Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

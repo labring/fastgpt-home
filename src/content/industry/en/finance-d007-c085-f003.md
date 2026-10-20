@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Share and Embed for Cement Yield Data
-meta_description: Cement market and yield data is sourced from national building materials market monitoring platforms and regional spot trading centers. Full daily
+meta_description: Share and Embed for Cement Yield Data: Share and Embed for Cement Yield Data, covering configuration and validation guidance.
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商业物业营销内容的工具调用与插件
-meta_description: 商业物业的营销相关数据主要来源于内部商户管理系统、客流统计系统、商户活动报备系统及本地生活平台商户档案。数据更新节奏差异显著：商户入驻、退租、业态调整为不定
+meta_description: 商业物业营销内容的工具调用与插件：商业物业营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 商业物业、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

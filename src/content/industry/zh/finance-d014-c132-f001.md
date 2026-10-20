@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 计算机设备财报分析的HTTP 接口与外部系统
-meta_description: 计算机设备财报数据主要来自上市公司公开披露的定期报告、交易所官方披露平台及设备厂商官方财报文档。更新节奏以季度、年度为固定周期，临时公告如重大资产变动、减值
+meta_description: 计算机设备财报分析的HTTP 接口与外部系统：计算机设备财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 计算机设备、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

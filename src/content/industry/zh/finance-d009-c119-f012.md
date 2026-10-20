@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 综合服务研报检索的模型接入与配置
-meta_description: 本品类的数据主要来自合规金融研报数据源，更新节奏匹配研报发布周期，常规每日同步存量更新，重大行业研报即时推送。单篇文档结构固定，包含标题、发布机构、发布时间
+meta_description: 综合服务研报检索的模型接入与配置：综合服务研报检索的模型接入与配置，涵盖配置与验证建议
 keywords: 综合服务、研报检索与问答、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

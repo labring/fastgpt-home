@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Form and Interaction for Oilfield Service Engineering Yield
-meta_description: Data related to oilfield service engineering yield comes from internal operational ledgers of oil and gas engineering service enterprises and project
+meta_description: Form and Interaction for Oilfield Service Engineering Yield and Market Daily Reporting
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

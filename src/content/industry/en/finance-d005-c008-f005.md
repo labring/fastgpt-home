@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Customer Service and Account Enquiries
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Trading Rule
-meta_description: Trading rule data comes from official regulatory platforms in securities, insurance and other industries, as well as public documents from licensed
+meta_description: Multi-turn Dialogue and Prompt Engineering for Trading Rule Customer Service
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

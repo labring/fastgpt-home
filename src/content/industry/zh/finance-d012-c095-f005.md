@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 热力营销内容的多轮对话与提示词
-meta_description: 热力营销相关的数据主要来源于热力供应系统的用户行为日志、缴费账单、报修工单及热力使用计量数据。数据更新节奏覆盖实时（用户行为、报修状态）、小时级（计量汇总）
+meta_description: 热力营销内容的多轮对话与提示词：热力营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 热力、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

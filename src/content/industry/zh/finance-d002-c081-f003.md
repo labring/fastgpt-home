@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 模型分配一体化 AI 平台的分享与嵌入
-meta_description: 模型分配的数据来源于已接入的大模型实例信息、团队配置的调用配额、预设的流量路由规则。数据更新节奏为：接入实例变更时实时同步，调用配额调整即时生效，路由规则修
+meta_description: 模型分配一体化 AI 平台的分享与嵌入：模型分配一体化 AI 平台的分享与嵌入，涵盖配置与验证建议
 keywords: 模型分配、一体化 AI 平台与多应用编排、分享与嵌入
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

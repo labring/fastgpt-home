@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Conversation Logs and Auditing for Baijiu Investment
-meta_description: Baijiu investment research data mainly comes from public industry research reports, listed liquor company periodic reports, official production area
+meta_description: Conversation Logs and Auditing for Baijiu Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

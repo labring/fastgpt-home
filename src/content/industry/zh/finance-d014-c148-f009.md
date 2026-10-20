@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 酒店餐饮财报分析的引用来源与溯源
-meta_description: 酒店餐饮财报数据主要来自门店POS交易系统、供应链库存台账、月度营业汇总表及公开工商披露信息。数据更新节奏按核算周期区分，门店级交易数据按日更新，月度/季度
+meta_description: 酒店餐饮财报分析的引用来源与溯源：酒店餐饮财报分析的引用来源与溯源，涵盖配置与验证建议
 keywords: 酒店餐饮、财报分析与报告生成、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

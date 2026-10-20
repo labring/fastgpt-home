@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Model Integration and Configuration for Defense Electronics
-meta_description: The marketing content data for defense electronics is primarily sourced from internal enterprise model technical documents, national military standard
+meta_description: Model Integration and Configuration for Defense Electronics Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

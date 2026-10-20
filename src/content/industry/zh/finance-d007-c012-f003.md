@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 住宅开发收益率的分享与嵌入
-meta_description: 住宅开发的收益率数据集来源为房企内部成本核算系统、住建部门销售备案数据及工程进度台账。数据更新节奏为月度常规更新，遇项目开盘、竣工等重大节点时追加更新。单项
+meta_description: 住宅开发收益率的分享与嵌入：住宅开发收益率的分享与嵌入，涵盖配置与验证建议。。。
 keywords: 住宅开发、收益率与行情日报播报、分享与嵌入
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

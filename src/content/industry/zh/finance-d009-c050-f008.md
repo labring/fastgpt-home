@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 塑料橡胶研报检索的工具调用与插件
-meta_description: 塑料橡胶研报的数据来源包括中国塑料加工工业协会、中国橡胶工业协会的行业统计数据，上海期货交易所、大连商品交易所的品种交割、仓单数据，海关总署的进出口贸易数据
+meta_description: 塑料橡胶研报检索的工具调用与插件：塑料橡胶研报检索的工具调用与插件，涵盖配置与验证建议
 keywords: 塑料橡胶、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

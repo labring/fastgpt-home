@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 种植业智能尽调报告的工作流编排
-meta_description: 种植业智能尽调报告的数据主要来自农业生产端填报台账、卫星遥感监测影像解析结果、农业主管部门公开的区域种植统计数据。数据更新节奏依维度不同，地块级生产数据按周
+meta_description: 种植业智能尽调报告的工作流编排：种植业智能尽调报告的工作流编排，涵盖配置与验证建议
 keywords: 种植业、智能尽调报告、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

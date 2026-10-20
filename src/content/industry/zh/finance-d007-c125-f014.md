@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航天装备收益率的表单与交互
-meta_description: 航天装备收益率相关数据主要来自国防军工行业公开披露的任务台账、在轨装备运营台账、航天发射任务官方结算文档。更新节奏随任务节点调整，单次任务完成后72小时内更
+meta_description: 航天装备收益率的表单与交互：航天装备收益率的表单与交互，涵盖配置与验证建议。。。
 keywords: 航天装备、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

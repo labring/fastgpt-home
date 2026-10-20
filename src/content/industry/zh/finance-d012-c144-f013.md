@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通信服务营销内容的知识库检索与召回
-meta_description: 通信服务的营销内容数据主要来源于运营商内部营销平台、客户服务话术库、套餐宣传物料系统。数据更新节奏随业务活动调整，常规套餐内容按月度更新，节日促销、新业务上
+meta_description: 通信服务营销内容的知识库检索与召回：通信服务营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 通信服务、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

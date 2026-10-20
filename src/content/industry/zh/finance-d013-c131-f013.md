@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 装修装饰融资日报的知识库检索与召回
-meta_description: 装修装饰融资日报的数据来源于装修装饰企业的融资申请材料、合作金融机构的审批记录以及地方住建部门备案的项目融资信息。数据每日更新，单条文档为结构化记录，包含项
+meta_description: 装修装饰融资日报的知识库检索与召回：装修装饰融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 装修装饰、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

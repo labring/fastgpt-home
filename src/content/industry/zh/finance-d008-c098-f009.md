@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 煤化工智能尽调报告的引用来源与溯源
-meta_description: 煤化工行业的数据源主要包括公开监管公示信息、行业协会月度监测数据、企业公开披露的生产运营文档、第三方质检报告。数据更新节奏存在差异，监管数据按季度更新，行业
+meta_description: 煤化工智能尽调报告的引用来源与溯源：煤化工智能尽调报告的引用来源与溯源，涵盖配置与验证建议
 keywords: 煤化工、智能尽调报告、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

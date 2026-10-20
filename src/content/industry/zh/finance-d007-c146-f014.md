@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通用设备收益率的表单与交互
-meta_description: 通用设备收益率的数据源主要来自设备物联网平台的实时运行日志、行业公开的设备基准运行报告，以及企业内部的运维结算数据。数据更新节奏为每日凌晨完成前一日全量数据
+meta_description: 通用设备收益率的表单与交互：通用设备收益率的表单与交互，涵盖配置与验证建议。。。
 keywords: 通用设备、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

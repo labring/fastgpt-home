@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 特钢收益率的HTTP 接口与外部系统
-meta_description: 特钢行情数据来源于中国特钢企业协会的每日行情统计、国内主流特钢现货交易市场的成交数据，以及重点钢厂的出厂报价公示。更新节奏为每个交易日收盘后1小时内完成当日
+meta_description: 特钢收益率的HTTP 接口与外部系统：特钢收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 特钢、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 种植业收益率的表单与交互
-meta_description: 种植业收益率相关的数据主要来自农业技术推广站定点监测点、种植合作社的种植台账、区域农产品收购报价平台三类渠道。数据更新节奏匹配种植周期，以月度或季度为单位更
+meta_description: 种植业收益率的表单与交互：种植业收益率的表单与交互，涵盖配置与验证建议。。。。。
 keywords: 种植业、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

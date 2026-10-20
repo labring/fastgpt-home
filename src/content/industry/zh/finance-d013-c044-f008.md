@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商业物业融资日报的工具调用与插件
-meta_description: 该品类的数据来源于商业物业运营管理系统的每日台账、合作金融机构的融资对接接口、地方金融监管的备案数据库。数据更新节奏为每日凌晨完成前一日全量同步。文档为结构
+meta_description: 商业物业融资日报的工具调用与插件：商业物业融资日报的工具调用与插件，涵盖配置与验证建议
 keywords: 商业物业、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 乳制品收益率的HTTP 接口与外部系统
-meta_description: 乳制品收益率相关数据主要来自农业农村部畜牧兽医局的生鲜乳价格监测系统、国内乳企公开的经营披露文档以及第三方食品饮料行业数据平台。更新节奏分为两类：生鲜乳收购
+meta_description: 乳制品收益率的HTTP 接口与外部系统：乳制品收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 乳制品、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

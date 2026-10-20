@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 热力智能尽调报告的文档解析与分块
-meta_description: 热力智能尽调报告的数据主要来自热力供应企业的月度运营报表、政府监管部门的热力管网监测数据、用户缴费台账与管网运维日志。文档更新节奏以年度供热季为核心周期，辅
+meta_description: 热力智能尽调报告的文档解析与分块：热力智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 热力、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

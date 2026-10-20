@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Telecommunications Service
-meta_description: Telecommunications service category market and yield data is sourced from domestic stock exchange public market APIs and professional financial data
+meta_description: Tool Calling and Plugins for Telecommunications Service Yield and Market Data
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

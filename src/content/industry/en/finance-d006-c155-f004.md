@@ -4,8 +4,8 @@ slug: /en/industry/finance-d006-c155-f004
 page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
-meta_title: Vector Models and Indexing for Feed Industry Research and
-meta_description: Knowledge base data required for feed industry research and investment work is primarily sourced from industry association published monitoring weekly
+meta_title: Vector Models and Indexing for Feed Industry Research
+meta_description: Vector Models and Indexing for Feed Industry Research and Investment Knowledge Bases
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

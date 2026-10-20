@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水处理营销内容的向量模型与索引
-meta_description: 水处理营销内容的数据来源包括企业内部的水质检测台账、水处理设备技术手册、过往项目验收报告、营销推广场景文案、用户咨询记录。更新节奏随行业合规标准调整、新设备
+meta_description: 水处理营销内容的向量模型与索引：水处理营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 水处理、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

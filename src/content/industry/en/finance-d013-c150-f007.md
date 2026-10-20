@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Iron Ore Financing Daily Reports
-meta_description: Data sources for iron ore financing daily reports include the public market interface of the Dalian Commodity Exchange, the daily inventory reporting
+meta_description: Workflow Orchestration for Iron Ore Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

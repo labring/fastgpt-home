@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小金属智能尽调报告的工具调用与插件
-meta_description: 小金属行业数据主要来自中国有色金属工业协会小金属分会的月度行业简报、专业现货交易平台的日度报价、海关总署的月度进出口统计、头部矿山企业公开财报。更新节奏存在
+meta_description: 小金属智能尽调报告的工具调用与插件：小金属智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 小金属、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

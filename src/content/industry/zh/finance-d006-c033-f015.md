@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化纤投研知识库建设的部署与升级
-meta_description: 化纤行业的投研数据主要来自石油石化产业链上游的公开标准文档、行业协会月度研报、每日现货交易平台的报价数据、下游织造企业的生产台账。数据更新节奏差异明显：现货
+meta_description: 化纤投研知识库建设的部署与升级：化纤投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 化纤、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

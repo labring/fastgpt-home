@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油服工程收益率的对话日志与审计
-meta_description: 油服工程的业务数据来自油田生产管理平台的作业台账、油气销售结算系统，以及第三方大宗商品行情接口。数据更新节奏分为两类：全量作业日报于每日固定时段完成更新，实
+meta_description: 油服工程收益率的对话日志与审计：油服工程收益率的对话日志与审计，涵盖配置与验证建议
 keywords: 油服工程、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商业地产财报分析的工具调用与插件
-meta_description: 商业地产财报数据主要来自自持物业运营台账、租金收缴系统、不动产管理平台与年度审计报告。数据更新节奏分两类：月度运营数据每月末更新，年度合并财报需经第三方审计
+meta_description: 商业地产财报分析的工具调用与插件：商业地产财报分析的工具调用与插件，涵盖配置与验证建议
 keywords: 商业地产、财报分析与报告生成、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

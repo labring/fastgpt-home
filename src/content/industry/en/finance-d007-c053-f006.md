@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Dialogue Logging and Auditing for Multi-Financial Yield
-meta_description: Data for multi-financial yield and market quotes comes from institutional internal transaction accounting systems, third-party market data service
+meta_description: Dialogue Logging and Auditing for Multi-Financial Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

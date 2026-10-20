@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 证券营销内容的部署与升级
-meta_description: 证券营销内容的数据主要来自内部合规审核系统、官方研报库、投资者教育素材库与产品管理系统。更新节奏随业务场景变动：研报类内容按交易日更新，新发金融产品触发全量
+meta_description: 证券营销内容的部署与升级：证券营销内容的部署与升级，涵盖配置与验证建议。。。。。
 keywords: 证券、营销内容与获客、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

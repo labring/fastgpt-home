@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通用设备融资日报的引用来源与溯源
-meta_description: 通用设备融资日报数据来源于公开招投标平台、厂商出货台账、企业融资备案公示信息，每日更新一次。单份日报文档包含设备唯一编码、型号规格、采购主体、融资金额、融资
+meta_description: 通用设备融资日报的引用来源与溯源：通用设备融资日报的引用来源与溯源，涵盖配置与验证建议
 keywords: 通用设备、融资日报、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

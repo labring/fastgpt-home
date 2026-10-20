@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interfaces and External Systems for Vehicle Financing
-meta_description: Data for vehicle financing daily reports originates from internal financing management systems of vehicle manufacturers, corporate loan ledgers of
+meta_description: HTTP Interfaces and External Systems for Vehicle Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专用设备研报检索的模型接入与配置
-meta_description: 专用设备研报的数据源主要包括行业协会公开报告、设备厂商技术白皮书、第三方咨询机构专项调研文档。更新节奏随行业新品发布、技术迭代、政策调整动态调整，无固定周期
+meta_description: 专用设备研报检索的模型接入与配置：专用设备研报检索的模型接入与配置，涵盖配置与验证建议
 keywords: 专用设备、研报检索与问答、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

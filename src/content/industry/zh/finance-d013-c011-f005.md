@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 休闲食品融资日报的多轮对话与提示词
-meta_description: 休闲食品融资日报的数据来源包括全国性股权交易平台、地方行业资讯聚合平台、企业公开披露的融资公告。更新节奏为每个工作日更新，当日完成的融资记录将在次个工作日收
+meta_description: 休闲食品融资日报的多轮对话与提示词：休闲食品融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 休闲食品、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

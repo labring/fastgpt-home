@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Bidding and Tender Reports
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Bid Rejection Bidding Items
-meta_description: Data related to bid rejection bidding items is primarily sourced from bid rejection announcements and bid review archives on public resource trading
+meta_description: Deployment and Upgrade for Bid Rejection Bidding Items
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

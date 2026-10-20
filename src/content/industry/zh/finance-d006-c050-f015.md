@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 塑料橡胶投研知识库建设的部署与升级
-meta_description: 塑料橡胶投研数据主要来自国内大宗商品期货交易所、行业协会、海关进出口数据库、现货市场报价平台与专业研报机构。数据更新节奏存在差异：现货报价与期货行情为交易日
+meta_description: 塑料橡胶投研知识库建设的部署与升级：塑料橡胶投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 塑料橡胶、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

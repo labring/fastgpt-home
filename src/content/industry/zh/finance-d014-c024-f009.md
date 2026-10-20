@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 农化制品财报分析的引用来源与溯源
-meta_description: 农化制品财报的数据主要来源于境内外证券交易所公开披露的定期报告、行业自律组织发布的产业运行数据，以及对应公司官网发布的年度报告。更新节奏为季度报告每季度末后
+meta_description: 农化制品财报分析的引用来源与溯源：农化制品财报分析的引用来源与溯源，涵盖配置与验证建议
 keywords: 农化制品、财报分析与报告生成、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

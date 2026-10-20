@@ -4,8 +4,8 @@ slug: /en/industry/finance-d008-c039-f005
 page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Dialogue and Prompt Engineering for Kitchen and
-meta_description: Parameter data for kitchen and bath appliances comes from the National Energy Efficiency Label Database, CCC Certification Public Platform, official
+meta_title: Multi-turn Dialogue and Prompt Engineering for Kitchen
+meta_description: Multi-turn Dialogue and Prompt Engineering for Kitchen and Bath Appliance Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 特钢财报分析的工作流编排
-meta_description: 特钢财报数据主要来自证券交易所披露的定期报告、企业官方年报及行业协会发布的细分品类统计资料。更新节奏分为季度报告、年度报告与临时公告三类，季度报告在季后15
+meta_description: 特钢财报分析的工作流编排：特钢财报分析的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 特钢、财报分析与报告生成、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

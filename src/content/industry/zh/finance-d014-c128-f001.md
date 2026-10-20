@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航运港口财报分析的HTTP 接口与外部系统
-meta_description: 航运港口财报数据主要来自港务局官方公开统计报表、交通运输部港口行业月度监测数据。更新节奏以月度、季度、年度为核心周期，部分实时作业数据按日更新。文档结构包含
+meta_description: 航运港口财报分析的HTTP 接口与外部系统：航运港口财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 航运港口、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

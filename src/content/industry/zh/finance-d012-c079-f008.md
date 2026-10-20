@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 普钢营销内容的工具调用与插件
-meta_description: 普钢相关营销内容的数据主要来自国内大宗商品期货交易平台、钢厂出厂价公示系统、下游制造业的金融风控台账。数据更新节奏分为两类：期货报价按日实时更新，出厂价按周
+meta_description: 普钢营销内容的工具调用与插件：普钢营销内容的工具调用与插件，涵盖配置与验证建议。
 keywords: 普钢、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

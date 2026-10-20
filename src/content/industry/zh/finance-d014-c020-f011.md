@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 兵器装备财报分析的文档解析与分块
-meta_description: 兵器装备相关财报数据主要来自上海证券交易所、深圳证券交易所披露的上市公司年报、半年报、季度报告，以及国防科工局发布的行业统计简报。更新节奏为年度报告每年4月
+meta_description: 兵器装备财报分析的文档解析与分块：兵器装备财报分析的文档解析与分块，涵盖配置与验证建议
 keywords: 兵器装备、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

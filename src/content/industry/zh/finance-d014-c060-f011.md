@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程咨询财报分析的文档解析与分块
-meta_description: 工程咨询类财报数据主要来自项目成本台账、中标结算报告、年度经营报表与分包合同。数据更新节奏随项目周期调整，单个项目结算后即时更新，年度经营报表按自然年度更新
+meta_description: 工程咨询财报分析的文档解析与分块：工程咨询财报分析的文档解析与分块，涵盖配置与验证建议
 keywords: 工程咨询、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

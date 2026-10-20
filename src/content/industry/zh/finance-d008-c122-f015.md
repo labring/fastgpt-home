@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 股份制银行智能尽调报告的部署与升级
-meta_description: 股份制银行智能尽调报告的数据主要来源于企业工商公示系统、央行征信接口、银行内部信贷台账、企业经审计的财务报表。数据更新节奏随尽调项目推进同步，单笔项目数据会
+meta_description: 股份制银行智能尽调报告的部署与升级：股份制银行智能尽调报告的部署与升级，涵盖配置与验证建议
 keywords: 股份制银行、智能尽调报告、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

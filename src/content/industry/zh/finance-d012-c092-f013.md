@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 消费电子营销内容的知识库检索与召回
-meta_description: 消费电子营销内容的数据源主要包括官方产品手册、参数规格表、营销推广文案、用户实测反馈、新品发布公告及配件适配文档。数据更新节奏随新品发布周期调整，常规季度更
+meta_description: 消费电子营销内容的知识库检索与召回：消费电子营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 消费电子、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

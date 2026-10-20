@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 卫星通信营销内容的工具调用与插件
-meta_description: 卫星通信相关数据的来源包括地面测控站采集的链路信号、用户终端上报的连接状态、内容分发节点的交付记录。数据更新节奏存在差异：链路信号参数每30秒更新一次，终端
+meta_description: 卫星通信营销内容的工具调用与插件：卫星通信营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 卫星通信、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

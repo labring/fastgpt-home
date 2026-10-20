@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 出版投研知识库建设的部署与升级
-meta_description: 出版领域的投研数据主要来自机构内部出版的行业研报、公开发行的专业期刊、行业协会年度报告、上市企业公开财报及监管机构披露文件。数据更新节奏随内容类型有所差异，
+meta_description: 出版投研知识库建设的部署与升级：出版投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 出版、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

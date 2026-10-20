@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 品牌代运营收益率的数据库与运维
-meta_description: 品牌代运营的收益率与行情数据主要来自品牌方的电商交易后台、营销投放管理工具、客户关系管理系统。数据更新节奏为每日固定时点生成前一日全量日报。单份数据文档按代
+meta_description: 品牌代运营收益率的数据库与运维：品牌代运营收益率的数据库与运维，涵盖配置与验证建议
 keywords: 品牌代运营、收益率与行情日报播报、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

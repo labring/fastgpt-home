@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 能源金属智能尽调报告的部署与升级
-meta_description: 能源金属智能尽调报告的数据来源涵盖国内期货交易所盘面数据、行业第三方资讯平台现货报价、海关总署进出口通关数据、矿山企业公开产能披露。更新节奏分为多个层级：现
+meta_description: 能源金属智能尽调报告的部署与升级：能源金属智能尽调报告的部署与升级，涵盖配置与验证建议
 keywords: 能源金属、智能尽调报告、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

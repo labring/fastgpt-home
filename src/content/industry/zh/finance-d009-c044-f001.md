@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商业物业研报检索的HTTP 接口与外部系统
-meta_description: 商业物业研报数据来自商业地产行业公开研究报告、商圈运营机构的月度调研资料、地方商务部门发布的商业业态监测数据。核心商圈数据按月更新，非核心区域按季度更新，重
+meta_description: 商业物业研报检索的HTTP 接口与外部系统：商业物业研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 商业物业、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

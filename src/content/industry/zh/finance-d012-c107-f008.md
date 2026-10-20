@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电力营销内容的工具调用与插件
-meta_description: 电力营销相关数据主要来源于用电采集终端、电力营销业务系统、客户服务工单及官方电价政策文档。用电采集数据为准实时更新，每15分钟同步一次最新用电量；营销活动数
+meta_description: 电力营销内容的工具调用与插件：电力营销内容的工具调用与插件，涵盖配置与验证建议。
 keywords: 电力、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

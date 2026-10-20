@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航运港口智能尽调报告的向量模型与索引
-meta_description: 港口智能尽调的数据来源包含港口运营日志、船舶调度系统记录、海关通关数据、泊位使用台账及海事专项报告。数据更新节奏为每日同步运营数据，每月生成专项分析报告。文
+meta_description: 航运港口智能尽调报告的向量模型与索引：航运港口智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 航运港口、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小金属投研知识库建设的部署与升级
-meta_description: 小金属投研数据涵盖现货报价、行业研报、期货行情、海关进出口统计等类型。数据来源包括行业协会官方发布、期货交易所行情接口、海关总署统计数据及第三方专业机构报告
+meta_description: 小金属投研知识库建设的部署与升级：小金属投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 小金属、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水产养殖财报分析的HTTP 接口与外部系统
-meta_description: 水产养殖财报的数据来源包括各地水产技术推广站的塘口监测数据、上市养殖企业的公开披露报告、全国水产技术推广总站的行业统计报送。更新节奏覆盖旬度水质与投料数据、
+meta_description: 水产养殖财报分析的HTTP 接口与外部系统：水产养殖财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 水产养殖、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

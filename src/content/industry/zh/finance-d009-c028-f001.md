@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 动力煤研报检索的HTTP 接口与外部系统
-meta_description: 动力煤研报数据主要来自中国煤炭工业协会、秦皇岛煤炭交易市场、国内期货交易所及头部煤炭企业研究部门。更新节奏为工作日每日常规更新，市场出现重大波动时追加临时发
+meta_description: 动力煤研报检索的HTTP 接口与外部系统：动力煤研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 动力煤、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

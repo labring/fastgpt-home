@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 旅游景区财报分析的引用来源与溯源
-meta_description: 旅游景区财报的数据来源覆盖文旅主管部门公开公示数据、景区官方披露的年度或季度运营报告、第三方文旅产业监测平台的公开数据。更新节奏为：季度运营数据每季度结束后
+meta_description: 旅游景区财报分析的引用来源与溯源：旅游景区财报分析的引用来源与溯源，涵盖配置与验证建议
 keywords: 旅游景区、财报分析与报告生成、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

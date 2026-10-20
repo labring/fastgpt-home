@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 玻璃投研知识库建设的向量模型与索引
-meta_description: 玻璃投研的数据来源涵盖行业协会月度产能报告、期货交易所现货报价数据、生产企业公开公告及下游地产建材招投标信息。更新节奏区分品类：现货报价日更，行业研报周更，
+meta_description: 玻璃投研知识库建设的向量模型与索引：玻璃投研知识库建设的向量模型与索引，涵盖配置与验证建议
 keywords: 玻璃、投研知识库建设与治理、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

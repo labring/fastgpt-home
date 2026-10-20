@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 白酒研报检索的多轮对话与提示词
-meta_description: 白酒研报的数据主要来自国内券商研究所、行业咨询机构及上市酒企公开定期报告。更新节奏随酒企财报披露周期、行业重大事件调整，通常在季度、年度财报发布后集中更新，
+meta_description: 白酒研报检索的多轮对话与提示词：白酒研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 白酒、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化纤研报检索的模型接入与配置
-meta_description: 化纤研报的数据主要来自中国化纤工业协会公开统计、国内炼化一体化企业的公开披露、专业化工咨询机构的行业调研数据。更新节奏分为两类：月度常规行业分析研报按自然月
+meta_description: 化纤研报检索的模型接入与配置：化纤研报检索的模型接入与配置，涵盖配置与验证建议。
 keywords: 化纤、研报检索与问答、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

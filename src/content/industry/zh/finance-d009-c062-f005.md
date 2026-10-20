@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 广告营销研报检索的多轮对话与提示词
-meta_description: 广告营销研报数据主要来自行业咨询机构公开报告、广告投放平台后台数据、品牌方内部营销台账及行业协会月度更新资料。文档多为结构化表格搭配分析段落，包含投放渠道、
+meta_description: 广告营销研报检索的多轮对话与提示词：广告营销研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 广告营销、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

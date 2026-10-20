@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦煤营销内容的文档解析与分块
-meta_description: 焦煤的数据来源包括煤矿生产日报、港口通关单据、行业协会供需周报、现货交易台账、专业研报等。更新节奏覆盖每日现货价格变动、每周港口库存数据、每月供需平衡表。文
+meta_description: 焦煤营销内容的文档解析与分块：焦煤营销内容的文档解析与分块，涵盖配置与验证建议。
 keywords: 焦煤、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

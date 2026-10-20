@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 投资平台财报分析的工作流编排
-meta_description: 投资平台的财报数据主要来自交易所官方披露接口、上市公司公告页及合规第三方数据源。更新节奏集中在季度报、年报披露窗口期，日常同步临时业绩公告。单份财报文档包含
+meta_description: 投资平台财报分析的工作流编排：投资平台财报分析的工作流编排，涵盖配置与验证建议。
 keywords: 投资平台、财报分析与报告生成、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

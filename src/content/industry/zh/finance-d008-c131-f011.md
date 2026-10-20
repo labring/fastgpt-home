@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 装修装饰智能尽调报告的文档解析与分块
-meta_description: 装修装饰智能尽调报告的数据来源涵盖施工日志、材料供应商报价单、竣工验收PDF报告、项目台账excel、物业备案文件等。更新节奏按施工节点或月度推进，项目竣工
+meta_description: 装修装饰智能尽调报告的文档解析与分块：装修装饰智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 装修装饰、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

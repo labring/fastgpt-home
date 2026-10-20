@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 影视院线研报检索的工作流编排
-meta_description: 影视院线研报的数据主要来自院线运营系统、票房统计机构公开报表、影视项目备案公示平台及行业协会月报。数据更新节奏差异明显：票房实时数据每日更新，院线运营月报每
+meta_description: 影视院线研报检索的工作流编排：影视院线研报检索的工作流编排，涵盖配置与验证建议。
 keywords: 影视院线、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

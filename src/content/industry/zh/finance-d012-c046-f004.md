@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 固废处理营销内容的向量模型与索引
-meta_description: 固废处理的营销内容数据主要来源于企业内部的固废处理项目案例报告、合规性文件（含环评报告、危废处置资质文件）、行业政策解读文档、客户咨询常见问题整理，以及面向
+meta_description: 固废处理营销内容的向量模型与索引：固废处理营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 固废处理、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

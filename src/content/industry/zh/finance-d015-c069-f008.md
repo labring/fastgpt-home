@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 担保材料风控的工具调用与插件
-meta_description: 担保材料数据主要来源于银行授信系统、不动产登记中心、工商档案平台及担保方提交的纸质扫描件。数据更新节奏随单次授信审批周期固定，担保关系变更时会同步更新。文档
+meta_description: 担保材料风控的工具调用与插件：担保材料风控的工具调用与插件，涵盖配置与验证建议。
 keywords: 担保材料、风控与授信材料审核、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

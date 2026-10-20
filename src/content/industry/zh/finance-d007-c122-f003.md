@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 股份制银行收益率的分享与嵌入
-meta_description: 股份制银行收益率与行情日报的数据来源为本行零售业务系统、理财子公司产品净值台账及公开市场行情接口。更新节奏为每日T+1日上午完成全量更新，部分实时行情字段每
+meta_description: 股份制银行收益率的分享与嵌入：股份制银行收益率的分享与嵌入，涵盖配置与验证建议。
 keywords: 股份制银行、收益率与行情日报播报、分享与嵌入
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

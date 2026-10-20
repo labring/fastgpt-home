@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 投诉工单客户服务的HTTP 接口与外部系统
-meta_description: 投诉工单的数据主要来源于保险公司的客服工单系统、银保监会投诉受理平台、线下网点客户反馈记录系统。数据更新节奏为实时或准实时，每一笔投诉提交、进度变更、反馈完
+meta_description: 投诉工单客户服务的HTTP 接口与外部系统：投诉工单客户服务的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 投诉工单、客户服务与账户咨询、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

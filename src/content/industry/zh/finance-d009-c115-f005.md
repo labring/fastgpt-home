@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 种植业研报检索的多轮对话与提示词
-meta_description: 种植业研报主要来自农业农村部种植业管理局、省级农业技术推广总站、国内涉农科研院校、行业专业咨询机构。常规更新节奏为周报每周更新，月度供需报告每月发布，季度行
+meta_description: 种植业研报检索的多轮对话与提示词：种植业研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 种植业、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

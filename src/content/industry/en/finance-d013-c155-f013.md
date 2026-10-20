@@ -4,8 +4,8 @@ slug: /en/industry/finance-d013-c155-f013
 page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
-meta_title: Knowledge Base Retrieval and Recall for Feed Financing Daily
-meta_description: Sources include national livestock industry monitoring platforms, public information released by local feed industry associations, and public
+meta_title: Knowledge Base Retrieval and Recall for Feed Financing
+meta_description: Knowledge Base Retrieval and Recall for Feed Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

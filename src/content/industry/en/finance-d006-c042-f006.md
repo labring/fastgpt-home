@@ -4,8 +4,8 @@ slug: /en/industry/finance-d006-c042-f006
 page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
-meta_title: Conversation Logging and Auditing for Brand Agency Operation
-meta_description: Data sources for brand agency operation investment research include interaction data from official brand social media backends, sales reports from
+meta_title: Conversation Logging and Auditing for Brand Agency
+meta_description: Conversation Logging and Auditing for Brand Agency Operation Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

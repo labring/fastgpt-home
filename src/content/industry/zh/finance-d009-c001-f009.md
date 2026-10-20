@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: IT 服务研报检索的引用来源与溯源
-meta_description: IT服务品类的研报数据主要来自合规券商研报库、行业协会公开报告、第三方产业数据库。数据更新节奏随发布主体的研报上线节奏同步，无固定周期，但核心头部报告通常在
+meta_description: IT 服务研报检索的引用来源与溯源：IT 服务研报检索的引用来源与溯源，涵盖配置与验证建议
 keywords: IT 服务、研报检索与问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

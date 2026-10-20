@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航运港口融资日报的引用来源与溯源
-meta_description: 航运港口融资日报的数据主要来自港口管理方官方披露公告、各地航运交易所公开统计报表、正规融资备案平台的项目公示。数据更新节奏为每日更新，覆盖当日完成备案或披露
+meta_description: 航运港口融资日报的引用来源与溯源：航运港口融资日报的引用来源与溯源，涵盖配置与验证建议
 keywords: 航运港口、融资日报、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

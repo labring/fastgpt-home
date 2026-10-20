@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电网设备收益率的工具调用与插件
-meta_description: 电网设备相关的收益率与行情数据，主要来源于电力行业监管机构公开的运维数据集、第三方电力设备行情聚合接口。数据更新节奏分为两类：日报数据于每日固定时段完成更新
+meta_description: 电网设备收益率的工具调用与插件：电网设备收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 电网设备、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

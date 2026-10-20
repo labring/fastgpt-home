@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Provenance for Vehicle Financing Daily
-meta_description: The data sources for vehicle financing daily reports primarily include public API interfaces from partner supply chain financial service providers
+meta_description: Citation Sources and Provenance for Vehicle Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

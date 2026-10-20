@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 玻璃投研知识库建设的部署与升级
-meta_description: 玻璃投研数据主要来自行业协会的窑炉开工率监测、上游纯碱原料报价数据库、下游光伏组件与建筑工程的订单数据，以及第三方机构的出厂价实时监测。更新节奏覆盖日度、周
+meta_description: 玻璃投研知识库建设的部署与升级：玻璃投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 玻璃、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

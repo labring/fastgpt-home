@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光伏研报检索的HTTP 接口与外部系统
-meta_description: 光伏研报的数据主要来自券商研究所、光伏行业协会、产业链企业公开披露的研究文档，更新节奏随行业事件触发，如组件价格变动、全球装机量公布、新政策发布时会有高频更
+meta_description: 光伏研报检索的HTTP 接口与外部系统：光伏研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 光伏、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

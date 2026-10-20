@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 城商行收益率的工具调用与插件
-meta_description: 城商行收益率与行情日报的数据来源为城商行官方披露的每日产品净值公告、全国银行间同业拆借中心公开统计数据。更新节奏为每个交易日16:30后更新前一日全量数据，
+meta_description: 城商行收益率的工具调用与插件：城商行收益率的工具调用与插件，涵盖配置与验证建议。
 keywords: 城商行、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

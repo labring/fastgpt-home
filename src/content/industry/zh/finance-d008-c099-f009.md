@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 燃气智能尽调报告的引用来源与溯源
-meta_description: 燃气尽调数据主要来自属地燃气经营企业的运营台账、城市燃气管网GIS地理信息档案、应急管理部门的燃气安全巡检记录、上游气源供应协议、用户安全检测档案。更新节奏
+meta_description: 燃气智能尽调报告的引用来源与溯源：燃气智能尽调报告的引用来源与溯源，涵盖配置与验证建议
 keywords: 燃气、智能尽调报告、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

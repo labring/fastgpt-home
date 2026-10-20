@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 中药财报分析的工具调用与插件
-meta_description: 中药企业财报数据主要来自境内证券交易所披露的定期报告、临时公告，以及企业投资者关系板块公开的年度经营数据。更新节奏遵循A股披露规则，年报于次年4月底前发布，
+meta_description: 中药财报分析的工具调用与插件：中药财报分析的工具调用与插件，涵盖配置与验证建议。
 keywords: 中药、财报分析与报告生成、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -4,8 +4,8 @@ slug: /en/industry/finance-d013-c125-f004
 page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
-meta_title: Vector Models and Indexing for Aerospace Equipment Financing
-meta_description: Data for aerospace equipment financing daily reports comes primarily from publicly disclosed defense industry financing announcements, exchange public
+meta_title: Vector Models and Indexing for Aerospace Equipment
+meta_description: Vector Models and Indexing for Aerospace Equipment Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 酒店餐饮投研知识库建设的模型接入与配置
-meta_description: 酒店餐饮投研数据主要来自门店PMS系统、餐饮POS终端、供应链采购台账、区域行业协会公开报告及第三方消费监测数据。更新节奏：单店日营业数据每日更新，供应链采
+meta_description: 酒店餐饮投研知识库建设的模型接入与配置：酒店餐饮投研知识库建设的模型接入与配置，涵盖配置与验证建议
 keywords: 酒店餐饮、投研知识库建设与治理、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

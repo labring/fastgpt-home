@@ -4,8 +4,8 @@ slug: /zh/industry/finance-d009-c107-f001
 page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
-meta_title: 电力研报检索的HTTP 接口与外部系统
-meta_description: 电力研报的数据主要来自国家能源局官方发布文件、省级电网公司公开运行报告、电力行业专业咨询机构的分析文档。更新节奏随内容类型差异明显：政策解读类研报随行业政策
+meta_title: 电力研报检索的HTTP接口与外部系统
+meta_description: 电力研报检索的HTTP接口与外部系统：电力研报检索的HTTP接口与外部系统，涵盖配置与验证建议
 keywords: 电力、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

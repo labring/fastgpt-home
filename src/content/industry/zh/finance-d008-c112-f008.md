@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 白色家电智能尽调报告的工具调用与插件
-meta_description: 白色家电的智能尽调数据来源包括品牌官方的产品参数手册、国家能效标识数据库、家电维修平台的故障反馈记录。更新节奏随新品发布同步更新存量型号参数，常规型号每季度
+meta_description: 白色家电智能尽调报告的工具调用与插件：白色家电智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 白色家电、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

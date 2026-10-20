@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: In-App Natural Language Search
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexes for In-Terminal Natural Language
-meta_description: Market data is sourced from exchange-authorized interfaces and compliant official market data channels. Update frequency varies by category. Stock
+meta_description: Vector Models and Indexes for In-Terminal Natural Language Retrieval of Market Data
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

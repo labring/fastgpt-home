@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Customer Service and Account Enquiries
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Trading Rules Customer Service
-meta_description: Trading rules data is sourced from official trading system APIs of licensed financial institutions, public business operation manuals, and regulatory
+meta_description: Tool Calling and Plugins for Trading Rules Customer Service
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Apparel and Home Textile Yield
-meta_description: Market and yield data for the apparel and home textile category is primarily sourced from public securities trading APIs and industry information
+meta_description: Deployment and Upgrade for Apparel and Home Textile Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -38,7 +38,7 @@ Third, single batch data contains a large number of stock entries. Adjust concur
 ## Three common mistakes
 - The symptom is a `500 Internal Server Error` returned during local source code deployment, with logs showing `database connection failed`. The cause is failure to correctly configure API keys or access whitelists for third-party market data sources, preventing retrieval of apparel and home textile market data.
 - The symptom is a `401 Unauthorized` error returned when executing the data synchronization `curl` command, appearing the first time the task is triggered after an upgrade. The cause is failure to synchronously update authentication tokens for third-party market data sources during the upgrade process, resulting in denied access.
-- The symptom is missing stock price data in the generated daily report. Checking parsing logs reveals that the `close_price` field was not mapped correctly. The cause is binding the target field to an incorrect placeholder during configuration field mapping, with no alignment to the actual fields in the data source.
+- The symptom is missing stock price data in the generated daily report. Checking parsing logs reveals that the `close_price` field was not mapped correctly. The cause is binding the target field to an incorrect pending verification during configuration field mapping, with no alignment to the actual fields in the data source.
 
 ## How to confirm the configuration is complete
 - Navigate to the FastGPT data source management page, check the connection status of the apparel and home textile market data source, confirm it shows a normal connection status, and adjust connection test parameters based on the data source type.

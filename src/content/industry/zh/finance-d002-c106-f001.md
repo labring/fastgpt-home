@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 用量统计一体化 AI 平台的HTTP 接口与外部系统
-meta_description: 用量统计的数据来源于平台内部的API调用日志、应用运行记录与资源消耗明细，更新节奏为每分钟完成一次聚合统计，支持按需拉取或主动推送至外部系统。文档结构为标准
+meta_description: 用量统计一体化 AI 平台的HTTP 接口与外部系统：用量统计一体化 AI 平台的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 用量统计、一体化 AI 平台与多应用编排、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

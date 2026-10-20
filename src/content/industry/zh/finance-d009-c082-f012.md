@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水产养殖研报检索的模型接入与配置
-meta_description: 金融机构用于行业分析的水产养殖研报，数据来源包括全国水产技术推广总站、地方养殖监测站、饲料生产企业的实地调研数据，以及行业协会发布的月度动态。更新节奏包含固
+meta_description: 水产养殖研报检索的模型接入与配置：水产养殖研报检索的模型接入与配置，涵盖配置与验证建议
 keywords: 水产养殖、研报检索与问答、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

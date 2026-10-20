@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Model Integration and Configuration for Intelligent Due
-meta_description: Cultural and entertainment products data is primarily sourced from manufacturer SKU archives, industry association compliance spot check reports
+meta_description: Model Integration and Configuration for Intelligent Due Diligence Reports of Cultural and Entertainment Products
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

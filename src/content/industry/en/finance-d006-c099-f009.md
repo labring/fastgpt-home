@@ -4,8 +4,8 @@ slug: /en/industry/finance-d006-c099-f009
 page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
-meta_title: Citation Source and Traceability for Gas Industry Investment
-meta_description: Gas industry investment research data sources include upstream gas source quotes, city gas group pipeline operation reports, industry association
+meta_title: Citation Source and Traceability for Gas Industry
+meta_description: Citation Source and Traceability for Gas Industry Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Context and Token for Thermal Coal Investment Research
-meta_description: Thermal coal investment research data originates from official releases by the National Energy Administration, spot trading data from Qinhuangdao Coal
+meta_description: Context and Token for Thermal Coal Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

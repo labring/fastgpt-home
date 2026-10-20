@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 资质符合性竞价的向量模型与索引
-meta_description: 这个品类的数据主要来源于招标公告附件、投标方上传的资质扫描件转写文本、监管部门公开的资质数据库。更新节奏随单个招标项目启动批量导入，资质证书的有效期变更、业
+meta_description: 资质符合性竞价的向量模型与索引：资质符合性竞价的向量模型与索引，涵盖配置与验证建议
 keywords: 资质符合性、竞价与投标报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

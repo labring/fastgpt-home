@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油服工程融资日报的知识库检索与召回
-meta_description: 油服工程融资日报的数据来源包括油服上市公司定期公告、行业监测机构的融资动态数据库、项目招投标公示、企业内部融资台账。更新节奏为每日更新，部分公告类文档隔日更
+meta_description: 油服工程融资日报的知识库检索与召回：油服工程融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 油服工程、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

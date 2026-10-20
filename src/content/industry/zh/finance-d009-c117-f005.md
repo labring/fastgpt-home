@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 纺织制造研报检索的多轮对话与提示词
-meta_description: 纺织制造研报数据主要来自中国纺织工业联合会公开报告、头部券商消费组研报、上市纺企定期披露文件、海关总署纺织品类进出口数据。更新节奏覆盖季度行业景气报告、月度
+meta_description: 纺织制造研报检索的多轮对话与提示词：纺织制造研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 纺织制造、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

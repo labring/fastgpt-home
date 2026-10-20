@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 军工电子投研知识库建设的部署与升级
-meta_description: 军工电子投研数据主要来源于行业协会公开的元器件参数手册、军工集团发布的型号立项公示、第三方机构的行业研报、专利文献与公开标准文档。更新节奏随项目节点与政策变
+meta_description: 军工电子投研知识库建设的部署与升级：军工电子投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 军工电子、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

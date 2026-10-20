@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 计算机设备研报检索的多轮对话与提示词
-meta_description: 计算机设备研报的数据主要来自国内计算机行业协会、上市企业定期公告、专业ICT调研机构公开报告。更新节奏以季度为核心周期，同步更新主流机型参数与市场分析，新品
+meta_description: 计算机设备研报检索的多轮对话与提示词：计算机设备研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 计算机设备、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

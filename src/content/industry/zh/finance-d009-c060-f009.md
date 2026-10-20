@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程咨询研报检索的引用来源与溯源
-meta_description: 工程咨询研报的数据主要来自为金融机构基建项目服务的正规工程咨询机构出具的项目可研报告、造价咨询文件，以及住建、金融监管部门发布的工程建设规范与政策文件。更新
+meta_description: 工程咨询研报检索的引用来源与溯源：工程咨询研报检索的引用来源与溯源，涵盖配置与验证建议
 keywords: 工程咨询、研报检索与问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 风电智能尽调报告的知识库检索与召回
-meta_description: 风电智能尽调报告的数据来源包括项目可行性研究报告、塔筒与叶片的出厂检测报告、并网验收意见书、年度运维日志、电价核定文件等。更新节奏随项目阶段变化，建设期按节
+meta_description: 风电智能尽调报告的知识库检索与召回：风电智能尽调报告的知识库检索与召回，涵盖配置与验证建议
 keywords: 风电、智能尽调报告、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

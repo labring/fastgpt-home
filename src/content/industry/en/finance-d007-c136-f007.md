@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Precious Metal Yields
-meta_description: Precious metal market data primarily comes from official APIs of professional trading institutions including the Shanghai Gold Exchange and the London
+meta_description: Workflow Orchestration for Precious Metal Yields
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

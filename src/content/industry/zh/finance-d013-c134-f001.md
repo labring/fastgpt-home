@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 调味品融资日报的HTTP 接口与外部系统
-meta_description: 调味品融资日报的数据来源于公开工商披露信息、证券交易所公告及行业资讯平台的每日汇总，更新节奏为每日凌晨完成前一日融资事件的全量更新。数据采用标准JSON数组
+meta_description: 调味品融资日报的HTTP 接口与外部系统：调味品融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 调味品、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

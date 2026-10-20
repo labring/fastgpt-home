@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 影视院线融资日报的HTTP 接口与外部系统
-meta_description: 影视院线融资日报的数据来源于国家电影局备案公示平台、院线公司内部融资报送系统、第三方影视产业数据接口。数据按自然日更新，每日生成当日前完成的融资项目记录。单
+meta_description: 影视院线融资日报的HTTP 接口与外部系统：影视院线融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 影视院线、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

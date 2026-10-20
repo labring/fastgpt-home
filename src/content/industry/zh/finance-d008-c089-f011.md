@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油气开采智能尽调报告的文档解析与分块
-meta_description: 油气开采智能尽调文档的来源涵盖勘探立项报告、钻井现场日志、第三方储量评估文件、作业合规文件等。更新节奏存在显著差异：勘探立项报告为阶段性一次性交付，钻井日志
+meta_description: 油气开采智能尽调报告的文档解析与分块：油气开采智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 油气开采、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

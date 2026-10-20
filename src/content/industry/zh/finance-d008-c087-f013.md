@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 汽车零部件智能尽调报告的知识库检索与召回
-meta_description: 汽车零部件相关数据主要来源于主机厂BOM清单、供应商资质文件、第三方检测报告及行业合规标准文档。数据更新按季度批量同步，同时支持临时变更推送。文档以结构化字
+meta_description: 汽车零部件智能尽调报告的知识库检索与召回：汽车零部件智能尽调报告的知识库检索与召回，涵盖配置与验证建议
 keywords: 汽车零部件、智能尽调报告、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

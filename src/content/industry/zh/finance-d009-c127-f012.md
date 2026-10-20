@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航空装备研报检索的模型接入与配置
-meta_description: 航空装备研报数据主要来自国防军工行业协会、军工集团公开披露文件、券商军工团队专项研报。更新节奏随型号节点波动，重大立项、试飞、列装节点会有临时更新，常规研报
+meta_description: 航空装备研报检索的模型接入与配置：航空装备研报检索的模型接入与配置，涵盖配置与验证建议
 keywords: 航空装备、研报检索与问答、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

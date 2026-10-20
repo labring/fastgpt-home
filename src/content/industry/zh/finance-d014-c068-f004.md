@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 投资平台财报分析的向量模型与索引
-meta_description: 投资平台的财报数据主要来自公开交易所披露文件、上市公司官方公告及平台合规解析的原始财报文档。更新节奏以季度、年度定期披露为主，伴随临时业绩公告、重大事项公告
+meta_description: 投资平台财报分析的向量模型与索引：投资平台财报分析的向量模型与索引，涵盖配置与验证建议
 keywords: 投资平台、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 热力投研知识库建设的数据库与运维
-meta_description: 热力投研数据涵盖热力生产运行的时序监测数据、管网运维报表、行业政策文件、能耗核算文档等。数据来源包括热力站PLC监测系统、企业能耗管理平台、住建部门行业标准
+meta_description: 热力投研知识库建设的数据库与运维：热力投研知识库建设的数据库与运维，涵盖配置与验证建议
 keywords: 热力、投研知识库建设与治理、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

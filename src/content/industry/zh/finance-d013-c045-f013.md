@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商用车融资日报的知识库检索与召回
-meta_description: 商用车融资日报的数据来源为合作商用车经销商融资管理系统、持牌融资租赁机构的业务台账、第三方商用车交易核验接口。数据更新节奏为每日完成前一日全量同步。单条数据
+meta_description: 商用车融资日报的知识库检索与召回：商用车融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 商用车、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

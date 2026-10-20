@@ -4,8 +4,8 @@ slug: /en/industry/finance-d012-c046-f008
 page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
-meta_title: Tool Calling and Plugins for Solid Waste Treatment Marketing
-meta_description: Solid waste treatment-related data is primarily sourced from sanitation scheduling systems, waste classification ledgers, collection weighing records
+meta_title: Tool Calling and Plugins for Solid Waste Treatment
+meta_description: Tool Calling and Plugins for Solid Waste Treatment Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -39,7 +39,7 @@ There are numerous structured fields with clear unit information, so tool calls 
 ## How to Confirm the Configuration Is Complete
 - Call the test interface, check that the returned HTTP status code is `200 OK` to confirm that the secret key and request format configuration are correct.
 - Upload a solid waste treatment ledger Excel file, check that the core fields extracted after parsing are complete and formatted correctly.
-- Trigger the image parsing plugin, upload a weighing slip image, check that an accessible image link can be generated and placeholder replacement is completed.
+- Trigger the image parsing plugin, upload a weighing slip image, check that an accessible image link can be generated and pending verification replacement is completed.
 - View the tool call log to confirm that the parameters of the plugin request match the requirements specified in the solid waste management system's API documentation.
 
 > Question material comes from public community discussions. Configuration values are common starting points and should be measured against your own samples. Verified on 2026-09-14.

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 酒店餐饮财报分析的工作流编排
-meta_description: 酒店餐饮的财报数据主要来自门店POS系统、供应链管理平台及月度运营台账。数据更新节奏按门店维度为每日，区域及集团维度为每周或月度。单份文档包含门店ID、营业
+meta_description: 酒店餐饮财报分析的工作流编排：酒店餐饮财报分析的工作流编排，涵盖配置与验证建议。
 keywords: 酒店餐饮、财报分析与报告生成、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

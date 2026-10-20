@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 住宅开发智能尽调报告的模型接入与配置
-meta_description: 住宅开发智能尽调报告的数据来源包括官方国土、住建部门公示平台，房企内部项目档案，第三方土地交易与市场数据库。更新节奏因数据类型而异：核心土地与规划数据按月更
+meta_description: 住宅开发智能尽调报告的模型接入与配置：住宅开发智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 住宅开发、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

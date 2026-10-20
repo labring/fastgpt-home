@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for Energy Storage Yield
-meta_description: Data sources for energy storage yield primarily include local power station monitoring systems, regional power trading platforms, and grid dispatching
+meta_description: Model Access and Configuration for Energy Storage Yield
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

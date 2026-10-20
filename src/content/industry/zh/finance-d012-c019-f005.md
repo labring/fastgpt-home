@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 免税营销内容的多轮对话与提示词
-meta_description: 免税品类的数据源主要来自海关总署离岛免税商品备案清单、离岛免税店官方公示的在售SKU文档、品牌方提供的免税专供商品资料。更新节奏为每月更新在售SKU信息，每
+meta_description: 免税营销内容的多轮对话与提示词：免税营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 免税、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

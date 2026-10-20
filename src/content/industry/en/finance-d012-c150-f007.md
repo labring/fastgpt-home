@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Iron Ore Marketing Content
-meta_description: Data related to iron ore comes from public APIs of commodity trading platforms, structured data from port management systems, raw material management
+meta_description: Workflow Orchestration for Iron Ore Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

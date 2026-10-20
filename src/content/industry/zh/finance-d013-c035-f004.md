@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医美融资日报的向量模型与索引
-meta_description: 医美融资日报的数据主要来自医美行业协会公开披露文件、医美机构官方融资公告、合规第三方行业资讯平台。更新节奏为每日更新，覆盖当日及近72小时内的医美领域融资事
+meta_description: 医美融资日报的向量模型与索引：医美融资日报的向量模型与索引，涵盖配置与验证建议。
 keywords: 医美、融资日报、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

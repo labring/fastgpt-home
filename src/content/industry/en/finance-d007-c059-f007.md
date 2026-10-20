@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Industrial Metal Yields
-meta_description: Industrial metal market and yield data originates from authoritative commodity pricing sources. Update frequency differs between trading and
+meta_description: Workflow Orchestration for Industrial Metal Yields
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

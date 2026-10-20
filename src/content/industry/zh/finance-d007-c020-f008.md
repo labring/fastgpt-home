@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 兵器装备收益率的工具调用与插件
-meta_description: 兵器装备相关的收益与行情数据来源包括国防军工行业公开交易数据集、兵器装备相关主体的定期及临时公告、行业监测机构的公开披露内容。更新节奏分为两类：日度行情数据
+meta_description: 兵器装备收益率的工具调用与插件：兵器装备收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 兵器装备、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

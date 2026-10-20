@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化妆品财报分析的工作流编排
-meta_description: 化妆品品类的财报数据主要来自境内外美妆上市公司公开披露的定期报告、行业协会发布的监测数据及品牌方公开的经营公告。数据更新节奏以季度为核心周期，部分头部品牌会
+meta_description: 化妆品财报分析的工作流编排：化妆品财报分析的工作流编排，涵盖配置与验证建议。。。
 keywords: 化妆品、财报分析与报告生成、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

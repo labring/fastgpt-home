@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 房建工程收益率的表单与交互
-meta_description: 房建工程收益率相关数据主要来自项目成本台账、月度进度款支付凭证、造价咨询报告及甲方结算单据。数据更新节奏匹配施工节点周期，通常在每个结构层完成、外立面施工完
+meta_description: 房建工程收益率的表单与交互：房建工程收益率的表单与交互，涵盖配置与验证建议。。。
 keywords: 房建工程、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

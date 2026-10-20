@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 装修装饰收益率的部署与升级
-meta_description: 装修装饰收益率与行情数据主要来源于装修企业内部财务核算系统、区域装修行业监测数据库。数据更新节奏为每日一次，覆盖前一自然日的全量项目收益记录。单份数据文档为
+meta_description: 装修装饰收益率的部署与升级：装修装饰收益率的部署与升级，涵盖配置与验证建议。。。
 keywords: 装修装饰、收益率与行情日报播报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

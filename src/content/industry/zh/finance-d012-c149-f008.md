@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 钢铁贸易营销内容的工具调用与插件
-meta_description: 钢铁贸易相关数据主要来自钢厂调价函、港口仓储台账、物流运价公示、下游制造业采购订单台账。数据更新节奏分档：钢厂出厂单价每日更新，港口库存数据每周更新，下游需
+meta_description: 钢铁贸易营销内容的工具调用与插件：钢铁贸易营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 钢铁贸易、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

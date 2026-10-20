@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 兵器装备收益率的模型接入与配置
-meta_description: 兵器装备相关的收益率与行情数据，来源包括国防军工行业公开披露的经营数据、二级市场交易行情数据。更新节奏为每日更新核心行情字段，每季度更新完整经营指标。文档结
+meta_description: 兵器装备收益率的模型接入与配置：兵器装备收益率的模型接入与配置，涵盖配置与验证建议
 keywords: 兵器装备、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

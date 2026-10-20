@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 种植业财报分析的向量模型与索引
-meta_description: 种植业财报数据主要来自公开的农业行业监测报告、上市公司种植业板块定期财报、地方农业农村主管部门发布的生产统计文档。数据更新节奏以季度、年度为核心周期，部分月
+meta_description: 种植业财报分析的向量模型与索引：种植业财报分析的向量模型与索引，涵盖配置与验证建议
 keywords: 种植业、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 塑料橡胶营销内容的HTTP 接口与外部系统
-meta_description: 塑料橡胶品类的营销内容数据主要来自基础化工上游原料供应商的公开报价系统、行业协会的产能监测数据库，以及下游加工企业的采购需求台账，这类数据常被用于金融机构为
+meta_description: 塑料橡胶营销内容的HTTP 接口与外部系统：塑料橡胶营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 塑料橡胶、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

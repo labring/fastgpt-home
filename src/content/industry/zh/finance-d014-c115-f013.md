@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 种植业财报分析的知识库检索与召回
-meta_description: 种植业财报数据主要来源于农业农村部公开统计数据、上市农牧企业年度与季度财报、地方农业农村部门月度监测报告。更新节奏分为三层：月度监测数据每月更新，企业季度财
+meta_description: 种植业财报分析的知识库检索与召回：种植业财报分析的知识库检索与召回，涵盖配置与验证建议
 keywords: 种植业、财报分析与报告生成、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

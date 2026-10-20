@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Cybersecurity Financing Daily
-meta_description: Cybersecurity financing daily report data sources include public security vendor investment and financing information, industry compliance reports
+meta_description: Deployment and Upgrade for Cybersecurity Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

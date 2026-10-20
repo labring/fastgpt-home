@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 游戏研报检索的工具调用与插件
-meta_description: 针对金融场景下的游戏行业研报，其数据主要来自专业行业研究机构、垂直数据平台与厂商公开披露信息。更新节奏集中在新游戏上线、季度财报发布节点，日常也会更新行业动
+meta_description: 游戏研报检索的工具调用与插件：游戏研报检索的工具调用与插件，涵盖配置与验证建议。
 keywords: 游戏、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

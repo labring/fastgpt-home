@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Form and Interaction for Textile Manufacturing Yield Rates
-meta_description: Yield rate-related data for textile manufacturing comes from industry monitoring platforms and anonymous supply chain aggregate databases. Update
+meta_description: Form and Interaction for Textile Manufacturing Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

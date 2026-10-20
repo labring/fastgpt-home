@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 文娱用品营销内容的文档解析与分块
-meta_description: 金融机构用于客户营销的文娱用品相关数据主要来自品牌方的产品SKU清单、促销活动规则文档、电商平台导出的商品详情页文本、合作授权文件及线下活动物料的电子化版本
+meta_description: 文娱用品营销内容的文档解析与分块：文娱用品营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 文娱用品、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

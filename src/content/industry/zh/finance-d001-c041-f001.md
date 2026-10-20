@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 名单筛查KYC 的HTTP 接口与外部系统
-meta_description: 名单筛查的数据主要来自各国金融监管机构、国际组织发布的制裁清单、政治公众人物（PEP）清单及涉恐关联实体名单。数据更新节奏随监管公告调整，常规场景下每日同步
+meta_description: 名单筛查KYC 的HTTP 接口与外部系统：名单筛查KYC 的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 名单筛查、KYC 与反洗钱资料核验、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

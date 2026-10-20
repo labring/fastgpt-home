@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: In-App Natural Language Search
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for In-Application Natural
-meta_description: Indicator caliber data comes from internal business ledgers of financial institutions, regulatory reporting standards, and periodic financial
+meta_description: Model Access and Configuration for In-Application Natural Language Retrieval of Indicator Calibers
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

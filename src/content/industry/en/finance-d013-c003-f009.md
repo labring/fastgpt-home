@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for Professional Chain
-meta_description: The data for professional chain financing daily reports comes from the financial systems of chain brand headquarters, loan ledgers of cooperative
+meta_description: Citation Sources and Traceability for Professional Chain Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Baijiu Financing Daily
-meta_description: Data sources for baijiu financing daily reports include daily financing summary documents from vertical baijiu industry media, public corporate
+meta_description: Document Parsing and Chunking for Baijiu Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

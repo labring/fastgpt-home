@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航天装备财报分析的工具调用与插件
-meta_description: 航天装备财报的数据来源为境内军工上市公司公开披露的年度报告、半年度报告、季度报告及临时公告，以及国防科工局等官方发布的行业公开信息。更新节奏为固定季度、年度
+meta_description: 航天装备财报分析的工具调用与插件：航天装备财报分析的工具调用与插件，涵盖配置与验证建议
 keywords: 航天装备、财报分析与报告生成、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

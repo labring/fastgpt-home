@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 基建工程智能尽调报告的工具调用与插件
-meta_description: 基建工程智能尽调报告的数据主要来自住建部门公开备案系统、项目方内部文档、第三方造价咨询机构报告及监理单位提交的施工记录。数据更新节奏随项目阶段变化：立项审批
+meta_description: 基建工程智能尽调报告的工具调用与插件：基建工程智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 基建工程、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

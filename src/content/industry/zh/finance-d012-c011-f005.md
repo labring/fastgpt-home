@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 休闲食品营销内容的多轮对话与提示词
-meta_description: 休闲食品的营销相关数据主要来源于品牌自有SKU管理系统、电商平台商品详情页、内部营销素材库、金融机构的客户礼品需求数据及用户互动反馈数据。数据更新节奏随新品
+meta_description: 休闲食品营销内容的多轮对话与提示词：休闲食品营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 休闲食品、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

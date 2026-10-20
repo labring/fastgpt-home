@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通信设备营销内容的工具调用与插件
-meta_description: 这个品类的数据来源于金融机构的通信设备运行日志、用户呼叫与理财/保险服务的短信交互记录，以及营销触达后的反馈数据。数据更新节奏为准实时，通常为秒级或分钟级。
+meta_description: 通信设备营销内容的工具调用与插件：通信设备营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 通信设备、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 热力研报检索的知识库检索与召回
-meta_description: 这个品类的数据主要来自券商公用事业研究团队、地方热力行业协会的公开研报。更新节奏以季度常规更新为主，突发供热管网调整、供暖季供需变化时，会在1-3个工作日内
+meta_description: 热力研报检索的知识库检索与召回：热力研报检索的知识库检索与召回，涵盖配置与验证建议
 keywords: 热力、研报检索与问答、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

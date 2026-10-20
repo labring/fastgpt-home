@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 生物制品财报分析的向量模型与索引
-meta_description: 生物制品财报数据主要来自上市公司公开披露的定期报告、交易所备案文件及行业公开统计资料。更新节奏固定为季度、半年度及年度节点，临时经营相关披露同步更新。文档结
+meta_description: 生物制品财报分析的向量模型与索引：生物制品财报分析的向量模型与索引，涵盖配置与验证建议
 keywords: 生物制品、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

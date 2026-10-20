@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 家居用品财报分析的模型接入与配置
-meta_description: 家居用品相关财报数据主要来源于公开披露的上市公司定期报告、行业协会发布的渠道监测数据、原材料市场报价数据库。更新节奏为季度财报每3个月更新一次，年度财报每年
+meta_description: 家居用品财报分析的模型接入与配置：家居用品财报分析的模型接入与配置，涵盖配置与验证建议
 keywords: 家居用品、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

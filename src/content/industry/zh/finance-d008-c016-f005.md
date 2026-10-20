@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光伏智能尽调报告的多轮对话与提示词
-meta_description: 光伏智能尽调报告的数据主要来自组件厂商出厂参数文档、电站运维系统的实时运行日志、属地气象站的辐照与气温数据、电网并网的发电结算记录。数据更新节奏分两类：组件
+meta_description: 光伏智能尽调报告的多轮对话与提示词：光伏智能尽调报告的多轮对话与提示词，涵盖配置与验证建议
 keywords: 光伏、智能尽调报告、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

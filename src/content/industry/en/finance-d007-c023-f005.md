@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogues and Prompt Engineering for Military
-meta_description: The yield and market data for the military electronics industry comes from publicly available industry index data released by official sources, public
+meta_description: Multi-turn Dialogues and Prompt Engineering for Military Electronic Industry Yield and Market Data
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

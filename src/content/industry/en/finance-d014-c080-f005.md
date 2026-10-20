@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompting for Apparel and Home
-meta_description: Financial report data for the apparel and home textiles industry comes mainly from periodic reports of listed companies disclosed by stock exchanges
+meta_description: Multi-turn Dialogue and Prompting for Apparel and Home Textiles Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -26,7 +26,7 @@ The long-document nature of apparel and home textiles financial reports requires
 | Recall Count | `Top 6–8 entries` | Financial report data includes multi-dimensional segmented category indicators. An appropriate number of recalls covers the scope of interest while avoiding interference from redundant information |
 | Similarity Threshold | `0.75–0.85` | Financial report field naming is highly standardized. A higher threshold filters irrelevant general industry data, focusing on financial report content for target categories |
 | `PARSE_FILE_TIMEOUT_SECONDS` | `600 seconds` | Large PDF financial reports take a long time to parse. This setting reserves sufficient time for text extraction and chunking |
-| Quote Content Template | `【财报片段】{{content}}【/财报片段】` | Clearly separates retrieved financial report fragments, helping the model identify the analysis scope and improve answer accuracy |
+| Quote Content Template | `【财报片段】example value【/财报片段】` | Clearly separates retrieved financial report fragments, helping the model identify the analysis scope and improve answer accuracy |
 | `detail` | `true` (during API calls) | Requires returning complete retrieval sources and fragment information to support verification of analysis basis |
 
 The parameter values provided on this page are common recommendations used as a starting point for configuration. Actual values are affected by material form, data volume, and business rules. Specific issues require specific analysis. It is recommended to test on samples specific to the target deployment before finalizing settings.

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 普钢财报分析的HTTP 接口与外部系统
-meta_description: 普钢财报数据主要来自上市钢企公开年报、季度报，以及中国钢铁工业协会发布的行业月度监测数据。数据更新节奏为：上市企业年度财报于次年4月集中披露，季度财报于季后
+meta_description: 普钢财报分析的HTTP 接口与外部系统：普钢财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 普钢、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

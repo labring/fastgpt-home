@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专用设备财报分析的工作流编排
-meta_description: 专用设备财报数据主要来自上市公司公开披露的年度、半年度、季度财报PDF，以及行业监管机构发布的专项设备经营统计文档，供金融机构分析专用设备上市公司经营情况。
+meta_description: 专用设备财报分析的工作流编排：专用设备财报分析的工作流编排，涵盖配置与验证建议。
 keywords: 专用设备、财报分析与报告生成、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

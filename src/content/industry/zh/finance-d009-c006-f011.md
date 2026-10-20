@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 中药研报检索的文档解析与分块
-meta_description: 中药研报的数据主要来自券商医药行业研报、中药行业协会公开报告、上市药企研发与销售文档、中医药学术期刊论文。更新节奏以季度、年度报告为主，突发行业政策或药材价
+meta_description: 中药研报检索的文档解析与分块：中药研报检索的文档解析与分块，涵盖配置与验证建议。
 keywords: 中药、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

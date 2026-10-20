@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c125-f015
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: Deployment and Upgrade for Aerospace Equipment Yield and
-meta_description: Aerospace equipment operational revenue and market trend data is sourced from mission settlement systems of ground measurement and control stations
+meta_title: Deployment and Upgrade for Aerospace Equipment Yield
+meta_description: Deployment and Upgrade for Aerospace Equipment Yield and Daily Market Trend Reporting
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

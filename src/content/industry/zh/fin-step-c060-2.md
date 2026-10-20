@@ -4,8 +4,8 @@ slug: /zh/industry/fin-step-c060-2
 page_type: 行业作业环节页
 article_section: 信托
 is_part_of: FastGPT 技术中心
-meta_title: 风险处置服务信托的接收、登记和管理待处置资产：哪一部分能交给
-meta_description: 风险处置服务信托的接收、登记和管理待处置资产：哪一部分能交给系统
+meta_title: 风险处置服务信托的接收、登记和管理待处置资产：哪一部分能交给系统
+meta_description: 风险处置服务信托的接收、登记和管理待处置资产：哪一部分能交给系统：风险处置服务信托的接收、登记和管理待处置资产：哪一部分能交给系统，涵盖配置与验证建议
 keywords: 风险处置服务信托、信托、环节2
 source_type: 金融业务分类与作业事实取自行业研究报告（含监管文件来源编号）
 date_published: 2026-09-15

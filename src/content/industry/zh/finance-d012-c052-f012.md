@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多元控股营销内容的模型接入与配置
-meta_description: 数据来源涵盖集团旗下各业务板块的营销素材库、客户互动台账、线下活动记录与线上投放数据。更新节奏由各子品牌业务节奏决定，核心营销物料实时更新，客户互动数据按日
+meta_description: 多元控股营销内容的模型接入与配置：多元控股营销内容的模型接入与配置，涵盖配置与验证建议
 keywords: 多元控股、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

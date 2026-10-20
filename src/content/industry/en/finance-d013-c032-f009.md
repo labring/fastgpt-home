@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for Chemical Raw Material
-meta_description: The data for chemical raw material financing daily reports mainly comes from financing listing announcements of local property rights exchange
+meta_description: Citation Sources and Traceability for Chemical Raw Material Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -28,7 +28,7 @@ The financing daily report has strong timeliness requirements. Traceability info
 | --- | --- | --- |
 | `Recall count` | Top 8 | The content of each entry in the chemical raw material financing daily report is concise, and the number of publicly disclosed financing events per day is limited. The top 8 entries cover the main disclosed information of the day. |
 | `Similarity threshold` | 0.72–0.78 | There are many segmented terms and enterprise abbreviations in the chemical raw material industry. A threshold that is too low will introduce financing information from unrelated industries. A threshold that is too high will miss financing events of different enterprises in the same category. |
-| `Citation template` | `{{source_platform}}: {{event_id}}, Disclosure Date {{disclosure_date}}` | Retains the source platform and unique event ID, enabling direct linking to the original disclosure page to meet traceability requirements. |
+| `Traceability details` | `the configured value: the configured value, Disclosure Date the configured value` | Retains the source platform and unique event ID, enabling direct linking to the original disclosure page to meet traceability requirements. |
 | `Unique Identifier Field` | `event_id` | Each financing event has an independent event_id on the source platform. This accurately distinguishes individual data entries and avoids confusion with file collection IDs. |
 | `Incremental Update Toggle` | Enabled | Adapts to the daily update rhythm of the financing daily report. Only processes newly added data on the same day, reducing repeated calculations and citations. |
 | `Rerank result count` | Top 5 | The content of the financing daily report has a high degree of homogeneity. The top 5 reranked entries ensure the relevance and accuracy of recalled results. |

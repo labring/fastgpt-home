@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 能源金属收益率的表单与交互
-meta_description: 能源金属的行情数据主要来自专业大宗商品交易所、行业协会的公开数据源，涵盖锂、钴、镍等常见细分品种，更新节奏区分现货与期货两类：现货数据按交易日固定周期更新，
+meta_description: 能源金属收益率的表单与交互：能源金属收益率的表单与交互，涵盖配置与验证建议。。。
 keywords: 能源金属、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

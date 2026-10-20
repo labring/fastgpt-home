@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饲料营销内容的表单与交互
-meta_description: 饲料营销相关的数据主要来自饲料企业内部配方台账、原料供应商成分报告、养殖端饲喂反馈记录。数据更新节奏随原料市场波动调整，核心配方数据每1-2周更新一次，原料
+meta_description: 饲料营销内容的表单与交互：饲料营销内容的表单与交互，涵盖配置与验证建议。。。。。
 keywords: 饲料、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

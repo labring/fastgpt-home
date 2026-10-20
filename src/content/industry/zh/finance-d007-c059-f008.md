@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工业金属收益率的工具调用与插件
-meta_description: 工业金属行情数据来自全球大宗商品交易市场的公开行情接口，日内交易时段每5分钟更新一次实时行情快照，每日收盘后1小时内发布当日完整结算数据。数据以结构化格式存
+meta_description: 工业金属收益率的工具调用与插件：工业金属收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 工业金属、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

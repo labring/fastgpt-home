@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for Iron Ore Intelligent
-meta_description: Iron ore data sources include mine factory quality inspection reports, third-party port inspection documents, bulk commodity trading platform
+meta_description: Citation Sources and Traceability for Iron Ore Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

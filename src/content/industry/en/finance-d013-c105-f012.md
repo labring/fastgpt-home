@@ -4,8 +4,8 @@ slug: /en/industry/finance-d013-c105-f012
 page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
-meta_title: Model Access and Configuration for Biologics Financing Daily
-meta_description: Data for biologics financing daily reports comes from public financing disclosure announcements, pharmaceutical and biotech industry compliance
+meta_title: Model Access and Configuration for Biologics Financing
+meta_description: Model Access and Configuration for Biologics Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

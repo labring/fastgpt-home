@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Sharing and Embedding of Consumer Building Materials Yield
-meta_description: Yield and market trend data for consumer building materials comes from three main sources: wholesale and retail monitoring systems in the building
+meta_description: Sharing and Embedding of Consumer Building Materials Yield Data
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化妆品财报分析的引用来源与溯源
-meta_description: 化妆品财报数据主要来源于境内外上市美妆集团的公开定期报告、品牌方官方披露的经营数据、行业第三方监测机构的公开零售数据。更新节奏分为季度、年度及月度，季度报告
+meta_description: 化妆品财报分析的引用来源与溯源：化妆品财报分析的引用来源与溯源，涵盖配置与验证建议
 keywords: 化妆品、财报分析与报告生成、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

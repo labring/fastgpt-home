@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 证券财报分析的文档解析与分块
-meta_description: 证券品类的财报数据主要来自上市公司官方披露平台及监管机构指定渠道，更新节奏随披露周期固定，年度报告每年发布一次，半年度、季度报告分别对应每半年、每季度更新。
+meta_description: 证券财报分析的文档解析与分块：证券财报分析的文档解析与分块，涵盖配置与验证建议。
 keywords: 证券、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

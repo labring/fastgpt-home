@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油服工程营销内容的向量模型与索引
-meta_description: 油服工程面向金融保险理财行业的营销内容数据主要来自已完成项目的交付文档、技术服务方案、招投标应答文件、行业合规手册及客户沟通记录。更新节奏随项目推进或行业规
+meta_description: 油服工程营销内容的向量模型与索引：油服工程营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 油服工程、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

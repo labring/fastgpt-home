@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 乳制品财报分析的文档解析与分块
-meta_description: 乳制品财报数据主要来自境内外证券交易所披露的上市公司定期报告、临时公告，以及行业协会发布的月度经营监测数据。数据更新节奏遵循监管要求，年度报告每年披露一次，
+meta_description: 乳制品财报分析的文档解析与分块：乳制品财报分析的文档解析与分块，涵盖配置与验证建议
 keywords: 乳制品、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

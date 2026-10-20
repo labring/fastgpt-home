@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 能源金属研报检索的工具调用与插件
-meta_description: 能源金属研报的数据主要来自行业协会、大宗商品交易所、券商研究所及专业资讯平台。现货类数据每日更新，行业动态周报按周发布，深度研报随重大政策或市场节点发布。文
+meta_description: 能源金属研报检索的工具调用与插件：能源金属研报检索的工具调用与插件，涵盖配置与验证建议
 keywords: 能源金属、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

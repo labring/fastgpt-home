@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁路公路智能尽调报告的模型接入与配置
-meta_description: 铁路公路智能尽调报告的数据来源包括交通运输主管部门公开的项目审批文件、工程竣工档案、运营维护台账及路网实时监测数据。更新节奏区分项目阶段：新建项目在竣工后一
+meta_description: 铁路公路智能尽调报告的模型接入与配置：铁路公路智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 铁路公路、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

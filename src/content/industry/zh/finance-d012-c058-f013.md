@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小金属营销内容的知识库检索与召回
-meta_description: 小金属营销相关的数据主要来自国内有色行业协会的供需周报、现货交易所的每日报价、生产企业的产能公示及定制化营销物料。数据更新节奏存在分层：现货报价类数据每日更
+meta_description: 小金属营销内容的知识库检索与召回：小金属营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 小金属、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

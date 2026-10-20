@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光模块研报检索的工作流编排
-meta_description: 光模块研报数据主要来自券商通信行业研究所、通信行业协会公开报告、光模块厂商官方技术文档。更新节奏为新品量产、行业展会、季度财报发布后不定期更新。文档包含结构
+meta_description: 光模块研报检索的工作流编排：光模块研报检索的工作流编排，涵盖配置与验证建议。。。
 keywords: 光模块、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

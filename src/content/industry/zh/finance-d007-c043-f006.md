@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商业地产收益率的对话日志与审计
-meta_description: 商业地产收益率相关数据为金融理财场景下不动产运营的核心指标，来自项目租金收缴台账、空置率统计系统及第三方不动产行情接口。数据更新节奏为每日同步当日租约履约、
+meta_description: 商业地产收益率的对话日志与审计：商业地产收益率的对话日志与审计，涵盖配置与验证建议
 keywords: 商业地产、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

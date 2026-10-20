@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 教育服务收益率的工作流编排
-meta_description: 教育服务收益率与行情日报的数据来源为教育行业第三方监测机构公开数据集、合作教育机构的匿名运营报表、教育服务平台的脱敏交易数据。更新节奏为每日更新，统计前一自
+meta_description: 教育服务收益率的工作流编排：教育服务收益率的工作流编排，涵盖配置与验证建议。。。
 keywords: 教育服务、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

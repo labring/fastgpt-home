@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Marketing Content of Joint-Stock
-meta_description: Marketing-related data for joint-stock commercial banks comes from internal customer management systems, branch operation logs, wealth product
+meta_description: Workflow Orchestration for Marketing Content of Joint-Stock Commercial Banks
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

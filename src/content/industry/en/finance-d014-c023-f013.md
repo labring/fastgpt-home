@@ -4,8 +4,8 @@ slug: /en/industry/finance-d014-c023-f013
 page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
-meta_title: Knowledge Base Retrieval and Recall for Military Electronics
-meta_description: Military electronics financial report data comes from two primary sources. These are annual, semi-annual, and quarterly reports of listed companies in
+meta_title: Knowledge Base Retrieval and Recall for Military
+meta_description: Knowledge Base Retrieval and Recall for Military Electronics Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

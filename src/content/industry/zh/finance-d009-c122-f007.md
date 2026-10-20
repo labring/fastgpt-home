@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 股份制银行研报检索的工作流编排
-meta_description: 股份制银行研报的数据主要来自本行研究发展部产出的内部行业分析报告，以及合作第三方机构的公开上市企业跟踪研报。更新节奏为工作日每日同步内部产出报告，第三方研报
+meta_description: 股份制银行研报检索的工作流编排：股份制银行研报检索的工作流编排，涵盖配置与验证建议
 keywords: 股份制银行、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

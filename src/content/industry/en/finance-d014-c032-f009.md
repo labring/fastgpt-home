@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Citation Source and Traceability for Chemical Raw Materials
-meta_description: Financial report data for the chemical raw materials category comes primarily from annual and quarterly reports publicly disclosed by domestic and
+meta_description: Citation Source and Traceability for Chemical Raw Materials Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

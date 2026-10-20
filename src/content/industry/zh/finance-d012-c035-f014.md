@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医美营销内容的表单与交互
-meta_description: 医美品类的营销数据主要来源于机构客户咨询表单、项目手册、皮肤检测原始数据、既往用户案例库。客户提交的咨询数据实时更新，项目报价与案例库按项目上线或季度周期更
+meta_description: 医美营销内容的表单与交互：医美营销内容的表单与交互，涵盖配置与验证建议。。。。。
 keywords: 医美、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

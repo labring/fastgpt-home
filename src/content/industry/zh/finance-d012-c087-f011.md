@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 汽车零部件营销内容的文档解析与分块
-meta_description: 汽车零部件营销相关数据主要来自厂商官方产品手册、区域营销推广PPT、主机厂适配清单、行业合规文档。更新节奏以新品发布为节点批量更新，常规营销物料按月度迭代。
+meta_description: 汽车零部件营销内容的文档解析与分块：汽车零部件营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 汽车零部件、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物流营销内容的文档解析与分块
-meta_description: 物流营销内容的文档来源包括面向物流企业的金融营销话术库、区域配送价目表、运单模板、时效说明文档、合作承运商的合规文件等。更新节奏随业务调整，配送价目表按月更
+meta_description: 物流营销内容的文档解析与分块：物流营销内容的文档解析与分块，涵盖配置与验证建议。
 keywords: 物流、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

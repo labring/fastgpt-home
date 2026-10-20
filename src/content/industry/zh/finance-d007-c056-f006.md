@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 家居用品收益率的对话日志与审计
-meta_description: 家居用品的行情与收益率数据主要来源于品牌方供货台账、线下卖场POS系统、线上店铺销售后台及原材料采购平台。数据更新节奏分为三类：线下POS销售数据每日同步，
+meta_description: 家居用品收益率的对话日志与审计：家居用品收益率的对话日志与审计，涵盖配置与验证建议
 keywords: 家居用品、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

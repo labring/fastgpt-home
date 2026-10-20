@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 普钢融资日报的工作流编排
-meta_description: 普钢融资日报数据主要来自国内钢铁现货交易平台、钢厂内部结算系统及区域贸易商台账。数据更新节奏为每日T+1更新，当日生成前一日的全量日报文档。文档为结构化表格
+meta_description: 普钢融资日报的工作流编排：普钢融资日报的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 普钢、融资日报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

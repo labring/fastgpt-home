@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompting for White Goods Profit
-meta_description: Data related to the profit yield of the white goods category comes from public in-store sales data from third-party home appliance retail monitoring
+meta_description: Multi-turn Dialogue and Prompting for White Goods Profit Yield Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

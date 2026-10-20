@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 自动化设备融资日报的向量模型与索引
-meta_description: 自动化设备融资日报的数据来源主要为设备厂商销售系统、融资租赁机构放款台账、公共资源交易平台中标公示。更新频率为每日更新前一工作日的交易数据，文档多为结构化C
+meta_description: 自动化设备融资日报的向量模型与索引：自动化设备融资日报的向量模型与索引，涵盖配置与验证建议
 keywords: 自动化设备、融资日报、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

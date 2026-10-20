@@ -4,8 +4,8 @@ slug: /en/industry/finance-d012-c049-f015
 page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
-meta_title: Deployment and Upgrade of Marketing Content for
-meta_description: Financial institutions obtain marketing content data for infrastructure construction projects primarily from project bidding documents, construction
+meta_title: Deployment and Upgrade of Marketing Content
+meta_description: Deployment and Upgrade of Marketing Content for Infrastructure Construction Projects
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

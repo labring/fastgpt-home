@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 热力财报分析的向量模型与索引
-meta_description: 热力行业的财报数据主要来自企业公开披露的定期报告（季度、年度）及内部运营台账，数据来源包括证券交易所公开披露平台、企业官方公告。更新节奏与财报披露周期一致，
+meta_description: 热力财报分析的向量模型与索引：热力财报分析的向量模型与索引，涵盖配置与验证建议。
 keywords: 热力、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

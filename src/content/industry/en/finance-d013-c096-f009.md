@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for Coke Financing Daily
-meta_description: The data for coke financing daily reports primarily comes from publicly monitored industry association data, real-time transaction records from
+meta_description: Citation Sources and Traceability for Coke Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -31,7 +31,7 @@ Financing-related data covers multiple business dimensions including transaction
 | `recall_top_k` | `Top 6–10 entries` | Match the information density of coke financing daily reports, cover core business metrics while controlling output length |
 | `similarity_threshold` | `0.72–0.80` | Filter out irrelevant content related to the coke industry, ensure relevance of retrieved data |
 | `data_source_update_freq` | `Daily at 16:30` | Align with the industry daily report release schedule, pull the latest snapshot after daily data updates |
-| `citation_template` | `[{{source_name}}]` | Configure a custom citation marker format, avoid using the platform’s default meaningless numeric markers |
+| `citation_template` | `[example value]` | Configure a custom citation marker format, avoid using the platform’s default meaningless numeric markers |
 | `parse_chunk_overlap` | `100 characters` | Maintain content continuity between adjacent segments, prevent destruction of field context integrity after splitting |
 
 > The parameter values provided on this page are common starting points for configuration. Actual values are affected by material form, data volume, and business rules. Specific issues require case-by-case analysis. It is recommended to test on your own samples before finalizing settings.

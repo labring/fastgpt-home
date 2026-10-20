@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 储能财报分析的文档解析与分块
-meta_description: 储能行业的财报数据来源包括公开上市储能企业的年度、季度财报，行业协会发布的产业白皮书，以及电站项目的竣工验收文档。更新节奏遵循公开披露规则，年度财报按自然年
+meta_description: 储能财报分析的文档解析与分块：储能财报分析的文档解析与分块，涵盖配置与验证建议。
 keywords: 储能、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油服工程收益率的表单与交互
-meta_description: 油服工程的收益率相关数据来源为油气工程服务企业的内部运营台账、第三方油气市场资讯平台的工程收益监测数据。更新节奏为每日18点前完成当日数据更新，覆盖前一日的
+meta_description: 油服工程收益率的表单与交互：油服工程收益率的表单与交互，涵盖配置与验证建议。。。
 keywords: 油服工程、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

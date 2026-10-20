@@ -4,8 +4,8 @@ slug: /en/industry/finance-d008-c064-f007
 page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
-meta_title: Workflow Orchestration for Intelligent Due Diligence Reports
-meta_description: Data sources for film and theater chain due diligence include the State Administration of Radio and Television’s film and television filing platform
+meta_title: Workflow Orchestration for Intelligent Due Diligence
+meta_description: Workflow Orchestration for Intelligent Due Diligence Reports in Film and Theater Chains
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

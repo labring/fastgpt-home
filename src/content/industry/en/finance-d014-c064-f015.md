@@ -4,8 +4,8 @@ slug: /en/industry/finance-d014-c064-f015
 page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
-meta_title: Deployment and Upgrade for Film and Theater Financial Report
-meta_description: Financial report data for film and theater chains comes primarily from internal operational systems of theater companies, third-party box office
+meta_title: Deployment and Upgrade for Film and Theater Financial
+meta_description: Deployment and Upgrade for Film and Theater Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

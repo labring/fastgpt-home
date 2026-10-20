@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Insurance Claim First-Level Review
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Expense Statement Insurance
-meta_description: Expense statement data mainly comes from settlement documents from cooperating medical institutions, exported files from insurance company internal
+meta_description: Tool Calling and Plugins for Expense Statement Insurance Claim Initial Review
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

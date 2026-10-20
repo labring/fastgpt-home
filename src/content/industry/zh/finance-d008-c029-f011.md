@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 包装印刷智能尽调报告的文档解析与分块
-meta_description: 包装印刷智能尽调报告的数据来自企业月度生产台账、原材料采购凭证、合规质检报告与客户订单档案，更新节奏为月度或季度。文档多为结构化报表与图文混合的合规报告，包
+meta_description: 包装印刷智能尽调报告的文档解析与分块：包装印刷智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 包装印刷、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

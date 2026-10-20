@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 乳制品融资日报的HTTP 接口与外部系统
-meta_description: 乳制品融资日报的数据来源包括上游生鲜乳收购端口、乳制品加工企业的原料采购融资台账、下游经销商回款数据及行业征信机构的企业授信变动信息。数据更新节奏为每日凌晨
+meta_description: 乳制品融资日报的HTTP 接口与外部系统：乳制品融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 乳制品、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

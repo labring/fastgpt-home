@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Infrastructure Engineering
-meta_description: Infrastructure engineering investment research data comes from project feasibility study reports, bidding documents, construction ledgers, industry
+meta_description: Vector Models and Indexing for Infrastructure Engineering Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

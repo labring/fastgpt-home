@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油气开采研报检索的引用来源与溯源
-meta_description: 油气开采研报的核心数据来源包括行业勘探开发协会、专业能源研究院、第三方能源咨询机构，更新节奏以月度、季度常规发布为主，伴随重大勘探突破、政策调整时会有临时增
+meta_description: 油气开采研报检索的引用来源与溯源：油气开采研报检索的引用来源与溯源，涵盖配置与验证建议
 keywords: 油气开采、研报检索与问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

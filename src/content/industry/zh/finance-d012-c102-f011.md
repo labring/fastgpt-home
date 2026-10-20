@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 特钢营销内容的文档解析与分块
-meta_description: 面向金融机构供应链金融服务的特钢营销与生产文档，主要来源于特钢企业内部的产品手册、材质检测报告、客户报价单、行业标准规范，以及线下展会、线上推广的营销物料。
+meta_description: 特钢营销内容的文档解析与分块：特钢营销内容的文档解析与分块，涵盖配置与验证建议。
 keywords: 特钢、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

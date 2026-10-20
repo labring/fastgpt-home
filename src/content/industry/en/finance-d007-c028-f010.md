@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Database and Operations for Thermal Coal Yield Rates
-meta_description: Thermal coal market data primarily comes from public quotes released by domestic coal trading centers, real-time monitoring data from core ports
+meta_description: Database and Operations for Thermal Coal Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

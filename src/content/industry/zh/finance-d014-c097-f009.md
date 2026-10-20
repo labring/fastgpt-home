@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦煤财报分析的引用来源与溯源
-meta_description: 焦煤相关财报数据来源包括煤炭行业月度统计资料、焦煤主产区供需监测报告、上市煤企定期披露报告及大宗商品现货报价数据。更新节奏为行业资料每月更新，上市企业财报按
+meta_description: 焦煤财报分析的引用来源与溯源：焦煤财报分析的引用来源与溯源，涵盖配置与验证建议。
 keywords: 焦煤、财报分析与报告生成、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

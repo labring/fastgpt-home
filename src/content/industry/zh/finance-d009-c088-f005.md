@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油服工程研报检索的多轮对话与提示词
-meta_description: 金融场景下的油服工程研报来源包括金融机构内部的油服行业研究资料库、公开行业研究资料、油气服务相关的公开运营文档。常规研报按季度发布，重大行业事件如新技术落地
+meta_description: 油服工程研报检索的多轮对话与提示词：油服工程研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 油服工程、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Professional Services
-meta_description: The data for professional services intelligent due diligence reports comes primarily from publicly disclosed corporate documents, industrial and
+meta_description: Vector Models and Indexing for Professional Services Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

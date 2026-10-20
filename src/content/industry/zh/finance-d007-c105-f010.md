@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 生物制品收益率的数据库与运维
-meta_description: 生物制品收益率行情数据来源包括医药流通公开报价接口、生物制品批签发官方数据库、上市企业定期披露的销售数据。更新节奏为每日凌晨更新前一自然日的全品类行情数据，
+meta_description: 生物制品收益率的数据库与运维：生物制品收益率的数据库与运维，涵盖配置与验证建议。
 keywords: 生物制品、收益率与行情日报播报、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for State-owned Large Bank Financing
-meta_description: The operation management department at the headquarters of state-owned large banks collects core transaction system data for corporate credit
+meta_description: Workflow Orchestration for State-owned Large Bank Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

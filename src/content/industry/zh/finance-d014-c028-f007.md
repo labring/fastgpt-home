@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 动力煤财报分析的工作流编排
-meta_description: 动力煤财报分析的数据来源包括煤炭行业主管部门的月度运行简报、主产区产量统计公报、上市煤企定期报告、港口现货交易平台的成交数据。更新节奏为：现货成交数据每日更
+meta_description: 动力煤财报分析的工作流编排：动力煤财报分析的工作流编排，涵盖配置与验证建议。。。
 keywords: 动力煤、财报分析与报告生成、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

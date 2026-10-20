@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 游戏营销内容的表单与交互
-meta_description: 金融保险理财领域的游戏营销内容数据，主要来源于机构运营后台的小游戏用户行为日志、合作投放平台的转化记录、用户提交的互动反馈以及机构内部的营销素材库。数据更新
+meta_description: 游戏营销内容的表单与交互：游戏营销内容的表单与交互，涵盖配置与验证建议。。。。。
 keywords: 游戏、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

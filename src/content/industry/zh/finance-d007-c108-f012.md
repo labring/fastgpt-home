@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电商服务收益率的模型接入与配置
-meta_description: 电商服务的收益率与行情数据来源为电商平台开放交易接口、店铺后台导出的结构化报表、第三方电商运营工具的行情接口。更新节奏为每日更新，覆盖前一自然日的全量交易与
+meta_description: 电商服务收益率的模型接入与配置：电商服务收益率的模型接入与配置，涵盖配置与验证建议
 keywords: 电商服务、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

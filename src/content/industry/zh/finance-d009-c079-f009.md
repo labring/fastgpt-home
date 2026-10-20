@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 普钢研报检索的引用来源与溯源
-meta_description: 普钢研报数据主要来自国内钢铁工业协会月度供需报告、主流大宗商品交易平台的每日行情简报、头部钢厂的生产经营周报。单篇文档长度跨度大，短则数百字的行情速报，长则
+meta_description: 普钢研报检索的引用来源与溯源：普钢研报检索的引用来源与溯源，涵盖配置与验证建议。
 keywords: 普钢、研报检索与问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

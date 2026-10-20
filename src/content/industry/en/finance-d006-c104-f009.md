@@ -4,8 +4,8 @@ slug: /en/industry/finance-d006-c104-f009
 page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
-meta_title: Citation Source and Traceability for Glass Industry Research
-meta_description: Glass industry research data comes from multiple sources: national building materials industry standards (including float glass and tempered glass
+meta_title: Citation Source and Traceability for Glass Industry
+meta_description: Citation Source and Traceability for Glass Industry Research Knowledge Base
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

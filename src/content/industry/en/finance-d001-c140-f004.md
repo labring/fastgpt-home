@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: KYC and AML Document Verification
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Funding Source KYC
-meta_description: Funding source KYC data mainly comes from materials such as corporate current account statements, personal bank transfer receipts, tax filing forms
+meta_description: Vector Models and Indexing for Funding Source KYC: covering configuration and validation guidance.
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

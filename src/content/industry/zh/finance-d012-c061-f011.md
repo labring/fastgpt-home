@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程机械营销内容的文档解析与分块
-meta_description: 工程机械营销内容的文档主要来源于官方产品手册、行业招投标技术文档、线下宣传册及客户定制化方案文档。更新节奏随新产品发布、核心参数调整不定期触发。文档结构包含
+meta_description: 工程机械营销内容的文档解析与分块：工程机械营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 工程机械、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

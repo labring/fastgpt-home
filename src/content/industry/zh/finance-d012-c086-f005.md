@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 汽车服务营销内容的多轮对话与提示词
-meta_description: 汽车服务营销的数据主要来源于车险保单系统、线下门店维保档案、客户CRM与车险预约平台。数据更新节奏分实时与定时：维保工单、预约记录实时生成，客户基础信息与保
+meta_description: 汽车服务营销内容的多轮对话与提示词：汽车服务营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 汽车服务、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

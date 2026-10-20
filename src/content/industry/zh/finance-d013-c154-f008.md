@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饰品融资日报的工具调用与插件
-meta_description: 饰品融资日报的数据来自国内贵金属现货交易市场公开报价、国内供应链金融服务平台的饰品类融资放款记录、品牌饰品商的月度融资报备数据。数据更新节奏为每日凌晨更新前
+meta_description: 饰品融资日报的工具调用与插件：饰品融资日报的工具调用与插件，涵盖配置与验证建议。
 keywords: 饰品、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

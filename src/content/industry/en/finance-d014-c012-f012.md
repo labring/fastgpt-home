@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for Residential Development
-meta_description: Residential development financial report data comes from three sources: public annual, semi-annual and quarterly financial reports released by real
+meta_description: Model Access and Configuration for Residential Development Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

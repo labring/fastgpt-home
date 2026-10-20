@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁路公路投研知识库建设的上下文与 token
-meta_description: 铁路公路投研数据主要来自官方路网运维系统、行业监管报表、养护台账、招投标公示与政策文件。结构化数据包含线路编号、运营里程、日均通行量、养护成本等字段，单位分
+meta_description: 铁路公路投研知识库建设的上下文与 token：铁路公路投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 铁路公路、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

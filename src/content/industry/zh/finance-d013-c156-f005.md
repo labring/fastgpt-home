@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 黑色家电融资日报的多轮对话与提示词
-meta_description: 黑色家电融资日报的数据来源于家电供应链上下游厂商、区域经销商的融资台账，以及征信系统的企业经营性融资记录。更新节奏为每日凌晨更新前一日的全量融资数据。文档结
+meta_description: 黑色家电融资日报的多轮对话与提示词：黑色家电融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 黑色家电、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

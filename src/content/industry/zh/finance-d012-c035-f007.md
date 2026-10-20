@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医美营销内容的工作流编排
-meta_description: 医美营销内容在金融行业的营销场景下，核心数据来自金融机构与医美机构合作的配套营销物料、公开平台的医美项目介绍及合规资质文档。更新节奏随合作医美项目上线、季度
+meta_description: 医美营销内容的工作流编排：医美营销内容的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 医美、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

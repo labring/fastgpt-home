@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航运港口收益率的表单与交互
-meta_description: 航运港口收益率相关数据来源包括国际航运行业公开统计接口、港口运营方每日报送的结构化报表、海事监管机构的航线运营数据，主要服务于航运金融的收益率与行情播报需求
+meta_description: 航运港口收益率的表单与交互：航运港口收益率的表单与交互，涵盖配置与验证建议。。。
 keywords: 航运港口、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

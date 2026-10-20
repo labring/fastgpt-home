@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 鞋类营销内容的多轮对话与提示词
-meta_description: 鞋类营销相关的数据主要来源于品牌商品管理系统、电商平台商品详情库、线下门店的款号档案。数据更新随品牌营销周期和库存变动调整，无固定周期。单条数据对应单个SK
+meta_description: 鞋类营销内容的多轮对话与提示词：鞋类营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 鞋类、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

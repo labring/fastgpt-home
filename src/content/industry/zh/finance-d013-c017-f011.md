@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光学光电子融资日报的文档解析与分块
-meta_description: 光学光电子行业融资日报的数据来源包括行业自律组织公开披露、上市及非上市企业的融资公告、第三方机构的每日跟踪报告。更新节奏以每日更新为主，部分细分品类的周报为
+meta_description: 光学光电子融资日报的文档解析与分块：光学光电子融资日报的文档解析与分块，涵盖配置与验证建议
 keywords: 光学光电子、融资日报、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

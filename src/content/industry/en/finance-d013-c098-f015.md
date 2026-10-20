@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade of Coal Chemical Industry Financing
-meta_description: Coal chemical financing daily report data is primarily sourced from public archived data of the national coal industry association, local development
+meta_description: Deployment and Upgrade of Coal Chemical Industry Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 品牌代运营营销内容的HTTP 接口与外部系统
-meta_description: 品牌代运营的营销内容数据主要来自金融品牌方提供的图文素材库、社交媒体发布后台、电商平台商品详情页文案。更新节奏随品牌营销节点波动，大促前会高频新增素材，日常
+meta_description: 品牌代运营营销内容的HTTP 接口与外部系统：品牌代运营营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 品牌代运营、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

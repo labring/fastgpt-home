@@ -4,8 +4,8 @@ slug: /zh/industry/finance-d012-c101-f001
 page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
-meta_title: 物流营销内容的HTTP 接口与外部系统
-meta_description: 物流营销内容的数据主要来自物流订单管理系统、运单轨迹平台、仓储管理系统及客户发货台账。数据更新节奏分两类：运单状态、实时位置等实时数据每1-5分钟同步，批量
+meta_title: 物流营销内容的HTTP接口与外部系统
+meta_description: 物流营销内容的HTTP接口与外部系统：物流营销内容的HTTP接口与外部系统，涵盖配置与验证建议
 keywords: 物流、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

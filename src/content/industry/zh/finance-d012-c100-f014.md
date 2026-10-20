@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物业管理营销内容的表单与交互
-meta_description: 物业管理相关营销内容的数据主要来源于业主档案系统、园区设备巡检台账、缴费记录库与报修工单系统。数据更新节奏分三类：业主基础信息按季度同步更新，缴费记录按月生
+meta_description: 物业管理营销内容的表单与交互：物业管理营销内容的表单与交互，涵盖配置与验证建议。
 keywords: 物业管理、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

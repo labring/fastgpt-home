@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c095-f006
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: Conversation Logging and Auditing for Thermal Industry Yield
-meta_description: Thermal industry market and yield data is collected from municipal thermal scheduling platforms, internal ERP systems of thermal production
+meta_title: Conversation Logging and Auditing for Thermal Industry
+meta_description: Conversation Logging and Auditing for Thermal Industry Yield and Daily Market Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Environmental Monitoring
-meta_description: Data sources for environmental monitoring financing daily reports include publicly available monitoring site data from ecological environment
+meta_description: Tool Calling and Plugins for Environmental Monitoring Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

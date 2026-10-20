@@ -4,8 +4,8 @@ slug: /zh/industry/finance-d012-c047-f001
 page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
-meta_title: 国有大行营销内容的HTTP 接口与外部系统
-meta_description: 这个品类的数据来自总行统一管控的营销素材管理平台、各分行报备的合规营销物料、监管要求的公示类营销内容库。更新节奏为营销活动启动前批量同步，临时活动素材在落地
+meta_title: 国有大行营销内容的HTTP接口与外部系统
+meta_description: 国有大行营销内容的HTTP接口与外部系统：国有大行营销内容的HTTP接口与外部系统，涵盖配置与验证建议
 keywords: 国有大行、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

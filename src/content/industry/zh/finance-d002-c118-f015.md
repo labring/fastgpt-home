@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 统一入口一体化 AI 平台的部署与升级
-meta_description: 统一入口的数据来源于金融保险理财场景下的各AI应用调用日志、用户交互终端的操作记录，以及跨应用的权限绑定元数据。数据更新节奏分为两类：调用时实时生成单次调用
+meta_description: 统一入口一体化 AI 平台的部署与升级：统一入口一体化 AI 平台的部署与升级，涵盖配置与验证建议
 keywords: 统一入口、一体化 AI 平台与多应用编排、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

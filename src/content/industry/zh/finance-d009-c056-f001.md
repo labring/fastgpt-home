@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 家居用品研报检索的HTTP 接口与外部系统
-meta_description: 家居用品研报的数据来源主要为国内券商轻工制造行业研报、国内家居行业公开统计报告、头部家居品牌供应链披露信息。更新节奏为每周更新行业渠道动态，每月更新细分品类
+meta_description: 家居用品研报检索的HTTP 接口与外部系统：家居用品研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 家居用品、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

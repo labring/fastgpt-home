@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Form and Interaction for Iron Ore Yield Rates
-meta_description: Iron ore-related yield and market data primarily comes from Dalian Commodity Exchange iron ore futures contracts and major domestic coastal port spot
+meta_description: Form and Interaction for Iron Ore Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

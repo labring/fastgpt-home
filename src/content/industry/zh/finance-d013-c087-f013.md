@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 汽车零部件融资日报的知识库检索与召回
-meta_description: 汽车零部件融资日报的数据来源包括全国中小企业股份转让系统公开披露公告、地方产权交易中心融资备案信息、行业协会配套供应商调研数据，以及主机厂官方披露的配套供应
+meta_description: 汽车零部件融资日报的知识库检索与召回：汽车零部件融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 汽车零部件、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

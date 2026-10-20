@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工业金属财报分析的模型接入与配置
-meta_description: 工业金属财报分析的数据主要来自国内/国际期货交易所公开公告、上市工业金属企业的定期财报、行业第三方数据平台。更新节奏分为固定周期与实时两类：企业年度/季度财
+meta_description: 工业金属财报分析的模型接入与配置：工业金属财报分析的模型接入与配置，涵盖配置与验证建议
 keywords: 工业金属、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

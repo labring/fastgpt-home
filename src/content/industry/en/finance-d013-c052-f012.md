@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for Financing Daily Reports
-meta_description: The data sources for financing daily reports include group-level financing management systems, subsidiary financial ledgers, and public market
+meta_description: Model Access and Configuration for Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -31,7 +31,7 @@ The multi-source data access requirement requires configuring authorization and 
 | `similarity_threshold` | 0.75 | Distinguishes group-level summary and subsidiary-level detailed financing information, avoids recalling redundant duplicate data for the same entity |
 | `rerank_top_n` | 8 | For multi-entity financing entries, prioritizes returning results with the highest match to the query topic |
 | `api_request_timeout` | 300 seconds | Addresses delays during parallel pulling of data from multiple subsidiary data sources, prevents sync task failures due to timeout |
-| `custom_api_auth` | `{"Authorization": "Bearer {{authorization}}"}` | Adapts to the authentication requirements of financing daily report APIs, obtains authorization tokens from internal financing systems |
+| `custom_api_auth` | `{"Authorization": "Bearer example value"}` | Adapts to the authentication requirements of financing daily report APIs, obtains authorization tokens from internal financing systems |
 
 > The parameter values provided on this page are common starting points for configuration. Actual values are affected by material form, data volume, and business rules. Specific issues require individual analysis. It is recommended to test on your own samples before finalizing settings.
 

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 综合服务融资日报的工具调用与插件
-meta_description: 综合服务融资日报的数据来源涵盖公开市场业务交易公告、银行间同业拆借中心日报、交易所固定收益平台披露及企业公开融资公告。更新节奏为每个工作日更新，非工作日顺延
+meta_description: 综合服务融资日报的工具调用与插件：综合服务融资日报的工具调用与插件，涵盖配置与验证建议
 keywords: 综合服务、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

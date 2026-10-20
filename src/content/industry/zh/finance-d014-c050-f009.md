@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 塑料橡胶财报分析的引用来源与溯源
-meta_description: 这个品类的数据来源为沪深交易所披露的上市公司定期报告、中国塑料加工工业协会发布的行业月度运行数据。更新节奏为年报每年更新1次，季报每季度更新1次，行业数据每
+meta_description: 塑料橡胶财报分析的引用来源与溯源：塑料橡胶财报分析的引用来源与溯源，涵盖配置与验证建议
 keywords: 塑料橡胶、财报分析与报告生成、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程机械智能尽调报告的文档解析与分块
-meta_description: 工程机械智能尽调报告的数据主要来自厂商出厂技术手册、设备运维台账、第三方质检报告、交易合同及行业合规文件。数据更新节奏随设备生命周期变动，出厂文档为固定批次
+meta_description: 工程机械智能尽调报告的文档解析与分块：工程机械智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 工程机械、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

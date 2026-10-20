@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通信服务财报分析的文档解析与分块
-meta_description: 通信服务行业的财报数据主要来自证券交易所公开披露的定期报告，包括季度报告、半年度报告与年度报告。更新节奏遵循监管要求，季度报告于季后一个月内发布，年度报告于
+meta_description: 通信服务财报分析的文档解析与分块：通信服务财报分析的文档解析与分块，涵盖配置与验证建议
 keywords: 通信服务、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

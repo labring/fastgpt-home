@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 广告营销收益率的多轮对话与提示词
-meta_description: 金融行业广告营销领域的收益率与行情日报数据，来源为金融机构广告投放管理系统后台报表、第三方广告监测接口、媒体竞价行情数据源。更新节奏为每日固定时段生成前一自
+meta_description: 广告营销收益率的多轮对话与提示词：广告营销收益率的多轮对话与提示词，涵盖配置与验证建议
 keywords: 广告营销、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

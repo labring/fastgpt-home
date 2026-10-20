@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 功能入口终端内自然语言检索的工作流编排
-meta_description: 功能入口的数据来源于终端用户的自然语言检索触发请求，更新节奏为实时触发即生成单条数据。文档结构包含标准化字段，`query_text`字段存储用户输入的检索
+meta_description: 功能入口终端内自然语言检索的工作流编排：功能入口终端内自然语言检索的工作流编排，涵盖配置与验证建议
 keywords: 功能入口、终端内自然语言检索、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 产业园区研报检索的知识库检索与召回
-meta_description: 面向金融、保险、理财领域的产业园区研报，数据主要来自园区管委会公开的年度运营总结、月度招商简报、产业规划白皮书，以及第三方产业咨询机构发布的园区专项研究文档
+meta_description: 产业园区研报检索的知识库检索与召回：产业园区研报检索的知识库检索与召回，涵盖配置与验证建议
 keywords: 产业园区、研报检索与问答、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: IT 服务融资日报的文档解析与分块
-meta_description: IT服务融资日报的数据主要来源于公开投融资平台、行业协会披露的官方数据、上市及非上市企业的融资公告。更新节奏为每日更新，单份日报覆盖当日全品类IT服务赛道的
+meta_description: IT 服务融资日报的文档解析与分块：IT 服务融资日报的文档解析与分块，涵盖配置与验证建议
 keywords: IT 服务、融资日报、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

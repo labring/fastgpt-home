@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 半导体投研知识库建设的部署与升级
-meta_description: 半导体投研数据主要来自公开行业研报、晶圆厂产能公示文档、EDA仿真输出文件、专利数据库、供应链报价单。数据更新节奏存在差异，行业研报每日更新，供应链报价每周
+meta_description: 半导体投研知识库建设的部署与升级：半导体投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 半导体、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

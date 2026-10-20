@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 炼化财报分析的文档解析与分块
-meta_description: 炼化财报的数据主要来自炼化企业公开披露的定期财报、季度经营简报，以及行业监管机构发布的板块运行数据。更新节奏以季度、半年度、年度定期更新为主，伴随重大产能调
+meta_description: 炼化财报分析的文档解析与分块：炼化财报分析的文档解析与分块，涵盖配置与验证建议。
 keywords: 炼化、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

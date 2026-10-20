@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 动力煤融资日报的模型接入与配置
-meta_description: 动力煤融资日报的数据主要来源于国内煤炭行业监测平台、北方港口现货交易系统、铁路货运统计公示及下游电厂运营公开数据。数据更新节奏为每日固定时点更新，单份日报文
+meta_description: 动力煤融资日报的模型接入与配置：动力煤融资日报的模型接入与配置，涵盖配置与验证建议
 keywords: 动力煤、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Dedicated Equipment Yield Rates
-meta_description: Data related to dedicated equipment yield rates comes from connections to domestic and overseas securities market market data gateways, and local
+meta_description: Workflow Orchestration for Dedicated Equipment Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

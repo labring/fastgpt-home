@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水处理营销内容的工具调用与插件
-meta_description: 用于金融营销的水处理相关数据主要来自在线水质监测传感器、水务运营上报系统与第三方环保数据接口。数据以结构化时序记录为主，单条文档包含监测点标识、采集时间戳、
+meta_description: 水处理营销内容的工具调用与插件：水处理营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 水处理、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

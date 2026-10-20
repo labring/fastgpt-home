@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 调味品融资日报的工具调用与插件
-meta_description: 调味品融资日报的数据来源包括全国食品工业协会监测的公开融资备案信息、地方商务部门公示的企业投融资动态、第三方工商变更公告。数据按日更新，每日凌晨同步前一日的
+meta_description: 调味品融资日报的工具调用与插件：调味品融资日报的工具调用与插件，涵盖配置与验证建议
 keywords: 调味品、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

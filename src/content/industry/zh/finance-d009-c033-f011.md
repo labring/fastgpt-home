@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化纤研报检索的文档解析与分块
-meta_description: 化纤研报的数据来源包括中国化纤工业协会公开报告、券商行业研报、大宗商品交易平台的供需简报。更新节奏分为月度全行业全景报告、周度价格与供需动态简报。文档结构多
+meta_description: 化纤研报检索的文档解析与分块：化纤研报检索的文档解析与分块，涵盖配置与验证建议。
 keywords: 化纤、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

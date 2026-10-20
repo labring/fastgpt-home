@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 废标项竞价的多轮对话与提示词
-meta_description: 废标项竞价数据来源于公共资源交易平台公开的废标公告、企业内部投标归档库。数据更新随对应招标项目的状态变更，无固定周期，单项目废标后24小时内完成更新。单条数
+meta_description: 废标项竞价的多轮对话与提示词：废标项竞价的多轮对话与提示词，涵盖配置与验证建议。
 keywords: 废标项、竞价与投标报告、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

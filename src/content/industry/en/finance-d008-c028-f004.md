@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Thermal Coal Intelligent Due
-meta_description: Thermal coal category data sources include publicly available industry association statistics, port loading and unloading monitoring logs, railway and
+meta_description: Vector Models and Indexing for Thermal Coal Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

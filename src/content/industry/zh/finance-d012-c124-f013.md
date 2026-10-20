@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 自动化设备营销内容的知识库检索与召回
-meta_description: 自动化设备营销相关数据主要来自金融场景下的智能理财终端、ATM机等设备的选型手册、技术参数表、应用案例文档、营销推广物料及售后维护指南。更新节奏：新品上线、
+meta_description: 自动化设备营销内容的知识库检索与召回：自动化设备营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 自动化设备、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

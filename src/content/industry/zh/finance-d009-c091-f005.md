@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 消费建材研报检索的多轮对话与提示词
-meta_description: 消费建材研报的数据来源包含国内建筑材料行业相关协会公开披露的行业动态报告、上市消费建材企业的年度及半年度经营公告、第三方产业研究机构发布的细分品类跟踪报告。
+meta_description: 消费建材研报检索的多轮对话与提示词：消费建材研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 消费建材、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

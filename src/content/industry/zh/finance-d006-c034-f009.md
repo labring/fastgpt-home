@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医疗器械投研知识库建设的引用来源与溯源
-meta_description: 医疗器械投研的数据主要来源于国家药监部门官方公告、临床研究期刊、厂商公开产品手册与合规备案文档。数据更新节奏无固定周期，新获批产品、注册证变更、临床结果更新
+meta_description: 医疗器械投研知识库建设的引用来源与溯源：医疗器械投研知识库建设的引用来源与溯源，涵盖配置与验证建议
 keywords: 医疗器械、投研知识库建设与治理、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15
@@ -28,7 +28,7 @@ date_modified: 2026-09-15
 | `similarity_threshold` | `0.72–0.80` | 专业术语多，需平衡召回精度与覆盖范围，避免过滤掉小众临床数据 |
 | `parse_chunk_size` | `1000–1200 字符` | 医疗器械文档含长段技术参数，分段过长会丢失溯源关联，过短会破坏参数完整性 |
 | `source_update_strategy` | `按数据源发布时间增量同步` | 医疗器械注册数据更新无固定周期，需实时抓取新发布的获批公告完成溯源绑定 |
-| `reference_template` | `{{product_name}}（{{reference_id}}），来源：{{source_name}}，发布时间：{{publish_date}}` | 保留产品标识与官方溯源字段，符合投研场景的合规性要求 |
+| `reference fields` | `content fields（content fields），来源字段，发布时间字段` | 保留产品标识与官方溯源字段，符合投研场景的合规性要求 |
 
 > 本页给出的参数取值均为常规建议，用于确定配置的起点。实际取值受材料形态、数据量与业务规则影响，具体问题需具体分析，建议在自有样本上实测后再定。
 

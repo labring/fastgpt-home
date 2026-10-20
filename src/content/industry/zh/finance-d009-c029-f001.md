@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 包装印刷研报检索的HTTP 接口与外部系统
-meta_description: 包装印刷研报的数据来源包括轻工制造领域的公开券商研报、行业协会发布的月度/季度监测报告、包装印刷企业披露的定期财报及供应链公开数据。更新节奏为券商研报按季度
+meta_description: 包装印刷研报检索的HTTP 接口与外部系统：包装印刷研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 包装印刷、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

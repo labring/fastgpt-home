@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Chemical Fiber Financing
-meta_description: Chemical fiber financing daily report data comes from three main sources: daily financing filing data from domestic chemical fiber industry
+meta_description: Vector Models and Indexing for Chemical Fiber Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

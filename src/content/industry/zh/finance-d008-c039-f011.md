@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 厨卫电器智能尽调报告的文档解析与分块
-meta_description: 厨卫电器的数据源主要包括产品说明书、第三方质检报告、供应链Excel清单、电商平台参数页。更新节奏随新品上市、合规标准更新调整，无固定周期。文档形态以PDF
+meta_description: 厨卫电器智能尽调报告的文档解析与分块：厨卫电器智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 厨卫电器、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

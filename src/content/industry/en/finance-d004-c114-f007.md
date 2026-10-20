@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Compliance and Internal Policy Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Regulatory Compliance Workflow Orchestration
-meta_description: Regulatory measure data is sourced from public official channels of national financial regulatory authorities and industry self-regulatory
+meta_description: Regulatory Compliance Workflow Orchestration
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

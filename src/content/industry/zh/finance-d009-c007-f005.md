@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 乳制品研报检索的多轮对话与提示词
-meta_description: 乳制品研报数据主要来自券商研究所公开研报、行业协会监测数据、上市乳企季度财报、第三方消费调研机构公开报告。更新节奏包含常规发布与临时更新：常规报告按季度、月
+meta_description: 乳制品研报检索的多轮对话与提示词：乳制品研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 乳制品、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

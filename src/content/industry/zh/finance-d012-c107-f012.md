@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电力营销内容的模型接入与配置
-meta_description: 电力营销内容的数据主要来源于用电采集终端、营销业务管理系统、客户服务工单库及属地电价政策文件。结构化数据包含用电户号、累计用电量、阶梯电价档位、欠费金额等字
+meta_description: 电力营销内容的模型接入与配置：电力营销内容的模型接入与配置，涵盖配置与验证建议。
 keywords: 电力、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

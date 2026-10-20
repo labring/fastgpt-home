@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光模块智能尽调报告的工作流编排
-meta_description: 光模块的核心数据来自通信设备厂商出厂参数文档、运营商集采招标公示、光通信行业标准规范及第三方检测报告。数据更新节奏随厂商固件迭代、行业标准更新或集采计划变动
+meta_description: 光模块智能尽调报告的工作流编排：光模块智能尽调报告的工作流编排，涵盖配置与验证建议
 keywords: 光模块、智能尽调报告、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

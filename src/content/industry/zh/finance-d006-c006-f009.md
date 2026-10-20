@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 中药投研知识库建设的引用来源与溯源
-meta_description: 中药投研数据主要来自《中国药典》系列、地方中药材炮制规范、药企内控质量标准、临床研究论文及行业标准文档。《中国药典》单篇条目包含性味归经、炮制方法、含量检测
+meta_description: 中药投研知识库建设的引用来源与溯源：中药投研知识库建设的引用来源与溯源，涵盖配置与验证建议
 keywords: 中药、投研知识库建设与治理、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

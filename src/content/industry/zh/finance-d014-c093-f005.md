@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 游戏财报分析的多轮对话与提示词
-meta_description: 游戏财报的数据来源主要为上市游戏企业的定期公开财报、行业公开监测报告及厂商官方专项公告。更新节奏遵循固定披露周期，季度财报于季后45天内发布，年度财报于次年
+meta_description: 游戏财报分析的多轮对话与提示词：游戏财报分析的多轮对话与提示词，涵盖配置与验证建议
 keywords: 游戏、财报分析与报告生成、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

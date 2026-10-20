@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Cultural and Entertainment
-meta_description: The investment research data for cultural and entertainment products covers supply chain production reports, terminal sales ledgers, new product
+meta_description: Vector Models and Indexing for Cultural and Entertainment Products Investment Research Knowledge Base
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

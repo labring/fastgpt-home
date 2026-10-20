@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饰品收益率的对话日志与审计
-meta_description: 饰品收益率相关数据主要来自品牌内部进销存系统、线下零售POS台账与第三方饰品行情聚合接口。数据更新节奏为每日凌晨完成全量同步，单款饰品的最新数据更新延迟不超
+meta_description: 饰品收益率的对话日志与审计：饰品收益率的对话日志与审计，涵盖配置与验证建议。。。
 keywords: 饰品、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

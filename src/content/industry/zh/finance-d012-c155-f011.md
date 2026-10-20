@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饲料营销内容的文档解析与分块
-meta_description: 数据来源包括面向养殖户的科普材料、金融机构配套的饲料营销推广物料、饲料原料供应商的检测报告、公开行业标准文档。更新节奏随原料市场波动、新配方研发进度调整，无
+meta_description: 饲料营销内容的文档解析与分块：饲料营销内容的文档解析与分块，涵盖配置与验证建议。
 keywords: 饲料、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 兵器装备财报分析的向量模型与索引
-meta_description: 兵器装备财报的数据来源包括上市公司公开披露的定期报告、军工行业协会公开文档、集团官方经营披露文件。更新节奏分为年度报告、半年度报告与临时公告三类，年度报告每
+meta_description: 兵器装备财报分析的向量模型与索引：兵器装备财报分析的向量模型与索引，涵盖配置与验证建议
 keywords: 兵器装备、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

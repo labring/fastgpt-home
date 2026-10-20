@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 中药智能尽调报告的多轮对话与提示词
-meta_description: 中药智能尽调报告的数据主要来源于国家药典委员会公开标准、药品生产企业备案的生产工艺与质量文件、市场监管部门的抽检公示数据、中药材溯源平台的流通记录。数据更新
+meta_description: 中药智能尽调报告的多轮对话与提示词：中药智能尽调报告的多轮对话与提示词，涵盖配置与验证建议
 keywords: 中药、智能尽调报告、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

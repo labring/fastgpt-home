@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多元金融研报检索的HTTP 接口与外部系统
-meta_description: 多元金融研报的数据来自合规持牌的金融信息服务机构，更新节奏为每个交易日固定推送，遇行业重大事件时追加临时发布。文档结构包含研报标题、发布机构、发布时间、投资
+meta_description: 多元金融研报检索的HTTP 接口与外部系统：多元金融研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 多元金融、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

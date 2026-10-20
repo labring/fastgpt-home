@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多元金融财报分析的HTTP 接口与外部系统
-meta_description: 多元金融品类的财报数据主要来源于境内外证券交易所披露平台、行业自律组织报送系统及内部业务台账。数据更新节奏以季度、半年度、年度定期报告为主，同步覆盖临时公告
+meta_description: 多元金融财报分析的HTTP 接口与外部系统：多元金融财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 多元金融、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 游戏融资日报的知识库检索与召回
-meta_description: 游戏融资日报的数据来源为公开产业资讯渠道、各地监管披露文件及游戏厂商官方公告。更新节奏为工作日每日发布，非工作日无更新。单篇文档为当日所有游戏融资事件的汇总
+meta_description: 游戏融资日报的知识库检索与召回：游戏融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 游戏、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

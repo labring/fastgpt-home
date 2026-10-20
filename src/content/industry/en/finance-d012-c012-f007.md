@@ -4,8 +4,8 @@ slug: /en/industry/finance-d012-c012-f007
 page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
-meta_title: Workflow Orchestration for Residential Development Marketing
-meta_description: Marketing and business data for residential development comes primarily from project sales ledgers, housing and urban-rural development department
+meta_title: Workflow Orchestration for Residential Development
+meta_description: Workflow Orchestration for Residential Development Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

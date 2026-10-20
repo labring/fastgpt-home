@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小家电融资日报的多轮对话与提示词
-meta_description: 小家电融资日报的数据来自家电供应链金融平台的经销商融资台账、银行家电类小微授信日报系统，以及品牌方内部的回款结算记录。数据按自然日更新，每日凌晨完成前一日数
+meta_description: 小家电融资日报的多轮对话与提示词：小家电融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 小家电、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

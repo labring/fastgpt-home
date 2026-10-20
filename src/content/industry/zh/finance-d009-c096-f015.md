@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦炭研报检索的部署与升级
-meta_description: 焦炭研报数据主要来自中国煤炭工业协会焦炭分会、大连商品交易所、头部券商能源化工团队及现货贸易商公开报告。更新节奏分为三类：现货日度报告每日更新，周度供需周报
+meta_description: 焦炭研报检索的部署与升级：焦炭研报检索的部署与升级，涵盖配置与验证建议。。。。。
 keywords: 焦炭、研报检索与问答、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

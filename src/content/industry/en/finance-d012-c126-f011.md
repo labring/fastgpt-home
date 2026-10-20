@@ -4,8 +4,8 @@ slug: /en/industry/finance-d012-c126-f011
 page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
-meta_title: Document Parsing and Chunking for Airport Aviation Marketing
-meta_description: Airport aviation marketing content documents primarily originate from internal plans from the airport marketing department, official promotional
+meta_title: Document Parsing and Chunking for Airport Aviation
+meta_description: Document Parsing and Chunking for Airport Aviation Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

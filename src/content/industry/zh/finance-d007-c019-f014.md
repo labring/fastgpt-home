@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 免税收益率的表单与交互
-meta_description: 数据主要来自免税零售主体的经营端报备数据、官方离岛免税额度结算数据以及第三方零售监测平台的终端销售数据。更新节奏为每日固定时点更新前一日的全量数据，部分热门
+meta_description: 免税收益率的表单与交互：免税收益率的表单与交互，涵盖配置与验证建议。。。。。。。
 keywords: 免税、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

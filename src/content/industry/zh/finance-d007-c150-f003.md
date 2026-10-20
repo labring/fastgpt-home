@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁矿石收益率的分享与嵌入
-meta_description: 铁矿石的行情与收益率数据来源为大宗商品期货交易所，更新节奏为交易日交易时段内每数秒刷新盘口数据，每日开盘前发布前一交易日的结算数据。数据文档包含合约代码、交
+meta_description: 铁矿石收益率的分享与嵌入：铁矿石收益率的分享与嵌入，涵盖配置与验证建议。。。。。
 keywords: 铁矿石、收益率与行情日报播报、分享与嵌入
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

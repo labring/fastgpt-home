@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商业物业智能尽调报告的HTTP 接口与外部系统
-meta_description: 商业物业智能尽调报告的数据来源包含不动产权属登记系统、商圈客流监测平台、物业运维台账、租赁备案数据库及周边业态统计系统。数据更新节奏因类型不同存在差异：权属
+meta_description: 商业物业智能尽调报告的HTTP 接口与外部系统：商业物业智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 商业物业、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

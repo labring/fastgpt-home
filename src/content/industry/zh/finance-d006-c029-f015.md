@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 包装印刷投研知识库建设的部署与升级
-meta_description: 包装印刷投研数据主要来自行业协会月度运行报告、印刷设备厂商的技术参数文档、上下游原材料供应商的报价单、上市企业年报及印刷质量国家标准文件。数据更新节奏差异明
+meta_description: 包装印刷投研知识库建设的部署与升级：包装印刷投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 包装印刷、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

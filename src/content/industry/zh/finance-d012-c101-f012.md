@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物流营销内容的模型接入与配置
-meta_description: 物流行业的营销内容数据主要来源于企业内部营销素材库、线下活动物料归档、线上推广文案历史及客户互动反馈内容。更新节奏随营销节点波动，大促、季度促销等节点会批量
+meta_description: 物流营销内容的模型接入与配置：物流营销内容的模型接入与配置，涵盖配置与验证建议。
 keywords: 物流、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

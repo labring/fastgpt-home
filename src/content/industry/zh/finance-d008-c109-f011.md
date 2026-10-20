@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电子元件智能尽调报告的文档解析与分块
-meta_description: 电子元件智能尽调报告的数据主要来源于原厂公开datasheetheet、行业协会合规文件、供应商资质文档、海关进出口记录与客户审核溯源材料。文档更新节奏随品
+meta_description: 电子元件智能尽调报告的文档解析与分块：电子元件智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 电子元件、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

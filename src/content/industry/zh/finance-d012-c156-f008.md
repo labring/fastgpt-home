@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 黑色家电营销内容的工具调用与插件
-meta_description: 黑色家电的核心数据来源为品牌官方参数页、电商平台商品详情页、国家能效标识数据库与售后维修记录。数据更新节奏随新品发布、能效标准调整变动，无固定周期。单条产品
+meta_description: 黑色家电营销内容的工具调用与插件：黑色家电营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 黑色家电、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

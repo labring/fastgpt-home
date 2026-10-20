@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商业地产研报检索的HTTP 接口与外部系统
-meta_description: 商业地产研报数据主要来源于行业协会公开报告、商业项目运营方披露的运营数据、商圈调研机构的实地采集信息。数据更新节奏分为两类：基础租金、客流等运营指标按月度更
+meta_description: 商业地产研报检索的HTTP 接口与外部系统：商业地产研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 商业地产、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

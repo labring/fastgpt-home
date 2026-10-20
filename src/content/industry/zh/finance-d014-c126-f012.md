@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航空机场财报分析的模型接入与配置
-meta_description: 航空机场财报数据主要来自民航地区管理局公开披露文件、上市机场集团年度/半年度报告、行业协会统计简报。数据更新节奏以年度报告为主，部分季度运营数据按月度更新。
+meta_description: 航空机场财报分析的模型接入与配置：航空机场财报分析的模型接入与配置，涵盖配置与验证建议
 keywords: 航空机场、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

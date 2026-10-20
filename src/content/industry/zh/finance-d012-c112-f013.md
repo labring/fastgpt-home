@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 白色家电营销内容的知识库检索与召回
-meta_description: 该知识库服务于金融、保险、理财行业的白色家电营销获客场景，数据源主要包括品牌官方发布的产品规格书、营销推广文案、安装维护手册。更新节奏随新品发布、促销活动调
+meta_description: 白色家电营销内容的知识库检索与召回：白色家电营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 白色家电、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

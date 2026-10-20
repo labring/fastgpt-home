@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 大气治理融资日报的文档解析与分块
-meta_description: 大气治理融资日报的数据来源主要为各地生态环境部门的项目公示、发改委专项债备案信息、第三方环保产业调研机构的公开数据。更新节奏为每日更新，单份日报文档通常包含
+meta_description: 大气治理融资日报的文档解析与分块：大气治理融资日报的文档解析与分块，涵盖配置与验证建议
 keywords: 大气治理、融资日报、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

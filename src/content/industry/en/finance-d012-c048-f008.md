@@ -4,8 +4,8 @@ slug: /en/industry/finance-d012-c048-f008
 page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
-meta_title: Tool Calling and Plugins for Urban Commercial Bank Marketing
-meta_description: Data related to urban commercial bank marketing content comes from three primary sources: customer transaction records in core business systems
+meta_title: Tool Calling and Plugins for Urban Commercial Bank
+meta_description: Tool Calling and Plugins for Urban Commercial Bank Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

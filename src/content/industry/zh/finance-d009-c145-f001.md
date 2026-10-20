@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通信设备研报检索的HTTP 接口与外部系统
-meta_description: 通信设备研报的数据源包括国内通信设备厂商公开技术白皮书、工信部通信监测数据、运营商集采中标公示、全球通信标准组织规范文档。更新节奏为事件触发，随新品发布、招
+meta_description: 通信设备研报检索的HTTP 接口与外部系统：通信设备研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 通信设备、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

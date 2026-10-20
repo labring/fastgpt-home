@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 军工电子投研知识库建设的上下文与 token
-meta_description: 军工电子投研数据主要来自国防科工局公开公告、军工集团年度/季度财报、行业协会发布的产业动态、军工电子元器件供应商公开参数文档、公开招投标项目文件。数据更新节
+meta_description: 军工电子投研知识库建设的上下文与 token：军工电子投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 军工电子、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

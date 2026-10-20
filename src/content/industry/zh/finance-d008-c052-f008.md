@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多元控股智能尽调报告的工具调用与插件
-meta_description: 数据来源包括国家企业信用信息公示系统、上市公司公告、行业监管公开数据库、关联方工商备案信息。更新节奏：主体基础信息每季度同步更新，关联交易及重大事项随公开披
+meta_description: 多元控股智能尽调报告的工具调用与插件：多元控股智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 多元控股、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

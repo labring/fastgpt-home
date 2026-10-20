@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 国有大行研报检索的HTTP 接口与外部系统
-meta_description: 国有大行研报数据主要来源于本行宏观经济研究团队、行业授信部门及政策研究室，更新以季度常规报告、月度专项分析为主，重大监管政策发布后追加临时解读文档。单份文档
+meta_description: 国有大行研报检索的HTTP 接口与外部系统：国有大行研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 国有大行、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

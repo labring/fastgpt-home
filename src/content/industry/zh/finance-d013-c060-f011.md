@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程咨询融资日报的文档解析与分块
-meta_description: 工程咨询融资日报的数据主要来自工程咨询机构的项目台账、合作金融机构的授信审批回执、地方住建部门的项目备案公示。更新节奏多为每日更新或每周汇总更新，单份文档通
+meta_description: 工程咨询融资日报的文档解析与分块：工程咨询融资日报的文档解析与分块，涵盖配置与验证建议
 keywords: 工程咨询、融资日报、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

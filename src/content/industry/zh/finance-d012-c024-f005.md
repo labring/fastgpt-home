@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 农化制品营销内容的多轮对话与提示词
-meta_description: 农化制品的数据来源包括金融机构合作的企业官方产品登记证文档、田间试验报告、经销商终端反馈库、农业管理部门公开的农资登记数据，以及金融机构收集的农化企业营销需
+meta_description: 农化制品营销内容的多轮对话与提示词：农化制品营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 农化制品、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

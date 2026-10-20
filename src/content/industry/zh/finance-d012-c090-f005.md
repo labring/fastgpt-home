@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 涂料油墨营销内容的多轮对话与提示词
-meta_description: 涂料油墨的业务数据主要来源于企业内部研发配方文档、原料供应商质检报告、下游客户定制需求单及合规检测报告。数据更新节奏随业务类型变化：原料参数随市场供应情况每
+meta_description: 涂料油墨营销内容的多轮对话与提示词：涂料油墨营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 涂料油墨、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

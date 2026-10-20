@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁矿石研报检索的工具调用与插件
-meta_description: 铁矿石研报的数据主要来自大宗商品资讯渠道、行业统计机构及港口运营方公开数据。更新节奏分多档：现货价格类每日更新，港口库存数据按周发布，月度供需报告每月定稿。
+meta_description: 铁矿石研报检索的工具调用与插件：铁矿石研报检索的工具调用与插件，涵盖配置与验证建议
 keywords: 铁矿石、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

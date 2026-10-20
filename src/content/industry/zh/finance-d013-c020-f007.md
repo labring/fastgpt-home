@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 兵器装备融资日报的工作流编排
-meta_description: 数据来源包括国防科工局公开备案信息、军工集团内部投融资台账、第三方军工投融资服务平台的公开披露内容。更新节奏为每日凌晨同步前一日的新增融资项目。文档结构多为
+meta_description: 兵器装备融资日报的工作流编排：兵器装备融资日报的工作流编排，涵盖配置与验证建议。
 keywords: 兵器装备、融资日报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

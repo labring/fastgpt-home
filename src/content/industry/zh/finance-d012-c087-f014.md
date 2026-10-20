@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 汽车零部件营销内容的表单与交互
-meta_description: 汽车零部件的营销数据主要来自主机厂官方配套清单、授权售后备件库及供应商SKU台账。数据更新节奏随主机厂改款、供应商停产或新品上线调整，无固定周期但单次更新覆
+meta_description: 汽车零部件营销内容的表单与交互：汽车零部件营销内容的表单与交互，涵盖配置与验证建议
 keywords: 汽车零部件、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

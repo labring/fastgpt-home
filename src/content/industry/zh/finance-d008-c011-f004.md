@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 休闲食品智能尽调报告的向量模型与索引
-meta_description: 休闲食品智能尽调报告的数据主要来自中国食品工业协会公开行业资料、国家市场监督管理总局合规公示信息、商超零售监测接口、上市休闲食品企业公开年报。更新节奏分为季
+meta_description: 休闲食品智能尽调报告的向量模型与索引：休闲食品智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 休闲食品、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

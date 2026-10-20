@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 服装家纺研报检索的工作流编排
-meta_description: 服装家纺领域的研报数据来源主要包括券商纺织服饰行业研报、行业公开零售监测数据、品牌企业公开经营公告。更新节奏分为常规更新与临时更新两类，常规研报按季度、月度
+meta_description: 服装家纺研报检索的工作流编排：服装家纺研报检索的工作流编排，涵盖配置与验证建议。
 keywords: 服装家纺、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

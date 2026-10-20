@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 资金来源KYC 的向量模型与索引
-meta_description: 资金来源KYC的数据主要来自企业对公账户流水、个人银行转账凭证、纳税申报单、收入证明等材料。更新节奏分为两类：企业客户按季度或年度同步更新，个人客户在开户及
+meta_description: 资金来源KYC 的向量模型与索引：资金来源KYC 的向量模型与索引，涵盖配置与验证建议
 keywords: 资金来源、KYC 与反洗钱资料核验、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

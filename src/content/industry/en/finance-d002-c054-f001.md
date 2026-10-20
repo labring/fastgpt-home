@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Unified AI Platform and Multi-App Orchestration
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interfaces and External Systems for Multi-App Routing
-meta_description: This category's data is sourced from multi-app association rules and app instance information configured within the platform. Updates are triggered
+meta_description: HTTP Interfaces and External Systems for Multi-App Routing Unified AI Platforms
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

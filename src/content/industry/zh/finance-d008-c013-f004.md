@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 保险智能尽调报告的向量模型与索引
-meta_description: 保险智能尽调报告的数据主要来源于保险产品备案条款、投保告知书模板、核保规则手册、既往理赔案例文档以及监管部门公示的合规文件。数据更新节奏分为三类：产品条款随
+meta_description: 保险智能尽调报告的向量模型与索引：保险智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 保险、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

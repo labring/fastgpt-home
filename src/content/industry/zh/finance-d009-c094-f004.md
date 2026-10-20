@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 炼化研报检索的向量模型与索引
-meta_description: 炼化研报数据主要来自行业协会月度监测报告、炼化企业公开年报、第三方专业咨询机构的细分分析文档。更新节奏分为常规月度更新、季度深度复盘与突发事件临时补充三类。
+meta_description: 炼化研报检索的向量模型与索引：炼化研报检索的向量模型与索引，涵盖配置与验证建议。
 keywords: 炼化、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航运港口融资日报的工具调用与插件
-meta_description: 航运港口融资日报的数据来源包括国内主要港口运营数据库、国际航运交易公示平台、海关进出口融资备案系统。更新节奏为每日凌晨完成前一日全量业务数据的汇总与发布。单
+meta_description: 航运港口融资日报的工具调用与插件：航运港口融资日报的工具调用与插件，涵盖配置与验证建议
 keywords: 航运港口、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

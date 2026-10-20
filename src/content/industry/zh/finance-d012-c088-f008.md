@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油服工程营销内容的工具调用与插件
-meta_description: 油服工程的数据主要来源于钻井作业实时监控系统、录井测井平台、设备运维日志系统、现场物资管理系统四类核心数据源。数据更新节奏随作业进度调整，单井施工周期内每日
+meta_description: 油服工程营销内容的工具调用与插件：油服工程营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 油服工程、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

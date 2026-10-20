@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Coking Coal
-meta_description: Coking coal-related data comes primarily from domestic coal trading center public ledgers, port loading and unloading records, downstream industrial
+meta_description: Multi-turn Dialogue and Prompt Engineering for Coking Coal Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

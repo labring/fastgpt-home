@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化妆品收益率的工作流编排
-meta_description: 化妆品相关收益率与行情数据的来源包含品牌官方价目体系、主流电商平台成交接口、线下零售终端调价报备系统。常规在售SKU的调价信息每周更新，新品上市后的前30天
+meta_description: 化妆品收益率的工作流编排：化妆品收益率的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 化妆品、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

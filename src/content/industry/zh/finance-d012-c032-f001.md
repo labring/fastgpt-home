@@ -4,8 +4,8 @@ slug: /zh/industry/finance-d012-c032-f001
 page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
-meta_title: 化学原料营销内容的HTTP 接口与外部系统
-meta_description: 化学原料营销内容的数据主要来自全国化工产品交易平台、生产企业官方API、行业指数数据库，服务于金融机构的供应链金融、理财顾问营销等场景。现货报价类数据每日更
+meta_title: 化学原料营销内容的HTTP接口与外部系统
+meta_description: 化学原料营销内容的HTTP接口与外部系统：化学原料营销内容的HTTP接口与外部系统，涵盖配置与验证建议
 keywords: 化学原料、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

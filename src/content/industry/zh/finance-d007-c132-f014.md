@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 计算机设备收益率的表单与交互
-meta_description: 这个品类的数据来源于设备内置的性能采集模块、企业IT资产管理系统接口以及第三方算力服务对接平台。实时运行参数每5秒更新一次，日汇总的收益率相关数据则在每日凌
+meta_description: 计算机设备收益率的表单与交互：计算机设备收益率的表单与交互，涵盖配置与验证建议。
 keywords: 计算机设备、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

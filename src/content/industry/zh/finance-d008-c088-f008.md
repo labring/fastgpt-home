@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油服工程智能尽调报告的工具调用与插件
-meta_description: 油服工程智能尽调报告的数据主要来自钻井平台实时监测系统、集团勘探开发数据库、第三方油服作业机构的公开作业报告。更新节奏分为三类：实时类为钻井参数、设备状态等
+meta_description: 油服工程智能尽调报告的工具调用与插件：油服工程智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 油服工程、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

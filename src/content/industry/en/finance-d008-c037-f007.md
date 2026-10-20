@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Satellite Communications
-meta_description: Satellite communications intelligent due diligence report data mainly comes from link operation logs collected by ground measurement and control
+meta_description: Workflow Orchestration for Satellite Communications Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

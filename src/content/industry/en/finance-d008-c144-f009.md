@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for Telecommunications
-meta_description: Telecommunications services due diligence data comes from three main sources: carrier public operational reports, structured reports from third-party
+meta_description: Citation Sources and Traceability for Telecommunications Services Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 自动化设备收益率的数据库与运维
-meta_description: 自动化设备的收益率与行情数据来源包括内置运行参数采集接口、对接的金融行情数据源接口，以及设备执行交易后的收益核算模块。数据更新节奏以每日凌晨的批量全量更新为
+meta_description: 自动化设备收益率的数据库与运维：自动化设备收益率的数据库与运维，涵盖配置与验证建议
 keywords: 自动化设备、收益率与行情日报播报、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

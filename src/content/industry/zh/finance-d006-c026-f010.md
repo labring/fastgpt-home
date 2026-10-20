@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 出版投研知识库建设的数据库与运维
-meta_description: 出版行业投研数据主要来自公开出版的行业白皮书、学术期刊、出版社内部运营报表、图书零售监测数据及版权登记公示信息。更新节奏随数据类型差异明显：行业报告按季度或
+meta_description: 出版投研知识库建设的数据库与运维：出版投研知识库建设的数据库与运维，涵盖配置与验证建议
 keywords: 出版、投研知识库建设与治理、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

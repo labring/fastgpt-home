@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 热力研报检索的多轮对话与提示词
-meta_description: 热力研报数据主要来源于公用事业行业协会、热力供应企业公开财报、地方能源监管部门月度运营通报及第三方行业研究机构报告。更新以月度为周期更新核心运营数据，每季度
+meta_description: 热力研报检索的多轮对话与提示词：热力研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 热力、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

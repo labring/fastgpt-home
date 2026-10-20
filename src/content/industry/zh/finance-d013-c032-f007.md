@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学原料融资日报的工作流编排
-meta_description: 化学原料融资日报的数据主要来自地方工信部门的企业融资公示、第三方化工供应链数据平台及央行征信系统公开披露信息。更新节奏为每日T+1更新，覆盖前一日全行业公开
+meta_description: 化学原料融资日报的工作流编排：化学原料融资日报的工作流编排，涵盖配置与验证建议。
 keywords: 化学原料、融资日报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

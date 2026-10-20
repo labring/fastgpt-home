@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通信服务收益率的HTTP 接口与外部系统
-meta_description: 通信服务品类的收益率数据来自中证指数有限公司发布的行业指数行情源，以及沪深交易所公开的板块交易数据。更新节奏分为两类：实时盘中行情每5秒刷新一次，盘后日收益
+meta_description: 通信服务收益率的HTTP 接口与外部系统：通信服务收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 通信服务、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

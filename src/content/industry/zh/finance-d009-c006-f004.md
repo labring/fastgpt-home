@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 中药研报检索的向量模型与索引
-meta_description: 中药研报的数据来源包括中医药行业权威期刊、国家药品监督管理局公开文件、中药企业年度研发报告、中医药研究院专项调研资料。更新节奏分为三类：行业通用研报按季度、
+meta_description: 中药研报检索的向量模型与索引：中药研报检索的向量模型与索引，涵盖配置与验证建议。
 keywords: 中药、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

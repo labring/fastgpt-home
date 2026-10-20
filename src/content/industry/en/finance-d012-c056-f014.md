@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Form and Interaction for Home Goods Marketing Content
-meta_description: Data for home goods primarily comes from brand-owned product libraries, e-commerce platform product detail pages, and offline store SKU ledgers. Data
+meta_description: Form and Interaction for Home Goods Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

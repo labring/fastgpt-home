@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 钢铁贸易研报检索的工具调用与插件
-meta_description: 钢铁贸易研报的数据来源涵盖钢铁行业协会发布的行业运行数据、大宗商品现货交易平台的实时报价、钢厂的产销公告及第三方大宗商品研究机构的深度分析报告。数据更新节奏
+meta_description: 钢铁贸易研报检索的工具调用与插件：钢铁贸易研报检索的工具调用与插件，涵盖配置与验证建议
 keywords: 钢铁贸易、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

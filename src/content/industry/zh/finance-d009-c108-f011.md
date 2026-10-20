@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电商服务研报检索的文档解析与分块
-meta_description: 电商服务领域的研报数据主要来源于电商平台官方行业白皮书、第三方电商大数据监测机构的公开报告，以及品牌商家的运营复盘文档，这类数据是金融机构开展电商赛道投资分
+meta_description: 电商服务研报检索的文档解析与分块：电商服务研报检索的文档解析与分块，涵盖配置与验证建议
 keywords: 电商服务、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 玻璃投研知识库建设的模型接入与配置
-meta_description: 玻璃投研数据主要来源于行业协会公开报告、大宗商品现货交易平台报价、海关进出口报关数据及生产企业月度运营简报。现货价格数据按日更新，产能、进出口数据按周或月度
+meta_description: 玻璃投研知识库建设的模型接入与配置：玻璃投研知识库建设的模型接入与配置，涵盖配置与验证建议
 keywords: 玻璃、投研知识库建设与治理、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 网络安全融资日报的工具调用与插件
-meta_description: 网络安全融资日报的数据来源包括国内网络安全厂商的公开融资公告、证券交易所披露信息及第三方投融资监测平台的公开数据。更新节奏为每日更新，覆盖前一日全量公开的网
+meta_description: 网络安全融资日报的工具调用与插件：网络安全融资日报的工具调用与插件，涵盖配置与验证建议
 keywords: 网络安全、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

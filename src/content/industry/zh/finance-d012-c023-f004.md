@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 军工电子营销内容的向量模型与索引
-meta_description: 军工电子的营销内容数据主要来源于企业内部营销物料库、公开技术白皮书、参展筹备资料及客户沟通方案文档。更新节奏随新品立项、参展筹备、合规认证节点调整，无固定周
+meta_description: 军工电子营销内容的向量模型与索引：军工电子营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 军工电子、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

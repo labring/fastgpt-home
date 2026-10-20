@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 股份制银行融资日报的文档解析与分块
-meta_description: 股份制银行融资日报数据来源于本行对公信贷台账、同业拆借交易系统及监管报送接口，每日T+1更新。文档多为多sheet的Excel格式，主表包含客户名称、授信批
+meta_description: 股份制银行融资日报的文档解析与分块：股份制银行融资日报的文档解析与分块，涵盖配置与验证建议
 keywords: 股份制银行、融资日报、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通用设备研报检索的部署与升级
-meta_description: 通用设备研报的数据来源包括国内通用机械工业联合会发布的行业监测数据、头部券商机械行业团队的产业分析报告、上市公司定期报告及第三方产业监测平台。数据更新节奏存
+meta_description: 通用设备研报检索的部署与升级：通用设备研报检索的部署与升级，涵盖配置与验证建议。
 keywords: 通用设备、研报检索与问答、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

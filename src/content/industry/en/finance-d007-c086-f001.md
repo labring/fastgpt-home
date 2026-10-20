@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interfaces and External Systems for Auto Service
-meta_description: Auto service profitability data is sourced from offline store work order systems, inventory management systems, and customer relationship management
+meta_description: HTTP Interfaces and External Systems for Auto Service Profitability
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

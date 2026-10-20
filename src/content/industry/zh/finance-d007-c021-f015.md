@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 其他综合收益率的部署与升级
-meta_description: 其他综合收益率与行情日报的数据来源为持牌金融数据服务机构的公开合规接口与行业报送数据。更新节奏为每日凌晨完成全量数据集更新，每小时同步增量更新数据。文档结构
+meta_description: 其他综合收益率的部署与升级：其他综合收益率的部署与升级，涵盖配置与验证建议。。。
 keywords: 其他综合、收益率与行情日报播报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

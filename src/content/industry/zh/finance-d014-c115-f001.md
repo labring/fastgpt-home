@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 种植业财报分析的HTTP 接口与外部系统
-meta_description: 种植业财报数据主要来自公开披露的农业上市公司年报、地方农业农村主管部门发布的行业统计数据、规模化种植主体的内部经营台账。数据更新节奏以年度为核心周期，部分季
+meta_description: 种植业财报分析的HTTP 接口与外部系统：种植业财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 种植业、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

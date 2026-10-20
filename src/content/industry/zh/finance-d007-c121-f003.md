@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 耐火材料收益率的分享与嵌入
-meta_description: 耐火材料收益率与行情数据的来源为全国耐火材料行业协会的定点企业监测数据库，以及国内主流耐火材料生产企业的销售台账数据。数据更新节奏分为两类：当日成交价、当日
+meta_description: 耐火材料收益率的分享与嵌入：耐火材料收益率的分享与嵌入，涵盖配置与验证建议。。。
 keywords: 耐火材料、收益率与行情日报播报、分享与嵌入
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

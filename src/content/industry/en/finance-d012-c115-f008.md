@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Crop Farming Marketing Content
-meta_description: Crop farming marketing-related data comes from field soil and weather sensors, regional agricultural condition monitoring platforms, public weather
+meta_description: Tool Calling and Plugins for Crop Farming Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 处罚案例合规的工作流编排
-meta_description: 处罚案例数据主要来自内部合规审计记录、监管机构公开通报文件、分支机构提交的合规自查报告。更新节奏无固定周期，监管通报随执法进度更新，内部案例随审计完成或制度
+meta_description: 处罚案例合规的工作流编排：处罚案例合规的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 处罚案例、合规与内部制度问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

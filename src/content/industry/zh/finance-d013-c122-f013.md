@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 股份制银行融资日报的知识库检索与召回
-meta_description: 股份制银行融资日报的数据来源主要为行内信贷管理系统、全国银行间同业拆借中心公开数据、央行货币政策执行报告公开信息。更新节奏为每日更新，涵盖前一工作日的全量融
+meta_description: 股份制银行融资日报的知识库检索与召回：股份制银行融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 股份制银行、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Thermal Coal Investment
-meta_description: Data sources for thermal coal investment research include production ledgers from producing areas, weekly coastal port inventory reports, daily market
+meta_description: Document Parsing and Chunking for Thermal Coal Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

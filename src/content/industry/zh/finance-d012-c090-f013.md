@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 涂料油墨营销内容的知识库检索与召回
-meta_description: 涂料油墨相关的知识库数据主要来源于企业内部产品手册、合规检测报告、营销物料及行业标准文档。数据更新节奏随新品推出、合规标准修订或营销物料迭代触发，无固定周期
+meta_description: 涂料油墨营销内容的知识库检索与召回：涂料油墨营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 涂料油墨、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

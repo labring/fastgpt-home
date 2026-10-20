@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Conversation Logging and Auditing for Plastics and Rubber
-meta_description: Plastics and rubber investment research data comes from public market data of domestic futures exchanges, monthly supply and demand reports from
+meta_description: Conversation Logging and Auditing for Plastics and Rubber Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 白色家电研报检索的知识库检索与召回
-meta_description: 白色家电研报的数据来源包括中国家用电器协会发布的行业月度报告、券商家电行业专题研报、头部家电企业的投资者关系公开文档、第三方产业监测机构的零售端数据。更新节
+meta_description: 白色家电研报检索的知识库检索与召回：白色家电研报检索的知识库检索与召回，涵盖配置与验证建议
 keywords: 白色家电、研报检索与问答、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

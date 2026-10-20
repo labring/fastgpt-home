@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: In-App Natural Language Search
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexes for In-Terminal Natural Language
-meta_description: Data for in-terminal natural language search comes from single user search requests on financial terminals, insurance sales tools, wealth management
+meta_description: Vector Models and Indexes for In-Terminal Natural Language Search (Function Entry Point)
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

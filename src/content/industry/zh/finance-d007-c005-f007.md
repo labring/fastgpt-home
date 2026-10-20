@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 个护用品收益率的工作流编排
-meta_description: 个护用品的收益率相关数据多来源于品牌CRM系统、第三方电商平台API、供应链管理平台三类渠道。渠道售价数据每小时更新一次，拿货成本数据每季度更新，月度收益率
+meta_description: 个护用品收益率的工作流编排：个护用品收益率的工作流编排，涵盖配置与验证建议。。。
 keywords: 个护用品、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

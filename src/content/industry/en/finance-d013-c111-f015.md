@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade of Livestock and Poultry Farming
-meta_description: Data primarily comes from loan ledgers of agricultural financial institutions, filing records of breeding entities from livestock and poultry
+meta_description: Deployment and Upgrade of Livestock and Poultry Farming Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -34,7 +34,7 @@ The requirement for daily scheduled updates means fixed-cycle automatic synchron
 ## Three common errors
 - After upgrading Docker to version 4.8.20, knowledge base retrieval returns the `text index required for $text query` error. The cause is that the full-text index was not rebuilt during the upgrade, and existing index configurations are incompatible with the new version’s retrieval rules.
 - After migrating the knowledge base to a self-hosted deployment instance, all existing field mappings for breeding entities become invalid. The cause is that the original field mapping configuration was not exported and reused during migration, and field correspondences were not reconfigured after direct import into the new instance.
-- When running the upgrade script, a prompt indicates that environment variables are not configured. The cause is that the `{{rootkey}}` placeholder in the script was not replaced in advance, or the corresponding key was not configured in the deployment environment.
+- When running the upgrade script, a prompt indicates that environment variables are not configured. The cause is that the `example value` pending verification in the script was not replaced in advance, or the corresponding key was not configured in the deployment environment.
 
 ## How to confirm configuration is complete
 - Manually trigger a parsing task for a single livestock and poultry farming financing daily report, and check parsing logs for prompts of failed field identification. Confirm all preset fields are correctly extracted.

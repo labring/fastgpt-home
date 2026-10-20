@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 消费建材收益率的多轮对话与提示词
-meta_description: 消费建材的行情数据来源包括中国建筑材料联合会发布的公开统计数据、国内大宗商品现货交易平台的建材专区报价、建材生产企业的官方供货公示。更新节奏存在差异：核心品
+meta_description: 消费建材收益率的多轮对话与提示词：消费建材收益率的多轮对话与提示词，涵盖配置与验证建议
 keywords: 消费建材、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

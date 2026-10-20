@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 畜禽养殖营销内容的表单与交互
-meta_description: 在金融行业的畜禽养殖营销内容场景中，相关数据主要来自养殖现场台账、物联网采集设备、饲料采购单据、出栏检疫证明。数据更新节奏分两类：养殖日常记录按每日更新，物
+meta_description: 畜禽养殖营销内容的表单与交互：畜禽养殖营销内容的表单与交互，涵盖配置与验证建议。
 keywords: 畜禽养殖、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

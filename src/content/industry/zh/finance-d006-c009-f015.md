@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 产业园区投研知识库建设的部署与升级
-meta_description: 产业园区投研数据主要来源于园区运营台账、招商手册、入驻企业公开财报、属地产业政策文件、季度运营简报等。数据更新无固定周期，入驻企业变动、政策修订会触发即时更
+meta_description: 产业园区投研知识库建设的部署与升级：产业园区投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 产业园区、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

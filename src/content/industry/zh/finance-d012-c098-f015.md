@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 煤化工营销内容的部署与升级
-meta_description: 面向煤化工企业的金融营销内容数据，主要来自金融机构对接的煤化工企业内部煤质检测台账、销售对接记录、行业公开供需信息及自有推广素材。数据更新节奏随业务场景变化
+meta_description: 煤化工营销内容的部署与升级：煤化工营销内容的部署与升级，涵盖配置与验证建议。。。
 keywords: 煤化工、营销内容与获客、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

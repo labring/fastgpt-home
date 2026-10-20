@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电网设备财报分析的模型接入与配置
-meta_description: 电网设备品类的财报数据主要来自沪深交易所、港交所等公开披露平台的上市公司定期报告，以及企业官方发布的经营公告。更新节奏遵循监管要求：年度报告于次年4月底前披
+meta_description: 电网设备财报分析的模型接入与配置：电网设备财报分析的模型接入与配置，涵盖配置与验证建议
 keywords: 电网设备、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

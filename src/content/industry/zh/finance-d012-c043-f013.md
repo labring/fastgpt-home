@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商业地产营销内容的知识库检索与召回
-meta_description: 商业地产营销相关数据主要来源于项目内部招商文档、物业运维系统、线下活动物料、商圈运营报表。更新节奏不均，招商调整、新品牌入驻时实时更新，主题活动物料随档期更
+meta_description: 商业地产营销内容的知识库检索与召回：商业地产营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 商业地产、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

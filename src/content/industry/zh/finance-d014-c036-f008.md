@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 半导体财报分析的工具调用与插件
-meta_description: 半导体行业财报数据主要来自境内外证券交易所披露平台、上市公司投资者关系板块。更新节奏以季度报告、年度报告为核心周期，临时公告随重大经营节点发布。文档结构包含
+meta_description: 半导体财报分析的工具调用与插件：半导体财报分析的工具调用与插件，涵盖配置与验证建议
 keywords: 半导体、财报分析与报告生成、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

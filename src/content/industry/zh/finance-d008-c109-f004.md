@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电子元件智能尽调报告的向量模型与索引
-meta_description: 电子元件的数据源主要来自原厂规格书、物料清单（BOM）、供应链管理系统及第三方检测报告。数据更新节奏随产品迭代与项目调整波动，原厂规格书更新频率相对稳定，B
+meta_description: 电子元件智能尽调报告的向量模型与索引：电子元件智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 电子元件、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

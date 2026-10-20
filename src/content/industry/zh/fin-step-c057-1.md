@@ -4,7 +4,7 @@ slug: /zh/industry/fin-step-c057-1
 page_type: 行业作业环节页
 article_section: 信托
 is_part_of: FastGPT 技术中心
-meta_title: 非标债权、股权及项目投资类资产管理信托的穿透核查融资主体/项
+meta_title: 非标债权、股权及项目投资类资产管理信托的穿透核查融资主体/项目、资产权属：哪一部分能交给系统
 meta_description: 非标债权、股权及项目投资类资产管理信托的穿透核查融资主体/项目、资产权属：哪一部分能交给系统
 keywords: 非标债权、股权及项目投资类资产管理信托、信托、环节1
 source_type: 金融业务分类与作业事实取自行业研究报告（含监管文件来源编号）

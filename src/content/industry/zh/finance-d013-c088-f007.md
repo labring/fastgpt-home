@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油服工程融资日报的工作流编排
-meta_description: 油服工程融资日报的数据主要来自油服企业ERP资金模块、合作金融机构的推送接口，以及国内石油石化行业协会的公开融资公告。数据更新节奏为每日一次，归集前一自然日
+meta_description: 油服工程融资日报的工作流编排：油服工程融资日报的工作流编排，涵盖配置与验证建议。
 keywords: 油服工程、融资日报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

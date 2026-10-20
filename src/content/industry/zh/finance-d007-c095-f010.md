@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 热力收益率的数据库与运维
-meta_description: 热力品类的收益率与行情数据来源为热力企业生产运营系统、市政公用事业监管平台，更新节奏为每日固定时段生成前一自然日的全量数据集。单条数据对应单个热力项目的单日
+meta_description: 热力收益率的数据库与运维：热力收益率的数据库与运维，涵盖配置与验证建议。。。。。
 keywords: 热力、收益率与行情日报播报、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

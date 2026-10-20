@@ -4,7 +4,7 @@ slug: /zh/industry/fin-step-c056-3
 page_type: 行业作业环节页
 article_section: 银行运营与支付
 is_part_of: FastGPT 技术中心
-meta_title: 银行账户开户与客户尽职调查的结合账户交易持续更新风险判断和异
+meta_title: 银行账户开户与客户尽职调查的结合账户交易持续更新风险判断和异常信息：哪一部分能交给系统
 meta_description: 银行账户开户与客户尽职调查的结合账户交易持续更新风险判断和异常信息：哪一部分能交给系统
 keywords: 银行账户开户与客户尽职调查、银行运营与支付、环节3
 source_type: 金融业务分类与作业事实取自行业研究报告（含监管文件来源编号）

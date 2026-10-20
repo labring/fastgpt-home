@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 担保材料风控的工作流编排
-meta_description: 担保材料的数据来源包括线下纸质担保函、抵押物权证扫描件、线上提交的担保协议PDF、银行出具的担保资质证明文件。更新节奏为单次提交后无实时更新，仅在材料补充或
+meta_description: 担保材料风控的工作流编排：担保材料风控的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 担保材料、风控与授信材料审核、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

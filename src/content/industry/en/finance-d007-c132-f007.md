@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Computer Equipment Yield Rates
-meta_description: Computer equipment yield and market data for the financial industry comes from public IT equipment trading market APIs, internal enterprise asset
+meta_description: Workflow Orchestration for Computer Equipment Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -25,7 +25,7 @@ The need to access multiple data sources requires configuring separate authentic
 | `TRIGGER_CRON_EXPRESSION` | `0 2 * * *` | Triggers at 2 AM daily, avoids peak access periods for most market APIs, and ensures stable data pulling |
 | `DATA_SOURCE_AUTH_CONFIG` | Configure IT equipment market API keys and enterprise asset management system account passwords | Data sources include third-party market APIs and internal ledgers, so corresponding authentication information must be configured separately |
 | `DUPLICATE_REMOVAL_FIELD` | `device_unique_id` | Data includes the unique device identifier field. Using this as the deduplication basis avoids repeated yield calculations for single devices |
-| `AI_CHAT_PROMPT_TEMPLATE` | `Generate a standardized yield daily report based on the following device data: {{device_data}}` | Convert structured device data into natural language broadcast content, to meet the input requirements of the AI chat module |
+| `AI_CHAT_PROMPT_TEMPLATE` | `Generate a standardized yield daily report based on the following device data: example value` | Convert structured device data into natural language broadcast content, to meet the input requirements of the AI chat module |
 | `KNOWLEDGE_BASE_ID` | Assign dynamically via global variables | Switch to the corresponding industry knowledge base based on different business scenarios, to avoid increased maintenance costs caused by hardcoding |
 | `RECALL_TOP_K` | `Top 2 entries` | Core information for computer equipment market data is concentrated in the top 2 retrieval results. Excessive recall increases processing latency |
 

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 其他综合融资日报的知识库检索与召回
-meta_description: 其他综合融资日报的数据来源包含央行公开披露的每日融资统计、银行同业拆借市场报告、券商发布的细分行业融资研报，以及企业自主提交的融资备案公示信息。数据更新节奏
+meta_description: 其他综合融资日报的知识库检索与召回：其他综合融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 其他综合、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

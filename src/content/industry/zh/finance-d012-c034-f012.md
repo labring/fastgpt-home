@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医疗器械营销内容的模型接入与配置
-meta_description: 医疗器械营销内容的数据来源包括企业合规备案的产品注册档案、临床研究报告、官方宣传物料；更新节奏随产品迭代、合规政策调整不定期更新，无固定周期。文档结构多包含
+meta_description: 医疗器械营销内容的模型接入与配置：医疗器械营销内容的模型接入与配置，涵盖配置与验证建议
 keywords: 医疗器械、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

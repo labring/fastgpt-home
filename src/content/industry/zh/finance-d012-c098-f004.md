@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 煤化工营销内容的向量模型与索引
-meta_description: 金融机构针对煤化工企业的营销内容，来源包括自有产出的供应链金融产品手册、融资方案话术、行业适配的推广物料，以及公开渠道获取的煤化工企业产能信息、招投标项目需
+meta_description: 煤化工营销内容的向量模型与索引：煤化工营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 煤化工、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

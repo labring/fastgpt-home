@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Marketing Content Use Cases
-meta_description: Data related to marketing for this use case comes from internal core business systems, local agricultural service platforms, and an existing marketing
+meta_description: Workflow Orchestration for Marketing Content Use Cases
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

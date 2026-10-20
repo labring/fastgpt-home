@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 生物制品收益率的对话日志与审计
-meta_description: 生物制品收益率相关数据的来源为医药生物行业公开数据库、上市企业定期报告及第三方医药资讯平台的实时监测接口。更新节奏为每日盘后更新，部分小众品类数据存在1-2
+meta_description: 生物制品收益率的对话日志与审计：生物制品收益率的对话日志与审计，涵盖配置与验证建议
 keywords: 生物制品、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

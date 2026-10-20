@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁矿石财报分析的工具调用与插件
-meta_description: 铁矿石相关财报数据主要来源于上市矿山企业的公开定期报告、行业协会发布的公开统计资料。更新节奏遵循固定披露周期，企业财报按季度、年度发布，行业配套数据按月度更
+meta_description: 铁矿石财报分析的工具调用与插件：铁矿石财报分析的工具调用与插件，涵盖配置与验证建议
 keywords: 铁矿石、财报分析与报告生成、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

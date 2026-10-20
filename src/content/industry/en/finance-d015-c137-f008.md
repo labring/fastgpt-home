@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Risk Control and Credit Document Review
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Loan Backlog Risk Control
-meta_description: Data sources for loan backlog data include three categories: credit core systems, payment gateways, and collection management systems. Update cadence
+meta_description: Tool Calling and Plugins for Loan Backlog Risk Control
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

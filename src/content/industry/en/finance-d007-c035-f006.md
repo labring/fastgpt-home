@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Conversation Logs and Auditing for Aesthetic Medicine
-meta_description: Aesthetic medicine revenue and market trend data is primarily sourced from third-party aesthetic medicine industry monitoring databases and monthly
+meta_description: Conversation Logs and Auditing for Aesthetic Medicine Revenue Metrics
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油服工程收益率的工具调用与插件
-meta_description: 油服工程的收益率相关数据来源包括油服项目作业调度系统、成本核算ERP、油气产量计量终端及第三方行业数据接口。数据更新节奏为每日更新前一个完整工作日的核算结果
+meta_description: 油服工程收益率的工具调用与插件：油服工程收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 油服工程、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

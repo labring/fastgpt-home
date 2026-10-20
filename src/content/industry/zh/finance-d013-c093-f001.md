@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 游戏融资日报的HTTP 接口与外部系统
-meta_description: 游戏融资日报的数据来源主要包括游戏行业第三方投融资数据库、券商游戏赛道研报、国内/海外游戏厂商公开披露的融资公告、专业游戏产业服务平台的实时数据。更新节奏为
+meta_description: 游戏融资日报的HTTP 接口与外部系统：游戏融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 游戏、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

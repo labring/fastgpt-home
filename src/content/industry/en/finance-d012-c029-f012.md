@@ -4,8 +4,8 @@ slug: /en/industry/finance-d012-c029-f012
 page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
-meta_title: Model Integration and Configuration for Packaging and
-meta_description: Marketing content data for packaging and printing mainly comes from print order management systems, design draft shared libraries, customer
+meta_title: Model Integration and Configuration for Packaging
+meta_description: Model Integration and Configuration for Packaging and Printing Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

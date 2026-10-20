@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Securities
-meta_description: Securities yield data primarily comes from official market APIs of the Shanghai, Shenzhen, and Beijing Stock Exchanges, public benchmark yield
+meta_description: Multi-turn Dialogue and Prompt Engineering for Securities Yield Data
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

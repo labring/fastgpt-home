@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 教育服务营销内容的知识库检索与召回
-meta_description: 教育服务的营销内容数据主要来源于课程详情页文案、试听体验课脚本、招生沟通话术、线下宣讲稿、活动推广物料等。数据更新节奏随课程上新、活动调整、行业政策变化不定
+meta_description: 教育服务营销内容的知识库检索与召回：教育服务营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 教育服务、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

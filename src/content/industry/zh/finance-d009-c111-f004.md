@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 畜禽养殖研报检索的向量模型与索引
-meta_description: 畜禽养殖研报的数据来源包括公开行业监测文档、券商农林牧渔团队研报、养殖主体月度运营台账与农业农村部门政策公告。更新节奏分为常规月度更新、突发疫病或饲料价格变
+meta_description: 畜禽养殖研报检索的向量模型与索引：畜禽养殖研报检索的向量模型与索引，涵盖配置与验证建议
 keywords: 畜禽养殖、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 农化制品收益率的多轮对话与提示词
-meta_description: 农化制品的收益率与行情数据主要来自行业协会公开监测数据、国内现货批发市场报价系统、上游原材料供应商的出厂价台账。数据更新节奏分为日度、周度与月度：日度更新现
+meta_description: 农化制品收益率的多轮对话与提示词：农化制品收益率的多轮对话与提示词，涵盖配置与验证建议
 keywords: 农化制品、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 环境监测研报检索的工作流编排
-meta_description: 环境监测类研报是金融领域环保主题投资、环境风险评估的核心参考数据源。数据来源主要包括各级生态环境主管部门的公开监测站点数据、第三方环境监测机构的正式报送文档
+meta_description: 环境监测研报检索的工作流编排：环境监测研报检索的工作流编排，涵盖配置与验证建议。
 keywords: 环境监测、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

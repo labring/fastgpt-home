@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 文娱用品营销内容的工具调用与插件
-meta_description: 金融领域内的文娱用品营销相关数据主要来源于供应链SKU管理系统、电商平台商品库、品牌官方素材库，以及金融机构联名活动管理系统三类渠道。数据更新节奏随新品上线
+meta_description: 文娱用品营销内容的工具调用与插件：文娱用品营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 文娱用品、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

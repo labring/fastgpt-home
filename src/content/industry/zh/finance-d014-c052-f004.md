@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多元控股财报分析的向量模型与索引
-meta_description: 数据主要来自境内外监管机构披露的上市公司定期报告、合并财务报表附注、关联交易及股权架构披露文件。更新节奏遵循监管要求，年度报告每年披露一次，季度报告每季度披
+meta_description: 多元控股财报分析的向量模型与索引：多元控股财报分析的向量模型与索引，涵盖配置与验证建议
 keywords: 多元控股、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

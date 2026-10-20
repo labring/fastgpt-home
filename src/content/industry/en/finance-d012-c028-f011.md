@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Thermal Coal Marketing
-meta_description: Thermal coal marketing-related data comes primarily from quality inspection reports of domestic major coal-producing enterprises, spot transaction
+meta_description: Document Parsing and Chunking for Thermal Coal Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 大气治理融资日报的工作流编排
-meta_description: 大气治理融资日报的数据来源涵盖各地生态环境部门的大气污染防治项目备案库、地方金融机构的绿色信贷投放台账、全国排污权交易平台的项目融资记录。数据更新节奏为每日
+meta_description: 大气治理融资日报的工作流编排：大气治理融资日报的工作流编排，涵盖配置与验证建议。
 keywords: 大气治理、融资日报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 炼化研报检索的模型接入与配置
-meta_description: 炼化研报数据主要来自行业协会公开报告、炼化企业季度披露文件、第三方行业咨询机构的专项调研。更新节奏随项目节点与行业例会调整，重大装置投产或调价节点会临时追加
+meta_description: 炼化研报检索的模型接入与配置：炼化研报检索的模型接入与配置，涵盖配置与验证建议。
 keywords: 炼化、研报检索与问答、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

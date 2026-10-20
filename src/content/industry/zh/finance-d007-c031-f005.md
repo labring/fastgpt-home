@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学制药收益率的多轮对话与提示词
-meta_description: 化学制药品类的行情与收益率数据来源包括上市药企公开交易数据、行业协会发布的原料行情数据库、企业定期披露的经营公告。数据更新节奏存在差异：上市企业股价相关数据
+meta_description: 化学制药收益率的多轮对话与提示词：化学制药收益率的多轮对话与提示词，涵盖配置与验证建议
 keywords: 化学制药、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

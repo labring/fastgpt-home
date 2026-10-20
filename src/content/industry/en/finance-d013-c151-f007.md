@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Railway and Highway Financing
-meta_description: Data for railway and highway financing daily reports comes from three primary sources: the China State Railway Group Operation Statistics System
+meta_description: Workflow Orchestration for Railway and Highway Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

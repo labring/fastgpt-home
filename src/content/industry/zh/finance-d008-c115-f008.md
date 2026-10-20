@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 种植业智能尽调报告的工具调用与插件
-meta_description: 种植业智能尽调报告的数据来源包含农业农村部门公开监测数据集、种植基地内部台账、卫星遥感影像解析结果、气象站点实时观测数据等。数据更新节奏存在差异：基础种植台
+meta_description: 种植业智能尽调报告的工具调用与插件：种植业智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 种植业、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

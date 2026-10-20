@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 纺织制造融资日报的工具调用与插件
-meta_description: 纺织制造融资日报的数据来源为国内纺织制造企业公开披露的融资公告、地方产业监测平台的授信公示及银行间市场的融资备案信息。更新节奏为工作日每日更新，数据以当日公
+meta_description: 纺织制造融资日报的工具调用与插件：纺织制造融资日报的工具调用与插件，涵盖配置与验证建议
 keywords: 纺织制造、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

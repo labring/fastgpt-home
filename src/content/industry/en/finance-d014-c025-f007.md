@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Rural Commercial Bank Financial
-meta_description: Rural commercial bank financial report data mainly comes from the bank’s core accounting system, regulatory reporting platform, and designated
+meta_description: Workflow Orchestration for Rural Commercial Bank Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -33,7 +33,7 @@ The multi-cycle updates, fixed document structure, and dedicated field features 
 ## Three Common Mistakes
 - Symptom: No code running step display in the workflow debug panel. Cause: The `DEBUG_SHOW_STEP` configuration item was not manually enabled. New versions disable this debug display feature by default.
 - Symptom: The model selection dropdown menu for the text content extraction node is empty or cannot select the target model. Cause: The call permission for the corresponding model was not enabled in the workflow global configuration, or the model usage scope was not assigned to the current node.
-- Symptom: After the Number-type global counter performs an increment operation, the returned result does not synchronize the updated variable value. Cause: The variable update node did not correctly reference the global variable, used a fixed value instead of the `{{$global.counter}}` format variable placeholder.
+- Symptom: After the Number-type global counter performs an increment operation, the returned result does not synchronize the updated variable value. Cause: The variable update node did not correctly reference the global variable, used a fixed value instead of the `example value` format variable pending verification.
 
 ## How to Confirm the Configuration Is Complete
 - Manually upload a rural commercial bank monthly financial report document, run the workflow, and check whether the field extraction results include the preset special loan and non-performing asset classification fields.

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Vehicle
-meta_description: Data for vehicle financing daily reports is sourced from automaker supply chain finance systems, partner bank credit ledgers, and dealer financing
+meta_description: Multi-turn Dialogue and Prompt Engineering for Vehicle Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

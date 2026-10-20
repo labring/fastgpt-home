@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 动力煤融资日报的引用来源与溯源
-meta_description: 动力煤融资日报的数据主要来自国内煤炭行业协会、沿海港口交易台账、郑州商品交易所动力煤期货配套融资公告，每日更新1次。单份日报文档结构固定，包含发布日期、产地
+meta_description: 动力煤融资日报的引用来源与溯源：动力煤融资日报的引用来源与溯源，涵盖配置与验证建议
 keywords: 动力煤、融资日报、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

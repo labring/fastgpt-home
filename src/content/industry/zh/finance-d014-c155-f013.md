@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饲料财报分析的知识库检索与召回
-meta_description: 饲料行业财报相关数据主要来自农业农村部公开监测信息、饲料生产企业年度及季度公告、全国饲料工业协会月度行业报告。数据更新节奏分为月度行业供需监测、季度企业经营
+meta_description: 饲料财报分析的知识库检索与召回：饲料财报分析的知识库检索与召回，涵盖配置与验证建议
 keywords: 饲料、财报分析与报告生成、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

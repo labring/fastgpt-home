@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 军工电子营销内容的模型接入与配置
-meta_description: 军工电子的营销内容数据主要来源于企业内部的型号技术文档、国军标认证文件、配套装备试验报告、行业展会宣传物料及客户合作案例。数据更新节奏随新定型装备、技术迭代
+meta_description: 军工电子营销内容的模型接入与配置：军工电子营销内容的模型接入与配置，涵盖配置与验证建议
 keywords: 军工电子、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

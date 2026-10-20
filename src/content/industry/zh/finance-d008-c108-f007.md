@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电商服务智能尽调报告的工作流编排
-meta_description: 电商服务的数据主要来自电商平台开放API、商家后台导出文件与第三方履约接口。更新节奏分为三类：交易流水、物流履约数据每小时同步，用户评价数据每日汇总，商家资
+meta_description: 电商服务智能尽调报告的工作流编排：电商服务智能尽调报告的工作流编排，涵盖配置与验证建议
 keywords: 电商服务、智能尽调报告、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

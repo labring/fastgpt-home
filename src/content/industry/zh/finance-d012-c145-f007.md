@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通信设备营销内容的工作流编排
-meta_description: 通信设备营销内容相关的数据主要来自金融机构的设备管理系统、运维日志库与营销投放平台。数据分为三类：结构化设备台账、半结构化运维日志、非结构化营销素材与触达记
+meta_description: 通信设备营销内容的工作流编排：通信设备营销内容的工作流编排，涵盖配置与验证建议。
 keywords: 通信设备、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

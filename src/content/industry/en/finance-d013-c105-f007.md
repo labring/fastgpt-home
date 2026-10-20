@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Biologics Financing Daily Reports
-meta_description: Domestic medical investment and financing databases, corporate IPO announcements, and biologic product filing public information from drug regulatory
+meta_description: Workflow Orchestration for Biologics Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

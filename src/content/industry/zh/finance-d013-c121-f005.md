@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 耐火材料融资日报的多轮对话与提示词
-meta_description: 数据来源为公开工商登记系统、行业资讯平台的融资披露公告；更新节奏为每日更新；文档为结构化单条条目，包含融资主体名称、融资轮次、融资金额、投资方、融资完成日期
+meta_description: 耐火材料融资日报的多轮对话与提示词：耐火材料融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 耐火材料、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

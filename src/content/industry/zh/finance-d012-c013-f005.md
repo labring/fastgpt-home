@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 保险营销内容的多轮对话与提示词
-meta_description: 保险营销相关的数据主要来自内部产品条款库、合规监管文档、历史营销话术库与客户投保记录。产品条款文档包含险种类型、保额、保费、投保年龄、免责条款等固定字段，单
+meta_description: 保险营销内容的多轮对话与提示词：保险营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 保险、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 耐火材料营销内容的部署与升级
-meta_description: 这个品类的数据主要来自生产企业的质检报告、窑炉运行日志、客户使用反馈文档及行业技术规范。更新节奏随数据类型不同：质检报告随生产批次更新，窑炉运行日志按日更新
+meta_description: 耐火材料营销内容的部署与升级：耐火材料营销内容的部署与升级，涵盖配置与验证建议。
 keywords: 耐火材料、营销内容与获客、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

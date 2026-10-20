@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 卫星通信收益率的多轮对话与提示词
-meta_description: 卫星通信收益率与行情日报的数据来源包括公开行业监测数据库、卫星运营商披露的业务计费数据、地面站采集的链路使用日志。更新节奏分为两类：当日汇总的日报数据在每日
+meta_description: 卫星通信收益率的多轮对话与提示词：卫星通信收益率的多轮对话与提示词，涵盖配置与验证建议
 keywords: 卫星通信、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

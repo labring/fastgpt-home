@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 造纸财报分析的引用来源与溯源
-meta_description: 造纸行业财报数据主要来源于境内外证券交易所披露的定期报告、行业协会发布的产销监测数据及上市公司专项公告。数据更新节奏固定，年度报告需在次年4月30日前披露，
+meta_description: 造纸财报分析的引用来源与溯源：造纸财报分析的引用来源与溯源，涵盖配置与验证建议。
 keywords: 造纸、财报分析与报告生成、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

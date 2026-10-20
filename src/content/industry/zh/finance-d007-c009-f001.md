@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 产业园区收益率的HTTP 接口与外部系统
-meta_description: 产业园区收益率相关数据来源于园区内部物业收费系统、入驻企业月度营收报送，以及属地产业园区管理部门的公开数据接口。数据更新节奏为每月更新上月全量数据集。数据以
+meta_description: 产业园区收益率的HTTP 接口与外部系统：产业园区收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 产业园区、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

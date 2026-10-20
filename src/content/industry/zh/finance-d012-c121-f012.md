@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 耐火材料营销内容的模型接入与配置
-meta_description: 耐火材料相关营销内容的数据主要来源于企业生产管理系统、质检存档文件、客户需求沟通文档。数据更新节奏随业务场景变化：生产台账随产品批次产出更新，质检报告随每炉
+meta_description: 耐火材料营销内容的模型接入与配置：耐火材料营销内容的模型接入与配置，涵盖配置与验证建议
 keywords: 耐火材料、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

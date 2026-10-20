@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 军工电子收益率的表单与交互
-meta_description: 军工电子的收益率相关数据主要来自沪深交易所军工电子板块的公开交易数据、国防科技工业主管部门发布的行业监测数据、军工电子元器件厂商的公开报价信息。数据更新节奏
+meta_description: 军工电子收益率的表单与交互：军工电子收益率的表单与交互，涵盖配置与验证建议。。。
 keywords: 军工电子、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

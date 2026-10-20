@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 受益所有人KYC 的工作流编排
-meta_description: 受益所有人的数据来源包含工商公示系统、企业年报、专项股权核查报告三类，更新节奏随企业股权变动实时触发，无固定周期。文档多为结构化表格或PDF扫描件，字段包含
+meta_description: 受益所有人KYC 的工作流编排：受益所有人KYC 的工作流编排，涵盖配置与验证建议
 keywords: 受益所有人、KYC 与反洗钱资料核验、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

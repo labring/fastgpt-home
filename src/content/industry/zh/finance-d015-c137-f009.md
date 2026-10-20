@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 贷后台账风控的引用来源与溯源
-meta_description: 贷后台账数据来自核心信贷系统的还款流水、逾期催收记录、贷后巡检台账三类数据源。更新节奏为每日批量同步，单笔记录更新触发于还款完成、逾期状态变更或贷后操作完成
+meta_description: 贷后台账风控的引用来源与溯源：贷后台账风控的引用来源与溯源，涵盖配置与验证建议。
 keywords: 贷后台账、风控与授信材料审核、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 热力智能尽调报告的HTTP 接口与外部系统
-meta_description: 热力智能尽调报告的数据主要来自公用热力管网的实时监控系统、换热站采集终端及热力计费系统。数据更新节奏为每15分钟至每小时一次，部分历史归档数据按日更新。单份
+meta_description: 热力智能尽调报告的HTTP 接口与外部系统：热力智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 热力、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

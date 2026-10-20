@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电商服务融资日报的文档解析与分块
-meta_description: 电商服务融资日报的数据主要来自电商平台商家经营接口、合作金融机构的融资业务明细文件，以及商家上传的对账单据。更新节奏为每日更新，单份文件体量较小但字段维度丰
+meta_description: 电商服务融资日报的文档解析与分块：电商服务融资日报的文档解析与分块，涵盖配置与验证建议
 keywords: 电商服务、融资日报、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

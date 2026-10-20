@@ -4,8 +4,8 @@ slug: /en/industry/finance-d009-c155-f012
 page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
-meta_title: Model Integration and Configuration for Feed Research Report
-meta_description: Feed research reports primarily come from monitoring data from the Animal Husbandry and Veterinary Bureau of the Ministry of Agriculture and Rural
+meta_title: Model Integration and Configuration for Feed Research
+meta_description: Model Integration and Configuration for Feed Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

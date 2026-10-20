@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 煤化工收益率的多轮对话与提示词
-meta_description: 煤化工行情与收益率数据主要来自国内煤炭期货交易所、行业专业监测机构及港口物流数据平台。现货价格每日更新，期货结算价随交易日更新，行业供需与产能运行数据每周更
+meta_description: 煤化工收益率的多轮对话与提示词：煤化工收益率的多轮对话与提示词，涵盖配置与验证建议
 keywords: 煤化工、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

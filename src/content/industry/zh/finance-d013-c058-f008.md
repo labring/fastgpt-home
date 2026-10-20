@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小金属融资日报的工具调用与插件
-meta_description: 小金属融资日报的数据来源涵盖国内有色金属现货交易市场每日成交融资记录、期货交割仓库仓单日报、商业银行针对小金属产业链的授信台账。更新节奏为每日固定时段更新，
+meta_description: 小金属融资日报的工具调用与插件：小金属融资日报的工具调用与插件，涵盖配置与验证建议
 keywords: 小金属、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

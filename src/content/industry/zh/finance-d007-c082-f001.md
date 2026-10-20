@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水产养殖收益率的HTTP 接口与外部系统
-meta_description: 水产养殖的行情与收益率数据来源包括区域水产批发市场每日成交记录、养殖塘口的物联网监测终端、农业农村部门公开的养殖成本指导价。数据更新节奏为每日凌晨完成前一日
+meta_description: 水产养殖收益率的HTTP 接口与外部系统：水产养殖收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 水产养殖、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

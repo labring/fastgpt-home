@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 兵器装备财报分析的工具调用与插件
-meta_description: 兵器装备财报数据主要来源于下属上市公司定期报告、国防科工局公开行业数据及行业协会披露信息。更新以年度、半年度固定报告为核心周期，临时公告随项目进展不定期发布
+meta_description: 兵器装备财报分析的工具调用与插件：兵器装备财报分析的工具调用与插件，涵盖配置与验证建议
 keywords: 兵器装备、财报分析与报告生成、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

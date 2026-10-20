@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航运港口营销内容的文档解析与分块
-meta_description: 金融机构面向航运港口客户的营销文档主要来源于内部运营报表、航线推介手册、泊位调度日志、与合作方的往来函件及年度运营报告。数据更新节奏依文档类型不同，航线报价
+meta_description: 航运港口营销内容的文档解析与分块：航运港口营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 航运港口、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

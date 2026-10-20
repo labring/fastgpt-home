@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 塑料橡胶收益率的HTTP 接口与外部系统
-meta_description: 塑料橡胶收益率与行情数据主要来自大宗商品现货交易平台、期货交易所官方接口及行业资讯服务商。数据更新节奏分两类：期货品种随交易日实时推送行情快照，现货品种每日
+meta_description: 塑料橡胶收益率的HTTP 接口与外部系统：塑料橡胶收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 塑料橡胶、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

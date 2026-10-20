@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 统一入口一体化 AI 平台的对话日志与审计
-meta_description: 统一入口一体化AI平台的对话日志数据，来源于平台内所有接入的AI应用的用户交互全链路，涵盖用户输入内容、应用返回结果、调用参数、会话标识等核心信息。数据更新
+meta_description: 统一入口一体化 AI 平台的对话日志与审计：统一入口一体化 AI 平台的对话日志与审计，涵盖配置与验证建议
 keywords: 统一入口、一体化 AI 平台与多应用编排、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

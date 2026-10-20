@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专业连锁研报检索的工具调用与插件
-meta_description: 专业连锁研报的数据主要来自连锁品牌内部运营系统、行业调研数据库及公开财报片段。数据更新节奏分为月度、季度与年度：月度更新单店客流、坪效等实时运营指标，季度更
+meta_description: 专业连锁研报检索的工具调用与插件：专业连锁研报检索的工具调用与插件，涵盖配置与验证建议
 keywords: 专业连锁、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

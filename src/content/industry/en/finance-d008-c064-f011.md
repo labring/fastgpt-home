@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Film and Theater Industry
-meta_description: Data sources for film and theater industry intelligent due diligence reports include annual theater operation reports, copyright license contracts
+meta_description: Document Parsing and Chunking for Film and Theater Industry Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -37,7 +37,7 @@ Frequently updated scheduling plan documents require fast parsing. This avoids d
 ## Three Common Misconfigurations
 - Integrating pdf-marker leads to persistent waiting for large file parsing results. Parsing eventually triggers a timeout. Phenomenon: The task status remains "parsing" until timeout failure. Cause: No queued parsing mechanism is configured. Large file parsing occupies system resources, blocking subsequent tasks. The `PARSE_FILE_TIMEOUT_SECONDS` parameter is not adjusted to adapt to long-duration scenarios.
 - Calling doc2x to parse hundreds of pages of PDFs results in errors. Only dozens of pages complete successfully. Phenomenon: The interface returns a 504 status code or a parsing failure prompt. Cause: The `PARSE_FILE_TIMEOUT_SECONDS` parameter is not adjusted. Large file parsing time exceeds the default threshold, triggering a timeout.
-- After locally deploying pdf-marker, the calling page reports an error: Cannot read properties of undefined (reading 'xxx'). Phenomenon: This error appears in the front-end console, and parsing tasks are unresponsive. Cause: The locally deployed pdf-marker version is incompatible with FastGPT 4.9.0, with missing dependency packages or incorrect interface path configuration.
+Reference only; verify against the target FastGPT release and deployment documentation.
 
 ## How to Confirm the Configuration Is Correctly Set
 - Upload a typical film and theater due diligence PDF file. Check the parsing task's duration log. Confirm that the `PARSE_FILE_TIMEOUT_SECONDS` setting covers the file's actual parsing duration.

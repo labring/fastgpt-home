@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade of Power Grid Equipment Financing
-meta_description: Data for power grid equipment financing daily reports comes from public bidding systems of power grid enterprises, internal financing approval
+meta_description: Deployment and Upgrade of Power Grid Equipment Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

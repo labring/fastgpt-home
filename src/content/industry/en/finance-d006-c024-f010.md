@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Database and Operations for Agrochemical Product Investment
-meta_description: Agrochemical product investment research data mainly comes from public industry association reports, public information published on pesticide
+meta_description: Database and Operations for Agrochemical Product Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

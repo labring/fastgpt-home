@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 影视院线投研知识库建设的数据库与运维
-meta_description: 影视院线投研的数据主要来自院线票务系统API、国家电影专资办公开数据、行业资讯平台及影视制作方公开公告。数据更新节奏存在差异：实时票房数据每小时更新，每日排
+meta_description: 影视院线投研知识库建设的数据库与运维：影视院线投研知识库建设的数据库与运维，涵盖配置与验证建议
 keywords: 影视院线、投研知识库建设与治理、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

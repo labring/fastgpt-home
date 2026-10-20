@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Medical Device Research
-meta_description: Medical device research reports primarily originate from pharmaceutical industry research teams at securities firms, medical device industry
+meta_description: Document Parsing and Chunking for Medical Device Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

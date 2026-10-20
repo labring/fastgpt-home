@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 住宅开发收益率的模型接入与配置
-meta_description: 住宅开发收益率相关数据来源包括项目土地出让协议、工程进度台账、预售备案公示、区域住建部门发布的区域住宅销售均价数据、项目融资协议、月度销售回款台账。更新节奏
+meta_description: 住宅开发收益率的模型接入与配置：住宅开发收益率的模型接入与配置，涵盖配置与验证建议
 keywords: 住宅开发、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

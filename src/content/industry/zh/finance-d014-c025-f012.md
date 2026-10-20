@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 农商行财报分析的模型接入与配置
-meta_description: 农商行财报数据来源为监管报送要求的官方报表与内部经营台账，更新节奏分为年度完整财报与季度快报两类，年度财报于每财年结束后4个月内发布，季度快报于每季度结束后
+meta_description: 农商行财报分析的模型接入与配置：农商行财报分析的模型接入与配置，涵盖配置与验证建议
 keywords: 农商行、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

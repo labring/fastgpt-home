@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for Infrastructure
-meta_description: The data for infrastructure construction project financing daily reports primarily comes from local public resource trading platforms, housing and
+meta_description: Model Access and Configuration for Infrastructure Construction Project Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for Feed Profitability
-meta_description: Feed profitability and market daily report data mainly comes from domestic livestock industry public monitoring platforms and daily sampling data from
+meta_description: Model Access and Configuration for Feed Profitability
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

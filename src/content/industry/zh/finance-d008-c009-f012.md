@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 产业园区智能尽调报告的模型接入与配置
-meta_description: 产业园区的数据源来自园区管委会招商备案系统、不动产登记中心权属档案、入驻企业年度报送数据、园区物业运维台账。数据格式包含结构化的企业入驻清单、非结构化的规划
+meta_description: 产业园区智能尽调报告的模型接入与配置：产业园区智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 产业园区、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

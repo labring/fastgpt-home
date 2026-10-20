@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医疗器械收益率的对话日志与审计
-meta_description: 医疗器械收益率相关数据来源于医院设备管理系统、HIS诊疗系统、医保结算平台及供应商供货台账。诊疗收费与耗材消耗数据每日更新，设备折旧数据按月更新，医保结算数
+meta_description: 医疗器械收益率的对话日志与审计：医疗器械收益率的对话日志与审计，涵盖配置与验证建议
 keywords: 医疗器械、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

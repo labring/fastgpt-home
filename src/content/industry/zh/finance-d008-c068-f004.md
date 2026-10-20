@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 投资平台智能尽调报告的向量模型与索引
-meta_description: 投资平台的智能尽调报告数据来源包括公开行业研报、上市企业财报、监管合规公告、线下尽调底稿等。数据更新节奏不均，财报按季度、年度更新，研报随市场动态不定期发布
+meta_description: 投资平台智能尽调报告的向量模型与索引：投资平台智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 投资平台、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

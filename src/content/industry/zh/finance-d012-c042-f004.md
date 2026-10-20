@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 品牌代运营营销内容的向量模型与索引
-meta_description: 品牌代运营的营销内容数据主要来自品牌方提供的官方宣传物料、代运营团队产出的各渠道营销文案、活动策划文档及用户互动反馈素材。更新节奏随营销节点波动，大促或新品
+meta_description: 品牌代运营营销内容的向量模型与索引：品牌代运营营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 品牌代运营、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

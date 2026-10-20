@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for White Goods Intelligent Due
-meta_description: White goods intelligent due diligence report data is primarily sourced from official brand public product parameter pages, compliance certification
+meta_description: Deployment and Upgrade for White Goods Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

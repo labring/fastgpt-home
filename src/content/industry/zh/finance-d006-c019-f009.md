@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 免税投研知识库建设的引用来源与溯源
-meta_description: 这个品类的数据主要来自海关总署免税监管备案文件、离岛免税店经营台账、品牌方免税供货价目表及官方政策解读文档。政策类文档更新节奏随政策调整不定期发布，经营类数
+meta_description: 免税投研知识库建设的引用来源与溯源：免税投研知识库建设的引用来源与溯源，涵盖配置与验证建议
 keywords: 免税、投研知识库建设与治理、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

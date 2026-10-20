@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for Kitchen and Bathroom
-meta_description: Data for kitchen and bathroom appliance financing daily reports comes primarily from brand supply chain finance systems, dealer payment ledgers, and
+meta_description: Model Access and Configuration for Kitchen and Bathroom Appliance Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

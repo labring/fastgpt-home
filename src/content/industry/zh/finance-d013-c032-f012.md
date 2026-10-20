@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学原料融资日报的模型接入与配置
-meta_description: 化学原料融资日报的数据来源包括国内基础化工行业监测机构的公开融资台账、商业银行对公业务系统导出的授信放款记录、地方市场监管部门的企业融资公示信息。数据更新频
+meta_description: 化学原料融资日报的模型接入与配置：化学原料融资日报的模型接入与配置，涵盖配置与验证建议
 keywords: 化学原料、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

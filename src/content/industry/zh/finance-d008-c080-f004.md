@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 服装家纺智能尽调报告的向量模型与索引
-meta_description: 服装家纺品类的尽调数据主要来自品牌方SKU管理系统、面料供应商质检台账、海关报关单据及品牌年度经营报告。数据更新节奏随品牌上新周期调整，季度核心款型数据每1
+meta_description: 服装家纺智能尽调报告的向量模型与索引：服装家纺智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 服装家纺、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

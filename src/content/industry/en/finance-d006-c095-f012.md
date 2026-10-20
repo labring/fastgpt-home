@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Model Integration and Configuration for Thermal Industry
-meta_description: Thermal industry investment research data originates from four main sources: thermal production scheduling systems, pipe network monitoring platforms
+meta_description: Model Integration and Configuration for Thermal Industry Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

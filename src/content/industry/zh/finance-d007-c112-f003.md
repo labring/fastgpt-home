@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 白色家电收益率的分享与嵌入
-meta_description: 白色家电收益率相关数据来源于国内家电行业监测机构、主流电商平台公开销售数据、品牌方公开的渠道供货价。线上渠道销售数据每日更新，线下零售渠道数据每周更新，行业
+meta_description: 白色家电收益率的分享与嵌入：白色家电收益率的分享与嵌入，涵盖配置与验证建议。。。
 keywords: 白色家电、收益率与行情日报播报、分享与嵌入
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多元控股智能尽调报告的HTTP 接口与外部系统
-meta_description: 多元控股的智能尽调数据来自公开工商信息、股权穿透数据库、企业年报及关联交易公告。更新节奏为每日全量更新与每小时增量同步，适配尽调报告的实时性与完整性需求。文
+meta_description: 多元控股智能尽调报告的HTTP 接口与外部系统：多元控股智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 多元控股、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

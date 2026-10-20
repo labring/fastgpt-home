@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Footwear Yield Rates
-meta_description: Footwear yield rate-related data primarily comes from domestic professional textile and apparel B2B wholesale platforms and cross-border e-commerce
+meta_description: Tool Calling and Plugins for Footwear Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

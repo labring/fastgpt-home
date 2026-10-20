@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 服装家纺营销内容的表单与交互
-meta_description: 服装家纺的营销相关数据主要来自品牌内部商品管理系统、面料检测档案、线上店铺SKU库与营销素材库。数据更新节奏随新品上架、换季促销、库存调整波动，常规更新周期
+meta_description: 服装家纺营销内容的表单与交互：服装家纺营销内容的表单与交互，涵盖配置与验证建议。
 keywords: 服装家纺、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

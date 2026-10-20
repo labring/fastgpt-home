@@ -4,8 +4,8 @@ slug: /en/industry/finance-d008-c046-f007
 page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
-meta_title: Workflow Orchestration for Solid Waste Treatment Intelligent
-meta_description: Solid waste treatment intelligent due diligence data is sourced from three main places: ecological environment department supervision and public
+meta_title: Workflow Orchestration for Solid Waste Treatment
+meta_description: Workflow Orchestration for Solid Waste Treatment Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

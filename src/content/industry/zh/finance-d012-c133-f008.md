@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 证券营销内容的工具调用与插件
-meta_description: 证券营销内容的数据主要来源于券商自营投研报告、合规审核通过的客户沟通话术模板、实时行情异动素材、客户分层标签库。数据更新节奏分三类：实时行情素材随交易日交易
+meta_description: 证券营销内容的工具调用与插件：证券营销内容的工具调用与插件，涵盖配置与验证建议。
 keywords: 证券、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

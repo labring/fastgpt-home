@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光学光电子营销内容的表单与交互
-meta_description: 光学光电子品类的数据主要来自生产MES系统、供应链ERP、产品检测台账与经销商库存系统。生产过程中的光学参数检测数据随生产批次实时更新，库存与销售台账数据每
+meta_description: 光学光电子营销内容的表单与交互：光学光电子营销内容的表单与交互，涵盖配置与验证建议
 keywords: 光学光电子、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

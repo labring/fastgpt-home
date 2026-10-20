@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通信设备智能尽调报告的部署与升级
-meta_description: 通信设备的智能尽调数据来源包括基站、核心网、传输设备的运行日志、配置台账、年度维保报告、第三方检测证书，主要服务于金融机构的供应商尽调场景。更新节奏分为实时
+meta_description: 通信设备智能尽调报告的部署与升级：通信设备智能尽调报告的部署与升级，涵盖配置与验证建议
 keywords: 通信设备、智能尽调报告、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

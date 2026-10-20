@@ -4,8 +4,8 @@ slug: /en/industry/finance-d008-c005-f008
 page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
-meta_title: Tool Calling and Plugins for Personal Care Product Smart Due
-meta_description: Personal care product due diligence data sources include regular cosmetic filing information from the National Medical Products Administration
+meta_title: Tool Calling and Plugins for Personal Care Product Smart
+meta_description: Tool Calling and Plugins for Personal Care Product Smart Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

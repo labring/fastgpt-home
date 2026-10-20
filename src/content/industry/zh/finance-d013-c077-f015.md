@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 旅游景区融资日报的部署与升级
-meta_description: 旅游景区融资日报的数据主要来自景区自有票务系统、营收管理后台、合作文旅服务商的结算接口，以及属地文旅部门的备案报送数据。更新节奏为每日一次，于当日24点后生
+meta_description: 旅游景区融资日报的部署与升级：旅游景区融资日报的部署与升级，涵盖配置与验证建议。
 keywords: 旅游景区、融资日报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

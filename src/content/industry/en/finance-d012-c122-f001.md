@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interfaces and External Systems for Joint-Stock Bank
-meta_description: Joint-stock bank marketing content data is primarily sourced from in-bank marketing management systems, activity materials submitted by branches
+meta_description: HTTP Interfaces and External Systems for Joint-Stock Bank Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

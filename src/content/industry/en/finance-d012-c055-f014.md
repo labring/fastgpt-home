@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Forms and Interactions for Air Pollution Control Marketing
-meta_description: Data related to air pollution control mainly comes from regional air quality monitoring stations, on-line monitoring equipment at enterprises' own
+meta_description: Forms and Interactions for Air Pollution Control Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

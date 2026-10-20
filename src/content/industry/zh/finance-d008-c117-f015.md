@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 纺织制造智能尽调报告的部署与升级
-meta_description: 纺织制造智能尽调报告的数据主要来自上游原材料现货期货平台、下游品牌方订单系统、海关进出口数据库、行业协会月度统计报告。更新节奏因数据类型存在差异，原材料价格
+meta_description: 纺织制造智能尽调报告的部署与升级：纺织制造智能尽调报告的部署与升级，涵盖配置与验证建议
 keywords: 纺织制造、智能尽调报告、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

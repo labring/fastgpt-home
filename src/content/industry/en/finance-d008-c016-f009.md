@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for Photovoltaic
-meta_description: The data for photovoltaic intelligent due diligence reports primarily comes from power station operation and maintenance logs, component factory
+meta_description: Citation Sources and Traceability for Photovoltaic Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -34,7 +34,7 @@ Photovoltaic category data is multi-source, heterogeneous, and fields have clear
 ## Three Common Configuration Mistakes
 - Phenomenon: After 100 photovoltaic-related files are uploaded to the same knowledge base, about half show training exceptions. Re-uploading still results in duplicate traceability during citation. Cause: Some files have incorrect metadata formats (such as the Power Station ID field), leading to failure to correctly associate traceability information during parsing, and citation deduplication is not enabled, so duplicate data is not filtered out.
 - Phenomenon: After setting the citation upper limit for semantic retrieval, the returned cited content contains a large amount of irrelevant data from non-photovoltaic power stations. Cause: The similarity threshold is not adjusted based on the semantic characteristics of photovoltaic data, and the recall count is set too high, introducing a large number of low-relevance contents.
-- Phenomenon: When using `{{id}}` in the cited content template, the displayed value is the ID of the knowledge base collection, not the ID of a single cited data entry. Cause: The traceability information retention fields are not correctly configured, and the unique identifier of a single data entry is not extracted, causing the template to fail to correctly obtain the ID of the cited data.
+- Phenomenon: When using `example value` in the cited content template, the displayed value is the ID of the knowledge base collection, not the ID of a single cited data entry. Cause: The traceability information retention fields are not correctly configured, and the unique identifier of a single data entry is not extracted, causing the template to fail to correctly obtain the ID of the cited data.
 
 ## How to Confirm Proper Configuration
 - Upload a single photovoltaic inspection report, trigger knowledge base parsing, and check if the parsed metadata contains the preset traceability retention fields to confirm that the fields are complete.

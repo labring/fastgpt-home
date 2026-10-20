@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade of Film Theater Marketing Content
-meta_description: Film theater marketing content data comes primarily from theater scheduling systems, film promotion platforms, theater terminal operation systems, and
+meta_description: Deployment and Upgrade of Film Theater Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

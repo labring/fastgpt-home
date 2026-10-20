@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 储能投研知识库建设的文档解析与分块
-meta_description: 储能投研的数据来源涵盖电力设备厂商技术白皮书、电网调度运行日志、储能电站可研报告、行业政策文件及第三方专业研报。更新节奏随数据源类型差异较大：政策文件按季度
+meta_description: 储能投研知识库建设的文档解析与分块：储能投研知识库建设的文档解析与分块，涵盖配置与验证建议
 keywords: 储能、投研知识库建设与治理、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

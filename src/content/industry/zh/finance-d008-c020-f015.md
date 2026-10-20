@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 兵器装备智能尽调报告的部署与升级
-meta_description: 兵器装备智能尽调报告的数据主要来源于军工承制单位的定型归档文件、试验检测台账、服役维护记录及公开的军工标准文档。数据更新节奏以年度定型批次更新为主，日常维护
+meta_description: 兵器装备智能尽调报告的部署与升级：兵器装备智能尽调报告的部署与升级，涵盖配置与验证建议
 keywords: 兵器装备、智能尽调报告、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

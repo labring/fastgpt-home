@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小家电投研知识库建设的上下文与 token
-meta_description: 小家电投研数据的来源包括品牌公开的产品参数文档、行业协会发布的品类监测数据、主流电商平台的销售数据、第三方检测机构的合规认证报告、券商发布的赛道投研报告。更
+meta_description: 小家电投研知识库建设的上下文与 token：小家电投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 小家电、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

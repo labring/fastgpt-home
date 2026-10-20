@@ -4,8 +4,8 @@ slug: /en/industry/finance-d013-c053-f004
 page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
-meta_title: Vector Models and Indexing for Multi-Finance Financing Daily
-meta_description: Data for multi-finance financing daily reports is sourced from institutional core business systems and business ledger interfaces of partners. The
+meta_title: Vector Models and Indexing for Multi-Finance Financing
+meta_description: Vector Models and Indexing for Multi-Finance Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

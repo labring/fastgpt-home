@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Education Service Marketing
-meta_description: Education service marketing content data under the finance, insurance, or wealth management industry mainly comes from course detail page copy
+meta_description: Deployment and Upgrade for Education Service Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

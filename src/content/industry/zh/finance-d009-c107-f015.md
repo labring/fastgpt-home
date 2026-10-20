@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电力研报检索的部署与升级
-meta_description: 电力行业研报的来源主要包括券商电力行业研究团队、电力行业协会公开报告、上市电力企业定期财报、电网公司运行数据公告等。更新节奏差异较大，券商常规研报按季度、月
+meta_description: 电力研报检索的部署与升级：电力研报检索的部署与升级，涵盖配置与验证建议。。。。。
 keywords: 电力、研报检索与问答、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

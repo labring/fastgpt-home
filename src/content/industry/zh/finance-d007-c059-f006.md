@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工业金属收益率的对话日志与审计
-meta_description: 工业金属行情数据主要来自全球主流有色金属交易所，包括上海期货交易所、伦敦金属交易所等。数据更新节奏覆盖日内实时快照与每日结算价更新，常规活跃合约每15分钟推
+meta_description: 工业金属收益率的对话日志与审计：工业金属收益率的对话日志与审计，涵盖配置与验证建议
 keywords: 工业金属、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

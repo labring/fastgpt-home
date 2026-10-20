@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电子元件研报检索的工作流编排
-meta_description: 电子元件研报的数据主要来源于券商行业研究所报告、原厂公开datasheet、行业协会统计文档与供应链平台公开信息。更新节奏不固定，新品发布、供应链变动、行业
+meta_description: 电子元件研报检索的工作流编排：电子元件研报检索的工作流编排，涵盖配置与验证建议。
 keywords: 电子元件、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

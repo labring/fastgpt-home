@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程机械营销内容的模型接入与配置
-meta_description: 金融领域针对工程机械的营销内容数据，主要来自金融机构官方的融资租赁方案文档、合作经销商的推广素材、线下客户咨询的问答台账及合规政策更新文件。数据更新节奏随工
+meta_description: 工程机械营销内容的模型接入与配置：工程机械营销内容的模型接入与配置，涵盖配置与验证建议
 keywords: 工程机械、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

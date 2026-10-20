@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 证券财报分析的工具调用与插件
-meta_description: 证券财报分析的数据主要来自境内外证券交易所官方披露渠道、上市公司定期报告公开发布端口。更新节奏遵循监管要求：季度报告在季度结束后1-2个月内发布，年度报告在
+meta_description: 证券财报分析的工具调用与插件：证券财报分析的工具调用与插件，涵盖配置与验证建议。
 keywords: 证券、财报分析与报告生成、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

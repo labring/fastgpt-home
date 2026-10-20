@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通信设备智能尽调报告的文档解析与分块
-meta_description: 通信设备相关尽调文档主要来自设备厂商公开技术白皮书、运营商集采招标技术参数文件、第三方检测机构合规报告及工信部入网许可公示文件。更新节奏随新品发布、年度巡检
+meta_description: 通信设备智能尽调报告的文档解析与分块：通信设备智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 通信设备、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

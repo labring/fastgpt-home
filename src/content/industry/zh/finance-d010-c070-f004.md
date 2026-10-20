@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 招标公告竞价的向量模型与索引
-meta_description: 招标公告数据来自政府采购公共服务平台、各省市公共资源交易中心、金融机构内部招标采购平台。更新随对应招标项目的发布节奏推进，工作日更新频次较高，部分行业项目会
+meta_description: 招标公告竞价的向量模型与索引：招标公告竞价的向量模型与索引，涵盖配置与验证建议。
 keywords: 招标公告、竞价与投标报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

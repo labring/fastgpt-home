@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程咨询财报分析的模型接入与配置
-meta_description: 数据来源包括工程咨询企业内部的项目台账系统、经审计的年度财务报告、住建部门发布的行业工程咨询项目备案数据。更新节奏：年度财报按自然年更新，季度营收数据按季度
+meta_description: 工程咨询财报分析的模型接入与配置：工程咨询财报分析的模型接入与配置，涵盖配置与验证建议
 keywords: 工程咨询、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

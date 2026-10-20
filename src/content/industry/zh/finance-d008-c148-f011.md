@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 酒店餐饮智能尽调报告的文档解析与分块
-meta_description: 金融机构针对酒店餐饮门店出具的智能尽调报告，数据来源涵盖门店运营方提供的日常经营台账、第三方消防卫生检查报告、加盟合作文件及客流统计报表等。文档类型涵盖PD
+meta_description: 酒店餐饮智能尽调报告的文档解析与分块：酒店餐饮智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 酒店餐饮、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

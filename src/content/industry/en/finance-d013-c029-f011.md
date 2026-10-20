@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Packaging and Printing
-meta_description: Data sources for packaging and printing financing daily reports include industry association public announcements, regular filings from listed
+meta_description: Document Parsing and Chunking for Packaging and Printing Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -33,7 +33,7 @@ Document formats vary across sources. Some are standard PDF structured tables. O
 
 ## Three Common Mistakes
 - Symptom: Parsing completes and returns 504 timeout status code, or tasks remain in the queue for an extended period without completion. Cause: The `PARSE_FILE_TIMEOUT_SECONDS` parameter was not adjusted to a reasonable duration adapted to packaging and printing financing daily reports, or table parsing was not enabled, causing redundant content to slow down parsing speed.
-- Symptom: Using the built-in file enhanced parsing feature in FastGPT 4.9.0 fails to correctly extract table fields. Switching to FastGPT 4.8.20 with the Marker module restores normal functionality. Cause: The built-in parsing module in version 4.9.0 has compatibility issues with nested tables, and has not been optimized for structured tables in packaging and printing documents.
+Reference only; verify against the target FastGPT release and deployment documentation.
 - Symptom: Calling the model in a conversation flow fails to trigger the file parsing tool, returning an error message stating "tool not bound". Cause: Tool calling permissions were not enabled in the model configuration, or the document parsing tool was not added to the available tool list for the corresponding model.
 
 ## How to Confirm the Configuration Is Properly Set Up

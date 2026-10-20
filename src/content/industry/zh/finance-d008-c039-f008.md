@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 厨卫电器智能尽调报告的工具调用与插件
-meta_description: 厨卫电器的尽调数据来源包括国家强制性产品认证（CCC）数据库、品牌方公开的技术手册、行业协会发布的合规检测报告。更新节奏为新品发布后7个工作日内完成参数更新
+meta_description: 厨卫电器智能尽调报告的工具调用与插件：厨卫电器智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 厨卫电器、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

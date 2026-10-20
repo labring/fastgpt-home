@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 综合服务融资日报的HTTP 接口与外部系统
-meta_description: 综合服务类融资日报的数据来源涵盖银行间市场交易商协会披露的同业拆借数据、商业银行公开的信贷投放公告、地方政府融资平台官方披露的融资项目信息，以及央行公开市场
+meta_description: 综合服务融资日报的HTTP 接口与外部系统：综合服务融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 综合服务、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商业地产营销内容的文档解析与分块
-meta_description: 商业地产营销内容的数据源主要包括项目招商手册、商圈调研报告、租户入驻协议、营销推广物料、周边配套数据文档等。更新节奏随项目进度调整：新项目筹备期集中生成大量
+meta_description: 商业地产营销内容的文档解析与分块：商业地产营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 商业地产、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

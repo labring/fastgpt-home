@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油服工程营销内容的模型接入与配置
-meta_description: 油服工程的营销内容数据主要来源于项目台账、投标响应文件、技术交底文档、客户沟通记录及行业标准规范。数据更新以项目节点为触发，如项目中标、方案调整时同步更新。
+meta_description: 油服工程营销内容的模型接入与配置：油服工程营销内容的模型接入与配置，涵盖配置与验证建议
 keywords: 油服工程、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 自动化设备融资日报的HTTP 接口与外部系统
-meta_description: 数据来源为融资租赁机构的业务管理系统、设备经销商的订单台账模块，以及动产融资公示平台的公开登记数据。更新节奏为每日凌晨更新前一自然日的全量融资记录。文档结构
+meta_description: 自动化设备融资日报的HTTP 接口与外部系统：自动化设备融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 自动化设备、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

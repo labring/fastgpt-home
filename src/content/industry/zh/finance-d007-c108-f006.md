@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电商服务收益率的对话日志与审计
-meta_description: 电商服务的对话日志与行情关联数据，主要来源于电商APP内的理财导购会话、第三方行情对接接口以及用户主动查询收益率的交互记录。单条对话实时落库，关联的行情数据
+meta_description: 电商服务收益率的对话日志与审计：电商服务收益率的对话日志与审计，涵盖配置与验证建议
 keywords: 电商服务、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

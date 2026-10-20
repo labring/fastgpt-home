@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 证券研报检索的工具调用与插件
-meta_description: 证券研报数据主要来自持牌券商研究所、公募及私募投研团队。更新节奏跟随交易日，常规研报于盘后发布，突发行业或个股相关研报会即时推送。文档结构包含核心观点、行业
+meta_description: 证券研报检索的工具调用与插件：证券研报检索的工具调用与插件，涵盖配置与验证建议。
 keywords: 证券、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

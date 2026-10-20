@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电子元件营销内容的工作流编排
-meta_description: 电子元件的核心数据来源于原厂官方datasheet、授权分销商库存管理系统、行业合规认证文档，以及金融场景下的供应链授信资质文档。数据更新节奏分为两类：原厂
+meta_description: 电子元件营销内容的工作流编排：电子元件营销内容的工作流编排，涵盖配置与验证建议。
 keywords: 电子元件、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

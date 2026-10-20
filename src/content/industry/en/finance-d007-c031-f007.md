@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Chemical Pharmaceutical Yield
-meta_description: Data related to yield rates in the chemical pharmaceutical field comes primarily from publicly disclosed periodic reports of listed pharmaceutical
+meta_description: Workflow Orchestration for Chemical Pharmaceutical Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -28,7 +28,7 @@ Multiple update frequencies across data sources require workflows to support mul
 | `postgresql_connection_timeout` | `30 seconds` | Chemical pharmaceutical database tables have large data volumes; 30 seconds covers conventional data pull durations and avoids timeout interrupts |
 | `join_key` | `enterprise_code + product_name` | Chemical pharmaceutical data requires association across enterprise and product dimensions; this combined key uniquely matches the same business data across data sources |
 | `data_clean_unit_convert` | `Unify to yuan/kilogram (raw materials), yuan/pill (dosage forms)` | Resolves inconsistent units across different data sources and ensures consistent benchmarks for yield rate calculations |
-| `variable_reference_format` | `{{datasetId}}` | Complies with workflow variable reference specifications and avoids format errors |
+| `variable_reference_format` | `example value` | Complies with workflow variable reference specifications and avoids format errors |
 | `retry_max_count` | `3 times` | Addresses network fluctuations or temporary data source unavailability and reduces workflow failure rates |
 
 > The parameter values provided on this page are all common recommended starting points for configuration. Actual values are affected by material form, data volume, and business rules. Specific issues require case-by-case analysis, and it is recommended to test on your own samples before finalizing settings.
@@ -36,7 +36,7 @@ Multiple update frequencies across data sources require workflows to support mul
 ## Three Common Configuration Mistakes
 - Symptom: When using a database connection plugin to connect to PostgreSQL, the interface prompts "Workflow verification failed, please check for missing or empty values, and whether connections are normal". Cause: The `postgresql_connection_timeout` parameter is not configured, or the configured timeout period is too short, causing verification to fail during data pulling due to timeout; or the `join_key` field is not set correctly, leading to null values during data association.
 - Symptom: After configuring a data analysis node in the workflow, the operation path for a specific ticket cannot be fixed. Cause: The ticket ID is not configured as an input variable for the workflow, making dynamic binding of the target ticket impossible.
-- Symptom: Using the `[{datasetId: xxx}]` format for knowledge base variable reference fails, and the workflow reports an error during runtime. Cause: The workflow variable reference specification is not followed, and an object array format is incorrectly used. The correct format should be the placeholder form required by the platform.
+- Symptom: Using the `[{datasetId: xxx}]` format for knowledge base variable reference fails, and the workflow reports an error during runtime. Cause: The workflow variable reference specification is not followed, and an object array format is incorrectly used. The correct format should be the pending verification form required by the platform.
 
 ## How to Confirm Configuration Is Complete
 - Manually trigger the workflow once, review the running logs for errors such as database connection timeouts or data association failures, and confirm that the trigger cycle matches the data source update rhythm.

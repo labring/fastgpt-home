@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interfaces and External Systems for Steel Trade
-meta_description: Data related to steel trade profitability comes from public industry data sources for domestic bulk commodity spot trading. Updates follow a fixed
+meta_description: HTTP Interfaces and External Systems for Steel Trade Profitability
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

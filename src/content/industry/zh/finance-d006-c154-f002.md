@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饰品投研知识库建设的上下文与 token
-meta_description: 饰品投研的数据来源包括行业协会发布的品类监测报告、品牌方官方发布的新品上市公告、上游贵金属与合金供应商的每日报价单、电商平台的SKU销量与评价数据、国家知识
+meta_description: 饰品投研知识库建设的上下文与 token：饰品投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 饰品、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

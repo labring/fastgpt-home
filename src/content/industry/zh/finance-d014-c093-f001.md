@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 游戏财报分析的HTTP 接口与外部系统
-meta_description: 数据来源为游戏厂商公开披露的财报文件、行业公开数据接口，更新节奏以季度为固定周期，部分核心运营数据可按周获取。文档结构包含结构化数据表格与配套分析文本，字段
+meta_description: 游戏财报分析的HTTP 接口与外部系统：游戏财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 游戏、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

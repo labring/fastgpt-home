@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 免税营销内容的知识库检索与召回
-meta_description: 数据来源包括金融机构的跨境金融配套免税商品营销手册、线下网点的免税活动展架物料、线上金融商城的免税商品详情页、会员专属的免税活动营销话术库。更新节奏为常规品
+meta_description: 免税营销内容的知识库检索与召回：免税营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 免税、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

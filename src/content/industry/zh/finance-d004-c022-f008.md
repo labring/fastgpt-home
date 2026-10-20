@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 内部制度合规的工具调用与插件
-meta_description: 内部制度数据主要来源于企业内部合规部门发布的正式文档，包含监管要求落地细则、业务操作流程规范、岗位权责清单等。更新节奏随监管政策调整、内部流程优化不定期触发
+meta_description: 内部制度合规的工具调用与插件：内部制度合规的工具调用与插件，涵盖配置与验证建议。
 keywords: 内部制度、合规与内部制度问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 休闲食品营销内容的模型接入与配置
-meta_description: 休闲食品品类的数据主要来自品牌自有电商后台、线下POS终端、社交媒体用户评论、新品研发文档与包装设计稿。数据更新节奏随营销节点波动，新品上市、节日促销期间更
+meta_description: 休闲食品营销内容的模型接入与配置：休闲食品营销内容的模型接入与配置，涵盖配置与验证建议
 keywords: 休闲食品、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

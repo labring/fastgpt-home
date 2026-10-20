@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Compliance and Internal Policy Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Regulatory Compliance HTTP Interfaces and External Systems
-meta_description: Regulatory compliance data originates from normative documents issued by official regulatory bodies, with updates triggered irregularly when new
+meta_description: Regulatory Compliance HTTP Interfaces and External Systems
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -27,7 +27,7 @@ Official regulatory data sources have strict authentication requirements, so HTT
 | `knowledge_sync_interval` | `86400 seconds` | Regulatory policy update frequency is low; daily synchronization covers most incremental update requirements |
 | `metadata_extract_fields` | `Document Number, Publishing Institution, Effective Date` | The core metadata for regulatory compliance documents includes these fields, facilitating subsequent compliance retrieval and classification |
 | `api_auto_bearer_switch` | `false` | Some official regulatory interfaces require custom authentication headers; disabling automatic Bearer token addition prevents authentication conflicts |
-| `external_api_header_override` | `["Authorization: Custom-Key {{token}}"]` | Supports dynamic binding of workflow variables to adapt to authentication requirements across different scenarios |
+| `external_api_header_override` | `["Authorization: Custom-Key example value"]` | Supports dynamic binding of workflow variables to adapt to authentication requirements across different scenarios |
 
 > The parameter values provided on this page are common starting points for configuration. Actual values are affected by material format, data volume, and business rules. Specific issues require individual analysis, and it is recommended to test against your own samples before finalizing settings.
 

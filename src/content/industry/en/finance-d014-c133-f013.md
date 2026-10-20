@@ -4,8 +4,8 @@ slug: /en/industry/finance-d014-c133-f013
 page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
-meta_title: Knowledge Base Retrieval and Recall for Securities Financial
-meta_description: Securities financial report data primarily comes from official disclosure platforms of the Shanghai, Shenzhen, Beijing Stock Exchanges and the Hong
+meta_title: Knowledge Base Retrieval and Recall for Securities
+meta_description: Knowledge Base Retrieval and Recall for Securities Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

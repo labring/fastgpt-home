@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 品牌代运营收益率的分享与嵌入
-meta_description: 品牌代运营的经营数据主要来自电商后台API、广告投放管理系统接口、客户管理系统的汇总导出。数据更新节奏为每日一次，于次日凌晨生成前一自然日的经营报表。文档结
+meta_description: 品牌代运营收益率的分享与嵌入：品牌代运营收益率的分享与嵌入，涵盖配置与验证建议。
 keywords: 品牌代运营、收益率与行情日报播报、分享与嵌入
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15
@@ -26,7 +26,7 @@ date_modified: 2026-09-15
 | `datasetSyncCron` | `0 1 * * *` | 匹配品牌代运营日报T+1的生成节奏，于次日凌晨自动同步最新数据 |
 | `sharePermissionMode` | `internal_only` | 品牌代运营数据属于商业敏感信息，仅内部授权用户可访问分享内容 |
 | `embedComponentLoadTimeout` | `30 秒` | 适配多渠道数据拉取的耗时需求，避免因数据量较大导致加载失败 |
-| `apiDataSourceFilter` | `brand_id in [{{current_user.brand_ids}}]` | 实现按代运营品牌的权限过滤，确保仅展示当前用户负责的品牌数据 |
+| `apiDataSourceFilter` | `brand_id in [待核验值]` | 实现按代运营品牌的权限过滤，确保仅展示当前用户负责的品牌数据 |
 | `datasetParseChunkSize` | `800–1200 字符` | 适配日报结构化字段的长度，避免分割后字段信息断裂 |
 | `shareLinkExpireTime` | `7 天` | 匹配日报数据的有效周期，过期后自动失效以保障数据安全 |
 

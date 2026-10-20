@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医疗器械智能尽调报告的引用来源与溯源
-meta_description: 医疗器械相关数据主要来源于国家药品监督管理局医疗器械注册与备案信息平台、医疗器械唯一标识（UDI）数据库、厂商官方合规文档及第三方行业合规数据库。数据更新节
+meta_description: 医疗器械智能尽调报告的引用来源与溯源：医疗器械智能尽调报告的引用来源与溯源，涵盖配置与验证建议
 keywords: 医疗器械、智能尽调报告、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

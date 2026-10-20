@@ -4,8 +4,8 @@ slug: /zh/industry/finance-d012-c020-f001
 page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
-meta_title: 兵器装备营销内容的HTTP 接口与外部系统
-meta_description: 兵器装备营销内容的数据主要来自国防军工领域的官方定型报告、公开外贸装备宣传资料、装备性能参数手册及配套维护文档，多用于金融机构军工主题理财、保险产品的营销获
+meta_title: 兵器装备营销内容的HTTP接口与外部系统
+meta_description: 兵器装备营销内容的HTTP接口与外部系统：兵器装备营销内容的HTTP接口与外部系统，涵盖配置与验证建议
 keywords: 兵器装备、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

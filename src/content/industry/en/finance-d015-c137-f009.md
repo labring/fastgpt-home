@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Risk Control and Credit Document Review
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for Post-Loan Ledger Risk
-meta_description: Post-loan ledger data comes from three types of data sources in the core credit system: repayment transaction records, overdue collection records, and
+meta_description: Citation Sources and Traceability for Post-Loan Ledger Risk Control
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

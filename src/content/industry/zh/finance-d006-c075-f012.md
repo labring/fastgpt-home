@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 整车投研知识库建设的模型接入与配置
-meta_description: 整车投研的数据主要来自车企公开财报、工信部机动车公告、第三方整车测试报告、供应链企业披露文档及行业深度研报。数据更新节奏随内容类型差异较大，车企财报按季度、
+meta_description: 整车投研知识库建设的模型接入与配置：整车投研知识库建设的模型接入与配置，涵盖配置与验证建议
 keywords: 整车、投研知识库建设与治理、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

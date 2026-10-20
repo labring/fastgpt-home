@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 普钢研报检索的多轮对话与提示词
-meta_description: 用于金融投资分析的普钢行业研报，数据主要来自国内钢铁行业权威统计机构、上市钢企公开披露信息及行业研究机构公开成果。更新节奏以周度常规发布为主，伴随行业政策调
+meta_description: 普钢研报检索的多轮对话与提示词：普钢研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 普钢、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

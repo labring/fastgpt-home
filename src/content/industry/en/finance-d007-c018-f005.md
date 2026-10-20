@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Optical
-meta_description: Data sources for optical module yield rate-related data cover secondary market quotes for optical module segment products, supply chain shipment and
+meta_description: Multi-turn Dialogue and Prompt Engineering for Optical Module Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Snack Food
-meta_description: Marketing-related data for snack food primarily comes from brand-owned SKU management systems, e-commerce platform product detail pages, internal
+meta_description: Multi-turn Dialogue and Prompt Engineering for Snack Food Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

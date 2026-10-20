@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 白色家电财报分析的模型接入与配置
-meta_description: 白色家电企业的财报数据主要来源于境内证券交易所公开披露平台及企业投资者关系板块，更新节奏分为定期与临时两类：年度报告需在每个会计年度结束后4个月内披露，季度
+meta_description: 白色家电财报分析的模型接入与配置：白色家电财报分析的模型接入与配置，涵盖配置与验证建议
 keywords: 白色家电、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

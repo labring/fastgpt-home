@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 计算机设备融资日报的多轮对话与提示词
-meta_description: 计算机设备融资日报数据来源于企业设备采购备案系统、合作金融机构授信台账及供应链融资平台。更新节奏为每日凌晨更新前一自然日的全量数据。单份日报文档按设备批次分
+meta_description: 计算机设备融资日报的多轮对话与提示词：计算机设备融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 计算机设备、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Context and Token for Agrochemical Product Investment
-meta_description: Agrochemical product data is sourced primarily from public monthly reports from industry associations, annual and quarterly financial reports of
+meta_description: Context and Token for Agrochemical Product Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

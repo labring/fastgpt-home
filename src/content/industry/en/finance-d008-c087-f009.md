@@ -4,8 +4,8 @@ slug: /en/industry/finance-d008-c087-f009
 page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
-meta_title: Citation Sources and Traceability for Auto Parts Intelligent
-meta_description: Data for auto parts intelligent due diligence reports comes primarily from original equipment manufacturer (OEM) supporting archives, batch reports
+meta_title: Citation Sources and Traceability for Auto Parts
+meta_description: Citation Sources and Traceability for Auto Parts Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -33,7 +33,7 @@ Fourth, industry compliance filing documents must be linked to filing numbers. T
 | `Traceability Field Whitelist` | Part code, production batch, supplier qualification number | Only retain standard coding fields that support accurate traceability |
 | `Data Source Refresh Cycle` | 7 days for OEM archives, 1 day for batch reports | Aligns with the actual update rhythm of the two data types |
 | `temperature` | 0.1–0.3 | Due diligence reports require rigor. Reduce randomness to ensure consistent traceability results |
-| `Citation Template` | `{{source_name}}: {{part_code}}={{value1}}, {{production_batch}}={{value2}}, Traceability ID: {{unique_id}}` | Standardize traceability information output to facilitate subsequent verification |
+| `Traceability details` | `the configured value: the configured value=the configured value, the configured value=the configured value, Traceability ID: the configured value` | Standardize traceability information output to facilitate subsequent verification |
 
 > The parameter values provided on this page are all conventional recommendations used as a starting point for configuration. Actual values are affected by material form, data volume and business rules. Specific issues require specific analysis. It is recommended to test on your own samples before finalizing settings.
 

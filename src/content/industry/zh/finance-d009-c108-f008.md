@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电商服务研报检索的工具调用与插件
-meta_description: 电商服务研报的数据来源包括电商平台公开行业洞察、第三方商贸零售数据机构的专项调研、品牌方的运营复盘报告。更新节奏以月度常规更新为主，大促节点前会追加临时专项
+meta_description: 电商服务研报检索的工具调用与插件：电商服务研报检索的工具调用与插件，涵盖配置与验证建议
 keywords: 电商服务、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

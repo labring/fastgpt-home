@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 整车财报分析的工作流编排
-meta_description: 数据来源为境内外证券交易所披露平台、车企官方投资者关系页面。更新节奏为季度终了后45天内披露季度财报，年度终了后60天内披露年报。文档结构包含合并财务报表、
+meta_description: 整车财报分析的工作流编排：整车财报分析的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 整车、财报分析与报告生成、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

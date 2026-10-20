@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 功能入口终端内自然语言检索的模型接入与配置
-meta_description: 本品类的数据来源为终端内嵌业务系统的结构化业务字段、用户在终端内输入的自然语言检索query，以及当前会话的终端上下文参数。数据更新节奏为实时同步，匹配终端
+meta_description: 功能入口终端内自然语言检索的模型接入与配置：功能入口终端内自然语言检索的模型接入与配置，涵盖配置与验证建议
 keywords: 功能入口、终端内自然语言检索、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

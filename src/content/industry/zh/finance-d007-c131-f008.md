@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 装修装饰收益率的工具调用与插件
-meta_description: 装修装饰收益率的行情日报数据，来源为装修行业协会公开统计数据库、建材供应链进销存平台、匿名装修企业的项目台账。数据更新节奏为每日凌晨完成前一日全量数据集的整
+meta_description: 装修装饰收益率的工具调用与插件：装修装饰收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 装修装饰、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

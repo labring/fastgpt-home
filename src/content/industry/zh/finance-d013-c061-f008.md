@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程机械融资日报的工具调用与插件
-meta_description: 工程机械融资日报的数据主要来源于区域工程机械租赁商的每日融资台账、主机厂的分期销售记录，以及合作金融机构的放款与还款流水。数据更新节奏为每日凌晨完成全量同步
+meta_description: 工程机械融资日报的工具调用与插件：工程机械融资日报的工具调用与插件，涵盖配置与验证建议
 keywords: 工程机械、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

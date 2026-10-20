@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Consumer Building Materials
-meta_description: Consumer building materials data mostly comes from brand official product pages, dealer quotation systems, offline store inventory ledgers, and
+meta_description: Workflow Orchestration for Consumer Building Materials Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

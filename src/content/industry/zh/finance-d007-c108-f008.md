@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电商服务收益率的工具调用与插件
-meta_description: 电商服务收益率相关数据的来源为电商平台开放API、第三方电商数据聚合接口，更新频率为每日一次，于次日凌晨完成全量更新。文档结构为结构化表格或JSON格式，包
+meta_description: 电商服务收益率的工具调用与插件：电商服务收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 电商服务、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

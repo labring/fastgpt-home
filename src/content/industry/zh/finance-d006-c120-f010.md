@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 网络安全投研知识库建设的数据库与运维
-meta_description: 网络安全投研的数据主要来源于公开漏洞情报库、威胁情报源、企业资产测绘数据、攻防演练日志等渠道。更新节奏覆盖实时（漏洞POC/EXP发布）、每日（威胁情报汇总
+meta_description: 网络安全投研知识库建设的数据库与运维：网络安全投研知识库建设的数据库与运维，涵盖配置与验证建议
 keywords: 网络安全、投研知识库建设与治理、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

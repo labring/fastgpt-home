@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 生物制品投研知识库建设的对话日志与审计
-meta_description: 生物制品投研数据主要来自CDE审评公开文档、药企临床研究报告、专利数据库、NMPA获批说明书及行业年报。数据更新节奏分多档：CDE审评文档随审批进度实时更新
+meta_description: 生物制品投研知识库建设的对话日志与审计：生物制品投研知识库建设的对话日志与审计，涵盖配置与验证建议
 keywords: 生物制品、投研知识库建设与治理、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

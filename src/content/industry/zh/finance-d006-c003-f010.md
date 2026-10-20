@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专业连锁投研知识库建设的数据库与运维
-meta_description: 专业连锁投研数据主要来自门店POS系统、供应链管理平台、行业公开研报及竞品公开信息。结构化数据包含门店编码、SKU编码、单日销售额、坪效、库存周转天数等字段
+meta_description: 专业连锁投研知识库建设的数据库与运维：专业连锁投研知识库建设的数据库与运维，涵盖配置与验证建议
 keywords: 专业连锁、投研知识库建设与治理、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

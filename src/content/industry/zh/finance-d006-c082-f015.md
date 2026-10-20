@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水产养殖投研知识库建设的部署与升级
-meta_description: 面向金融投研场景的水产养殖数据，来源包括农业农村部渔业渔政管理局公开监测数据、地方水产技术推广站的现场记录、水产流通协会的交易行情、养殖企业的内部生产台账，
+meta_description: 水产养殖投研知识库建设的部署与升级：水产养殖投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 水产养殖、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

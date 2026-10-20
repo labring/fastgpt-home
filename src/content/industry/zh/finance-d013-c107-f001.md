@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电力融资日报的HTTP 接口与外部系统
-meta_description: 电力融资日报的数据来源为地方能源监管部门公开披露平台、电网企业内部投融资系统接口、新能源项目招标公示渠道。数据更新节奏为每日T+1发布，即次日披露前一自然日
+meta_description: 电力融资日报的HTTP 接口与外部系统：电力融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 电力、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

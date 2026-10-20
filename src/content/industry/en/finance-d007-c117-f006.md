@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Dialogue Logs and Auditing for Textile Manufacturing Yield
-meta_description: Textile manufacturing yield and market data is sourced primarily from enterprise ERP production modules and raw material commodity market APIs. Data
+meta_description: Dialogue Logs and Auditing for Textile Manufacturing Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

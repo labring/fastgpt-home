@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 储能智能尽调报告的向量模型与索引
-meta_description: 储能智能尽调报告的数据来源包括电力监管部门的项目备案库、设备厂商的出厂检测报告、电站运维系统的结构化日志、行业协会的标准规范文档。更新节奏分为三类：项目备案
+meta_description: 储能智能尽调报告的向量模型与索引：储能智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 储能、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

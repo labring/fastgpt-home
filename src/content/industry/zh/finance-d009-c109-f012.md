@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电子元件研报检索的模型接入与配置
-meta_description: 电子元件研报的数据来源涵盖行业协会公开文档、原厂规格书、供应链交易数据、券商行业研究报告。更新节奏随数据源类型差异：原厂规格书随产品迭代实时更新，券商研报按
+meta_description: 电子元件研报检索的模型接入与配置：电子元件研报检索的模型接入与配置，涵盖配置与验证建议
 keywords: 电子元件、研报检索与问答、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

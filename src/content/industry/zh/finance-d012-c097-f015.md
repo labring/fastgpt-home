@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦煤营销内容的部署与升级
-meta_description: 面向金融领域投资者与贸易商的焦煤相关营销数据，主要来自行业监测平台、港口出货台账、钢厂采购记录及行业协会公开报告。数据更新节奏覆盖每日现货报价、周度库存动态
+meta_description: 焦煤营销内容的部署与升级：焦煤营销内容的部署与升级，涵盖配置与验证建议。。。。。
 keywords: 焦煤、营销内容与获客、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

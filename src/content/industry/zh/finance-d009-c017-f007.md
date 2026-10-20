@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光学光电子研报检索的工作流编排
-meta_description: 光学光电子研报的数据来源主要覆盖券商研究所的赛道专项报告、行业协会发布的月度供需统计、公开披露财报的厂商季度财报摘要。更新节奏存在差异，券商专项报告为不定期
+meta_description: 光学光电子研报检索的工作流编排：光学光电子研报检索的工作流编排，涵盖配置与验证建议
 keywords: 光学光电子、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

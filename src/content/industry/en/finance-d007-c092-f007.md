@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c092-f007
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: Workflow Orchestration for Consumer Electronics Profit Yield
-meta_description: Data for consumer electronics profit margin and market trends comes primarily from public sales data on mainstream e-commerce platforms such as Tmall
+meta_title: Workflow Orchestration for Consumer Electronics Profit
+meta_description: Workflow Orchestration for Consumer Electronics Profit Yield Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

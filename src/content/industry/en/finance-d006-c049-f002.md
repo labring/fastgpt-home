@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Context and Token Management for Construction Engineering
-meta_description: Construction engineering investment research data sources include industry quota standard documents, design institute construction drawings, project
+meta_description: Context and Token Management for Construction Engineering Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -22,7 +22,7 @@ Long text and structured features of construction engineering investment researc
 ## How to set configurations
 | Configuration Item | Recommended Range | Rationale |
 | --- | --- | --- |
-| `chunkSize` | 800–1200 characters | Construction engineering documents often contain professional tables and long paragraphs. This range balances the integrity of single-segment information and token usage, and is compatible with the parsing logic of FastGPT 4.9.7 |
+Reference only; verify against the target FastGPT release and deployment documentation.
 | `similarityTopK` | Top 3–5 entries | Construction engineering fields are closely linked. Too many retrieved entries will exceed the context token limit, while too few will miss critical cost or progress information |
 | `similarityThreshold` | 0.75–0.85 | Filters low-relevance engineering document content, avoids irrelevant terminology occupying tokens, and matches the precision requirements for professional terminology |
 | `UPLOAD_FILE_MAX_SIZE` | 50–100 MB | Single construction engineering documents such as full sets of construction drawing PDFs have large file sizes. This range avoids upload timeouts and token overflow |

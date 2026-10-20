@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 自动化设备收益率的分享与嵌入
-meta_description: 该品类的数据来源于自动化设备内置的行情采集终端对接的公开金融数据源、本地交易执行日志与运行参数采集模块。更新节奏为每个交易日收盘后完成当日全量数据汇总，生成
+meta_description: 自动化设备收益率的分享与嵌入：自动化设备收益率的分享与嵌入，涵盖配置与验证建议。
 keywords: 自动化设备、收益率与行情日报播报、分享与嵌入
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 风电收益率的HTTP 接口与外部系统
-meta_description: 风电收益率相关数据主要来源于场站计量系统与省级电网结算平台，更新节奏为每日02:00前完成前一自然日的全量数据产出。数据文档采用结构化表格格式，单条记录对应
+meta_description: 风电收益率的HTTP 接口与外部系统：风电收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 风电、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

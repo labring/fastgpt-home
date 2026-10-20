@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 调味品营销内容的知识库检索与召回
-meta_description: 调味品营销内容的数据主要来源于品牌内部营销素材库、电商平台商品页文案、合作KOL的授权内容文档、线下促销活动的电子印刷物料。更新节奏随新品上市周期调整，新品
+meta_description: 调味品营销内容的知识库检索与召回：调味品营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 调味品、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

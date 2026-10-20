@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Publishing Industry Intelligent
-meta_description: Intelligent due diligence report data for the publishing industry is sourced primarily from internal topic management systems of publishing
+meta_description: Workflow Orchestration for Publishing Industry Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 账户问题客户服务的向量模型与索引
-meta_description: 账户问题客户服务的数据主要来源于企业账户管理系统的结构化交易记录、用户提交的账户咨询工单、账户状态变更通知。数据更新节奏为实时或近实时，账户交易、密码重置、
+meta_description: 账户问题客户服务的向量模型与索引：账户问题客户服务的向量模型与索引，涵盖配置与验证建议
 keywords: 账户问题、客户服务与账户咨询、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

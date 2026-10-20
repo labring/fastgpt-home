@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水处理投研知识库建设的部署与升级
-meta_description: 水处理投研数据主要来源于项目环评报告、水质在线监测数据、运营台账、行业工艺标准与合规评级文件。实时监测数据为分钟级更新，运营台账与成本数据为日/月更，合规文
+meta_description: 水处理投研知识库建设的部署与升级：水处理投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 水处理、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

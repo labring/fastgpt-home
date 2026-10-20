@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专用设备营销内容的文档解析与分块
-meta_description: 专用设备营销相关数据主要来自三类来源：设备运维日志、展业营销物料、接口文档。运维日志按天更新，记录设备运行参数与故障信息；营销物料随产品迭代不定期更新，包含
+meta_description: 专用设备营销内容的文档解析与分块：专用设备营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 专用设备、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

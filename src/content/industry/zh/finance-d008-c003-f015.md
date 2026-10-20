@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专业连锁智能尽调报告的部署与升级
-meta_description: 专业连锁智能尽调报告的数据主要来自门店POS终端、库存管理系统、加盟商定期报送的经营报表、区域市场调研数据集。数据更新节奏分三类：门店实时交易数据每日更新，
+meta_description: 专业连锁智能尽调报告的部署与升级：专业连锁智能尽调报告的部署与升级，涵盖配置与验证建议
 keywords: 专业连锁、智能尽调报告、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

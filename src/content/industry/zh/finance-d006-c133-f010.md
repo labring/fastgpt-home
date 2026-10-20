@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 证券投研知识库建设的数据库与运维
-meta_description: 证券投研的数据来源包括沪深北交易所公开公告、上市公司定期报告、行业券商研报、宏观经济指标与实时交易行情。更新节奏分为三类：实时交易行情为准实时推送，交易所公
+meta_description: 证券投研知识库建设的数据库与运维：证券投研知识库建设的数据库与运维，涵盖配置与验证建议
 keywords: 证券、投研知识库建设与治理、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

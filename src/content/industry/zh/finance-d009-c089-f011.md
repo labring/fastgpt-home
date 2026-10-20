@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油气开采研报检索的文档解析与分块
-meta_description: 油气开采研报的来源包括行业专业数据库、上市油气公司公开年报、勘探开发项目报告、第三方行业咨询机构成果。更新节奏随内容类型差异明显，勘探项目报告为项目周期更新
+meta_description: 油气开采研报检索的文档解析与分块：油气开采研报检索的文档解析与分块，涵盖配置与验证建议
 keywords: 油气开采、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Auto Parts Profit Margin
-meta_description: Data related to auto parts profit margin comes primarily from upstream supply chain quotation APIs, original equipment manufacturer (OEM) supporting
+meta_description: Deployment and Upgrade for Auto Parts Profit Margin Reporting
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

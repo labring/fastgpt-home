@@ -4,8 +4,8 @@ slug: /en/industry/finance-d012-c007-f005
 page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Dialogue and Prompt Engineering for Dairy Product
-meta_description: Data sources for dairy products mainly include offline supermarket POS systems, mainstream e-commerce platform backends, member consumption profiles
+meta_title: Multi-turn Dialogue and Prompt Engineering for Dairy
+meta_description: Multi-turn Dialogue and Prompt Engineering for Dairy Product Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

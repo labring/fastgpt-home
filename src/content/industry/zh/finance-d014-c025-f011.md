@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 农商行财报分析的文档解析与分块
-meta_description: 农商行财报数据来源为监管要求的定期披露文档与内部经营台账，更新节奏为年度完整财报、季度经营简报及月度经营台账。文档结构包含固定格式的资产、负债、损益类报表及
+meta_description: 农商行财报分析的文档解析与分块：农商行财报分析的文档解析与分块，涵盖配置与验证建议
 keywords: 农商行、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

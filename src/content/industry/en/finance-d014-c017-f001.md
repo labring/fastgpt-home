@@ -4,8 +4,8 @@ slug: /en/industry/finance-d014-c017-f001
 page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
-meta_title: HTTP Interfaces and External Systems for Optical and
-meta_description: Financial report data for the optical and optoelectronic category comes primarily from periodic reports and temporary announcements publicly disclosed
+meta_title: HTTP Interfaces and External Systems for Optical
+meta_description: HTTP Interfaces and External Systems for Optical and Optoelectronic Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

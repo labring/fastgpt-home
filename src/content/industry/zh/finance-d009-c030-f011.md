@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化妆品研报检索的文档解析与分块
-meta_description: 这个品类的研报数据主要来自品牌官方产品手册、行业公开调研汇总、电商监测数据。更新节奏随新品上市周期、行业调研周期波动，新品发布阶段更新频率提升，常规月度更新
+meta_description: 化妆品研报检索的文档解析与分块：化妆品研报检索的文档解析与分块，涵盖配置与验证建议
 keywords: 化妆品、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

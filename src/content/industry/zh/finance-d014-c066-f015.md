@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 房建工程财报分析的部署与升级
-meta_description: 房建工程财报数据主要来源于项目施工台账、月度进度款申请单、季度成本核算表、年度结算审计报告及造价咨询文件。数据更新节奏随项目阶段变化，施工期按月更新进度成本
+meta_description: 房建工程财报分析的部署与升级：房建工程财报分析的部署与升级，涵盖配置与验证建议。
 keywords: 房建工程、财报分析与报告生成、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

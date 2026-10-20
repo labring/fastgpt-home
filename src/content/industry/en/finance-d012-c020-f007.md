@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Ordnance and Equipment Marketing
-meta_description: Data sources for ordnance and equipment marketing content include official technical documents from equipment development units, official promotional
+meta_description: Workflow Orchestration for Ordnance and Equipment Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

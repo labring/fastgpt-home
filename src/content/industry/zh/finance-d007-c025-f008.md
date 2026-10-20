@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 农商行收益率的工具调用与插件
-meta_description: 数据来源包括本行核心业务系统的存量存贷业务台账、全国银行业理财信息登记系统披露的同业理财报价，以及属地监管机构发布的区域金融市场参考数据。更新节奏分为三类：
+meta_description: 农商行收益率的工具调用与插件：农商行收益率的工具调用与插件，涵盖配置与验证建议。
 keywords: 农商行、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医疗器械研报检索的多轮对话与提示词
-meta_description: 适配金融保险理财场景的医疗器械研报数据，主要来源于国家药品监督管理局医疗器械注册备案公开平台、第三方医药行业研报数据库、医疗器械厂商官方披露的产品说明书与上
+meta_description: 医疗器械研报检索的多轮对话与提示词：医疗器械研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 医疗器械、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

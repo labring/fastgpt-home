@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多元金融融资日报的模型接入与配置
-meta_description: 多元金融融资日报的数据来源包括机构内部业务系统、行业自律组织公开披露端口、第三方合规数据服务商。数据更新节奏为每日固定时段更新前一工作日的全量数据集。文档格
+meta_description: 多元金融融资日报的模型接入与配置：多元金融融资日报的模型接入与配置，涵盖配置与验证建议
 keywords: 多元金融、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

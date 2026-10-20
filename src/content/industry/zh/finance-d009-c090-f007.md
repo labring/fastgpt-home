@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 涂料油墨研报检索的工作流编排
-meta_description: 公开研报主要来自券商研究所、行业协会公开文档、上市涂料油墨企业的定期披露文件。更新节奏为券商研报随市场动态不定期发布，行业协会文档按季度或半年度更新，企业年
+meta_description: 涂料油墨研报检索的工作流编排：涂料油墨研报检索的工作流编排，涵盖配置与验证建议。
 keywords: 涂料油墨、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

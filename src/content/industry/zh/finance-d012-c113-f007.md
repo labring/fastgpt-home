@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 白酒营销内容的工作流编排
-meta_description: 白酒品类的营销数据主要来源于品牌自有产品手册、线下终端动销报表、电商平台商品页及行业品鉴报告。数据更新节奏随产品生命周期变动，核心常规单品每季度更新终端指导
+meta_description: 白酒营销内容的工作流编排：白酒营销内容的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 白酒、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

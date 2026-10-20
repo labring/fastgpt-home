@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 保险收益率的模型接入与配置
-meta_description: 这个品类的数据主要来自各保险公司官方披露的产品公告、中国保险行业协会的信息披露专区。净值型保险产品（如投连险）的单位净值、累计净值每日更新，万能险结算利率每
+meta_description: 保险收益率的模型接入与配置：保险收益率的模型接入与配置，涵盖配置与验证建议。。。
 keywords: 保险、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

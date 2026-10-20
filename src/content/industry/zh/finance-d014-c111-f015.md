@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 畜禽养殖财报分析的部署与升级
-meta_description: 畜禽养殖财报分析所需数据主要来自规模化养殖场的每日生产台账、畜牧行业主管部门的月度监测公示、上市经营主体的定期披露文档。数据更新节奏以月度为核心周期，季度财
+meta_description: 畜禽养殖财报分析的部署与升级：畜禽养殖财报分析的部署与升级，涵盖配置与验证建议。
 keywords: 畜禽养殖、财报分析与报告生成、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 内部制度合规的多轮对话与提示词
-meta_description: 内部制度数据来源于企业内部合规管理系统、红头文件归档库及监管政策落地文档。更新节奏随监管政策调整、内部流程迭代不定期触发，常规修订周期不固定。文档多为章节式
+meta_description: 内部制度合规的多轮对话与提示词：内部制度合规的多轮对话与提示词，涵盖配置与验证建议
 keywords: 内部制度、合规与内部制度问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

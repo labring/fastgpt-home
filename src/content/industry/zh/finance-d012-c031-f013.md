@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学制药营销内容的知识库检索与召回
-meta_description: 化学制药用于营销获客的内容数据，主要来源于药企医学部审核的学术推广材料、合规备案的推广文档、一线销售获客用标准化话术库及官方宣传物料。数据更新节奏随新品获批
+meta_description: 化学制药营销内容的知识库检索与召回：化学制药营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 化学制药、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

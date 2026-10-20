@@ -4,8 +4,8 @@ slug: /en/industry/finance-d013-c083-f004
 page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
-meta_title: Vector Models and Indexing for Water Utility Financing Daily
-meta_description: Data sources for water utility financing daily reports include internal financing ledgers of water utilities, water sector-specific project
+meta_title: Vector Models and Indexing for Water Utility Financing
+meta_description: Vector Models and Indexing for Water Utility Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

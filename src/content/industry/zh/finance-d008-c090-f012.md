@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 涂料油墨智能尽调报告的模型接入与配置
-meta_description: 这个品类的数据主要来自行业协会公示的行业运行数据、上游原材料供应商的公开报价文档、企业内部的批次质检报告、备案的配方文档。更新节奏为：原材料采购单价每周更新
+meta_description: 涂料油墨智能尽调报告的模型接入与配置：涂料油墨智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 涂料油墨、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

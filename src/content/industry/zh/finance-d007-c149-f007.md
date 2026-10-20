@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 钢铁贸易收益率的工作流编排
-meta_description: 钢铁贸易的收益率数据来源涵盖国内钢铁现货交易平台的每日报价、钢厂出厂价公告、贸易企业内部进销存台账、银行融资利率公示。更新节奏为：现货报价每工作日更新1-2
+meta_description: 钢铁贸易收益率的工作流编排：钢铁贸易收益率的工作流编排，涵盖配置与验证建议。。。
 keywords: 钢铁贸易、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

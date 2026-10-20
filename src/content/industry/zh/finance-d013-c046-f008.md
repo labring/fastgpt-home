@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 固废处理融资日报的工具调用与插件
-meta_description: 固废处理融资日报的数据来源包括地方生态环境部门的固废处置项目备案信息、银行业金融机构的绿色信贷投放台账、发改委的固废处理项目融资审批文件。数据更新节奏为每日
+meta_description: 固废处理融资日报的工具调用与插件：固废处理融资日报的工具调用与插件，涵盖配置与验证建议
 keywords: 固废处理、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

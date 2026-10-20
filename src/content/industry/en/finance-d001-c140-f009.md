@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: KYC and AML Document Verification
 is_part_of: FastGPT Tech Center
 meta_title: Source Citation and Traceability for Funding Source KYC
-meta_description: Funding source KYC data mainly comes from bank corporate and personal transaction statements, scanned transfer vouchers, tax returns, asset
+meta_description: Source Citation and Traceability for Funding Source KYC
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

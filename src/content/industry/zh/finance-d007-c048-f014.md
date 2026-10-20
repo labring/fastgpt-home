@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 城商行收益率的表单与交互
-meta_description: 城商行收益率相关数据主要来自官方理财板块、同业监管报送系统及金融数据聚合接口。数据更新节奏为每个工作日T+1日更新，节假日顺延。文档以结构化表格形式呈现，每
+meta_description: 城商行收益率的表单与交互：城商行收益率的表单与交互，涵盖配置与验证建议。。。。。
 keywords: 城商行、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

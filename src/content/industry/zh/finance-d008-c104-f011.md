@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 玻璃智能尽调报告的文档解析与分块
-meta_description: 玻璃智能尽调报告的数据主要来自生产企业出厂质检单、第三方检测机构报告、项目招标技术需求文档。更新节奏随文档类型变化：出厂质检单随每批次生产更新，第三方检测报
+meta_description: 玻璃智能尽调报告的文档解析与分块：玻璃智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 玻璃、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

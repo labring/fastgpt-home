@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 软件开发研报检索的引用来源与溯源
-meta_description: 金融领域的软件开发研报数据主要来自中国金融学会金融科技专业委员会发布的年度技术趋势报告、开源金融科技社区的官方技术白皮书、头部金融科技厂商的合规技术规范文档
+meta_description: 软件开发研报检索的引用来源与溯源：软件开发研报检索的引用来源与溯源，涵盖配置与验证建议
 keywords: 软件开发、研报检索与问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

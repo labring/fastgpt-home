@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 休闲食品投研知识库建设的数据库与运维
-meta_description: 休闲食品投研数据主要来自经销商进销存台账、线下终端POS销售流水、第三方电商平台销售榜单、行业协会月度供需报告及上游原材料采购报价。数据更新节奏差异明显：终
+meta_description: 休闲食品投研知识库建设的数据库与运维：休闲食品投研知识库建设的数据库与运维，涵盖配置与验证建议
 keywords: 休闲食品、投研知识库建设与治理、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

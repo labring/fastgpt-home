@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦煤研报检索的文档解析与分块
-meta_description: 焦煤研报数据主要来自煤炭行业协会公开报告、期货交易所交割标准文档、券商行业分析PDF、主产区及港口现货报价数据。更新节奏涵盖每日现货报价、每周行业库存周报、
+meta_description: 焦煤研报检索的文档解析与分块：焦煤研报检索的文档解析与分块，涵盖配置与验证建议。
 keywords: 焦煤、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

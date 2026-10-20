@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 中药研报检索的工具调用与插件
-meta_description: 中药研报的数据主要来源于医药行业专业数据库、国家药典委员会公开文档、中药行业协会年度报告。常规更新节奏为季度常规更新，遇国家药典修订、新药获批、重大行业政策
+meta_description: 中药研报检索的工具调用与插件：中药研报检索的工具调用与插件，涵盖配置与验证建议。
 keywords: 中药、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Insurance Claim First-Level Review
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Identity and Timing Insurance
-meta_description: Identity and timing data has two sources. Identity verification data comes from national public security identity information verification interfaces
+meta_description: Workflow Orchestration for Identity and Timing Insurance Claim Initial Review
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -4,8 +4,8 @@ slug: /en/industry/finance-d006-c015-f012
 page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
-meta_title: Model Access and Configuration for Energy Storage Investment
-meta_description: Energy storage investment research data primarily comes from technical documents of power equipment manufacturers, public power grid dispatching
+meta_title: Model Access and Configuration for Energy Storage
+meta_description: Model Access and Configuration for Energy Storage Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

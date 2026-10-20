@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光模块营销内容的部署与升级
-meta_description: 光模块营销相关的数据主要来自光通信设备厂商的产品手册、金融数据中心现场运维的测试日志、光网络管理系统的采集数据。实时性能数据如接收光功率、发射光功率为秒级更
+meta_description: 光模块营销内容的部署与升级：光模块营销内容的部署与升级，涵盖配置与验证建议。。。
 keywords: 光模块、营销内容与获客、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

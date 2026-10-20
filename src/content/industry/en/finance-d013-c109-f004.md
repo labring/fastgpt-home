@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Electronic Component
-meta_description: Data for electronic component financing daily reports comes from public financing announcements of listed companies disclosed by stock exchanges
+meta_description: Vector Models and Indexing for Electronic Component Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

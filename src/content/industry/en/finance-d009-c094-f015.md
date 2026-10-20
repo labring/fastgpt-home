@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Refining and Chemical Research
-meta_description: Refining and chemical research report data mainly comes from industry special research reports released by financial institutions, public annual
+meta_description: Deployment and Upgrade for Refining and Chemical Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

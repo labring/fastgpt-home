@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 证券投研知识库建设的上下文与 token
-meta_description: 证券投研的数据主要来源于上市公司定期报告、临时公告、券商研报、行业监管文件与实时行情数据。更新节奏存在明显差异，实时行情数据每秒同步更新，公告类数据随发布实
+meta_description: 证券投研知识库建设的上下文与 token：证券投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 证券、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

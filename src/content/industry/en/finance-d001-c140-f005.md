@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: KYC and AML Document Verification
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Funding
-meta_description: Verification data for funding source KYC comes primarily from three types of materials submitted by customers: bank corporate or personal account
+meta_description: Multi-turn Dialogue and Prompt Engineering for Funding Source KYC
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Property Management
-meta_description: Data sources for property management intelligent due diligence reports include property project filing documents, daily operation and maintenance
+meta_description: Document Parsing and Chunking for Property Management Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -39,7 +39,7 @@ Some documents also have repeated headers and footers. These must be removed dur
 > The parameter values provided on this page are common recommended starting points for configuration. Actual values are affected by material format, data volume, and business rules. Specific issues require targeted analysis, and it is recommended to test on your own samples before finalizing settings.
 
 ## Three Common Mistakes
-- Symptom: An error occurs when processing PDFs after deploying Marker, with a response containing `{"detail":"Error message"}`. Cause: Environment variables required by Marker are not properly configured, or the deployed Marker version is incompatible with the current FastGPT v4.8.17 version.
+Reference only; verify against the target FastGPT release and deployment documentation.
 - Symptom: After setting a custom line break as the chunking rule, adjusting the chunk length still results in multiple paragraphs being merged or single paragraphs being split. Cause: The custom delimiter does not cover the fixed chapter title format of the due diligence report, causing the chunking logic to fail to identify natural paragraph boundaries.
 - Symptom: Uploading a large due diligence report PDF triggers an upload failure. Cause: The `UPLOAD_FILE_MAX_SIZE` parameter is not adjusted to a value matching the file size, or the server's temporary storage quota is insufficient.
 

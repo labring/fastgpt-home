@@ -4,8 +4,8 @@ slug: /en/industry/finance-d006-c136-f011
 page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
-meta_title: Document Parsing and Chunking for Precious Metals Investment
-meta_description: Data sources include official quote data from the Shanghai Gold Exchange and London Bullion Market Association, industry supply and demand analysis
+meta_title: Document Parsing and Chunking for Precious Metals
+meta_description: Document Parsing and Chunking for Precious Metals Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

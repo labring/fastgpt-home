@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompting for Personal Care Product
-meta_description: The market and profit margin data for personal care products is sourced primarily from public e-commerce platform sales APIs, brand distributor
+meta_description: Multi-turn Dialogue and Prompting for Personal Care Product Profit Margins
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

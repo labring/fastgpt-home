@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 炼化智能尽调报告的向量模型与索引
-meta_description: 这个品类的数据主要来自炼化企业的生产执行系统、实验室信息管理系统、进销存系统，以及行业合规文件、工艺技术手册。更新节奏差异较大：生产实时参数按小时或班次更新
+meta_description: 炼化智能尽调报告的向量模型与索引：炼化智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 炼化、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

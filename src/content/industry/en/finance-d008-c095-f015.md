@@ -4,8 +4,8 @@ slug: /en/industry/finance-d008-c095-f015
 page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
-meta_title: Deployment and Upgrade for Thermal Intelligent Due Diligence
-meta_description: Data for thermal intelligent due diligence reports in the financial sector comes primarily from SCADA monitoring systems, payment ledger systems, and
+meta_title: Deployment and Upgrade for Thermal Intelligent Due
+meta_description: Deployment and Upgrade for Thermal Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

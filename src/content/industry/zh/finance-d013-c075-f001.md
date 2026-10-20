@@ -4,8 +4,8 @@ slug: /zh/industry/finance-d013-c075-f001
 page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
-meta_title: 整车融资日报的HTTP 接口与外部系统
-meta_description: 整车融资日报的数据来源于车企内部融资管理系统、合作银行对公放款台账及第三方汽车金融服务平台。数据更新节奏为每日T+1，即次日凌晨更新前一自然日的全部融资记录
+meta_title: 整车融资日报的HTTP接口与外部系统
+meta_description: 整车融资日报的HTTP接口与外部系统：整车融资日报的HTTP接口与外部系统，涵盖配置与验证建议
 keywords: 整车、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

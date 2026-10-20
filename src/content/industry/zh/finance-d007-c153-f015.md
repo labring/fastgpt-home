@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 风电收益率的部署与升级
-meta_description: 风电收益率与行情日报数据主要来源于省级电力交易平台的上网结算数据、风电场站SCADA系统的发电量数据、气象监测站的有效风速辐射数据，用于金融机构的风电项目收
+meta_description: 风电收益率的部署与升级：风电收益率的部署与升级，涵盖配置与验证建议。。。。。。。
 keywords: 风电、收益率与行情日报播报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

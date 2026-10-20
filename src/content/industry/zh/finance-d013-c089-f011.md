@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油气开采融资日报的文档解析与分块
-meta_description: 油气开采融资日报的数据来源包括油气开采企业的公开融资公告、行业投融资监测平台的每日动态、油气行业协会的专项报告。更新节奏以每日更新为主，部分周度汇总的衍生日
+meta_description: 油气开采融资日报的文档解析与分块：油气开采融资日报的文档解析与分块，涵盖配置与验证建议
 keywords: 油气开采、融资日报、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

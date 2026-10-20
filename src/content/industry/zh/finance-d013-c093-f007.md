@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 游戏融资日报的工作流编排
-meta_description: 游戏融资日报的数据主要来自第三方创投数据平台、国内/海外游戏厂商公开公告、专业游戏行业资讯渠道。更新节奏为每日同步当日披露的融资事件，非工作日仅更新节假日前
+meta_description: 游戏融资日报的工作流编排：游戏融资日报的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 游戏、融资日报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

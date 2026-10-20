@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 游戏收益率的HTTP 接口与外部系统
-meta_description: 游戏收益率数据主要来自自研游戏运营后台的营收上报接口、游戏内付费模块的埋点数据接口。更新节奏以每日凌晨刷新前一日全量数据为主，部分实时监测场景支持每小时增量
+meta_description: 游戏收益率的HTTP 接口与外部系统：游戏收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 游戏、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

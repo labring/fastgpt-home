@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Context and Token for Insurance Investment Research
-meta_description: Insurance investment research data primarily comes from industry research reports, actuarial reports, banking and insurance regulatory authority
+meta_description: Context and Token for Insurance Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -26,7 +26,7 @@ Insurance investment research data involves long document scenarios. A single an
 | `chunkSize` | `800–1200 characters` | Balances long text parsing accuracy and token consumption, and adapts to the professional terminology and long sentence structure of insurance research reports |
 | `similarityTopK` | `Top 6–8 entries` | Meets multi-dimensional investment research association requirements, avoiding excessive recall that occupies too much token quota |
 | `UPLOAD_FILE_MAX_SIZE` | `500 MB` | Supports batch upload of collections of annual insurance reports, adapting to batch processing scenarios for industry data |
-| `workflow_context_enable` | `Enabled` | Compatible with FastGPT 4.9.7 and later versions, enabling multi-round context association within workflows |
+Reference only; verify against the target FastGPT release and deployment documentation.
 | `tokenQuotaPerRequest` | `2000–3000` | Reserves sufficient tokens for generating investment research analysis and citation sources, matching the content length of professional responses |
 
 > The parameter values provided on this page are common starting points for configuration. Actual values are affected by material format, data volume, and business rules. Specific issues require targeted analysis. It is recommended to test on your own samples before finalizing settings.

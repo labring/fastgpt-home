@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饰品研报检索的模型接入与配置
-meta_description: 饰品研报的数据主要来自行业协会发布的消费监测报告、品牌方的新品上市公告、电商平台的品类销售数据分析文档、珠宝玉石鉴定机构的材质鉴定报告。更新节奏随营销节点波
+meta_description: 饰品研报检索的模型接入与配置：饰品研报检索的模型接入与配置，涵盖配置与验证建议。
 keywords: 饰品、研报检索与问答、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小金属融资日报的向量模型与索引
-meta_description: 小金属融资日报的数据来源包括国内小金属现货交易平台、地方有色行业协会、企业公开披露的融资公告及第三方资讯机构的每日汇总。数据更新节奏为每日收盘后完成当日汇总
+meta_description: 小金属融资日报的向量模型与索引：小金属融资日报的向量模型与索引，涵盖配置与验证建议
 keywords: 小金属、融资日报、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

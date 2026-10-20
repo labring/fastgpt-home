@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 综合服务财报分析的工作流编排
-meta_description: 综合服务类财报数据主要来自监管机构披露的官方公告、上市公司定期报告及临时公告文件，更新节奏随财报周期固定，年度报告于年度结束后4个月内发布，季度报告于季度结
+meta_description: 综合服务财报分析的工作流编排：综合服务财报分析的工作流编排，涵盖配置与验证建议。
 keywords: 综合服务、财报分析与报告生成、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

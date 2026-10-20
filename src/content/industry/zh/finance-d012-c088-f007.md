@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油服工程营销内容的工作流编排
-meta_description: 面向金融/保险/理财行业的油服工程营销内容数据主要来自现场作业日报、设备运维日志、招投标技术方案、行业合规文档。数据更新按单个项目周期推进，单项目文档包含结
+meta_description: 油服工程营销内容的工作流编排：油服工程营销内容的工作流编排，涵盖配置与验证建议。
 keywords: 油服工程、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

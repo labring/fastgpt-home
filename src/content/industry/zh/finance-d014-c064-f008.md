@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 影视院线财报分析的工具调用与插件
-meta_description: 影视院线财报数据主要来源于院线内部运营后台、第三方票房统计平台、行业公开披露文件。数据更新节奏分为月度票房明细、季度运营报表、年度财务报告三类。文档格式以P
+meta_description: 影视院线财报分析的工具调用与插件：影视院线财报分析的工具调用与插件，涵盖配置与验证建议
 keywords: 影视院线、财报分析与报告生成、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

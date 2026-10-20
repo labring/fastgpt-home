@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电力研报检索的多轮对话与提示词
-meta_description: 电力研报的数据主要来自国家电网、南方电网公开披露的运行数据、电力上市公司年度及半年度报告、行业协会月度运行简报与专项政策文件。常规报告按月度、季度更新，专项
+meta_description: 电力研报检索的多轮对话与提示词：电力研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 电力、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

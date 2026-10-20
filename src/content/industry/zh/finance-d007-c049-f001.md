@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 基建工程收益率的HTTP 接口与外部系统
-meta_description: 基建工程收益率相关数据主要来源于项目业主方的计量支付台账、地方住建部门的造价数据库、第三方造价咨询机构的月度报送文件。数据更新以月度为核心节奏，部分重点进度
+meta_description: 基建工程收益率的HTTP 接口与外部系统：基建工程收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 基建工程、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -4,8 +4,8 @@ slug: /en/industry/finance-d006-c076-f006
 page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
-meta_title: Conversation Logging and Auditing for Cultural and
-meta_description: Cultural and entertainment products investment research data primarily comes from supply chain ledgers, industry research reports, e-commerce sales
+meta_title: Conversation Logging and Auditing for Cultural
+meta_description: Conversation Logging and Auditing for Cultural and Entertainment Products Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

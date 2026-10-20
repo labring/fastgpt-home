@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 自动化设备营销内容的HTTP 接口与外部系统
-meta_description: 自动化设备的营销内容数据主要来自设备技术文档库、实时运行采集接口、经销商推广素材池。更新节奏分为固定批次更新（每季度同步的产品规格手册）和实时触发更新（每日
+meta_description: 自动化设备营销内容的HTTP 接口与外部系统：自动化设备营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 自动化设备、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

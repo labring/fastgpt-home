@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 融资租赁收益率的模型接入与配置
-meta_description: 融资租赁的收益率相关数据来源于内部业务系统、租金收缴台账与资产登记系统，更新节奏为每日生成前一自然日的项目收益明细，月度生成全量资产的收益汇总文档。文档结构
+meta_description: 融资租赁收益率的模型接入与配置：融资租赁收益率的模型接入与配置，涵盖配置与验证建议
 keywords: 融资租赁、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

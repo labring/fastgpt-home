@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电子元件研报检索的工具调用与插件
-meta_description: 电子元件研报的数据来源涵盖原厂公开datasheet、行业协会供应链数据库、券商电子行业研究报告及第三方元器件交易平台信息，也是金融领域电子行业研究的核心参
+meta_description: 电子元件研报检索的工具调用与插件：电子元件研报检索的工具调用与插件，涵盖配置与验证建议
 keywords: 电子元件、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

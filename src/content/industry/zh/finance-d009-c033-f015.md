@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化纤研报检索的部署与升级
-meta_description: 化纤研报的数据主要来自公开行业协会报告、券商化工行业研报、产业链上下游公开数据平台。更新节奏为每周更新行业动态周报，每月发布深度分析研报。文档多为长文本搭配
+meta_description: 化纤研报检索的部署与升级：化纤研报检索的部署与升级，涵盖配置与验证建议。。。。。
 keywords: 化纤、研报检索与问答、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

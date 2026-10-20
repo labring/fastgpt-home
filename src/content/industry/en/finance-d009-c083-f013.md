@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for Water Industry
-meta_description: Data sources for water industry research reports include public documents from the China Urban Water Supply and Drainage Association, research reports
+meta_description: Knowledge Base Retrieval and Recall for Water Industry Research Report Queries
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -44,7 +44,7 @@ The high proportion of long documents requires setting reasonable text chunking 
 
 ## Three Common Mistakes
 - A knowledge base query API call returns the `403 Forbidden` error code with a permission denied prompt. The cause is that an application secret was used when initiating the request, instead of a knowledge base-specific API key, and no interface access whitelist was configured.
-- Embedded research report screenshots in question-and-answer results fail to render, returning the `[Image failed to load]` placeholder. The cause is that the image structured parsing switch for knowledge base files was not enabled, or uploaded research report images were not embedded in the document body and thus cannot be extracted.
+- Embedded research report screenshots in question-and-answer results fail to render, returning the `[Image failed to load]` pending verification. The cause is that the image structured parsing switch for knowledge base files was not enabled, or uploaded research report images were not embedded in the document body and thus cannot be extracted.
 - Knowledge base retrieval response time exceeds business expectations, resulting in timeout prompts. The cause is that the number of recalled entries was set too high, or full retrieval of all documents was performed without enabling incremental synchronization, and no sharded retrieval strategy was configured.
 
 ## How to Verify Proper Configuration

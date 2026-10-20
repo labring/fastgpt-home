@@ -4,8 +4,8 @@ slug: /en/industry/finance-d009-c148-f005
 page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Conversation and Prompt Engineering for Hotel and
-meta_description: Data sources for hotel and catering industry research reports include public industry research datasets, publicly disclosed operational data from
+meta_title: Multi-turn Conversation and Prompt Engineering for Hotel
+meta_description: Multi-turn Conversation and Prompt Engineering for Hotel and Catering Industry Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

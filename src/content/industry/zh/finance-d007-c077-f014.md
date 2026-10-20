@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 旅游景区收益率的表单与交互
-meta_description: 旅游景区收益率相关数据主要来自票务管理系统的当日售票营收、园区内餐饮文创等二次消费的POS流水、入园核销记录三类来源。数据更新节奏遵循常规业务规则：每日凌晨
+meta_description: 旅游景区收益率的表单与交互：旅游景区收益率的表单与交互，涵盖配置与验证建议。。。
 keywords: 旅游景区、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

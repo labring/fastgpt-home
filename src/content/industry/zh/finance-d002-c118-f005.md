@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 统一入口一体化 AI 平台的多轮对话与提示词
-meta_description: 统一入口一体化AI平台的数据来源为聚合的多分支AI应用会话日志、关联知识库召回记录、用户交互行为数据。数据更新节奏随实时会话提交触发，单次会话结束后同步归档
+meta_description: 统一入口一体化 AI 平台的多轮对话与提示词：统一入口一体化 AI 平台的多轮对话与提示词，涵盖配置与验证建议
 keywords: 统一入口、一体化 AI 平台与多应用编排、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

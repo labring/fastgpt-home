@@ -4,8 +4,8 @@ slug: /en/industry/finance-d012-c080-f005
 page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Dialogue and Prompt Engineering for Apparel and
-meta_description: Marketing content data for the apparel and home textile category comes from three main sources: internal brand SKU management systems, e-commerce
+meta_title: Multi-turn Dialogue and Prompt Engineering for Apparel
+meta_description: Multi-turn Dialogue and Prompt Engineering for Apparel and Home Textile Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

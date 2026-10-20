@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 纺织制造收益率的工具调用与插件
-meta_description: 纺织制造的行情数据主要来自国内纺织行业协会的公开监测数据、大宗商品现货交易平台的实时报价。更新节奏分层设置：原料类（如纯棉纱、涤纶长丝）数据每日更新，成品织
+meta_description: 纺织制造收益率的工具调用与插件：纺织制造收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 纺织制造、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

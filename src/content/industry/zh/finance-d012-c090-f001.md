@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 涂料油墨营销内容的HTTP 接口与外部系统
-meta_description: 在金融行业的营销内容与获客场景中，涂料油墨的营销内容数据主要来自企业内部配方管理系统、合规备案平台、年度色号更新库及定制化客户需求台账。数据更新节奏随业务调
+meta_description: 涂料油墨营销内容的HTTP 接口与外部系统：涂料油墨营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 涂料油墨、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interfaces and External Systems for Infrastructure
-meta_description: Data related to infrastructure construction project yield rates comes from three primary sources: measurement and payment ledgers from project owners
+meta_description: HTTP Interfaces and External Systems for Infrastructure Construction Project Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

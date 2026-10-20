@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 身份与时效保险理赔初审的HTTP 接口与外部系统
-meta_description: 身份与时效类保险理赔初审数据，主要来源于公安身份核验接口、理赔申请人提交的初审材料、保单核心系统的出险记录与时效台账。数据更新节奏分为两类：身份信息在核验请
+meta_description: 身份与时效保险理赔初审的HTTP 接口与外部系统：身份与时效保险理赔初审的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 身份与时效、保险理赔初审、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

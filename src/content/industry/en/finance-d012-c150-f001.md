@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interfaces and External Systems for Iron Ore Marketing
-meta_description: Data related to iron ore marketing primarily comes from public market APIs of bulk commodity spot trading platforms, customs import statistics APIs
+meta_description: HTTP Interfaces and External Systems for Iron Ore Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -25,7 +25,7 @@ The multi-dimensional segmentation attributes of iron ore data require HTTP inte
 | `api_request_interval` | `15 minutes` (spot market data), `1440 minutes` (port inventory data) | Matches the actual update frequency of the corresponding category data, balancing data timeliness and API call costs |
 | `api_filter_params` | `{"grade": ["62% Fe", "65% Fe"], "origin": ["Australia", "Brazil"]}` | Focuses on the most common mainstream grades and core origins in iron ore marketing, narrowing the returned data scope |
 | `response_parse_field_map` | `{"spot_price": "price", "update_at": "update_time"}` | Unifies field naming differences across external APIs, ensuring consistency in internal data processing |
-| `webhook_payload_template` | `{"product": "{{symbol}}", "grade": "{{grade}}", "price": "{{price}}", "update_time": "{{update_time}}"}` | Standardizes the output format of marketing content, adapting to subsequent promotional material generation needs |
+| `webhook_payload_template` | `{"product": "example value", "grade": "example value", "price": "example value", "update_time": "example value"}` | Standardizes the output format of marketing content, adapting to subsequent promotional material generation needs |
 | `api_timeout` | `30 seconds` | Allows sufficient response time to pull multiple sets of iron ore market data, preventing pull failures due to timeouts |
 | `retry_max_times` | `3 times` | Addresses temporary fluctuations in external APIs. A small number of retries improves the success rate of data pulling |
 

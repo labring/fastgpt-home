@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: In-App Natural Language Search
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interfaces and External Systems for Natural Language
-meta_description: Market data primarily comes from official exchange market data push interfaces and compliant third-party market data aggregation service nodes. There
+meta_description: HTTP Interfaces and External Systems for Natural Language Retrieval Within Market Data Terminals
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

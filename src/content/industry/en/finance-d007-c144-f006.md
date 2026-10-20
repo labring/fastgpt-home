@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Conversation Logging and Auditing for Telecommunications
-meta_description: Telecommunications service market and yield data is sourced from dedicated industry segment APIs of mainstream domestic financial market data
+meta_description: Conversation Logging and Auditing for Telecommunications Service Yield and Market Data
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

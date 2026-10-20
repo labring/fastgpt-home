@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 投资平台收益率的工具调用与插件
-meta_description: 投资平台的收益率与行情数据主要来自证券交易所官方行情接口、合规金融数据服务供应商。数据更新节奏分为两类：实时行情按分钟级推送，当日收益率日报于每个交易日收盘
+meta_description: 投资平台收益率的工具调用与插件：投资平台收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 投资平台、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

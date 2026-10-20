@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 出版智能尽调报告的HTTP 接口与外部系统
-meta_description: 出版行业的智能尽调报告多服务于金融机构的版权投资、选题融资等尽调场景，数据主要来自出版社选题备案库、版权合同管理系统、发行结算台账及第三方舆情监测平台。数据
+meta_description: 出版智能尽调报告的HTTP 接口与外部系统：出版智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 出版、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

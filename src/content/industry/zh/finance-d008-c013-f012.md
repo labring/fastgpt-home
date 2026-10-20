@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 保险智能尽调报告的模型接入与配置
-meta_description: 保险智能尽调报告的数据来源包括保险公司内部的承保档案、理赔台账、保单回执扫描件，以及监管机构发布的行业合规文件、第三方征信机构的投保人信用数据。更新节奏随数
+meta_description: 保险智能尽调报告的模型接入与配置：保险智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 保险、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

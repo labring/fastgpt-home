@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 城商行营销内容的工作流编排
-meta_description: 城商行营销内容数据主要来源于内部零售业务管理系统、客户分层标签库、属地银保监报备的合规素材仓库。更新节奏以季度营销活动周期为基准，日常合规素材微调更新频率为
+meta_description: 城商行营销内容的工作流编排：城商行营销内容的工作流编排，涵盖配置与验证建议。。。
 keywords: 城商行、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

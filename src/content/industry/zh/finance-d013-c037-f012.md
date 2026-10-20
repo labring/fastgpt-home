@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 卫星通信融资日报的模型接入与配置
-meta_description: 卫星通信融资日报的数据来源于卫星制造、地面站组网、低轨星座运营等领域的企业公开融资公告，以及行业监测机构的实时披露。更新节奏为每日更新，覆盖当日新披露的融资
+meta_description: 卫星通信融资日报的模型接入与配置：卫星通信融资日报的模型接入与配置，涵盖配置与验证建议
 keywords: 卫星通信、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

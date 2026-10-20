@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 涂料油墨收益率的HTTP 接口与外部系统
-meta_description: 涂料油墨行情与收益率数据主要来自国内大宗商品现货交易平台、涂料油墨行业协会的公开统计数据源。更新节奏为每日固定时点更新当日全品类行情数据，覆盖不同牌号的树脂
+meta_description: 涂料油墨收益率的HTTP 接口与外部系统：涂料油墨收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 涂料油墨、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

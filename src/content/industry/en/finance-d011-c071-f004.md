@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: In-App Natural Language Search
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for In-App Natural Language
-meta_description: Indicator calibration data comes from internal business statistical ledgers of financial institutions, regulatory reporting standard documents, and
+meta_description: Vector Models and Indexing for In-App Natural Language Retrieval of Indicator Calibration
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

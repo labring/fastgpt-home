@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通信设备投研知识库建设的上下文与 token
-meta_description: 通信设备投研数据主要来源于运营商集采招标公告、设备厂商官方技术白皮书、3GPP等行业标准文档、现场运维日志及供应链财报披露信息。数据更新节奏随内容类型差异明
+meta_description: 通信设备投研知识库建设的上下文与 token：通信设备投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 通信设备、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

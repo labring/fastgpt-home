@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电子元件融资日报的工作流编排
-meta_description: 电子元件融资日报的数据主要来自供应链金融对接接口、电子元件交易市场公开数据端口以及企业内部融资审批台账。数据更新节奏为每日凌晨同步前一自然日的融资交易信息。
+meta_description: 电子元件融资日报的工作流编排：电子元件融资日报的工作流编排，涵盖配置与验证建议。
 keywords: 电子元件、融资日报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

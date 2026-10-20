@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 鞋类投研知识库建设的对话日志与审计
-meta_description: 鞋类投研数据主要来自品牌官方供应链台账、线下门店销售POS数据、跨境电商平台交易快照、行业版型协会的季度材质报告。更新节奏随新品发售周期调整，新品上线时段每
+meta_description: 鞋类投研知识库建设的对话日志与审计：鞋类投研知识库建设的对话日志与审计，涵盖配置与验证建议
 keywords: 鞋类、投研知识库建设与治理、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

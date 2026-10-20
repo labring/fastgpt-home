@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 其他综合智能尽调报告的文档解析与分块
-meta_description: 其他综合智能尽调报告的数据来源涵盖企业公开披露文件、内部尽调底稿、第三方征信报告及项目相关附件。数据更新随尽调项目推进，无固定周期，单份报告包含多类文档结构
+meta_description: 其他综合智能尽调报告的文档解析与分块：其他综合智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 其他综合、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

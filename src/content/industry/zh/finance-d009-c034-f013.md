@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医疗器械研报检索的知识库检索与召回
-meta_description: 医疗器械研报数据主要来自券商医药行业研究报告、医疗器械行业协会公开调研文档、国家药品监督管理局注册审批公示、各省医疗器械集中采购公告、学术期刊临床验证数据。
+meta_description: 医疗器械研报检索的知识库检索与召回：医疗器械研报检索的知识库检索与召回，涵盖配置与验证建议
 keywords: 医疗器械、研报检索与问答、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

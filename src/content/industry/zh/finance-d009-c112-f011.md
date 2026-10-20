@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 白色家电研报检索的文档解析与分块
-meta_description: 白色家电研报的数据来源包括国内家电行业协会发布的月度监测报告、头部研究团队的定期研报、品牌方公开的季度财报摘要、线下零售终端的抽样调研数据。更新节奏以季度、
+meta_description: 白色家电研报检索的文档解析与分块：白色家电研报检索的文档解析与分块，涵盖配置与验证建议
 keywords: 白色家电、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

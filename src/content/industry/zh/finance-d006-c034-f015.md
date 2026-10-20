@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医疗器械投研知识库建设的部署与升级
-meta_description: 医疗器械投研数据来源包括国家药监局公开的医疗器械注册备案信息、厂商官方技术白皮书、多中心临床研究报告、医保支付相关政策文件。数据更新节奏随监管政策调整、新器
+meta_description: 医疗器械投研知识库建设的部署与升级：医疗器械投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 医疗器械、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

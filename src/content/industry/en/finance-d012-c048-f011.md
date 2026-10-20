@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Urban Commercial Bank
-meta_description: The documents for urban commercial bank marketing content mainly come from the institution’s internal marketing material library, including wealth
+meta_description: Document Parsing and Chunking for Urban Commercial Bank Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -27,7 +27,7 @@ Urban commercial bank marketing documents contain exclusive financial fields and
 | `chunk_overlap` | `150-200 characters` | Financial field associations across chunks must be retained, ensuring complete product information can be associated during retrieval |
 | `UPLOAD_FILE_MAX_SIZE` | `500 MB` | Urban commercial bank marketing materials often contain batch high-definition poster OCR text and multi-page brochures. Adaptation for large file uploads is required |
 | `enable_structured_parse` | `Enabled` | Urban commercial bank marketing documents contain structured product tables. When enabled, it can accurately extract fields such as product codes and yields, improving chunking accuracy |
-| `custom_parse_service_url` | `Calibrated based on actual testing` | fastgpt 4.8.20-fix2 and above versions support custom parsing service configuration, adapting to the exclusive document format requirements of urban commercial banks |
+Reference only; verify against the target FastGPT release and deployment documentation.
 
 > The parameter values provided on this page are all conventional recommendations used as a starting point for configuration. Actual values are affected by material form, data volume, and business rules. Specific issues require case-by-case analysis. It is recommended to test on your own samples before finalizing settings.
 

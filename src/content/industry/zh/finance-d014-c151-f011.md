@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁路公路财报分析的文档解析与分块
-meta_description: 铁路公路行业财报数据主要来自上市公司年度/季度报告、交通运输主管部门公开运营统计、行业协会月度简报。数据更新节奏为季度运营数据按月更新，年度财报每季度末或次
+meta_description: 铁路公路财报分析的文档解析与分块：铁路公路财报分析的文档解析与分块，涵盖配置与验证建议
 keywords: 铁路公路、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

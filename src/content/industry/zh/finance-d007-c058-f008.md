@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小金属收益率的工具调用与插件
-meta_description: 小金属品类的行情与收益率数据，通常来自国内有色金属行业专业现货报价机构与期货交易所的公开接口。现货报价数据每日更新1次，期货合约数据每15分钟推送一次。数据
+meta_description: 小金属收益率的工具调用与插件：小金属收益率的工具调用与插件，涵盖配置与验证建议。
 keywords: 小金属、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

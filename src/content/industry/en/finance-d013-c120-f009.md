@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for Cybersecurity
-meta_description: Cybersecurity financing daily report data is sourced from government investment and financing public platforms, financing announcements from vertical
+meta_description: Citation Sources and Traceability for Cybersecurity Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

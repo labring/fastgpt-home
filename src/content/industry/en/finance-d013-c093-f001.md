@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interfaces and External Systems for Game Industry
-meta_description: Game financing daily report data is sourced from third-party game industry investment and financing databases, securities firm research reports on the
+meta_description: HTTP Interfaces and External Systems for Game Industry Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

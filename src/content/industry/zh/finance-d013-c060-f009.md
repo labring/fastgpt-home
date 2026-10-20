@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程咨询融资日报的引用来源与溯源
-meta_description: 工程咨询融资日报的数据来源为工程建设项目融资备案档案、商业银行项目融资审批公示、地方行业主管部门的项目资金落地台账。更新节奏为每日更新，覆盖当日新增的工程类
+meta_description: 工程咨询融资日报的引用来源与溯源：工程咨询融资日报的引用来源与溯源，涵盖配置与验证建议
 keywords: 工程咨询、融资日报、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

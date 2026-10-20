@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 影视院线融资日报的工作流编排
-meta_description: 影视院线融资日报的数据来源包括国家电影局项目备案公示平台、院线运营主体公开公告、证券交易所上市公司定期及临时公告、专业影视投融资信息平台。数据更新节奏为工作
+meta_description: 影视院线融资日报的工作流编排：影视院线融资日报的工作流编排，涵盖配置与验证建议。
 keywords: 影视院线、融资日报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

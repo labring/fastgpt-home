@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c119-f005
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Dialogue and Prompt Engineering for Comprehensive
-meta_description: The comprehensive service yield rate daily report draws data from compliant financial market APIs and publicly disclosed exchange information.
+meta_title: Multi-turn Dialogue and Prompt Engineering
+meta_description: Multi-turn Dialogue and Prompt Engineering for Comprehensive Service Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

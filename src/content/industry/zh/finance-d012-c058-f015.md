@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小金属营销内容的部署与升级
-meta_description: 小金属的数据来源主要为有色金属行业专业资讯平台、地方大宗商品交易中心及矿山企业公开披露的信息。更新节奏分为三类：现货报价每日更新，库存数据每7天更新一次，行
+meta_description: 小金属营销内容的部署与升级：小金属营销内容的部署与升级，涵盖配置与验证建议。。。
 keywords: 小金属、营销内容与获客、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

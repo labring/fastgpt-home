@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Intelligent Due Diligence
-meta_description: The data for intelligent due diligence reports comes mainly from credit approval archives in internal credit management systems, financial statements
+meta_description: Vector Models and Indexing for Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -24,7 +24,7 @@ The mixed multi-source data structure of due diligence reports requires vector i
 | Configuration Item | Recommended Value | Rationale |
 | --- | --- | --- |
 | `chunk_size` | 800–1200 characters | Adapts to the mixed length of long review texts and structured fields in due diligence reports, avoiding information overload or excessive fragmentation in a single segment |
-| `vector_model` | `bge-large-zh-1.5` or a compatible model with an embedding dimension of 1024 | Adapts to the semantic capture accuracy of multi-source text, matches the text semantic features of due diligence reports, and complies with the model compatibility rules of FastGPT v4.8.7 |
+Reference only; verify against the target FastGPT release and deployment documentation.
 | `index_incremental_update` | Enabled | Adapts to real-time synchronization requirements per project cycle, reducing resource consumption from full index reconstruction |
 | `retrieve_top_k` | Top 8–12 entries | Covers associated information across multiple fields in due diligence reports, avoiding content missing caused by insufficient recall fragments |
 | `similarity_threshold` | 0.72–0.80 | Filters low-relevance unstructured text fragments, retaining content strongly related to due diligence objectives |

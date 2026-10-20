@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油气开采营销内容的HTTP 接口与外部系统
-meta_description: 这个品类的数据主要来自油气开采企业生产管理系统API、大宗商品交易平台行情接口、合规监管公开文档接口、营销素材管理系统元数据接口。生产数据按小时更新，行情数
+meta_description: 油气开采营销内容的HTTP 接口与外部系统：油气开采营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 油气开采、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

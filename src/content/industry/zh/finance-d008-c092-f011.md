@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 消费电子智能尽调报告的文档解析与分块
-meta_description: 消费电子智能尽调报告的数据来源包括品牌方公开的产品技术白皮书、供应链厂商的供货台账、第三方质检机构的合规报告、电商平台的产品详情页参数，以及供应链设备的网段
+meta_description: 消费电子智能尽调报告的文档解析与分块：消费电子智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 消费电子、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

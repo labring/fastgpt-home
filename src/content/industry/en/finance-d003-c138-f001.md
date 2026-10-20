@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Insurance Claim First-Level Review
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interfaces and External Systems for Expense List
-meta_description: Expense list data originates from partner hospital billing systems, medical insurance settlement platforms, and internal claim verification systems of
+meta_description: HTTP Interfaces and External Systems for Expense List Insurance Claim Initial Review
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

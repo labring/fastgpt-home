@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 证券研报检索的向量模型与索引
-meta_description: 证券研报数据主要来自券商研究所、公募及私募研究部门，按交易日批量更新，非交易日无新增发布。单份文档多为长文本结构，包含标题、发布机构、发布日期、核心逻辑推导
+meta_description: 证券研报检索的向量模型与索引：证券研报检索的向量模型与索引，涵盖配置与验证建议。
 keywords: 证券、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

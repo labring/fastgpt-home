@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 生物制品财报分析的工作流编排
-meta_description: 生物制品财报数据主要来自境内外证券交易所披露的上市公司定期报告（年度、半年度、季度报告）及更正公告，更新节奏匹配披露周期，定期报告按季度、半年度、年度集中更
+meta_description: 生物制品财报分析的工作流编排：生物制品财报分析的工作流编排，涵盖配置与验证建议。
 keywords: 生物制品、财报分析与报告生成、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

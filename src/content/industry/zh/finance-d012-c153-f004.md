@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 风电营销内容的向量模型与索引
-meta_description: 风电营销内容的数据来源包括风电企业的产品技术手册、中标项目案例文档、行业政策解读文案、社交媒体营销短文案、招投标项目书片段。更新节奏随项目节点波动，新机型发
+meta_description: 风电营销内容的向量模型与索引：风电营销内容的向量模型与索引，涵盖配置与验证建议。
 keywords: 风电、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

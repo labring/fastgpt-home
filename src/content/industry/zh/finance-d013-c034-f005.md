@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医疗器械融资日报的多轮对话与提示词
-meta_description: 医疗器械融资日报的数据来源包括公开的医药生物行业融资监测数据库、上市及非上市企业的官方公告。更新节奏为每个工作日更新，覆盖当日及近期的医疗器械领域融资动态。
+meta_description: 医疗器械融资日报的多轮对话与提示词：医疗器械融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 医疗器械、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

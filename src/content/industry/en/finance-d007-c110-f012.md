@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c110-f012
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: Model Integration and Configuration for Grid Equipment Yield
-meta_description: Data for grid equipment yield rates is sourced primarily from public settlement data from regional power trading centers, internal operation logs of
+meta_title: Model Integration and Configuration for Grid Equipment
+meta_description: Model Integration and Configuration for Grid Equipment Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

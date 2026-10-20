@@ -5,7 +5,7 @@ page_type: 行业作业环节页
 article_section: 银行信贷
 is_part_of: FastGPT 技术中心
 meta_title: 流动资金贷款的交叉核对财报、流水、纳税：哪一部分能交给系统
-meta_description: 流动资金贷款的交叉核对财报、流水、纳税：哪一部分能交给系统
+meta_description: 流动资金贷款的交叉核对财报、流水、纳税：哪一部分能交给系统：流动资金贷款的交叉核对财报、流水、纳税：哪一部分能交给系统，涵盖配置与验证建议
 keywords: 流动资金贷款、银行信贷、环节1
 source_type: 金融业务分类与作业事实取自行业研究报告（含监管文件来源编号）
 date_published: 2026-09-15

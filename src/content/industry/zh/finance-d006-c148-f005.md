@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 酒店餐饮投研知识库建设的多轮对话与提示词
-meta_description: 酒店餐饮投研数据主要来源于酒店PMS系统、餐饮POS终端、供应链台账、行业协会公开运营数据及门店菜单台账。数据更新节奏分为三类：门店客流量、客单价等实时运营
+meta_description: 酒店餐饮投研知识库建设的多轮对话与提示词：酒店餐饮投研知识库建设的多轮对话与提示词，涵盖配置与验证建议
 keywords: 酒店餐饮、投研知识库建设与治理、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

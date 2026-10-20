@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦炭投研知识库建设的上下文与 token
-meta_description: 焦炭投研数据来源包括大连商品交易所公开交割数据、沿海主要港口现货报价系统、中国炼焦行业协会调研数据、钢厂采购台账。更新节奏为：期货数据每日收盘后更新，现货报
+meta_description: 焦炭投研知识库建设的上下文与 token：焦炭投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 焦炭、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

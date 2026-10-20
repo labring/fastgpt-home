@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 投资平台融资日报的知识库检索与召回
-meta_description: 投资平台融资日报的数据主要来自公开监管披露平台、企业官方融资公告、第三方交易数据接口。更新节奏为交易日每日更新，非交易日暂停同步。单条文档以结构化字段为主，
+meta_description: 投资平台融资日报的知识库检索与召回：投资平台融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 投资平台、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 厨卫电器智能尽调报告的多轮对话与提示词
-meta_description: 厨卫电器的参数数据来源包括国家能效标识数据库、CCC认证公示平台、品牌官方产品手册、电商平台详情页参数。更新节奏为新品参数随上市同步更新，能效等级数据每季度
+meta_description: 厨卫电器智能尽调报告的多轮对话与提示词：厨卫电器智能尽调报告的多轮对话与提示词，涵盖配置与验证建议
 keywords: 厨卫电器、智能尽调报告、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

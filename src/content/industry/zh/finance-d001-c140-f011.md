@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 资金来源KYC 的文档解析与分块
-meta_description: 资金来源KYC的数据主要来自银行对公/对私流水、个人收入证明、资产持有凭证、年度税务申报表等。更新节奏依核验场景而定，月度或季度更新。文档形态包含原生PDF
+meta_description: 资金来源KYC 的文档解析与分块：资金来源KYC 的文档解析与分块，涵盖配置与验证建议
 keywords: 资金来源、KYC 与反洗钱资料核验、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

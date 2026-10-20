@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 自动化设备收益率的HTTP 接口与外部系统
-meta_description: 自动化设备的收益率与行情数据来源为内置的本地行情采集模块与对接的金融数据网关，更新节奏与行业通用的日报生成周期对齐，每日生成单批次完整数据集。文档结构为结构
+meta_description: 自动化设备收益率的HTTP 接口与外部系统：自动化设备收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 自动化设备、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

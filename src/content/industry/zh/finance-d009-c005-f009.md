@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 个护用品研报检索的引用来源与溯源
-meta_description: 个护用品研报数据主要来自行业第三方咨询机构、主流电商平台的销售监测数据、原料供应商的供应报告及第三方合规检测机构的抽检结果。更新节奏分为两类，电商销售相关数
+meta_description: 个护用品研报检索的引用来源与溯源：个护用品研报检索的引用来源与溯源，涵盖配置与验证建议
 keywords: 个护用品、研报检索与问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Citation Source and Traceability for Large State-Owned Bank
-meta_description: Data sources for large state-owned bank research knowledge bases cover internal research outputs, public regulatory documents, listed company
+meta_description: Citation Source and Traceability for Large State-Owned Bank Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -4,8 +4,8 @@ slug: /en/industry/finance-d012-c119-f008
 page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
-meta_title: Tool Calling and Plugins for Comprehensive Service Marketing
-meta_description: Data sources for comprehensive service marketing content include internal business CRM systems, user interaction log libraries, and marketing material
+meta_title: Tool Calling and Plugins for Comprehensive Service
+meta_description: Tool Calling and Plugins for Comprehensive Service Marketing Content: covering configuration and validation guidance.
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

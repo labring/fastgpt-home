@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 融资租赁营销内容的知识库检索与召回
-meta_description: 融资租赁营销内容的数据主要来自内部产品方案库、获客素材包、监管合规文件及合作方资质材料。更新节奏随产品迭代、监管政策调整不定期触发，多为批量更新。文档结构多
+meta_description: 融资租赁营销内容的知识库检索与召回：融资租赁营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 融资租赁、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

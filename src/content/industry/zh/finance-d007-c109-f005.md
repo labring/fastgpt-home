@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电子元件收益率的多轮对话与提示词
-meta_description: 电子元件的行情与收益率数据主要来源于原厂公开指导价、现货交易平台实时报价、行业第三方数据库三类渠道。实时现货报价每小时更新一次，原厂指导价每日更新，行业周报
+meta_description: 电子元件收益率的多轮对话与提示词：电子元件收益率的多轮对话与提示词，涵盖配置与验证建议
 keywords: 电子元件、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

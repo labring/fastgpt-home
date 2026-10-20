@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光模块营销内容的工具调用与插件
-meta_description: 光模块的核心数据来自通信设备厂商的官方规格书、运营商集采参数库及第三方行业测试报告，面向金融行业的营销内容需聚焦适配数据中心高稳定性要求的型号。数据更新节奏
+meta_description: 光模块营销内容的工具调用与插件：光模块营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 光模块、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

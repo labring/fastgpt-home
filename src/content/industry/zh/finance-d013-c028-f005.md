@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 动力煤融资日报的多轮对话与提示词
-meta_description: 动力煤融资日报的数据来源于国内煤炭现货交易平台、北方港口调度台账、金融机构供应链融资台账，每日早间更新。文档结构包含当日产地挂牌价、北方港平仓价、跨区域调运
+meta_description: 动力煤融资日报的多轮对话与提示词：动力煤融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 动力煤、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

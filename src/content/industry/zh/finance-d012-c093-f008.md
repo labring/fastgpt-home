@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 游戏营销内容的工具调用与插件
-meta_description: 游戏营销内容的数据主要来自广告投放平台API、游戏后台埋点日志、社区UGC评论与游戏内活动报表。更新节奏随营销节奏变化，常规营销素材按周更新，大型版本活动或
+meta_description: 游戏营销内容的工具调用与插件：游戏营销内容的工具调用与插件，涵盖配置与验证建议。
 keywords: 游戏、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化妆品投研知识库建设的数据库与运维
-meta_description: 化妆品投研数据主要来源于品牌官方备案资料、成分检测报告、电商平台用户评价、行业协会抽检数据及专利文献。数据更新节奏存在差异：品牌备案信息按监管要求每季度更新
+meta_description: 化妆品投研知识库建设的数据库与运维：化妆品投研知识库建设的数据库与运维，涵盖配置与验证建议
 keywords: 化妆品、投研知识库建设与治理、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15
@@ -23,7 +23,7 @@ date_modified: 2026-09-15
 ## 配置怎么定
 | 配置项 | 建议取法 | 这样取的依据 |
 | --- | --- | --- |
-| `MONGO_CONNECTION_STRING` | `mongodb://fastgpt:cosmetic123@localhost:27017/fastgpt_cosmetic?authSource=admin` | 适配FastGPT v4.15版本，化妆品投研数据需独立数据库实例，指定认证源与数据库名，避免与其他业务数据混淆 |
+仅作参考；请以目标 FastGPT 发布版本与部署文档核验。
 | `UPLOAD_FILE_MAX_SIZE` | `1000 MB` | 化妆品备案报告、成分检测报告多为大型PDF或Excel文件，需支持大文件上传 |
 | `PARSE_FILE_TIMEOUT_SECONDS` | `300 秒` | 化妆品成分解析文档内容较长，需足够时间完成OCR识别与结构化提取 |
 | `RECALL_TOP_K` | `前8条` | 化妆品投研需覆盖成分、合规、用户反馈多维度检索结果，过多会增加检索耗时 |

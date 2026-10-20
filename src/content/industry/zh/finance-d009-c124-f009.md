@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 自动化设备研报检索的引用来源与溯源
-meta_description: 自动化设备研报的数据来源涵盖行业协会公开报告、设备厂商新品白皮书、第三方咨询机构分析及券商研究所深度文稿。更新节奏因来源不同存在差异，行业协会报告按季度或年
+meta_description: 自动化设备研报检索的引用来源与溯源：自动化设备研报检索的引用来源与溯源，涵盖配置与验证建议
 keywords: 自动化设备、研报检索与问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

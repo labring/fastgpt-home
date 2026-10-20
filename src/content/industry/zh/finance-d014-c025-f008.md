@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 农商行财报分析的工具调用与插件
-meta_description: 农商行财报的核心数据来源为银行业金融机构监管信息系统，以及自身披露的年度、半年度与季度经营报告。数据更新节奏按报表类型区分：月度监管报送数据于次月10日前更
+meta_description: 农商行财报分析的工具调用与插件：农商行财报分析的工具调用与插件，涵盖配置与验证建议
 keywords: 农商行、财报分析与报告生成、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

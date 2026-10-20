@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 证券营销内容的HTTP 接口与外部系统
-meta_description: 证券营销内容的数据来源为券商内部的产品管理模块、合规审核系统、营销活动管理平台。更新节奏存在差异：产品相关营销内容随产品发行、存续调整或合规修订更新，投教类
+meta_description: 证券营销内容的HTTP 接口与外部系统：证券营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 证券、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

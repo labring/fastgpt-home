@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 住宅开发收益率的多轮对话与提示词
-meta_description: 住宅开发的收益率相关数据主要来源于单个住宅开发项目的内部成本台账、销售备案系统、融资台账及地方住建部门的项目公示信息，可支撑每日收益率行情日报播报的素材需求
+meta_description: 住宅开发收益率的多轮对话与提示词：住宅开发收益率的多轮对话与提示词，涵盖配置与验证建议
 keywords: 住宅开发、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

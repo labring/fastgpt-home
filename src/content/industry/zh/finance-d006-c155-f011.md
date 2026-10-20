@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饲料投研知识库建设的文档解析与分块
-meta_description: 饲料投研的数据主要来自行业协会公开报告、上市饲料企业年报、现货市场报价台账、农业农村部政策文件及第三方调研纪要。数据更新节奏差异明显：现货原料报价按日更新，
+meta_description: 饲料投研知识库建设的文档解析与分块：饲料投研知识库建设的文档解析与分块，涵盖配置与验证建议
 keywords: 饲料、投研知识库建设与治理、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

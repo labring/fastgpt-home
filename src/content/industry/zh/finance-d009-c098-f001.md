@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 煤化工研报检索的HTTP 接口与外部系统
-meta_description: 煤化工研报数据来源包括公开行业研报、煤炭行业协会公开文档、第三方产业咨询报告。常规动态报告按双周更新，重大项目、政策变动类文档实时同步。文档结构包含核心产业
+meta_description: 煤化工研报检索的HTTP 接口与外部系统：煤化工研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 煤化工、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

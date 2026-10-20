@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油服工程财报分析的引用来源与溯源
-meta_description: 这个品类的数据主要来自油服工程企业的官方披露文件，包括季度报、年度财报及重大项目临时公告，来源覆盖境内外证券交易所披露平台及企业官网投资者关系板块。更新节奏
+meta_description: 油服工程财报分析的引用来源与溯源：油服工程财报分析的引用来源与溯源，涵盖配置与验证建议
 keywords: 油服工程、财报分析与报告生成、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

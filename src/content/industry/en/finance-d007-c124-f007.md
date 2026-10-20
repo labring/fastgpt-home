@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Automated Equipment Yield Rate
-meta_description: The system aggregates yield rate-related data for automated equipment from multiple sources. Primary sources include real-time operating parameters
+meta_description: Workflow Orchestration for Automated Equipment Yield Rate Daily Reporting
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -33,7 +33,7 @@ The need to align data from multiple sources requires adding data association no
 
 ## Three Common Misconfigurations
 -  Phenomenon: The `qwen3.5-plus` model returns a `429 Request rate increased too quickly` error. Cause: The batch execution node concurrency setting is too high. This sends too many model requests in a short period, exceeding the rate limit threshold of the model interface.
--  Phenomenon: Expected global variable values cannot be retrieved in the workflow. Cause: Persistent storage configuration for global variables is not enabled, or variable paths are not referenced correctly using the `{{global.variable_name}}` format.
+-  Phenomenon: Expected global variable values cannot be retrieved in the workflow. Cause: Persistent storage configuration for global variables is not enabled, or variable paths are not referenced correctly using the `example value` format.
 -  Phenomenon: Individual loop results are not fully collected after batch execution nodes complete. Cause: The write mode for global variables is not set to append. Each loop overwrites the current value of the variable instead of adding new entries.
 
 ## How to Verify Proper Configuration

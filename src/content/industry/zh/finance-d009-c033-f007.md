@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化纤研报检索的工作流编排
-meta_description: 化纤研报的数据来源包括行业协会公开报告、大宗商品交易平台的市场监测数据、上市企业定期披露的经营数据。更新节奏分为两类：常规市场监测数据按周更新，深度行业分析
+meta_description: 化纤研报检索的工作流编排：化纤研报检索的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 化纤、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

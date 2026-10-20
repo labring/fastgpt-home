@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 造纸收益率的多轮对话与提示词
-meta_description: 造纸行业收益率与行情日报的数据来源包括国内造纸行业协会公开统计数据集、国内大宗商品现货交易平台的纸制品报价、纸浆期货结算数据。更新节奏为每个工作日收盘后2小
+meta_description: 造纸收益率的多轮对话与提示词：造纸收益率的多轮对话与提示词，涵盖配置与验证建议。
 keywords: 造纸、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

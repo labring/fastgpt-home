@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 半导体融资日报的向量模型与索引
-meta_description: 半导体融资日报的数据来自公开融资披露渠道，包括证券类媒体、行业协会公示、地方产业监管平台。按交易日更新当日披露的半导体领域融资事件，非交易日顺延至下一交易日
+meta_description: 半导体融资日报的向量模型与索引：半导体融资日报的向量模型与索引，涵盖配置与验证建议
 keywords: 半导体、融资日报、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

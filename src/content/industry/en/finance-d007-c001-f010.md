@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Database and Operations for IT Service Profitability
-meta_description: Data for IT service profitability and daily market reports comes from three sources: financial market APIs, internal trading system logs, and service
+meta_description: Database and Operations for IT Service Profitability
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

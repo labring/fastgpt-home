@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 文娱用品融资日报的文档解析与分块
-meta_description: 文娱用品融资日报数据主要来自证券交易所公开披露文件、行业第三方征信数据库、企业官方融资公告。更新节奏为每日更新单份日报文档，单份文档多为10MB以内的结构化
+meta_description: 文娱用品融资日报的文档解析与分块：文娱用品融资日报的文档解析与分块，涵盖配置与验证建议
 keywords: 文娱用品、融资日报、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

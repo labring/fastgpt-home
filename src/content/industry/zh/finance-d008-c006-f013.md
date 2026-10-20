@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 中药智能尽调报告的知识库检索与召回
-meta_description: 数据来源包括《中华人民共和国药典》各版、各省中药炮制规范、中药饮片质量标准、公开临床研究文献及药企出厂检验报告。更新节奏为国家药典每5年一次修订，地方规范每
+meta_description: 中药智能尽调报告的知识库检索与召回：中药智能尽调报告的知识库检索与召回，涵盖配置与验证建议
 keywords: 中药、智能尽调报告、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

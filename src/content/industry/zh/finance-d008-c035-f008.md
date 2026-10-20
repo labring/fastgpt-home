@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医美智能尽调报告的工具调用与插件
-meta_description: 医美智能尽调的数据来源为卫健部门的医疗机构执业资质数据库、药监部门的医美耗材注册备案系统、第三方医美服务平台的用户反馈记录。更新节奏存在差异，机构执业资质按
+meta_description: 医美智能尽调报告的工具调用与插件：医美智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 医美、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

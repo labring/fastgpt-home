@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商业地产研报检索的文档解析与分块
-meta_description: 商业地产研报的来源包括行业协会发布的行业监测报告、上市商业地产企业的年度运营公告、第三方咨询机构的专项调研文档。更新节奏以季度为常规周期，配套年度深度分析与
+meta_description: 商业地产研报检索的文档解析与分块：商业地产研报检索的文档解析与分块，涵盖配置与验证建议
 keywords: 商业地产、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

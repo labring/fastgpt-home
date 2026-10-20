@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Photovoltaic Financial
-meta_description: Photovoltaic financial report data mainly comes from annual/quarterly reports of listed companies, securities firm industry research reports
+meta_description: Document Parsing and Chunking for Photovoltaic Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -13,7 +13,7 @@ date_modified: 2026-09-15
 
 # Document Parsing and Chunking for Photovoltaic Financial Report Analysis
 
-This document is compatible with the FastGPT v4.8.12-alpha open source version.
+Reference only; verify against the target FastGPT release and deployment documentation.
 
 ## What the Data for This Category Looks Like
 

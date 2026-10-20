@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饲料收益率的多轮对话与提示词
-meta_description: 饲料相关收益率与行情数据主要来自农业农村部饲料监测点、全国主要农产品批发市场报价系统、期货交易所关联品种行情。更新节奏分为三类：现货报价每日更新一次，期货行
+meta_description: 饲料收益率的多轮对话与提示词：饲料收益率的多轮对话与提示词，涵盖配置与验证建议。
 keywords: 饲料、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通信服务融资日报的工具调用与插件
-meta_description: 通信服务融资日报的数据主要来自公开披露的行业融资公告、通信行业协会的信息汇总、上市主体的定期及临时报告。更新节奏为每日更新，覆盖前一个自然日的全行业通信服务
+meta_description: 通信服务融资日报的工具调用与插件：通信服务融资日报的工具调用与插件，涵盖配置与验证建议
 keywords: 通信服务、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

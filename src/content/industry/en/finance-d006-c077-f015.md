@@ -4,8 +4,8 @@ slug: /en/industry/finance-d006-c077-f015
 page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
-meta_title: Deployment and Upgrade of Investment Research Knowledge Base
-meta_description: Data sources for this category include passenger flow, revenue, and business operation reports exported from scenic spot operation management systems
+meta_title: Deployment and Upgrade of Investment Research Knowledge
+meta_description: Deployment and Upgrade of Investment Research Knowledge Base Construction for Tourist Attractions
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

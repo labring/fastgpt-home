@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for Gas Marketing Content
-meta_description: Gas industry marketing content data mainly comes from internal enterprise marketing management systems, user gas usage profile databases, and offline
+meta_description: Model Access and Configuration for Gas Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

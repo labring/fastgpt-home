@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Hotel and Catering Financing
-meta_description: Financing daily report data for hotel and catering comes primarily from store POS cash registers, supply chain cooperative financial platform APIs
+meta_description: Workflow Orchestration for Hotel and Catering Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

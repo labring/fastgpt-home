@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 环境监测智能尽调报告的向量模型与索引
-meta_description: 环境监测智能尽调报告的数据主要来自固定点位传感器、移动巡检设备、卫星遥感影像以及第三方环境监测机构的公开报告四类来源。数据更新节奏覆盖实时秒级、小时级、日级
+meta_description: 环境监测智能尽调报告的向量模型与索引：环境监测智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 环境监测、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

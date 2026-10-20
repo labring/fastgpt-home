@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电网设备收益率的表单与交互
-meta_description: 电网设备收益率相关数据是金融机构评估电力设备投资价值的核心依据，来源包括公开电力交易结算平台、电网运维后台的实时采集系统、行业招标备案的设备定价数据库。数据
+meta_description: 电网设备收益率的表单与交互：电网设备收益率的表单与交互，涵盖配置与验证建议。。。
 keywords: 电网设备、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

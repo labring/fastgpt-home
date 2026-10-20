@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 免税融资日报的工具调用与插件
-meta_description: 免税融资日报的数据主要来自免税经营主体的内部融资台账、合作银行的跨境支付结算记录、海关的免税品通关报关数据。更新节奏为每日T+1更新，单份日报包含数十到上百
+meta_description: 免税融资日报的工具调用与插件：免税融资日报的工具调用与插件，涵盖配置与验证建议。
 keywords: 免税、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

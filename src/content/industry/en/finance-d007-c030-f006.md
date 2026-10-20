@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Cosmetics Profit Margin and Market Trend Dialogue Logging
-meta_description: Cosmetics profit margin and market trend data comes from three main sources: internal brand ERP inventory and sales ledgers, public sales APIs from
+meta_description: Cosmetics Profit Margin and Market Trend Dialogue Logging and Auditing
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

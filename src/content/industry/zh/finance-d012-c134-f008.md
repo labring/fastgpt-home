@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 调味品营销内容的工具调用与插件
-meta_description: 调味品品类的数据主要来自包装印刷的配料表、供应链进销存系统、终端动销报表及品牌方官方营销素材库。数据更新节奏随包装改版、新品上线调整，新品信息更新周期为1-
+meta_description: 调味品营销内容的工具调用与插件：调味品营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 调味品、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 整车智能尽调报告的引用来源与溯源
-meta_description: 整车智能尽调报告的数据主要来自车企官方产品手册、工信部机动车产品公告、第三方机动车检测机构合规报告及VIN解析数据库。数据更新节奏随新车发布、召回公告或参数
+meta_description: 整车智能尽调报告的引用来源与溯源：整车智能尽调报告的引用来源与溯源，涵盖配置与验证建议
 keywords: 整车、智能尽调报告、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15
@@ -26,7 +26,7 @@ date_modified: 2026-09-15
 | `enable_source_tracing` | 开启 | 整车智能尽调报告需满足合规溯源要求，必须开启来源追踪功能 |
 | `top_k` | 前3-5条 | 整车数据来源权威且字段明确，过多召回会引入冗余信息，过少可能覆盖不全核心合规参数 |
 | `similarity_threshold` | 0.75-0.85 | 车型参数匹配精度要求高，需过滤低匹配度的无关数据，避免引用错误批次的车型信息 |
-| `source_citation_template` | `{{source_name}} | {{publish_date}} | {{vin_code}}` | 整车报告需绑定唯一VIN码与来源发布时间，明确溯源锚点，避免同车型不同批次的参数混淆 |
+| `source_citation_template` | `待核验值 | 待核验值 | 待核验值` | 整车报告需绑定唯一VIN码与来源发布时间，明确溯源锚点，避免同车型不同批次的参数混淆 |
 | `max_source_age` | 90 天 | 整车合规数据时效性强，超过90天的公告可能存在召回或参数调整，需及时更新溯源数据源 |
 | `reference_field_whitelist` | `["vin_code", "range_km", "curb_weight_kg", "certificate_no"]` | 仅保留核心溯源字段，过滤非必要信息，确保引用内容与整车尽调核心需求匹配 |
 

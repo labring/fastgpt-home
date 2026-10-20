@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 卫星通信收益率的模型接入与配置
-meta_description: 卫星通信收益率相关的日报数据，来源为专业卫星通信行业数据聚合平台，更新节奏为每日凌晨更新前一日的全量链路运行与交易数据。文档采用结构化CSV格式，单条数据包
+meta_description: 卫星通信收益率的模型接入与配置：卫星通信收益率的模型接入与配置，涵盖配置与验证建议
 keywords: 卫星通信、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

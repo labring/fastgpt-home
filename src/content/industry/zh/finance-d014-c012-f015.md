@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 住宅开发财报分析的部署与升级
-meta_description: 住宅开发领域的财报数据主要来自公开披露的年度、季度报告及临时公告，也包含项目端的开发运营台账。数据更新节奏为年度完整财报、季度运营数据，临时公告随重大项目事
+meta_description: 住宅开发财报分析的部署与升级：住宅开发财报分析的部署与升级，涵盖配置与验证建议。
 keywords: 住宅开发、财报分析与报告生成、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

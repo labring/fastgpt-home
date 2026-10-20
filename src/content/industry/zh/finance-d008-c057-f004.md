@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小家电智能尽调报告的向量模型与索引
-meta_description: 小家电智能尽调报告的数据主要来自品牌官方规格文档、电商平台详情页、第三方质检报告及行业抽检公示。数据更新节奏随新品上线、认证变更或合规要求调整，新品集中发布
+meta_description: 小家电智能尽调报告的向量模型与索引：小家电智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 小家电、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 炼化营销内容的表单与交互
-meta_description: 炼化品类的营销相关数据主要来自企业内部生产管控系统、下游经销商的需求报送端口、区域行业供需共享平台。数据更新节奏分为三类：生产端的原料与产出台账每日更新，经
+meta_description: 炼化营销内容的表单与交互：炼化营销内容的表单与交互，涵盖配置与验证建议。。。。。
 keywords: 炼化、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

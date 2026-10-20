@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 黑色家电营销内容的工作流编排
-meta_description: 黑色家电在金融营销场景下的数据，主要服务于家电分期、家电财险等金融业务的营销内容生成，来源包括家电厂商官方参数库、主流电商平台SKU数据库、金融系统用户家电
+meta_description: 黑色家电营销内容的工作流编排：黑色家电营销内容的工作流编排，涵盖配置与验证建议。
 keywords: 黑色家电、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

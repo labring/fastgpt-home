@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 综合服务收益率的部署与升级
-meta_description: 综合服务收益率与行情日报的数据来源包含交易所公开行情接口、持牌金融数据服务商API及内部产品运营系统。数据更新节奏为交易日每日一次，在收盘后1至2小时内完成
+meta_description: 综合服务收益率的部署与升级：综合服务收益率的部署与升级，涵盖配置与验证建议。。。
 keywords: 综合服务、收益率与行情日报播报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

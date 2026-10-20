@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 费用清单保险理赔初审的引用来源与溯源
-meta_description: 数据来源于保险公司理赔系统导出的结构化文件，或医疗机构出具的电子化收费清单。更新节奏随单条理赔案件生成，单份文件仅关联单案，无主动更新。文档以表格结构为主，
+meta_description: 费用清单保险理赔初审的引用来源与溯源：费用清单保险理赔初审的引用来源与溯源，涵盖配置与验证建议
 keywords: 费用清单、保险理赔初审、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

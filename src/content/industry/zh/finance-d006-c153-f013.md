@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 风电投研知识库建设的知识库检索与召回
-meta_description: 风电投研数据来源包含风机SCADA运行日志、项目可研报告、机组厂商技术手册、电网并网调度文件、行业政策文本等。更新节奏差异明显：SCADA运行日志按小时或分
+meta_description: 风电投研知识库建设的知识库检索与召回：风电投研知识库建设的知识库检索与召回，涵盖配置与验证建议
 keywords: 风电、投研知识库建设与治理、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 种植业营销内容的知识库检索与召回
-meta_description: 面向种植业的金融/保险/理财营销内容，数据来源包括农业技术推广站公开文档、农资厂商产品说明、金融机构面向种植户的营销物料、区域农业局种植补贴政策解读。更新节
+meta_description: 种植业营销内容的知识库检索与召回：种植业营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 种植业、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

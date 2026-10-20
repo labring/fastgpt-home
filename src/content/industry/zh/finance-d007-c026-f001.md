@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 出版收益率的HTTP 接口与外部系统
-meta_description: 出版类收益率与行情日报的数据来源为经监管备案的金融行情聚合平台与行业公开披露的产品净值公告。数据更新节奏为每日固定时点完成一次全量更新，单日仅发布一次完整数
+meta_description: 出版收益率的HTTP 接口与外部系统：出版收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 出版、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

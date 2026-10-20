@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 造纸营销内容的知识库检索与召回
-meta_description: 造纸营销相关的知识库数据主要来源于企业内部的产品规格手册、原料质检报告、生产工艺文档、定制化客户方案、行业展会宣传资料及下游包装印刷客户的反馈文档。数据更新
+meta_description: 造纸营销内容的知识库检索与召回：造纸营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 造纸、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

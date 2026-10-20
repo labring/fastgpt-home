@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 白色家电智能尽调报告的HTTP 接口与外部系统
-meta_description: 白色家电智能尽调报告的数据主要来自家电厂商官方API、国家能效标识数据库、电商平台销售与评价接口、第三方质检机构报告。数据更新节奏随场景变化：新品上市时实时
+meta_description: 白色家电智能尽调报告的HTTP 接口与外部系统：白色家电智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 白色家电、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

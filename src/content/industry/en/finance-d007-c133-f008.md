@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Securities Yield Data
-meta_description: Securities yield data originates from official exchange market data APIs and compliant third-party market data service providers. Update frequency
+meta_description: Tool Calling and Plugins for Securities Yield Data
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

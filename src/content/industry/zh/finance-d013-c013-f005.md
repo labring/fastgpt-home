@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 保险融资日报的多轮对话与提示词
-meta_description: 保险融资日报的数据来源包含保险机构内部资金运营台账、同业融资撮合平台交易记录以及监管报送的汇总数据。更新节奏为每日凌晨更新前一日的全量交易信息。文档通常以C
+meta_description: 保险融资日报的多轮对话与提示词：保险融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 保险、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

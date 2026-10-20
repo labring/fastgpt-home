@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 模型分配一体化 AI 平台的表单与交互
-meta_description: 这个品类的数据主要来自平台内置的大模型元数据、用户自定义接入的模型配置文件、实时调用链路的性能日志。内置模型元数据由平台按厂商官方接口同步更新，自定义模型配
+meta_description: 模型分配一体化 AI 平台的表单与交互：模型分配一体化 AI 平台的表单与交互，涵盖配置与验证建议
 keywords: 模型分配、一体化 AI 平台与多应用编排、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

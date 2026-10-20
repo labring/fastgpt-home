@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Conversation Logs and Auditing for Securities Yield Data
-meta_description: The data related to securities yields is sourced from official market data APIs of the Shanghai, Shenzhen and Beijing Stock Exchanges, and public
+meta_description: Conversation Logs and Auditing for Securities Yield Data
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

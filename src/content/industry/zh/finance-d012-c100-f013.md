@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物业管理营销内容的知识库检索与召回
-meta_description: 面向金融行业的物业管理营销内容数据主要来自金融机构旗下各物业项目的招商手册、业主服务告知书、季度活动通知、物业费标准文档、园区服务细则等。数据更新节奏不固定
+meta_description: 物业管理营销内容的知识库检索与召回：物业管理营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 物业管理、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interfaces and External Systems for Coking Coal
-meta_description: Data for coking coal due diligence reports comes primarily from domestic major port delivery ledgers, mine capacity reporting systems, bulk commodity
+meta_description: HTTP Interfaces and External Systems for Coking Coal Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

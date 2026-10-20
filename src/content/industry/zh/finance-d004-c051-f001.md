@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 处罚案例合规的HTTP 接口与外部系统
-meta_description: 处罚案例数据主要来源于企业内部合规管理系统的内部处罚记录，以及监管部门公开的行业处罚通报。数据更新节奏随监管通报发布节奏同步，内部记录则在处罚生效当日同步。
+meta_description: 处罚案例合规的HTTP 接口与外部系统：处罚案例合规的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 处罚案例、合规与内部制度问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

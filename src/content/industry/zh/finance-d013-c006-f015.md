@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 中药融资日报的部署与升级
-meta_description: 中药融资日报的数据来源主要为证券交易所公开披露的中药企业融资公告、地方金融监管局备案的融资信息、行业第三方数据库的公开融资数据。数据更新节奏为每日更新，覆盖
+meta_description: 中药融资日报的部署与升级：中药融资日报的部署与升级，涵盖配置与验证建议。。。。。
 keywords: 中药、融资日报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

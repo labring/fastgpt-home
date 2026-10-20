@@ -4,8 +4,8 @@ slug: /en/industry/finance-d008-c005-f005
 page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Dialogue and Prompt Engineering for Personal Care
-meta_description: Data sources include national regulatory department filed product information, brand official test reports, and third-party quality inspection public
+meta_title: Multi-turn Dialogue and Prompt Engineering for Personal
+meta_description: Multi-turn Dialogue and Prompt Engineering for Personal Care Product Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -26,7 +26,7 @@ For time-type expiration date fields, configure context association logic. This 
 Fixed fields for compliance statements require explicitly stating in prompts that only compliant content from filing documents may be referenced. Unfiled statements must not be generated.
 
 ## Configuration Settings
-This configuration is based on FastGPT V4.9.1.
+Reference only; verify against the target FastGPT release and deployment documentation.
 
 | Configuration Item | Recommended Value | Rationale |
 | --- | --- | --- |

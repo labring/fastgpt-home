@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 鞋类营销内容的向量模型与索引
-meta_description: 鞋类营销内容的来源包括品牌官方产品详情页、主流电商平台的商品文案、线下门店宣传物料、社交媒体种草内容及官方公众号推文。更新节奏为新品上线阶段批量更新，日常随
+meta_description: 鞋类营销内容的向量模型与索引：鞋类营销内容的向量模型与索引，涵盖配置与验证建议。
 keywords: 鞋类、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 环境监测研报检索的部署与升级
-meta_description: 环境监测研报的数据主要来自生态环境主管部门公开的国控/省控监测站点实时数据、第三方环境监测机构出具的专项分析报告、行业协会发布的区域环境质量公报。数据更新节
+meta_description: 环境监测研报检索的部署与升级：环境监测研报检索的部署与升级，涵盖配置与验证建议。
 keywords: 环境监测、研报检索与问答、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

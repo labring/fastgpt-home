@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油气开采融资日报的多轮对话与提示词
-meta_description: 油气开采融资日报的数据来源为行业公开备案信息、金融机构授信台账、油气项目招标公示。更新频率为每日T+1更新，确保覆盖前一日的最新融资动态。单条数据的文档结构
+meta_description: 油气开采融资日报的多轮对话与提示词：油气开采融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 油气开采、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

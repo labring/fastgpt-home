@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光学光电子收益率的HTTP 接口与外部系统
-meta_description: 光学光电子板块的行情数据来源于证券行业公开行情接口，更新节奏为交易日盘中每15分钟推送一次实时点位，盘后17点前生成完整日度汇总数据。数据文档采用标准JSO
+meta_description: 光学光电子收益率的HTTP 接口与外部系统：光学光电子收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 光学光电子、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

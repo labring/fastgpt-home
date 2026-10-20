@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 个护用品研报检索的文档解析与分块
-meta_description: 个护用品研报的数据主要来自品牌官方公告、电商平台公开销售数据、第三方行业调研文档。更新节奏随品类内新品发布同步更新，行业类研报按季度更新，电商数据随销售周期
+meta_description: 个护用品研报检索的文档解析与分块：个护用品研报检索的文档解析与分块，涵盖配置与验证建议
 keywords: 个护用品、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

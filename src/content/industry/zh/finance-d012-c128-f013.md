@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航运港口营销内容的知识库检索与召回
-meta_description: 航运港口的营销内容与运营数据来源涵盖港口运营管理系统、国际船期查询平台、货主服务手册、航线推广文案及官方公告。数据更新节奏差异显著：国际船期按每日更新，货物
+meta_description: 航运港口营销内容的知识库检索与召回：航运港口营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 航运港口、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

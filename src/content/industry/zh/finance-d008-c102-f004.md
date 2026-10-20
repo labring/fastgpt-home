@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 特钢智能尽调报告的向量模型与索引
-meta_description: 特钢智能尽调报告的数据来源涵盖钢厂生产台账、第三方质检报告、行业协会供需统计、海关进出口数据及下游客户订单记录。数据更新节奏分为实时（生产台账、订单数据）、
+meta_description: 特钢智能尽调报告的向量模型与索引：特钢智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 特钢、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

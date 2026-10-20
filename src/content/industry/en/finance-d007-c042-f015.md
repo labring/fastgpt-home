@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Brand Agency Operation Revenue
-meta_description: Brand agency operation revenue yield and market data comes from three sources: e-commerce platform background export files provided by brand partners
+meta_description: Deployment and Upgrade for Brand Agency Operation Revenue Yield
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

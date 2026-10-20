@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 乳制品营销内容的表单与交互
-meta_description: 乳制品营销相关数据主要来自企业生产管理系统、供应链ERP、终端POS数据及新品备案文档。数据更新节奏随业务节点调整：新品SKU备案时更新产品基础信息，销售数
+meta_description: 乳制品营销内容的表单与交互：乳制品营销内容的表单与交互，涵盖配置与验证建议。。。
 keywords: 乳制品、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

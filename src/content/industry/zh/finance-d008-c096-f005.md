@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦炭智能尽调报告的多轮对话与提示词
-meta_description: 焦炭相关尽调数据主要来自中国炼焦行业协会公开报告、沿海港口现货交易平台、期货交割库库存公示，以及钢铁企业内部采购结算记录。数据更新节奏存在差异，现货报价类数
+meta_description: 焦炭智能尽调报告的多轮对话与提示词：焦炭智能尽调报告的多轮对话与提示词，涵盖配置与验证建议
 keywords: 焦炭、智能尽调报告、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

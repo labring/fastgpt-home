@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 用量统计一体化 AI 平台的表单与交互
-meta_description: 用量统计的数据源来自平台的调用链路打点日志、资源消耗记录以及会话关联数据。数据更新节奏为准实时，按分钟级聚合后落盘，可支持按请求维度实时查询。数据文档为结构
+meta_description: 用量统计一体化 AI 平台的表单与交互：用量统计一体化 AI 平台的表单与交互，涵盖配置与验证建议
 keywords: 用量统计、一体化 AI 平台与多应用编排、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

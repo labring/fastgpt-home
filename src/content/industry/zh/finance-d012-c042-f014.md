@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 品牌代运营营销内容的表单与交互
-meta_description: 品牌代运营的营销内容数据主要来自品牌方的活动报名表单、社交平台用户评论、合作渠道的客户留资。数据更新节奏覆盖实时交互反馈、每日表单汇总、每周campaign
+meta_description: 品牌代运营营销内容的表单与交互：品牌代运营营销内容的表单与交互，涵盖配置与验证建议
 keywords: 品牌代运营、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

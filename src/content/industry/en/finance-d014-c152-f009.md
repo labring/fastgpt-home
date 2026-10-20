@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Citation Source and Traceability for Footwear Financial
-meta_description: Footwear financial report data primarily comes from periodic reports of listed companies disclosed by domestic and overseas stock exchanges, annual or
+meta_description: Citation Source and Traceability for Footwear Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -27,7 +27,7 @@ Exchange rate data for foreign currency settlement from cross-border footwear en
 ## Configuration Settings
 | Configuration Item | Recommended Approach | Rationale |
 | --- | --- | --- |
-| `quote_template` | `{{content}}\n\n> Source: {{source}}, Publish Time: {{publish_time}}, Report Cycle: {{report_cycle}}` | Footwear financial reports have multi-cycle and multi-segment data. Clear labeling of report cycle and source is required to avoid ambiguity |
+| `traceability details` | `the configured value\n\n> the configured source field, the configured publish-time field, the configured report-cycle field` | Footwear financial reports have multi-cycle and multi-segment data. Clear labeling of report cycle and source is required to avoid ambiguity |
 | `recall_top_k` | Top 6 entries | Footwear financial report breakdown dimensions include revenue, channels, supply chains and more. Sufficient recalled segments are needed to cover each segmented module |
 | `similarity_threshold` | 0.75–0.85 | Footwear financial reports have many segmented fields. Higher matching precision is needed to accurately locate content from corresponding modules |
 | `PARSE_FILE_TIMEOUT_SECONDS` | 900 seconds | Footwear financial reports contain large amounts of detailed data, leading to long parsing times. Extended timeout values are needed to prevent parsing interruptions |

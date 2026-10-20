@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 农化制品研报检索的多轮对话与提示词
-meta_description: 农化制品研报的数据来源包括国内农资行业协会公开统计、券商行业研究报告、农化企业定期经营公告、国际农化组织的行业分析文档。核心数据更新节奏分为多档：原料与产品
+meta_description: 农化制品研报检索的多轮对话与提示词：农化制品研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 农化制品、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 游戏营销内容的模型接入与配置
-meta_description: 金融/保险/理财类游戏的营销内容数据，主要来自运营团队产出的获客物料，包括信息流广告文案、新服（新活动）推广脚本、节日活动规则、社群互动话术等。数据更新随游
+meta_description: 游戏营销内容的模型接入与配置：游戏营销内容的模型接入与配置，涵盖配置与验证建议。
 keywords: 游戏、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

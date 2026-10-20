@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 酒店餐饮营销内容的多轮对话与提示词
-meta_description: 酒店餐饮的业务数据主要来源于门店菜单、预订系统、客评平台、会员消费记录及线下营销物料。数据更新节奏差异明显：菜单随季节、节假日或新品上线调整，客评实时生成，
+meta_description: 酒店餐饮营销内容的多轮对话与提示词：酒店餐饮营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 酒店餐饮、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

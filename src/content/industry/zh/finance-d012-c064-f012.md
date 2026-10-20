@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 影视院线营销内容的模型接入与配置
-meta_description: 影视院线营销内容的数据主要来自院线运营系统的排片文档、品牌部的营销物料库、第三方票务平台的同步排片数据。更新节奏随项目周期波动，新片宣发期物料每1-3天更新
+meta_description: 影视院线营销内容的模型接入与配置：影视院线营销内容的模型接入与配置，涵盖配置与验证建议
 keywords: 影视院线、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

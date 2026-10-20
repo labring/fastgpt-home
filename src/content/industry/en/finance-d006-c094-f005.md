@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompting for Refining and Chemical
-meta_description: Refining and chemical investment research data primarily comes from real-time operating data of distributed control systems (DCS) in refining and
+meta_description: Multi-turn Dialogue and Prompting for Refining and Chemical Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

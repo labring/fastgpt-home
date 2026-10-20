@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 涂料油墨融资日报的工具调用与插件
-meta_description: 涂料油墨融资日报的数据来源为基础化工行业融资监测数据库、各地中小企业融资公示平台、供应链金融备案系统。更新节奏为每日更新，当日发生的融资数据于次日凌晨完成归
+meta_description: 涂料油墨融资日报的工具调用与插件：涂料油墨融资日报的工具调用与插件，涵盖配置与验证建议
 keywords: 涂料油墨、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

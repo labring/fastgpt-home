@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for Commercial Building
-meta_description: Commercial building construction financial report data primarily comes from internal company engineering ledgers, completed project settlement
+meta_description: Citation Sources and Traceability for Commercial Building Construction Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -34,7 +34,7 @@ The multi-source, decentralized nature of commercial building construction finan
 ## Three Common Misconfigurations
 - After uploading 100 5KB files, half fail during training, and the console shows "parsing failed" with status code 400. The cause is that some files lack the `project_id` field in their metadata, and parsing interrupts because no unique commercial building construction project identifier is matched.
 - After switching the conversation component to variable reference mode, the temperature adjustment slider disappears from the "model parameter configuration" area. The cause is that variable reference mode inherits preset parameters from context variables by default; configure temperature values through context variables instead.
-- The `{{id}}` field in the knowledge base citation template returns a null value, and the generated citation traceability does not display a unique identifier. The cause is that the `enable_metadata_id_in_reference` configuration is not enabled, and no unique metadata ID for commercial building construction projects is linked as a traceability identifier.
+- The `example value` field in the knowledge base citation template returns a null value, and the generated citation traceability does not display a unique identifier. The cause is that the `enable_metadata_id_in_reference` configuration is not enabled, and no unique metadata ID for commercial building construction projects is linked as a traceability identifier.
 
 ## How to Confirm Configuration is Active
 - Upload a single commercial building construction financial report file, and check that the parsing log returned by the console includes the preset unique fields to confirm the matching rules take effect.

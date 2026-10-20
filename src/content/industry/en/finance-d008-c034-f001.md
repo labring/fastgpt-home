@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interfaces and External Systems for Medical Device
-meta_description: Data for medical device intelligent due diligence reports comes primarily from the National Medical Products Administration Medical Device
+meta_description: HTTP Interfaces and External Systems for Medical Device Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

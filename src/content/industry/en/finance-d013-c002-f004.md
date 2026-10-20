@@ -4,8 +4,8 @@ slug: /en/industry/finance-d013-c002-f004
 page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
-meta_title: Vector Models and Indexing for Professional Services Funding
-meta_description: The data sources for professional services funding daily reports include public funding announcements from professional services institutions, daily
+meta_title: Vector Models and Indexing for Professional Services
+meta_description: Vector Models and Indexing for Professional Services Funding Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

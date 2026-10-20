@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小家电营销内容的知识库检索与召回
-meta_description: 小家电的营销内容数据主要来自品牌官方产品参数文档、电商平台商品详情页素材、合规质检报告、营销推广文案库、售后FAQ库。更新节奏随新品发布、营销活动上线调整，
+meta_description: 小家电营销内容的知识库检索与召回：小家电营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 小家电、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

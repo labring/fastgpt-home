@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 特钢财报分析的HTTP 接口与外部系统
-meta_description: 特钢财报的数据来源主要为境内外证券交易所披露的上市公司年报、季报，以及行业协会发布的月度产能监测数据。更新节奏因数据类型不同存在差异：年度报告、季度报告按固
+meta_description: 特钢财报分析的HTTP 接口与外部系统：特钢财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 特钢、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油服工程研报检索的文档解析与分块
-meta_description: 油服工程研报主要来自行业协会、油服企业公开的项目报告、第三方能源咨询机构的专项调研文档。更新节奏无固定周期，随项目推进或行业动态发布。文档多为长篇幅PDF或
+meta_description: 油服工程研报检索的文档解析与分块：油服工程研报检索的文档解析与分块，涵盖配置与验证建议
 keywords: 油服工程、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

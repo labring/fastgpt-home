@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油气开采智能尽调报告的工作流编排
-meta_description: 油气开采智能尽调的数据来源包括钻井现场传感器实时日志、区块勘探阶段性报告、试采成本核算报表、第三方地质合规文件等。数据更新节奏随项目阶段变化：钻井阶段为实时
+meta_description: 油气开采智能尽调报告的工作流编排：油气开采智能尽调报告的工作流编排，涵盖配置与验证建议
 keywords: 油气开采、智能尽调报告、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

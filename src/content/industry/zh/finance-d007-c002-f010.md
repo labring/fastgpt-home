@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专业服务收益率的数据库与运维
-meta_description: 数据来源为合规的金融市场公开行情接口、机构托管报告接口；更新节奏为每个交易日收盘后T+1日完成全量日报更新，部分日内高频行情子项为盘中实时推送快照；文档结构
+meta_description: 专业服务收益率的数据库与运维：专业服务收益率的数据库与运维，涵盖配置与验证建议。
 keywords: 专业服务、收益率与行情日报播报、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

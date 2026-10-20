@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Chemical Raw
-meta_description: The financial report data for the chemical raw materials category mainly comes from annual reports, quarterly reports of listed companies, and
+meta_description: Multi-turn Dialogue and Prompt Engineering for Chemical Raw Materials Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -33,7 +33,7 @@ The multi-time granularity data of the chemical raw materials category requires 
 
 ## Three Common Mistakes
 - Phenomenon: Multi-turn dialogue response time exceeds 60 seconds, and the backend log shows a `request_timeout` error. Cause: The upper limit of `maxContext` is not restricted, and loading all financial report documents at once causes excessive model inference time.
-- Phenomenon: When calling the chart tool to generate a raw material cost trend chart, the chart returns empty, and the front-end interface displays a blank placeholder. Cause: The prompt does not clearly specify the unit fields in the financial report (such as yuan per ton), and the model cannot correctly match the data dimensions, resulting in chart generation failure.
+- Phenomenon: When calling the chart tool to generate a raw material cost trend chart, the chart returns empty, and the front-end interface displays a blank pending verification. Cause: The prompt does not clearly specify the unit fields in the financial report (such as yuan per ton), and the model cannot correctly match the data dimensions, resulting in chart generation failure.
 - Phenomenon: The AI dialogue node returns an `empty` field or system error, and the front-end displays no clear prompt. Cause: The retry logic for `toolCallMaxRetry` is not configured. A single tool call failure directly returns an empty result, and the exception capture process is not triggered.
 
 ## How to Confirm the Configuration Is Complete

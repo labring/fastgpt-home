@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Satellite Communication Revenue
-meta_description: Data related to satellite communication revenue rates is sourced from the telemetry collection system of satellite ground measurement and control
+meta_description: Workflow Orchestration for Satellite Communication Revenue Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

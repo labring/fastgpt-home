@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学原料营销内容的向量模型与索引
-meta_description: 数据主要来自金融机构对接的化工企业内部产品技术文档、合规性报告、营销推广物料，以及行业公开的标准资料。更新节奏随产品迭代、合规要求调整，无固定周期但单次更新
+meta_description: 化学原料营销内容的向量模型与索引：化学原料营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 化学原料、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

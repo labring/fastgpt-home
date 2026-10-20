@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电子元件营销内容的向量模型与索引
-meta_description: 数据来源包括原厂规格说明书、电商渠道产品参数页、行业技术文档、定制化营销推广物料。更新节奏随原厂新品发布、核心参数调整触发，无固定周期。文档结构多为结构化参
+meta_description: 电子元件营销内容的向量模型与索引：电子元件营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 电子元件、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

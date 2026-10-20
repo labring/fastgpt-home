@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 种植业智能尽调报告的模型接入与配置
-meta_description: 种植业智能尽调报告的数据主要来自农业农村部公开监测数据集、种植基地物联网传感采集数据、第三方农资流通台账数据。数据更新节奏分两类：大田作物生长监测数据按旬更
+meta_description: 种植业智能尽调报告的模型接入与配置：种植业智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 种植业、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

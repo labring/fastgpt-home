@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物流投研知识库建设的引用来源与溯源
-meta_description: 物流投研数据主要来自交通运输主管部门月度运行通报、物流企业公开财报、国际海运舱单数据、干线运输时效监测报告及快递末端网点备案信息，服务于金融机构的物流行业授
+meta_description: 物流投研知识库建设的引用来源与溯源：物流投研知识库建设的引用来源与溯源，涵盖配置与验证建议
 keywords: 物流、投研知识库建设与治理、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

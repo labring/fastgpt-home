@@ -4,8 +4,8 @@ slug: /en/industry/finance-d008-c015-f011
 page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
-meta_title: Document Parsing and Chunking for Energy Storage Intelligent
-meta_description: Data for energy storage intelligent due diligence reports mainly comes from energy storage project feasibility study reports, grid connection
+meta_title: Document Parsing and Chunking for Energy Storage
+meta_description: Document Parsing and Chunking for Energy Storage Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

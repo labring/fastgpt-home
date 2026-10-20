@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Dairy Product Yield Rates
-meta_description: The data for this category mainly comes from the public monitoring database of the domestic dairy industry association, internal daily reports from
+meta_description: Tool Calling and Plugins for Dairy Product Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

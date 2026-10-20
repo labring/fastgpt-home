@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompting for Oilfield Service
-meta_description: Oilfield service engineering yield rate and market data is primarily sourced from internal enterprise production scheduling systems, ERP accounting
+meta_description: Multi-turn Dialogue and Prompting for Oilfield Service Engineering Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

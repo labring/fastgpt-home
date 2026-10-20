@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多元控股融资日报的HTTP 接口与外部系统
-meta_description: 多元控股融资日报的数据来源为各控股子公司公开披露的融资公告、工商备案融资信息及集团内部归集的融资台账。更新节奏为每日T+1同步前一日全量数据。单篇日报文档包
+meta_description: 多元控股融资日报的HTTP 接口与外部系统：多元控股融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 多元控股、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

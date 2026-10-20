@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 汽车服务收益率的分享与嵌入
-meta_description: 汽车服务收益率与行情日报的数据来源为门店POS收银系统、供应链进销存系统、客户管理系统的每日交易汇总。更新节奏为每日固定时段完成当日全量数据的清洗与汇总，生
+meta_description: 汽车服务收益率的分享与嵌入：汽车服务收益率的分享与嵌入，涵盖配置与验证建议。。。
 keywords: 汽车服务、收益率与行情日报播报、分享与嵌入
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

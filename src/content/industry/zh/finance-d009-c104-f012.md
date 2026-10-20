@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 玻璃研报检索的模型接入与配置
-meta_description: 玻璃行业研报的数据来源主要包括中国建筑玻璃与工业玻璃协会公开统计资料、上市建材企业年度与半年度报告、第三方建材行业咨询机构公开研究文档。更新节奏分为三类：季
+meta_description: 玻璃研报检索的模型接入与配置：玻璃研报检索的模型接入与配置，涵盖配置与验证建议。
 keywords: 玻璃、研报检索与问答、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

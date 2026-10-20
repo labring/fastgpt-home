@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化妆品营销内容的工具调用与插件
-meta_description: 化妆品营销相关数据主要来源于品牌方SKU管理系统、国产非特化妆品备案平台、电商商品详情页及第三方成分检测报告。备案类数据在完成合规审核后固定更新，商品价格、
+meta_description: 化妆品营销内容的工具调用与插件：化妆品营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 化妆品、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

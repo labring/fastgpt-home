@@ -4,7 +4,7 @@ slug: /zh/industry/fin-step-c009-2
 page_type: 行业作业环节页
 article_section: 保险
 is_part_of: FastGPT 技术中心
-meta_title: 企业财产保险承保与理赔的现场识别火灾、自然灾害等重大风险条件
+meta_title: 企业财产保险承保与理赔的现场识别火灾、自然灾害等重大风险条件：哪一部分能交给系统
 meta_description: 企业财产保险承保与理赔的现场识别火灾、自然灾害等重大风险条件：哪一部分能交给系统
 keywords: 企业财产保险承保与理赔、保险、环节2
 source_type: 金融业务分类与作业事实取自行业研究报告（含监管文件来源编号）

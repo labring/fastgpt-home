@@ -4,8 +4,8 @@ slug: /zh/industry/fin-step-c039-2
 page_type: 行业作业环节页
 article_section: 公募基金
 is_part_of: FastGPT 技术中心
-meta_title: 混合基金多资产配置与运营的汇总权益、利率、信用和流动性风险：
-meta_description: 混合基金多资产配置与运营的汇总权益、利率、信用和流动性风险：哪一部分能交给系统
+meta_title: 混合基金多资产配置与运营的汇总权益、利率、信用和流动性风险：哪一部分能交给系统
+meta_description: 混合基金多资产配置与运营的汇总权益、利率、信用和流动性风险：哪一部分能交给系统：混合基金多资产配置与运营的汇总权益、利率、信用和流动性风险：哪一部分能交给系统，涵盖配置与验证建议
 keywords: 混合基金多资产配置与运营、公募基金、环节2
 source_type: 金融业务分类与作业事实取自行业研究报告（含监管文件来源编号）
 date_published: 2026-09-15

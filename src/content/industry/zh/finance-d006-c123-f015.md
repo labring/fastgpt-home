@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 能源金属投研知识库建设的部署与升级
-meta_description: 能源金属投研数据主要来自行业协会公开报告、国内大宗商品期货交易所行情、矿山与冶炼企业披露的经营公告、第三方大宗商品投研机构发布的研报。数据更新节奏分层：现货
+meta_description: 能源金属投研知识库建设的部署与升级：能源金属投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 能源金属、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

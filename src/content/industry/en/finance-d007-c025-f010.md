@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Database and Operations for Rural Commercial Bank Yield Data
-meta_description: Rural commercial bank yield data mainly comes from the local bank’s retail credit product ledgers, interbank certificate of deposit issuance ledgers
+meta_description: Database and Operations for Rural Commercial Bank Yield Data
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

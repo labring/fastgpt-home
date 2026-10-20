@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 计算机设备研报检索的部署与升级
-meta_description: 计算机设备研报数据主要来自硬件厂商官方技术文档、行业第三方检测机构公开报告、标准化行业数据库。更新节奏随厂商新品发布、季度行业盘点动态调整，单次文档篇幅跨度
+meta_description: 计算机设备研报检索的部署与升级：计算机设备研报检索的部署与升级，涵盖配置与验证建议
 keywords: 计算机设备、研报检索与问答、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

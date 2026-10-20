@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 风电财报分析的向量模型与索引
-meta_description: 风电行业财报数据主要来自境内外上市风电企业的定期披露公告、行业协会公开统计报表。更新节奏以季度、半年度、年度为核心周期，临时公告如重大项目并网、产能调整信息
+meta_description: 风电财报分析的向量模型与索引：风电财报分析的向量模型与索引，涵盖配置与验证建议。
 keywords: 风电、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

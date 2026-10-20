@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电子元件研报检索的文档解析与分块
-meta_description: 电子元件研报的数据主要来自券商研究所行业报告、行业协会公开统计、上游原厂技术白皮书与供应链披露文档。更新节奏随行业动态调整，新品发布、供应链波动、下游应用拓
+meta_description: 电子元件研报检索的文档解析与分块：电子元件研报检索的文档解析与分块，涵盖配置与验证建议
 keywords: 电子元件、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

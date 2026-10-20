@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Customer Service and Account Enquiries
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Account Issue Customer Service
-meta_description: Account-related data mainly comes from user-submitted account consultation tickets, account transaction logs from core business systems, and
+meta_description: Tool Calling and Plugins for Account Issue Customer Service
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

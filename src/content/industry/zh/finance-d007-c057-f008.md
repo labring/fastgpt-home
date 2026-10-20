@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小家电收益率的工具调用与插件
-meta_description: 小家电收益率与行情数据主要来源于国家能效标识公开数据库、第三方家电零售监测接口及厂商供货价文档。数据更新节奏为每日凌晨2点至4点完成前一日全品类全量数据更新
+meta_description: 小家电收益率的工具调用与插件：小家电收益率的工具调用与插件，涵盖配置与验证建议。
 keywords: 小家电、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

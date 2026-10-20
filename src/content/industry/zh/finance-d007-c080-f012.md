@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 服装家纺收益率的模型接入与配置
-meta_description: 该品类的数据来源包括国内纺织面料批发市场的公开报价系统、品牌家纺的终端销售台账、上游原料供应商的出厂价报表。更新节奏为：原料类数据每日更新，终端销售数据按周
+meta_description: 服装家纺收益率的模型接入与配置：服装家纺收益率的模型接入与配置，涵盖配置与验证建议
 keywords: 服装家纺、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

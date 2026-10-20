@@ -4,8 +4,8 @@ slug: /en/industry/finance-d012-c100-f004
 page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
-meta_title: Vector Models and Indexing for Property Management Marketing
-meta_description: Property management marketing content data is primarily sourced from internal marketing systems, historical records of owner community groups, and
+meta_title: Vector Models and Indexing for Property Management
+meta_description: Vector Models and Indexing for Property Management Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小家电投研知识库建设的数据库与运维
-meta_description: 小家电投研数据主要来自品牌官方参数手册、电商平台商品详情页、第三方检测机构合规报告、供应链供应商文档。数据更新节奏随新品发布、能效标准调整波动，无固定周期。
+meta_description: 小家电投研知识库建设的数据库与运维：小家电投研知识库建设的数据库与运维，涵盖配置与验证建议
 keywords: 小家电、投研知识库建设与治理、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

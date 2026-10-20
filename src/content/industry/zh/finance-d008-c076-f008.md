@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 文娱用品智能尽调报告的工具调用与插件
-meta_description: 文娱用品的数据源主要包括生产企业自主报送的合规档案、国内电商平台公开的销售监测数据、行业监测机构的季度抽检结果。数据更新节奏为月度更新核心销售与铺货数据，季
+meta_description: 文娱用品智能尽调报告的工具调用与插件：文娱用品智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 文娱用品、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

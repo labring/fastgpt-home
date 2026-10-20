@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航运港口融资日报的模型接入与配置
-meta_description: 航运港口融资日报的数据来源于港口作业管理系统、船舶调度平台、海关通关数据及合作金融机构的授信台账。数据更新节奏为每日凌晨完成前一日全量数据归集与校验。单份日
+meta_description: 航运港口融资日报的模型接入与配置：航运港口融资日报的模型接入与配置，涵盖配置与验证建议
 keywords: 航运港口、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

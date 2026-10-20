@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程机械融资日报的部署与升级
-meta_description: 工程机械融资日报的数据来源包括工程机械整机厂商的融资租赁系统、合作银行的对公信贷台账、工程机械行业协会的设备备案数据库。数据更新节奏为每日凌晨完成全量同步与
+meta_description: 工程机械融资日报的部署与升级：工程机械融资日报的部署与升级，涵盖配置与验证建议。
 keywords: 工程机械、融资日报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

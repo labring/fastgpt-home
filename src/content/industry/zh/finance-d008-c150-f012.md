@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁矿石智能尽调报告的模型接入与配置
-meta_description: 铁矿石相关尽调数据来源包含大宗商品交易公开数据源、海关通关公开数据、行业监测公开数据集。数据更新节奏存在差异：现货价格数据每日更新，港口库存与到港预报数据每
+meta_description: 铁矿石智能尽调报告的模型接入与配置：铁矿石智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 铁矿石、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

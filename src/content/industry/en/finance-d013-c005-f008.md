@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Personal Care Products
-meta_description: Data for personal care products financing daily reports comes from the national enterprise credit information disclosure system, publicly filed brand
+meta_description: Tool Calling and Plugins for Personal Care Products Financing Daily Report
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

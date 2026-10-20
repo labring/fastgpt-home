@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Precious Metal Financing
-meta_description: Precious metal financing daily report data comes primarily from official precious metal exchange market APIs, industry news partner data sources, and
+meta_description: Document Parsing and Chunking for Precious Metal Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

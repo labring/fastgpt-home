@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 出版营销内容的文档解析与分块
-meta_description: 金融领域的出版营销内容数据主要来源于机构的投资者教育资料、产品宣传册、系列理财手册、保险产品推广物料，以及批量整理的营销素材清单。数据更新节奏随产品上线周期
+meta_description: 出版营销内容的文档解析与分块：出版营销内容的文档解析与分块，涵盖配置与验证建议。
 keywords: 出版、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

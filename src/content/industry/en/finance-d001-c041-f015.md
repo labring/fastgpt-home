@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: KYC and AML Document Verification
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for List Screening KYC
-meta_description: List screening data has three primary sources: official public sanctions lists, risk warning lists released by regulatory authorities, and suspicious
+meta_description: Deployment and Upgrade for List Screening KYC
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

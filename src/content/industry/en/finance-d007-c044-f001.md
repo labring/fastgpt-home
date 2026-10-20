@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c044-f001
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: HTTP Interfaces and External Systems for Commercial Property
-meta_description: Sources of commercial property yield rate data primarily include daily revenue and cost ledgers from the property’s own operation management system
+meta_title: HTTP Interfaces and External Systems for Commercial
+meta_description: HTTP Interfaces and External Systems for Commercial Property Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 汽车服务融资日报的文档解析与分块
-meta_description: 汽车服务融资日报的数据来源包括汽车经销商的批量融资申请单、融资租赁公司的放款台账、行业征信机构的车辆融资备案数据。更新节奏为每工作日更新，单份文档包含1至7
+meta_description: 汽车服务融资日报的文档解析与分块：汽车服务融资日报的文档解析与分块，涵盖配置与验证建议
 keywords: 汽车服务、融资日报、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

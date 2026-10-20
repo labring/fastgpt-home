@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小金属融资日报的知识库检索与召回
-meta_description: 小金属融资日报的数据来源包括中国有色金属工业协会小金属分会公开披露的行业数据、各地方大宗商品交易所的企业融资公告、第三方行业资讯平台的整理信息。更新节奏为每
+meta_description: 小金属融资日报的知识库检索与召回：小金属融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 小金属、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

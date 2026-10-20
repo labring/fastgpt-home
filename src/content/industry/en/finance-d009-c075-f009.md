@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Citation Source and Traceability for Automotive Industry
-meta_description: Vehicle research report data mainly comes from securities research institutions, authoritative automotive industry associations, and public
+meta_description: Citation Source and Traceability for Automotive Industry Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -27,7 +27,7 @@ Multiple fields with different units and statistical cycles require traceability
 ## Configuration settings
 | Configuration Item | Recommended Value | Rationale |
 | ---- | ---- | ---- |
-| `Citation template` | `【Source: {source} | Publish Time: {publish_time} | Page Number: {page_num}】` | Vehicle research reports need to clearly mark the source institution, release time and specific page number to meet traceability requirements in professional scenarios |
+| `Traceability details` | `【Source: {source} | Publish Time: {publish_time} | Page Number: {page_num}】` | Vehicle research reports need to clearly mark the source institution, release time and specific page number to meet traceability requirements in professional scenarios |
 | `Recall count` | Top 8-12 entries | Vehicle research reports have high data density. Too many retrieved entries increases context redundancy. Too few fails to cover core data fragments |
 | `Similarity threshold` | 0.75-0.85 | Vehicle research reports contain many professional terms. A threshold that is too low introduces irrelevant fragments. A threshold that is too high may miss relevant data content |
 | `PARSE_FILE_TIMEOUT_SECONDS` | 300-600 seconds | Long in-depth research reports take longer to parse. This range avoids incomplete document parsing due to timeout |

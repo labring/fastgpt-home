@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多元控股营销内容的HTTP 接口与外部系统
-meta_description: 营销内容数据来源于集团旗下各金融、保险、理财子业务线的专属素材管理系统，更新节奏随各子业务的营销活动调整，无固定周期但批量同步频率不低于每日一次。文档采用结
+meta_description: 多元控股营销内容的HTTP 接口与外部系统：多元控股营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 多元控股、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

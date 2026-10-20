@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水泥智能尽调报告的向量模型与索引
-meta_description: 水泥智能尽调报告的数据主要来自生产企业的批次质检台账、建材行业协会的区域供应监测数据、第三方检测机构的纸质/电子质检报告。数据更新节奏分为三类：生产台账每日
+meta_description: 水泥智能尽调报告的向量模型与索引：水泥智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 水泥、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 休闲食品营销内容的向量模型与索引
-meta_description: 这个品类的营销内容数据主要来自品牌自有营销素材库，包含商品详情页文案、节日促销话术、直播脚本片段、包装宣传语、会员活动通知等。更新节奏随新品上线、季节性营销
+meta_description: 休闲食品营销内容的向量模型与索引：休闲食品营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 休闲食品、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

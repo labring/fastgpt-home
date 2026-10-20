@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁矿石财报分析的向量模型与索引
-meta_description: 数据主要来自上市铁矿石相关企业的定期报告、行业权威机构发布的供需与价格报告，以及港口公开的吞吐库存数据。更新节奏为企业财报按季度、年度发布，行业数据按月度更
+meta_description: 铁矿石财报分析的向量模型与索引：铁矿石财报分析的向量模型与索引，涵盖配置与验证建议
 keywords: 铁矿石、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Commercial Vehicle Yield Rates
-meta_description: Data related to commercial vehicle yield rates comes primarily from three types of data sources: on-board T-BOX terminals, logistics order management
+meta_description: Workflow Orchestration for Commercial Vehicle Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

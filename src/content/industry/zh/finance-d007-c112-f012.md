@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 白色家电收益率的模型接入与配置
-meta_description: 白色家电收益率相关数据主要来自品牌方供货台账、线上电商交易后台、线下零售终端的进销存系统。数据更新节奏分两类，线上终端售价与销量按日更新，线下渠道的供货价与
+meta_description: 白色家电收益率的模型接入与配置：白色家电收益率的模型接入与配置，涵盖配置与验证建议
 keywords: 白色家电、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

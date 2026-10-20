@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Personal Care Product
-meta_description: Profitability-related data for this category comes from internal brand inventory and sales systems, public sales application programming interfaces
+meta_description: Tool Calling and Plugins for Personal Care Product Profitability Reporting
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

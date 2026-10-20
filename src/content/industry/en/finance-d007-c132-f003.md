@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Sharing and Embedding of Computer Equipment Yield Data
-meta_description: Computer equipment yield data is primarily sourced from device vendor operation and maintenance APIs, third-party computing power rental trading
+meta_description: Sharing and Embedding of Computer Equipment Yield Data
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

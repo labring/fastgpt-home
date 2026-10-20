@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 软件开发收益率的工作流编排
-meta_description: 这个品类的数据来源于代码托管平台提交日志、CI/CD流水线运行记录、研发管理系统工时数据、金融业务后台的营收关联报表。更新节奏为每日生成当日统计的日报数据集
+meta_description: 软件开发收益率的工作流编排：软件开发收益率的工作流编排，涵盖配置与验证建议。。。
 keywords: 软件开发、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

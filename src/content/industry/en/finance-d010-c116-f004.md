@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Bidding and Tender Reports
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Competitor Quote Bidding
-meta_description: Competitor quote data is primarily sourced from public bidding platform winning bid announcements, attachments from internal enterprise bid response
+meta_description: Vector Models and Indexing for Competitor Quote Bidding Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

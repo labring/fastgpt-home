@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 影视院线投研知识库建设的上下文与 token
-meta_description: 影视院线投研数据主要来自公开院线运营报表、第三方票房监测平台、影院排期系统、影视项目备案公示文件。更新节奏覆盖日度（票房、上座率）、周度（排片调整）、不定期
+meta_description: 影视院线投研知识库建设的上下文与 token：影视院线投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 影视院线、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

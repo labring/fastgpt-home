@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for Commercial Real
-meta_description: Commercial real estate investment research data primarily comes from project operation ledgers, business district passenger flow monitoring systems
+meta_description: Knowledge Base Retrieval and Recall for Commercial Real Estate Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

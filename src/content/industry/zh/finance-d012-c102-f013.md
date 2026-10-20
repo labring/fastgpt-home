@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 特钢营销内容的知识库检索与召回
-meta_description: 特钢营销内容的数据主要来自生产台账、第三方质检报告、获客案例文档及配套金融服务方案。生产类数据每日更新，营销物料按需调整，金融配套方案每季度更新。文档结构多
+meta_description: 特钢营销内容的知识库检索与召回：特钢营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 特钢、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

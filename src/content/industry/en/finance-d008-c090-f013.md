@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for Intelligent Due
-meta_description: Financial due diligence data for the coatings and inks industry comes primarily from national and industry standard compliance documents
+meta_description: Knowledge Base Retrieval and Recall for Intelligent Due Diligence Reports in the Coatings and Inks Industry
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

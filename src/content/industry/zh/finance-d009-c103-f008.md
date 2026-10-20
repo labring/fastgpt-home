@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 环境监测研报检索的工具调用与插件
-meta_description: 环境监测研报的数据主要来自生态环境部门公开监测站点、第三方环境监测机构的公开报告、行业协会发布的行业分析文档。数据更新节奏覆盖实时小时级的单点位监测数据、月
+meta_description: 环境监测研报检索的工具调用与插件：环境监测研报检索的工具调用与插件，涵盖配置与验证建议
 keywords: 环境监测、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

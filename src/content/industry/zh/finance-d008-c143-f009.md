@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 软件开发智能尽调报告的引用来源与溯源
-meta_description: 金融领域的软件开发智能尽调报告的数据主要来自自研交易系统、风控系统的代码托管仓库、合规依赖包清单、金融级漏洞扫描报告、开源协议合规文档四类。代码仓库数据包含
+meta_description: 软件开发智能尽调报告的引用来源与溯源：软件开发智能尽调报告的引用来源与溯源，涵盖配置与验证建议
 keywords: 软件开发、智能尽调报告、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

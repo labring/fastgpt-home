@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 投资平台财报分析的文档解析与分块
-meta_description: 投资平台的财报数据主要来自公开交易所披露平台、上市公司官方公告渠道，更新节奏随财报周期集中，临时公告随重大事件触发。文档多为标准PDF格式，包含结构化财务表
+meta_description: 投资平台财报分析的文档解析与分块：投资平台财报分析的文档解析与分块，涵盖配置与验证建议
 keywords: 投资平台、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 自动化设备收益率的对话日志与审计
-meta_description: 自动化设备的采集数据来自内置工业传感器、PLC控制器与边缘计算网关，更新节奏为分钟级批量上报。数据采用结构化格式存储，包含设备唯一标识、采集时间戳、单工位收
+meta_description: 自动化设备收益率的对话日志与审计：自动化设备收益率的对话日志与审计，涵盖配置与验证建议
 keywords: 自动化设备、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

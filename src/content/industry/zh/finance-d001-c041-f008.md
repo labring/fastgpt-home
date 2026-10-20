@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 名单筛查KYC 的工具调用与插件
-meta_description: 名单筛查的数据主要来源于全球监管机构发布的制裁清单、国际合规组织的风险主体名录以及行业共建的合规数据库。数据更新无固定周期但高频推送，部分核心名单会随监管政
+meta_description: 名单筛查KYC 的工具调用与插件：名单筛查KYC 的工具调用与插件，涵盖配置与验证建议
 keywords: 名单筛查、KYC 与反洗钱资料核验、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 文娱用品研报检索的工具调用与插件
-meta_description: 文娱用品研报数据主要来自轻工制造行业协会公开报告、头部品牌厂商季度披露文件、电商平台销售监测数据及线下零售终端抽样数据。更新节奏覆盖月度渠道监测、季度品类趋
+meta_description: 文娱用品研报检索的工具调用与插件：文娱用品研报检索的工具调用与插件，涵盖配置与验证建议
 keywords: 文娱用品、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

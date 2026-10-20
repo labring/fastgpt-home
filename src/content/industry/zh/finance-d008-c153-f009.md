@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 风电智能尽调报告的引用来源与溯源
-meta_description: 风电智能尽调报告的数据来源主要包括风机厂商出厂检测报告、风电场运维日志、电网并网数据及气象部门风速风向记录。更新节奏存在差异：运维日志每日更新，出厂报告为一
+meta_description: 风电智能尽调报告的引用来源与溯源：风电智能尽调报告的引用来源与溯源，涵盖配置与验证建议
 keywords: 风电、智能尽调报告、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

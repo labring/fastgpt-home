@@ -5,7 +5,7 @@ page_type: 行业作业环节页
 article_section: 银行信贷
 is_part_of: FastGPT 技术中心
 meta_title: 信用卡的持续评估额度、账单和还款风险：哪一部分能交给系统
-meta_description: 信用卡的持续评估额度、账单和还款风险：哪一部分能交给系统
+meta_description: 信用卡的持续评估额度、账单和还款风险：哪一部分能交给系统：信用卡的持续评估额度、账单和还款风险：哪一部分能交给系统，涵盖配置与验证建议
 keywords: 信用卡、银行信贷、环节2
 source_type: 金融业务分类与作业事实取自行业研究报告（含监管文件来源编号）
 date_published: 2026-09-15

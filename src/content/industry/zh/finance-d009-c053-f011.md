@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多元金融研报检索的文档解析与分块
-meta_description: 多元金融研报的数据来源包含公开券商研报数据库、第三方金融数据服务平台的非银金融研报专区、机构内部投研归档文档。更新节奏随发布主体的研报产出节奏调整，无固定固
+meta_description: 多元金融研报检索的文档解析与分块：多元金融研报检索的文档解析与分块，涵盖配置与验证建议
 keywords: 多元金融、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

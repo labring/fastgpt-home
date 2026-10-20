@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 教育服务收益率的工具调用与插件
-meta_description: 教育服务领域属于金融理财细分场景下的收益率与行情日报播报品类，数据来源为区域教育服务监管公开指导价、第三方教育运营监测平台的每日采集数据。数据更新节奏固定为
+meta_description: 教育服务收益率的工具调用与插件：教育服务收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 教育服务、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

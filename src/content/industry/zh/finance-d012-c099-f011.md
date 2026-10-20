@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 燃气营销内容的文档解析与分块
-meta_description: 燃气营销相关数据主要来源于燃气经营企业的营销物料与业务台账，包括线下活动签到表、线上营销素材备份、区域用户触达台账、燃气具推广产品手册等。更新节奏按文档类型
+meta_description: 燃气营销内容的文档解析与分块：燃气营销内容的文档解析与分块，涵盖配置与验证建议。
 keywords: 燃气、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Commercial Real Estate
-meta_description: Commercial real estate research report data primarily comes from public industry consulting reports, internal operational data from real estate
+meta_description: Vector Models and Indexing for Commercial Real Estate Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

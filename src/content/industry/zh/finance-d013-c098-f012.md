@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 煤化工融资日报的模型接入与配置
-meta_description: 煤化工融资日报的数据来源为国内煤炭行业监测机构公开的项目融资披露信息、地方能源主管部门的备案公示内容。更新频率为每个工作日更新，当日数据于次日凌晨完成整合发
+meta_description: 煤化工融资日报的模型接入与配置：煤化工融资日报的模型接入与配置，涵盖配置与验证建议
 keywords: 煤化工、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

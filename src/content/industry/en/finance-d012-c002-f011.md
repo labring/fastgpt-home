@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Professional Services
-meta_description: The data for professional services marketing content primarily comes from internal marketing material libraries, customer communication records, and
+meta_description: Document Parsing and Chunking for Professional Services Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

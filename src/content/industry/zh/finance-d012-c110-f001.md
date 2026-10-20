@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电网设备营销内容的HTTP 接口与外部系统
-meta_description: 电网设备营销内容的数据主要来自设备厂商的产品管理系统、省级公共资源交易招投标平台、电网运维台账系统，以及金融机构的电网设备采购需求台账。数据更新节奏分三类：
+meta_description: 电网设备营销内容的HTTP 接口与外部系统：电网设备营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 电网设备、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

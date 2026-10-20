@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化纤营销内容的HTTP 接口与外部系统
-meta_description: 化纤品类的营销数据主要来源于上游石化原料报价、下游织造订单、现货库存及产品性能检测报告。数据来源包括行业协会公开接口、上游生产企业ERP系统、第三方大宗商品
+meta_description: 化纤营销内容的HTTP 接口与外部系统：化纤营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 化纤、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

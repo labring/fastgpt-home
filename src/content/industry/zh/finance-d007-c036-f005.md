@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 半导体收益率的多轮对话与提示词
-meta_description: 半导体行业的行情与收益率数据，来源于证券交易场所公开披露的上市公司交易数据、行业协会发布的板块运行数据，以及公开的行业研究数据集。更新周期为自然日，每日收盘
+meta_description: 半导体收益率的多轮对话与提示词：半导体收益率的多轮对话与提示词，涵盖配置与验证建议
 keywords: 半导体、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

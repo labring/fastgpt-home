@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 黑色家电研报检索的部署与升级
-meta_description: 黑色家电研报数据主要来自行业协会公开报告、头部品牌官方技术文档、第三方市场调研机构发布的分析内容。更新节奏随新品发布、行业政策调整波动，无固定周期但核心品类
+meta_description: 黑色家电研报检索的部署与升级：黑色家电研报检索的部署与升级，涵盖配置与验证建议。
 keywords: 黑色家电、研报检索与问答、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

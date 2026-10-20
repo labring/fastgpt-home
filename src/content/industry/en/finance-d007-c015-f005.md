@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c015-f005
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Dialogue and Prompting for Energy Storage Revenue
-meta_description: Energy storage revenue-related data primarily comes from local SCADA monitoring systems of energy storage power stations, public interfaces of
+meta_title: Multi-turn Dialogue and Prompting for Energy Storage
+meta_description: Multi-turn Dialogue and Prompting for Energy Storage Revenue Yields
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

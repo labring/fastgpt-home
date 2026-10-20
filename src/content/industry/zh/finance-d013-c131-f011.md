@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 装修装饰融资日报的文档解析与分块
-meta_description: 装修装饰融资日报的数据来源为企业内部融资台账、合作金融机构的放款回执、行业配套的融资申报报表，更新频率为每日生成。文档格式以Excel（含批量项目明细表格）
+meta_description: 装修装饰融资日报的文档解析与分块：装修装饰融资日报的文档解析与分块，涵盖配置与验证建议
 keywords: 装修装饰、融资日报、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

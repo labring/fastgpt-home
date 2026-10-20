@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 种植业智能尽调报告的向量模型与索引
-meta_description: 种植业智能尽调报告的数据来源包括农田土壤检测报告、作物长势监测记录、卫星遥感影像、种植台账Excel、植保服务文档、收购合同等。数据更新节奏随种植周期调整，
+meta_description: 种植业智能尽调报告的向量模型与索引：种植业智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 种植业、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

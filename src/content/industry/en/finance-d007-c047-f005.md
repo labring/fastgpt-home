@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for State-owned
-meta_description: Daily yield and market report data for state-owned large banks comes from daily disclosure documents released via official self-operated channels.
+meta_description: Multi-turn Dialogue and Prompt Engineering for State-owned Large Bank Yield Data
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

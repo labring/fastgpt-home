@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Software Development Research
-meta_description: Financial industry software development research report data mainly comes from financial industry technology databases, software engineering research
+meta_description: Workflow Orchestration for Software Development Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

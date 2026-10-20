@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专业连锁收益率的对话日志与审计
-meta_description: 数据来源涵盖线下门店POS交易系统、总部进销存台账、合作金融机构的行情接口及区域商圈消费监测平台。更新节奏分为两类：门店级交易与收益率数据每日闭店后2小时内
+meta_description: 专业连锁收益率的对话日志与审计：专业连锁收益率的对话日志与审计，涵盖配置与验证建议
 keywords: 专业连锁、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

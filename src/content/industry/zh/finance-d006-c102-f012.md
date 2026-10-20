@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 特钢投研知识库建设的模型接入与配置
-meta_description: 特钢投研数据主要来自钢厂内部生产台账、行业协会特钢专项报告、下游装备制造企业的技术需求文档、研发中心的合金配方试验记录。生产台账每日更新，行业报告按月发布，
+meta_description: 特钢投研知识库建设的模型接入与配置：特钢投研知识库建设的模型接入与配置，涵盖配置与验证建议
 keywords: 特钢、投研知识库建设与治理、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

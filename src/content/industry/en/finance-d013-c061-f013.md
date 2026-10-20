@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for Construction
-meta_description: Construction machinery financing daily report data is sourced from daily loan ledgers of financial leasing companies, dealer financing reports of
+meta_description: Knowledge Base Retrieval and Recall for Construction Machinery Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

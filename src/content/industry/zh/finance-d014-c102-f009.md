@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 特钢财报分析的引用来源与溯源
-meta_description: 特钢财报相关数据主要来自上海证券交易所、深圳证券交易所的公开披露文件，以及中国特钢企业协会发布的行业运行简报。更新节奏分为两类：年度财报需在每年4月30日前
+meta_description: 特钢财报分析的引用来源与溯源：特钢财报分析的引用来源与溯源，涵盖配置与验证建议。
 keywords: 特钢、财报分析与报告生成、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

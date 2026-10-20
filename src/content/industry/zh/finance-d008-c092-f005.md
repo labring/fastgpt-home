@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 消费电子智能尽调报告的多轮对话与提示词
-meta_description: 消费电子智能尽调报告的数据主要来自供应链BOM系统、渠道SKU管理库、第三方质检机构报告、售后返修数据库。数据更新节奏随新品迭代调整，新品上市前完成全量更新
+meta_description: 消费电子智能尽调报告的多轮对话与提示词：消费电子智能尽调报告的多轮对话与提示词，涵盖配置与验证建议
 keywords: 消费电子、智能尽调报告、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

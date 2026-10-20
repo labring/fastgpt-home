@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 储能智能尽调报告的知识库检索与召回
-meta_description: 储能相关尽调数据主要来自电力监管机构公开的电站备案信息、设备厂商的官方技术手册、行业协会发布的季度运行简报、电站运维现场日志。数据更新节奏分为固定更新与周期
+meta_description: 储能智能尽调报告的知识库检索与召回：储能智能尽调报告的知识库检索与召回，涵盖配置与验证建议
 keywords: 储能、智能尽调报告、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

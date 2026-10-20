@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 兵器装备营销内容的文档解析与分块
-meta_description: 用于金融领域营销获客的兵器装备相关数据，来源为研制单位官方手册、公开试验报告、营销宣传物料及招投标技术文件；更新节奏随新装备定型、营销活动节点不定期调整；文
+meta_description: 兵器装备营销内容的文档解析与分块：兵器装备营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 兵器装备、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

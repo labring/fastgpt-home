@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Duty-Free
-meta_description: Duty-free financing daily report data is sourced from internal corporate financial systems, bank loan notification vouchers, and customs import
+meta_description: Multi-turn Dialogue and Prompt Engineering for Duty-Free Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

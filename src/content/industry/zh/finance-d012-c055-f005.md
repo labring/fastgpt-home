@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 大气治理营销内容的多轮对话与提示词
-meta_description: 大气治理相关数据主要来自环保部门监管平台、企业排放监测终端、项目竣工验收文档与运维日志。数据更新节奏因类型而异，实时监测数据按小时推送，运维台账按月度归档更
+meta_description: 大气治理营销内容的多轮对话与提示词：大气治理营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 大气治理、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

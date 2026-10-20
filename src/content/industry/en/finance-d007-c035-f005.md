@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Multiturn Dialogue and Prompting for Medical Aesthetic
-meta_description: Data for medical aesthetic profit yield and market trends originates from daily operation ledgers of medical aesthetic institutions, as well as public
+meta_description: Multiturn Dialogue and Prompting for Medical Aesthetic Profit Yield and Market Trends: covering configuration and validation guidance.
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

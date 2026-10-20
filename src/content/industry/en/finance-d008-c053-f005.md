@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Multi-round Dialogue and Prompt Engineering for Diversified
-meta_description: Data sources for diversified financial intelligent due diligence reports include industrial and commercial public disclosure systems, licensed credit
+meta_description: Multi-round Dialogue and Prompt Engineering for Diversified Financial Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

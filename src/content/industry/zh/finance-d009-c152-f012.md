@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 鞋类研报检索的模型接入与配置
-meta_description: 鞋类研报的来源涵盖国内鞋类行业协会发布的季度分析、头部品牌公开的财报、跨境电商平台的销售监测数据、海关总署的进出口报关数据、专业供应链调研机构的实地报告。更
+meta_description: 鞋类研报检索的模型接入与配置：鞋类研报检索的模型接入与配置，涵盖配置与验证建议。
 keywords: 鞋类、研报检索与问答、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

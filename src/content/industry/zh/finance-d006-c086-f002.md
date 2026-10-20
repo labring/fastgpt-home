@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 汽车服务投研知识库建设的上下文与 token
-meta_description: 汽车服务投研的数据来源涵盖主机厂公开运营报告、零部件供应链报价文档、经销商售后运营日志、行业协会监测数据四类。更新节奏分为季度级（主机厂财报）、月度级（行业
+meta_description: 汽车服务投研知识库建设的上下文与 token：汽车服务投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 汽车服务、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

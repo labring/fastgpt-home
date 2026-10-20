@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦煤营销内容的工作流编排
-meta_description: 焦煤相关数据主要来源于矿山生产台账、港口质检报告、大宗商品交易平台挂牌信息。更新节奏分为两类：现货交易数据每日更新，期货交割标准数据随交易日更新。单批次焦煤
+meta_description: 焦煤营销内容的工作流编排：焦煤营销内容的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 焦煤、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

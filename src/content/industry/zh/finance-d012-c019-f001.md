@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 免税营销内容的HTTP 接口与外部系统
-meta_description: 免税营销内容的数据主要来自免税经营主体的商品管理系统、离岛免税政策公示平台及会员营销后台。数据更新节奏随业务节点调整，常规商品信息每周同步，限时促销活动实时
+meta_description: 免税营销内容的HTTP 接口与外部系统：免税营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 免税、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

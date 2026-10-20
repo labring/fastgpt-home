@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 其他综合研报检索的向量模型与索引
-meta_description: 其他综合研报的数据来源覆盖公开行业资讯聚合站点、券商研报库及垂直行业文档平台。更新节奏随外部数据源同步，无固定批量周期，新文档上线后按需入库。单份文档结构包
+meta_description: 其他综合研报检索的向量模型与索引：其他综合研报检索的向量模型与索引，涵盖配置与验证建议
 keywords: 其他综合、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 固废处理研报检索的工具调用与插件
-meta_description: 固废处理研报的数据主要来自生态环境部门公开监测数据、固废处理行业协会年度报告、第三方环境咨询机构专项研报，以及公开招投标项目文档。更新节奏分为三类：生态环境
+meta_description: 固废处理研报检索的工具调用与插件：固废处理研报检索的工具调用与插件，涵盖配置与验证建议
 keywords: 固废处理、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电子元件投研知识库建设的上下文与 token
-meta_description: 电子元件的数据源覆盖原厂规格书（datasheet）、行业供应链报价平台、半导体行业协会报告、专利数据库与下游厂商测试数据。原厂datasheet随产品迭代
+meta_description: 电子元件投研知识库建设的上下文与 token：电子元件投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 电子元件、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

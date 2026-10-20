@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦煤投研知识库建设的上下文与 token
-meta_description: 焦煤投研数据来源包括中国煤炭工业协会发布的月度供需报告、大连商品交易所的焦煤期货行情数据、港口的每日库存周报、上下游企业的产销公告、行业政策文件及第三方机构
+meta_description: 焦煤投研知识库建设的上下文与 token：焦煤投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 焦煤、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

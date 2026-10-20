@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通用设备收益率的多轮对话与提示词
-meta_description: 通用设备的收益率与行情数据来自机械设备制造业官方统计监测体系、行业公开出厂价格行情库与企业披露的产能运营数据，面向金融场景的行情日报需求。数据更新以月度为核
+meta_description: 通用设备收益率的多轮对话与提示词：通用设备收益率的多轮对话与提示词，涵盖配置与验证建议
 keywords: 通用设备、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

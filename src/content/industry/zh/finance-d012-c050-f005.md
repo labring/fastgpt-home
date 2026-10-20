@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 塑料橡胶营销内容的多轮对话与提示词
-meta_description: 塑料橡胶品类的数据来源包括行业协会公开报告、上游石化企业出厂台账、下游加工厂采购记录。更新节奏分为三类：出厂报价每日更新，行业分析报告按月度/季度更新，产品
+meta_description: 塑料橡胶营销内容的多轮对话与提示词：塑料橡胶营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 塑料橡胶、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

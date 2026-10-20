@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 炼化融资日报的HTTP 接口与外部系统
-meta_description: 炼化融资日报的数据来源为炼化企业内部ERP财务模块、供应链仓储系统，以及合作银行的融资授信接口。更新节奏为每日固定时段同步前一自然日的全量融资数据。文档结构
+meta_description: 炼化融资日报的HTTP 接口与外部系统：炼化融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 炼化、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 鞋类研报检索的工具调用与插件
-meta_description: 鞋类研报的数据来源包括国内鞋类行业协会公开报告、品牌方季度财报、主流电商平台品类销售监测数据、跨境供应链调研文档。更新节奏分为三类：品牌财报按季度更新，电商
+meta_description: 鞋类研报检索的工具调用与插件：鞋类研报检索的工具调用与插件，涵盖配置与验证建议。
 keywords: 鞋类、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

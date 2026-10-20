@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Coke Marketing Content
-meta_description: Coke-related data mainly comes from public statistics of the Dalian Commodity Exchange, domestic coal industry association, major ports and steel
+meta_description: Workflow Orchestration for Coke Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

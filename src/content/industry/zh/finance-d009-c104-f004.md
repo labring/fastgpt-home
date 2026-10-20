@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 玻璃研报检索的向量模型与索引
-meta_description: 玻璃研报的数据来源为建筑材料行业协会公开报告、券商行业研报、玻璃生产企业月度经营数据。更新节奏分为三类：现货价格数据周更，产能与库存数据月更，专项行业研报不
+meta_description: 玻璃研报检索的向量模型与索引：玻璃研报检索的向量模型与索引，涵盖配置与验证建议。
 keywords: 玻璃、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

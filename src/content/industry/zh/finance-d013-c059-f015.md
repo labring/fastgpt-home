@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工业金属融资日报的部署与升级
-meta_description: 工业金属融资日报的数据来源为国内大宗商品现货交易市场官方接口、行业协会每日报送的公开数据。更新节奏为每日凌晨前完成当日全品类数据更新，单份日报包含多类工业金
+meta_description: 工业金属融资日报的部署与升级：工业金属融资日报的部署与升级，涵盖配置与验证建议。
 keywords: 工业金属、融资日报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

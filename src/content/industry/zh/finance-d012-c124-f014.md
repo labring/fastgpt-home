@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 自动化设备营销内容的表单与交互
-meta_description: 自动化设备的数据主要来自设备内置传感器、PLC控制系统、运维台账与销售档案。实时运行数据如电流、转速以秒级频率更新，静态参数如额定功率、设备型号、维保周期在
+meta_description: 自动化设备营销内容的表单与交互：自动化设备营销内容的表单与交互，涵盖配置与验证建议
 keywords: 自动化设备、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专业连锁融资日报的文档解析与分块
-meta_description: 专业连锁融资日报的数据多来自连锁品牌的总部财务系统、门店当日回款台账、合作金融机构的授信审批回执。更新节奏为每日更新，单份文档覆盖前一日全量业务数据。文档多
+meta_description: 专业连锁融资日报的文档解析与分块：专业连锁融资日报的文档解析与分块，涵盖配置与验证建议
 keywords: 专业连锁、融资日报、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

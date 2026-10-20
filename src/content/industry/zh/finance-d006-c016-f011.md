@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光伏投研知识库建设的文档解析与分块
-meta_description: 光伏投研数据主要来自券商行业研报、国内光伏行业协会公开报告、上市公司年报及半年报、地面电站运维日志、组件厂商技术白皮书。更新节奏覆盖月度研报、季度行业动态、
+meta_description: 光伏投研知识库建设的文档解析与分块：光伏投研知识库建设的文档解析与分块，涵盖配置与验证建议
 keywords: 光伏、投研知识库建设与治理、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

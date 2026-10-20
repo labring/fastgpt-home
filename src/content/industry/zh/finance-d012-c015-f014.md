@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 储能营销内容的表单与交互
-meta_description: 面向金融理财场景的储能营销内容数据，主要来自厂商公开产品规格书、项目备案参数文档与现场运维日志。数据更新节奏跟随厂商产品迭代或季度行业参数校准，无实时同步要
+meta_description: 储能营销内容的表单与交互：储能营销内容的表单与交互，涵盖配置与验证建议。。。。。
 keywords: 储能、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

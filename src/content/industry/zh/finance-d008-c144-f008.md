@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通信服务智能尽调报告的工具调用与插件
-meta_description: 通信服务智能尽调报告的数据主要来源于金融机构自用的运营商运维监控系统、跨区域通信链路管理平台及行业合规报备数据库。数据更新节奏分为两类：实时链路状态数据（如
+meta_description: 通信服务智能尽调报告的工具调用与插件：通信服务智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 通信服务、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

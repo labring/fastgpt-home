@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电子元件智能尽调报告的多轮对话与提示词
-meta_description: 电子元件的尽调数据主要来源于原厂公开规格书、项目BOM清单、供应链批次台账、第三方合规检测报告。数据更新节奏随来源不同存在差异：原厂规格书随版本迭代更新，B
+meta_description: 电子元件智能尽调报告的多轮对话与提示词：电子元件智能尽调报告的多轮对话与提示词，涵盖配置与验证建议
 keywords: 电子元件、智能尽调报告、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

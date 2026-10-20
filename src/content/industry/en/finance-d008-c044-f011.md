@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Commercial Property
-meta_description: Commercial property intelligent due diligence data sources mainly include lease contracts, fire acceptance reports, monthly operation ledgers, rental
+meta_description: Document Parsing and Chunking for Commercial Property Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

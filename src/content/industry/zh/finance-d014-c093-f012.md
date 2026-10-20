@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 游戏财报分析的模型接入与配置
-meta_description: 游戏财报数据主要来自游戏研发发行主体的定期披露文件，包括季度、年度财报及专项运营数据公告，更新节奏以季度、年度为核心周期，部分关键运营数据会随月度运营简报同
+meta_description: 游戏财报分析的模型接入与配置：游戏财报分析的模型接入与配置，涵盖配置与验证建议。
 keywords: 游戏、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

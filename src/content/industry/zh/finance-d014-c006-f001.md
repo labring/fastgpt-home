@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 中药财报分析的HTTP 接口与外部系统
-meta_description: 中药财报数据来源包括中药上市企业的官方披露公告、行业监管机构发布的行业运行数据、中药材专业市场的公开报价数据。更新节奏分为固定周期与实时两类：定期财报按季度
+meta_description: 中药财报分析的HTTP 接口与外部系统：中药财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 中药、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

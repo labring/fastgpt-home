@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光伏营销内容的文档解析与分块
-meta_description: 来源包括光伏设备厂商的官方营销物料、经销商推广素材、行业营销案例汇编；更新节奏随新品发布、政策调整不定期更新，新品上线时更新频率较高；文档结构多为混合格式，
+meta_description: 光伏营销内容的文档解析与分块：光伏营销内容的文档解析与分块，涵盖配置与验证建议。
 keywords: 光伏、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Coking Coal Financing Daily
-meta_description: Coking coal financing daily report data comes primarily from domestic coal industry monitoring institutions and publicly disclosed trading data from
+meta_description: Tool Calling and Plugins for Coking Coal Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

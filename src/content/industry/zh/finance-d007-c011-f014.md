@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 休闲食品收益率的表单与交互
-meta_description: 休闲食品的收益率与行情数据主要来源于品牌方ERP系统、线下门店POS终端、第三方电商销售后台。数据更新节奏分为两类：线下门店数据每日22点后完成当日汇总同步
+meta_description: 休闲食品收益率的表单与交互：休闲食品收益率的表单与交互，涵盖配置与验证建议。。。
 keywords: 休闲食品、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 服装家纺收益率的对话日志与审计
-meta_description: 服装家纺品类的行情与收益率数据，主要来自沪深交易所纺织服饰板块的公开披露接口、行业指数服务平台。数据更新节奏为每个交易日收盘后1至2小时完成批量更新。单份数
+meta_description: 服装家纺收益率的对话日志与审计：服装家纺收益率的对话日志与审计，涵盖配置与验证建议
 keywords: 服装家纺、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

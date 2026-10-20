@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Auto Service Yield Rates
-meta_description: Auto service sector yield rate and market data primarily comes from internal corporate financial accounting systems, bulk export interfaces from auto
+meta_description: Tool Calling and Plugins for Auto Service Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -24,7 +24,7 @@ The daily report update rhythm requires tool calls to adapt to the T+1 schedulin
 | --- | --- | --- |
 | `mcp_data_source_auth` | Configure multiple sets of authentication parameters per data source, with each set bound to a `service_category` filtering rule | Auto service yield rate data comes from multiple partners and internal systems, requiring authentication isolation by service category |
 | `tool_call_timeout` | `600 seconds` | Reserve sufficient interface response time when pulling yield rate data for multiple stores in bulk |
-| `api_permission_scope` | `store_id:{{current_user.store_ids}}` | Isolate data by store dimension to prevent cross-store permission leakage |
+| `api_permission_scope` | `store_id:example value` | Isolate data by store dimension to prevent cross-store permission leakage |
 | `scheduled_task_cron` | `0 3 * * *` | Match the daily 02:00 update rhythm of daily report data to trigger tool calls on a scheduled basis |
 | `response_field_filter` | Retain `service_category`, `stat_period`, `yield_value`, `update_time` | Filter irrelevant fields to simplify tool returned results and improve calling efficiency |
 | `cache_expire_seconds` | `86400 seconds` | Match the update cycle of daily report data to avoid repeated pulling of unupdated data |

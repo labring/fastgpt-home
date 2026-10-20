@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电商服务营销内容的多轮对话与提示词
-meta_description: 金融场景下电商服务的营销内容数据主要来源于机构旗下电商平台的商品管理模块、营销活动配置中心、用户咨询会话日志及订单关联标签库。数据更新节奏随营销活动上线节奏
+meta_description: 电商服务营销内容的多轮对话与提示词：电商服务营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 电商服务、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

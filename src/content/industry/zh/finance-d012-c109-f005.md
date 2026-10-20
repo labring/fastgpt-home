@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电子元件营销内容的多轮对话与提示词
-meta_description: 电子元件的数据主要来源于原厂公开规格书、供应链平台库存台账、行业标准文档与项目BOM清单。原厂规格书随型号迭代不定期更新，库存数据每日或按供货周期同步更新，
+meta_description: 电子元件营销内容的多轮对话与提示词：电子元件营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 电子元件、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

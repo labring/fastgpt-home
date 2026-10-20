@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油服工程财报分析的模型接入与配置
-meta_description: 油服工程财报的数据来源为境内外证券交易所披露的定期报告、公司官方发布的经营公告。更新节奏为季度报告每3个月更新一次，年度报告每年更新一次，临时公告随重大作业
+meta_description: 油服工程财报分析的模型接入与配置：油服工程财报分析的模型接入与配置，涵盖配置与验证建议
 keywords: 油服工程、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

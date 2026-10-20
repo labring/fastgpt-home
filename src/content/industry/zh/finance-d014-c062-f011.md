@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 广告营销财报分析的文档解析与分块
-meta_description: 广告营销品类的财报相关数据主要来自上市广告公司、品牌方营销费用专项披露文件、媒体合作结算台账。数据更新节奏以季度财报披露为固定周期，部分月度投放报表同步更新
+meta_description: 广告营销财报分析的文档解析与分块：广告营销财报分析的文档解析与分块，涵盖配置与验证建议
 keywords: 广告营销、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

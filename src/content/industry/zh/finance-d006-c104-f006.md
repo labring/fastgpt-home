@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 玻璃投研知识库建设的对话日志与审计
-meta_description: 玻璃投研数据主要来自中国建筑玻璃与工业玻璃协会的行业报告、现货市场每日报价数据、浮法玻璃生产线的产能监测数据、下游建筑与汽车行业的需求调研文档。数据更新节奏
+meta_description: 玻璃投研知识库建设的对话日志与审计：玻璃投研知识库建设的对话日志与审计，涵盖配置与验证建议
 keywords: 玻璃、投研知识库建设与治理、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

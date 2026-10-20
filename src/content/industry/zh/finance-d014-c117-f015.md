@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 纺织制造财报分析的部署与升级
-meta_description: 纺织制造的财报数据主要来自公开披露的定期报告、临时公告及内部生产经营台账。数据更新节奏以季度、半年度、年度为固定周期，临时公告随重大经营事件触发更新。文档结
+meta_description: 纺织制造财报分析的部署与升级：纺织制造财报分析的部署与升级，涵盖配置与验证建议。
 keywords: 纺织制造、财报分析与报告生成、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

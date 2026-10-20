@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Shipping Port Marketing
-meta_description: Shipping port marketing content data is primarily sourced from route announcements, commodity promotion documents, customs clearance guides
+meta_description: Vector Models and Indexing for Shipping Port Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

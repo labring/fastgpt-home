@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 产品咨询客户服务的文档解析与分块
-meta_description: 产品咨询相关数据主要来源于金融产品官方说明书、内部客服问答库、监管公示文件。更新节奏随新产品上架、监管政策调整触发，常规更新无固定周期。文档结构包含结构化费
+meta_description: 产品咨询客户服务的文档解析与分块：产品咨询客户服务的文档解析与分块，涵盖配置与验证建议
 keywords: 产品咨询、客户服务与账户咨询、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

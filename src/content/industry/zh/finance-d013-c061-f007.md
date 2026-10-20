@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程机械融资日报的工作流编排
-meta_description: 工程机械融资日报的数据主要来自融资租赁公司的业务台账系统、工程机械整机厂商的分期销售后台，以及第三方工程机械交易撮合平台的成交记录。数据按自然日更新，每日凌
+meta_description: 工程机械融资日报的工作流编排：工程机械融资日报的工作流编排，涵盖配置与验证建议。
 keywords: 工程机械、融资日报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

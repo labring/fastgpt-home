@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程机械智能尽调报告的部署与升级
-meta_description: 工程机械智能尽调数据来源包括设备出厂档案、现场运维台账、二手流通记录与检修报告。更新节奏分为静态与动态两类，出厂档案与设备基础参数为固定更新，运维日志与检修
+meta_description: 工程机械智能尽调报告的部署与升级：工程机械智能尽调报告的部署与升级，涵盖配置与验证建议
 keywords: 工程机械、智能尽调报告、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

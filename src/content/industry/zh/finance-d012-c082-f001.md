@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水产养殖营销内容的HTTP 接口与外部系统
-meta_description: 数据来自塘口部署的物联网水质传感器、饲料投喂自动化设备、养殖台账管理系统、病害预警终端。更新节奏为：水质监测数据每5-15分钟更新一次，投喂记录按单次投喂动
+meta_description: 水产养殖营销内容的HTTP 接口与外部系统：水产养殖营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 水产养殖、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

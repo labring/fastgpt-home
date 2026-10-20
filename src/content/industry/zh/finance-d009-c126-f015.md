@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航空机场研报检索的部署与升级
-meta_description: 航空机场研报的数据主要来源于民航地区管理局、机场集团官方发布的运营月报、基建公告，以及行业咨询机构发布的区域航空市场分析报告。更新节奏以月度、季度为固定周期
+meta_description: 航空机场研报检索的部署与升级：航空机场研报检索的部署与升级，涵盖配置与验证建议。
 keywords: 航空机场、研报检索与问答、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

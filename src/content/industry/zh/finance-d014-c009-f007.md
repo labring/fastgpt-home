@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 产业园区财报分析的工作流编排
-meta_description: 产业园区财报分析是金融机构开展园区类主体相关业务的重要数据支撑，其数据主要来自园区运营方的月度运营台账、季度经营复盘报表、年度审计报告，以及属地住建部门的园
+meta_description: 产业园区财报分析的工作流编排：产业园区财报分析的工作流编排，涵盖配置与验证建议。
 keywords: 产业园区、财报分析与报告生成、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

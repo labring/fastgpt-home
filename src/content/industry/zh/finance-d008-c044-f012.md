@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商业物业智能尽调报告的模型接入与配置
-meta_description: 商业物业尽调数据主要来自不动产登记部门备案文件、物业自持租赁台账、商圈客流监测系统、商户经营报表。权属类数据按季度更新，租赁与运营数据按月更新，商圈监测数据
+meta_description: 商业物业智能尽调报告的模型接入与配置：商业物业智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 商业物业、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通信服务投研知识库建设的上下文与 token
-meta_description: 通信服务投研数据主要来源于运营商公开财报、通信行业协会标准文档、基站运维实时日志、频谱分配公告及5G/6G技术白皮书。数据更新节奏覆盖实时（运维日志）、月度
+meta_description: 通信服务投研知识库建设的上下文与 token：通信服务投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 通信服务、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

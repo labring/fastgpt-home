@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航空装备财报分析的HTTP 接口与外部系统
-meta_description: 航空装备财报数据主要来自航空装备制造企业的公开定期财报、国防科技工业行业统计公报及官方披露文件。数据更新节奏固定：年度财报于次年4月30日前披露，半年度财报
+meta_description: 航空装备财报分析的HTTP 接口与外部系统：航空装备财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 航空装备、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

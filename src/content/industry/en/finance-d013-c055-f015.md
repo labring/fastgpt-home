@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade of Air Pollution Control Financing
-meta_description: Air pollution control financing daily report data draws from three sources: the ecological environment department’s air pollution control project
+meta_description: Deployment and Upgrade of Air Pollution Control Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

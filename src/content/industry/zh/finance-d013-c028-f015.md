@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 动力煤融资日报的部署与升级
-meta_description: 动力煤融资日报的数据来自国内煤炭交易中心公开现货数据、合作金融机构的融资台账同步、港口货权登记系统。更新节奏为每日凌晨更新前一日全量融资业务数据，当日午间补
+meta_description: 动力煤融资日报的部署与升级：动力煤融资日报的部署与升级，涵盖配置与验证建议。。。
 keywords: 动力煤、融资日报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

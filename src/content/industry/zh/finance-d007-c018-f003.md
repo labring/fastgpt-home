@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光模块收益率的分享与嵌入
-meta_description: 光模块的收益率相关数据，主要来自公开行业供应链监测平台、厂商官方报价页及证券交易所披露的经营数据。数据更新节奏分为三类：现货交易单价每日更新1次，厂商指导价
+meta_description: 光模块收益率的分享与嵌入：光模块收益率的分享与嵌入，涵盖配置与验证建议。。。。。
 keywords: 光模块、收益率与行情日报播报、分享与嵌入
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

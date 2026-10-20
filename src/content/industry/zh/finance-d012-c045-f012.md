@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商用车营销内容的模型接入与配置
-meta_description: 商用车金融/保险/理财类营销内容的数据主要来自四个渠道：商用车经销商金融台账系统、车险与融资租赁费率数据库、区域购车金融补贴政策文件、竞品金融方案对标文档库
+meta_description: 商用车营销内容的模型接入与配置：商用车营销内容的模型接入与配置，涵盖配置与验证建议
 keywords: 商用车、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

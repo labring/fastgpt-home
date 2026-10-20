@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 融资租赁财报分析的工作流编排
-meta_description: 融资租赁相关财报数据主要来源于企业内部财务核算系统、监管报送的专项报表及外部征信披露信息。数据更新节奏匹配财报披露周期，内部业务台账按实际业务发生频次同步。
+meta_description: 融资租赁财报分析的工作流编排：融资租赁财报分析的工作流编排，涵盖配置与验证建议。
 keywords: 融资租赁、财报分析与报告生成、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Electronic Component Marketing
-meta_description: Financial institutions primarily source electronic component data from official manufacturer datasheets, industry supply chain management platforms
+meta_description: Tool Calling and Plugins for Electronic Component Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

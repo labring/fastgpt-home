@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饲料营销内容的工作流编排
-meta_description: 饲料品类的数据来源包括饲料生产企业的ERP系统、配方管理模块、线下经销商的补货记录、合作牧场的饲喂反馈表单。更新节奏为：配方参数随原料成本或养殖标准调整，更
+meta_description: 饲料营销内容的工作流编排：饲料营销内容的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 饲料、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

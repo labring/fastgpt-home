@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油气开采财报分析的文档解析与分块
-meta_description: 油气开采品类的财报数据主要来自境内外上市油气企业的年度、季度报告，行业协会发布的月度生产统计文档，以及油气田内部生产台账。更新节奏分为年度、季度与月度三类。
+meta_description: 油气开采财报分析的文档解析与分块：油气开采财报分析的文档解析与分块，涵盖配置与验证建议
 keywords: 油气开采、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

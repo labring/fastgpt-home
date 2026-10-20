@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 模型分配一体化 AI 平台的HTTP 接口与外部系统
-meta_description: 模型分配的数据来源于平台已接入的大模型元数据、用户创建的应用配置、实时调用流量统计。更新节奏为：当新增模型、调整应用分配规则时触发全量更新，实时流量数据每数
+meta_description: 模型分配一体化 AI 平台的HTTP 接口与外部系统：模型分配一体化 AI 平台的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 模型分配、一体化 AI 平台与多应用编排、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航空装备研报检索的知识库检索与召回
-meta_description: 航空装备研报的数据主要来自券商军工行业研究报告、国防军工行业协会公开资料、主机厂及配套供应商的公开披露信息。更新节奏包含常规季度、年度行业复盘报告，以及重大
+meta_description: 航空装备研报检索的知识库检索与召回：航空装备研报检索的知识库检索与召回，涵盖配置与验证建议
 keywords: 航空装备、研报检索与问答、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

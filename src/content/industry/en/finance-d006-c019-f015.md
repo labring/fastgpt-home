@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Duty-Free Investment Research
-meta_description: Duty-free investment research data comes from four sources: off-shore duty-free policy documents released by the General Administration of Customs
+meta_description: Deployment and Upgrade for Duty-Free Investment Research Knowledge Base
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

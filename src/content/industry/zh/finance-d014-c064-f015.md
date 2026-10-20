@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 影视院线财报分析的部署与升级
-meta_description: 影视院线的财报数据主要来自院线公司内部运营系统、第三方票房统计平台，以及季度、年度公开财报。日常运营数据按每日、每周更新，正式财报按季度、年度发布。文档包含
+meta_description: 影视院线财报分析的部署与升级：影视院线财报分析的部署与升级，涵盖配置与验证建议。
 keywords: 影视院线、财报分析与报告生成、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

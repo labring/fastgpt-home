@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光模块融资日报的文档解析与分块
-meta_description: 光模块融资日报的数据来源包括公开产业投融资公告、行业资讯平台的每日融资汇总、交易所披露的上市公司对外投资信息。更新节奏为每日更新，覆盖当日披露的光模块相关融
+meta_description: 光模块融资日报的文档解析与分块：光模块融资日报的文档解析与分块，涵盖配置与验证建议
 keywords: 光模块、融资日报、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

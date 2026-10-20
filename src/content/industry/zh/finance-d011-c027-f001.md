@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 功能入口终端内自然语言检索的HTTP 接口与外部系统
-meta_description: 功能入口终端内自然语言检索的数据分为两类：一类是入口配置数据，来源为FastGPT管理后台的功能入口配置界面，包含`appId`、`apiSecret`、`
+meta_description: 功能入口终端内自然语言检索的HTTP 接口与外部系统：功能入口终端内自然语言检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 功能入口、终端内自然语言检索、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

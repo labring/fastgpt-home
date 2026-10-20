@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光模块营销内容的模型接入与配置
-meta_description: 光模块的营销内容数据主要来自厂商官方技术规格文档、行业通信标准手册、第三方测试验证报告。数据更新节奏随厂商新品发布、行业标准迭代调整，无固定周期，但多数季度
+meta_description: 光模块营销内容的模型接入与配置：光模块营销内容的模型接入与配置，涵盖配置与验证建议
 keywords: 光模块、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程咨询研报检索的工作流编排
-meta_description: 工程咨询研报的数据主要来自金融机构的专项工程融资报告、官方住建部门公开的项目备案资料、行业协会发布的调研白皮书、专业咨询机构出具的项目可行性研究报告。更新节
+meta_description: 工程咨询研报检索的工作流编排：工程咨询研报检索的工作流编排，涵盖配置与验证建议。
 keywords: 工程咨询、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

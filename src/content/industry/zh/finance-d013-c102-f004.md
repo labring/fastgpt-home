@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 特钢融资日报的向量模型与索引
-meta_description: 特钢融资日报的数据主要来自国内特钢行业现货交易平台、钢厂官方授信公告、区域贸易商的融资报备系统及地方信贷投放公示渠道。数据按自然日更新，每日生成单份日报文档
+meta_description: 特钢融资日报的向量模型与索引：特钢融资日报的向量模型与索引，涵盖配置与验证建议。
 keywords: 特钢、融资日报、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

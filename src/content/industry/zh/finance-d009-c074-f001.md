@@ -4,8 +4,8 @@ slug: /zh/industry/finance-d009-c074-f001
 page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
-meta_title: 教育服务研报检索的HTTP 接口与外部系统
-meta_description: 教育服务研报的数据来源包含教育行业公开研究报告、教研机构内部文档、课标配套研究资料。更新节奏随教育政策调整与教研周期变动，通常为月度或季度更新。文档结构包含
+meta_title: 教育服务研报检索的HTTP接口与外部系统
+meta_description: 教育服务研报检索的HTTP接口与外部系统：教育服务研报检索的HTTP接口与外部系统，涵盖配置与验证建议
 keywords: 教育服务、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

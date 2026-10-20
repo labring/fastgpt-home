@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 卫星通信融资日报的工作流编排
-meta_description: 卫星通信融资日报的数据来源包括全球航天行业监测数据库、证券交易所公开公告、卫星运营商季度财报及行业专项披露渠道。数据更新节奏为每日更新当日披露的融资事件，历
+meta_description: 卫星通信融资日报的工作流编排：卫星通信融资日报的工作流编排，涵盖配置与验证建议。
 keywords: 卫星通信、融资日报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航运港口融资日报的部署与升级
-meta_description: 航运港口融资日报的数据来源包括港口运营方每日作业台账、船舶靠泊调度系统、区域海事部门通航数据、合作金融机构授信更新报表。数据更新节奏为每日凌晨1点至3点更新
+meta_description: 航运港口融资日报的部署与升级：航运港口融资日报的部署与升级，涵盖配置与验证建议。
 keywords: 航运港口、融资日报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

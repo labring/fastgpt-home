@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 国有大行财报分析的HTTP 接口与外部系统
-meta_description: 国有大行财报数据主要来自官方披露平台与监管指定渠道，按季度、半年度、年度定期更新。文档以PDF格式为主，包含结构化财务报表与文字说明两部分，结构固定，涵盖资
+meta_description: 国有大行财报分析的HTTP 接口与外部系统：国有大行财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 国有大行、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医美财报分析的知识库检索与召回
-meta_description: 医美品类的财报数据主要来自上市医美企业公开披露的年度、半年度及季度报告，行业协会发布的经营数据简报，以及合规医美机构的脱敏内部经营台账。更新节奏存在分层：上
+meta_description: 医美财报分析的知识库检索与召回：医美财报分析的知识库检索与召回，涵盖配置与验证建议
 keywords: 医美、财报分析与报告生成、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

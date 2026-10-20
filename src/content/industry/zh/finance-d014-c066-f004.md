@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 房建工程财报分析的向量模型与索引
-meta_description: 房建工程财报数据主要来自建筑装饰类企业的官方披露年报、季度报告，以及内部工程台账、结算单据。更新节奏以季度为常规披露周期，内部台账可按月更新。单份财报文档包
+meta_description: 房建工程财报分析的向量模型与索引：房建工程财报分析的向量模型与索引，涵盖配置与验证建议
 keywords: 房建工程、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

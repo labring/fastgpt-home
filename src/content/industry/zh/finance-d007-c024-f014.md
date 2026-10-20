@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 农化制品收益率的表单与交互
-meta_description: 农化制品收益率日报数据主要来源于国内农化行业监测平台、大宗商品期货交易所现货联动数据、头部农化企业公开的成本公示信息。数据更新节奏为交易日每日更新，非交易日
+meta_description: 农化制品收益率的表单与交互：农化制品收益率的表单与交互，涵盖配置与验证建议。。。
 keywords: 农化制品、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 酒店餐饮财报分析的文档解析与分块
-meta_description: 酒店餐饮财报的数据来自门店运营系统、供应链管理系统、内部审计底稿。文档格式涵盖PDF扫描件、Excel台账、Word整理报表，更新周期以月度、季度、年度为节
+meta_description: 酒店餐饮财报分析的文档解析与分块：酒店餐饮财报分析的文档解析与分块，涵盖配置与验证建议
 keywords: 酒店餐饮、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

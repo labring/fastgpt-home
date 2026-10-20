@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for Publishing Yield Rates
-meta_description: Data for publishing-related financial market daily reports comes from publicly disclosed transaction settlement data from securities trading venues.
+meta_description: Model Access and Configuration for Publishing Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

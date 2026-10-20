@@ -4,8 +4,8 @@ slug: /en/industry/finance-d012-c122-f011
 page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
-meta_title: Document Parsing and Chunking for Joint-Stock Bank Marketing
-meta_description: Marketing content data for joint-stock banks comes primarily from official materials created by internal marketing teams. These include structured
+meta_title: Document Parsing and Chunking for Joint-Stock Bank
+meta_description: Document Parsing and Chunking for Joint-Stock Bank Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

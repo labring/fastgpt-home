@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦炭收益率的HTTP 接口与外部系统
-meta_description: 焦炭的行情与收益率数据来源为大连商品交易所官方行情接口及合规大宗商品数据聚合接口。盘中实时行情每10秒推送一次，当日收益率日报于每个交易日17:00前生成完
+meta_description: 焦炭收益率的HTTP 接口与外部系统：焦炭收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 焦炭、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

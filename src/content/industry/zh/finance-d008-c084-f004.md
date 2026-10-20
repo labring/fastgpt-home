@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水处理智能尽调报告的向量模型与索引
-meta_description: 该品类的数据为金融机构开展水处理项目尽调所用，主要来自水务运营台账、水质监测报表、管网巡检记录、环评批复文件及水处理工艺参数文档。更新节奏分为两类：常规监测
+meta_description: 水处理智能尽调报告的向量模型与索引：水处理智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 水处理、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

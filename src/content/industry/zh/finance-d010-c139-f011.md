@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 资质符合性竞价的文档解析与分块
-meta_description: 资质符合性竞价的相关数据主要来自两类文档：一是招标方发布的资质评审清单，以分条列项的结构化文本呈现，包含评审条款编号、资质要求等字段；二是投标方提交的资质证
+meta_description: 资质符合性竞价的文档解析与分块：资质符合性竞价的文档解析与分块，涵盖配置与验证建议
 keywords: 资质符合性、竞价与投标报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

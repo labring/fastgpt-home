@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for Commercial Property
-meta_description: Commercial property financing daily report data comes from operational ledgers of commercial property projects, financing filing public notices from
+meta_description: Citation Sources and Traceability for Commercial Property Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

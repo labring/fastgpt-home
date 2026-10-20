@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饰品财报分析的知识库检索与召回
-meta_description: 饰品财报相关数据主要来自上市饰品品牌的公开年度、季度报告，行业协会发布的细分品类运行简报，以及上游原料供应商的公开报价文档。更新节奏分为固定周期与实时两类：
+meta_description: 饰品财报分析的知识库检索与召回：饰品财报分析的知识库检索与召回，涵盖配置与验证建议
 keywords: 饰品、财报分析与报告生成、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

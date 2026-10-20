@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 涂料油墨智能尽调报告的工具调用与插件
-meta_description: 涂料油墨相关尽调数据主要来源于国家涂料质量监督检验中心公开检测报告、上下游供应商出厂质检单、行业协会年度性能指标文档。更新节奏为原料性能参数每1至3个月随批
+meta_description: 涂料油墨智能尽调报告的工具调用与插件：涂料油墨智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 涂料油墨、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

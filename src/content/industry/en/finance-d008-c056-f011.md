@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Home Goods Smart Due
-meta_description: The data sources for home goods smart due diligence reports include SKU ledgers provided by brands, material test reports issued by third-party
+meta_description: Document Parsing and Chunking for Home Goods Smart Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

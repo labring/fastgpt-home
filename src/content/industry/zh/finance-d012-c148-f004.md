@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 酒店餐饮营销内容的向量模型与索引
-meta_description: 酒店餐饮的营销内容数据来源包括门店菜单物料、线上团购页文案、会员活动话术、节日促销方案、周边商圈联动宣传内容等。更新节奏随新品上架、活动上线、门店运营调整不
+meta_description: 酒店餐饮营销内容的向量模型与索引：酒店餐饮营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 酒店餐饮、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

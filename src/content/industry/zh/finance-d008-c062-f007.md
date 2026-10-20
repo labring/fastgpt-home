@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 广告营销智能尽调报告的工作流编排
-meta_description: 面向金融理财类广告的智能尽调报告，数据来源包括金融机构广告投放后台的实时报表、第三方广告监测API、合作方资质备案文档。更新节奏方面，投放行为数据每15分钟
+meta_description: 广告营销智能尽调报告的工作流编排：广告营销智能尽调报告的工作流编排，涵盖配置与验证建议
 keywords: 广告营销、智能尽调报告、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

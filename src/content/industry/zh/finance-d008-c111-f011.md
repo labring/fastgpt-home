@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 畜禽养殖智能尽调报告的文档解析与分块
-meta_description: 畜禽养殖智能尽调的数据源包括养殖场每日养殖日志、批次检疫报告、饲料采购台账、出栏统计报表等。更新节奏随文档类型不同，养殖日志为每日更新，检疫报告随出栏批次更
+meta_description: 畜禽养殖智能尽调报告的文档解析与分块：畜禽养殖智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 畜禽养殖、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

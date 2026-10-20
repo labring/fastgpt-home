@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 住宅开发智能尽调报告的文档解析与分块
-meta_description: 该品类的数据主要来自国土空间规划批复、施工许可文件、项目可研报告、金融机构抵押评估材料及现场踏勘记录。更新节奏随项目关键节点推进，拿地、开工、预售等节点会生
+meta_description: 住宅开发智能尽调报告的文档解析与分块：住宅开发智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 住宅开发、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商用车收益率的模型接入与配置
-meta_description: 商用车的运营数据主要来自车载T-BOX终端、车队管理SaaS平台、区域货运运价结算系统。更新节奏为每日凌晨1点前完成前一日全量数据汇总，次日凌晨2点前对外发
+meta_description: 商用车收益率的模型接入与配置：商用车收益率的模型接入与配置，涵盖配置与验证建议。
 keywords: 商用车、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

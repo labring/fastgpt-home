@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Compliance and Internal Policy Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Internal Policy Compliance
-meta_description: Documents related to internal policy compliance originate from official documents released by the enterprise’s internal compliance management and
+meta_description: Document Parsing and Chunking for Internal Policy Compliance
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

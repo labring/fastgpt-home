@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通信服务营销内容的多轮对话与提示词
-meta_description: 金融领域通信服务的营销内容数据主要来源于机构客服交互日志、线上营业厅咨询对话、营销短信回执记录、线下网点服务台账。数据更新节奏为实时或近实时，用户咨询、活动
+meta_description: 通信服务营销内容的多轮对话与提示词：通信服务营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 通信服务、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

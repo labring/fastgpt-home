@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光模块智能尽调报告的模型接入与配置
-meta_description: 用于金融机构通信赛道智能尽调的光模块数据，主要来自厂商出厂参数文档、通信设备检测机构公开报告、运营商集采招标公示。更新节奏随新规格迭代调整，800G、1.6
+meta_description: 光模块智能尽调报告的模型接入与配置：光模块智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 光模块、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

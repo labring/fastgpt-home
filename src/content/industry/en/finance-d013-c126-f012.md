@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for Aviation Airport
-meta_description: Data sources for aviation airport financing daily reports include daily airport construction financing updates publicly disclosed by civil aviation
+meta_description: Model Access and Configuration for Aviation Airport Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -20,7 +20,7 @@ Data sources for aviation airport financing daily reports include daily airport 
 Decentralized data sources require configuring multi-source data pull rules, distinguishing between access methods such as public API interfaces, web scraping, and internal ledger imports, while handling permission verification requirements for different data sources. The daily update rhythm requires scheduled task execution cycles aligned with natural days, to avoid resource waste from frequent pulls. Structured fields are dominant, but non-standard notes exist, requiring semi-structured data parsing rules rather than relying solely on fixed regular expressions for content extraction. Diverse amount units require configuring automatic unit conversion logic to adapt to different expressions such as ten thousand yuan and hundred million yuan in announcements.
 
 ## How to set the configuration
-The configuration logic adapted for FastGPT 4.8.10 is as follows:
+Reference only; verify against the target FastGPT release and deployment documentation.
 
 | Configuration Item | Recommended Value | Rationale |
 | --- | --- | --- |

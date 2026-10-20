@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 燃气收益率的分享与嵌入
-meta_description: 燃气公用事业品类的收益率与行情日报数据，来源为各地市政公用事业监管平台公开的燃气购销指导价、能源现货交易市场的挂牌报价。更新节奏为每日收盘后1小时内完成当日
+meta_description: 燃气收益率的分享与嵌入：燃气收益率的分享与嵌入，涵盖配置与验证建议。。。。。。。
 keywords: 燃气、收益率与行情日报播报、分享与嵌入
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 环境监测财报分析的工具调用与插件
-meta_description: 环境监测相关财报数据多用于金融机构的企业ESG评级、授信审批等场景，主要来源于公开生态环境监测站点API、企业自有环保传感器网关、第三方环境数据服务商接口。
+meta_description: 环境监测财报分析的工具调用与插件：环境监测财报分析的工具调用与插件，涵盖配置与验证建议
 keywords: 环境监测、财报分析与报告生成、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通用设备财报分析的引用来源与溯源
-meta_description: 通用设备财报数据主要来自沪深交易所、港交所披露的上市公司定期报告，以及中国通用机械工业协会发布的行业运行数据。数据更新节奏为季度、半年度与年度，单次披露文档
+meta_description: 通用设备财报分析的引用来源与溯源：通用设备财报分析的引用来源与溯源，涵盖配置与验证建议
 keywords: 通用设备、财报分析与报告生成、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for Power Marketing
-meta_description: Data for power marketing content comes from policy announcements, electricity package manuals, energy conservation promotion event notices, and
+meta_description: Knowledge Base Retrieval and Recall for Power Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -40,7 +40,7 @@ Fields include numerical fields with units such as `package electricity price (y
 ## Three common mistakes
 - Phenomenon: The reply returned by calling the chat API does not associate knowledge base documents, and the `reference` field is empty. Cause: The `kbIds` parameter is not specified in the API request to bind the corresponding power marketing knowledge base, or the knowledge base retrieval switch is not enabled.
 - Phenomenon: External API calls cannot access private knowledge bases, returning a 403 status code. Cause: Access permissions for the corresponding knowledge base are not enabled in the API key configuration, or the key is not bound to the correct workspace.
-- Phenomenon: The knowledge base page fails to load in FastGPT 4.8.20. Cause: Local browser cache is incompatible with the new version of front-end resources, or the server-side knowledge base index has not completed initialization.
+Reference only; verify against the target FastGPT release and deployment documentation.
 
 ## How to confirm the configuration is properly set
 - Upload a test power marketing document, verify that key fields such as `applicable station area scope` and `execution start date` are correctly extracted after parsing.

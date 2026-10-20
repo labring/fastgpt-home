@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 军工电子研报检索的向量模型与索引
-meta_description: 军工电子研报的数据来源包括公开行业研究机构报告、军工上市公司公告、行业协会发布的产业白皮书以及券商细分领域研报。常规按季度、半年度发布深度报告，重大行业事件
+meta_description: 军工电子研报检索的向量模型与索引：军工电子研报检索的向量模型与索引，涵盖配置与验证建议
 keywords: 军工电子、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

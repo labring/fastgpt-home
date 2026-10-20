@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Medical
-meta_description: Medical aesthetics financial report data primarily comes from publicly disclosed annual, semi-annual, and quarterly audit reports of listed medical
+meta_description: Multi-turn Dialogue and Prompt Engineering for Medical Aesthetics Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -27,7 +27,7 @@ Multi-turn dialogue must clearly define the current business module being analyz
 | `similarity threshold` | `0.75–0.85` | Filters out redundant administrative and personnel-related fragments irrelevant to medical aesthetics financial report analysis, while retaining relevant content for segmented categories such as light medical aesthetics and surgical medical aesthetics |
 | `PARSE_FILE_TIMEOUT_SECONDS` | `300 seconds` | Adapts to the wide variation in length of medical aesthetics financial report documents, ensures complete parsing of long documents and avoids mid-parsing timeout interruptions |
 | `knowledge base sync cycle` | `quarterly` | Matches the disclosure cycles of quarterly, semi-annual, and annual medical aesthetics financial reports, and ensures timeliness of knowledge base data |
-| `citation content template` | `【Financial Report Passage】{{content}}【/Financial Report Passage】` | Clearly marks the boundaries of retrieved passages, helps the large model accurately identify referenced knowledge base content and avoid confusion between general knowledge and financial report data |
+| `Traceability details` | `【Financial Report Passage】the configured value【/Financial Report Passage】` | Clearly marks the boundaries of retrieved passages, helps the large model accurately identify referenced knowledge base content and avoid confusion between general knowledge and financial report data |
 
 > The parameter values provided on this page are common recommended starting points for configuration. Actual values are affected by material format, data volume and business rules. Each scenario requires individual analysis. It is recommended to test on your own samples before finalizing settings.
 

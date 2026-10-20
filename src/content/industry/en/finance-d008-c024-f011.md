@@ -4,8 +4,8 @@ slug: /en/industry/finance-d008-c024-f011
 page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
-meta_title: Document Parsing and Chunking for Agrochemical Product Smart
-meta_description: Data related to agrochemical products mainly comes from industry association public annual reports, production enterprise compliance disclosure
+meta_title: Document Parsing and Chunking for Agrochemical Product
+meta_description: Document Parsing and Chunking for Agrochemical Product Smart Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

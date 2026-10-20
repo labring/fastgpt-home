@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 证券融资日报的文档解析与分块
-meta_description: 证券融资日报的数据主要来自沪深交易所官方披露、券商内部业务报表两类渠道。更新节奏为每日收盘后生成，T+1日对外发布。文档格式以Excel、PDF为主，部分机
+meta_description: 证券融资日报的文档解析与分块：证券融资日报的文档解析与分块，涵盖配置与验证建议。
 keywords: 证券、融资日报、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

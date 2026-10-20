@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 旅游景区融资日报的模型接入与配置
-meta_description: 旅游景区融资日报的数据来源包含景区自身运营票务系统、属地文旅监管平台的统计报送、合作金融机构的融资业务台账三类。数据更新节奏为每日凌晨完成前一日全量数据的汇
+meta_description: 旅游景区融资日报的模型接入与配置：旅游景区融资日报的模型接入与配置，涵盖配置与验证建议
 keywords: 旅游景区、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

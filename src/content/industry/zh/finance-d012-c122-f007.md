@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 股份制银行营销内容的工作流编排
-meta_description: 股份制银行的营销相关数据来源包括内部客户管理系统、网点运营日志、理财产品发行系统、过往营销素材库。更新节奏分三类：客户标签数据每日同步，理财产品信息随发行节
+meta_description: 股份制银行营销内容的工作流编排：股份制银行营销内容的工作流编排，涵盖配置与验证建议
 keywords: 股份制银行、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

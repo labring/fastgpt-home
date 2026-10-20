@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Railway and Highway Financing
-meta_description: Railway and highway financing daily report data is sourced from public documents of the National Railway Construction Coordination Office
+meta_description: Deployment and Upgrade for Railway and Highway Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

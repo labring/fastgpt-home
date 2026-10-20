@@ -4,8 +4,8 @@ slug: /en/industry/finance-d014-c124-f008
 page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
-meta_title: Tool Calling and Plugins for Financial Report Analysis of
-meta_description: Financial report data for the automated equipment industry comes primarily from annual, semi-annual, and quarterly reports published by listed
+meta_title: Tool Calling and Plugins for Financial Report Analysis
+meta_description: Tool Calling and Plugins for Financial Report Analysis of Automated Equipment
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 统一入口一体化 AI 平台的工作流编排
-meta_description: 统一入口一体化AI平台的数据主要来源于挂载的所有AI应用会话日志、RAG知识库索引、MCP工具调用记录，以及平台统一的用户权限配置表。数据更新节奏为实时同步
+meta_description: 统一入口一体化 AI 平台的工作流编排：统一入口一体化 AI 平台的工作流编排，涵盖配置与验证建议
 keywords: 统一入口、一体化 AI 平台与多应用编排、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15
@@ -26,7 +26,7 @@ date_modified: 2026-09-15
 | `workflow_aggregate_timeout` | 300 秒 | 覆盖多应用并行调用的最长耗时，适配金融场景下的批量数据处理需求 |
 | `rag_recall_top_k` | 前 5 条 | 平衡召回精度与响应速度，符合金融场景下的信息精简要求 |
 | `mcp_tool_timeout` | 60 秒 | 适配外部金融数据接口的常规响应时长，避免长时间阻塞工作流 |
-| `prompt_time_injection_switch` | 开启 | 支持在提示词中注入`{{platform_current_date}}`系统变量，满足落款时间的配置需求 |
+| `prompt_time_injection_switch` | 开启 | 支持在提示词中注入`待核验值`系统变量，满足落款时间的配置需求 |
 | `share_auth_config` | 开启身份鉴权 | 针对金融场景的敏感数据，限制分享链接的访问权限 |
 | `workflow_debug_max_duration` | 120 秒 | 控制调试阶段的最长运行时长，避免资源浪费 |
 
@@ -34,12 +34,12 @@ date_modified: 2026-09-15
 
 ## 容易做错的三处
 - 工作流运行时响应慢，现象为接口返回`504 Gateway Timeout`，原因是未设置`workflow_aggregate_timeout`的合理阈值，导致多应用并行调用超时。
-- 提示词中的`{{platform_current_date}}`变量解析为空，现象为输出结果中无日期信息，原因是未开启`prompt_time_injection_switch`开关，系统变量未注入工作流上下文。
+- 提示词中的`待核验值`变量解析为空，现象为输出结果中无日期信息，原因是未开启`prompt_time_injection_switch`开关，系统变量未注入工作流上下文。
 - 工作流配置页面无分享鉴权选项，现象为无法找到`share_auth_config`配置项，原因是未升级到`v4.9.11`版本，该配置在该版本后新增。
 
 ## 怎么确认配好了
 - 触发测试工作流，查看平台日志中的`workflow_aggregate_metric`字段，确认包含所有挂载应用的调用数据。
-- 在提示词中插入`{{platform_current_date}}`变量，运行工作流后查看输出结果，确认包含当前日期信息。
+- 在提示词中插入`待核验值`变量，运行工作流后查看输出结果，确认包含当前日期信息。
 - 生成工作流分享链接，访问该链接，确认跳转至身份鉴权页面。
 - 调用集成 RAG 与 MCP 工具的工作流节点，查看`tool_call_result`字段，确认返回知识库内容与工具执行结果。
 

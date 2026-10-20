@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 处罚案例合规的工具调用与插件
-meta_description: 本品类数据主要来源于监管机构公开处罚决定书、行业自律组织合规通报及内部合规存档文档。更新节奏随监管发布节奏同步，新案例在监管公示当日完成入库。单份处罚案例文
+meta_description: 处罚案例合规的工具调用与插件：处罚案例合规的工具调用与插件，涵盖配置与验证建议。
 keywords: 处罚案例、合规与内部制度问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

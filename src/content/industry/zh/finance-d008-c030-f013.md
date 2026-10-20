@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化妆品智能尽调报告的知识库检索与召回
-meta_description: 化妆品智能尽调报告所需的数据主要来源于品牌方备案文档、原料供应商的COA/COF检测报告、第三方合规数据库及产品说明书，服务于金融机构对化妆品企业的尽调需求
+meta_description: 化妆品智能尽调报告的知识库检索与召回：化妆品智能尽调报告的知识库检索与召回，涵盖配置与验证建议
 keywords: 化妆品、智能尽调报告、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

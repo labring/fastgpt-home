@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 保险收益率的HTTP 接口与外部系统
-meta_description: 保险收益率数据的来源包括保险公司官方披露的产品运营报告、行业自律组织的公开备案文档。更新节奏因险种类型存在差异：万能型保险按月更新数据，分红型保险按季度更新
+meta_description: 保险收益率的HTTP 接口与外部系统：保险收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 保险、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

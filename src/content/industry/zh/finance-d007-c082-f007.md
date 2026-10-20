@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水产养殖收益率的工作流编排
-meta_description: 水产养殖收益率播报的数据来源包括国内渔业监测站点的塘口行情数据、区域水产批发市场的每日成交台账、养殖基地物联网终端上传的投料与生长数据。更新节奏为每日凌晨完
+meta_description: 水产养殖收益率的工作流编排：水产养殖收益率的工作流编排，涵盖配置与验证建议。。。
 keywords: 水产养殖、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

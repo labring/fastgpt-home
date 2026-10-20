@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 广告营销研报检索的向量模型与索引
-meta_description: 数据来源包含公开行业监测数据库、品牌营销白皮书、媒体投放复盘报告、行业协会公开资料。更新节奏分为常规月度批量更新，配合突发营销事件后的临时增补。文档结构包含
+meta_description: 广告营销研报检索的向量模型与索引：广告营销研报检索的向量模型与索引，涵盖配置与验证建议
 keywords: 广告营销、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

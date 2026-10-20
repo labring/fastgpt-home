@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 储能智能尽调报告的模型接入与配置
-meta_description: 储能尽调报告的数据来源包括储能电站SCADA系统、项目立项审批文件、第三方检测机构的性能测试报告、电网调度的并网运行台账。SCADA数据为分钟级更新，项目文
+meta_description: 储能智能尽调报告的模型接入与配置：储能智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 储能、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for Professional
-meta_description: Financing daily report data for the professional services sector mainly comes from public regulatory disclosure documents, industry association
+meta_description: Knowledge Base Retrieval and Recall for Professional Services Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

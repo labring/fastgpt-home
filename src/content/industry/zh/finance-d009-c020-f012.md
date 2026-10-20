@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 兵器装备研报检索的模型接入与配置
-meta_description: 兵器装备研报的来源主要包括军工行业研究机构公开报告、国防军工类券商研报、军工集团披露的公开资料、行业协会发布的产业动态文档。更新节奏随重大装备定型、军演活动
+meta_description: 兵器装备研报检索的模型接入与配置：兵器装备研报检索的模型接入与配置，涵盖配置与验证建议
 keywords: 兵器装备、研报检索与问答、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Form and Interaction for Footwear Yield Rates
-meta_description: Data related to footwear yield rates comes primarily from brand owners' offline retail POS systems, sales APIs of mainstream e-commerce platforms, and
+meta_description: Form and Interaction for Footwear Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 玻璃研报检索的知识库检索与召回
-meta_description: 玻璃研报的数据主要来自行业协会公开统计、券商行业分析文档、生产企业月度经营报告。更新节奏随行业动态调整，旺季或政策出台时更新频次提升，常规状态下月度更新1-
+meta_description: 玻璃研报检索的知识库检索与召回：玻璃研报检索的知识库检索与召回，涵盖配置与验证建议
 keywords: 玻璃、研报检索与问答、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

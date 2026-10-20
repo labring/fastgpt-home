@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 证券投研知识库建设的文档解析与分块
-meta_description: 证券投研的数据主要来自券商研报、上市公司财报、监管机构公告、行业数据库接口等渠道。更新节奏随内容类型不同：财报按季度、年度固定更新，突发公告实时推送，行业数
+meta_description: 证券投研知识库建设的文档解析与分块：证券投研知识库建设的文档解析与分块，涵盖配置与验证建议
 keywords: 证券、投研知识库建设与治理、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

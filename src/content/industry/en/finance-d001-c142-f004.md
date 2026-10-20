@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: KYC and AML Document Verification
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for ID Document KYC
-meta_description: Data sources include structured fields returned by public security network verification APIs, text extracted via OCR from user-uploaded ID scans or
+meta_description: Vector Models and Indexing for ID Document KYC
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -48,7 +48,7 @@ The business has real-time verification requirements. Index recall latency must 
 ## Three Common Errors
 - Symptom: The total number of stored vector entries is less than the number of source data entries. For example, 100,000 source entries result in just over 90,000 entries after storage. Cause: The `DUPLICATE_REMOVE_FIELD` parameter is not configured, or the configured field is not linked to a unique identifier. This automatically filters duplicate entries without triggering a prompt.
 - Symptom: The collection is created successfully, but the page always displays the "Index Building In Progress" status with no progress updates. Cause: No reasonable threshold is set for the `PARSE_TIMEOUT` parameter. OCR recognition or vectorization processes time out without triggering retries, interrupting the index building workflow.
-- Symptom: Vector recall results perform as expected during local runs, but all text vector scores are identical after packaging into a Docker image for deployment. Cause: The model cache directory is not correctly mounted in the Docker environment, or the model loading path is not properly configured. This activates the default placeholder vector generation logic.
+- Symptom: Vector recall results perform as expected during local runs, but all text vector scores are identical after packaging into a Docker image for deployment. Cause: The model cache directory is not correctly mounted in the Docker environment, or the model loading path is not properly configured. This activates the default pending verification vector generation logic.
 
 ## How to Verify Configurations Are Correct
 - Check vector model loading logs to confirm the specified multimodal semantic model has loaded successfully, with no missing model or loading failure errors.

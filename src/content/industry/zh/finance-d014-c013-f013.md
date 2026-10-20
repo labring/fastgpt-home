@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 保险财报分析的知识库检索与召回
-meta_description: 保险行业财报数据主要来自保险公司公开披露的年度报告、季度报告及临时公告，更新节奏固定为年度、季度及临时触发。单份文档结构包含承保业务板块、投资资产结构、偿付
+meta_description: 保险财报分析的知识库检索与召回：保险财报分析的知识库检索与召回，涵盖配置与验证建议
 keywords: 保险、财报分析与报告生成、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

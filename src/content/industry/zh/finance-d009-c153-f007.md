@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 风电研报检索的工作流编排
-meta_description: 风电研报主要来自行业协会、券商研究所、电力设备厂商的公开研究报告。更新节奏为月度更新行业装机、利用小时等核心数据，季度发布深度产业链研报，政策出台时临时发布
+meta_description: 风电研报检索的工作流编排：风电研报检索的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 风电、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

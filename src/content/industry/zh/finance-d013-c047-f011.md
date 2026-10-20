@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 国有大行融资日报的文档解析与分块
-meta_description: 国有大行融资日报的数据来源于内部对公信贷台账、同业拆借业务系统及央行报备的融资统计数据，每日固定时点生成。文档多为带多工作表的电子表格或分页PDF格式，包含
+meta_description: 国有大行融资日报的文档解析与分块：国有大行融资日报的文档解析与分块，涵盖配置与验证建议
 keywords: 国有大行、融资日报、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

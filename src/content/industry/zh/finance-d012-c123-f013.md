@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 能源金属营销内容的知识库检索与召回
-meta_description: 能源金属的营销相关数据主要来自行业协会公开统计、全球金属交易所报价、头部矿山与冶炼企业公开披露信息、第三方行业咨询机构报告，同时包含面向机构客户的营销文案、
+meta_description: 能源金属营销内容的知识库检索与召回：能源金属营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 能源金属、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

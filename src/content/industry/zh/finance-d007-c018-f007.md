@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光模块收益率的工作流编排
-meta_description: 光模块的行情与收益率数据主要来自金融终端的通信元器件板块行情接口、证券市场公开交易数据接口，以及头部光模块厂商的官方报价更新。更新节奏为：实时行情每5分钟同
+meta_description: 光模块收益率的工作流编排：光模块收益率的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 光模块、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

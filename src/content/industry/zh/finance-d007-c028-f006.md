@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 动力煤收益率的对话日志与审计
-meta_description: 动力煤行情与收益率数据主要来自国内大宗商品交易平台、行业监测机构及港口现货报价系统。更新节奏为每日固定时段推送当日结算数据，部分现货行情按小时更新。数据文档
+meta_description: 动力煤收益率的对话日志与审计：动力煤收益率的对话日志与审计，涵盖配置与验证建议。
 keywords: 动力煤、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

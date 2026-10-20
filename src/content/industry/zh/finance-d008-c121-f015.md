@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 耐火材料智能尽调报告的部署与升级
-meta_description: 耐火材料智能尽调报告的数据主要来自生产企业的出厂质检文件、窑炉运维的工况记录、第三方检测机构的检测报告及行业协会的公开合规文件。数据更新节奏随来源区分，出厂
+meta_description: 耐火材料智能尽调报告的部署与升级：耐火材料智能尽调报告的部署与升级，涵盖配置与验证建议
 keywords: 耐火材料、智能尽调报告、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

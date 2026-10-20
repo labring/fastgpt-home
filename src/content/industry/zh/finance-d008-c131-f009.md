@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 装修装饰智能尽调报告的引用来源与溯源
-meta_description: 装修装饰智能尽调报告的数据主要来自住建部门备案的装修资质文件、项目施工合同、材料采购台账、现场监理日志及业主验收记录。数据更新节奏随项目推进同步更新，单个项
+meta_description: 装修装饰智能尽调报告的引用来源与溯源：装修装饰智能尽调报告的引用来源与溯源，涵盖配置与验证建议
 keywords: 装修装饰、智能尽调报告、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

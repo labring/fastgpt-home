@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁路公路营销内容的工作流编排
-meta_description: 金融机构联合铁路公路开展营销获客相关的数据，主要来自票务管理系统、线路运维平台、客流统计终端与营销触达后台。数据分为静态与动态两类：静态数据包含线路ID、起
+meta_description: 铁路公路营销内容的工作流编排：铁路公路营销内容的工作流编排，涵盖配置与验证建议。
 keywords: 铁路公路、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

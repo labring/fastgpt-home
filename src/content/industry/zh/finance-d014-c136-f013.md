@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 贵金属财报分析的知识库检索与召回
-meta_description: 贵金属财报数据主要来自上海黄金交易所、伦敦金银市场协会的公开行业报告，以及涉贵金属业务上市公司的定期公告。更新节奏包含季度、年度定期财报发布，与每日现货交易
+meta_description: 贵金属财报分析的知识库检索与召回：贵金属财报分析的知识库检索与召回，涵盖配置与验证建议
 keywords: 贵金属、财报分析与报告生成、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

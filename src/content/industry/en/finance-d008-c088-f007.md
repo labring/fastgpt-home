@@ -4,8 +4,8 @@ slug: /en/industry/finance-d008-c088-f007
 page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
-meta_title: Workflow Orchestration for Oilfield Services Intelligent Due
-meta_description: When financial institutions conduct credit due diligence for oilfield services enterprises, oilfield engineering data comes from multiple sources.
+meta_title: Workflow Orchestration for Oilfield Services Intelligent
+meta_description: Workflow Orchestration for Oilfield Services Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

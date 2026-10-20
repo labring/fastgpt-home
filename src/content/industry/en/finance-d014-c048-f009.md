@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Citation Source and Traceability for City Commercial Bank
-meta_description: Three public channels provide city commercial bank financial report data: official annual report disclosure sections of city commercial banks, public
+meta_description: Citation Source and Traceability for City Commercial Bank Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -32,7 +32,7 @@ Three public channels host city commercial bank financial report data. Configure
 > The parameter values provided on this page are common recommended starting points for determining configurations. Actual values are affected by material form, data volume and business rules. Specific issues require specific analysis. It is recommended to test on your own samples before finalizing the settings.
 
 ## Three common errors
-- The phenomenon is that after using the `{{id}}` variable when configuring `reference_template`, the corresponding unique data identifier cannot be obtained. The reason is that the `source_url_enable` parameter is not enabled, so the system does not generate a unique ID and jump link for the cited data.
+- The phenomenon is that after using the `example value` variable when configuring `reference_template`, the corresponding unique data identifier cannot be obtained. The reason is that the `source_url_enable` parameter is not enabled, so the system does not generate a unique ID and jump link for the cited data.
 - The phenomenon is that retrieved financial report data includes old reports from non-disclosure periods. The reason is that the `file_sync_cron` parameter is not configured, and the synchronization task is not executed at a fixed cycle, causing the system to retrieve expired historical reports.
 - The phenomenon is that the cited fields do not match the original document content. The reason is that the `parse_chunk_size` parameter is not configured, and the document is incorrectly split, causing the context association of fields to break and making it impossible to match the accurate content of the original document.
 

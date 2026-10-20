@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: IT 服务融资日报的工具调用与插件
-meta_description: IT服务融资日报的数据聚合自全国中小企业股份转让系统、地方股权交易中心、行业垂直资讯数据库及企业自主申报渠道，更新节奏为每日T+1同步前一日的新增融资记录。
+meta_description: IT 服务融资日报的工具调用与插件：IT 服务融资日报的工具调用与插件，涵盖配置与验证建议
 keywords: IT 服务、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

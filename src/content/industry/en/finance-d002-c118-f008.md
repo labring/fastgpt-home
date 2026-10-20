@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Unified AI Platform and Multi-App Orchestration
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Unified Entry All-in-One AI
-meta_description: Data for unified entry all-in-one AI platforms comes primarily from sub-AI application call logs within the platform, return data from externally
+meta_description: Tool Calling and Plugins for Unified Entry All-in-One AI Platforms
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 服装家纺收益率的分享与嵌入
-meta_description: 面向金融场景的服装家纺品类收益率与行情数据，主要来自行业公开行情数据库、品牌终端零售监测系统及供应链库存平台。数据更新节奏分为三级：终端零售均价、毛利率相关
+meta_description: 服装家纺收益率的分享与嵌入：服装家纺收益率的分享与嵌入，涵盖配置与验证建议。。。
 keywords: 服装家纺、收益率与行情日报播报、分享与嵌入
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

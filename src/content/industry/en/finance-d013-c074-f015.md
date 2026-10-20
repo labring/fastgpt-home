@@ -4,8 +4,8 @@ slug: /en/industry/finance-d013-c074-f015
 page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
-meta_title: Deployment and Upgrade for Education Service Financing Daily
-meta_description: Data for education service financing daily reports comes primarily from public investment and financing disclosure platforms, industry regulatory
+meta_title: Deployment and Upgrade for Education Service Financing
+meta_description: Deployment and Upgrade for Education Service Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

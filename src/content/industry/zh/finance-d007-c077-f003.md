@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 旅游景区收益率的分享与嵌入
-meta_description: 旅游景区的收益率统计数据来源为景区内部票务系统、客流统计模块及财务对账系统。数据更新节奏为每日闭园后固定时段生成当日全量统计结果。单条数据文档结构包含统计日
+meta_description: 旅游景区收益率的分享与嵌入：旅游景区收益率的分享与嵌入，涵盖配置与验证建议。。。
 keywords: 旅游景区、收益率与行情日报播报、分享与嵌入
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

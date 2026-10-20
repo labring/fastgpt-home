@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专业连锁营销内容的模型接入与配置
-meta_description: 金融/保险/理财领域专业连锁的营销内容数据来源包括总部统一品牌素材库、各门店自主编辑的区域保险/理财促销物料、会员触达文案及线下活动宣传资料。数据更新节奏分
+meta_description: 专业连锁营销内容的模型接入与配置：专业连锁营销内容的模型接入与配置，涵盖配置与验证建议
 keywords: 专业连锁、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

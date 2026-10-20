@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 造纸研报检索的向量模型与索引
-meta_description: 造纸研报的数据主要来自行业权威机构、券商研究部门、上市造纸企业公开公告、专业行业数据库。文档多为结构化与半结构化结合，包含行业供需规模、单厂产能、原料成本、
+meta_description: 造纸研报检索的向量模型与索引：造纸研报检索的向量模型与索引，涵盖配置与验证建议。
 keywords: 造纸、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

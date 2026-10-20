@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 教育服务营销内容的工具调用与插件
-meta_description: 教育服务的营销内容数据主要来源于金融理财课程研发文档、学员投资反馈记录、教学脚本素材、线下理财沙龙物料及线上社群互动内容。更新节奏随业务节点调整，课程迭代、
+meta_description: 教育服务营销内容的工具调用与插件：教育服务营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 教育服务、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

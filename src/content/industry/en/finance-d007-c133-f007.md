@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Securities Yield Daily Reporting
-meta_description: Securities market data is sourced from official exchange public APIs and standardized APIs from compliant financial data service providers. Data is
+meta_description: Workflow Orchestration for Securities Yield Daily Reporting
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

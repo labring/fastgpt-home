@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 文娱用品营销内容的向量模型与索引
-meta_description: 金融行业文娱用品营销内容数据主要来自银行、保险机构的文创周边详情页、营销素材库、直播脚本与社交种草内容。更新节奏随节日营销、客户答谢活动周期调整，无固定频次
+meta_description: 文娱用品营销内容的向量模型与索引：文娱用品营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 文娱用品、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦炭收益率的多轮对话与提示词
-meta_description: 焦炭相关行情与收益率数据主要来源于大连商品交易所期货合约数据、国内煤炭行业协会的现货监测数据。更新节奏方面，期货行情数据按交易日实时更新，日报数据于每个交易
+meta_description: 焦炭收益率的多轮对话与提示词：焦炭收益率的多轮对话与提示词，涵盖配置与验证建议。
 keywords: 焦炭、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

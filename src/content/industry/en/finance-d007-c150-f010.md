@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Database and Operations for Iron Ore Yield Data
-meta_description: Iron ore yield-related data is primarily sourced from the official market data API of Dalian Commodity Exchange and structured third-party bulk
+meta_description: Database and Operations for Iron Ore Yield Data
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

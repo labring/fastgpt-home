@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 热力融资日报的知识库检索与召回
-meta_description: 热力融资日报的数据来源于区域能源交易中心每日成交记录、热力供应主体公开披露的短期融资公告、地方公用事业监管平台报送的运营融资数据。更新节奏为每日更新，当日数
+meta_description: 热力融资日报的知识库检索与召回：热力融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 热力、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

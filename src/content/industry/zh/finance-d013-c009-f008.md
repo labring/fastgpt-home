@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 产业园区融资日报的工具调用与插件
-meta_description: 产业园区融资日报的数据来源为园区运营方归集的入驻企业当日融资申报数据、地方金融监管局园区专项报送台账，以及合作金融机构的当日放款记录。数据更新节奏为每日T+
+meta_description: 产业园区融资日报的工具调用与插件：产业园区融资日报的工具调用与插件，涵盖配置与验证建议
 keywords: 产业园区、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

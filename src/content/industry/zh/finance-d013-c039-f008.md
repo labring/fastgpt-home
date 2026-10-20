@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 厨卫电器融资日报的工具调用与插件
-meta_description: 这个品类的数据来自公开企业融资披露公告、行业供应链融资备案信息及指定财经媒体的公开报道。每日汇总当日新增及近7日的关联融资事件，生成当日日报。单条融资条目包
+meta_description: 厨卫电器融资日报的工具调用与插件：厨卫电器融资日报的工具调用与插件，涵盖配置与验证建议
 keywords: 厨卫电器、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

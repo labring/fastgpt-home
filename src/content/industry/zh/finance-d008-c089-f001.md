@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油气开采智能尽调报告的HTTP 接口与外部系统
-meta_description: 油气开采智能尽调报告的数据主要来源于油气田SCADA生产监控系统、国内油气地质勘探数据库、第三方行业数据接口。数据更新节奏分两类：实时生产参数每5分钟同步更
+meta_description: 油气开采智能尽调报告的HTTP 接口与外部系统：油气开采智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 油气开采、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -4,8 +4,8 @@ slug: /en/industry/finance-d012-c089-f005
 page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Dialogue and Prompting for Oil and Gas Extraction
-meta_description: Data sources include single well production monitoring sensors, oil and gas gathering and transportation system SCADA logs, geological exploration
+meta_title: Multi-turn Dialogue and Prompting for Oil and Gas
+meta_description: Multi-turn Dialogue and Prompting for Oil and Gas Extraction Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

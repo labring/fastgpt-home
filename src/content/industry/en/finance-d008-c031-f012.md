@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for Chemical Pharmaceutical
-meta_description: Intelligent due diligence reports for chemical pharmaceuticals draw data primarily from publicly available materials from the national drug regulatory
+meta_description: Model Access and Configuration for Chemical Pharmaceutical Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

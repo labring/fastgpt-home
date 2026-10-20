@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小金属营销内容的多轮对话与提示词
-meta_description: 用于金融场景下小金属营销内容的数据，主要来源于国内有色金属工业协会、专业现货交易平台、海关进出口公开数据及矿山企业披露信息。现货报价类数据每日更新，库存与进
+meta_description: 小金属营销内容的多轮对话与提示词：小金属营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 小金属、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 风电智能尽调报告的文档解析与分块
-meta_description: 风电智能尽调报告的数据主要来源于风机设备的出厂检测文件、现场运维台账、并网验收报告以及第三方检测机构出具的缺陷排查文档。数据更新节奏随文档类型有所区分，月度
+meta_description: 风电智能尽调报告的文档解析与分块：风电智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 风电、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

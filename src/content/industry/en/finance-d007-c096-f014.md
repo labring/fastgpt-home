@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Form and Interaction for Coke Yield and Market Data
-meta_description: Coke market and yield-related data comes primarily from public futures market APIs of the Dalian Commodity Exchange and domestic bulk commodity spot
+meta_description: Form and Interaction for Coke Yield and Market Data
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 普钢收益率的表单与交互
-meta_description: 普钢行情数据的来源为国内钢铁行业现货交易平台、期货交易所官方行情接口。更新节奏分为两类：现货数据每日收盘后更新，期货数据随交易日交易时段实时更新。文档结构为
+meta_description: 普钢收益率的表单与交互：普钢收益率的表单与交互，涵盖配置与验证建议。。。。。。。
 keywords: 普钢、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

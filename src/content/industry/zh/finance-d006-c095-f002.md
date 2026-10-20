@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 热力投研知识库建设的上下文与 token
-meta_description: 热力投研数据主要来自热力运营企业的管网监测系统、能耗结算报表、政府热力供应监管台账。更新节奏覆盖实时、日度、月度多个维度，实时数据包含管网节点的供回水温度、
+meta_description: 热力投研知识库建设的上下文与 token：热力投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 热力、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

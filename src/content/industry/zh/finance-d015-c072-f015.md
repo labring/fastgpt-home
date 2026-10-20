@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 授信申请风控的部署与升级
-meta_description: 授信申请风控的数据主要来自申请人提交的结构化表单、第三方征信接口、经营资质扫描件与财务流水文件。结构化字段包含申请人统一社会信用代码、申请授信额度（单位元）
+meta_description: 授信申请风控的部署与升级：授信申请风控的部署与升级，涵盖配置与验证建议。。。。。
 keywords: 授信申请、风控与授信材料审核、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

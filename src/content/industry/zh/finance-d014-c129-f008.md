@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 融资租赁财报分析的工具调用与插件
-meta_description: 融资租赁的财报数据主要来自企业内部租赁业务台账、租金回收明细、逾期项目清单，以及监管部门要求报送的非银金融统计报表。数据更新节奏为月度同步业务台账，季度更新
+meta_description: 融资租赁财报分析的工具调用与插件：融资租赁财报分析的工具调用与插件，涵盖配置与验证建议
 keywords: 融资租赁、财报分析与报告生成、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

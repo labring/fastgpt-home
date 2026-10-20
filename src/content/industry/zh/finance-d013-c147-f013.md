@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 造纸融资日报的知识库检索与召回
-meta_description: 造纸融资日报的数据主要来自中国造纸协会公开披露的行业动态、上市造纸企业的临时公告、大宗商品交易平台的融资挂牌信息。更新节奏为每日更新，覆盖前一工作日的全量融
+meta_description: 造纸融资日报的知识库检索与召回：造纸融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 造纸、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

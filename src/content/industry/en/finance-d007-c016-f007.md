@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Photovoltaic Yield
-meta_description: Data sources for photovoltaic yield and market daily reports include provincial grid grid-connected settlement reports, third-party power equipment
+meta_description: Workflow Orchestration for Photovoltaic Yield
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

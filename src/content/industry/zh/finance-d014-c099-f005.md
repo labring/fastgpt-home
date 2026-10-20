@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 燃气财报分析的多轮对话与提示词
-meta_description: 燃气品类的财报数据主要来自上市燃气企业公开披露的定期报告、行业协会发布的运营统计资料，以及能源监管机构的公开公示信息。更新节奏为季度报每季度更新，年报、半年
+meta_description: 燃气财报分析的多轮对话与提示词：燃气财报分析的多轮对话与提示词，涵盖配置与验证建议
 keywords: 燃气、财报分析与报告生成、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

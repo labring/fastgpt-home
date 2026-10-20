@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 装修装饰收益率的对话日志与审计
-meta_description: 装修装饰领域的收益率数据来源于企业内部ERP系统、材料供应商报价台账、项目施工日志及财务结算报表。数据以单个装修项目为核心单元，包含项目唯一标识、装修细分类
+meta_description: 装修装饰收益率的对话日志与审计：装修装饰收益率的对话日志与审计，涵盖配置与验证建议
 keywords: 装修装饰、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

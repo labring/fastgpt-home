@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油服工程研报检索的引用来源与溯源
-meta_description: 油服工程研报数据主要来自行业协会公开技术规范、油气田作业方的工程竣工文档、第三方咨询机构的专项研究报告。文档更新随行业技术迭代、大型油气项目推进发布，无统一
+meta_description: 油服工程研报检索的引用来源与溯源：油服工程研报检索的引用来源与溯源，涵盖配置与验证建议
 keywords: 油服工程、研报检索与问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

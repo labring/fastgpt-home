@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: KYC and AML Document Verification
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Funding Source KYC
-meta_description: Funding source KYC data mainly comes from bank corporate/personal transaction statements, personal income certificates, asset holding documents
+meta_description: Document Parsing and Chunking for Funding Source KYC
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

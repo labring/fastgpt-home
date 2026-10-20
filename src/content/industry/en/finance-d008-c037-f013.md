@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for Satellite
-meta_description: The data for satellite communications intelligent due diligence reports comes from four main sources: publicly available orbital operation parameters
+meta_description: Knowledge Base Retrieval and Recall for Satellite Communications Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

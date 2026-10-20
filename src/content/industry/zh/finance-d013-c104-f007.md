@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 玻璃融资日报的工作流编排
-meta_description: 玻璃融资日报的数据来源涵盖国内建材大宗商品交易指数平台、区域经销商上报台账、期货盘面结算价及上游原料行业指导价。数据更新节奏为每日17:00前完成当日全量数
+meta_description: 玻璃融资日报的工作流编排：玻璃融资日报的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 玻璃、融资日报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

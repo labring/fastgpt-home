@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Software Development
-meta_description: Data for this category comes from publicly listed financing announcements, industry self-regulatory organization disclosures, and third-party
+meta_description: Document Parsing and Chunking for Software Development Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

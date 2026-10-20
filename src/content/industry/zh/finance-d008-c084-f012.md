@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水处理智能尽调报告的模型接入与配置
-meta_description: 供金融机构开展项目尽调使用的水处理智能尽调报告的数据主要来源于水务监管公开平台、现场水质监测站的实时采样数据、水处理设备厂商的运维日志、项目环评批复文件及定
+meta_description: 水处理智能尽调报告的模型接入与配置：水处理智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 水处理、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 贵金属营销内容的工作流编排
-meta_description: 贵金属相关数据主要来源于上海黄金交易所官方行情接口、合规第三方贵金属行情数据源。实时行情数据每10秒刷新一次，日度结算、持仓总量等数据每日凌晨更新。数据格式
+meta_description: 贵金属营销内容的工作流编排：贵金属营销内容的工作流编排，涵盖配置与验证建议。。。
 keywords: 贵金属、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 黑色家电研报检索的多轮对话与提示词
-meta_description: 数据来源为券商家电研究团队公开研报、专业家电产业咨询机构的金融级零售监测数据、头部品牌年度技术白皮书。更新节奏为月度更新零售端监测统计值，季度发布细分品类深
+meta_description: 黑色家电研报检索的多轮对话与提示词：黑色家电研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 黑色家电、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

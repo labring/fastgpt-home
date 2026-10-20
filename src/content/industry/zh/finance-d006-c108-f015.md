@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电商服务投研知识库建设的部署与升级
-meta_description: 电商服务投研的数据主要来自电商平台商家后台、第三方爬虫工具、行业公开分析文档与实时交易监控接口。数据更新节奏覆盖实时（用户评价、实时销量）、每日（商品定价、
+meta_description: 电商服务投研知识库建设的部署与升级：电商服务投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 电商服务、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

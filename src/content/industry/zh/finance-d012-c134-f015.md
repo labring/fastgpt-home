@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 调味品营销内容的部署与升级
-meta_description: 数据主要来自金融机构合作的调味品品牌自有营销物料库、线下终端的获客促销素材、电商渠道的用户反馈片段，以及SKU基础档案。更新节奏分为常规更新与临时更新：常规
+meta_description: 调味品营销内容的部署与升级：调味品营销内容的部署与升级，涵盖配置与验证建议。。。
 keywords: 调味品、营销内容与获客、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

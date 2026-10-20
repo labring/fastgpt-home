@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Refining and Chemical
-meta_description: The data sources for refining and chemical marketing content include supply chain financial product manuals from financial institutions for refining
+meta_description: Vector Models and Indexing for Refining and Chemical Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

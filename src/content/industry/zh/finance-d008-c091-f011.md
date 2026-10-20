@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 消费建材智能尽调报告的文档解析与分块
-meta_description: 数据来源包括消费建材生产企业的产品技术手册、第三方检测机构的合规报告、工程项目的招投标响应文件、供应链上下游的供货结算单据。更新节奏依文档类型不同，产品手册
+meta_description: 消费建材智能尽调报告的文档解析与分块：消费建材智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 消费建材、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

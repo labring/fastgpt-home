@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c049-f005
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Dialogue and Prompt Engineering for
-meta_description: This category's data primarily comes from bid announcements on the National Public Resource Trading Platform, construction cost information released
+meta_title: Multi-turn Dialogue and Prompt Engineering
+meta_description: Multi-turn Dialogue and Prompt Engineering for Infrastructure Project Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 服装家纺智能尽调报告的多轮对话与提示词
-meta_description: 服装家纺行业的尽调数据主要来自品牌方SKU台账、面料批次质检报告、供应商供货清单、电商平台销售快照。数据更新节奏随上新季调整，核心SKU每季度更新，批次质检
+meta_description: 服装家纺智能尽调报告的多轮对话与提示词：服装家纺智能尽调报告的多轮对话与提示词，涵盖配置与验证建议
 keywords: 服装家纺、智能尽调报告、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

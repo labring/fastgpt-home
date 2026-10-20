@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Precious Metals Financial
-meta_description: Data sources for precious metals financial report and trading data include London Bullion Market Association (LBMA) fixing data, Shanghai Gold
+meta_description: Tool Calling and Plugins for Precious Metals Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -29,7 +29,7 @@ Non-standard table layouts appear in PDF-format financial report data. Plugins m
 | ---- | ---- | ---- |
 | `PLUGIN_API_TIMEOUT` | `30 seconds` | Precious metals intraday trading data API responses typically complete within 10 seconds. An overly long timeout setting will block pipeline execution |
 | `PARSE_PDF_TIMEOUT_SECONDS` | `600 seconds` | Financial report PDFs from listed gold enterprises usually contain multiple pages of tables and charts, leading to longer parsing times |
-| `PLUGIN_REQUEST_HEADERS` | `{"Content-Type": "application/json", "X-API-Key": "{{user_secret}}"}` | Most precious metals data source APIs require JSON-formatted request bodies and API key authentication |
+| `PLUGIN_REQUEST_HEADERS` | `{"Content-Type": "application/json", "X-API-Key": "example value"}` | Most precious metals data source APIs require JSON-formatted request bodies and API key authentication |
 | `DATA_UNIT_CONVERSION` | `Enabled, target unit is CNY/gram` | The mainstream pricing unit for domestic precious metals trading is CNY/gram. Unifying units simplifies subsequent analysis logic |
 | `PLUGIN_SCHEDULE_POLICY` | `Configured by data type group: pull intraday data every 15 minutes, pull monthly inventory data once per month, pull quarterly financial report data once per quarter` | Matches the official update rhythms of different data sources to avoid invalid requests and expired data |
 | `HTTP_RETRY_MAX_TIMES` | `3 times` | Precious metals data source APIs experience occasional fluctuations. Limited retries reduce request failure rates |

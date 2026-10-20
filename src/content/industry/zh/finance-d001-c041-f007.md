@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 名单筛查KYC 的工作流编排
-meta_description: 名单筛查的数据主要来自监管机构公开制裁名录、国际组织合规清单、行业合规共享库。更新节奏随监管政策变动不定期调整，无固定常规更新周期。文档多为结构化格式，包含
+meta_description: 名单筛查KYC 的工作流编排：名单筛查KYC 的工作流编排，涵盖配置与验证建议。
 keywords: 名单筛查、KYC 与反洗钱资料核验、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

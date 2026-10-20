@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 投资平台投研知识库建设的上下文与 token
-meta_description: 投资平台的投研数据主要来自公开行业研报、上市公司定期报告、行业统计数据集。数据更新节奏覆盖即时行业点评、季度财报公告、月度行业动态。单篇文档长度跨度较大，短
+meta_description: 投资平台投研知识库建设的上下文与 token：投资平台投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 投资平台、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

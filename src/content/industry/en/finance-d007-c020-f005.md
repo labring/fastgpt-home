@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Ordnance
-meta_description: Ordnance equipment yield rate data primarily comes from public information platforms of the national defense and military industry, operational data
+meta_description: Multi-turn Dialogue and Prompt Engineering for Ordnance Equipment Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

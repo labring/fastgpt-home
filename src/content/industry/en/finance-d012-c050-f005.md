@@ -4,8 +4,8 @@ slug: /en/industry/finance-d012-c050-f005
 page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Dialogue and Prompt Engineering for Plastics and
-meta_description: Data sources for the plastics and rubber category include industry association public reports, upstream petrochemical enterprise factory ledgers, and
+meta_title: Multi-turn Dialogue and Prompt Engineering for Plastics
+meta_description: Multi-turn Dialogue and Prompt Engineering for Plastics and Rubber Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

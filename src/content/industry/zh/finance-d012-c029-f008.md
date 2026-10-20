@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 包装印刷营销内容的工具调用与插件
-meta_description: 金融领域包装印刷的营销相关数据主要来自金融机构的生产ERP系统、印刷订单管理系统、客户设计稿元数据库与营销物料素材库。数据更新节奏随项目周期变动，新理财或保
+meta_description: 包装印刷营销内容的工具调用与插件：包装印刷营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 包装印刷、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

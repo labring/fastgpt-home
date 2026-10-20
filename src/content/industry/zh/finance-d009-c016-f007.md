@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光伏研报检索的工作流编排
-meta_description: 光伏行业研报数据主要来自券商研究所、行业协会、上市公司定期公告及政策发布平台。更新节奏随行业事件波动，新政策发布、产业链价格调整时会集中更新，日常以月度跟踪
+meta_description: 光伏研报检索的工作流编排：光伏研报检索的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 光伏、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

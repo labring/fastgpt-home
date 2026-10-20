@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 废标项竞价的引用来源与溯源
-meta_description: 废标项竞价数据主要来源于政府采购网、公共资源交易中心的公开招投标公告与废标公示。数据更新节奏随对应招标项目的评审进度实时更新，单篇文档包含项目全称、废标事由
+meta_description: 废标项竞价的引用来源与溯源：废标项竞价的引用来源与溯源，涵盖配置与验证建议。。。
 keywords: 废标项、竞价与投标报告、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

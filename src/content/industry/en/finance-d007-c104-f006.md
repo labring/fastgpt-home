@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Conversation Logs and Auditing for Glass Yield Rates
-meta_description: Market data for construction glass such as float glass is sourced from the Zhengzhou Commodity Exchange futures market API and domestic bulk spot
+meta_description: Conversation Logs and Auditing for Glass Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

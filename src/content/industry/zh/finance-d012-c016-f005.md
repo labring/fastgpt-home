@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光伏营销内容的多轮对话与提示词
-meta_description: 光伏品类的营销数据主要来自光伏设备制造商公开的产品规格文档、分布式光伏项目的技术交底材料、地方能源管理部门发布的并网指导文件。更新节奏分为两类：产品规格文档
+meta_description: 光伏营销内容的多轮对话与提示词：光伏营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 光伏、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

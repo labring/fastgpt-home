@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Forms and Interactions for Specialized Chain Store Profit
-meta_description: Profit margin and market data for specialized chain stores is primarily sourced from store POS terminals, headquarters ERP inventory and sales
+meta_description: Forms and Interactions for Specialized Chain Store Profit Margins
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -34,7 +34,7 @@ Since data is grouped by store and includes a large number of entries per batch,
 ## Three Common Configuration Mistakes
 - Only the store name is configured as the display value for dropdown options, without binding the store unique identifier, resulting in empty fields during subsequent data matching. This occurs because the `option_value_field` parameter is not set, and the option value is not bound to the store unique identifier.
 - A `413 Request Entity Too Large` error occurs during batch data import. This occurs because the `UPLOAD_FILE_MAX_SIZE` parameter is not adjusted, and the uploaded file exceeds the default limit size.
-- Form variables are called directly using the variable name without specifying a specific field, resulting in no data for the corresponding field after submission. This occurs because the variable reference is not configured in the `{{variable name.field name}}` format, and the data source field being called is not specified.
+- Form variables are called directly using the variable name without specifying a specific field, resulting in no data for the corresponding field after submission. This occurs because the variable reference is not configured in the `example value` format, and the data source field being called is not specified.
 
 ## How to Confirm Correct Configuration
 - Open the form preview page, verify that the date picker defaults to the previous day, and that future dates or historical dates outside the valid range cannot be selected.

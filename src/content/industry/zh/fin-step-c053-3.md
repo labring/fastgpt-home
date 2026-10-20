@@ -4,7 +4,7 @@ slug: /zh/industry/fin-step-c053-3
 page_type: 行业作业环节页
 article_section: 公募基金
 is_part_of: FastGPT 技术中心
-meta_title: 跨境基金投资与运营（QDII）的管理跨境资金、外汇敞口及资格
+meta_title: 跨境基金投资与运营（QDII）的管理跨境资金、外汇敞口及资格/额度约束：哪一部分能交给系统
 meta_description: 跨境基金投资与运营（QDII）的管理跨境资金、外汇敞口及资格/额度约束：哪一部分能交给系统
 keywords: 跨境基金投资与运营（QDII）、公募基金、环节3
 source_type: 金融业务分类与作业事实取自行业研究报告（含监管文件来源编号）

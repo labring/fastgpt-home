@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interfaces and External Systems for Energy Metals
-meta_description: The data for energy metals financing daily reports is sourced from domestic professional information institutions in the non-ferrous metals industry
+meta_description: HTTP Interfaces and External Systems for Energy Metals Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

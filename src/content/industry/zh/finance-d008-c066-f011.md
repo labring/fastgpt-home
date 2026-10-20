@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 房建工程智能尽调报告的文档解析与分块
-meta_description: 房建工程智能尽调报告的数据主要来源于项目招投标文件、施工图设计文件、造价清单、现场签证单、竣工结算报告等。数据更新随项目阶段推进，立项后逐步生成，竣工后归档
+meta_description: 房建工程智能尽调报告的文档解析与分块：房建工程智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 房建工程、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

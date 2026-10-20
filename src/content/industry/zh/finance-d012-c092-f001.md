@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 消费电子营销内容的HTTP 接口与外部系统
-meta_description: 消费电子的营销内容主要来源于品牌官方产品页、第三方电商平台商品详情、新品发布会通稿与社交媒体种草素材。更新节奏随新品发布周期波动，新品上线前会批量更新全量内
+meta_description: 消费电子营销内容的HTTP 接口与外部系统：消费电子营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 消费电子、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

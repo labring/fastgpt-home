@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 证券智能尽调报告的模型接入与配置
-meta_description: 证券尽调的数据来源包括沪深交易所公开披露的上市公司定期报告、临时公告，证监会及地方证监局发布的监管文件，以及行业协会公开统计数据。更新节奏为定期报告按季度、
+meta_description: 证券智能尽调报告的模型接入与配置：证券智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 证券、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

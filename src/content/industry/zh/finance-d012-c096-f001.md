@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦炭营销内容的HTTP 接口与外部系统
-meta_description: 焦炭作为煤炭细分品类，面向金融理财场景的营销内容需依赖精准的实时行业数据。数据主要来源于中国煤炭工业协会、沿海港口现货交易平台、大连商品交易所。数据更新节奏
+meta_description: 焦炭营销内容的HTTP 接口与外部系统：焦炭营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 焦炭、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

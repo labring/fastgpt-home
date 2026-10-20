@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 广告营销融资日报的HTTP 接口与外部系统
-meta_description: 广告营销品类的融资日报数据主要来自传媒行业第三方融资监测平台、广告主投放后台及公开融资披露文件。数据按自然日更新，每日凌晨完成当日数据归集。文档采用结构化格
+meta_description: 广告营销融资日报的HTTP 接口与外部系统：广告营销融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 广告营销、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Database and Operations for Insurance Investment Research
-meta_description: Data for insurance investment research knowledge bases comes from four main sources: internal actuarial reports of insurance companies, regulatory
+meta_description: Database and Operations for Insurance Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

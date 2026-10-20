@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 出版营销内容的模型接入与配置
-meta_description: 出版营销内容的数据主要来源于出版机构的营销素材库、图书详情页内容、读者评论、媒体书评及线下活动记录。更新节奏随新书上线周期调整，新书发布期批量更新全量营销物
+meta_description: 出版营销内容的模型接入与配置：出版营销内容的模型接入与配置，涵盖配置与验证建议。
 keywords: 出版、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

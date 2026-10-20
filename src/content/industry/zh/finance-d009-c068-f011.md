@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 投资平台研报检索的文档解析与分块
-meta_description: 投资平台的研报数据主要来自券商研究所、行业协会、上市公司定期公告与公开披露文件。更新节奏随市场周期波动，财报季更新频率显著提升，日常按工作日稳定更新。文档多
+meta_description: 投资平台研报检索的文档解析与分块：投资平台研报检索的文档解析与分块，涵盖配置与验证建议
 keywords: 投资平台、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

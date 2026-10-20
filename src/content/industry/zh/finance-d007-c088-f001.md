@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油服工程收益率的HTTP 接口与外部系统
-meta_description: 油服工程收益率相关数据主要来自油田生产管理系统、钻井作业监控平台及第三方油气行业数据接口。数据以单井、作业区块为核心维度，文档结构包含作业编号、井位坐标、作
+meta_description: 油服工程收益率的HTTP 接口与外部系统：油服工程收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 油服工程、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

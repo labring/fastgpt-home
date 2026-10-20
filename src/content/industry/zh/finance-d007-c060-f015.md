@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程咨询收益率的部署与升级
-meta_description: 工程咨询领域的收益率与行情日报数据，主要来源于住建部门公开的造价监测平台、行业协会发布的项目收益统计报表，以及已归档的工程咨询项目造价与收益台账。数据更新节
+meta_description: 工程咨询收益率的部署与升级：工程咨询收益率的部署与升级，涵盖配置与验证建议。。。
 keywords: 工程咨询、收益率与行情日报播报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

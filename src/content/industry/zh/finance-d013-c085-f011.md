@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水泥融资日报的文档解析与分块
-meta_description: 水泥融资日报的数据主要来自区域大宗商品交易平台的水泥供应链融资台账、水泥生产企业的融资报备文件，以及行业协会的每日融资汇总简报。更新节奏为每日更新，单份文档
+meta_description: 水泥融资日报的文档解析与分块：水泥融资日报的文档解析与分块，涵盖配置与验证建议。
 keywords: 水泥、融资日报、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

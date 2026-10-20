@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油气开采营销内容的文档解析与分块
-meta_description: 油气开采领域的营销内容数据源包含勘探评估报告、钻井作业日志、区域油气藏分析文档、招商合作手册及行业合规通知等。数据更新节奏随业务阶段调整：勘探类文档随项目进
+meta_description: 油气开采营销内容的文档解析与分块：油气开采营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 油气开采、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医疗器械研报检索的工作流编排
-meta_description: 医疗器械研报的数据来源包括金融机构自研的医疗器械行业投资研报、国家药品监督管理局公开的医疗器械注册证文档、保险理赔审核用的器械适配指南，以及医药生物行业数据
+meta_description: 医疗器械研报检索的工作流编排：医疗器械研报检索的工作流编排，涵盖配置与验证建议。
 keywords: 医疗器械、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

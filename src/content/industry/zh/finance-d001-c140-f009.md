@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 资金来源KYC 的引用来源与溯源
-meta_description: 资金来源KYC的数据主要来自银行对公/对私流水、转账凭证扫描件、纳税申报表、资产证明文件等。数据更新节奏随交易发生频率而定，单笔交易完成后即生成对应记录，月
+meta_description: 资金来源KYC 的引用来源与溯源：资金来源KYC 的引用来源与溯源，涵盖配置与验证建议
 keywords: 资金来源、KYC 与反洗钱资料核验、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

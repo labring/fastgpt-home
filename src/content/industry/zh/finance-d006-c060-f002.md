@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程咨询投研知识库建设的上下文与 token
-meta_description: 工程咨询的数据主要来源于建筑工程可研报告、造价估算文件、国家及行业规范图集、项目招投标台账、现场施工日志等。数据更新节奏随项目推进或行业规范修订不定期触发，
+meta_description: 工程咨询投研知识库建设的上下文与 token：工程咨询投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 工程咨询、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

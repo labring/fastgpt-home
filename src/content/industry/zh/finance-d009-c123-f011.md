@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 能源金属研报检索的文档解析与分块
-meta_description: 能源金属研报的数据来源包括公开行业研究机构发布的定期文档、矿企披露的运营文件、大宗商品交易平台的行情纪要。更新节奏为定期发布季度、半年度行业全景文档，突发供
+meta_description: 能源金属研报检索的文档解析与分块：能源金属研报检索的文档解析与分块，涵盖配置与验证建议
 keywords: 能源金属、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商用车投研知识库建设的数据库与运维
-meta_description: 商用车投研数据来源覆盖整车厂公开公告、工信部机动车产品目录、运输工况监测终端、行业政策文件四类。数据更新节奏差异明显：整车公告按季度更新，工况监测数据按分钟
+meta_description: 商用车投研知识库建设的数据库与运维：商用车投研知识库建设的数据库与运维，涵盖配置与验证建议
 keywords: 商用车、投研知识库建设与治理、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

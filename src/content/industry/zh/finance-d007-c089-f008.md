@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油气开采收益率的工具调用与插件
-meta_description: 油气开采的收益率相关数据主要来自能源监管机构公开数据集、行业专业数据接口。更新节奏为每日凌晨更新前一日的全量生产与售价数据，覆盖当日所有开采区块的生产情况。
+meta_description: 油气开采收益率的工具调用与插件：油气开采收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 油气开采、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

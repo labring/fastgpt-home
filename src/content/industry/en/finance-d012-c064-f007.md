@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Film Theater Marketing Content
-meta_description: Core data for film theaters comes from theater scheduling management systems, third-party ticketing platform open APIs, in-house marketing material
+meta_description: Workflow Orchestration for Film Theater Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -33,7 +33,7 @@ Strict marketing time windows mean workflows must set reasonable timeouts and re
 | --- | --- | --- |
 | `trigger_mode` | `Incremental trigger (by session update time)` | Theater scheduling data updates per individual screening. Full scheduled triggers will repeatedly process already handled screening data |
 | `db_connect_timeout` | `30 seconds` | Theater databases are mostly deployed on internal networks. An overly short timeout setting will cause connection failures, while an overly long one will block workflow queues |
-| `variable_ref_format` | `[{"film_id": "{{film_id}}", "schedule_id": "{{show_schedule_id}}"}]` | Marketing content must be bound to specific films and screenings. Two-dimensional associated parameters must be passed |
+| `variable_ref_format` | `[{"film_id": "example value", "schedule_id": "example value"}]` | Marketing content must be bound to specific films and screenings. Two-dimensional associated parameters must be passed |
 | `media_resize_limit` | `1080p、720p、480p` | Fit resolution requirements of different delivery channels including theater official accounts, cinema self-service terminals, and third-party ticketing platforms |
 | `workflow_retry_times` | `2 times` | Theater marketing activities have strict time windows. Too many retries will miss delivery windows |
 | `max_batch_process` | `10 entries per call` | Processing too many screenings in a single batch will cause excessive database load, and affect the stability of theater ticketing systems |

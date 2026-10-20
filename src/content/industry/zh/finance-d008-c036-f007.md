@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 半导体智能尽调报告的工作流编排
-meta_description: 半导体尽调数据来源包含行业协会的月度/季度出货统计、晶圆代工厂公开的制程参数文档、专利数据库的半导体领域申请文件、供应链企业的公开报价备案。更新节奏存在差异
+meta_description: 半导体智能尽调报告的工作流编排：半导体智能尽调报告的工作流编排，涵盖配置与验证建议
 keywords: 半导体、智能尽调报告、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

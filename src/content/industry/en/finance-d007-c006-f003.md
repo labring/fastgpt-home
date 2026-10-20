@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Sharing and Embedding of Traditional Chinese Medicine (TCM)
-meta_description: Daily report data for TCM yield rates and market trends comes from two channels: national public trading platforms for Chinese herbal medicine
+meta_description: Sharing and Embedding of Traditional Chinese Medicine (TCM) Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -17,7 +17,7 @@ date_modified: 2026-09-15
 Daily report data for TCM yield rates and market trends comes from two channels: national public trading platforms for Chinese herbal medicine circulation, and the securities market TCM sector market database. Updates are completed within 1 hour after market close on each trading day, with no updates on non-trading days. The document uses a structured table format, where each row corresponds to a single Chinese herbal medicine variety or sector constituent stock. Fields include variety or sector name, origin or stock code, specification or industry classification, daily trading price, previous trading day’s trading price, and price change amount. The price unit is yuan per kilogram or yuan per share, and the change amount unit matches the corresponding price unit.
 
 ## What constraints do these characteristics impose on the "sharing and embedding" link
-Market trend data for Chinese herbal medicines and TCM sectors comes from dispersed sources, so content from both data sources must be aggregated. When embedding, multi-data source association rules need to be configured to ensure accurate data integration. Data updates only occur during fixed times on trading days, so the automatic refresh interval of the embedded component must match this cycle to avoid invalid requests or data lag. Fields include prices and change values with different units, so units must be clearly marked during embedded display to prevent data misinterpretation. There is no daily data on non-trading days, so the embedded component needs to be configured with empty data placeholder logic. The number of Chinese herbal medicine varieties is large, so the embedded component must adapt to pagination loading rules to avoid page loading overload.
+Market trend data for Chinese herbal medicines and TCM sectors comes from dispersed sources, so content from both data sources must be aggregated. When embedding, multi-data source association rules need to be configured to ensure accurate data integration. Data updates only occur during fixed times on trading days, so the automatic refresh interval of the embedded component must match this cycle to avoid invalid requests or data lag. Fields include prices and change values with different units, so units must be clearly marked during embedded display to prevent data misinterpretation. There is no daily data on non-trading days, so the embedded component needs to be configured with empty data pending verification logic. The number of Chinese herbal medicine varieties is large, so the embedded component must adapt to pagination loading rules to avoid page loading overload.
 
 ## How to set the configurations
 | Configuration Item | Recommended Value | Rationale |
@@ -25,7 +25,7 @@ Market trend data for Chinese herbal medicines and TCM sectors comes from disper
 | `multi_source_data_switch` | `enabled` | TCM market trend data includes circulation quotation and securities market data sources, so multi-source aggregation must be enabled |
 | `auto_refresh_interval` | `86400 seconds` | TCM market trend data is updated only once per day, setting a fixed 24-hour refresh interval matches the update cycle |
 | `field_unit_display` | `enabled` | Data fields include different units such as yuan/kg and yuan/share, so enabling unit display prevents data misinterpretation |
-| `empty_data_template` | `No daily market trend data available on non-trading days` | No daily updated data on non-trading days, so a clear placeholder prompt must be configured |
+| `empty_data_template` | `No daily market trend data available on non-trading days` | No daily updated data on non-trading days, so a clear pending verification prompt must be configured |
 | `embed_pagination_limit` | `20–50 items` | The number of Chinese herbal medicine varieties is large, so pagination loading balances page loading speed and data display volume |
 | `share_permission_mode` | `public` | Daily market reports belong to public industry data, so sharing does not require private authentication |
 

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Forms and Interactions for Steel Trade Yield Reporting
-meta_description: Steel trade market and yield data is sourced from industry spot trading platforms, futures exchange market application programming interfaces, and
+meta_description: Forms and Interactions for Steel Trade Yield Reporting
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

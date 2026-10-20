@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 汽车服务营销内容的工具调用与插件
-meta_description: 汽车服务营销内容的数据主要来自线下车险门店服务工单、汽车保养合作门店工单、车主端口碑评论、品牌官方素材库及本地车主行为标签。数据更新节奏存在分层：服务套餐文
+meta_description: 汽车服务营销内容的工具调用与插件：汽车服务营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 汽车服务、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

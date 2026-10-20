@@ -4,8 +4,8 @@ slug: /zh/industry/fin-step-c010-2
 page_type: 行业作业环节页
 article_section: 证券投行
 is_part_of: FastGPT 技术中心
-meta_title: 企业资产证券化 ABS的重建历史回款并完成现金流压力分析：哪
-meta_description: 企业资产证券化 ABS的重建历史回款并完成现金流压力分析：哪一部分能交给系统
+meta_title: 企业资产证券化 ABS的重建历史回款并完成现金流压力分析：哪一部分能交给系统
+meta_description: 企业资产证券化 ABS的重建历史回款并完成现金流压力分析：哪一部分能交给系统：企业资产证券化 ABS的重建历史回款并完成现金流压力分析：哪一部分能交给系统，涵盖配置与验证建议
 keywords: 企业资产证券化 ABS、证券投行、环节2
 source_type: 金融业务分类与作业事实取自行业研究报告（含监管文件来源编号）
 date_published: 2026-09-15

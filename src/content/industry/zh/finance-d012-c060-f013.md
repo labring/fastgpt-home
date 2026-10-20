@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程咨询营销内容的知识库检索与召回
-meta_description: 工程咨询的营销内容数据主要来自项目可研报告、投标响应方案、客户成功案例库、行业政策解读文档、标准化营销话术库。更新节奏随内容类型差异调整，中标项目案例随项目
+meta_description: 工程咨询营销内容的知识库检索与召回：工程咨询营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 工程咨询、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

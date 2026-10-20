@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航运港口研报检索的文档解析与分块
-meta_description: 航运港口研报的数据来源涵盖行业协会月度统计公报、港口管理局运营月报、航运经纪机构的周度运价报告、券商交通运输领域的专题研报。更新节奏存在差异：港口吞吐量、泊
+meta_description: 航运港口研报检索的文档解析与分块：航运港口研报检索的文档解析与分块，涵盖配置与验证建议
 keywords: 航运港口、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

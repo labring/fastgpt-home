@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 大气治理财报分析的工作流编排
-meta_description: 金融场景下的大气治理相关财报数据主要来自上市企业年度/季度财报的环保附注、生态环境主管部门公开的区域大气监测数据集、企业自主报送的大气治理设施运行台账。更新
+meta_description: 大气治理财报分析的工作流编排：大气治理财报分析的工作流编排，涵盖配置与验证建议。
 keywords: 大气治理、财报分析与报告生成、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

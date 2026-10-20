@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多元控股收益率的HTTP 接口与外部系统
-meta_description: 多元控股的收益率与行情日报数据来源为集团内部各业务单元的核算系统、外部行情数据源的汇总整合。更新节奏为每个交易日收盘后固定时段完成全量更新，仅在交易日生成当
+meta_description: 多元控股收益率的HTTP 接口与外部系统：多元控股收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 多元控股、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

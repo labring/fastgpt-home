@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Sharing and Embedding for Steam Coal Yield Data
-meta_description: Steam coal market data primarily comes from domestic coal spot trading markets, industry monitoring institutions, and futures exchanges. Spot data
+meta_description: Sharing and Embedding for Steam Coal Yield Data
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

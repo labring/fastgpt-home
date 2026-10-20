@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 品牌代运营研报检索的向量模型与索引
-meta_description: 数据主要来自品牌代运营方的内部运营台账、合作品牌的月度/季度策略文档、公开的美容护理赛道行业研报，以及电商平台的品牌表现数据。更新节奏随品牌方的服务周期调整
+meta_description: 品牌代运营研报检索的向量模型与索引：品牌代运营研报检索的向量模型与索引，涵盖配置与验证建议
 keywords: 品牌代运营、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

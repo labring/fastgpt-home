@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 住宅开发收益率的数据库与运维
-meta_description: 住宅开发收益率相关数据主要来源于房企内部ERP成本系统、不动产登记网签接口、项目工程管理平台三类数据源。数据更新节奏为自然月度固定节点更新，单份数据文档对应
+meta_description: 住宅开发收益率的数据库与运维：住宅开发收益率的数据库与运维，涵盖配置与验证建议。
 keywords: 住宅开发、收益率与行情日报播报、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

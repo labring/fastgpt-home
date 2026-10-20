@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商业物业营销内容的知识库检索与召回
-meta_description: 商业物业的营销相关数据来源涵盖招商手册、租户管理台账、商圈活动通知、物业费收缴须知、业态宣传文案及租金分期、招商融资等金融相关宣传材料等。更新节奏因内容类型
+meta_description: 商业物业营销内容的知识库检索与召回：商业物业营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 商业物业、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

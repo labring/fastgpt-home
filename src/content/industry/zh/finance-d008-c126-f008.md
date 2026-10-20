@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航空机场智能尽调报告的工具调用与插件
-meta_description: 用于金融尽调的航空机场数据主要来自民航局公开报告、空管实时监测数据、机场官方披露信息。更新节奏分为三类：实时流量数据每1分钟更新，月度运营数据于次月5个工作
+meta_description: 航空机场智能尽调报告的工具调用与插件：航空机场智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 航空机场、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 热力收益率的多轮对话与提示词
-meta_description: 这个品类的数据来自热力运营企业的生产调度系统、能耗计量终端与当地公用事业监管平台。更新节奏为每日聚合前一日全量场站数据，次日凌晨2点前完成日报生成，核心场站
+meta_description: 热力收益率的多轮对话与提示词：热力收益率的多轮对话与提示词，涵盖配置与验证建议。
 keywords: 热力、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

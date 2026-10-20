@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化妆品智能尽调报告的工具调用与插件
-meta_description: 化妆品类的公开数据主要来自官方化妆品备案平台、品牌官方产品详情页及第三方质检机构报告。数据更新节奏随新备案产品上线、存量产品成分或质检信息变更同步触发。文档
+meta_description: 化妆品智能尽调报告的工具调用与插件：化妆品智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 化妆品、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

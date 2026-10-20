@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 能源金属收益率的模型接入与配置
-meta_description: 能源金属的日度收益率与行情数据来源涵盖国内大宗商品交易所、国际金属交易市场及第三方合规数据服务商。数据分为实时行情与日度统计两类，日度统计数据在每个交易日收
+meta_description: 能源金属收益率的模型接入与配置：能源金属收益率的模型接入与配置，涵盖配置与验证建议
 keywords: 能源金属、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专业服务收益率的多轮对话与提示词
-meta_description: 数据来源为持牌金融信息服务机构的公开行情接口、交易所发布的标准化交易结算数据，以及合规的机构持仓报送信息。更新节奏为每个交易日收盘后完成当日数据更新，非交易
+meta_description: 专业服务收益率的多轮对话与提示词：专业服务收益率的多轮对话与提示词，涵盖配置与验证建议
 keywords: 专业服务、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

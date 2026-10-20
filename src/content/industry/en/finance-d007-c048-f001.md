@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interfaces and External Systems for Urban Commercial
-meta_description: Urban commercial bank yield data is sourced from official listed deposit, wealth management, and interbank certificate of deposit product information
+meta_description: HTTP Interfaces and External Systems for Urban Commercial Bank Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

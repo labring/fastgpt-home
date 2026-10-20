@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: KYC and AML Document Verification
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for List Screening and KYC
-meta_description: List screening data primarily comes from sanction lists published by global regulatory agencies, risk entity directories from international compliance
+meta_description: Tool Calling and Plugins for List Screening and KYC Verification
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

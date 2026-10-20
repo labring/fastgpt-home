@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专用设备收益率的数据库与运维
-meta_description: 专用设备收益率相关数据的来源包含设备内置运行参数采集模块、对接的金融行情数据源接口，以及设备本地存储的历史校准日志。数据更新节奏分为三类：单日收益测算值每自
+meta_description: 专用设备收益率的数据库与运维：专用设备收益率的数据库与运维，涵盖配置与验证建议。
 keywords: 专用设备、收益率与行情日报播报、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航空装备研报检索的多轮对话与提示词
-meta_description: 航空装备研报的来源主要为军工行业协会公开报告、国防军工领域券商专项研报、装备定型单位发布的官方文档。更新节奏随新装备定型、年度行业会议召开或列装进度更新，无
+meta_description: 航空装备研报检索的多轮对话与提示词：航空装备研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 航空装备、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

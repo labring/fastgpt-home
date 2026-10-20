@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物流投研知识库建设的向量模型与索引
-meta_description: 物流投研的数据源主要包含行业公开研报、交通运输部门公开统计数据、干线货运平台实时交易数据、港口仓储运营报表及相关政策文件。数据更新节奏差异明显，公开研报按季
+meta_description: 物流投研知识库建设的向量模型与索引：物流投研知识库建设的向量模型与索引，涵盖配置与验证建议
 keywords: 物流、投研知识库建设与治理、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

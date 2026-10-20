@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小家电融资日报的工具调用与插件
-meta_description: 小家电融资日报数据主要来自家电行业供应链金融服务平台、品牌方商家融资台账及电商平台交易履约记录。数据更新节奏为每日T+1同步前一日全量融资交易。单份日报文档
+meta_description: 小家电融资日报的工具调用与插件：小家电融资日报的工具调用与插件，涵盖配置与验证建议
 keywords: 小家电、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

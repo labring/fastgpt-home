@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水泥研报检索的引用来源与溯源
-meta_description: 水泥研报的数据主要来自中国建筑材料联合会、各区域建材协会、上市水泥企业年报及第三方行业咨询机构。更新节奏以月度常规报告为主，季度发布行业整体分析，突发原料价
+meta_description: 水泥研报检索的引用来源与溯源：水泥研报检索的引用来源与溯源，涵盖配置与验证建议。
 keywords: 水泥、研报检索与问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

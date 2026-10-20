@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 厨卫电器财报分析的部署与升级
-meta_description: 数据主要来自公开披露的上市公司财报及官方月度经营简报，更新节奏为季度末后1至2个月披露季度财报，月度经营数据随当月经营情况同步更新。文档为PDF格式，包含合
+meta_description: 厨卫电器财报分析的部署与升级：厨卫电器财报分析的部署与升级，涵盖配置与验证建议。
 keywords: 厨卫电器、财报分析与报告生成、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

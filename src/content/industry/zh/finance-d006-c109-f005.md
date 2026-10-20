@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电子元件投研知识库建设的多轮对话与提示词
-meta_description: 电子元件投研数据主要来源于原厂公开datasheet、行业供应链平台、合规认证数据库与细分领域研究报告。原厂datasheet更新随新品发布、规格迭代触发，
+meta_description: 电子元件投研知识库建设的多轮对话与提示词：电子元件投研知识库建设的多轮对话与提示词，涵盖配置与验证建议
 keywords: 电子元件、投研知识库建设与治理、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

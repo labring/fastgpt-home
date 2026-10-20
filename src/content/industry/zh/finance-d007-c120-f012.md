@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 网络安全收益率的模型接入与配置
-meta_description: 网络安全场景下的收益率相关数据，来源包括安全运维管理平台、第三方威胁情报接口、企业资产台账系统。更新节奏分为两类：批量日报数据每日凌晨完成全量更新，实时告警
+meta_description: 网络安全收益率的模型接入与配置：网络安全收益率的模型接入与配置，涵盖配置与验证建议
 keywords: 网络安全、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

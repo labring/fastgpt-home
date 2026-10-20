@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Database and Operations for Communication Equipment Yield
-meta_description: This use case covers financial industry communication equipment yield rate and market daily report broadcasting. Relevant data comes from wireless
+meta_description: Database and Operations for Communication Equipment Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

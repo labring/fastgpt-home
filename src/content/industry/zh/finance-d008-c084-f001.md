@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水处理智能尽调报告的HTTP 接口与外部系统
-meta_description: 水处理智能尽调报告的数据主要来自现场水务监测终端、水处理设备PLC控制系统、属地生态环境监管平台。数据更新节奏分为两类：实时监测参数每1-5分钟刷新一次，批
+meta_description: 水处理智能尽调报告的HTTP 接口与外部系统：水处理智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 水处理、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

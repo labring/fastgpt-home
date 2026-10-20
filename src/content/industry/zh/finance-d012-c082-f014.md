@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水产养殖营销内容的表单与交互
-meta_description: 水产养殖营销场景的业务数据包含两类：一类是养殖户的留资信息，包括塘口编号、养殖品种、养殖规模等；另一类是养殖相关的业务数据，来自塘口监测设备、日常巡检日志、
+meta_description: 水产养殖营销内容的表单与交互：水产养殖营销内容的表单与交互，涵盖配置与验证建议。
 keywords: 水产养殖、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

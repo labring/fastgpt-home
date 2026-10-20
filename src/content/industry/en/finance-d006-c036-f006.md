@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Conversation Logs and Auditing for Semiconductor Investment
-meta_description: Semiconductor investment research data comes from three main channels: public industry research reports, public financial reports and product
+meta_description: Conversation Logs and Auditing for Semiconductor Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

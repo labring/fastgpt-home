@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Provenance for Publishing Financing
-meta_description: Publishing financing daily report data is sourced from publicly disclosed financing announcements from publishing institutions, daily aggregated data
+meta_description: Citation Sources and Provenance for Publishing Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水务研报检索的模型接入与配置
-meta_description: 水务行业研报数据来源为金融机构公用事业板块研报数据库、水务行业主管部门公开公报、第三方公用事业行业数据平台。常规更新节奏为月度更新，重大管网改造、水质标准调
+meta_description: 水务研报检索的模型接入与配置：水务研报检索的模型接入与配置，涵盖配置与验证建议。
 keywords: 水务、研报检索与问答、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

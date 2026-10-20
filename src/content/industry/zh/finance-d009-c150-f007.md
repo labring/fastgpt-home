@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁矿石研报检索的工作流编排
-meta_description: 铁矿石研报数据主要来自国内期货交易所、钢铁行业协会、大宗商品现货交易平台及券商研究机构。更新节奏：现货行情数据每日盘后更新，期货合约数据随交易时段结束更新，
+meta_description: 铁矿石研报检索的工作流编排：铁矿石研报检索的工作流编排，涵盖配置与验证建议。。。
 keywords: 铁矿石、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

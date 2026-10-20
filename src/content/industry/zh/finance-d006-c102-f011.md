@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 特钢投研知识库建设的文档解析与分块
-meta_description: 特钢相关数据主要来自中国特钢企业协会月度报告、钢厂出厂质检报告、下游装备制造企业订单文档、期货交易所品种行情数据。更新节奏覆盖月度、季度及不定期更新。文档结
+meta_description: 特钢投研知识库建设的文档解析与分块：特钢投研知识库建设的文档解析与分块，涵盖配置与验证建议
 keywords: 特钢、投研知识库建设与治理、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

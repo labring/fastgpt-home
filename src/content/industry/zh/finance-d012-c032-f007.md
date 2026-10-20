@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学原料营销内容的工作流编排
-meta_description: 化学原料相关金融营销的数据来源包括上游供应商出厂价公示、海关进出口统计数据、行业协会监测报告、合作化工企业的库存与交易台账。更新节奏：出厂单价每日更新，企业
+meta_description: 化学原料营销内容的工作流编排：化学原料营销内容的工作流编排，涵盖配置与验证建议。
 keywords: 化学原料、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

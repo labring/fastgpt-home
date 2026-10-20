@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 出版融资日报的引用来源与溯源
-meta_description: 出版融资日报的数据主要来自出版机构公开披露的融资公告、行业协会每日汇总信息、券商研报及私募投资备案公示。更新节奏为每日更新，单份日报文档通常包含数十条融资条
+meta_description: 出版融资日报的引用来源与溯源：出版融资日报的引用来源与溯源，涵盖配置与验证建议。
 keywords: 出版、融资日报、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

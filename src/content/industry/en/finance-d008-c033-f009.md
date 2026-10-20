@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for Chemical Fiber
-meta_description: Data sources for financial due diligence reports in the chemical fiber category mainly include upstream petroleum and petrochemical raw material
+meta_description: Citation Sources and Traceability for Chemical Fiber Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -25,14 +25,14 @@ The multi-dimensional update frequency differences require matching data collect
 | `PARSE_SEGMENT_LENGTH` | `800–1200 characters` | The single-segment content of raw material price and production capacity data in chemical fiber due diligence reports usually falls within the 800-1200 character range, to avoid truncating associated information between fields and units |
 | `RECALL_TOP_K` | `Top 6 entries` | Data sources for the chemical fiber category are scattered, so enough entries must be recalled to cover three data dimensions: upstream raw materials, midstream production capacity, and downstream demand |
 | `SIMILARITY_THRESHOLD` | `0.75–0.85` | Most chemical fiber data fields are standardized numerical values, so a relatively high threshold is needed to filter irrelevant generalized industry content and retain precisely matched segmented data |
-| `REFERENCE_TEMPLATE` | Calibrated based on actual testing | Must adapt to the field and unit marking rules of chemical fiber reports, and embed field names and collection time placeholders in the template |
+| `traceability details` | Calibrated based on actual testing | Must adapt to the field and unit marking rules of chemical fiber reports, and embed field names and collection time placeholders in the template |
 | `PARSE_FILE_TIMEOUT_SECONDS` | `600 seconds` | A single chemical fiber due diligence report document usually contains integrated content from multiple data sources, so parsing takes a long time. Extending the timeout period avoids interruptions |
 | `MAX_REFERENCE_COUNT` | `Top 4 entries` | Citations in due diligence reports need to focus on core data, avoiding too many entries that disrupt response logic |
 
 > The parameter values provided on this page are common recommended starting points for configuration. Actual values are affected by material form, data volume, and business rules. Specific issues require individual analysis, and it is recommended to test on your own samples before finalizing settings.
 
 ## Three common mistakes
-- Issue: After upgrading to version `4.9.7`, the citation source is not displayed at the end of knowledge base answer paragraphs. Cause: The `REFERENCE_SHOW_ENABLE` switch is not enabled, or the reference template does not use the correct placeholder format.
+- Issue: After upgrading to version `4.9.7`, the citation source is not displayed at the end of knowledge base answer paragraphs. Cause: The `REFERENCE_SHOW_ENABLE` switch is not enabled, or the reference template does not use the correct pending verification format.
 - Issue: A `504 Gateway Timeout` error is returned when parsing chemical fiber due diligence reports. Cause: `PARSE_FILE_TIMEOUT_SECONDS` is not configured to a value greater than `300 seconds`, leading to timeout during long document parsing.
 - Issue: The units of recalled citation data do not match the report fields. Cause: The `SIMILARITY_THRESHOLD` threshold is not adjusted for the chemical fiber category, resulting in recall of generalized industry data with non-matching units.
 

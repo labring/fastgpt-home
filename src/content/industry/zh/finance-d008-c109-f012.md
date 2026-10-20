@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电子元件智能尽调报告的模型接入与配置
-meta_description: 电子元件的数据源涵盖原厂公开规格书、分销商实时库存数据库、行业合规检测报告三类。更新节奏存在差异：原厂规格书随产品迭代更新，周期为季度至半年；分销商库存数据
+meta_description: 电子元件智能尽调报告的模型接入与配置：电子元件智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 电子元件、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

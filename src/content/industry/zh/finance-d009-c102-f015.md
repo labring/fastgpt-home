@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 特钢研报检索的部署与升级
-meta_description: 特钢研报主要来自中国特钢企业协会公开季度报告、头部券商钢铁行业细分研报、国内特钢生产企业月度产销简报。更新节奏分三类：协会报告按季度发布，券商研报随行业动态
+meta_description: 特钢研报检索的部署与升级：特钢研报检索的部署与升级，涵盖配置与验证建议。。。。。
 keywords: 特钢、研报检索与问答、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

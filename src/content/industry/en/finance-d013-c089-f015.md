@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade of Oil and Gas Extraction Financing
-meta_description: Oil and gas extraction financing daily report data comes from publicly disclosed financing announcements of domestic oil and gas extraction
+meta_description: Deployment and Upgrade of Oil and Gas Extraction Financing Daily Report
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多元控股投研知识库建设的上下文与 token
-meta_description: 多元控股的投研数据来源覆盖集团旗下各业务板块的研报、子公司财报、跨行业监管文件、合并财务报表及产业联动分析文档。更新节奏因数据源类型差异较大：子公司财报按季
+meta_description: 多元控股投研知识库建设的上下文与 token：多元控股投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 多元控股、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

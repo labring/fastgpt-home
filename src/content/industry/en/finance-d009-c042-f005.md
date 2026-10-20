@@ -4,8 +4,8 @@ slug: /en/industry/finance-d009-c042-f005
 page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
-meta_title: Multi-Turn Dialogue and Prompting for Brand Agency Operation
-meta_description: - Data sources for brand agency operation research reports include public industry consulting reports, e-commerce platform monitoring data, and
+meta_title: Multi-Turn Dialogue and Prompting for Brand Agency
+meta_description: Multi-Turn Dialogue and Prompting for Brand Agency Operation Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

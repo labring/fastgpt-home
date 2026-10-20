@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 能源金属智能尽调报告的向量模型与索引
-meta_description: 能源金属相关数据主要来自全球大宗商品交易所公开行情、行业协会月度调研数据、矿山及冶炼企业公开披露文件、海关进出口统计数据。更新节奏覆盖日度（现货价格）、月度
+meta_description: 能源金属智能尽调报告的向量模型与索引：能源金属智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 能源金属、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

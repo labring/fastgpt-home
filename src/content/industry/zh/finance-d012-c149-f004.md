@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 钢铁贸易营销内容的向量模型与索引
-meta_description: 作为金融领域供应链服务场景下的细分品类，钢铁贸易的营销相关数据来源包括内部报价台账、区域钢材供需周报、定制化营销话术模板、客户询价跟进档案。更新节奏存在差异
+meta_description: 钢铁贸易营销内容的向量模型与索引：钢铁贸易营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 钢铁贸易、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

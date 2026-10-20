@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for Professional Chain Store
-meta_description: Professional chain store financial report data mainly comes from store POS systems, supply chain management systems, and headquarters financial
+meta_description: Model Access and Configuration for Professional Chain Store Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -22,7 +22,7 @@ Multi-source and decentralized data sources require configuring multi-data sourc
 ## How to set configurations
 | Configuration Item | Recommended Setting | Rationale |
 |---|---|---|
-| `vector_normalize` | Enabled | This configuration is supported in FastGPT 4.8.23 and above. Professional chain financial reports include fields with different measurement standards, and are compatible with non-normalized vector models such as Doubao embedding |
+Reference only; verify against the target FastGPT release and deployment documentation.
 | `PARSE_FILE_TIMEOUT_SECONDS` | 600 seconds | A single quarterly financial report includes detailed data from dozens of stores, resulting in long parsing duration. This setting avoids timeout interruptions |
 | `maxContext` | 8000–12000 characters | Chain financial reports have a large volume of store split data, requiring sufficient context to retain associations between detailed fields |
 | `UPLOAD_FILE_MAX_SIZE` | 500 MB | Annual financial reports include multi-year store comparison data, with a larger file size than financial report documents for general categories |

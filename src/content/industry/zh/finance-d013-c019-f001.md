@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 免税融资日报的HTTP 接口与外部系统
-meta_description: 免税融资日报的数据主要来自线下离岛免税店、市内免税店的当日经营流水、供应商授信台账与结算系统。更新节奏为每日凌晨1点至3点完成前一日全量数据同步。单份日报文
+meta_description: 免税融资日报的HTTP 接口与外部系统：免税融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 免税、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

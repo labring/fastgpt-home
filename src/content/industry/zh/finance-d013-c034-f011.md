@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医疗器械融资日报的文档解析与分块
-meta_description: 数据来源为公开投融资披露信息、行业第三方数据库的每日汇总。更新节奏为每日更新，单份日报文档覆盖当日全部医疗器械领域融资事件。文档多为PDF格式，部分以飞书在
+meta_description: 医疗器械融资日报的文档解析与分块：医疗器械融资日报的文档解析与分块，涵盖配置与验证建议
 keywords: 医疗器械、融资日报、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

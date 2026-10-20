@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 卫星通信融资日报的HTTP 接口与外部系统
-meta_description: 数据来源为商业航天行业第三方投融资数据库、卫星运营商官方公告及公开披露的融资新闻；更新节奏为每日更新，覆盖前一日全球范围内的卫星通信相关融资事件。单条数据为
+meta_description: 卫星通信融资日报的HTTP 接口与外部系统：卫星通信融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 卫星通信、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

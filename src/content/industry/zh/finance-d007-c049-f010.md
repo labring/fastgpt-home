@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 基建工程收益率的数据库与运维
-meta_description: 基建工程收益率相关数据来自项目计量支付台账、造价咨询机构出具的进度造价文件、当期建材市场行情数据库、项目融资计息记录。更新节奏为每日更新当日完成工程量对应的
+meta_description: 基建工程收益率的数据库与运维：基建工程收益率的数据库与运维，涵盖配置与验证建议。
 keywords: 基建工程、收益率与行情日报播报、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

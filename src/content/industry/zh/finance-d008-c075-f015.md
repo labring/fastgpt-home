@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 整车智能尽调报告的部署与升级
-meta_description: 这个品类的数据来源于车辆识别代号（VIN）官方备案库、主机厂公开车型参数公告、线下第三方检测机构的实车检测报告、车辆历史过户与保险理赔档案。数据更新节奏因类
+meta_description: 整车智能尽调报告的部署与升级：整车智能尽调报告的部署与升级，涵盖配置与验证建议。
 keywords: 整车、智能尽调报告、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

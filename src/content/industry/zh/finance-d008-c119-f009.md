@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 综合服务智能尽调报告的引用来源与溯源
-meta_description: 综合服务类智能尽调报告的数据来源覆盖监管公示文件、行业协会披露信息、公开财报、第三方征信数据库等多渠道。数据更新节奏依来源不同存在差异，监管文件实时更新，财
+meta_description: 综合服务智能尽调报告的引用来源与溯源：综合服务智能尽调报告的引用来源与溯源，涵盖配置与验证建议
 keywords: 综合服务、智能尽调报告、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

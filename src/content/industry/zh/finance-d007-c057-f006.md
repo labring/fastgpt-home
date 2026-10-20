@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小家电收益率的对话日志与审计
-meta_description: 小家电收益率相关数据主要来自三类来源：联网智能小家电的实时运行日志、当地电网公开的阶梯电价标准、租赁或服务合约的固定费率配置。数据更新节奏为每日凌晨汇总前一
+meta_description: 小家电收益率的对话日志与审计：小家电收益率的对话日志与审计，涵盖配置与验证建议。
 keywords: 小家电、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

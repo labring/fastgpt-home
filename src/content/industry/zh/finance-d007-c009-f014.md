@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 产业园区收益率的表单与交互
-meta_description: 这个品类的数据主要来自园区运营管理系统、第三方商业地产行情平台、属地不动产登记机构备案信息。行情类数据每6小时同步一次，运营成本类数据每月1日批量导入，整体
+meta_description: 产业园区收益率的表单与交互：产业园区收益率的表单与交互，涵盖配置与验证建议。。。
 keywords: 产业园区、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Small Home Appliance
-meta_description: Due diligence documents for the small home appliance category mainly come from official brand parameter manuals, third-party quality inspection
+meta_description: Document Parsing and Chunking for Small Home Appliance Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

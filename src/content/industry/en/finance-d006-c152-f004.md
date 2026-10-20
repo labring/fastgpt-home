@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Footwear Investment Research
-meta_description: Data sources include official brand supply chain ledgers, e-commerce platform public product pages, industry association public documents, and patent
+meta_description: Vector Models and Indexing for Footwear Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 证券智能尽调报告的工作流编排
-meta_description: 证券智能尽调报告的数据主要来自沪深交易所披露平台的上市公司公告、定期报告，中国证监会及各地证监局的监管公开文件，以及第三方工商征信、行业调研数据。更新节奏符
+meta_description: 证券智能尽调报告的工作流编排：证券智能尽调报告的工作流编排，涵盖配置与验证建议。
 keywords: 证券、智能尽调报告、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

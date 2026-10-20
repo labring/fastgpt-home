@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 煤化工融资日报的工作流编排
-meta_description: 煤化工融资日报的数据来源为国内煤炭工业协会行业监测数据库、各地金融机构公开授信公示、煤化工园区官方披露平台。更新节奏为每日凌晨更新前一自然日的全量数据。文档
+meta_description: 煤化工融资日报的工作流编排：煤化工融资日报的工作流编排，涵盖配置与验证建议。。。
 keywords: 煤化工、融资日报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

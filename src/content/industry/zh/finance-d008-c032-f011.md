@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学原料智能尽调报告的文档解析与分块
-meta_description: 化学原料尽调相关数据主要来自行业协会发布的产销动态文档、生产企业公开的质检报告与产能披露文件、海关进出口贸易记录、第三方检测机构出具的成分分析报告。数据更新
+meta_description: 化学原料智能尽调报告的文档解析与分块：化学原料智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 化学原料、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

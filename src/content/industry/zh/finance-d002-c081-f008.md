@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 模型分配一体化 AI 平台的工具调用与插件
-meta_description: 模型分配品类的数据来源于对接的大模型服务商公开接口文档与实时调用校验结果。数据更新节奏分为自动拉取与手动刷新，自动拉取周期为每小时一次，手动刷新可触发实时同
+meta_description: 模型分配一体化 AI 平台的工具调用与插件：模型分配一体化 AI 平台的工具调用与插件，涵盖配置与验证建议
 keywords: 模型分配、一体化 AI 平台与多应用编排、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电网设备营销内容的多轮对话与提示词
-meta_description: 电网设备相关数据主要来自出厂检测报告、运维台账、电网调度日志及招投标公示文档。静态数据如设备型号、额定电压、额定功率等随设备出厂固定，运维数据如巡检记录、故
+meta_description: 电网设备营销内容的多轮对话与提示词：电网设备营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 电网设备、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 交易规则客户服务的HTTP 接口与外部系统
-meta_description: 交易规则类数据主要来源于持牌金融机构的核心交易系统、合规管理文档库与业务规则配置中心。数据更新无固定周期，仅在监管政策调整、业务流程优化时触发更新。单条规则
+meta_description: 交易规则客户服务的HTTP 接口与外部系统：交易规则客户服务的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 交易规则、客户服务与账户咨询、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

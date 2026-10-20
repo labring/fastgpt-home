@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 个护用品收益率的多轮对话与提示词
-meta_description: 个护用品的行情与收益率数据主要来源于电商平台公开销售接口、品牌方经销商进销存数据集、行业公开动销监测文件。数据更新节奏为日更，适配日报播报需求。单条数据文档
+meta_description: 个护用品收益率的多轮对话与提示词：个护用品收益率的多轮对话与提示词，涵盖配置与验证建议
 keywords: 个护用品、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

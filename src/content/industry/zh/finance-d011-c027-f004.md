@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 功能入口终端内自然语言检索的向量模型与索引
-meta_description: 功能入口终端内自然语言检索的数据来源于金融终端、保险销售工具、理财咨询APP等设备上的用户单次检索请求，每条数据单元为用户输入的自然语言查询文本，附带会话I
+meta_description: 功能入口终端内自然语言检索的向量模型与索引：功能入口终端内自然语言检索的向量模型与索引，涵盖配置与验证建议
 keywords: 功能入口、终端内自然语言检索、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

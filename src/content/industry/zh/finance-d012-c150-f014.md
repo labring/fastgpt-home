@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁矿石营销内容的表单与交互
-meta_description: 铁矿石的数据来源包括国内主要港口现货交易系统、期货交割仓库入库数据、行业监测机构的每日采样数据。更新节奏为：现货报价每日更新，交割仓库库存数据每工作日更新，
+meta_description: 铁矿石营销内容的表单与交互：铁矿石营销内容的表单与交互，涵盖配置与验证建议。。。
 keywords: 铁矿石、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

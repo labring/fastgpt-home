@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 环境监测收益率的HTTP 接口与外部系统
-meta_description: 环境监测相关的收益率与行情数据，来源为分布式环境监测节点、第三方环境数据服务商接口。更新节奏由监测节点采样间隔决定，通常为1分钟至1小时单次推送。数据文档为
+meta_description: 环境监测收益率的HTTP 接口与外部系统：环境监测收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 环境监测、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

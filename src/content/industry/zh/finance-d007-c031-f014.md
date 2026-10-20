@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学制药收益率的表单与交互
-meta_description: 化学制药收益率相关数据主要来源于公开医药数据库、药企定期披露报告、医药流通报价平台及证券交易接口。行情类数据每日收盘后同步更新，原料与成品报价每6小时更新一
+meta_description: 化学制药收益率的表单与交互：化学制药收益率的表单与交互，涵盖配置与验证建议。。。
 keywords: 化学制药、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

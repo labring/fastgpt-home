@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 黑色家电投研知识库建设的上下文与 token
-meta_description: 黑色家电投研的数据来源涵盖国内家电行业协会官网、品牌官方技术白皮书、大宗商品交易平台的原材料行情数据、专利公开数据库与电商平台销售数据。更新节奏存在差异：行
+meta_description: 黑色家电投研知识库建设的上下文与 token：黑色家电投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 黑色家电、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: IT 服务营销内容的文档解析与分块
-meta_description: IT服务营销内容的数据主要来自厂商官方方案手册、客户案例文档、服务报价表、SLA协议等载体。更新节奏随业务迭代调整，新方案发布、报价调整时会同步更新。文档结
+meta_description: IT 服务营销内容的文档解析与分块：IT 服务营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: IT 服务、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

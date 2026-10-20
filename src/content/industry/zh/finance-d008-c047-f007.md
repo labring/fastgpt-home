@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 国有大行智能尽调报告的工作流编排
-meta_description: 国有大行智能尽调报告的数据来源包含内部信贷管理系统、央行企业征信基础数据库、国家企业信用信息公示系统、银保监会监管报送文件。更新节奏为月度内部对账更新、季度
+meta_description: 国有大行智能尽调报告的工作流编排：国有大行智能尽调报告的工作流编排，涵盖配置与验证建议
 keywords: 国有大行、智能尽调报告、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

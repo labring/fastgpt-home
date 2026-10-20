@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 玻璃营销内容的模型接入与配置
-meta_description: 玻璃营销相关数据主要来自企业产品管理系统、行业标准文档、线下展厅物料与线上产品详情页。数据更新节奏随新品类上线、参数调整触发，无固定周期。单份文档多为结构化
+meta_description: 玻璃营销内容的模型接入与配置：玻璃营销内容的模型接入与配置，涵盖配置与验证建议。
 keywords: 玻璃、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

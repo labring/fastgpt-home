@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 证券投研知识库建设的引用来源与溯源
-meta_description: 证券投研数据主要来自交易所公开披露文件、券商研报、官方行情接口及行业协会公告。数据更新节奏依类型区分：上市公司公告为实时推送，券商研报按发布节点更新，行情数
+meta_description: 证券投研知识库建设的引用来源与溯源：证券投研知识库建设的引用来源与溯源，涵盖配置与验证建议
 keywords: 证券、投研知识库建设与治理、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

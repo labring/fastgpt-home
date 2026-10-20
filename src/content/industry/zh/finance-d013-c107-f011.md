@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电力融资日报的文档解析与分块
-meta_description: 电力融资日报的数据主要来自地方能源监管部门公示、电力企业内部融资台账、全国电力交易中心发布的项目融资公告。更新节奏为每日产出单份日报，单份文档包含当日全行业
+meta_description: 电力融资日报的文档解析与分块：电力融资日报的文档解析与分块，涵盖配置与验证建议。
 keywords: 电力、融资日报、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

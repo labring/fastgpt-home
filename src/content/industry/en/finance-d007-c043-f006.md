@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Conversation Logs and Auditing for Commercial Real Estate
-meta_description: Commercial real estate yield data is a core indicator for real estate operations in financial and wealth management scenarios. The system sources data
+meta_description: Conversation Logs and Auditing for Commercial Real Estate Yields
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

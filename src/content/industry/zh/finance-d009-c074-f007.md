@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 教育服务研报检索的工作流编排
-meta_description: 这个品类的数据主要来自教育行业第三方调研机构、教育主管部门公开调研资料、教育服务企业内部运营分析报告。政策解读类研报随对应教育政策发布节点更新，行业运营类研
+meta_description: 教育服务研报检索的工作流编排：教育服务研报检索的工作流编排，涵盖配置与验证建议。
 keywords: 教育服务、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

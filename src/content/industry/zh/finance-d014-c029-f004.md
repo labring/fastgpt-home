@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 包装印刷财报分析的向量模型与索引
-meta_description: 包装印刷企业的财报数据来源包括公开披露的定期报告、行业专项统计文档及临时公告。数据按季度、半年度、年度固定更新，临时公告按需发布。文档结构包含核心财务指标、
+meta_description: 包装印刷财报分析的向量模型与索引：包装印刷财报分析的向量模型与索引，涵盖配置与验证建议
 keywords: 包装印刷、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 国有大行研报检索的引用来源与溯源
-meta_description: 国有大行研报主要来自内部研究团队产出的公开研报，以及经授权的行业公开研究资料。文档包含标题、发布时间、研究主体标识、核心结论、数据附录、风险提示等固定模块，
+meta_description: 国有大行研报检索的引用来源与溯源：国有大行研报检索的引用来源与溯源，涵盖配置与验证建议
 keywords: 国有大行、研报检索与问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

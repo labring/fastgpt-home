@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 储能营销内容的工具调用与插件
-meta_description: 储能品类的营销数据主要来自三个渠道：储能设备厂商的官方产品手册、电网调度平台的实时运行数据、地方能源局的备案公示信息。产品手册为结构化PDF或表格文档，包含
+meta_description: 储能营销内容的工具调用与插件：储能营销内容的工具调用与插件，涵盖配置与验证建议。
 keywords: 储能、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

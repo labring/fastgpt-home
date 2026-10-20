@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦煤收益率的工具调用与插件
-meta_description: 焦煤的行情与收益率数据包含期货与现货两类来源。期货数据来自大连商品交易所官方公开接口，现货数据来自国内主要煤炭港口的每日报价汇总。更新节奏为：交易日内每10
+meta_description: 焦煤收益率的工具调用与插件：焦煤收益率的工具调用与插件，涵盖配置与验证建议。。。
 keywords: 焦煤、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

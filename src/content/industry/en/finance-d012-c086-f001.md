@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interfaces and External Systems for Auto Service
-meta_description: Marketing content data for auto services comes primarily from three sources: store operation systems, owner service platforms, and brand marketing
+meta_description: HTTP Interfaces and External Systems for Auto Service Marketing Content: covering configuration and validation guidance.
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

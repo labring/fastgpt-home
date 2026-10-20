@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物业管理投研知识库建设的上下文与 token
-meta_description: 物业管理投研的数据来源包括物业项目的设备巡检记录、能耗运营报表、业主反馈台账、招投标文件、行业监管政策文件。更新节奏因数据类型而异：设备巡检记录每日更新，能
+meta_description: 物业管理投研知识库建设的上下文与 token：物业管理投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 物业管理、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

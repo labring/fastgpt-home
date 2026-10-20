@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商业地产收益率的表单与交互
-meta_description: 商业地产收益率相关数据主要来自不动产登记平台、物业运营台账及区域商业监测系统。数据更新节奏以月度或季度为主，部分核心商圈项目的实时签约、客流数据更新频率更高
+meta_description: 商业地产收益率的表单与交互：商业地产收益率的表单与交互，涵盖配置与验证建议。。。
 keywords: 商业地产、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

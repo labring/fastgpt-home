@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学原料研报检索的知识库检索与召回
-meta_description: 化学原料研报的数据来源涵盖行业协会月度统计、上市公司定期公告、第三方化工现货数据库及券商专项研报。更新节奏存在差异：现货成交价类数据日更，产能、供需平衡类数
+meta_description: 化学原料研报检索的知识库检索与召回：化学原料研报检索的知识库检索与召回，涵盖配置与验证建议
 keywords: 化学原料、研报检索与问答、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

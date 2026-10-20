@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 操作规程合规的向量模型与索引
-meta_description: 来源为企业内部合规管理系统、线下归档的操作规程手册，经数字化导入的结构化文档。更新节奏随内部制度修订不定期调整，重大修订后全量同步，日常微调后增量更新。文档
+meta_description: 操作规程合规的向量模型与索引：操作规程合规的向量模型与索引，涵盖配置与验证建议。
 keywords: 操作规程、合规与内部制度问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

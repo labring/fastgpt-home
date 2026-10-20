@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁矿石营销内容的文档解析与分块
-meta_description: 数据来源包括大宗商品现货交易平台的每日报价文件、钢铁产业链上下游企业的月度对账文档、行业研究机构的分析报告。更新节奏从每日更新的现货报价到月度更新的行业趋势
+meta_description: 铁矿石营销内容的文档解析与分块：铁矿石营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 铁矿石、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

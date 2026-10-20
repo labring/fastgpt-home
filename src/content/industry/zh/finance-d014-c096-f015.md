@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦炭财报分析的部署与升级
-meta_description: 焦炭相关财报与行业数据来源包括大连商品交易所公开交割仓单数据、中国焦炭工业协会月度行业分析报告、上市煤焦企业季度及年度财报。更新节奏分为每日现货报价、月度行
+meta_description: 焦炭财报分析的部署与升级：焦炭财报分析的部署与升级，涵盖配置与验证建议。。。。。
 keywords: 焦炭、财报分析与报告生成、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

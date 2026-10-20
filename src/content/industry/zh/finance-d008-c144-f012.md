@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通信服务智能尽调报告的模型接入与配置
-meta_description: 通信服务智能尽调报告的数据来源主要包括运营商公开财报、运维监控日志、客户签约台账、频谱使用报表等。更新节奏差异明显，财报类数据按季度更新，运维日志按天同步，
+meta_description: 通信服务智能尽调报告的模型接入与配置：通信服务智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 通信服务、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

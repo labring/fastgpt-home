@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程咨询收益率的表单与交互
-meta_description: 工程咨询领域的收益率数据主要来源于企业内部造价咨询项目档案、公开工程造价比对数据库。内部数据随单个咨询项目的交付节点更新，公开行业数据按季度更新。数据文档通
+meta_description: 工程咨询收益率的表单与交互：工程咨询收益率的表单与交互，涵盖配置与验证建议。。。
 keywords: 工程咨询、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

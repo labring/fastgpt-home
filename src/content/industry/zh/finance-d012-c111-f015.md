@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 畜禽养殖营销内容的部署与升级
-meta_description: 本场景面向金融、保险、理财机构服务畜禽养殖从业者的营销内容与获客需求，其关联数据特征如下：畜禽养殖的营销关联数据来源包括规模化养殖场的结构化养殖档案、物联网
+meta_description: 畜禽养殖营销内容的部署与升级：畜禽养殖营销内容的部署与升级，涵盖配置与验证建议。
 keywords: 畜禽养殖、营销内容与获客、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

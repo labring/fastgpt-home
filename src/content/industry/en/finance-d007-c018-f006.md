@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Optical Module Yield Rate Conversation Logs and Auditing
-meta_description: Optical module market and yield rate data is primarily sourced from public monitoring platforms for the optical communications industry, upstream chip
+meta_description: Optical Module Yield Rate Conversation Logs and Auditing
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

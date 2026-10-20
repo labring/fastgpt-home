@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 其他综合智能尽调报告的模型接入与配置
-meta_description: 其他综合智能尽调报告的数据来源涵盖工商公示信息、征信报告、行业监管文件、交易对手披露材料等多类渠道。数据更新节奏依来源不同存在差异，工商信息按季度更新，征信
+meta_description: 其他综合智能尽调报告的模型接入与配置：其他综合智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 其他综合、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 自动化设备融资日报的工具调用与插件
-meta_description: 自动化设备融资日报的数据主要来源于行业协会设备采购备案数据库、银行对公信贷放款系统、融资租赁公司交易台账三类渠道。数据更新节奏为每日更新，当日交易数据于次日
+meta_description: 自动化设备融资日报的工具调用与插件：自动化设备融资日报的工具调用与插件，涵盖配置与验证建议
 keywords: 自动化设备、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

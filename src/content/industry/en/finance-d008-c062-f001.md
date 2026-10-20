@@ -4,8 +4,8 @@ slug: /en/industry/finance-d008-c062-f001
 page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
-meta_title: HTTP Interfaces and External Systems for Advertising and
-meta_description: Sources of data for advertising and marketing intelligent due diligence reports include advertising platform APIs, media monitoring tool interfaces
+meta_title: HTTP Interfaces and External Systems for Advertising
+meta_description: HTTP Interfaces and External Systems for Advertising and Marketing Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Textile and Home Furnishing
-meta_description: Data for textile and home furnishing financing daily reports is primarily sourced from domestic textile and apparel industry supply chain financial
+meta_description: Workflow Orchestration for Textile and Home Furnishing Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

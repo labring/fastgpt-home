@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 畜禽养殖收益率的表单与交互
-meta_description: 畜禽养殖的收益率数据来源包括养殖主体的饲喂台账、出栏称重记录、饲料采购凭证，以及行业协会公开的原料行情数据。数据更新节奏分两类：每日饲喂消耗与原料采购数据按
+meta_description: 畜禽养殖收益率的表单与交互：畜禽养殖收益率的表单与交互，涵盖配置与验证建议。。。
 keywords: 畜禽养殖、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

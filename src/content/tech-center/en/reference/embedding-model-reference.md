@@ -52,4 +52,6 @@ This page lists the two length parameters registered for the 21 embedding models
 
 Values come from the built-in model definitions in the open-source fastgpt-plugin v1.1.3 repository. If a self-hosted deployment registers its own models or changes these values, the actual configuration applies. Switching embedding models requires rebuilding existing indexes.
 
-> Source: built-in model list of fastgpt-plugin v1.1.3. Verified on 2026-09-28.
+## References
+
+- [fastgpt-plugin source repository](https://github.com/labring/fastgpt-plugin)

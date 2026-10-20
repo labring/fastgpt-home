@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航空机场收益率的HTTP 接口与外部系统
-meta_description: 航空机场收益率相关数据的来源包括民航行业公开统计接口、机场运营管理系统的内部结算数据。数据更新节奏为每日凌晨完成前一日全量运营数据的汇总生成。文档结构为结构
+meta_description: 航空机场收益率的HTTP 接口与外部系统：航空机场收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 航空机场、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

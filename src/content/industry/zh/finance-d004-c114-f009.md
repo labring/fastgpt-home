@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 监管办法合规的引用来源与溯源
-meta_description: 监管办法数据主要来自官方金融监管机构、行业协会发布的正式公文。更新节奏为不定期，伴随新监管文件出台或旧文件修订同步更新。单份文档通常采用章节层级结构，包含文
+meta_description: 监管办法合规的引用来源与溯源：监管办法合规的引用来源与溯源，涵盖配置与验证建议。
 keywords: 监管办法、合规与内部制度问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

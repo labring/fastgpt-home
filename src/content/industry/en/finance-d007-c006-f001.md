@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c006-f001
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: HTTP Interfaces and External Systems for Traditional Chinese
-meta_description: Data for TCM yield rates comes from daily trading snapshots of national specialized Chinese herbal medicine markets and public market datasets
+meta_title: HTTP Interfaces and External Systems for Traditional
+meta_description: HTTP Interfaces and External Systems for Traditional Chinese Medicine Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

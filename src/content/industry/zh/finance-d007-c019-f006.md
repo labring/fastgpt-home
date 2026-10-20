@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 免税收益率的对话日志与审计
-meta_description: 这个品类的数据来自免税零售门店POS系统、离岛免税监管平台的每日经营上报，更新节奏为每日凌晨完成前一日全量数据同步。单份日报文档按门店、商品大类分组，包含门
+meta_description: 免税收益率的对话日志与审计：免税收益率的对话日志与审计，涵盖配置与验证建议。。。
 keywords: 免税、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

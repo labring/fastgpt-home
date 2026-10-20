@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Conversation Logs and Auditing for Publishing Yields
-meta_description: Data sources are aggregated public financial market APIs and publishing industry sales subscription data APIs. The update rhythm is once daily
+meta_description: Conversation Logs and Auditing for Publishing Yields
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

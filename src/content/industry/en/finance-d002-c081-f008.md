@@ -4,8 +4,8 @@ slug: /en/industry/finance-d002-c081-f008
 page_type: Industry scenario page
 article_section: Unified AI Platform and Multi-App Orchestration
 is_part_of: FastGPT Tech Center
-meta_title: Tool Calling and Plugins for the Model Allocation Unified AI
-meta_description: Data for the model allocation category is sourced from public API documentation of connected large model service providers and real-time call
+meta_title: Tool Calling and Plugins for the Model Allocation Unified
+meta_description: Tool Calling and Plugins for the Model Allocation Unified AI Platform
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

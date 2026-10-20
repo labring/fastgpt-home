@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 纺织制造智能尽调报告的多轮对话与提示词
-meta_description: 纺织制造的智能尽调数据主要来自上游原料采购的海关报关单、工厂生产台账、下游客户订单ERP系统单据、供应链物流运单，以及第三方面料质检机构出具的检测报告。数据
+meta_description: 纺织制造智能尽调报告的多轮对话与提示词：纺织制造智能尽调报告的多轮对话与提示词，涵盖配置与验证建议
 keywords: 纺织制造、智能尽调报告、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

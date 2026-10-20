@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 涂料油墨投研知识库建设的上下文与 token
-meta_description: 数据主要来自中国涂料工业协会公开报告、原材料供应商官方报价系统、上市涂料企业年度/季度财报、合规检测机构出具的性能检测报告。更新节奏：原材料价格类数据周度更
+meta_description: 涂料油墨投研知识库建设的上下文与 token：涂料油墨投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 涂料油墨、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

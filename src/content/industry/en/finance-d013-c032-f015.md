@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Chemical Raw Material Financing
-meta_description: Chemical raw material financing daily reports pull data from three sources: weekly financing filing data publicly disclosed by domestic basic chemical
+meta_description: Deployment and Upgrade for Chemical Raw Material Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

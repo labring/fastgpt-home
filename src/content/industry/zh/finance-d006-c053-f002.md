@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多元金融投研知识库建设的上下文与 token
-meta_description: 多元金融投研的数据来源包括公开监管披露文件、行业第三方统计平台、机构内部投研文档与市场交易记录。更新节奏随内容类型差异较大，监管政策文件不定期发布，行业研报
+meta_description: 多元金融投研知识库建设的上下文与 token：多元金融投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 多元金融、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

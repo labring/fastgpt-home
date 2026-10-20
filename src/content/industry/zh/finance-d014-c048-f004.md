@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 城商行财报分析的向量模型与索引
-meta_description: 城商行财报数据主要来自官方监管披露平台、本行年度及季度报告。更新节奏以年度完整财报为核心，季度监管报表每季度更新。文档多为结构化表格组合，包含资产负债、利润
+meta_description: 城商行财报分析的向量模型与索引：城商行财报分析的向量模型与索引，涵盖配置与验证建议
 keywords: 城商行、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

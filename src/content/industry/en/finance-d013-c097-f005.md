@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Coking Coal
-meta_description: The data for coking coal financing daily reports comes primarily from public ledgers of a national coal trading exchange, spot financing transaction
+meta_description: Multi-turn Dialogue and Prompt Engineering for Coking Coal Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

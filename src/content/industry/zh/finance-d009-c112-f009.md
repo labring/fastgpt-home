@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 白色家电研报检索的引用来源与溯源
-meta_description: 白色家电研报数据主要来自券商研究所、中国家用电器协会、线下零售监测机构、品牌官方公告。更新节奏覆盖周度（线下零售数据）、月度（线上销售数据）、季度（行业整体
+meta_description: 白色家电研报检索的引用来源与溯源：白色家电研报检索的引用来源与溯源，涵盖配置与验证建议
 keywords: 白色家电、研报检索与问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

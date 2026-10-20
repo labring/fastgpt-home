@@ -4,8 +4,8 @@ slug: /en/industry/finance-d008-c059-f007
 page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
-meta_title: Workflow Orchestration for Industrial Metals Intelligent Due
-meta_description: Industrial metal data sources primarily include public market data from major global commodity exchanges, inventory and import-export data released by
+meta_title: Workflow Orchestration for Industrial Metals Intelligent
+meta_description: Workflow Orchestration for Industrial Metals Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade of Property Management Investment
-meta_description: Property management investment research data mainly comes from project operation ledgers, public area energy consumption reports, tenant contract
+meta_description: Deployment and Upgrade of Property Management Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

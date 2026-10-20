@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 环境监测营销内容的知识库检索与召回
-meta_description: 环境监测的数据主要来自固定污染源在线监测设备、移动监测车传感器、第三方合规检测机构的电子报告，以及企业内部的环境运维台账。数据更新节奏覆盖多个层级：实时传感
+meta_description: 环境监测营销内容的知识库检索与召回：环境监测营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 环境监测、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 教育服务财报分析的HTTP 接口与外部系统
-meta_description: 教育服务财报的数据来源为机构官方披露的季度/年度经营报告、内部经营台账。更新节奏为每季度结束后30天内完成批量更新，单次文档长度从数千到数万字符不等。文档结
+meta_description: 教育服务财报分析的HTTP 接口与外部系统：教育服务财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 教育服务、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

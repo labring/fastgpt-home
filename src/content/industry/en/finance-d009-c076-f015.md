@@ -4,8 +4,8 @@ slug: /en/industry/finance-d009-c076-f015
 page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
-meta_title: Deployment and Upgrade for Cultural & Entertainment Products
-meta_description: Data for cultural and entertainment products research reports originates from multiple sources. These include public reports from light industry
+meta_title: Deployment and Upgrade for Cultural & Entertainment
+meta_description: Deployment and Upgrade for Cultural & Entertainment Products Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

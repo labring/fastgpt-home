@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航空机场收益率的分享与嵌入
-meta_description: 航空机场收益率相关的日报数据，为金融理财领域内民航产业链分析的核心数据源之一，来源为民航行业公开统计报表、机场官方运营台账及合规的第三方民航数据接口。数据更
+meta_description: 航空机场收益率的分享与嵌入：航空机场收益率的分享与嵌入，涵盖配置与验证建议。。。
 keywords: 航空机场、收益率与行情日报播报、分享与嵌入
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

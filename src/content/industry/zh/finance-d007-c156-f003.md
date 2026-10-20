@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 黑色家电收益率的分享与嵌入
-meta_description: 黑色家电收益率与行情日报的数据来源为品牌方线下渠道进销台账、线上电商平台实时成交数据、行业第三方监测数据库。更新节奏为按自然日更新，每日凌晨完成当日全量数据
+meta_description: 黑色家电收益率的分享与嵌入：黑色家电收益率的分享与嵌入，涵盖配置与验证建议。。。
 keywords: 黑色家电、收益率与行情日报播报、分享与嵌入
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

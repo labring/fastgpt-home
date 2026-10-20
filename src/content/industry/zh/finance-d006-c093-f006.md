@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 游戏投研知识库建设的对话日志与审计
-meta_description: 游戏投研的数据来源涵盖游戏厂商公开财报、版号审批公告、研发进度披露、玩家社区评论、流媒体直播实时数据及行业第三方研报。更新节奏存在差异：版号信息按季度批次更
+meta_description: 游戏投研知识库建设的对话日志与审计：游戏投研知识库建设的对话日志与审计，涵盖配置与验证建议
 keywords: 游戏、投研知识库建设与治理、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

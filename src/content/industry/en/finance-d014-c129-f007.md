@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Financial Lease Financial
-meta_description: Financial lease-related financial statement data primarily originates from internal corporate financial accounting systems, special regulatory
+meta_description: Workflow Orchestration for Financial Lease Financial Statement Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

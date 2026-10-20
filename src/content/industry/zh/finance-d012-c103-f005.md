@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 环境监测营销内容的多轮对话与提示词
-meta_description: 环境监测的数据来源包括固定污染源在线监测设备、空气质量监测站、卫星遥感传感器、便携式移动监测终端等。更新节奏从实时秒级到每小时一次不等，批量导出的历史数据通
+meta_description: 环境监测营销内容的多轮对话与提示词：环境监测营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 环境监测、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

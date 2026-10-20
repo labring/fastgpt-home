@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 煤化工财报分析的部署与升级
-meta_description: 煤化工财报数据主要来自境内证券交易所披露的上市公司定期报告、煤化工行业协会发布的月度运行监测数据。更新节奏以季度报告、年度报告为核心周期，辅以月度生产经营数
+meta_description: 煤化工财报分析的部署与升级：煤化工财报分析的部署与升级，涵盖配置与验证建议。。。
 keywords: 煤化工、财报分析与报告生成、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

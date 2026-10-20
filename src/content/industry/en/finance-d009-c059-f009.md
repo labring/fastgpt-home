@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Attribution for Industrial Metals
-meta_description: Data sources for industrial metals research reports primarily include domestic nonferrous metal industry associations, domestic and overseas futures
+meta_description: Citation Sources and Attribution for Industrial Metals Research Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

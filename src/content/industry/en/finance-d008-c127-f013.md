@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for Aerospace Equipment
-meta_description: Aerospace equipment-related due diligence data sources include official technical documents from military scientific research institutions and
+meta_description: Knowledge Base Retrieval and Recall for Aerospace Equipment Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

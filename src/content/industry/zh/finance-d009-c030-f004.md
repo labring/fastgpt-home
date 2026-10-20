@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化妆品研报检索的向量模型与索引
-meta_description: 主要来自品牌官方备案公示文件、行业协会公开研报、第三方成分检测报告及电商平台公开的产品参数页。更新节奏随新成分备案、合规政策调整及季度行业动态变动。文档多为
+meta_description: 化妆品研报检索的向量模型与索引：化妆品研报检索的向量模型与索引，涵盖配置与验证建议
 keywords: 化妆品、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

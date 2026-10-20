@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 纺织制造营销内容的文档解析与分块
-meta_description: 在金融/保险/理财场景中，纺织制造类客户的营销内容数据主要来自生产工艺参数表、产品面料手册、客户订单台账、电商详情页导出文档。数据更新节奏随业务节点变化：新
+meta_description: 纺织制造营销内容的文档解析与分块：纺织制造营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 纺织制造、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

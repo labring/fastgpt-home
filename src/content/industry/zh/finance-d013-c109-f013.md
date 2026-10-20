@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电子元件融资日报的知识库检索与召回
-meta_description: 电子元件融资日报的数据来源包括公开产业供应链融资公示平台、元件原厂官方融资披露公告、行业第三方数据服务商的每日汇总文件。数据更新节奏为每日凌晨更新前一自然日
+meta_description: 电子元件融资日报的知识库检索与召回：电子元件融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 电子元件、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

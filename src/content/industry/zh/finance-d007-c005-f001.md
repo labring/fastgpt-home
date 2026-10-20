@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 个护用品收益率的HTTP 接口与外部系统
-meta_description: 个护用品的收益率数据来源包括品牌方线下终端POS系统、主流电商平台的销售复盘报表、供应链进销存的毛利核算数据。更新节奏存在差异：线下渠道数据按周更新，线上电
+meta_description: 个护用品收益率的HTTP 接口与外部系统：个护用品收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 个护用品、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

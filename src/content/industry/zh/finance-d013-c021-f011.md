@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 其他综合融资日报的文档解析与分块
-meta_description: 其他综合融资日报的常见来源为公开融资披露平台、地方金融监管部门的每日汇总文件，更新频率为自然日更新，每日凌晨生成前一日的汇总文档。文档格式多为PDF或结构化
+meta_description: 其他综合融资日报的文档解析与分块：其他综合融资日报的文档解析与分块，涵盖配置与验证建议
 keywords: 其他综合、融资日报、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

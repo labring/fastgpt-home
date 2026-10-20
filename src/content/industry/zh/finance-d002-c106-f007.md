@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 用量统计一体化 AI 平台的工作流编排
-meta_description: 用量统计的数据来源于平台内置的调用链路日志、资源监控探针，覆盖API调用次数、算力消耗、存储占用等维度。更新节奏按分钟级聚合生成统计快照，平衡数据时效性与存
+meta_description: 用量统计一体化 AI 平台的工作流编排：用量统计一体化 AI 平台的工作流编排，涵盖配置与验证建议
 keywords: 用量统计、一体化 AI 平台与多应用编排、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

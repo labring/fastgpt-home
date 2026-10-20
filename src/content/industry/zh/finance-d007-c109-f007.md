@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电子元件收益率的工作流编排
-meta_description: 电子元件的行情数据主要来自行业现货交易平台接口与行业协会公开汇总数据源。现货报价数据每30分钟更新一次，出厂指导价每日更新一次。数据以结构化JSON格式存储
+meta_description: 电子元件收益率的工作流编排：电子元件收益率的工作流编排，涵盖配置与验证建议。。。
 keywords: 电子元件、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

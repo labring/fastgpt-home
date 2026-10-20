@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 国有大行融资日报的多轮对话与提示词
-meta_description: 数据来源主要为国有大行官方披露的信贷运营公开信息、央行金融统计公开数据集、同业市场交易公开披露内容。更新节奏为每日完成前一交易日全行融资相关数据的汇总更新，
+meta_description: 国有大行融资日报的多轮对话与提示词：国有大行融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 国有大行、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -4,8 +4,8 @@ slug: /en/industry/finance-d008-c032-f007
 page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
-meta_title: Workflow Orchestration for Chemical Raw Material Intelligent
-meta_description: Data sources for chemical raw materials include public customs import and export ledgers, monthly supply and demand reports from industry
+meta_title: Workflow Orchestration for Chemical Raw Material
+meta_description: Workflow Orchestration for Chemical Raw Material Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

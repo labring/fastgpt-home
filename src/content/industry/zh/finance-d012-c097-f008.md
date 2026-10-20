@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦煤营销内容的工具调用与插件
-meta_description: 焦煤相关数据主要来自国内产区现货报价平台、期货交易所合约数据及行业月度供需报告。现货报价每日更新，期货行情实时推送，行业报告按双周或月度频率发布。单条现货数
+meta_description: 焦煤营销内容的工具调用与插件：焦煤营销内容的工具调用与插件，涵盖配置与验证建议。
 keywords: 焦煤、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饰品收益率的工作流编排
-meta_description: 饰品收益率相关数据的来源包含三类：贵金属交易所发布的基准金价、品牌方官方渠道公示的零售指导价、线下回收渠道的实时回收报价。更新节奏存在差异：基准金价按交易日
+meta_description: 饰品收益率的工作流编排：饰品收益率的工作流编排，涵盖配置与验证建议。。。。。。。
 keywords: 饰品、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

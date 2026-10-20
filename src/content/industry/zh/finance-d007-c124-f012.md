@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 自动化设备收益率的模型接入与配置
-meta_description: 来自设备PLC的实时运行参数、MES系统的生产日报、运维平台的能耗与停机记录。更新节奏：单台设备的实时运行参数每10秒更新一次，日度汇总数据每日凌晨2点生成
+meta_description: 自动化设备收益率的模型接入与配置：自动化设备收益率的模型接入与配置，涵盖配置与验证建议
 keywords: 自动化设备、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

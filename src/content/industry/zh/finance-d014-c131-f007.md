@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 装修装饰财报分析的工作流编排
-meta_description: 装修装饰行业的财报数据主要来自企业公开披露的年度、季度报告，以及内部项目台账、行业协会发布的经营统计资料。数据更新节奏为年度报告按财年更新，季度报告每季度末
+meta_description: 装修装饰财报分析的工作流编排：装修装饰财报分析的工作流编排，涵盖配置与验证建议。
 keywords: 装修装饰、财报分析与报告生成、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

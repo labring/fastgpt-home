@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Database and Operations for Logistics Revenue Yield
-meta_description: Data related to logistics revenue yield comes from the waybill settlement system, fuel purchase ledger, road and bridge toll receipts, and site rental
+meta_description: Database and Operations for Logistics Revenue Yield
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

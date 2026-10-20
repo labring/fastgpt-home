@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 环境监测营销内容的HTTP 接口与外部系统
-meta_description: 环境监测品类的数据来源于分布式物联网监测终端、区域级环境监测网关及第三方环境数据服务商。数据更新节奏分为两类：单点位实时数据每1-5分钟推送一次，批量汇总的
+meta_description: 环境监测营销内容的HTTP 接口与外部系统：环境监测营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 环境监测、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

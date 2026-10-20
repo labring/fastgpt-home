@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电力智能尽调报告的HTTP 接口与外部系统
-meta_description: 电力智能尽调报告的数据主要来源于省级电网调度中心公开披露的运营数据、地方能源局月度能源公报、全国电力交易中心的结算数据。核心运营指标月度更新，长期规划数据季
+meta_description: 电力智能尽调报告的HTTP 接口与外部系统：电力智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 电力、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

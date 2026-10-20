@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Ordnance and Equipment Yield HTTP Interfaces and External
-meta_description: Professional defense industry market aggregation interfaces and publicly available equipment industry monitoring data provide data for this category.
+meta_description: Ordnance and Equipment Yield HTTP Interfaces and External Systems
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

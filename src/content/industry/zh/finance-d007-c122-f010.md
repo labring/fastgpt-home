@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 股份制银行收益率的数据库与运维
-meta_description: 股份制银行的收益率数据来源包含本行资产负债管理系统、理财子产品运营系统及公开同业行情接口。数据更新节奏为每日固定时点完成全量同步，单条数据采用标准化结构化格
+meta_description: 股份制银行收益率的数据库与运维：股份制银行收益率的数据库与运维，涵盖配置与验证建议
 keywords: 股份制银行、收益率与行情日报播报、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

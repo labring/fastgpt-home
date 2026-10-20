@@ -34,4 +34,6 @@ The chunk column uses the 512-token default chunk length shared by all built-in 
 
 Values come from the built-in model definitions in the open-source fastgpt-plugin v1.1.3 repository. Models registered in a self-hosted deployment, or a changed `quoteMaxToken`, follow the actual configuration.
 
-> Source: built-in model list of fastgpt-plugin v1.1.3. Verified on 2026-09-28.
+## References
+
+- [fastgpt-plugin source repository](https://github.com/labring/fastgpt-plugin)

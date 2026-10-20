@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c124-f015
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: Deployment and Upgrade for Automated Equipment Yield and
-meta_description: Data sources for automated equipment yield and market daily reports include local device operation logs, connected third-party market data source
+meta_title: Deployment and Upgrade for Automated Equipment Yield
+meta_description: Deployment and Upgrade for Automated Equipment Yield and Market Daily Reporting
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

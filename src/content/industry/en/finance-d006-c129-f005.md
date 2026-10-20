@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Financial
-meta_description: Financial leasing investment research data primarily originates from leasing project ledgers, rent payment transaction records, lessee credit reports
+meta_description: Multi-turn Dialogue and Prompt Engineering for Financial Leasing Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

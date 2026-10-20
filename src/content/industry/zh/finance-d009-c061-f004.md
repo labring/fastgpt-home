@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程机械研报检索的向量模型与索引
-meta_description: 工程机械研报的数据来源包括行业协会公开统计数据、主机厂披露的运营数据、第三方咨询机构的调研文档。更新节奏为月度常规更新、季度深度报告不定期发布。文档结构包含
+meta_description: 工程机械研报检索的向量模型与索引：工程机械研报检索的向量模型与索引，涵盖配置与验证建议
 keywords: 工程机械、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

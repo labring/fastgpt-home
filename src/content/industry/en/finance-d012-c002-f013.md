@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for Professional
-meta_description: Professional services marketing content data originates from internal compliance document libraries in financial, insurance, and wealth management
+meta_description: Knowledge Base Retrieval and Recall for Professional Services Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

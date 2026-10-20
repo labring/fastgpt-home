@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 影视院线研报检索的文档解析与分块
-meta_description: 影视院线行业研报数据主要来自专业票房统计机构、院线运营后台、行业咨询机构公开报告。数据更新节奏以周度票房明细、月度运营分析、季度行业研报为主。文档结构通常包
+meta_description: 影视院线研报检索的文档解析与分块：影视院线研报检索的文档解析与分块，涵盖配置与验证建议
 keywords: 影视院线、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

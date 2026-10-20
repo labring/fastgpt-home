@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水务财报分析的多轮对话与提示词
-meta_description: 水务财报的数据来源为证券监管机构指定的公开披露平台、企业官方公告。更新节奏按季度、年度定期披露，重大运营变动会发布临时公告。文档结构包含合并财务报表与水务专
+meta_description: 水务财报分析的多轮对话与提示词：水务财报分析的多轮对话与提示词，涵盖配置与验证建议
 keywords: 水务、财报分析与报告生成、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

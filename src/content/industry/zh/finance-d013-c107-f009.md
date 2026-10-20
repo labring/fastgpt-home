@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电力融资日报的引用来源与溯源
-meta_description: 电力融资日报的数据来源主要为境内外证券交易所公开披露的电力企业融资公告、全国电力行业监测平台的每日融资动态，以及地方能源监管部门的公开备案信息。更新节奏为每
+meta_description: 电力融资日报的引用来源与溯源：电力融资日报的引用来源与溯源，涵盖配置与验证建议。
 keywords: 电力、融资日报、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

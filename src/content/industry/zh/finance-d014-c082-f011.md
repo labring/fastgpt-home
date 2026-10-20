@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水产养殖财报分析的文档解析与分块
-meta_description: 水产养殖财报数据主要来自规模养殖主体的养殖台账、饲料采购凭证、出货交割单、渔业监管部门抽检报告，以及上市主体公开的年度、半年度水产板块财报。更新节奏随主体规
+meta_description: 水产养殖财报分析的文档解析与分块：水产养殖财报分析的文档解析与分块，涵盖配置与验证建议
 keywords: 水产养殖、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

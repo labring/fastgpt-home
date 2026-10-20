@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 处罚案例合规的向量模型与索引
-meta_description: 处罚案例的数据主要来源于内部合规系统的历史处罚存档、监管机构发布的公开通报文件。更新节奏随监管通报发布、内部处罚落地流程触发，无固定周期，单次更新的文档数量
+meta_description: 处罚案例合规的向量模型与索引：处罚案例合规的向量模型与索引，涵盖配置与验证建议。
 keywords: 处罚案例、合规与内部制度问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

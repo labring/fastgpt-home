@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 消费电子营销内容的多轮对话与提示词
-meta_description: 消费电子营销内容的数据主要来自金融机构的合作品牌物料、自有营销活动素材、用户咨询工单。更新节奏随新品发布、营销节点调整，无固定周期，新品上线时会批量补充新的
+meta_description: 消费电子营销内容的多轮对话与提示词：消费电子营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 消费电子、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

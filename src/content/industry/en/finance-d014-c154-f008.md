@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Accessories Financial Report
-meta_description: Financial report data for the apparel accessories category primarily comes from publicly disclosed periodic report PDF and HTML files of listed
+meta_description: Tool Calling and Plugins for Accessories Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

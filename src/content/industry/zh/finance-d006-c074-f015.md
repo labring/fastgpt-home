@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 教育服务投研知识库建设的部署与升级
-meta_description: 教育服务投研的数据来源主要包括教育主管部门公开文件、学科建设调研资料、院校公开的教研数据、行业协会发布的教研动态。更新节奏随对应文档类型波动，政策类更新无固
+meta_description: 教育服务投研知识库建设的部署与升级：教育服务投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 教育服务、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 包装印刷收益率的部署与升级
-meta_description: 包装印刷的收益率与行情数据，主要来源于企业内部ERP系统的生产订单台账、印刷机SCADA实时采集的设备运行数据、财务结算模块的收支明细记录。数据更新节奏为每
+meta_description: 包装印刷收益率的部署与升级：包装印刷收益率的部署与升级，涵盖配置与验证建议。。。
 keywords: 包装印刷、收益率与行情日报播报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

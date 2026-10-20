@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: IT 服务投研知识库建设的数据库与运维
-meta_description: IT服务投研的数据来自IT资产运维台账、性能监控日志、厂商技术白皮书、行业合规标准文档、故障复盘记录。更新节奏分为实时（性能监控指标）、每日（资产台账更新）
+meta_description: IT 服务投研知识库建设的数据库与运维：IT 服务投研知识库建设的数据库与运维，涵盖配置与验证建议
 keywords: IT 服务、投研知识库建设与治理、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

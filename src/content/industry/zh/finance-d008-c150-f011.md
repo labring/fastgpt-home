@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁矿石智能尽调报告的文档解析与分块
-meta_description: 铁矿石智能尽调的数据主要来自矿山出具的质检报告、港口通关单据、大宗商品贸易合同及行业协会月度简报，随每批次货物的物流节点更新，行业简报为月度更新。文档以PD
+meta_description: 铁矿石智能尽调报告的文档解析与分块：铁矿石智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 铁矿石、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

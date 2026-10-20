@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦炭智能尽调报告的HTTP 接口与外部系统
-meta_description: 焦炭相关尽调数据主要来源于国内大宗商品现货交易平台、沿海港口监管系统、中国炼焦行业协会公开报告。更新节奏分为多个层级：现货成交价格每日更新，港口焦炭库存量每
+meta_description: 焦炭智能尽调报告的HTTP 接口与外部系统：焦炭智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 焦炭、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

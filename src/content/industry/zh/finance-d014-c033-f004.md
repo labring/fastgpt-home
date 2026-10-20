@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化纤财报分析的向量模型与索引
-meta_description: 数据来源包括境内上市公司公开披露的定期报告、行业协会发布的运行简报及企业官方披露的经营数据。更新节奏分为月度、半年度与年度，对应不同数据源的发布周期。文档结
+meta_description: 化纤财报分析的向量模型与索引：化纤财报分析的向量模型与索引，涵盖配置与验证建议。
 keywords: 化纤、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

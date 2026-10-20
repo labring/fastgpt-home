@@ -4,8 +4,8 @@ slug: /zh/industry/fin-step-c029-1
 page_type: 行业作业环节页
 article_section: 保险
 is_part_of: FastGPT 技术中心
-meta_title: 寿险理赔的建立保险事故时间线并核对合同责任：哪一部分能交给系
-meta_description: 寿险理赔的建立保险事故时间线并核对合同责任：哪一部分能交给系统
+meta_title: 寿险理赔的建立保险事故时间线并核对合同责任：哪一部分能交给系统
+meta_description: 寿险理赔的建立保险事故时间线并核对合同责任：哪一部分能交给系统：寿险理赔的建立保险事故时间线并核对合同责任：哪一部分能交给系统，涵盖配置与验证建议
 keywords: 寿险理赔、保险、环节1
 source_type: 金融业务分类与作业事实取自行业研究报告（含监管文件来源编号）
 date_published: 2026-09-15

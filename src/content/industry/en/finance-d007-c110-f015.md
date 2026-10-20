@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Power Grid Equipment Revenue
-meta_description: Power grid equipment revenue and market data primarily comes from power grid SCADA systems and public datasets from provincial power trading
+meta_description: Deployment and Upgrade for Power Grid Equipment Revenue Metrics
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 煤化工融资日报的引用来源与溯源
-meta_description: 煤化工融资日报的数据主要来自中国煤炭工业协会的行业监测数据库、地方发改委项目备案公示、上市煤化工企业的融资公告、国有银行的授信披露信息。更新节奏为每日更新，
+meta_description: 煤化工融资日报的引用来源与溯源：煤化工融资日报的引用来源与溯源，涵盖配置与验证建议
 keywords: 煤化工、融资日报、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

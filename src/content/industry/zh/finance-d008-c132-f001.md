@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 计算机设备智能尽调报告的HTTP 接口与外部系统
-meta_description: 计算机设备的尽调数据主要来自硬件厂商官方API、企业内部IT资产管理系统、运维监控平台的上报日志。更新节奏分为两类：基础资产信息随设备入网、配置变更实时同步
+meta_description: 计算机设备智能尽调报告的HTTP 接口与外部系统：计算机设备智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 计算机设备、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 煤化工研报检索的模型接入与配置
-meta_description: 煤化工研报数据主要来自煤炭行业专业智库、上市煤化企业公开年报、第三方行业工况数据库及监管政策文件。更新节奏覆盖季度、月度及实时：行业公开研报按季度更新，企业
+meta_description: 煤化工研报检索的模型接入与配置：煤化工研报检索的模型接入与配置，涵盖配置与验证建议
 keywords: 煤化工、研报检索与问答、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

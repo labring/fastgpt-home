@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 固废处理投研知识库建设的上下文与 token
-meta_description: 固废处理投研数据主要来源为环卫运营部门的公开监测报表、固废处理项目的运营日志、行业协会发布的标准规范、环评审批文件以及设备厂商的技术参数文档。数据更新节奏随
+meta_description: 固废处理投研知识库建设的上下文与 token：固废处理投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 固废处理、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

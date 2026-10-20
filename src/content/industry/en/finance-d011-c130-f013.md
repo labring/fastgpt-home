@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: In-App Natural Language Search
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for In-Terminal Natural
-meta_description: Market data primarily originates from exchange public market data APIs and standardized API interfaces provided by compliant market data service
+meta_description: Knowledge Base Retrieval and Recall for In-Terminal Natural Language Search for Market Data
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 软件开发营销内容的知识库检索与召回
-meta_description: 这个品类的数据来自金融、保险、理财场景下的软件开发营销相关文档，包括营销活动的前端开发规范、后端接口文档、落地页代码示例、版本更新日志、客户对接开发指南等。
+meta_description: 软件开发营销内容的知识库检索与召回：软件开发营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 软件开发、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

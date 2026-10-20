@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专业服务收益率的HTTP 接口与外部系统
-meta_description: 专业服务类收益与行情日报的数据来自持牌金融信息服务机构的官方接口、场内场外交易结算数据库。数据更新遵循交易日节奏，每日仅在收盘后固定节点完成全量更新，部分日
+meta_description: 专业服务收益率的HTTP 接口与外部系统：专业服务收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 专业服务、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

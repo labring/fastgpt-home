@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Automated Equipment
-meta_description: The data for automated equipment financial reports comes primarily from public annual and quarterly reports of listed companies, industry reference
+meta_description: Document Parsing and Chunking for Automated Equipment Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

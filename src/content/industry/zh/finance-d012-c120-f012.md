@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 网络安全营销内容的模型接入与配置
-meta_description: 网络安全营销内容的数据主要来自企业安全服务知识库、公开漏洞通告库、行业合规文件及客户咨询归档。数据更新节奏随漏洞披露、合规修订调整，无固定周期但高频更新。单
+meta_description: 网络安全营销内容的模型接入与配置：网络安全营销内容的模型接入与配置，涵盖配置与验证建议
 keywords: 网络安全、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

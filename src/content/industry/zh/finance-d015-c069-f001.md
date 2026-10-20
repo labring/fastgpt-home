@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 担保材料风控的HTTP 接口与外部系统
-meta_description: 担保材料的数据主要来自两类渠道，一是业务主体提交的纸质扫描件或结构化电子文档，包括担保函、抵押物不动产权证、担保承诺书等；二是对接外部政务系统获取的权属登记
+meta_description: 担保材料风控的HTTP 接口与外部系统：担保材料风控的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 担保材料、风控与授信材料审核、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

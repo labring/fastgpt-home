@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程咨询智能尽调报告的模型接入与配置
-meta_description: 工程咨询的智能尽调报告数据主要来源于项目立项审批文件、施工图设计文档、现场勘查记录、造价核算台账、合规性审查报告等。数据更新节奏随项目推进阶段调整，立项初期
+meta_description: 工程咨询智能尽调报告的模型接入与配置：工程咨询智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 工程咨询、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

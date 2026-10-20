@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Computer Equipment Investment
-meta_description: Computer equipment investment research data primarily comes from official specification documents of hardware manufacturers, third-party test reports
+meta_description: Deployment and Upgrade for Computer Equipment Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

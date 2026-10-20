@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for Minor Metals
-meta_description: Data sources for minor metals financing daily reports include publicly disclosed industry data from the China Nonferrous Metals Industry Association
+meta_description: Knowledge Base Retrieval and Recall for Minor Metals Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

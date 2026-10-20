@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医美收益率的表单与交互
-meta_description: 医美收益率相关数据来源包括医美机构内部业务系统、合作的合规行业数据服务机构。更新节奏为每日固定时点更新前一日的全量核算数据。文档结构为按医美服务项目分类的结
+meta_description: 医美收益率的表单与交互：医美收益率的表单与交互，涵盖配置与验证建议。。。。。。。
 keywords: 医美、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

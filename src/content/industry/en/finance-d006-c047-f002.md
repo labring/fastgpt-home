@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Context and Token for Investment Research Knowledge Base
-meta_description: Data for investment research at large state-owned banks comes mainly from regular research reports produced by in-house macro research teams, public
+meta_description: Context and Token for Investment Research Knowledge Base Construction for Large State-Owned Banks
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

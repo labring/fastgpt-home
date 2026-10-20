@@ -4,8 +4,8 @@ slug: /en/industry/finance-d013-c019-f012
 page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
-meta_title: Model Access and Configuration for Duty-Free Financing Daily
-meta_description: The data for duty-free financing daily reports primarily comes from daily financing ledgers of duty-free businesses, credit push interfaces from
+meta_title: Model Access and Configuration for Duty-Free Financing
+meta_description: Model Access and Configuration for Duty-Free Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

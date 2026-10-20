@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Footwear Financing Daily
-meta_description: Data for footwear financing daily reports comes from footwear supply chain finance SaaS platforms, partner bank corporate credit systems, and
+meta_description: Tool Calling and Plugins for Footwear Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -25,7 +25,7 @@ The structured SKU-level field characteristics of footwear financing daily repor
 | `tool_call_filter_fields` | `["sku_code", "financing_amount"]` | Only retain core fields required for footwear financing daily reports, to reduce the volume of invalid data returned by tools |
 | `max_tool_calls_per_round` | `3` | Footwear SKU categories are limited, so a maximum of 3 calls per round covers financing data queries for core categories |
 | `tool_timeout_seconds` | `600 seconds` | Pulling full SKU data may take a long time. Set a longer timeout to avoid mid-run interruptions |
-| `mcp_input_mapping` | `{"target_sku": "{{input.sku_code}}", "date_range": "yesterday"}` | Map user-input SKU codes to MCP service input parameters, to adapt to the SKU-based query requirement for footwear |
+| `mcp_input_mapping` | `{"target_sku": "example value", "date_range": "yesterday"}` | Map user-input SKU codes to MCP service input parameters, to adapt to the SKU-based query requirement for footwear |
 | `workflow_tool_split_rule` | Trigger tool calls when input contains `sku_code`, otherwise call the knowledge base | Distinguish traffic between financing daily report data queries and general footwear financing knowledge consultations |
 | `python_api_request_timeout` | `1200 seconds` | Reserve sufficient response time for Python interface calls when pulling batch SKU data |
 

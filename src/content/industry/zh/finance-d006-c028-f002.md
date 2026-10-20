@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 动力煤投研知识库建设的上下文与 token
-meta_description: 动力煤投研数据主要来自国家能源局官方发布、秦皇岛煤炭网现货交易数据、各煤炭生产企业的产能与出货公告、大连商品交易所交割数据及第三方行业研报。数据更新节奏分为
+meta_description: 动力煤投研知识库建设的上下文与 token：动力煤投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 动力煤、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 影视院线投研知识库建设的部署与升级
-meta_description: 影视院线的投研数据主要来自院线排片系统、票房统计平台、行业舆情监测工具、版权合作合同、影院运营日报等。排片信息每日更新，票房数据按场次或每日更新，舆情信息实
+meta_description: 影视院线投研知识库建设的部署与升级：影视院线投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 影视院线、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

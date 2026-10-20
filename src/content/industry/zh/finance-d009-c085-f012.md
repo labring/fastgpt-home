@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水泥研报检索的模型接入与配置
-meta_description: 水泥研报的数据来源主要包括中国建筑材料联合会发布的行业监测数据、券商行业调研报告、第三方建材供应链平台的交易记录。更新节奏覆盖日度、周度与月度：日度发布全国
+meta_description: 水泥研报检索的模型接入与配置：水泥研报检索的模型接入与配置，涵盖配置与验证建议。
 keywords: 水泥、研报检索与问答、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

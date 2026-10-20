@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 保障责任保险理赔初审的文档解析与分块
-meta_description: 保障责任相关数据主要来源于保险公司正式承保条款、保单附件、理赔申请材料中的责任约定部分，更新节奏随新险种上线、条款修订或理赔案件补充材料同步调整。文档形态包
+meta_description: 保障责任保险理赔初审的文档解析与分块：保障责任保险理赔初审的文档解析与分块，涵盖配置与验证建议
 keywords: 保障责任、保险理赔初审、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

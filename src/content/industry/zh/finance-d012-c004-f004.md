@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专用设备营销内容的向量模型与索引
-meta_description: 面向金融、保险、理财行业的专用设备营销内容数据来源包括厂商官方参数文档、线下行业展会宣传物料、线上金融产品详情页及经销商定制化素材。更新节奏随新品发布、合规
+meta_description: 专用设备营销内容的向量模型与索引：专用设备营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 专用设备、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

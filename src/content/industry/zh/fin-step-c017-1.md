@@ -4,8 +4,8 @@ slug: /zh/industry/fin-step-c017-1
 page_type: 行业作业环节页
 article_section: 证券投行
 is_part_of: FastGPT 技术中心
-meta_title: 公司债券承销的重建现金流、债务结构和偿债压力：哪一部分能交给
-meta_description: 公司债券承销的重建现金流、债务结构和偿债压力：哪一部分能交给系统
+meta_title: 公司债券承销的重建现金流、债务结构和偿债压力：哪一部分能交给系统
+meta_description: 公司债券承销的重建现金流、债务结构和偿债压力：哪一部分能交给系统：公司债券承销的重建现金流、债务结构和偿债压力：哪一部分能交给系统，涵盖配置与验证建议
 keywords: 公司债券承销、证券投行、环节1
 source_type: 金融业务分类与作业事实取自行业研究报告（含监管文件来源编号）
 date_published: 2026-09-15

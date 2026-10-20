@@ -4,8 +4,8 @@ slug: /en/industry/finance-d009-c056-f011
 page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
-meta_title: Document Parsing and Chunking for Home Goods Research Report
-meta_description: Data sources for home goods research reports include public research reports from domestic securities firm light manufacturing teams, monthly
+meta_title: Document Parsing and Chunking for Home Goods Research
+meta_description: Document Parsing and Chunking for Home Goods Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

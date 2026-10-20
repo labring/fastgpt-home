@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 调味品营销内容的工作流编排
-meta_description: 调味品品类的数据主要来源于企业内部SKU管理系统、合规性配料表文档、线下终端动销台账及历史营销素材库。数据更新节奏随新品上线、合规要求变更或节日限定款推出触
+meta_description: 调味品营销内容的工作流编排：调味品营销内容的工作流编排，涵盖配置与验证建议。。。
 keywords: 调味品、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

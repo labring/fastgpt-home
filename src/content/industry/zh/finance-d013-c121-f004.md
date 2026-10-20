@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 耐火材料融资日报的向量模型与索引
-meta_description: 耐火材料融资日报的数据来源于行业融资监测平台、企业公开融资公告、地方金融监管部门的公开备案数据。更新节奏为每日更新，覆盖当日发布的耐火材料相关企业融资项目。
+meta_description: 耐火材料融资日报的向量模型与索引：耐火材料融资日报的向量模型与索引，涵盖配置与验证建议
 keywords: 耐火材料、融资日报、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

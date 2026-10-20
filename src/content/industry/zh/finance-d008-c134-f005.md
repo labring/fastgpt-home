@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 调味品智能尽调报告的多轮对话与提示词
-meta_description: 调味品尽调数据来源包括行业协会公开运行数据、上市企业经营披露、商超POS销售明细、原料供应商供货台账。更新节奏覆盖日度（销售明细）、月度（行业运行）、季度（
+meta_description: 调味品智能尽调报告的多轮对话与提示词：调味品智能尽调报告的多轮对话与提示词，涵盖配置与验证建议
 keywords: 调味品、智能尽调报告、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

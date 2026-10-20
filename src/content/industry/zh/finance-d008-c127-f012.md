@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航空装备智能尽调报告的模型接入与配置
-meta_description: 航空装备智能尽调报告的数据主要来自整机厂商公开技术文档、民航/军方适航审定报告、供应链配套企业披露清单、试飞测试原始日志与归档维修记录。数据更新节奏因类型而
+meta_description: 航空装备智能尽调报告的模型接入与配置：航空装备智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 航空装备、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

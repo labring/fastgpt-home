@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 畜禽养殖营销内容的模型接入与配置
-meta_description: 畜禽养殖相关数据主要来自养殖主体的生产台账、饲料采购记录、疫病防控日志，以及行业行情公示平台。生产类数据按每日或每周更新，行情类数据每日同步。文档包含结构化
+meta_description: 畜禽养殖营销内容的模型接入与配置：畜禽养殖营销内容的模型接入与配置，涵盖配置与验证建议
 keywords: 畜禽养殖、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

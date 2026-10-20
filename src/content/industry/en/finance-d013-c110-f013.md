@@ -4,8 +4,8 @@ slug: /en/industry/finance-d013-c110-f013
 page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
-meta_title: Knowledge Base Retrieval and Recall for Power Grid Equipment
-meta_description: Data for power grid equipment financing daily reports is sourced from listed power grid equipment company announcements, power grid company bid
+meta_title: Knowledge Base Retrieval and Recall for Power Grid
+meta_description: Knowledge Base Retrieval and Recall for Power Grid Equipment Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

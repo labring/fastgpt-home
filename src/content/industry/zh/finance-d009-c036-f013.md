@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 半导体研报检索的知识库检索与召回
-meta_description: 半导体研报主要来自券商研究所行业团队、半导体行业协会公开报告、晶圆制造厂商财报与产能公告、下游电子设备厂商的供应链分析文档。更新节奏包含每周的行业动态简报、
+meta_description: 半导体研报检索的知识库检索与召回：半导体研报检索的知识库检索与召回，涵盖配置与验证建议
 keywords: 半导体、研报检索与问答、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

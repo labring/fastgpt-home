@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Database and Operations for Aquaculture Investment Research
-meta_description: Aquaculture investment research data comes from five sources: on-site farming monitoring, industry regulatory department reports, wholesale market
+meta_description: Database and Operations for Aquaculture Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

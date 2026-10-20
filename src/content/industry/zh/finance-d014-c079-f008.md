@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 普钢财报分析的工具调用与插件
-meta_description: 普钢财报分析的数据主要来自上市公司定期公告（上交所、深交所披露平台）、中国钢铁工业协会月度行业数据及第三方结构化资讯平台。定期报告按证监会规定时点更新：年报
+meta_description: 普钢财报分析的工具调用与插件：普钢财报分析的工具调用与插件，涵盖配置与验证建议。
 keywords: 普钢、财报分析与报告生成、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

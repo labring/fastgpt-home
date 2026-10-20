@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦炭融资日报的HTTP 接口与外部系统
-meta_description: 焦炭融资日报数据来自国内大宗商品融资监测平台与行业自律组织联合发布的每日焦炭融资交易及授信信息。更新节奏为每个交易日结束后，次日上午9:00前完成全量数据更
+meta_description: 焦炭融资日报的HTTP 接口与外部系统：焦炭融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 焦炭、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

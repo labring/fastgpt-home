@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 热力财报分析的HTTP 接口与外部系统
-meta_description: 热力品类的财报数据来源为各地公用事业监管平台披露文件、热力运营主体的年度及季度公开财报。更新节奏以季度为核心周期，年度财报补充完整运营与财务明细。文档结构包
+meta_description: 热力财报分析的HTTP 接口与外部系统：热力财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 热力、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

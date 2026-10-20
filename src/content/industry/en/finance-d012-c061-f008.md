@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Construction Machinery
-meta_description: Core data sources for construction machinery include factory calibration parameters from equipment manufacturers, on-site operation and maintenance
+meta_description: Tool Calling and Plugins for Construction Machinery Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

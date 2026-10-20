@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 文娱用品融资日报的引用来源与溯源
-meta_description: 数据来源包括国内文娱用品生产企业公开披露的定向增发公告、地方金融监管局融资备案信息、行业垂直媒体的融资动态汇总。更新节奏为每个工作日16点前完成当日全量数据
+meta_description: 文娱用品融资日报的引用来源与溯源：文娱用品融资日报的引用来源与溯源，涵盖配置与验证建议
 keywords: 文娱用品、融资日报、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

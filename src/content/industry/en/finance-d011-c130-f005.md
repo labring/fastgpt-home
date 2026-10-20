@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: In-App Natural Language Search
 is_part_of: FastGPT Tech Center
 meta_title: In-Terminal Natural Language Retrieval for Market Data
-meta_description: Market data is sourced from exchange public market data APIs and compliant third-party market data aggregation services. Update frequency varies by
+meta_description: In-Terminal Natural Language Retrieval for Market Data: Multi-Turn Dialogue and Prompt Engineering
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

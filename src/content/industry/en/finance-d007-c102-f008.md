@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Special Steel Yield Rates
-meta_description: Special steel yield and market data comes primarily from three types of sources: domestic special steel spot trading platforms, futures exchange
+meta_description: Tool Calling and Plugins for Special Steel Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

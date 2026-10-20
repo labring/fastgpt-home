@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 酒店餐饮投研知识库建设的上下文与 token
-meta_description: 这个品类的投研数据来源包括门店运营台账、商圈客流监测数据、食材供应商报价单、区域餐饮行业政策文件。更新节奏分为实时（当日门店营收、客流数据）、每日（食材进价
+meta_description: 酒店餐饮投研知识库建设的上下文与 token：酒店餐饮投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 酒店餐饮、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

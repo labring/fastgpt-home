@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电网设备收益率的多轮对话与提示词
-meta_description: 电网设备收益率与行情数据主要来自省级电力交易中心公开交易数据、电网运维厂商的设备台账报表，以及金融领域的电力资产估值数据库。数据更新节奏为每日一次，于当日凌
+meta_description: 电网设备收益率的多轮对话与提示词：电网设备收益率的多轮对话与提示词，涵盖配置与验证建议
 keywords: 电网设备、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

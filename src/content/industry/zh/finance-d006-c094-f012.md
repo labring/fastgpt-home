@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 炼化投研知识库建设的模型接入与配置
-meta_description: 炼化投研数据主要来自生产装置DCS系统、ERP生产台账、原油质检报告、行业产能监测文档及合规性公告。生产运行日志为小时级更新，台账类文档按日更新，行业研报与
+meta_description: 炼化投研知识库建设的模型接入与配置：炼化投研知识库建设的模型接入与配置，涵盖配置与验证建议
 keywords: 炼化、投研知识库建设与治理、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

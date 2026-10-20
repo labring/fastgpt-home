@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Condiment Yield Rate
-meta_description: Condiment yield rate and daily market report data for financial and wealth management scenarios is primarily collected from offline supermarket POS
+meta_description: Deployment and Upgrade for Condiment Yield Rate
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

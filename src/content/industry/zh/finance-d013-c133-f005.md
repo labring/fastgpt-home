@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 证券融资日报的多轮对话与提示词
-meta_description: 证券融资日报的数据来源为沪深北交易所、中证登的公开披露接口，更新节奏为每个交易日收盘后16:00至18:00完成当日数据更新。单份文档结构包含日期、市场板块
+meta_description: 证券融资日报的多轮对话与提示词：证券融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 证券、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

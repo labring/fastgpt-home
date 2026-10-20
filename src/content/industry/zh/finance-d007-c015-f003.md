@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 储能收益率的分享与嵌入
-meta_description: 储能收益率与行情日报的数据来源包括省级电力市场交易接口、储能电站本地SCADA监控系统、电网调度公开数据接口。数据更新节奏为每日凌晨生成前一自然日的完整日报
+meta_description: 储能收益率的分享与嵌入：储能收益率的分享与嵌入，涵盖配置与验证建议。。。。。。。
 keywords: 储能、收益率与行情日报播报、分享与嵌入
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

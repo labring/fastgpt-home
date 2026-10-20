@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interfaces and External Systems for Building
-meta_description: Building construction financial report data primarily comes from housing and urban-rural development department project filing systems, internal
+meta_description: HTTP Interfaces and External Systems for Building Construction Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -23,7 +23,7 @@ The multi-node update and multi-field association characteristics of building co
 | Configuration Item | Recommended Value | Rationale |
 | --- | --- | --- |
 | `request_timeout` | `600 seconds` | Building construction financial report data has a large volume; pulling full project data in a single request requires a long processing cycle, and 600 seconds can cover the request and parsing process |
-| `request_body_template` | `{"project_id": "{{vars.project_id}}", "update_cycle": "{{vars.period}}", "required_fields": ["total_cost", "completed_output"]}` | Building construction financial reports require pulling specified fields by project ID and update cycle. The template can bind workflow variables to enable precise requests |
+| `request_body_template` | `{"project_id": "example value", "update_cycle": "example value", "required_fields": ["total_cost", "completed_output"]}` | Building construction financial reports require pulling specified fields by project ID and update cycle. The template can bind workflow variables to enable precise requests |
 | `header_auth_type` | `API_KEY` | Building construction financial reports belong to sensitive internal enterprise business data; API_KEY authentication can effectively restrict interface access permissions |
 | `incremental_sync_field` | `update_time` | Building construction financial reports update progress data on a quarterly basis. Using update_time as the incremental field allows pulling only updated content from the most recent cycle, reducing request load |
 | `response_parse_mode` | `field_mapping` | Building construction financial report fields have fixed naming and unit rules. Field mapping can directly map interface return values to workflow variables, avoiding parsing deviations |

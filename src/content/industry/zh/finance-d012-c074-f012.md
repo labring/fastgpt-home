@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 教育服务营销内容的模型接入与配置
-meta_description: 教育服务的营销内容数据主要来源于金融机构的教育金规划课程大纲、用户咨询记录、招生简章、社群互动记录及线下活动素材。数据更新节奏随课程上线、活动策划及用户反馈
+meta_description: 教育服务营销内容的模型接入与配置：教育服务营销内容的模型接入与配置，涵盖配置与验证建议
 keywords: 教育服务、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

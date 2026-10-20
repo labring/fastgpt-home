@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interfaces and External Systems for Education Service
-meta_description: The data for education service financing daily reports primarily comes from public financing announcements, industry information disclosure platforms
+meta_description: HTTP Interfaces and External Systems for Education Service Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

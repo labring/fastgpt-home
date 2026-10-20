@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁矿石融资日报的工具调用与插件
-meta_description: 铁矿石融资日报的数据来源包括大连商品交易所、中国铁矿石现货交易平台及行业资讯机构的公开交易数据。更新节奏为每个交易日收盘后1小时内更新当日数据，非交易日顺延
+meta_description: 铁矿石融资日报的工具调用与插件：铁矿石融资日报的工具调用与插件，涵盖配置与验证建议
 keywords: 铁矿石、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

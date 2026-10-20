@@ -4,8 +4,8 @@ slug: /en/industry/finance-d013-c129-f007
 page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
-meta_title: Workflow Orchestration for Financial Leasing Daily Financing
-meta_description: Data sources for financial leasing daily financing reports include four categories: core contract management systems, rent recovery ledgers, fund
+meta_title: Workflow Orchestration for Financial Leasing Daily
+meta_description: Workflow Orchestration for Financial Leasing Daily Financing Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

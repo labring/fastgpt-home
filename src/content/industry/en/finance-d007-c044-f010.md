@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Database and Operations Maintenance for Commercial Property
-meta_description: Data sources for commercial property yield rate-related data include actual received rent ledgers from property operation management systems
+meta_description: Database and Operations Maintenance for Commercial Property Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

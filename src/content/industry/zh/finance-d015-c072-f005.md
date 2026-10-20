@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 授信申请风控的多轮对话与提示词
-meta_description: 授信申请风控的数据主要来自申请人提交的电子材料、合作征信机构推送的结构化数据，以及线下扫描上传的纸质文档。数据更新节奏为单次申请周期内一次性同步，无实时更新
+meta_description: 授信申请风控的多轮对话与提示词：授信申请风控的多轮对话与提示词，涵盖配置与验证建议
 keywords: 授信申请、风控与授信材料审核、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

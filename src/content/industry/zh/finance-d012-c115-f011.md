@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 种植业营销内容的文档解析与分块
-meta_description: 种植业的金融营销与运营文档主要来源于面向种植户推出的农资采购分期方案、农业保险产品说明、农业技术推广配套金融服务指南，以及田间观测记录台账、农产品行情周报等
+meta_description: 种植业营销内容的文档解析与分块：种植业营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 种植业、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

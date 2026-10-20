@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Model Integration and Configuration for Steel Trade
-meta_description: Data sources for steel trade intelligent due diligence include steel mill ex-factory price databases, regional spot trading platforms, logistics
+meta_description: Model Integration and Configuration for Steel Trade Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Sharing and Embedding of Chemical Fiber Yield and Market
-meta_description: Chemical fiber market data comes from official settlement data of spot trading platforms in the petrochemical industry chain and futures delivery
+meta_description: Sharing and Embedding of Chemical Fiber Yield and Market Data
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

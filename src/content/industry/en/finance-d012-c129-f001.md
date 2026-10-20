@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interfaces and External Systems for Financial Leasing
-meta_description: Financial leasing marketing content data originates from three main sources: internal enterprise marketing material libraries, access rule libraries
+meta_description: HTTP Interfaces and External Systems for Financial Leasing Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

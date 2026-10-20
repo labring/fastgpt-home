@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Model Integration and Configuration for Duty-Free Marketing
-meta_description: Duty-free category data mainly comes from the commodity management systems of duty-free business entities, official channels releasing offshore
+meta_description: Model Integration and Configuration for Duty-Free Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

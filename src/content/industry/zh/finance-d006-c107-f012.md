@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电力投研知识库建设的模型接入与配置
-meta_description: 电力投研数据主要来自国家电网及地方电网的公开运行监测数据、电力行业协会的月度报告、上市公司定期财报、电力交易中心的实时交易数据，以及行业政策文件。更新节奏：
+meta_description: 电力投研知识库建设的模型接入与配置：电力投研知识库建设的模型接入与配置，涵盖配置与验证建议
 keywords: 电力、投研知识库建设与治理、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

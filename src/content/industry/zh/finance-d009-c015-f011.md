@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 储能研报检索的文档解析与分块
-meta_description: 数据来源包括公开行业研究报告、电网规划公开文件、储能企业公开披露资料、券商研报。更新节奏随文档类型不同：行业报告按季度更新，政策文件随政策发布不定期调整，企
+meta_description: 储能研报检索的文档解析与分块：储能研报检索的文档解析与分块，涵盖配置与验证建议。
 keywords: 储能、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

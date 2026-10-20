@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水产养殖收益率的对话日志与审计
-meta_description: 水产养殖收益率相关的数据源覆盖养殖全环节，包括塘口智能监测设备的实时水质、投料量数据，养殖主体的饲料采购、苗种投放台账，以及区域水产收购市场的每日报价。数据
+meta_description: 水产养殖收益率的对话日志与审计：水产养殖收益率的对话日志与审计，涵盖配置与验证建议
 keywords: 水产养殖、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 软件开发研报检索的多轮对话与提示词
-meta_description: 软件开发领域研报的数据主要来自专业技术咨询机构、开源社区技术白皮书、行业标准组织文档及券商科技赛道研报。更新节奏为每周同步最新技术落地案例研报，每季度更新行
+meta_description: 软件开发研报检索的多轮对话与提示词：软件开发研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 软件开发、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

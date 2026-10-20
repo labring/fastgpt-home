@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多元金融收益率的HTTP 接口与外部系统
-meta_description: 多元金融的收益率数据主要来自非银金融机构的自营产品披露、场外衍生品交易市场的行情接口、行业自律组织的备案公示数据。固定收益类产品每个交易日收盘后更新数据，权
+meta_description: 多元金融收益率的HTTP 接口与外部系统：多元金融收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 多元金融、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

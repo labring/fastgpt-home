@@ -4,8 +4,8 @@ slug: /en/industry/finance-d010-c063-f005
 page_type: Industry scenario page
 article_section: Bidding and Tender Reports
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Dialogue and Prompt Engineering for Bid Rejection
-meta_description: Bid rejection item bidding data is sourced from publicly available bid rejection announcements on public resource trading platforms and internal
+meta_title: Multi-turn Dialogue and Prompt Engineering for Bid
+meta_description: Multi-turn Dialogue and Prompt Engineering for Bid Rejection Item Bidding and Tendering Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

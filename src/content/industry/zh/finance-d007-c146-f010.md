@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通用设备收益率的数据库与运维
-meta_description: 通用设备收益率相关数据的来源包含企业内部物联网采集系统、设备运维管理平台以及公开的通用设备交易行情接口。数据更新节奏为每日固定时段生成全量日报数据，同时支持
+meta_description: 通用设备收益率的数据库与运维：通用设备收益率的数据库与运维，涵盖配置与验证建议。
 keywords: 通用设备、收益率与行情日报播报、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

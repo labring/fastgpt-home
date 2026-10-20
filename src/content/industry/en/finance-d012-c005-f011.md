@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Personal Care Product
-meta_description: Personal care product marketing data primarily comes from brand internal product manuals, e-commerce platform detail page copy, live marketing
+meta_description: Document Parsing and Chunking for Personal Care Product Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

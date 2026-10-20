@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 影视院线财报分析的引用来源与溯源
-meta_description: 供金融行业分析师使用的影视院线财报数据，来源包括公开披露的季度/年度财报、全国电影票务官方统计系统、院线内部运营结算报表。更新节奏为月度运营数据每周更新，季
+meta_description: 影视院线财报分析的引用来源与溯源：影视院线财报分析的引用来源与溯源，涵盖配置与验证建议
 keywords: 影视院线、财报分析与报告生成、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

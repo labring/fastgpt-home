@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for Thermal Coal
-meta_description: Thermal coal-related data mainly comes from industry monitoring institutions, port shipping ledgers, railway transportation dispatch systems, and
+meta_description: Citation Sources and Traceability for Thermal Coal Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -24,7 +24,7 @@ The multi-source and batch update characteristics of thermal coal data impose mu
 | --- | --- | --- |
 | `Recall Count` | `Top 8-12 entries` | Thermal coal data has many fields and requires accurate matching of core batch information. Too many recalled entries will introduce irrelevant data, while too few will fail to cover all fields required for full traceability |
 | `Similarity Threshold` | `0.75-0.85` | Thermal coal’s transportation batch number and origin code are core unique matching identifiers. A threshold that is too low will match irrelevant batches, while a threshold that is too high will fail to recall associated data from the same batch |
-| `Citation Source Bound Fields` | `transportation batch number, origin code` | These two fields are core unique identifiers for thermal coal traceability. They must be directly bound to their corresponding field values as traceability IDs in the citation template |
+| `Citation Source Bound Fields` | `transportation batch number, origin code` | These two fields are core unique identifiers for thermal coal traceability. They must be directly bound to their corresponding field values as traceability IDs in the Traceability details |
 | `Incremental Pull Interval` | `24 hours` | Most core thermal coal transaction and port data is updated daily. A 24-hour pull interval ensures cited data comes from the latest batch |
 | `Document Parsing Segment Length` | `800-1200 characters` | A single record in thermal coal structured documents occupies approximately 1000 characters. Adapting the segment length ensures complete field parsing |
 | `Reranked Return Count` | `Top 5 entries` | Traceability data with the highest relevance to the current due diligence batch must be returned first. Limiting the number of entries after reranking simplifies report display logic |

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 玻璃财报分析的多轮对话与提示词
-meta_description: 玻璃行业的财报数据主要来自上市玻璃制造企业的公开定期报告、行业协会发布的运行数据。数据更新节奏分为定期报告与行业监测数据两类，定期报告按季度、半年度、年度发
+meta_description: 玻璃财报分析的多轮对话与提示词：玻璃财报分析的多轮对话与提示词，涵盖配置与验证建议
 keywords: 玻璃、财报分析与报告生成、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

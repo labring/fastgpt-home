@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interfaces and External Systems for Small Home
-meta_description: The built-in intelligent collection module and grid power consumption data interface provide the data source for small home appliance yield rate
+meta_description: HTTP Interfaces and External Systems for Small Home Appliance Yield Rate Reporting
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 广告营销研报检索的工具调用与插件
-meta_description: 广告营销研报的数据来源包括第三方媒介监测平台、广告主内部营销投放台账、行业协会公开报告。更新节奏覆盖月度常规分析报告、周度投放异动简报、实时竞价与投放数据。
+meta_description: 广告营销研报检索的工具调用与插件：广告营销研报检索的工具调用与插件，涵盖配置与验证建议
 keywords: 广告营销、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

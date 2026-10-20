@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电商服务智能尽调报告的HTTP 接口与外部系统
-meta_description: 电商服务智能尽调报告的数据来源包括电商开放平台官方API、第三方合规电商数据接口、商家自主提交的交易与合规报表。更新节奏分为三类：交易履约类数据按小时同步，
+meta_description: 电商服务智能尽调报告的HTTP 接口与外部系统：电商服务智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 电商服务、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

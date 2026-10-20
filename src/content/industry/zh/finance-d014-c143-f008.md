@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 软件开发财报分析的工具调用与插件
-meta_description: 软件开发领域的财报数据主要来自上市公司定期披露的年报、季报，以及交易所公开的临时公告文档。数据更新节奏固定，集中在季度末、年度末的披露窗口期，临时公告则随事
+meta_description: 软件开发财报分析的工具调用与插件：软件开发财报分析的工具调用与插件，涵盖配置与验证建议
 keywords: 软件开发、财报分析与报告生成、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

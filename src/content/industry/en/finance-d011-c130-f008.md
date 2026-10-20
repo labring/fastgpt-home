@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: In-App Natural Language Search
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for In-Terminal Natural Language
-meta_description: Market data originates from official interfaces of compliant trading venues and professional market aggregation services. Update frequency adjusts
+meta_description: Tool Calling and Plugins for In-Terminal Natural Language Retrieval of Market Data
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

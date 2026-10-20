@@ -4,8 +4,8 @@ slug: /en/industry/finance-d009-c146-f015
 page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
-meta_title: Deployment and Upgrade for General Equipment Research Report
-meta_description: Data sources for general equipment research reports include industry monitoring data released by the national general machinery industry federation
+meta_title: Deployment and Upgrade for General Equipment Research
+meta_description: Deployment and Upgrade for General Equipment Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

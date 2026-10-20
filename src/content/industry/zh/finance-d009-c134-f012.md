@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 调味品研报检索的模型接入与配置
-meta_description: 调味品研报数据主要来自公开券商行业研究报告、中国调味品协会发布的行业动态文档、头部企业公开年报与业绩交流会纪要。更新节奏随行业事件调整，新品上市、原料价格波
+meta_description: 调味品研报检索的模型接入与配置：调味品研报检索的模型接入与配置，涵盖配置与验证建议
 keywords: 调味品、研报检索与问答、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

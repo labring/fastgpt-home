@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Model Integration and Configuration for Air Pollution
-meta_description: Air pollution control financial report data is sourced from public monitoring ledgers released by ecological environment authorities, annual special
+meta_description: Model Integration and Configuration for Air Pollution Control Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

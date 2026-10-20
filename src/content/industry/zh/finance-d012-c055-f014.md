@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 大气治理营销内容的表单与交互
-meta_description: 大气治理相关的数据主要来自区域大气环境监测站、企业自有排放口在线监测设备、移动监测车采集的实时数据。数据更新频率覆盖实时、每小时、每日三类，单条数据包含监测
+meta_description: 大气治理营销内容的表单与交互：大气治理营销内容的表单与交互，涵盖配置与验证建议。
 keywords: 大气治理、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

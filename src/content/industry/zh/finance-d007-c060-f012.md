@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程咨询收益率的模型接入与配置
-meta_description: 工程咨询收益率相关数据的来源包括全国工程咨询行业协会发布的季度计价数据库、各地方住建部门发布的工程投资参考文件、过往已归档的工程咨询项目台账。更新节奏为每季
+meta_description: 工程咨询收益率的模型接入与配置：工程咨询收益率的模型接入与配置，涵盖配置与验证建议
 keywords: 工程咨询、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

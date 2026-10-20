@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 玻璃财报分析的模型接入与配置
-meta_description: 玻璃行业财报数据主要来自上市建材企业公开年报、季报，以及行业协会发布的月度监测数据。数据文档按季度/年度分层，涵盖产能、产量、销量、库存、单位成本、细分品类
+meta_description: 玻璃财报分析的模型接入与配置：玻璃财报分析的模型接入与配置，涵盖配置与验证建议。
 keywords: 玻璃、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

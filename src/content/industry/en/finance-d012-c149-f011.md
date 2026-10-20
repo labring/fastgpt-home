@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Steel Trade Marketing
-meta_description: The marketing content documents for steel trade draw from multiple data sources. These include internal quotation ledgers, customer bidding documents
+meta_description: Document Parsing and Chunking for Steel Trade Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 计算机设备融资日报的HTTP 接口与外部系统
-meta_description: 计算机设备融资日报的数据来源于企业设备采购台账、融资租赁系统、银行放款接口等结构化数据源。数据更新节奏为每日更新，单份日报覆盖当日完成审批或放款的计算机设备
+meta_description: 计算机设备融资日报的HTTP 接口与外部系统：计算机设备融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 计算机设备、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 生物制品智能尽调报告的HTTP 接口与外部系统
-meta_description: 金融场景下的生物制品智能尽调数据主要来自国家药品监督管理局公开批签发数据、企业临床试验备案信息、行业公开研发进展报告。更新节奏为批签发数据按月更新，临床试验
+meta_description: 生物制品智能尽调报告的HTTP 接口与外部系统：生物制品智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 生物制品、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

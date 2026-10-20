@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 农化制品融资日报的模型接入与配置
-meta_description: 农化制品融资日报的数据主要来自中国农药工业协会行业监测数据库、上市公司公开披露的融资公告、第三方行业细分交易平台的成交记录。数据每日更新，单篇日报文档包含单
+meta_description: 农化制品融资日报的模型接入与配置：农化制品融资日报的模型接入与配置，涵盖配置与验证建议
 keywords: 农化制品、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

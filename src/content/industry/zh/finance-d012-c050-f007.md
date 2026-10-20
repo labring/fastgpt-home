@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 塑料橡胶营销内容的工作流编排
-meta_description: 塑料橡胶品类的数据主要来自上游石化企业的出厂报价系统、国内合成树脂行业协会的行业供需台账、下游汽车与包装制造业的采购订单数据库及海关进出口通关数据。数据更新
+meta_description: 塑料橡胶营销内容的工作流编排：塑料橡胶营销内容的工作流编排，涵盖配置与验证建议。
 keywords: 塑料橡胶、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

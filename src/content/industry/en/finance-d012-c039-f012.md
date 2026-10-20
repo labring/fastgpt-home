@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Model Integration and Configuration for Kitchen and Bath
-meta_description: Marketing-related data for kitchen and bath appliances mainly comes from official product manuals, e-commerce platform detail page parameters, new
+meta_description: Model Integration and Configuration for Kitchen and Bath Appliance Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

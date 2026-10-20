@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 影视院线收益率的工具调用与插件
-meta_description: 影视院线收益率相关数据主要来自国内院线票房监测平台、影院POS系统上报的经营数据。数据更新分为两个节奏：每日凌晨完成前一日全量经营数据的汇总更新，每小时推送
+meta_description: 影视院线收益率的工具调用与插件：影视院线收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 影视院线、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

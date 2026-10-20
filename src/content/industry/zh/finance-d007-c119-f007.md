@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 综合服务收益率的工作流编排
-meta_description: 综合服务收益率与行情日报的数据来源包括交易所官方行情接口、持牌金融数据服务机构的标准化数据接口，更新节奏为每个交易日收盘后批量生成当日完整数据，单次更新周期
+meta_description: 综合服务收益率的工作流编排：综合服务收益率的工作流编排，涵盖配置与验证建议。。。
 keywords: 综合服务、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

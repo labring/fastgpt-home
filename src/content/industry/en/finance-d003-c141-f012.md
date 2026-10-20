@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Insurance Claim First-Level Review
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for Identity and Timing
-meta_description: Data mainly comes from three primary sources. These are identity verification materials submitted by claim applicants: resident ID cards, household
+meta_description: Model Access and Configuration for Identity and Timing Insurance Claim Initial Review
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

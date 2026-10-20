@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 普钢营销内容的工作流编排
-meta_description: 普钢相关营销数据主要来自钢厂ERP系统、区域现货交易平台、下游经销商进销存台账及线下客户线索登记表。数据更新节奏分为两类：现货价格与客户线索类每日收盘后同步
+meta_description: 普钢营销内容的工作流编排：普钢营销内容的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 普钢、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

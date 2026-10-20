@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油服工程收益率的多轮对话与提示词
-meta_description: 油服工程的收益率与行情数据主要来源于企业内部生产调度系统、ERP核算模块及行业公开的区块报价数据库。数据更新节奏为每日凌晨完成前一日全量数据的同步。文档结构
+meta_description: 油服工程收益率的多轮对话与提示词：油服工程收益率的多轮对话与提示词，涵盖配置与验证建议
 keywords: 油服工程、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 账户问题客户服务的模型接入与配置
-meta_description: 账户问题类数据主要来自用户提交的账户咨询请求、后台账户管理系统的交易日志与身份验证记录。数据更新节奏为准实时，用户发起咨询时同步生成当前状态的账户快照。文档
+meta_description: 账户问题客户服务的模型接入与配置：账户问题客户服务的模型接入与配置，涵盖配置与验证建议
 keywords: 账户问题、客户服务与账户咨询、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

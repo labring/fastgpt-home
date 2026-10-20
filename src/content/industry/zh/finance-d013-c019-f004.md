@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 免税融资日报的向量模型与索引
-meta_description: 免税融资日报的数据来源为免税商户的融资申请台账、地方商务局免税资质备案库、收单机构的商户经营流水。更新节奏为每日固定时间生成当日全量数据，同时支持当日补录的
+meta_description: 免税融资日报的向量模型与索引：免税融资日报的向量模型与索引，涵盖配置与验证建议。
 keywords: 免税、融资日报、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

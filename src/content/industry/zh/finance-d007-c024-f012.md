@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 农化制品收益率的模型接入与配置
-meta_description: 农化制品的数据源主要包括国内农资流通协会公开报价、各省市农资批发市场实时交易数据、大型农化生产企业的出厂台账。数据更新节奏为每日更新现货报价，每周发布行业平
+meta_description: 农化制品收益率的模型接入与配置：农化制品收益率的模型接入与配置，涵盖配置与验证建议
 keywords: 农化制品、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

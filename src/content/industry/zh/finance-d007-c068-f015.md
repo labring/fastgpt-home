@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 投资平台收益率的部署与升级
-meta_description: 数据来源为境内外证券交易所官方行情接口、持牌金融数据服务机构的标准化数据接口。更新节奏为每个交易日收盘后批量生成全量日报，非交易日无更新。单份日报文档按证券
+meta_description: 投资平台收益率的部署与升级：投资平台收益率的部署与升级，涵盖配置与验证建议。。。
 keywords: 投资平台、收益率与行情日报播报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

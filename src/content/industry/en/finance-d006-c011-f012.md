@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for Snack Food Investment
-meta_description: Snack food investment research data primarily comes from public industry research reports, e-commerce platform sales ledgers, supply chain
+meta_description: Model Access and Configuration for Snack Food Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -20,7 +20,7 @@ Snack food investment research data primarily comes from public industry researc
 The multi-source heterogeneous characteristics of snack food investment research data require the model access link to support multi-format document parsing and field alignment. Daily updated e-commerce data needs a high-frequency synchronization mechanism to avoid data lag impacting research timeliness. Long-text consumer reviews and industry reports need appropriate chunking rules to prevent exceeding model context windows. A large number of SKUs with significant field format differences require unified field mapping rules to ensure accurate matching of target data during retrieval. Additionally, real-time consumer feedback needs to support incremental synchronization to avoid excessive compute resource usage from full synchronization.
 
 ## How to Set Configurations
-These configurations are compatible with FastGPT V4.9.3 and later versions:
+Reference only; verify against the target FastGPT release and deployment documentation.
 
 | Configuration Item | Recommended Value Range | Rationale |
 | --- | --- | --- |

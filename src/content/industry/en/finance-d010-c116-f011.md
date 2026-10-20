@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Bidding and Tender Reports
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Competitor Quote Bidding
-meta_description: Competitor quote data primarily comes from public tender announcement documents, supplier-submitted bid response documents, and internal enterprise
+meta_description: Document Parsing and Chunking for Competitor Quote Bidding
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

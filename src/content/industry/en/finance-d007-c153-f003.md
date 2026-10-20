@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Sharing and Embedding for Wind Power Generation Yield
-meta_description: Data for wind power generation yield comes from public grid dispatching platforms and wind farm operation and maintenance management systems. Updates
+meta_description: Sharing and Embedding for Wind Power Generation Yield
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

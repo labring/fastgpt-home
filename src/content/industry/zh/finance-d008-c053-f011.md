@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多元金融智能尽调报告的文档解析与分块
-meta_description: 多元金融智能尽调报告的数据主要来源于非银金融机构的经营台账、监管报送文件、第三方征信数据源与行业调研底稿。更新节奏随业务场景变化，月度经营数据按月更新，季度
+meta_description: 多元金融智能尽调报告的文档解析与分块：多元金融智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 多元金融、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

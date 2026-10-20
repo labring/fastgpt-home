@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: IT 服务投研知识库建设的向量模型与索引
-meta_description: IT服务投研知识库的数据来源涵盖厂商技术白皮书、运维告警日志、版本更新公告、行业技术研报等多类载体。数据更新节奏差异明显：运维日志与实时告警数据为秒级更新，
+meta_description: IT 服务投研知识库建设的向量模型与索引：IT 服务投研知识库建设的向量模型与索引，涵盖配置与验证建议
 keywords: IT 服务、投研知识库建设与治理、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

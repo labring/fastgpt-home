@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饲料投研知识库建设的部署与升级
-meta_description: 饲料行业投研数据主要来自全国饲料工业协会公开监测数据、养殖终端的每日投料记录、原料供应商的现货报价单、农业农村部发布的饲料添加剂标准。数据更新节奏分为多个层
+meta_description: 饲料投研知识库建设的部署与升级：饲料投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 饲料、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

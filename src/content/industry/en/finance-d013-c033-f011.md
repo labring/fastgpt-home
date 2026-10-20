@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Chemical Fiber Financing
-meta_description: Chemical fiber financing daily report data mainly comes from daily industry briefings released by the China Chemical Fiber Industry Association
+meta_description: Document Parsing and Chunking for Chemical Fiber Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

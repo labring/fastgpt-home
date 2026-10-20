@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 热力收益率的分享与嵌入
-meta_description: 属于金融领域公用事业板块的热力行业收益率与行情日报数据，来源于公用事业行业监测平台与热力企业内部运营系统，更新节奏为每日更新前一自然日的汇总数据。文档采用分
+meta_description: 热力收益率的分享与嵌入：热力收益率的分享与嵌入，涵盖配置与验证建议。。。。。。。
 keywords: 热力、收益率与行情日报播报、分享与嵌入
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

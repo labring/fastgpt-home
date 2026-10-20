@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电力智能尽调报告的引用来源与溯源
-meta_description: 电力智能尽调报告的数据主要来源于电网公开披露数据、电力企业内部运维日志、电力交易平台成交记录、行业合规审查文档等。数据更新节奏覆盖实时（如电网负荷曲线）、日
+meta_description: 电力智能尽调报告的引用来源与溯源：电力智能尽调报告的引用来源与溯源，涵盖配置与验证建议
 keywords: 电力、智能尽调报告、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15
@@ -25,7 +25,7 @@ date_modified: 2026-09-15
 | --- | --- | --- |
 | `recall_top_k` | `前10-15条` | 电力尽调数据包含多维度专业字段，过多召回会引入无关内容，过少无法覆盖核心指标 |
 | `similarity_threshold` | `0.72-0.85` | 电力专业术语辨识度高，该区间可平衡召回精准度与专业内容覆盖度 |
-| `reference_template` | `[{source_name}]，{update_time}，{field_name}({unit})` | 匹配电力数据的溯源需求，同步展示数据源、时间、字段与单位 |
+| `traceability details` | `[{source_name}]，{update_time}，{field_name}({unit})` | 匹配电力数据的溯源需求，同步展示数据源、时间、字段与单位 |
 | `source_metadata_fields` | `["额定容量(MW)", "供电煤耗(g/kWh)", "交易电价(元/MWh)"]` | 提取电力尽调的核心元数据，确保溯源信息包含业务关键参数 |
 | `chunk_size` | `800-1200字符` | 电力报告的趋势分析与表格内容较长，该长度可保留完整的上下文关联 |
 | `enable_source_verification` | `开启` | 满足电力数据的合规溯源要求，确保引用未被篡改 |

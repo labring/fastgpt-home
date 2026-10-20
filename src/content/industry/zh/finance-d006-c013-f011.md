@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 保险投研知识库建设的文档解析与分块
-meta_description: 保险投研的数据主要来自银保监会发布的非银金融监管文件、行业协会发布的承保与理赔统计报告、第三方专业投研机构的保险品类分析文档，以及保险公司内部的精算报告、新
+meta_description: 保险投研知识库建设的文档解析与分块：保险投研知识库建设的文档解析与分块，涵盖配置与验证建议
 keywords: 保险、投研知识库建设与治理、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

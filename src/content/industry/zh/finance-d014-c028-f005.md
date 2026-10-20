@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 动力煤财报分析的多轮对话与提示词
-meta_description: 动力煤财报分析的数据来源包括境内外动力煤相关上市公司的定期报告、行业协会发布的供需监测数据、港口交易结算公开数据。更新节奏分为两类，上市公司定期财报按季度、
+meta_description: 动力煤财报分析的多轮对话与提示词：动力煤财报分析的多轮对话与提示词，涵盖配置与验证建议
 keywords: 动力煤、财报分析与报告生成、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

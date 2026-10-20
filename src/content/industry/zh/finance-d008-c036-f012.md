@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 半导体智能尽调报告的模型接入与配置
-meta_description: 半导体智能尽调的数据来源包含企业公开披露的年度/季度财报、行业协会发布的月度产能与供应链数据、专利局公开的专利申请记录、下游终端厂商的订单公告。数据更新节奏
+meta_description: 半导体智能尽调报告的模型接入与配置：半导体智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 半导体、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

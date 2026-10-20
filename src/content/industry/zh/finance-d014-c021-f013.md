@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 其他综合财报分析的知识库检索与召回
-meta_description: 其他综合财报分析的数据来源为境内外证券交易所公开披露的定期报告PDF、官方披露平台的结构化财报文件。更新节奏为季度、半年度、年度固定周期。文档结构包含结构化
+meta_description: 其他综合财报分析的知识库检索与召回：其他综合财报分析的知识库检索与召回，涵盖配置与验证建议
 keywords: 其他综合、财报分析与报告生成、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

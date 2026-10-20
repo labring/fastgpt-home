@@ -4,8 +4,8 @@ slug: /en/industry/finance-d014-c084-f012
 page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
-meta_title: Model Access and Configuration for Water Treatment Financial
-meta_description: The financial report analysis data for water treatment enterprises comes from three main sources: mandatory submission data from environmental
+meta_title: Model Access and Configuration for Water Treatment
+meta_description: Model Access and Configuration for Water Treatment Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

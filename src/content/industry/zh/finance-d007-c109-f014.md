@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电子元件收益率的表单与交互
-meta_description: 这个品类的数据主要来自原厂公开报价系统、授权分销商API接口、行业现货交易撮合平台。更新节奏分为三类：原厂指导价每日同步更新，现货交易报价每15分钟刷新，库
+meta_description: 电子元件收益率的表单与交互：电子元件收益率的表单与交互，涵盖配置与验证建议。。。
 keywords: 电子元件、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

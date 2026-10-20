@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 旅游景区智能尽调报告的模型接入与配置
-meta_description: 旅游景区智能尽调报告的数据来源涵盖官方文旅部门备案信息、景区自有票务与客流系统、周边业态运营数据、游客公开评价文本等。数据更新节奏存在差异：客流、营收等运营
+meta_description: 旅游景区智能尽调报告的模型接入与配置：旅游景区智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 旅游景区、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

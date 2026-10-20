@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商用车收益率的数据库与运维
-meta_description: 商用车收益率数据主要来源于车载T-BOX终端、车队管理系统、货运订单平台、能源补给平台。数据按单车唯一标识VIN码和运营日期维度组织，每条文档包含单车当日的
+meta_description: 商用车收益率的数据库与运维：商用车收益率的数据库与运维，涵盖配置与验证建议。。。
 keywords: 商用车、收益率与行情日报播报、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

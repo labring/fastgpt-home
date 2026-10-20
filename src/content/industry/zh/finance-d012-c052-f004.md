@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多元控股营销内容的向量模型与索引
-meta_description: 多元控股的营销内容数据主要来源于旗下各子品牌的营销物料，包括保险产品文案、理财推广稿件、品牌宣传素材、线下活动宣传页与线上投放广告文案。数据更新节奏随业务线
+meta_description: 多元控股营销内容的向量模型与索引：多元控股营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 多元控股、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

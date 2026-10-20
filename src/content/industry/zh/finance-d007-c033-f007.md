@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化纤收益率的工作流编排
-meta_description: 数据主要来自国内大宗商品现货交易平台、期货交易所挂牌合约及化纤行业协会公开披露信息。更新节奏分两类：现货报价每日固定时段更新，期货行情随交易日实时推送。文档
+meta_description: 化纤收益率的工作流编排：化纤收益率的工作流编排，涵盖配置与验证建议。。。。。。。
 keywords: 化纤、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

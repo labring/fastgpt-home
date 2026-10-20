@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 军工电子收益率的HTTP 接口与外部系统
-meta_description: 数据来源为中证指数有限公司发布的军工电子板块行情数据，以及军工电子领域上市公司的公开披露信息。更新节奏为每个交易日收盘后1小时内完成全量板块行情更新，单日发
+meta_description: 军工电子收益率的HTTP 接口与外部系统：军工电子收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 军工电子、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

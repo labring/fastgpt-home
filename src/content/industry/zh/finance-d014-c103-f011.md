@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 环境监测财报分析的文档解析与分块
-meta_description: 环境监测财报相关的数据主要来自自动监测站点、企业排放口的连续监测设备，以及第三方检测机构的采样报告。数据更新节奏多为小时级或实时，部分汇总报告按日/周更新。
+meta_description: 环境监测财报分析的文档解析与分块：环境监测财报分析的文档解析与分块，涵盖配置与验证建议
 keywords: 环境监测、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

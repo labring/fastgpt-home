@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 出版财报分析的引用来源与溯源
-meta_description: 出版品类的财报数据主要来自证券监管机构公开披露的定期报告、出版行业协会发布的行业运营统计、出版集团官方披露的年度经营数据。更新节奏为季度更新（季度报告）、半
+meta_description: 出版财报分析的引用来源与溯源：出版财报分析的引用来源与溯源，涵盖配置与验证建议。
 keywords: 出版、财报分析与报告生成、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

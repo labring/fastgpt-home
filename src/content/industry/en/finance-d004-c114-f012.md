@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Compliance and Internal Policy Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for Regulatory Compliance
-meta_description: Regulatory document data comes from official regulatory channels such as the State Administration of Financial Regulation and the People's Bank of
+meta_description: Model Access and Configuration for Regulatory Compliance
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

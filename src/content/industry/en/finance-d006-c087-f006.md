@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Conversation Logging and Audit for Auto Parts Investment
-meta_description: Auto parts investment research data mainly comes from internal enterprise BOM lists, supplier quotation documents, original equipment manufacturer
+meta_description: Conversation Logging and Audit for Auto Parts Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

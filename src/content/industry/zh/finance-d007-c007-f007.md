@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 乳制品收益率的工作流编排
-meta_description: 乳制品收益率相关数据主要用于金融领域的行业分析，来源包括全国乳制品工业协会的行业报送数据、线下零售终端的POS采集数据以及头部乳企的公开经营数据。数据更新节
+meta_description: 乳制品收益率的工作流编排：乳制品收益率的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 乳制品、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

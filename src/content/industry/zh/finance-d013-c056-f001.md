@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 家居用品融资日报的HTTP 接口与外部系统
-meta_description: 家居用品融资日报数据主要来自公开工商融资披露接口、轻工制造行业监测平台及供应链金融合作数据源。数据更新节奏为每日凌晨同步前一日全量融资记录。单条数据文档结构
+meta_description: 家居用品融资日报的HTTP 接口与外部系统：家居用品融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 家居用品、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

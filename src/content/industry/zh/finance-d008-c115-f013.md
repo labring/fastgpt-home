@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 种植业智能尽调报告的知识库检索与召回
-meta_description: 种植业智能尽调报告的数据主要来源于农业农村主管部门公开的种植区划文件、地方农科院的田间试验档案、农资供应商的种植台账记录以及属地气象站的逐时段监测数据。数据
+meta_description: 种植业智能尽调报告的知识库检索与召回：种植业智能尽调报告的知识库检索与召回，涵盖配置与验证建议
 keywords: 种植业、智能尽调报告、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 基建工程财报分析的部署与升级
-meta_description: 基建工程财报数据主要来自公开披露的上市公司定期报告、项目业主方报送的进度台账，更新节奏以季度、年度为核心周期，部分在建项目数据按月更新。文档结构包含项目立项
+meta_description: 基建工程财报分析的部署与升级：基建工程财报分析的部署与升级，涵盖配置与验证建议。
 keywords: 基建工程、财报分析与报告生成、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

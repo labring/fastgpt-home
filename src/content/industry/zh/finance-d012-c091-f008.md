@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 消费建材营销内容的工具调用与插件
-meta_description: 消费建材的数据主要来源于供应链管理系统、线下经销商库存台账、电商平台商品详情页，多被金融/保险/理财机构用于面向家装、建材采购客群的营销获客。数据更新节奏随
+meta_description: 消费建材营销内容的工具调用与插件：消费建材营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 消费建材、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

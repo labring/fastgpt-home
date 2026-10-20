@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 贵金属营销内容的部署与升级
-meta_description: 贵金属营销内容依赖的核心数据来自上海黄金交易所、伦敦金银市场协会及国内期货交易所的公开行情与行业资讯。行情类数据以实时或10秒级频率更新，包含品种代码、最新
+meta_description: 贵金属营销内容的部署与升级：贵金属营销内容的部署与升级，涵盖配置与验证建议。。。
 keywords: 贵金属、营销内容与获客、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

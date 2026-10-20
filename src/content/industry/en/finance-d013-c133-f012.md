@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for Securities Financing
-meta_description: Data for securities financing daily reports is sourced from official public stock exchange disclosure platforms and public central securities
+meta_description: Model Access and Configuration for Securities Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

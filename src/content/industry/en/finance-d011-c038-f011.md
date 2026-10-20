@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: In-App Natural Language Search
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for In-Terminal Natural
-meta_description: Historical query record data originates from natural language search interaction logs initiated by end users. It includes query content entered within
+meta_description: Document Parsing and Chunking for In-Terminal Natural Language Search of Historical Query Records
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

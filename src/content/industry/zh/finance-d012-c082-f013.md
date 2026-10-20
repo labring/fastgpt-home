@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水产养殖营销内容的知识库检索与召回
-meta_description: 水产养殖相关数据来源包括生产台账、苗种培育记录、饲料投喂日志、病害防治技术文档，以及面向养殖户的营销素材，如短视频脚本、海报文案与场景话术。日常生产数据每日
+meta_description: 水产养殖营销内容的知识库检索与召回：水产养殖营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 水产养殖、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

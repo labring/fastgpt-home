@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专业服务研报检索的部署与升级
-meta_description: 专业服务场景的研报数据主要来自券商研究所、行业协会及专业咨询机构。更新节奏为每日更新行业动态研报，每周发布深度分析报告。单篇文档字数跨度较大，包含结构化字段
+meta_description: 专业服务研报检索的部署与升级：专业服务研报检索的部署与升级，涵盖配置与验证建议。
 keywords: 专业服务、研报检索与问答、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

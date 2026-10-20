@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c048-f010
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: Database and Operations for Urban Commercial Bank Yield and
-meta_description: Data for urban commercial bank yield and market daily reports draws from two primary sources: deposit, loan, and wealth management transaction data
+meta_title: Database and Operations for Urban Commercial Bank Yield
+meta_description: Database and Operations for Urban Commercial Bank Yield and Market Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

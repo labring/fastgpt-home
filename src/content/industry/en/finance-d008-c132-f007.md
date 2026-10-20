@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Computer Equipment Intelligent
-meta_description: Due diligence data for computer equipment mainly comes from enterprise asset management systems, hardware operation and maintenance platforms
+meta_description: Workflow Orchestration for Computer Equipment Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -34,7 +34,7 @@ Multi-source data sources for computer equipment require the workflow to be conf
 ## Three common mistakes
 - When debugging the workflow, the `code_runner` node does not display running logs. The cause is that in FastGPT 4.8.22, when the workflow enables knowledge base association configuration, the debug panel hides non-core node logs by default.
 - After importing an external workflow configuration, field mapping for batch device data is misaligned. The cause is that the original workflow's `FIELD_MAPPING` configuration relies on local custom variables, and the variable values were not updated synchronously after import.
-- The global Number type counter cannot complete auto-increment. The cause is that the counter variable in the workflow is not bound to the `target_field` parameter of the `variable_update` node. Only configuring the `value` as `{{count +1}}` does not trigger variable persistence.
+- The global Number type counter cannot complete auto-increment. The cause is that the counter variable in the workflow is not bound to the `target_field` parameter of the `variable_update` node. Only configuring the `value` as `example value` does not trigger variable persistence.
 
 ## How to confirm the configuration is complete
 - Manually trigger the workflow, upload the ledger data file for a single computer device, and check whether the `field_validate` node returns correct verification results.

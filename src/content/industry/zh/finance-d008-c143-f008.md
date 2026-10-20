@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 软件开发智能尽调报告的工具调用与插件
-meta_description: 软件开发智能尽调报告的数据来源包括金融领域自研系统的代码仓库提交记录、依赖包清单、静态代码扫描结果、CI/CD执行日志与开源合规文档。数据更新节奏随代码提交
+meta_description: 软件开发智能尽调报告的工具调用与插件：软件开发智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 软件开发、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

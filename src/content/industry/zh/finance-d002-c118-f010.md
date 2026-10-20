@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 统一入口一体化 AI 平台的数据库与运维
-meta_description: 统一入口一体化AI平台的数据库与运维环节，核心数据来源为各挂载业务应用的会话交互日志、数据库连接元数据、并发调用统计三类。数据更新节奏分为实时与定时两类：会
+meta_description: 统一入口一体化 AI 平台的数据库与运维：统一入口一体化 AI 平台的数据库与运维，涵盖配置与验证建议
 keywords: 统一入口、一体化 AI 平台与多应用编排、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

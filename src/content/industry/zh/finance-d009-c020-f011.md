@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 兵器装备研报检索的文档解析与分块
-meta_description: 兵器装备研报的来源主要包括军工行业研究院发布的公开研报、兵器装备集团内部技术文档、军工信息聚合平台的专项分析。更新节奏分为定期季度/年度报告与突发事件临时分
+meta_description: 兵器装备研报检索的文档解析与分块：兵器装备研报检索的文档解析与分块，涵盖配置与验证建议
 keywords: 兵器装备、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

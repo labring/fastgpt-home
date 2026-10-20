@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 包装印刷投研知识库建设的上下文与 token
-meta_description: 包装印刷行业的投研数据来源包括企业ERP系统的生产工单、原材料采购台账、印刷工艺标准文档、客户订单明细、行业合规文件。生产工单与客户订单随生产进度实时更新，
+meta_description: 包装印刷投研知识库建设的上下文与 token：包装印刷投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 包装印刷、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

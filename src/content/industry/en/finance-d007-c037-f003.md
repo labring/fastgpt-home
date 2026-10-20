@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Sharing and Embedding for Satellite Communications Revenue
-meta_description: The data sources for satellite communications revenue-related data are the billing system and link monitoring module of satellite ground stations. Two
+meta_description: Sharing and Embedding for Satellite Communications Revenue Data
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

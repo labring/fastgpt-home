@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 汽车零部件营销内容的工作流编排
-meta_description: 汽车零部件的数据来源包括企业PDM系统、CRM经销商沟通记录、官方产品公告与售后维修配件文档。更新节奏分为三类：新品上线时批量更新适配清单与参数，常规车型配
+meta_description: 汽车零部件营销内容的工作流编排：汽车零部件营销内容的工作流编排，涵盖配置与验证建议
 keywords: 汽车零部件、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

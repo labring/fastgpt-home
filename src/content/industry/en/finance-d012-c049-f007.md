@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Infrastructure Construction
-meta_description: Data for infrastructure construction marketing content comes from public bidding announcements, construction logs, enterprise qualification filing
+meta_description: Workflow Orchestration for Infrastructure Construction Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

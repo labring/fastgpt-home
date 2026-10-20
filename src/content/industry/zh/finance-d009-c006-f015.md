@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 中药研报检索的部署与升级
-meta_description: 面向金融投研场景的中药专业研报，以专业行业研究机构、中药企业公开披露文件、医药细分领域统计资料为主要数据来源。更新节奏随行业动态调整，常规按季度更新，遇政策
+meta_description: 中药研报检索的部署与升级：中药研报检索的部署与升级，涵盖配置与验证建议。。。。。
 keywords: 中药、研报检索与问答、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

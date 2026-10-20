@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 休闲食品投研知识库建设的引用来源与溯源
-meta_description: 休闲食品投研数据主要来自行业协会月度动销简报、线下商超POS系统周度销售数据、上市企业季度财报、电商平台公开的SKU销量与评论数据、上游粮油及包装原料的每日
+meta_description: 休闲食品投研知识库建设的引用来源与溯源：休闲食品投研知识库建设的引用来源与溯源，涵盖配置与验证建议
 keywords: 休闲食品、投研知识库建设与治理、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光模块财报分析的工作流编排
-meta_description: 光模块相关企业的财报数据主要来自公开披露的定期报告与临时公告，更新节奏为季度报告每季度更新一次，年度报告每年更新一次，临时公告随重大经营节点发布。文档多为P
+meta_description: 光模块财报分析的工作流编排：光模块财报分析的工作流编排，涵盖配置与验证建议。。。
 keywords: 光模块、财报分析与报告生成、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

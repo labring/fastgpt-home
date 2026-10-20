@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Unified AI Platform and Multi-App Orchestration
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade of Multi-App Routing Unified AI
-meta_description: This solution targets financial, insurance, and wealth management scenarios. Core data comes from registration information of each business sub-app
+meta_description: Deployment and Upgrade of Multi-App Routing Unified AI Platform
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

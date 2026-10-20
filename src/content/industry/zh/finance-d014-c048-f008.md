@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 城商行财报分析的工具调用与插件
-meta_description: 城商行财报数据主要来源于银保监会官方披露平台、城商行官方网站的定期报告栏目。更新节奏为季度报告季后45日内、半年度报告季后60日内、年度报告年后4个月内公开
+meta_description: 城商行财报分析的工具调用与插件：城商行财报分析的工具调用与插件，涵盖配置与验证建议
 keywords: 城商行、财报分析与报告生成、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

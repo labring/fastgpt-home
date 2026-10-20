@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 造纸研报检索的多轮对话与提示词
-meta_description: 造纸研报的数据主要来自券商研究所公开研报、行业协会统计文档、上市造纸企业定期报告。更新节奏分为三类：月度细分纸种的供需、价格数据更新，季度全行业深度研报发布
+meta_description: 造纸研报检索的多轮对话与提示词：造纸研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 造纸、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

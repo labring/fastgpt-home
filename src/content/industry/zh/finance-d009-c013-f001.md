@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 保险研报检索的HTTP 接口与外部系统
-meta_description: 保险研报的数据源为合规金融信息服务机构、行业研究机构发布的公开研报。更新节奏随保险产品迭代、行业监管政策发布、市场异动不定期更新，其中产品跟踪类研报更新频率
+meta_description: 保险研报检索的HTTP 接口与外部系统：保险研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 保险、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

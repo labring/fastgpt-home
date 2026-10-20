@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Coking Coal Intelligent Due
-meta_description: Data for coking coal due diligence reports covers public trading and operational data from domestic major producing area mines, northern transfer
+meta_description: Tool Calling and Plugins for Coking Coal Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

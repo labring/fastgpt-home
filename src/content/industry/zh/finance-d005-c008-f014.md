@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 交易规则客户服务的表单与交互
-meta_description: 交易规则的数据来源于持牌金融机构官方发布的交易细则文档，更新随监管政策调整、业务流程优化不定期推进。文档多为结构化的章节式文本，包含交易品种范围、申报规则、
+meta_description: 交易规则客户服务的表单与交互：交易规则客户服务的表单与交互，涵盖配置与验证建议。
 keywords: 交易规则、客户服务与账户咨询、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c083-f005
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Dialogue and Prompt Engineering for Water Utility
-meta_description: Data related to water utility yield rates in public utility sector analysis for the financial industry draws from three sources: monthly operational
+meta_title: Multi-turn Dialogue and Prompt Engineering for Water
+meta_description: Multi-turn Dialogue and Prompt Engineering for Water Utility Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

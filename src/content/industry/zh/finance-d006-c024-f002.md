@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 农化制品投研知识库建设的上下文与 token
-meta_description: 农化制品相关数据主要来自行业协会公开月度报告、上市企业年度及季度财报、专利数据库、田间试验公开数据集与农资流通监测数据。数据更新节奏存在差异，行业监测数据按
+meta_description: 农化制品投研知识库建设的上下文与 token：农化制品投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 农化制品、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

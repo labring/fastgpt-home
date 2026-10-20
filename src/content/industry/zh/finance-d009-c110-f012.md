@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电网设备研报检索的模型接入与配置
-meta_description: 电网设备研报主要来自电力行业研究机构、电网企业公开招标公告、设备厂商技术白皮书及上市公司定期报告。更新节奏包含常规季度、半年度行业分析，以及电网招标政策发布
+meta_description: 电网设备研报检索的模型接入与配置：电网设备研报检索的模型接入与配置，涵盖配置与验证建议
 keywords: 电网设备、研报检索与问答、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

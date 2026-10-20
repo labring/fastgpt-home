@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 乳制品投研知识库建设的部署与升级
-meta_description: 乳制品投研数据来源包含乳企公开定期报告、行业协会发布的原奶收购与供需监测数据、第三方检测机构出具的乳成分检测文档、电商平台的SKU销售台账，以及牧场的原奶收
+meta_description: 乳制品投研知识库建设的部署与升级：乳制品投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 乳制品、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

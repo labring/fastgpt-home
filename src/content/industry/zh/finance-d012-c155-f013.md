@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饲料营销内容的知识库检索与召回
-meta_description: 饲料营销相关数据主要来源于饲料企业的内部生产文档、原料质检报告、养殖技术手册、合规标准文件与营销素材库。数据更新节奏随原料价格波动、新品推出及合规政策调整而
+meta_description: 饲料营销内容的知识库检索与召回：饲料营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 饲料、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

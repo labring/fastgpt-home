@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程机械研报检索的知识库检索与召回
-meta_description: 工程机械研报的数据源来自行业协会、第三方行业研究机构、主机厂公开技术文档与公开市场分析报告，服务于金融机构行业分析、理财顾问客户咨询、保险机构风控评估等场景
+meta_description: 工程机械研报检索的知识库检索与召回：工程机械研报检索的知识库检索与召回，涵盖配置与验证建议
 keywords: 工程机械、研报检索与问答、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

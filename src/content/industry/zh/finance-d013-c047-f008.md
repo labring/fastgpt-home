@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 国有大行融资日报的工具调用与插件
-meta_description: 国有大行融资日报的数据来自对公信贷管理系统、人行金融统计直报接口的衍生数据，更新节奏为每日凌晨完成前一自然日全量数据的汇总与发布。文档为结构化表格格式，包含
+meta_description: 国有大行融资日报的工具调用与插件：国有大行融资日报的工具调用与插件，涵盖配置与验证建议
 keywords: 国有大行、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

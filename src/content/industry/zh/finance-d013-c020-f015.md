@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 兵器装备融资日报的部署与升级
-meta_description: 数据来源为国防科技工业主管部门公开采购公示、军工集团官方公告及合规第三方行业公开数据集；更新频率为每日更新当日披露的融资信息；单条数据文档结构包含装备型号、
+meta_description: 兵器装备融资日报的部署与升级：兵器装备融资日报的部署与升级，涵盖配置与验证建议。
 keywords: 兵器装备、融资日报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

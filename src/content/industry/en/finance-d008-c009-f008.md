@@ -4,8 +4,8 @@ slug: /en/industry/finance-d008-c009-f008
 page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
-meta_title: Tool Calling and Plugins for Industrial Park Intelligent Due
-meta_description: Due diligence data for industrial parks is sourced from national land use planning public platforms, official investment promotion ledgers of park
+meta_title: Tool Calling and Plugins for Industrial Park Intelligent
+meta_description: Tool Calling and Plugins for Industrial Park Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

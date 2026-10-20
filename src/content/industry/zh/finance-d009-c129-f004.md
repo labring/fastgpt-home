@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 融资租赁研报检索的向量模型与索引
-meta_description: 融资租赁研报主要来自行业协会公开报告、持牌租赁公司的项目披露文件、第三方金融信息服务机构的行业分析文档。更新节奏以季度常规发布为主，伴随项目落地、政策调整时
+meta_description: 融资租赁研报检索的向量模型与索引：融资租赁研报检索的向量模型与索引，涵盖配置与验证建议
 keywords: 融资租赁、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

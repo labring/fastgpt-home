@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Brand Agency Operation
-meta_description: Brand agency operation industry research report data comes from industry monitoring platforms, brand internal marketing ledgers, third-party public
+meta_description: Document Parsing and Chunking for Brand Agency Operation Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -33,7 +33,7 @@ The data characteristics of brand agency operation research reports create multi
 
 ## Three Common Mistakes
 - Scenario: Fields returned empty after calling the parsing interface, or the parsing module fails to correctly pass text content in the Docker-deployed 4.9.0 version. Cause: The enhanced parsing switch is not enabled, or the container mount configuration for the enhanced parsing module has an incorrect path. This results in failure to correctly extract structured table content.
-- Scenario: Marker throws an error, with logs indicating split-related exceptions. Cause: The installed Marker version is incompatible with the built-in dependencies of FastGPT 4.9.0, or chunking parameters are set outside the character range supported by Marker.
+Reference only; verify against the target FastGPT release and deployment documentation.
 - Scenario: Parsing tasks take too long and exceed the preset timeout period. Cause: The batch-parsed research report package size exceeds the `UPLOAD_FILE_MAX_SIZE` configuration, or concurrency parameters are not adjusted for batch tasks during major promotions. This leads to parsing queue backlog.
 
 ## How to Verify Proper Configuration

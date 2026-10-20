@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 广告营销融资日报的工具调用与插件
-meta_description: 广告营销融资日报的数据主要来源于广告代理公司的内部投放台账、合作媒体平台的实时投放报表、第三方营销数据监测机构的汇总数据。数据更新节奏为每日晚间完成当日全量
+meta_description: 广告营销融资日报的工具调用与插件：广告营销融资日报的工具调用与插件，涵盖配置与验证建议
 keywords: 广告营销、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

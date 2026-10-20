@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电力投研知识库建设的数据库与运维
-meta_description: 电力投研数据来源涵盖电网调度实时监测系统、发电企业SCADA采集数据、电网运检运维日志、行业监管政策文件及电力上市公司公开财报。更新节奏覆盖实时时序数据（分
+meta_description: 电力投研知识库建设的数据库与运维：电力投研知识库建设的数据库与运维，涵盖配置与验证建议
 keywords: 电力、投研知识库建设与治理、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

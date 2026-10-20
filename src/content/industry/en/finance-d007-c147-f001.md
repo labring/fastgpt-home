@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c147-f001
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: HTTP Interfaces and External Systems for Paper Manufacturing
-meta_description: Data sources for paper manufacturing industry market and yield-related data are primarily public APIs from national paper industry associations and
+meta_title: HTTP Interfaces and External Systems for Paper
+meta_description: HTTP Interfaces and External Systems for Paper Manufacturing Yield Rate and Market Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Intelligent Due Diligence Reports
-meta_description: Data sources include internal credit management systems, official corporate credit information query APIs, regulatory reporting databases, and
+meta_description: Deployment and Upgrade for Intelligent Due Diligence Reports: covering configuration and validation guidance.
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

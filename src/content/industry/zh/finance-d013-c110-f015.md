@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电网设备融资日报的部署与升级
-meta_description: 电网设备融资日报的数据来自电网企业公开招标系统、内部融资审批接口及设备采购台账，每日凌晨完成前一日数据归档后更新。单份日报以结构化表格形式呈现，包含单批次电
+meta_description: 电网设备融资日报的部署与升级：电网设备融资日报的部署与升级，涵盖配置与验证建议。
 keywords: 电网设备、融资日报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

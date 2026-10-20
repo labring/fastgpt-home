@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程咨询研报检索的部署与升级
-meta_description: 工程咨询研报数据主要来自行业协会公开报告、工程咨询机构专项研究成果、在建及已完工项目归档资料。更新节奏随项目周期或行业政策调整，通常以季度为单位更新。文档结
+meta_description: 工程咨询研报检索的部署与升级：工程咨询研报检索的部署与升级，涵盖配置与验证建议。
 keywords: 工程咨询、研报检索与问答、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 旅游景区智能尽调报告的文档解析与分块
-meta_description: 旅游景区智能尽调报告的数据主要来自景区官方公开年报、文旅主管部门备案文件、景区运营月度台账、基础设施维护档案及合作方资质证明。数据更新节奏分两类：备案类资料
+meta_description: 旅游景区智能尽调报告的文档解析与分块：旅游景区智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 旅游景区、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

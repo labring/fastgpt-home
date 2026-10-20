@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 保险融资日报的引用来源与溯源
-meta_description: 保险融资日报的数据主要来源于保险机构内部融资台账、同业交易平台成交记录及监管报送系统。更新节奏为每日收盘后批量生成前一交易日的全量数据。单份文档结构固定，包
+meta_description: 保险融资日报的引用来源与溯源：保险融资日报的引用来源与溯源，涵盖配置与验证建议。
 keywords: 保险、融资日报、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

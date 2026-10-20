@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 综合服务营销内容的知识库检索与召回
-meta_description: 综合服务营销内容的数据主要来源于金融机构的产品合规手册、标准化客服应答模板、阶段性营销活动文案、客户常见问题库与合规审核文档。数据更新节奏随业务活动与合规要
+meta_description: 综合服务营销内容的知识库检索与召回：综合服务营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 综合服务、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电力投研知识库建设的对话日志与审计
-meta_description: 电力作为公用事业细分品类，其投研数据是金融、保险、理财领域机构开展行业研究的核心素材，数据涵盖多类来源，包括电力企业年度运营报告、月度电网调度日志、发电机组
+meta_description: 电力投研知识库建设的对话日志与审计：电力投研知识库建设的对话日志与审计，涵盖配置与验证建议
 keywords: 电力、投研知识库建设与治理、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

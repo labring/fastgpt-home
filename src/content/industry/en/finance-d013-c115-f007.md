@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Crop Farming Financing Daily
-meta_description: Data sources include agricultural and rural department planting entity financing monitoring databases, agricultural financial institution credit
+meta_description: Workflow Orchestration for Crop Farming Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -30,7 +30,7 @@ Planting categories cover multiple segments including grain crops and cash crops
 | --- | --- | --- |
 | `cronExpression` | `0 30 1 * * ?` | Adapts to the daily T+1 update cadence of crop farming financing daily reports, avoids occupying daytime business resources |
 | `requiredFields` | `["Subject Name", "Cultivation Variety", "Credit Limit", "Loan Amount"]` | Covers core statistical dimensions of crop farming financing daily reports, ensures valid data integrity |
-| `httpRequestBodyTemplate` | `{"target_date": "{{prev_workday}}", "data_sources": ["agri_monitor", "bank_credit"]}` | Adapts to parameter specifications for multi-source data interfaces, specifies fetching full financing data from the previous workday |
+| `httpRequestBodyTemplate` | `{"target_date": "example value", "data_sources": ["agri_monitor", "bank_credit"]}` | Adapts to parameter specifications for multi-source data interfaces, specifies fetching full financing data from the previous workday |
 | `branchCondition` | `planting_category` | Splits workflow branches by planting category, adapts to financing statistics rules for different categories |
 | `flowRetryCount` | `2` | Addresses temporary fluctuations in multi-source data interfaces, prevents workflow interruptions from single failed requests |
 | `codeNodeRuntime` | `PYTHON_3_9` | Adapts to Python data processing script versions written by users, ensures normal code execution |

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Minor Metals Intelligent
-meta_description: Data for minor metals-related due diligence reports comes from industry associations, spot exchanges, the General Administration of Customs, and
+meta_description: Document Parsing and Chunking for Minor Metals Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

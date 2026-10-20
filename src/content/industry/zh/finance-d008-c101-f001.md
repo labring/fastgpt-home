@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物流智能尽调报告的HTTP 接口与外部系统
-meta_description: 物流智能尽调报告是金融机构对物流企业授信或承保时的必备材料，数据主要来自物流企业运单管理系统、仓储WMS系统、GPS定位终端、海关报关系统四类数据源。数据更
+meta_description: 物流智能尽调报告的HTTP 接口与外部系统：物流智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 物流、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

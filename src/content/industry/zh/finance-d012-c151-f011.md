@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁路公路营销内容的文档解析与分块
-meta_description: 金融/保险/理财机构面向铁路公路品类的营销内容数据，主要来自铁路公路运营方的月度客流报告、季度营销复盘文档、线下推广活动物料、线上投放效果统计表格，以及客户
+meta_description: 铁路公路营销内容的文档解析与分块：铁路公路营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 铁路公路、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

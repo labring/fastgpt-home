@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c062-f012
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: Model Integration and Configuration for Advertising and
-meta_description: Yield and market trend data for financial advertising and marketing scenarios comes from backend reports of multiple financial advertising management
+meta_title: Model Integration and Configuration for Advertising
+meta_description: Model Integration and Configuration for Advertising and Marketing Yield and Market Trend Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

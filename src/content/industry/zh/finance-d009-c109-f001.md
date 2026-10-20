@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电子元件研报检索的HTTP 接口与外部系统
-meta_description: 电子元件研报数据主要来自原厂公开datasheet、行业供应链平台、券商电子行业研究报告及元器件交易数据库。数据更新节奏随原厂新品发布、供应链行情波动调整，
+meta_description: 电子元件研报检索的HTTP 接口与外部系统：电子元件研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 电子元件、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

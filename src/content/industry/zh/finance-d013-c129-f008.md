@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 融资租赁融资日报的工具调用与插件
-meta_description: 融资租赁融资日报的数据主要来源于租赁公司核心业务系统、行业监管报送端口及公开征信披露信息。数据更新节奏为每日T+1更新，覆盖当日完成审批的新增租赁项目及存量
+meta_description: 融资租赁融资日报的工具调用与插件：融资租赁融资日报的工具调用与插件，涵盖配置与验证建议
 keywords: 融资租赁、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

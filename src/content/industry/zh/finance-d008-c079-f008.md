@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 普钢智能尽调报告的工具调用与插件
-meta_description: 普钢智能尽调报告的数据主要来自行业权威监测机构、钢厂报送数据及现货交易平台公开信息。数据更新以周度为主，部分现货交易数据按日更新。文档结构包含品名、规格参数
+meta_description: 普钢智能尽调报告的工具调用与插件：普钢智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 普钢、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

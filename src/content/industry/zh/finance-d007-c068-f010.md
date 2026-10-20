@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 投资平台收益率的数据库与运维
-meta_description: 投资平台的收益率与行情数据主要来自交易所官方行情接口、合规金融数据服务商。数据更新节奏分为两类：日内实时行情每15秒同步一次，每日收盘后的全量收益率日报则在
+meta_description: 投资平台收益率的数据库与运维：投资平台收益率的数据库与运维，涵盖配置与验证建议。
 keywords: 投资平台、收益率与行情日报播报、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

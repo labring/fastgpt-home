@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 出版融资日报的工具调用与插件
-meta_description: 出版融资日报的数据来源于境内外证券交易所公开披露的融资公告、出版行业协会发布的行业融资动态，以及头部出版集团的官方披露信息。更新节奏为每个工作日同步最新披露
+meta_description: 出版融资日报的工具调用与插件：出版融资日报的工具调用与插件，涵盖配置与验证建议。
 keywords: 出版、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

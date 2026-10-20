@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 生物制品研报检索的多轮对话与提示词
-meta_description: 面向金融投研场景的生物制品研报数据主要来源于券商行业研报、药品监管机构公开申报资料、批签发数据库。更新节奏随监管公告实时更新，券商研报按季度、月度发布临时分
+meta_description: 生物制品研报检索的多轮对话与提示词：生物制品研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 生物制品、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

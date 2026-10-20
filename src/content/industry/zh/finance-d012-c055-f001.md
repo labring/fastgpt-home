@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 大气治理营销内容的HTTP 接口与外部系统
-meta_description: 面向金融行业的大气治理相关营销内容数据主要来源于环保部门监测站点、企业排放台账、大气质量传感器网络及环评审批文档。实时监测数据的更新节奏为分钟级，企业排放台
+meta_description: 大气治理营销内容的HTTP 接口与外部系统：大气治理营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 大气治理、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

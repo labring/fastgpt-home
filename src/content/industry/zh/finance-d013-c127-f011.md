@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航空装备融资日报的文档解析与分块
-meta_description: 航空装备融资日报的数据主要来自境内外交易所公开披露的上市公司融资公告、航空装备制造企业的官方项目公示、行业协会的月度专项报告。更新节奏为每日更新，单篇文档通
+meta_description: 航空装备融资日报的文档解析与分块：航空装备融资日报的文档解析与分块，涵盖配置与验证建议
 keywords: 航空装备、融资日报、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

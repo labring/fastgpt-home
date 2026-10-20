@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水务智能尽调报告的模型接入与配置
-meta_description: 水务智能尽调报告的数据主要来自水务运营企业的月度运营报表、管网实时监测数据、第三方水质检测报告、属地住建或水利部门的监管公示文件，以及水务项目的招投标与竣工
+meta_description: 水务智能尽调报告的模型接入与配置：水务智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 水务、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

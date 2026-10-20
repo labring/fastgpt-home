@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 装修装饰营销内容的部署与升级
-meta_description: 装修装饰行业的营销内容主要来源于自有案例库、设计师方案文档、线下门店活动物料、业主反馈内容。更新节奏为季度级新案例更新、月度级活动物料调整，临时促销内容可随
+meta_description: 装修装饰营销内容的部署与升级：装修装饰营销内容的部署与升级，涵盖配置与验证建议。
 keywords: 装修装饰、营销内容与获客、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

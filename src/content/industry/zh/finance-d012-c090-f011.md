@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 涂料油墨营销内容的文档解析与分块
-meta_description: 涂料油墨品类的营销文档主要来源于金融机构合作的涂料油墨企业提供的产品手册、技术合规报告、行业展会宣传物料、下游客户定制方案。更新节奏随新品研发、配方迭代或合
+meta_description: 涂料油墨营销内容的文档解析与分块：涂料油墨营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 涂料油墨、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

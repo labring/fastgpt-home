@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 家居用品研报检索的知识库检索与召回
-meta_description: 家居用品研报数据主要来自券商轻工制造行业研究所、国内家居行业协会及头部家居品牌公开披露的调研资料。更新节奏随行业节点波动，春季家居展、秋季软装展后会集中发布
+meta_description: 家居用品研报检索的知识库检索与召回：家居用品研报检索的知识库检索与召回，涵盖配置与验证建议
 keywords: 家居用品、研报检索与问答、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

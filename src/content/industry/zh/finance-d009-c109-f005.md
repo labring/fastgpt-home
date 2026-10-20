@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电子元件研报检索的多轮对话与提示词
-meta_description: 面向金融投研的电子元件研报的数据来源涵盖电子行业公开咨询报告、原厂技术白皮书、下游应用场景公开文档。常规研报按季度更新，新品技术解析类文档随原厂发布节奏实时
+meta_description: 电子元件研报检索的多轮对话与提示词：电子元件研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 电子元件、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

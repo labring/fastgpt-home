@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 黑色家电财报分析的模型接入与配置
-meta_description: 黑色家电财报数据主要来自上市家电企业公开披露的季度报、年报，以及行业第三方监测的线下线上销售数据。数据更新节奏以季度为核心周期，年度报告为完整复盘周期，部分
+meta_description: 黑色家电财报分析的模型接入与配置：黑色家电财报分析的模型接入与配置，涵盖配置与验证建议
 keywords: 黑色家电、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

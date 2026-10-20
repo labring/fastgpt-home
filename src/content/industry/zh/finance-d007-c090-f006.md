@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 涂料油墨收益率的对话日志与审计
-meta_description: 涂料油墨相关收益率与行情数据主要来自面向金融理财场景的行业协会公开统计、大宗商品现货交易平台的原材料报价、生产企业出厂台账三类渠道。更新节奏为每日更新现货价
+meta_description: 涂料油墨收益率的对话日志与审计：涂料油墨收益率的对话日志与审计，涵盖配置与验证建议
 keywords: 涂料油墨、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

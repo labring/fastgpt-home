@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Risk Control and Credit Document Review
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Collateral
-meta_description: Data sources for collateral materials primarily include offline paper scans, PDF or image files submitted online, and structured documents exported
+meta_description: Multi-turn Dialogue and Prompt Engineering for Collateral Material Risk Control
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

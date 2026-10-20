@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Footwear Yield Rates
-meta_description: Footwear yield rate-related data primarily originates from brand SKU inventory and sales systems, mainstream e-commerce platform sales APIs, and
+meta_description: Workflow Orchestration for Footwear Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 储能投研知识库建设的数据库与运维
-meta_description: 面向金融领域的储能投研数据主要来自电芯供应商的循环寿命测试报告、电网侧储能电站的SCADA实时采集数据、行业协会发布的并网标准文档。实时运行数据更新频率为秒
+meta_description: 储能投研知识库建设的数据库与运维：储能投研知识库建设的数据库与运维，涵盖配置与验证建议
 keywords: 储能、投研知识库建设与治理、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

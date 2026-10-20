@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学原料财报分析的文档解析与分块
-meta_description: 化学原料品类的财报数据主要来源于境内外上市公司公开披露的年度、季度报告，以及行业协会发布的月度经营数据。更新节奏为年度报告每年披露一次，季度报告每季度披露一
+meta_description: 化学原料财报分析的文档解析与分块：化学原料财报分析的文档解析与分块，涵盖配置与验证建议
 keywords: 化学原料、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

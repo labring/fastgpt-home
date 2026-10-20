@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Unified AI Platform and Multi-App Orchestration
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for Unified Entry Integrated
-meta_description: Data for unified entry integrated AI platforms comes from multiple business systems of financial institutions, including core business, claims
+meta_description: Model Access and Configuration for Unified Entry Integrated AI Platforms
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

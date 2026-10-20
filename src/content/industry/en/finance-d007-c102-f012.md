@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Model Integration and Configuration for Special Steel Yield
-meta_description: Special steel yield rate-related data comes from domestic special steel spot trading platforms, publicly monitored data from steel industry
+meta_description: Model Integration and Configuration for Special Steel Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

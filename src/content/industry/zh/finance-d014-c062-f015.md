@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 广告营销财报分析的部署与升级
-meta_description: 广告营销行业的财报数据主要来源于企业内部的营销投放台账、媒体资源采购合同、第三方监测平台的效果报表，以及年度/季度营销决算文档。数据更新节奏分为周度（月度投
+meta_description: 广告营销财报分析的部署与升级：广告营销财报分析的部署与升级，涵盖配置与验证建议。
 keywords: 广告营销、财报分析与报告生成、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

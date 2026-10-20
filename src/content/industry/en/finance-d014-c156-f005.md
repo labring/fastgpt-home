@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompting for Black Home Appliance
-meta_description: The financial report data of black home appliance enterprises mainly comes from publicly disclosed regular reports, including quarterly, semi-annual
+meta_description: Multi-turn Dialogue and Prompting for Black Home Appliance Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -25,7 +25,7 @@ Product line revenue breakdowns are scattered across different paragraphs of the
 | `maxContext` | `8000–12000 characters` | A single black home appliance financial report document typically contains 5000–8000 characters. This range preserves multi-turn dialogue context and core financial report snippets |
 | `recallTopK` | `Top 3–5 entries` | Product line revenue breakdowns are scattered across different document paragraphs. A small recall volume focuses on valid information and avoids redundancy |
 | `PARSE_FILE_TIMEOUT_SECONDS` | `300 seconds` | Financial reports contain multiple tables and split paragraphs, so the parsing process takes longer. Sufficient time must be reserved |
-| `promptTemplate` | `{{document}}, please answer based on the document content, clearly mark the extracted chapter, and use {{currentDate}} for the signature date` | The extraction scope and system time variable must be clearly specified to meet the accuracy requirements of financial report analysis |
+| `promptTemplate` | `example value, please answer based on the document content, clearly mark the extracted chapter, and use example value for the signature date` | The extraction scope and system time variable must be clearly specified to meet the accuracy requirements of financial report analysis |
 | `historyAutoSave` | `Enabled` | Ensures dialogue content is persistently stored to avoid loss of historical records |
 | `historyRetention` | `7 days` | Financial report analysis inquiries typically peak within 7 days after disclosure. Excessively long historical records will interfere with current dialogue logic |
 
@@ -34,7 +34,7 @@ Product line revenue breakdowns are scattered across different paragraphs of the
 ## Three Common Mistakes
 - Phenomenon: Multi-turn dialogue tasks take significantly longer than during local workflow debugging. Cause: No reasonable context recall upper limit is configured. Each dialogue loads the full financial report document and historical context, increasing model processing overhead.
 - Phenomenon: When reopening a created dialogue session, previously generated automatic reply content is empty. Cause: The `historyAutoSave` parameter is not enabled, or the historical record retention period is set incorrectly, resulting in failure to persist dialogue content.
-- Phenomenon: The signature date set in the prompt template is not correctly replaced with the system's current date, and the original variable placeholder is displayed. Cause: The prompt template does not correctly reference the platform's built-in time variable, or the variable syntax format has errors.
+- Phenomenon: The signature date set in the prompt template is not correctly replaced with the system's current date, and the original variable pending verification is displayed. Cause: The prompt template does not correctly reference the platform's built-in time variable, or the variable syntax format has errors.
 
 ## How to Verify Correct Configuration
 - Upload a black home appliance financial report document, initiate multiple rounds of questions, and check whether the question and reply content are fully saved in the dialogue history.

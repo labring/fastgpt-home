@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 炼化智能尽调报告的知识库检索与召回
-meta_description: 炼化智能尽调报告的数据主要来源于企业内部生产管理系统的运行日志、质检部门的物料衡算报表、供应链采购台账，以及公开的炼化工艺标准文档。生产运行类数据每日更新，
+meta_description: 炼化智能尽调报告的知识库检索与召回：炼化智能尽调报告的知识库检索与召回，涵盖配置与验证建议
 keywords: 炼化、智能尽调报告、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

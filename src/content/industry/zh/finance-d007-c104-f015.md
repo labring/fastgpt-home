@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 玻璃收益率的部署与升级
-meta_description: 玻璃收益率相关行情数据来源于国内建材流通协会的每日市场监测，更新节奏为每日凌晨同步前一交易日的全量数据。数据以结构化JSON格式存储，单条记录包含报告日期、
+meta_description: 玻璃收益率的部署与升级：玻璃收益率的部署与升级，涵盖配置与验证建议。。。。。。。
 keywords: 玻璃、收益率与行情日报播报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

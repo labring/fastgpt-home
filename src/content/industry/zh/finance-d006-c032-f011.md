@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学原料投研知识库建设的文档解析与分块
-meta_description: 化学原料相关数据主要来自行业研报、化学品安全技术说明书（MSDS）、产能统计月报、海关进出口数据文档、现货价格监测周报等。数据来源涵盖公开行业机构报告、企业
+meta_description: 化学原料投研知识库建设的文档解析与分块：化学原料投研知识库建设的文档解析与分块，涵盖配置与验证建议
 keywords: 化学原料、投研知识库建设与治理、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航天装备营销内容的知识库检索与召回
-meta_description: 航天装备相关营销内容的数据主要来源于型号研制档案、官方定型通报、试验验证报告、官方营销宣传物料及内部沟通话术库。数据更新节奏随新型号立项、定型、列装节点触发
+meta_description: 航天装备营销内容的知识库检索与召回：航天装备营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 航天装备、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

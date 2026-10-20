@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 投诉工单客户服务的表单与交互
-meta_description: 投诉工单的数据来源于客户通过官网、热线、内部客服渠道提交的诉求，以及客服系统同步的处理进度记录。数据更新节奏为实时提交后生成初始工单，处理中、转派、办结等节
+meta_description: 投诉工单客户服务的表单与交互：投诉工单客户服务的表单与交互，涵盖配置与验证建议。
 keywords: 投诉工单、客户服务与账户咨询、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

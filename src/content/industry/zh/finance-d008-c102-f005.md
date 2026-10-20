@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 特钢智能尽调报告的多轮对话与提示词
-meta_description: 特钢智能尽调的数据来源包括国内特钢企业出具的出厂材质单、第三方检测机构的复检报告、行业供需数据库、海关进出口报关数据。数据更新节奏随来源不同有所区分：出厂材
+meta_description: 特钢智能尽调报告的多轮对话与提示词：特钢智能尽调报告的多轮对话与提示词，涵盖配置与验证建议
 keywords: 特钢、智能尽调报告、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

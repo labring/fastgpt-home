@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 耐火材料财报分析的部署与升级
-meta_description: 耐火材料生产相关的财报数据来源包括企业定期公开财报、行业协会公开统计数据、上游耐火原料供应商的交易数据。更新节奏分为三类：季度财报每3个月更新一次，年度财报
+meta_description: 耐火材料财报分析的部署与升级：耐火材料财报分析的部署与升级，涵盖配置与验证建议。
 keywords: 耐火材料、财报分析与报告生成、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

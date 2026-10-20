@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c105-f006
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: Conversation Logging and Auditing for Biologic Product Yield
-meta_description: Data related to biologic product yield rates comes from public pharmaceutical industry databases, periodic reports of listed companies, and real-time
+meta_title: Conversation Logging and Auditing for Biologic Product
+meta_description: Conversation Logging and Auditing for Biologic Product Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

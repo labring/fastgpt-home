@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: IT 服务智能尽调报告的知识库检索与召回
-meta_description: IT服务智能尽调报告的数据主要来自合作IT厂商提交的资质备案文件、过往项目交付档案、合规审计结果及运维日志。数据更新节奏随厂商资质年审、重大项目交付完成触发
+meta_description: IT 服务智能尽调报告的知识库检索与召回：IT 服务智能尽调报告的知识库检索与召回，涵盖配置与验证建议
 keywords: IT 服务、智能尽调报告、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

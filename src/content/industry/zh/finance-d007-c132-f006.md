@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 计算机设备收益率的对话日志与审计
-meta_description: 计算机设备的收益率与行情相关数据，来源包括设备内置的性能监控模块、交易执行日志系统、行情接入网关的交互日志。数据更新节奏分为两类：关联实时行情的日志按秒级更
+meta_description: 计算机设备收益率的对话日志与审计：计算机设备收益率的对话日志与审计，涵盖配置与验证建议
 keywords: 计算机设备、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

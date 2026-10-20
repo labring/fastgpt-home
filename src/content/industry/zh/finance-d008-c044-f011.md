@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商业物业智能尽调报告的文档解析与分块
-meta_description: 商业物业智能尽调的数据源主要包含租赁合同、消防验收报告、月度运营台账、租金流水报表、商圈客流分析文档等。更新节奏随文档类型差异：租赁合同为签约时一次性更新，
+meta_description: 商业物业智能尽调报告的文档解析与分块：商业物业智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 商业物业、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

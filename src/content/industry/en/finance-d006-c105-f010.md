@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Database and Operations for Biologics Investment Research
-meta_description: Biologics investment research data comes from multiple sources: NMPA approved review documents, public clinical trial databases, global patent search
+meta_description: Database and Operations for Biologics Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

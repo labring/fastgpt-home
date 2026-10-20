@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航空机场智能尽调报告的向量模型与索引
-meta_description: 航空机场智能尽调报告的数据主要来自民航管理部门公开运营数据、机场年度年报、空管流量监测公开信息及机场基建备案文件。数据更新节奏分三类：日度起降、吞吐量数据每
+meta_description: 航空机场智能尽调报告的向量模型与索引：航空机场智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 航空机场、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

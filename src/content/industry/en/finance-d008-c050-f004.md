@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Plastics and Rubber
-meta_description: Plastics and rubber industry due diligence data sources include monthly statistical reports from industry associations, market data from commodity
+meta_description: Vector Models and Indexing for Plastics and Rubber Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

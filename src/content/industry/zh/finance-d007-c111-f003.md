@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 畜禽养殖收益率的分享与嵌入
-meta_description: 用于金融理财场景的畜禽养殖收益率与行情日报数据，主要来源于农业农村部畜禽养殖监测数据库、地方畜牧技术推广站公开监测报表及行业畜牧协会周报。数据更新节奏以每日
+meta_description: 畜禽养殖收益率的分享与嵌入：畜禽养殖收益率的分享与嵌入，涵盖配置与验证建议。。。
 keywords: 畜禽养殖、收益率与行情日报播报、分享与嵌入
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 大气治理收益率的表单与交互
-meta_description: 大气治理相关收益率数据主要来自环保监测站点的实时污染物数据、企业治理项目的运营台账及第三方碳交易与排污权交易平台的收益记录。数据更新节奏分为小时级实时监测值
+meta_description: 大气治理收益率的表单与交互：大气治理收益率的表单与交互，涵盖配置与验证建议。。。
 keywords: 大气治理、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

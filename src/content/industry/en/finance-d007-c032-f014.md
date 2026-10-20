@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Forms and Interactions for Chemical Raw Material Yields
-meta_description: Chemical raw material market data primarily comes from public quotes released by industry associations and daily transaction records from bulk
+meta_description: Forms and Interactions for Chemical Raw Material Yields
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

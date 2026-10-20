@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程咨询营销内容的模型接入与配置
-meta_description: 工程咨询的营销内容数据主要来源于金融机构服务建筑工程领域的过往项目咨询报告、投标文件、客户需求纪要、行业规范文档与资质证明文件。数据更新节奏随项目推进或行业
+meta_description: 工程咨询营销内容的模型接入与配置：工程咨询营销内容的模型接入与配置，涵盖配置与验证建议
 keywords: 工程咨询、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

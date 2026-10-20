@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饲料收益率的HTTP 接口与外部系统
-meta_description: 饲料收益率的行情数据来源于全国畜牧总站公开监测数据、国内饲料原料现货交易平台的每日收盘数据。数据更新节奏为每日凌晨2点至4点更新前一日的全量行情，单批次数据
+meta_description: 饲料收益率的HTTP 接口与外部系统：饲料收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 饲料、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 储能融资日报的向量模型与索引
-meta_description: 储能融资日报的数据来源于行业协会公开披露文件、上市公司定期公告、地方能源主管部门备案信息、银行授信公示文档等。更新节奏为每日更新，覆盖当日公开的各类储能项目
+meta_description: 储能融资日报的向量模型与索引：储能融资日报的向量模型与索引，涵盖配置与验证建议。
 keywords: 储能、融资日报、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -4,8 +4,8 @@ slug: /en/industry/finance-d002-c054-f012
 page_type: Industry scenario page
 article_section: Unified AI Platform and Multi-App Orchestration
 is_part_of: FastGPT Tech Center
-meta_title: Model Access and Configuration for Multi-App Routing Unified
-meta_description: Multi-app routing data is sourced from business sub-app metadata created within the platform, real-time traffic request logs, and preset routing
+meta_title: Model Access and Configuration for Multi-App Routing
+meta_description: Model Access and Configuration for Multi-App Routing Unified AI Platform
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

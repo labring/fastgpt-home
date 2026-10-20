@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 装修装饰财报分析的工具调用与插件
-meta_description: 装修装饰行业财报数据主要来自上市装饰企业公开披露的年度报告、季度报告，以及行业协会发布的月度经营监测数据。数据更新节奏为年度完整财报每财年结束后4个月内发布
+meta_description: 装修装饰财报分析的工具调用与插件：装修装饰财报分析的工具调用与插件，涵盖配置与验证建议
 keywords: 装修装饰、财报分析与报告生成、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

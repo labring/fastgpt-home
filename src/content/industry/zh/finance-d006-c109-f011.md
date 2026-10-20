@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电子元件投研知识库建设的文档解析与分块
-meta_description: 电子元件投研数据主要来自原厂datasheet、行业细分研报、供应链台账与专利文档。数据更新随新品量产、季度行业调研同步推进。文档形态包含参数密集的单页规格
+meta_description: 电子元件投研知识库建设的文档解析与分块：电子元件投研知识库建设的文档解析与分块，涵盖配置与验证建议
 keywords: 电子元件、投研知识库建设与治理、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -4,8 +4,8 @@ slug: /zh/industry/finance-d008-c019-f001
 page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
-meta_title: 免税智能尽调报告的HTTP 接口与外部系统
-meta_description: 免税智能尽调报告的数据主要来自海关总署离岛免税监管系统、财政部免税政策公告库、离岛免税店的经营备案接口。更新节奏存在差异：离岛店备案信息实时更新，免税限购额
+meta_title: 免税智能尽调报告的HTTP接口与外部系统
+meta_description: 免税智能尽调报告的HTTP接口与外部系统：免税智能尽调报告的HTTP接口与外部系统，涵盖配置与验证建议
 keywords: 免税、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

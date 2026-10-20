@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade of Investment Research Knowledge
-meta_description: Communications equipment investment research data sources include 3GPP standard documents, official whitepapers from equipment manufacturers, carrier
+meta_description: Deployment and Upgrade of Investment Research Knowledge Bases for Communications Equipment
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

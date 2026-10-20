@@ -4,8 +4,8 @@ slug: /en/industry/finance-d008-c001-f005
 page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Dialogue and Prompting for IT Service Intelligent
-meta_description: Data for IT service intelligent due diligence reports comes from IT service procurement contracts, project delivery documents, operation and
+meta_title: Multi-turn Dialogue and Prompting for IT Service
+meta_description: Multi-turn Dialogue and Prompting for IT Service Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

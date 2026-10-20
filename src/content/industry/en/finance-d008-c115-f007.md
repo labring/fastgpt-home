@@ -4,8 +4,8 @@ slug: /en/industry/finance-d008-c115-f007
 page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
-meta_title: Workflow Orchestration for Intelligent Due Diligence Reports
-meta_description: The data for intelligent due diligence reports in crop farming primarily comes from production logs submitted by agricultural producers, analysis
+meta_title: Workflow Orchestration for Intelligent Due Diligence
+meta_description: Workflow Orchestration for Intelligent Due Diligence Reports in Crop Farming
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

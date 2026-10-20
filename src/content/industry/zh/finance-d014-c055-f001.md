@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 大气治理财报分析的HTTP 接口与外部系统
-meta_description: 大气治理品类的财报数据主要来自相关企业公开披露的定期报告、行业协会发布的经营简报及项目中标公告。数据更新节奏以季度、年度为核心周期，部分临时项目进度数据会随
+meta_description: 大气治理财报分析的HTTP 接口与外部系统：大气治理财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 大气治理、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

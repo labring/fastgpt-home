@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 热力收益率的表单与交互
-meta_description: 热力品类的收益率行情日报数据，主要来自热力企业内部ERP系统、能源运行监控平台，以及当地公用事业监管机构的公开报送数据。数据更新节奏为每日凌晨同步前一日的全
+meta_description: 热力收益率的表单与交互：热力收益率的表单与交互，涵盖配置与验证建议。。。。。。。
 keywords: 热力、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

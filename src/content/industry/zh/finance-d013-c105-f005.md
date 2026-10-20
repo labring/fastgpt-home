@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 生物制品融资日报的多轮对话与提示词
-meta_description: 生物制品融资日报的数据主要来源于医药创投数据库、上市药企公告、行业投融资信息平台及药监关联的披露文件。更新节奏为每日更新，覆盖当日完成的生物制品领域融资交易
+meta_description: 生物制品融资日报的多轮对话与提示词：生物制品融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 生物制品、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

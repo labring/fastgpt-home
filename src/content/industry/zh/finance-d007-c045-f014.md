@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商用车收益率的表单与交互
-meta_description: 商用车收益率相关数据主要来自车载智能终端、物流调度平台与货运订单系统。数据更新节奏分两类：运营实时指标如里程、油耗为分钟级，营收、成本类汇总数据为日更。单份
+meta_description: 商用车收益率的表单与交互：商用车收益率的表单与交互，涵盖配置与验证建议。。。。。
 keywords: 商用车、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

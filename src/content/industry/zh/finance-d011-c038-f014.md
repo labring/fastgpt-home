@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 历史查询记录终端内自然语言检索的表单与交互
-meta_description: 历史查询记录的数据来源于金融终端的用户交互日志，覆盖理财咨询、保单查询、账户明细查询等业务场景下的用户输入与系统响应轨迹。更新节奏匹配业务系统的写入规则，支
+meta_description: 历史查询记录终端内自然语言检索的表单与交互：历史查询记录终端内自然语言检索的表单与交互，涵盖配置与验证建议
 keywords: 历史查询记录、终端内自然语言检索、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15
@@ -34,7 +34,7 @@ date_modified: 2026-09-15
 
 ## 容易做错的三处
 - 现象：提交表单后触发「参数缺失」报错，文案包含`missing required field`。原因：未将核心字段`query_keyword`加入`form_field_required`配置列表，导致空输入仍可提交。
-- 现象：JSON格式的批量检索配置无法关联系统变量。原因：未开启`form_json_support_var`配置项，或变量命名未遵循`{{变量名}}`的固定格式。
+- 现象：JSON格式的批量检索配置无法关联系统变量。原因：未开启`form_json_support_var`配置项，或变量命名未遵循`待核验值`的固定格式。
 - 现象：检索结果返回超出预期的历史记录。原因：`search_history_max_age`配置取值超出业务追溯范围，或未绑定`query_time`字段进行时间过滤。
 
 ## 怎么确认配好了

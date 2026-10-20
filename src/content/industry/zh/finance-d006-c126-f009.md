@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航空机场投研知识库建设的引用来源与溯源
-meta_description: 航空机场投研数据主要来自民航管理机构公开通报、机场年度/月度运营年报、航班时刻API接口、空域流量实时监控数据等渠道。数据更新节奏差异明显：年度年报按自然年
+meta_description: 航空机场投研知识库建设的引用来源与溯源：航空机场投研知识库建设的引用来源与溯源，涵盖配置与验证建议
 keywords: 航空机场、投研知识库建设与治理、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

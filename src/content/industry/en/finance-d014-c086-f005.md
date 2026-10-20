@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompting for Automotive Service
-meta_description: Automotive service industry financial report data mainly comes from publicly disclosed annual and semi-annual enterprise reports, as well as monthly
+meta_description: Multi-turn Dialogue and Prompting for Automotive Service Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁路公路研报检索的工作流编排
-meta_description: 铁路公路研报属于金融领域的交通运输细分研报，数据来源包含交通运输行业协会公开运营数据、铁路运输企业月度报告、公路运输季度统计，以及券商发布的交通运输细分领域
+meta_description: 铁路公路研报检索的工作流编排：铁路公路研报检索的工作流编排，涵盖配置与验证建议。
 keywords: 铁路公路、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 兵器装备营销内容的多轮对话与提示词
-meta_description: 数据主要来自军工科研单位公开的定型报告、试验档案、官方宣传物料与操作手册。更新节奏随型号立项、定型、列装阶段调整，列装后更新频率较低，新研型号会按阶段发布阶
+meta_description: 兵器装备营销内容的多轮对话与提示词：兵器装备营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 兵器装备、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

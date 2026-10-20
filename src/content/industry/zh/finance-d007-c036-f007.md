@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 半导体收益率的工作流编排
-meta_description: 半导体收益率相关数据主要来自公开交易市场的行业板块行情接口与半导体细分赛道的现货交易数据源。更新节奏为交易日内每小时生成实时快照，收盘后生成完整的当日统计文
+meta_description: 半导体收益率的工作流编排：半导体收益率的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 半导体、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水务财报分析的向量模型与索引
-meta_description: 水务行业财报数据主要来自上市水务企业公开披露的定期报告、运营月报及行业公示信息。更新节奏以季度为核心周期，每季度结束后1至2个月披露季度运营数据，年度报告则
+meta_description: 水务财报分析的向量模型与索引：水务财报分析的向量模型与索引，涵盖配置与验证建议。
 keywords: 水务、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

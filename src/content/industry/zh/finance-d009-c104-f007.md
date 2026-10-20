@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 玻璃研报检索的工作流编排
-meta_description: 玻璃研报的数据来源涵盖中国建筑玻璃与工业玻璃协会月度产能报告、现货交易平台每日报价、券商建材行业研报及下游应用企业公开数据。更新节奏存在差异：现货报价数据每
+meta_description: 玻璃研报检索的工作流编排：玻璃研报检索的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 玻璃、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

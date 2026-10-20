@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专业连锁营销内容的多轮对话与提示词
-meta_description: 金融/保险/理财领域的专业连锁营销内容数据，主要来自线下门店的客户咨询转写记录、线上会员系统的客服对话、门店导购的客户跟进台账，以及理财或保险产品的营销物料
+meta_description: 专业连锁营销内容的多轮对话与提示词：专业连锁营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 专业连锁、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

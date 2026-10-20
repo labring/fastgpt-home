@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 融资租赁财报分析的HTTP 接口与外部系统
-meta_description: 融资租赁财报数据主要来源于核心业务管理系统、征信对接系统及监管报送平台。更新节奏分为定期与实时：季度、年度正式财报按固定披露周期更新，日常租金回收、逾期台账
+meta_description: 融资租赁财报分析的HTTP 接口与外部系统：融资租赁财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 融资租赁、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

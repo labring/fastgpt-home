@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 汽车零部件智能尽调报告的部署与升级
-meta_description: 汽车零部件智能尽调报告的数据主要来自主机厂BOM系统、供应商资质备案库、第三方检测机构报告及供应链物流台账。数据更新随新车型立项、供应商资质年审或零部件合规
+meta_description: 汽车零部件智能尽调报告的部署与升级：汽车零部件智能尽调报告的部署与升级，涵盖配置与验证建议
 keywords: 汽车零部件、智能尽调报告、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

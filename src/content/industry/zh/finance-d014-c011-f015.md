@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 休闲食品财报分析的部署与升级
-meta_description: 休闲食品企业的财报数据主要来源于交易所公开披露的定期报告、临时公告及行业协会公开调研资料。更新节奏分为固定周期与临时触发两类：年度报告每年更新一次，季度报告
+meta_description: 休闲食品财报分析的部署与升级：休闲食品财报分析的部署与升级，涵盖配置与验证建议。
 keywords: 休闲食品、财报分析与报告生成、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Wind Power Yield: Multi-turn Dialogue and Prompt Engineering
-meta_description: Wind power yield-related data primarily comes from wind farm SCADA collection systems, regional power trading platforms, and meteorological monitoring
+meta_description: Wind Power Yield: Multi-turn Dialogue and Prompt Engineering
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

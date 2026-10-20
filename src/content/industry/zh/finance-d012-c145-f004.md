@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通信设备营销内容的向量模型与索引
-meta_description: 通信设备的营销内容主要来源于产品技术手册、官方产品页面、营销话术库、经销商培训文档及线下展会宣传物料转写内容。数据更新节奏随新品发布、季度营销策略调整波动，
+meta_description: 通信设备营销内容的向量模型与索引：通信设备营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 通信设备、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

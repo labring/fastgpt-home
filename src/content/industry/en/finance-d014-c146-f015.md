@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for General Equipment Financial
-meta_description: General equipment industry financial report data primarily comes from public periodic reports of listed companies, official disclosure platforms of
+meta_description: Deployment and Upgrade for General Equipment Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -35,7 +35,7 @@ During upgrade: adjust the scheduled task cycle to match financial report releas
 
 ## Three Common Errors
 - Symptom: A `postgres connection failed` error appears during deployment, and the associated container exits immediately after startup. Cause: The configuration for the vector database and relational database was incorrectly written in the same compose file, with no separation of deployment logic for the two databases.
-- Symptom: The data synchronization task returns an `authentication failed` status after running, and the knowledge base cannot pull financial report data. Cause: Default database connection credentials were not replaced, and placeholder values from the sample configuration were used.
+- Symptom: The data synchronization task returns an `authentication failed` status after running, and the knowledge base cannot pull financial report data. Cause: Default database connection credentials were not replaced, and pending verification values from the sample configuration were used.
 - Symptom: When deploying on an arm64 architecture server, container pulling fails, or an `exec format error` is thrown after startup. Cause: The official arm64-adapted image was not used, and the correct version tag was not specified.
 
 ## How to Verify Proper Configuration

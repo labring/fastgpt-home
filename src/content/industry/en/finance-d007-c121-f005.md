@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Refractory
-meta_description: Market and yield rate data for refractory materials primarily comes from research data from domestic refractory materials industry associations
+meta_description: Multi-turn Dialogue and Prompt Engineering for Refractory Material Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -40,7 +40,7 @@ Downstream application share and financing yield rate data have longer update cy
 
 ## Three Common Mistakes
 - Symptom: Specified reply content is not saved in conversation history, and auto-reply is empty when reopening the conversation. Cause: The `saveChatHistory` configuration item is not enabled, or is configured to only save user input without retaining the full conversation chain.
-- Symptom: The system time variable introduced in the prompt is not loaded correctly, and the displayed timestamp uses a placeholder or incorrect value. Cause: The `currentTime` system variable is not correctly bound in the prompt template, or the variable parsing switch is not enabled.
+- Symptom: The system time variable introduced in the prompt is not loaded correctly, and the displayed timestamp uses a pending verification or incorrect value. Cause: The `currentTime` system variable is not correctly bound in the prompt template, or the variable parsing switch is not enabled.
 - Symptom: An error occurs when calling the voice input function in a Docker deployment environment, and audio processing dependencies cannot be loaded properly. Cause: The ffmpeg dependency is not correctly installed in the container, and sufficient permissions to perform the installation operation are not granted.
 
 ## How to Confirm Proper Configuration

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通用设备智能尽调报告的工具调用与插件
-meta_description: 通用设备智能尽调报告的数据主要来自行业协会公开合规文档、设备厂商出厂质检报告、现场运维日志及第三方质检机构出具的检测文件。数据更新节奏分为两类，行业基准数据
+meta_description: 通用设备智能尽调报告的工具调用与插件：通用设备智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 通用设备、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

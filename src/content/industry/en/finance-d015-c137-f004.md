@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Risk Control and Credit Document Review
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Loan Backlog Risk Control
-meta_description: Loan backlog data is synced incrementally daily from core credit business systems. Each record uses a structured format, with fixed fields including
+meta_description: Vector Models and Indexing for Loan Backlog Risk Control
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

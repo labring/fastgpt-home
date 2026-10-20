@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油服工程财报分析的工具调用与插件
-meta_description: 油服工程企业的财报数据主要来自境内外证券交易所公开披露的年度、半年度及季度报告，以及行业协会发布的季度运营简报。文档结构包含主营业务收入拆分（钻井工程、技术
+meta_description: 油服工程财报分析的工具调用与插件：油服工程财报分析的工具调用与插件，涵盖配置与验证建议
 keywords: 油服工程、财报分析与报告生成、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

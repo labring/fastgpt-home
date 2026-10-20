@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 白色家电融资日报的向量模型与索引
-meta_description: 白色家电融资日报的数据来源包括经销商融资台账、上游供应商应收款系统、区域家电行业的每日融资报送数据。更新节奏为每日凌晨完成前一日全量数据的同步。文档以结构化
+meta_description: 白色家电融资日报的向量模型与索引：白色家电融资日报的向量模型与索引，涵盖配置与验证建议
 keywords: 白色家电、融资日报、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

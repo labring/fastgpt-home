@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 软件开发投研知识库建设的模型接入与配置
-meta_description: 软件开发投研的数据主要来自代码仓库提交记录、需求规格文档、API接口定义、测试性能报告及行业技术白皮书。数据更新节奏随项目迭代调整，核心代码变更实时更新，需
+meta_description: 软件开发投研知识库建设的模型接入与配置：软件开发投研知识库建设的模型接入与配置，涵盖配置与验证建议
 keywords: 软件开发、投研知识库建设与治理、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

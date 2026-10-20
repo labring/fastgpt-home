@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光模块研报检索的HTTP 接口与外部系统
-meta_description: 光模块研报的数据主要来自通信行业第三方金融研报机构、光模块厂商公开技术白皮书、行业协会标准文档及供应链监测数据。更新节奏分为三类：厂商新品公告每周更新，产业
+meta_description: 光模块研报检索的HTTP 接口与外部系统：光模块研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 光模块、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

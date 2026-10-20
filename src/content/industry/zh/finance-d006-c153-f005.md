@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 风电投研知识库建设的多轮对话与提示词
-meta_description: 风电投研数据来源包括风机SCADA运行数据、项目可研报告、行业技术标准、上市公司财报、区域气象观测数据。更新节奏覆盖分钟级实时运行数据、季度/年度财报更新、
+meta_description: 风电投研知识库建设的多轮对话与提示词：风电投研知识库建设的多轮对话与提示词，涵盖配置与验证建议
 keywords: 风电、投研知识库建设与治理、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 消费电子融资日报的部署与升级
-meta_description: 消费电子融资日报的数据来自品牌方内部融资审批系统、经销商回款台账、第三方供应链金融服务商的交易接口。每日更新前一自然日的全量交易数据。单条记录包含消费电子品
+meta_description: 消费电子融资日报的部署与升级：消费电子融资日报的部署与升级，涵盖配置与验证建议。
 keywords: 消费电子、融资日报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15
@@ -27,7 +27,7 @@ date_modified: 2026-09-15
 | `UPLOAD_FILE_MAX_SIZE` | `200 MB` | 消费电子融资日报的批量导入文件包含多SKU明细，该取值可适配批量导入的文件体积需求 |
 | `PARSE_FILE_TIMEOUT_SECONDS` | `600 秒` | 批量导入的融资日报文件包含大量品类明细数据，需预留足够时间完成字段解析与校验 |
 | `PROXY_URL` | `http://your-proxy-domain:8080` | 对接第三方供应链金融服务商数据时，通过代理规避跨域或访问限制，适配aiproxy配置逻辑 |
-| `LOCAL_MODEL_ENABLED` | `true` | 适配FastGPT 4.9.1及以上版本，消费电子融资日报的字段校验需本地语义匹配，无需依赖外部API |
+仅作参考；请以目标 FastGPT 发布版本与部署文档核验。
 | `VOLUME_MOUNT_PATH` | `/app/data/financing_daily` | 将导入的日报文件持久化存储，便于容器重启后仍可触发自动同步更新 |
 
 > 本页给出的参数取值均为常规建议，用于确定配置的起点。实际取值受材料形态、数据量与业务规则影响，具体问题需具体分析，建议在自有样本上实测后再定。

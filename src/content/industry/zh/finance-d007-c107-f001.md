@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电力收益率的HTTP 接口与外部系统
-meta_description: 电力收益率的日报数据来源于省级电力交易中心、区域电网运营平台的公开交易核算接口。数据按省级行政区域与发电类别分类汇总，文档为结构化JSON数组格式，单条记录
+meta_description: 电力收益率的HTTP 接口与外部系统：电力收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 电力、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

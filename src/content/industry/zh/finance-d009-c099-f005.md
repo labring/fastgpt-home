@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 燃气研报检索的多轮对话与提示词
-meta_description: 燃气行业研报主要来自全国性能源行业协会、省级燃气监管部门、第三方能源咨询机构及上市燃气企业公告。更新节奏分为常规更新与临时更新：常规报告按月度、季度、年度发
+meta_description: 燃气研报检索的多轮对话与提示词：燃气研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 燃气、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

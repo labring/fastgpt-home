@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Investment Platform Marketing
-meta_description: The data sources for investment platform marketing include in-house user behavior databases, compliance-filed product archives, and public market
+meta_description: Workflow Orchestration for Investment Platform Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -38,7 +38,7 @@ The large number of structured fields and requirement for compliance checks mean
 
 ## How to Confirm Successful Configuration
 - Trigger a test workflow that runs for more than 120 seconds, confirm there are no automatic interruption prompts, and check the workflow logs for no timeout-related errors.
-- Call a custom upload tool, enter a dynamic variable placeholder in the parameter configuration field, and confirm the tool automatically replaces the placeholder with actual field values during invocation.
+- Call a custom upload tool, enter a dynamic variable pending verification in the parameter configuration field, and confirm the tool automatically replaces the pending verification with actual field values during invocation.
 - After enabling the target model on the account model configuration page, navigate to the model selection node of the workflow, and confirm the target model appears in the optional list.
 - Upload a compliance-filed product archive file, and confirm the workflow can normally parse the file content and extract structured fields.
 

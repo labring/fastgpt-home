@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 储能融资日报的工具调用与插件
-meta_description: 储能融资日报的数据主要来自公开项目备案公示、银行授信公告、产业基金出资披露及第三方能源金融数据库。更新节奏为T+1，当日发生的融资项目于次日整合发布。单条数
+meta_description: 储能融资日报的工具调用与插件：储能融资日报的工具调用与插件，涵盖配置与验证建议。
 keywords: 储能、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

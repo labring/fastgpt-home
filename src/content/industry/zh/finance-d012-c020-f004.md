@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 兵器装备营销内容的向量模型与索引
-meta_description: 兵器装备营销内容的来源主要包括官方装备技术文档、授权营销宣传物料、经销商推广素材及合规审核文档。更新节奏为重大装备迭代、年度营销规划调整时批量更新，日常根据
+meta_description: 兵器装备营销内容的向量模型与索引：兵器装备营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 兵器装备、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Solid Waste
-meta_description: The data for solid waste treatment financing daily reports primarily comes from public environmental project financing announcements, project filing
+meta_description: Multi-turn Dialogue and Prompt Engineering for Solid Waste Treatment Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -32,14 +32,14 @@ The daily update feature of solid waste treatment financing daily reports requir
 > The parameter values provided on this page are common recommended starting points for configuration. Actual values are affected by material form, data volume, and business rules. Specific issues require specific analysis. It is recommended to test on your own samples before finalizing settings.
 
 ## Three Common Mistakes
-- Scenario: After configuring a valid API token, the chat interface still returns an authentication failure, and logs show the token field is "fastgpt". Cause: The default placeholder token was not replaced in the model configuration, and the platform test token was used directly to send requests.
+- Scenario: After configuring a valid API token, the chat interface still returns an authentication failure, and logs show the token field is "fastgpt". Cause: The default pending verification token was not replaced in the model configuration, and the platform test token was used directly to send requests.
 - Scenario: After multiple accesses with the same user ID, the returned solid waste treatment financing data includes duplicates or cross-day entries. Cause: The `maxHistory` parameter was not adjusted for the scenario, and excessive historical context was retained, leading to outdated data being prioritized for recall.
 - Scenario: When a user asks about the subdivision segment of a solid waste treatment project, the response includes financing information from other environmental protection categories such as sewage treatment. Cause: The system prompt did not clearly limit processing only solid waste treatment data, and did not distinguish subdivision scenario fields.
 
 ## How to Confirm Proper Configuration
 - Initiate a query that includes a solid waste treatment subdivision segment, and verify that the returned data fields include the specified project segment, financing amount unit, and other required information.
 - Initiate multiple queries with the same user ID, and verify that the update time of the returned data meets the requirements of the current day and the past 24 hours.
-- Check the API call logs to confirm that the request token is the valid configured token, and not the platform default placeholder value.
+- Check the API call logs to confirm that the request token is the valid configured token, and not the platform default pending verification value.
 - Trigger a scenario where the user asks for missing fields, and verify that the system actively asks for supplementary information instead of returning incomplete data directly.
 
 > Question material comes from public community discussions. Configuration values are common starting points and should be measured against your own samples. Verified on 2026-09-14.

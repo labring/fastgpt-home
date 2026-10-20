@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 农化制品智能尽调报告的文档解析与分块
-meta_description: 农化制品相关数据主要来自行业协会公开年报、生产企业合规披露文件、农业农村部登记备案文档、第三方质检报告及供应链协作文档。数据更新节奏随文档类型差异明显：年度
+meta_description: 农化制品智能尽调报告的文档解析与分块：农化制品智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 农化制品、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

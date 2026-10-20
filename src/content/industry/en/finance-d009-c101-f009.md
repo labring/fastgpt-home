@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Citation Source and Traceability for Logistics Research
-meta_description: Logistics research report data comes from public reports of transportation industry associations, third-party logistics data monitoring institutions
+meta_description: Citation Source and Traceability for Logistics Research Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

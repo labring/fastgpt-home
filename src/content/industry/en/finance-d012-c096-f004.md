@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Coke Marketing Content
-meta_description: Coke marketing-related data comes from three main sources: financial industry commodity news platforms, real-time quotes from spot trading platforms
+meta_description: Vector Models and Indexing for Coke Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

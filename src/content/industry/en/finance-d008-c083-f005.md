@@ -4,8 +4,8 @@ slug: /en/industry/finance-d008-c083-f005
 page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Dialogue and Prompt Engineering for Water Utility
-meta_description: The data for water utility intelligent due diligence reports primarily comes from three sources: public operational archives of water supply and
+meta_title: Multi-turn Dialogue and Prompt Engineering for Water
+meta_description: Multi-turn Dialogue and Prompt Engineering for Water Utility Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

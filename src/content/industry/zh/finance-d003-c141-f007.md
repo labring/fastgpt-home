@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 身份与时效保险理赔初审的工作流编排
-meta_description: 身份与时效类数据的来源分为两类：身份核验数据来自全国公安身份信息核验接口、医保关联的身份档案库；时效数据来自理赔系统的流程节点日志、报案人提交的材料时间戳、
+meta_description: 身份与时效保险理赔初审的工作流编排：身份与时效保险理赔初审的工作流编排，涵盖配置与验证建议
 keywords: 身份与时效、保险理赔初审、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

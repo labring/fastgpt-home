@@ -4,8 +4,8 @@ slug: /zh/industry/finance-d003-c078-f001
 page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
-meta_title: 既往症判定保险理赔初审的HTTP 接口与外部系统
-meta_description: 数据来源主要为医保结算明细、门诊/住院电子病历、历史投保告知档案；更新节奏为随理赔申请触发实时同步，或按日批量拉取全量更新；文档结构多为结构化字段加非结构化
+meta_title: 既往症判定保险理赔初审的HTTP接口与外部系统
+meta_description: 既往症判定保险理赔初审的HTTP接口与外部系统：既往症判定保险理赔初审的HTTP接口与外部系统，涵盖配置与验证建议
 keywords: 既往症判定、保险理赔初审、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油服工程智能尽调报告的引用来源与溯源
-meta_description: 油服工程智能尽调报告的数据主要来自现场钻井传感器采集的实时日志、勘探开发项目的静态技术文档、行业协会发布的合规检测报告以及监管部门的备案文件。数据更新节奏分
+meta_description: 油服工程智能尽调报告的引用来源与溯源：油服工程智能尽调报告的引用来源与溯源，涵盖配置与验证建议
 keywords: 油服工程、智能尽调报告、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

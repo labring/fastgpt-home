@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 汽车服务收益率的对话日志与审计
-meta_description: 该品类的数据主要来自线下门店经营管理系统、第三方支付对接接口。更新节奏为每日凌晨同步前一日全量经营数据，实时完成的服务订单会在15分钟内追加至当日统计文档。
+meta_description: 汽车服务收益率的对话日志与审计：汽车服务收益率的对话日志与审计，涵盖配置与验证建议
 keywords: 汽车服务、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 综合服务收益率的对话日志与审计
-meta_description: 综合服务收益率与行情日报的数据来源包含对接的公开行情接口、内部交易台账系统与产品管理模块。数据更新节奏为每日固定时段触发，覆盖前一交易日的全量产品信息。文档
+meta_description: 综合服务收益率的对话日志与审计：综合服务收益率的对话日志与审计，涵盖配置与验证建议
 keywords: 综合服务、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

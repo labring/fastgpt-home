@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 畜禽养殖研报检索的文档解析与分块
-meta_description: 畜禽养殖研报是金融机构、理财服务机构用于行业分析的核心资料，数据来源包括农业农村部监测数据、行业协会月度报告、上市养殖企业定期公告、第三方调研机构专题研报。
+meta_description: 畜禽养殖研报检索的文档解析与分块：畜禽养殖研报检索的文档解析与分块，涵盖配置与验证建议
 keywords: 畜禽养殖、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

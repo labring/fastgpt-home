@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学原料研报检索的部署与升级
-meta_description: 面向金融保险理财领域的化学原料研报的数据主要来自行业协会公开报告、上市公司定期公告、海关进出口监测数据及第三方咨询机构专项分析。更新节奏分为常规月度供需报告
+meta_description: 化学原料研报检索的部署与升级：化学原料研报检索的部署与升级，涵盖配置与验证建议。
 keywords: 化学原料、研报检索与问答、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

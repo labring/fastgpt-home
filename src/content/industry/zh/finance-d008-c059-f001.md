@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工业金属智能尽调报告的HTTP 接口与外部系统
-meta_description: 工业金属智能尽调报告的数据主要来自境内外期货交易所、行业协会及现货贸易平台。数据更新节奏分两类：期货行情实时推送交易时段数据，现货价格及库存数据每日更新。单
+meta_description: 工业金属智能尽调报告的HTTP 接口与外部系统：工业金属智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 工业金属、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

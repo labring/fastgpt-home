@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexes for Intelligent Due Diligence
-meta_description: Intelligent due diligence report data for building construction engineering comes primarily from project approval documents, construction drawing
+meta_description: Vector Models and Indexes for Intelligent Due Diligence Reports of Building Construction Projects
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

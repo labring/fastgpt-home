@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 文娱用品收益率的模型接入与配置
-meta_description: 文娱用品收益率数据主要来自合规的文娱藏品交易数据服务商及行业公开交易台账，更新节奏为每日收盘后批量同步。单条数据文档为结构化格式，包含`product_id
+meta_description: 文娱用品收益率的模型接入与配置：文娱用品收益率的模型接入与配置，涵盖配置与验证建议
 keywords: 文娱用品、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

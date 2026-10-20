@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 黑色家电融资日报的HTTP 接口与外部系统
-meta_description: 黑色家电融资日报的数据来源于家电经销商的每日进销存台账、上游品牌方的出货结算数据以及合作金融机构的融资申请流水。数据更新节奏为每日凌晨完成前一日全量更新，单
+meta_description: 黑色家电融资日报的HTTP 接口与外部系统：黑色家电融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 黑色家电、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

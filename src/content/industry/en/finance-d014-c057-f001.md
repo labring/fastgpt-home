@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interfaces and External Systems for Small Home
-meta_description: The data for small home appliances financial report analysis comes primarily from public regular enterprise reports, third-party industry monitoring
+meta_description: HTTP Interfaces and External Systems for Small Home Appliances Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -32,7 +32,7 @@ The large number of category subdivisions requires interfaces to support filteri
 | `parse_file_timeout_seconds` | `600 seconds` | Annual small home appliances financial report documents have long lengths, requiring sufficient time for text segmentation and structured extraction during parsing |
 | `rag_recall_top_k` | `Top 10 entries` | Small home appliances financial report data fields are relatively concentrated. Too many recalls will introduce irrelevant content, while too few will miss key information |
 | `external_api_rate_limit` | `5 requests per minute` | Most third-party industry monitoring interfaces have call frequency limits for small home appliances data to avoid triggering rate limiting |
-| `field_mapping_rule` | Automatic mapping via preset rules per data source | Large discrepancies exist in field naming for small home appliances financial report data. Automatic mapping reduces manual configuration workload, and is compatible with FastGPT v4.9.7-fix2 and later configuration logic |
+Reference only; verify against the target FastGPT release and deployment documentation.
 | `chunk_size` | `800–1200 characters` | Structured tables and text analysis paragraphs in small home appliances financial reports have moderate lengths. This segmentation preserves complete semantic units |
 
 > The parameter values provided on this page are common recommended starting points for configuration. Actual values are affected by material format, data volume, and business rules. Specific issues require case-by-case analysis, and it is recommended to test on your own samples before finalizing.

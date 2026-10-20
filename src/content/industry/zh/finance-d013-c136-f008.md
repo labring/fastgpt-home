@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 贵金属融资日报的工具调用与插件
-meta_description: 贵金属融资日报数据主要来自国内贵金属交易所官方行情接口及合规行业数据服务商。更新节奏为每个交易日收盘后T+1日发布单日报表。文档结构以结构化表格为主，包含交
+meta_description: 贵金属融资日报的工具调用与插件：贵金属融资日报的工具调用与插件，涵盖配置与验证建议
 keywords: 贵金属、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

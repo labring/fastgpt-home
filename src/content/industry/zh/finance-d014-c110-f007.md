@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电网设备财报分析的工作流编排
-meta_description: 数据来源包含电网企业内部ERP系统、省级电网报送平台及官方财报披露渠道。更新节奏分为季度批量披露完整财报、月度增量更新运维与营收数据两类。文档结构固定包含资
+meta_description: 电网设备财报分析的工作流编排：电网设备财报分析的工作流编排，涵盖配置与验证建议。
 keywords: 电网设备、财报分析与报告生成、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 保险投研知识库建设的数据库与运维
-meta_description: 保险投研知识库的数据主要来源于保险公司内部精算报告、银保监会监管披露文件、行业协会承保统计报表、第三方评级机构的寿险/财险指标报告。更新节奏差异明显：监管披
+meta_description: 保险投研知识库建设的数据库与运维：保险投研知识库建设的数据库与运维，涵盖配置与验证建议
 keywords: 保险、投研知识库建设与治理、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

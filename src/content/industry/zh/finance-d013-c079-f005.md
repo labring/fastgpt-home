@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 普钢融资日报的多轮对话与提示词
-meta_description: 普钢融资日报的数据来源于国内钢铁行业公开交易监测平台、钢厂产销报备系统及全国物流与采购联合会的行业统计数据，每日凌晨更新前一交易日的全量数据。单条日报文档按
+meta_description: 普钢融资日报的多轮对话与提示词：普钢融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 普钢、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

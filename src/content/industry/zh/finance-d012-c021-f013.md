@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 其他综合营销内容的知识库检索与召回
-meta_description: 其他综合营销内容的数据主要来自内部跨品类营销素材库、合作方合规审核文档、监管公示的业务指引。更新节奏随营销活动周期调整，单次活动上线前批量更新，日常仅微调合
+meta_description: 其他综合营销内容的知识库检索与召回：其他综合营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 其他综合、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

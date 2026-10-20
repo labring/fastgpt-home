@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 大气治理研报检索的多轮对话与提示词
-meta_description: 大气治理研报数据主要来自生态环境主管部门的公开监测公报、行业协会的专项研究报告、科研院所的实验观测数据以及大气治理项目的竣工文档。公开监测数据按日或按周更新
+meta_description: 大气治理研报检索的多轮对话与提示词：大气治理研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 大气治理、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

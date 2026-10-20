@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 酒店餐饮财报分析的工具调用与插件
-meta_description: 酒店餐饮财报分析的数据主要来源于门店收银系统、供应链管理台账、总部经营复盘报表。数据更新节奏分为三级：门店级营收数据每日更新，门店汇总数据每旬更新，季度级财
+meta_description: 酒店餐饮财报分析的工具调用与插件：酒店餐饮财报分析的工具调用与插件，涵盖配置与验证建议
 keywords: 酒店餐饮、财报分析与报告生成、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

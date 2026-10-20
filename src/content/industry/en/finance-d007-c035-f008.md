@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Aesthetic Medicine Profit
-meta_description: Data for aesthetic medicine profit yields comes from three sources: publicly available pricing datasets from aesthetic industry monitoring platforms
+meta_description: Tool Calling and Plugins for Aesthetic Medicine Profit Yields
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 纺织制造营销内容的模型接入与配置
-meta_description: 数据主要来自生产系统的面料成分、克重、工艺参数台账，电商平台的商品详情页、营销素材素材库，以及线下展会的客户对接记录。更新节奏按生产批次完成后更新台账数据，
+meta_description: 纺织制造营销内容的模型接入与配置：纺织制造营销内容的模型接入与配置，涵盖配置与验证建议
 keywords: 纺织制造、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化妆品收益率的数据库与运维
-meta_description: 化妆品收益率相关数据来源包括品牌官方供货系统、主流电商平台SKU售价接口、线下零售POS终端数据。零售单价每日更新，供货单价每7至15天更新一次，原料成本相
+meta_description: 化妆品收益率的数据库与运维：化妆品收益率的数据库与运维，涵盖配置与验证建议。。。
 keywords: 化妆品、收益率与行情日报播报、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

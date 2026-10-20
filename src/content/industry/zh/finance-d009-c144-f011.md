@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通信服务研报检索的文档解析与分块
-meta_description: 通信服务研报主要来自券商通信行业研究所、通信设备厂商公开披露文档、行业协会月度监测报告。更新节奏覆盖月度跟踪、季度财报解读、年度策略展望，以及重大行业事件后
+meta_description: 通信服务研报检索的文档解析与分块：通信服务研报检索的文档解析与分块，涵盖配置与验证建议
 keywords: 通信服务、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

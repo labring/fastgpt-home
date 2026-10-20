@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁路公路收益率的表单与交互
-meta_description: 这个品类的数据主要来源于官方交通运输统计数据库、路网运营主体的季度运营公告及行业协会公开数据集。更新节奏为每日更新当日通行及营收快照，每月生成全路网汇总报表
+meta_description: 铁路公路收益率的表单与交互：铁路公路收益率的表单与交互，涵盖配置与验证建议。。。
 keywords: 铁路公路、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

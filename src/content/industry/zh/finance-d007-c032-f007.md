@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学原料收益率的工作流编排
-meta_description: 数据来源包括公开大宗商品交易平台的实时报价、行业协会发布的周度统计报告、上游生产企业的出厂指导价公示。更新节奏分为三类：现货交易报价每日更新，出厂指导价每周
+meta_description: 化学原料收益率的工作流编排：化学原料收益率的工作流编排，涵盖配置与验证建议。。。
 keywords: 化学原料、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

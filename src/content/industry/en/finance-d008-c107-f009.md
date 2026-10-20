@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for Power Industry
-meta_description: The data for power industry intelligent due diligence reports mainly comes from publicly disclosed grid data, internal operation and maintenance logs
+meta_description: Citation Sources and Traceability for Power Industry Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -24,7 +24,7 @@ The multi-source nature, layered structure, and specialized field attributes of 
 | --- | --- | --- |
 | `recall_top_k` | `Top 10-15 results` | Power due diligence data includes multi-dimensional specialized fields. Too many recalled results will introduce irrelevant content, while too few will fail to cover core indicators |
 | `similarity_threshold` | `0.72-0.85` | Power specialized terms have high recognition accuracy. This range balances recall precision and coverage of specialized content |
-| `reference_template` | `[{source_name}], {update_time}, {field_name}({unit})` | Matches the traceability requirements of power data, and synchronously displays data source, time, field and unit |
+| `traceability details` | `[{source_name}], {update_time}, {field_name}({unit})` | Matches the traceability requirements of power data, and synchronously displays data source, time, field and unit |
 | `source_metadata_fields` | `["额定容量(MW)", "供电煤耗(g/kWh)", "交易电价(元/MWh)"]` | Extracts core metadata for power due diligence, ensuring traceability information includes key business parameters |
 | `chunk_size` | `800-1200 characters` | Trend analysis and table content in power reports are lengthy. This length retains complete contextual associations |
 | `enable_source_verification` | `Enabled` | Meets compliance traceability requirements for power data, ensuring citations have not been tampered with |

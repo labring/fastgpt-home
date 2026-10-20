@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 免税研报检索的文档解析与分块
-meta_description: 免税研报的数据主要来自券商行业研究报告、国内免税运营商公开披露的运营公告、财政部及海关总署发布的免税政策文件。更新节奏随行业动态调整，政策发布后1-3个工作
+meta_description: 免税研报检索的文档解析与分块：免税研报检索的文档解析与分块，涵盖配置与验证建议。
 keywords: 免税、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通用设备融资日报的工具调用与插件
-meta_description: 通用设备融资日报的数据来自融资租赁机构交易台账、工业设备流通备案平台、设备厂商销售数据的汇总。更新节奏为每日生成当日日报，数据T+1完成同步。文档结构为结构
+meta_description: 通用设备融资日报的工具调用与插件：通用设备融资日报的工具调用与插件，涵盖配置与验证建议
 keywords: 通用设备、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

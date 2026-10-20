@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 兵器装备营销内容的工作流编排
-meta_description: 兵器装备营销内容的数据来源包括装备研制单位的官方技术文档、官方宣传物料、政府采购招标公示；更新节奏为新装备定型、年度宣传物料改版时批量更新，配合临时营销活动
+meta_description: 兵器装备营销内容的工作流编排：兵器装备营销内容的工作流编排，涵盖配置与验证建议。
 keywords: 兵器装备、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

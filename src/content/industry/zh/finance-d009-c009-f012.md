@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 产业园区研报检索的模型接入与配置
-meta_description: 产业园区研报的数据来源包括国家级/省级产业园区管委会官方公告、园区运营主体的月度运营简报、行业协会的调研汇编。更新节奏分为两类：常规运营数据按月更新，重大招
+meta_description: 产业园区研报检索的模型接入与配置：产业园区研报检索的模型接入与配置，涵盖配置与验证建议
 keywords: 产业园区、研报检索与问答、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

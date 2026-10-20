@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 费用清单保险理赔初审的向量模型与索引
-meta_description: 费用清单数据来自医疗机构出具的收费明细单据、投保人上传的报销凭证扫描件或结构化导出文件，以及保险公司理赔系统自动生成的费用核算记录。更新节奏为单笔理赔申请对
+meta_description: 费用清单保险理赔初审的向量模型与索引：费用清单保险理赔初审的向量模型与索引，涵盖配置与验证建议
 keywords: 费用清单、保险理赔初审、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

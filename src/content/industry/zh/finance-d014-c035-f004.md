@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医美财报分析的向量模型与索引
-meta_description: 医美财报数据主要来自公开披露的连锁医美机构季度/年度财报、机构内部经营台账及上游供应链结算数据。更新节奏分为公开财报的季度/年度固定更新，以及内部经营数据的
+meta_description: 医美财报分析的向量模型与索引：医美财报分析的向量模型与索引，涵盖配置与验证建议。
 keywords: 医美、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

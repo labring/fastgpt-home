@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Risk Control and Credit Document Review
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for Collateral Material
-meta_description: Collateral material data comes from offline paper scans, contract files exported from electronic signing platforms, and structured data exported from
+meta_description: Knowledge Base Retrieval and Recall for Collateral Material Risk Control
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

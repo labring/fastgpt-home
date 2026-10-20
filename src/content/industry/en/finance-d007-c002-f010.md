@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Database and Operations for Professional Services Yield
-meta_description: Data sources include compliant public financial market data APIs and institutional custody report APIs. Update schedule: Full daily report updates are
+meta_description: Database and Operations for Professional Services Yield Reporting
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Forms and Interactions for Precious Metal Yields
-meta_description: Precious metal market and yield data comes primarily from official interfaces of compliant on-exchange trading markets and third-party compliant
+meta_description: Forms and Interactions for Precious Metal Yields
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

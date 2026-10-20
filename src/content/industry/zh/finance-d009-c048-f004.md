@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 城商行研报检索的向量模型与索引
-meta_description: 数据主要来自城商行内部风控与战略部门的区域经济分析、同业对标研报，以及地方金融监管局发布的区域金融运行简报。更新节奏分为月度定期更新的行业对标报告，以及随监
+meta_description: 城商行研报检索的向量模型与索引：城商行研报检索的向量模型与索引，涵盖配置与验证建议
 keywords: 城商行、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

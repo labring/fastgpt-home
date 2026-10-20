@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 农化制品营销内容的工具调用与插件
-meta_description: 农化制品的核心数据主要来自农业农村部农药检定所公开登记信息、生产厂商官方产品说明书、合规农资交易平台商品页。数据更新节奏分为两类：官方登记数据按季度更新，厂
+meta_description: 农化制品营销内容的工具调用与插件：农化制品营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 农化制品、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

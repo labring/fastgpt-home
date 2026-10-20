@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 影视院线财报分析的文档解析与分块
-meta_description: 影视院线的财报数据主要来自院线运营系统导出的月度票房台账、季度经营报表、片方分账结算文件及广告招商合同。数据更新节奏分为月度运营数据实时同步，季度财报按行业
+meta_description: 影视院线财报分析的文档解析与分块：影视院线财报分析的文档解析与分块，涵盖配置与验证建议
 keywords: 影视院线、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

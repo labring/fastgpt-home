@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航天装备营销内容的文档解析与分块
-meta_description: 航天装备的营销文档主要来自型号研制公开资料、地面试验报告、官方产品宣传手册与padans格式的性能参数数据集，更新节奏随型号立项、试验节点、新品发布动态调整
+meta_description: 航天装备营销内容的文档解析与分块：航天装备营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 航天装备、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

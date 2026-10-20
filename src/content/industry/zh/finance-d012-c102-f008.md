@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 特钢营销内容的工具调用与插件
-meta_description: 特钢数据主要来源于生产企业的ERP系统、现货交易平台及行业协会公开文档，多用于金融机构为特钢企业提供供应链金融、理财服务的营销内容。数据更新节奏因类型不同存
+meta_description: 特钢营销内容的工具调用与插件：特钢营销内容的工具调用与插件，涵盖配置与验证建议。
 keywords: 特钢、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

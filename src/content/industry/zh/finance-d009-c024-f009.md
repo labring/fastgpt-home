@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 农化制品研报检索的引用来源与溯源
-meta_description: 农化制品研报数据主要来自国内农药行业协会、券商化工行业研究团队、农化上市企业定期报告、农资流通监测平台。更新节奏随行业周期波动，春耕、病虫害高发期月度更新频
+meta_description: 农化制品研报检索的引用来源与溯源：农化制品研报检索的引用来源与溯源，涵盖配置与验证建议
 keywords: 农化制品、研报检索与问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

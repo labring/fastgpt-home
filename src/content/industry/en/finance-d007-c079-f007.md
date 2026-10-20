@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Carbon Steel Yield Rates
-meta_description: Data related to carbon steel yield rates comes primarily from steel spot trading platforms, futures exchange market APIs, and industry information
+meta_description: Workflow Orchestration for Carbon Steel Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

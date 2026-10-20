@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专业服务智能尽调报告的工具调用与插件
-meta_description: 专业服务智能尽调报告的数据主要来自公开工商公示系统、第三方征信机构、行业协会公开信息，以及项目委托方提供的尽职调查底稿。公开数据源按监管要求实时更新，委托方
+meta_description: 专业服务智能尽调报告的工具调用与插件：专业服务智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 专业服务、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

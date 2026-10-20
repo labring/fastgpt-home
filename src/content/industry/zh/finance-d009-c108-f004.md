@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电商服务研报检索的向量模型与索引
-meta_description: 电商服务研报的数据来源主要包括电商平台商家运营后台的实时销售数据、第三方电商数据服务商的行业监测报告、品牌商家的月度/年度运营复盘文档。更新节奏分为两类：品
+meta_description: 电商服务研报检索的向量模型与索引：电商服务研报检索的向量模型与索引，涵盖配置与验证建议
 keywords: 电商服务、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

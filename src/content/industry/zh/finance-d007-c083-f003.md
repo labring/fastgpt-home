@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水务收益率的分享与嵌入
-meta_description: 水务收益率日报数据来源为城市水务运营台账、水务项目的日常运营记录，以及公用事业监管部门的公开公示信息。更新节奏为每日凌晨完成前一日全量数据汇总。文档结构包含
+meta_description: 水务收益率的分享与嵌入：水务收益率的分享与嵌入，涵盖配置与验证建议。。。。。。。
 keywords: 水务、收益率与行情日报播报、分享与嵌入
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

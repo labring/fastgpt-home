@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Forms and Interactions for Aerospace Equipment Yield
-meta_description: Data related to aerospace equipment yield comes primarily from publicly disclosed task ledgers, on-orbit equipment operation ledgers, and official
+meta_description: Forms and Interactions for Aerospace Equipment Yield
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

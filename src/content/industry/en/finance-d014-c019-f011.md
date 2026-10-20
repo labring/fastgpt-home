@@ -4,8 +4,8 @@ slug: /en/industry/finance-d014-c019-f011
 page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
-meta_title: Document Parsing and Chunking for Duty-Free Financial Report
-meta_description: Data sources for this category include publicly disclosed regular corporate reports and industry regulatory monitoring data. Updates follow a fixed
+meta_title: Document Parsing and Chunking for Duty-Free Financial
+meta_description: Document Parsing and Chunking for Duty-Free Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

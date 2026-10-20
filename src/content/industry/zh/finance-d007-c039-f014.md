@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 厨卫电器收益率的表单与交互
-meta_description: 厨卫电器收益率相关数据的来源包括国家能效检测平台公开的合规报告、品牌官方的机型参数文档、第三方家电评测机构的实测记录。数据更新节奏为新机型上市时同步更新存量
+meta_description: 厨卫电器收益率的表单与交互：厨卫电器收益率的表单与交互，涵盖配置与验证建议。。。
 keywords: 厨卫电器、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工业金属营销内容的部署与升级
-meta_description: 工业金属的数据来源包括行业协会公开报告、现货交易平台实时接口、期货交易所结算数据。更新节奏分为三类：现货报价随交易日实时更新，行业库存数据周度更新，期货结算
+meta_description: 工业金属营销内容的部署与升级：工业金属营销内容的部署与升级，涵盖配置与验证建议。
 keywords: 工业金属、营销内容与获客、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

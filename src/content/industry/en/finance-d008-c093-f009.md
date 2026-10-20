@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Cited Sources and Traceability for Game Intelligence Due
-meta_description: The data for game intelligence due diligence reports primarily comes from official version number filing documents issued by the National Press and
+meta_description: Cited Sources and Traceability for Game Intelligence Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -27,7 +27,7 @@ Official filing data for game intelligence due diligence reports must accurately
 | `Reranked Return Count` | Top 5-8 entries | Core official filing and core operational data must be retained, to avoid filtering out key compliant items after reranking |
 | `Segment Length` | 800-1200 characters | Field descriptions in game reports are lengthy. Too short a segment will split complete paragraphs such as compliant clauses and revenue composition, while too long a segment will reduce retrieval accuracy |
 | `PARSE_FILE_TIMEOUT_SECONDS` | 600 seconds | Single game due diligence report documents have large file sizes and long parsing times. Extending the timeout prevents parsing failures |
-| `Citation Template` | Format: "Source Document Name + Version Number/Collection Time + Fragment Content" | Traceability for game reports requires clear marking of version numbers or collection times to facilitate verification of consistency between official filing and third-party data |
+| `Traceability details` | Format: "Source Document Name + Version Number/Collection Time + Fragment Content" | Traceability for game reports requires clear marking of version numbers or collection times to facilitate verification of consistency between official filing and third-party data |
 
 > The parameter values provided on this page are common starting points for configuration. Actual values are affected by material format, data volume, and business rules. Specific issues require individual analysis. It is recommended to test on your own samples before finalizing settings.
 

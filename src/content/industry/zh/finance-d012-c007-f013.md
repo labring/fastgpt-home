@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 乳制品营销内容的知识库检索与召回
-meta_description: 乳制品营销内容的数据源包括品牌内部的产品规格文档、营销活动执行手册、终端导购培训材料、新品上市官方通稿，以及供应链端的原料检测报告。更新节奏随新品上市、季度
+meta_description: 乳制品营销内容的知识库检索与召回：乳制品营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 乳制品、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

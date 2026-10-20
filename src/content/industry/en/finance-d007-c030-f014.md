@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Form and Interaction for Cosmetics Profit Yield Daily
-meta_description: The profit yield data for the cosmetics category is sourced primarily from internal brand sales ledgers, offline counter POS systems, and transaction
+meta_description: Form and Interaction for Cosmetics Profit Yield Daily Reporting
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

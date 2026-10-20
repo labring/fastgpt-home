@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interfaces and External Systems for Water Industry
-meta_description: Data for water industry research reports comes from public reports released by water industry associations, annual and semi-annual financial reports
+meta_description: HTTP Interfaces and External Systems for Water Industry Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -35,7 +35,7 @@ Additionally, water industry research reports use many specialized terms. Interf
 | Configuration Item | Recommended Setting | Rationale |
 | ---- | ---- | ---- |
 | `responseExtractMode` | `Use "Extract by JSON Path" mode for versions v4.8.12 and later` | Adapts to the HTTP return value extraction logic change in the v4.8.12-beta version based on community feedback. Prevents old extraction rules from failing to correctly identify nested fields |
-| `requestDynamicParams` | `Bind input parameters using the {{variable name}} syntax, such as {{water_project_id}}` | Supports initiating requests with variable parameters such as water project ID and monitoring time range. Adapts to retrieval needs for different segmented research reports |
+| `requestDynamicParams` | `Bind input parameters using the example value syntax, such as example value` | Supports initiating requests with variable parameters such as water project ID and monitoring time range. Adapts to retrieval needs for different segmented research reports |
 | `charset` | `UTF-8` | Adapts to Chinese professional terms and data in water industry research reports. Prevents garbled text issues |
 | `timeout` | `300 seconds` | Water industry research reports have large data volumes and include detailed content across multiple modules. Reserves sufficient request duration to avoid timeout interruptions |
 | `returnFields` | `Specify a list of fields to return, such as ["project_name","cod_value","unit"]` | Reduces invalid data transmission. Adapts to the multi-field characteristic of water industry research reports. Improves interface call efficiency |

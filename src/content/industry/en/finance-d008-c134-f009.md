@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for Condiment Smart Due
-meta_description: Condiment traceability data comes from three primary channels. First, industry monitoring documents published by the National Condiment
+meta_description: Citation Sources and Traceability for Condiment Smart Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -36,7 +36,7 @@ Additionally, test items and values in condiment traceability data must be stric
 | `Similarity Threshold` | `0.75–0.82` | Fields such as barcodes and batch numbers in condiment data have high recognizability. A threshold that is too low will introduce irrelevant industry-wide documents. A threshold that is too high will fail to recall matching traceability data |
 | `Segment Length` | `1000–1200 characters` | Condiment traceability documents often include multiple sets of linked fields. Setting segment length to cover complete field groups avoids disrupting the linkage of traceability information |
 | `PARSE_FILE_TIMEOUT_SECONDS` | `90 seconds` | Batch traceability documents include multi-page test reports, which take longer to parse. Setting 90 seconds prevents parsing failures caused by timeouts |
-| `Citation Template` | `{{source.title}} | Batch No:{{source.metadata.batch_no}} | Test Item:{{source.metadata.test_item}} | Unit:{{source.metadata.unit}}` | Condiment due diligence requires clear traceable batches, test items and corresponding units. The template must include core traceability fields |
+| `Traceability details` | `the configured value | Batch No:the configured value | Test Item:the configured value | Unit:the configured value` | Condiment due diligence requires clear traceable batches, test items and corresponding units. The template must include core traceability fields |
 | `Reranked Return Count` | `Top 3` | Condiment traceability information requires precise matching. Retaining the top 3 most relevant entries after reranking meets due diligence requirements |
 
 > The parameter values provided on this page are common starting points for configuration. Actual values are affected by material format, data volume and business rules. Specific issues require specific analysis. It is recommended to test on your own samples before finalizing settings.

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商业物业研报检索的知识库检索与召回
-meta_description: 商业物业研报数据主要来自中国商业联合会行业监测报告、头部商业体公开运营季报、商圈租赁平台挂牌数据。更新节奏多为月度更新，核心商圈实时客流数据为周更。文档结构
+meta_description: 商业物业研报检索的知识库检索与召回：商业物业研报检索的知识库检索与召回，涵盖配置与验证建议
 keywords: 商业物业、研报检索与问答、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

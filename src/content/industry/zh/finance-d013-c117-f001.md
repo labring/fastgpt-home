@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 纺织制造融资日报的HTTP 接口与外部系统
-meta_description: 纺织制造融资日报数据来源于合作银行对公授信系统、供应链金融服务平台及行业征信数据库，每日凌晨更新前一日全量数据。单条文档包含企业统一社会信用代码、注册地、纺
+meta_description: 纺织制造融资日报的HTTP 接口与外部系统：纺织制造融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 纺织制造、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

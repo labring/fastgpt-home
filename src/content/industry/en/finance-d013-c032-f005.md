@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Chemical Raw
-meta_description: Data sources include corporate financing listing information from domestic bulk commodity circulation platforms, credit and loan disclosure data for
+meta_description: Multi-turn Dialogue and Prompt Engineering for Chemical Raw Material Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

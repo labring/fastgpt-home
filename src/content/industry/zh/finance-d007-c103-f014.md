@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 环境监测收益率的表单与交互
-meta_description: 环境监测领域的收益率与行情数据多来自官方生态环境监测站点、第三方环保项目招投标平台及物联网传感设备。数据更新节奏多为每1至15分钟刷新一次，单次返回的文档包
+meta_description: 环境监测收益率的表单与交互：环境监测收益率的表单与交互，涵盖配置与验证建议。。。
 keywords: 环境监测、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 特钢融资日报的HTTP 接口与外部系统
-meta_description: 特钢融资日报的数据来源为国内特钢产业链供应链金融服务平台、区域大宗商品交易市场的特钢品类成交融资台账，更新节奏为每个交易日当日18:00前完成当日数据归集更
+meta_description: 特钢融资日报的HTTP 接口与外部系统：特钢融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 特钢、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

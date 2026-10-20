@@ -4,8 +4,8 @@ slug: /en/industry/finance-d006-c052-f004
 page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
-meta_title: Vector Models and Indexing for Investment Research Knowledge
-meta_description: The investment research data for this use case includes monthly operational briefings, quarterly and annual financial reports, and industry research
+meta_title: Vector Models and Indexing for Investment Research
+meta_description: Vector Models and Indexing for Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

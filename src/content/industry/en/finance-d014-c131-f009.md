@@ -4,8 +4,8 @@ slug: /en/industry/finance-d014-c131-f009
 page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
-meta_title: Citation Sources and Traceability for Decoration and Fit-Out
-meta_description: Decoration and fit-out industry enterprises’ financial report data is primarily sourced from publicly disclosed annual reports, quarterly reports
+meta_title: Citation Sources and Traceability for Decoration
+meta_description: Citation Sources and Traceability for Decoration and Fit-Out Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -32,7 +32,7 @@ Additionally, some small and medium-sized enterprises have limited financial rep
 | `Similarity Threshold` | `0.75-0.85` | Business terminology for decoration and fit-out financial reports has industry-specific characteristics. A threshold that is too low will introduce irrelevant cross-industry data, while a threshold that is too high may fail to recall precise content for segmented segments |
 | `Reranked Return Count` | `Top 4-6` | Prioritize returning traceability documents most relevant to core financial report analysis questions such as revenue breakdown and order changes, and control the amount of information cited in a single round |
 | `Data Source Refresh Cycle` | `Daily` | Temporary announcements have no fixed update cycle. Daily refresh ensures newly disclosed major project information is included in the recall scope in a timely manner |
-| `Citation Content Template` | `{{source}} | {{field}}: {{value}} ({{unit}})` | Clearly mark traceability sources, specific fields, values, and units to resolve the issue of inconsistent field units in decoration and fit-out financial reports |
+| `Traceability details` | `the configured value | the configured value: the configured value (the configured value)` | Clearly mark traceability sources, specific fields, values, and units to resolve the issue of inconsistent field units in decoration and fit-out financial reports |
 | `Segment Length` | `800-1200 characters` | The content of the operating analysis module in decoration and fit-out financial reports is lengthy. Segment length adapts to the paragraph structure of financial report documents and avoids truncating key business data |
 
 > The parameter values provided on this page are conventional recommendations used as a starting point for configuration. Actual values are affected by material form, data volume, and business rules. Specific issues require specific analysis. It is recommended to test on your own samples before finalizing settings.

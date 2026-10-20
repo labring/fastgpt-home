@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Database and Operations for Footwear Yield Rates
-meta_description: Data sources for footwear yield rates include inventory ledgers from brand distributors, transaction average price data from major e-commerce
+meta_description: Database and Operations for Footwear Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

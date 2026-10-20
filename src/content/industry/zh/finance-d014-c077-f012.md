@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 旅游景区财报分析的模型接入与配置
-meta_description: 旅游景区财报数据来源包括景区运营管理系统的票务、餐饮、住宿营收明细，文旅主管部门的年度统计报送表，上市景区公开年报及非上市景区内部财务台账。数据更新节奏：单
+meta_description: 旅游景区财报分析的模型接入与配置：旅游景区财报分析的模型接入与配置，涵盖配置与验证建议
 keywords: 旅游景区、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

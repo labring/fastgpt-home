@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 融资租赁营销内容的工作流编排
-meta_description: 融资租赁的业务数据来源于租赁业务管理系统、客户关系管理系统、外部征信查询接口及营销触达日志。数据更新节奏存在差异：客户资质数据实时同步，合同数据在签约后1小
+meta_description: 融资租赁营销内容的工作流编排：融资租赁营销内容的工作流编排，涵盖配置与验证建议。
 keywords: 融资租赁、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

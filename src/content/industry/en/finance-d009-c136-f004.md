@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Precious Metals Research
-meta_description: Precious metals research report data comes primarily from public industry research reports, official market data from precious metals exchanges, and
+meta_description: Vector Models and Indexing for Precious Metals Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

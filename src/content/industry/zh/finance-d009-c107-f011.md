@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电力研报检索的文档解析与分块
-meta_description: 电力行业研报数据主要来自电力行业协会公开报告、上市电力企业定期报告、券商电力行业细分研报、国家电网及各地方电网披露的运行数据。更新节奏覆盖月度、季度及年度节
+meta_description: 电力研报检索的文档解析与分块：电力研报检索的文档解析与分块，涵盖配置与验证建议。
 keywords: 电力、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

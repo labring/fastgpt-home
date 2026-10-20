@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 整车营销内容的向量模型与索引
-meta_description: 整车营销内容的数据主要来自车型官方配置手册、经销商标准化营销话术、线上广告文案、用户试驾反馈与促销活动规则。数据更新无固定周期，随新车发布、配置调整、促销上
+meta_description: 整车营销内容的向量模型与索引：整车营销内容的向量模型与索引，涵盖配置与验证建议。
 keywords: 整车、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

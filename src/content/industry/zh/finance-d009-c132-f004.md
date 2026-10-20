@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 计算机设备研报检索的向量模型与索引
-meta_description: 计算机设备研报的数据主要来自券商金融行业分析报告、厂商技术白皮书、行业协会评测文档。更新节奏随厂商新品发布、季度行业数据更新调整，无固定周期但集中在季度末与
+meta_description: 计算机设备研报检索的向量模型与索引：计算机设备研报检索的向量模型与索引，涵盖配置与验证建议
 keywords: 计算机设备、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

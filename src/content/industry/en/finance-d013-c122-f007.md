@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Joint-Stock Bank Financing Daily
-meta_description: Data sources include joint-stock bank corporate credit ledger systems, interbank lending trading systems, and the People's Bank of China financial
+meta_description: Workflow Orchestration for Joint-Stock Bank Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

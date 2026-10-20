@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 固废处理营销内容的多轮对话与提示词
-meta_description: 固废处理相关营销内容的数据主要来自环卫清运台账、场站运营记录、垃圾分类咨询交互数据及行业合规公示文件。数据更新节奏覆盖每日、月度与年度：清运量、服务频次等运
+meta_description: 固废处理营销内容的多轮对话与提示词：固废处理营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 固废处理、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

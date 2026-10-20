@@ -4,8 +4,8 @@ slug: /zh/industry/finance-d008-c074-f001
 page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
-meta_title: 教育服务智能尽调报告的HTTP 接口与外部系统
-meta_description: 教育服务智能尽调报告的数据主要来自教育行政部门公示系统、机构自主提交的合规材料、第三方核验机构的实地核查记录。更新节奏随机构资质变更实时触发，常规合规核验按
+meta_title: 教育服务智能尽调报告的HTTP接口与外部系统
+meta_description: 教育服务智能尽调报告的HTTP接口与外部系统：教育服务智能尽调报告的HTTP接口与外部系统，涵盖配置与验证建议
 keywords: 教育服务、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

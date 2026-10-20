@@ -4,8 +4,8 @@ slug: /en/industry/finance-d014-c049-f005
 page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Dialogue and Prompt Engineering for
-meta_description: Infrastructure construction financial report data is sourced primarily from publicly disclosed periodic reports, special audit reports, and project
+meta_title: Multi-turn Dialogue and Prompt Engineering
+meta_description: Multi-turn Dialogue and Prompt Engineering for Infrastructure Construction Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学制药营销内容的文档解析与分块
-meta_description: 化学制药领域的营销内容文档，主要来源于药品注册申报资料、学术推广物料、临床研究摘要、区域合规宣传手册。数据更新随药品注册进度、学术会议发布节奏调整。文档多包
+meta_description: 化学制药营销内容的文档解析与分块：化学制药营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 化学制药、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

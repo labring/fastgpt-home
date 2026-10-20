@@ -4,8 +4,8 @@ slug: /en/industry/finance-d006-c031-f015
 page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
-meta_title: Deployment and Upgrade of Chemical Pharmaceutical Investment
-meta_description: Chemical pharmaceutical investment research data primarily comes from publicly available review materials from the National Medical Products
+meta_title: Deployment and Upgrade of Chemical Pharmaceutical
+meta_description: Deployment and Upgrade of Chemical Pharmaceutical Investment Research Knowledge Bases
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

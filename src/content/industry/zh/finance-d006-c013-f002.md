@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 保险投研知识库建设的上下文与 token
-meta_description: 保险投研数据主要来自行业研报、精算报告、银保监会监管公告、保险产品条款、行业协会月度统计数据。更新节奏随数据源类型差异较大，监管公告随发布即时更新，产品条款
+meta_description: 保险投研知识库建设的上下文与 token：保险投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 保险、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15
@@ -27,7 +27,7 @@ date_modified: 2026-09-15
 | `chunkSize` | `800–1200 字符` | 平衡长文本解析精度与token消耗，适配保险研报的专业术语与长句结构 |
 | `similarityTopK` | `前 6–8 条` | 满足多维度投研关联需求，避免过多召回占用过多token配额 |
 | `UPLOAD_FILE_MAX_SIZE` | `500 MB` | 支持批量上传保险年度报告合集，适配行业数据的批量处理场景 |
-| `workflow_context_enable` | `开启` | 适配FastGPT 4.9.7及以上版本，实现工作流内的多轮上下文关联 |
+仅作参考；请以目标 FastGPT 发布版本与部署文档核验。
 | `tokenQuotaPerRequest` | `2000–3000` | 预留足够token用于生成投研分析与引用来源，匹配专业回复的内容长度 |
 
 > 本页给出的参数取值均为常规建议，用于确定配置的起点。实际取值受材料形态、数据量与业务规则影响，具体问题需具体分析，建议在自有样本上实测后再定。

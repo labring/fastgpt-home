@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 统一入口一体化 AI 平台的模型接入与配置
-meta_description: 统一入口一体化AI平台的数据来源于金融机构的多业务系统，包括核心业务、理赔管理、客户服务、理财顾问等模块。数据分为结构化元数据与非结构化文件两类，结构化数据
+meta_description: 统一入口一体化 AI 平台的模型接入与配置：统一入口一体化 AI 平台的模型接入与配置，涵盖配置与验证建议
 keywords: 统一入口、一体化 AI 平台与多应用编排、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

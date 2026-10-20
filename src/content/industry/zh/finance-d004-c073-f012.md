@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 操作规程合规的模型接入与配置
-meta_description: 数据来源为内部合规部门整理的官方操作规程文档、监管要求转化的内部执行细则。文档随监管政策更新、内部流程调整不定期更新，更新后需同步至知识库。单份文档包含结构
+meta_description: 操作规程合规的模型接入与配置：操作规程合规的模型接入与配置，涵盖配置与验证建议。
 keywords: 操作规程、合规与内部制度问答、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

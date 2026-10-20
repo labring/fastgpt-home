@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 热力融资日报的工作流编排
-meta_description: 热力融资日报的数据来源包括区域热力企业内部运营系统、地方供热监管平台及合作金融机构的授信台账。数据更新节奏为每日固定时段生成前一自然日的完整报表，格式多为结
+meta_description: 热力融资日报的工作流编排：热力融资日报的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 热力、融资日报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

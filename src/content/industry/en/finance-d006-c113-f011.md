@@ -4,8 +4,8 @@ slug: /en/industry/finance-d006-c113-f011
 page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
-meta_title: Document Parsing and Chunking for Baijiu Investment Research
-meta_description: Baijiu industry investment research data originates from several sources: broker consumer sector reports, listed company periodic reports, public
+meta_title: Document Parsing and Chunking for Baijiu Investment
+meta_description: Document Parsing and Chunking for Baijiu Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

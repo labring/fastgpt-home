@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水产养殖财报分析的引用来源与溯源
-meta_description: 面向金融机构的水产养殖财报分析数据，来源包括农业农村部直属水产监测机构公开数据集、地方水产行业协会月度简报、上市养殖企业年度报告。更新节奏为月度简报每周更新
+meta_description: 水产养殖财报分析的引用来源与溯源：水产养殖财报分析的引用来源与溯源，涵盖配置与验证建议
 keywords: 水产养殖、财报分析与报告生成、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

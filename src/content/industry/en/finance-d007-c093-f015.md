@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Game Revenue Yield
-meta_description: Game revenue yield data is sourced from real-time revenue reporting APIs of game operation backends and compliant APIs of third-party game data
+meta_description: Deployment and Upgrade for Game Revenue Yield
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

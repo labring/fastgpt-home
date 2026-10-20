@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Home Goods Research Report
-meta_description: Data sources for home goods research reports include public securities firm light manufacturing industry research reports, home brand annual reports
+meta_description: Vector Models and Indexing for Home Goods Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

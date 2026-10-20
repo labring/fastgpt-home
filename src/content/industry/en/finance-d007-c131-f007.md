@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Decoration Industry Profit
-meta_description: Data for decoration industry profit margins and market trends comes from three sources: cost monitoring data released by industry associations, public
+meta_description: Workflow Orchestration for Decoration Industry Profit Margins
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

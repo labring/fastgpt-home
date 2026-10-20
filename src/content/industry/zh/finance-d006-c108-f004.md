@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电商服务投研知识库建设的向量模型与索引
-meta_description: 电商服务的投研数据主要来源于电商平台开放API、商家后台导出文件、行业监测爬虫。数据涵盖商品基础信息、用户评价、交易链路日志、营销活动规则等类型。商品文档包
+meta_description: 电商服务投研知识库建设的向量模型与索引：电商服务投研知识库建设的向量模型与索引，涵盖配置与验证建议
 keywords: 电商服务、投研知识库建设与治理、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

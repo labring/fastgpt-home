@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Model Integration and Configuration for Commercial Property
-meta_description: Commercial property marketing content data primarily comes from four sources: internal investment ledgers, venue detail pages, merchant onboarding
+meta_description: Model Integration and Configuration for Commercial Property Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

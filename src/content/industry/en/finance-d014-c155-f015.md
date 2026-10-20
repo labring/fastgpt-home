@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Feed Industry Financial Report
-meta_description: Feed industry financial report data comes primarily from publicly filed periodic reports of listed feed enterprises, and monthly raw material supply
+meta_description: Deployment and Upgrade for Feed Industry Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

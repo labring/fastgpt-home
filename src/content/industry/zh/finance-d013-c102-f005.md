@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 特钢融资日报的多轮对话与提示词
-meta_description: 特钢融资日报的数据来源于国内特钢行业供应链金融平台、商业银行对公信贷系统、地方钢铁产业园区的融资备案数据。更新节奏为每日更新，当日18:00前完成当日融资数
+meta_description: 特钢融资日报的多轮对话与提示词：特钢融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 特钢、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

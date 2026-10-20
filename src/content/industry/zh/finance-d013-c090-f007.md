@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 涂料油墨融资日报的工作流编排
-meta_description: 涂料油墨融资日报的数据来源涵盖行业协会公开统计、上市及非上市企业融资公告披露、供应链金融平台的企业融资动态。数据更新节奏为工作日每日汇总，非工作日无更新。文
+meta_description: 涂料油墨融资日报的工作流编排：涂料油墨融资日报的工作流编排，涵盖配置与验证建议。
 keywords: 涂料油墨、融资日报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

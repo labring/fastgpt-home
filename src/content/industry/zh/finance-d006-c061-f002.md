@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程机械投研知识库建设的上下文与 token
-meta_description: 数据源来自工程机械整机制造商公开的产品技术规格书、工况运行监测日志、行业协会发布的设备保有量数据、招投标项目的设备参数公示、售后运维的故障报告。产品技术手册
+meta_description: 工程机械投研知识库建设的上下文与 token：工程机械投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 工程机械、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 保障责任保险理赔初审的工具调用与插件
-meta_description: 保障责任的数据主要来源于保险核心业务系统的产品报备条款、投保时录入的保单约定，以及理赔阶段上传的诊断证明、事故认定书等附件解析内容。数据更新节奏为触发式，仅
+meta_description: 保障责任保险理赔初审的工具调用与插件：保障责任保险理赔初审的工具调用与插件，涵盖配置与验证建议
 keywords: 保障责任、保险理赔初审、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

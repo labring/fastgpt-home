@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 文娱用品营销内容的模型接入与配置
-meta_description: 文娱用品的营销相关数据主要来源于品牌方商品管理系统、电商平台SPU库、用户种草内容库与线下销售台账。数据更新节奏随新品上线、库存变动、营销活动调整，新品数据
+meta_description: 文娱用品营销内容的模型接入与配置：文娱用品营销内容的模型接入与配置，涵盖配置与验证建议
 keywords: 文娱用品、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -4,8 +4,8 @@ slug: /en/industry/finance-d011-c038-f015
 page_type: Industry scenario page
 article_section: In-App Natural Language Search
 is_part_of: FastGPT Tech Center
-meta_title: Deployment and Upgrade for In-App Natural Language Search of
-meta_description: Historical query record data is sourced from natural language search request logs initiated by end users, covering various query interactions in
+meta_title: Deployment and Upgrade for In-App Natural Language Search
+meta_description: Deployment and Upgrade for In-App Natural Language Search of Historical Query Records
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

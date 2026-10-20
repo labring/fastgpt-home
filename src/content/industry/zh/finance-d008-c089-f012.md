@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油气开采智能尽调报告的模型接入与配置
-meta_description: 油气开采智能尽调报告的数据来源包括钻井作业实时采集系统、油气田生产台账、第三方油气资源评估机构报告、环保合规检测文件。更新节奏方面，实时生产数据每小时更新，
+meta_description: 油气开采智能尽调报告的模型接入与配置：油气开采智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 油气开采、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

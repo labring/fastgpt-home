@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电子元件投研知识库建设的向量模型与索引
-meta_description: 电子元件投研数据主要来源于原厂官方datasheet、行业协会标准文档、供应链平台报价数据、券商投研报告。原厂datasheet更新节奏相对稳定，随新品发布
+meta_description: 电子元件投研知识库建设的向量模型与索引：电子元件投研知识库建设的向量模型与索引，涵盖配置与验证建议
 keywords: 电子元件、投研知识库建设与治理、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

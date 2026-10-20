@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Chemical Pharmaceutical
-meta_description: Marketing content for chemical pharmaceuticals is used by financial insurance and wealth management institutions to create materials for chemical
+meta_description: Tool Calling and Plugins for Chemical Pharmaceutical Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -40,11 +40,11 @@ Individual marketing documents are lengthy. The tool calling context window must
 ## Three Common Mistakes
 - Issue: When using the Doc2x plugin to process uploaded chemical pharmaceutical documents, extracted dosage units are missing. Cause: The unit retention option was not enabled in the plugin configuration, and only numerical content was extracted.
 - Issue: After generating marketing content via FastGPT API calls, the associated knowledge base document file name for this call is not returned. Cause: The source file return parameter was not configured in the API request, or the knowledge base source file storage switch was not enabled.
-- Issue: In FastGPT version 4.8.14, the <Reference> tag in the System prompt does not populate with knowledge base recalled content. Cause: Knowledge base recalled context was not correctly injected into the corresponding placeholder position in the System prompt, resulting in incomplete template replacement.
+- Issue: In FastGPT version 4.8.14, the <Reference> tag in the System prompt does not populate with knowledge base recalled content. Cause: Knowledge base recalled context was not correctly injected into the corresponding pending verification position in the System prompt, resulting in incomplete template replacement.
 
 ## How to Verify Proper Configuration
 - Upload a chemical pharmaceutical marketing document containing structured fields, wait for parsing to complete, then check if the extracted fields in the knowledge base management interface include exclusive content such as generic drug names and registration certificate numbers.
-- Initiate a knowledge base call test, check if the <Reference> placeholder in the System prompt has been populated with recalled document content.
+- Initiate a knowledge base call test, check if the <Reference> pending verification in the System prompt has been populated with recalled document content.
 - Call the tool to generate marketing content, confirm if the returned result is associated with the knowledge base document file name used for this call (if source file return was configured).
 - Use the Doc2x plugin to process a single document, check if the structured data output by the plugin includes preset dosage units and compliance boundary fields.
 

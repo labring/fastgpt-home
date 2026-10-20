@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Database and Operations for Hotel and Catering Yield Rates
-meta_description: Data related to hotel and catering yield rates primarily comes from store POS terminals, back-of-house inventory management systems, and room
+meta_description: Database and Operations for Hotel and Catering Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

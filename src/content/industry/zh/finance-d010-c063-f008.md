@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 废标项竞价的工具调用与插件
-meta_description: 废标项数据来源于政府采购公共服务平台、各行业招投标官方发布渠道，每日同步更新最新作废的竞价与投标项目。单条数据包含项目编号、项目名称、废标原因说明、原招标公
+meta_description: 废标项竞价的工具调用与插件：废标项竞价的工具调用与插件，涵盖配置与验证建议。。。
 keywords: 废标项、竞价与投标报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

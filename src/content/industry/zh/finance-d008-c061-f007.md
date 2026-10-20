@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程机械智能尽调报告的工作流编排
-meta_description: 工程机械尽调相关数据主要来自出厂合格证、月度运维日志、季度第三方检测报告、设备租赁台账四类来源，更新节奏以月度、季度为单位。文档多为多页PDF格式，包含结构
+meta_description: 工程机械智能尽调报告的工作流编排：工程机械智能尽调报告的工作流编排，涵盖配置与验证建议
 keywords: 工程机械、智能尽调报告、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

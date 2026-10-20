@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦煤财报分析的文档解析与分块
-meta_description: 焦煤相关财报数据主要来自上市煤企公开披露的定期报告、行业协会发布的供需简报、期货交易所交割仓单数据。更新节奏为定期报告按季度、年度固定更新，行业简报按月度更
+meta_description: 焦煤财报分析的文档解析与分块：焦煤财报分析的文档解析与分块，涵盖配置与验证建议。
 keywords: 焦煤、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 耐火材料融资日报的模型接入与配置
-meta_description: 耐火材料融资日报的数据主要来自行业协会公开公示、产业园区融资备案系统、企业工商变更公示及大宗商品交易平台的融资相关披露信息。每日更新单条记录，单份日报文档包
+meta_description: 耐火材料融资日报的模型接入与配置：耐火材料融资日报的模型接入与配置，涵盖配置与验证建议
 keywords: 耐火材料、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 家居用品智能尽调报告的工作流编排
-meta_description: 家居用品的核心数据来自轻工制造行业协会公开监测数据集、品牌方官方SKU档案、第三方质检机构的批次检测报告、主流电商平台的实时销售与评价数据。更新节奏为SKU
+meta_description: 家居用品智能尽调报告的工作流编排：家居用品智能尽调报告的工作流编排，涵盖配置与验证建议
 keywords: 家居用品、智能尽调报告、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

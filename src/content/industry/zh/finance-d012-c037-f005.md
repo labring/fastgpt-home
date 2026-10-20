@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 卫星通信营销内容的多轮对话与提示词
-meta_description: 卫星通信在金融保险领域的营销内容相关数据，主要来自地面站交互日志、终端设备上报的信号参数、营销触达的用户交互记录三类。数据更新节奏为准实时，部分高优先级终端
+meta_description: 卫星通信营销内容的多轮对话与提示词：卫星通信营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 卫星通信、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

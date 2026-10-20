@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商业地产收益率的模型接入与配置
-meta_description: 商业地产收益率相关数据主要来源于不动产运营管理系统、产权交易备案平台、区域商业业态监测数据库。核心数据更新节奏分为两类：租金类数据按月更新，估值类数据按季度
+meta_description: 商业地产收益率的模型接入与配置：商业地产收益率的模型接入与配置，涵盖配置与验证建议
 keywords: 商业地产、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

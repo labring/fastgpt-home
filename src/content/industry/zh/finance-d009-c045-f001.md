@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商用车研报检索的HTTP 接口与外部系统
-meta_description: 商用车研报数据来源为国内商用车行业协会、车企公开公告、专业咨询机构的细分研究文档。更新节奏以月度、季度周期为主，伴随行业政策调整发布临时补充内容。文档结构包
+meta_description: 商用车研报检索的HTTP 接口与外部系统：商用车研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 商用车、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

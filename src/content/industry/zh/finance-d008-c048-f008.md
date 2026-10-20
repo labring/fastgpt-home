@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 城商行智能尽调报告的工具调用与插件
-meta_description: 城商行智能尽调报告的数据来源包括城商行内部经营台账、地方金融监管局公开披露的监管信息、合作授信机构的往来数据，以及第三方征信机构的主体信用数据。数据更新节奏
+meta_description: 城商行智能尽调报告的工具调用与插件：城商行智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 城商行、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

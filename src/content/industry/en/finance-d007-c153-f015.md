@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c153-f015
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: Deployment and Upgrade for Wind Power Yield and Market Daily
-meta_description: Wind power yield and market daily report data comes primarily from three sources: grid settlement data from provincial power trading platforms, power
+meta_title: Deployment and Upgrade for Wind Power Yield and Market
+meta_description: Deployment and Upgrade for Wind Power Yield and Market Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

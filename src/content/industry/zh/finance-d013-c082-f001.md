@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水产养殖融资日报的HTTP 接口与外部系统
-meta_description: 水产养殖融资日报的数据来源为养殖主体提交的融资申请台账、属地农业农村部门的水产专项补贴申报系统、合作银行的放款流水。更新节奏为每日凌晨更新前一日全量数据。单
+meta_description: 水产养殖融资日报的HTTP 接口与外部系统：水产养殖融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 水产养殖、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 储能收益率的数据库与运维
-meta_description: 储能收益率日报的数据主要来自两类源头：储能电站本地SCADA采集系统的充放电运行数据，以及区域电网公开的电力交易市场行情数据。数据更新节奏为每日一次，于次日
+meta_description: 储能收益率的数据库与运维：储能收益率的数据库与运维，涵盖配置与验证建议。。。。。
 keywords: 储能、收益率与行情日报播报、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

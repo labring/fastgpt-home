@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水处理营销内容的HTTP 接口与外部系统
-meta_description: 水处理营销内容的数据主要来自企业内部物联网监测平台、合规数据库及产品管理系统。实时类数据如水质达标记录每15分钟更新一次，静态类如设备选型手册、客户案例摘要
+meta_description: 水处理营销内容的HTTP 接口与外部系统：水处理营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 水处理、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

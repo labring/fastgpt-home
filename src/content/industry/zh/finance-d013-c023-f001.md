@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 军工电子融资日报的HTTP 接口与外部系统
-meta_description: 军工电子融资日报的数据来源为国防军工行业的官方披露平台、行业协会融资监测系统及公开招投标关联信息。数据更新节奏为每日更新，覆盖前一自然日的军工电子领域企业融
+meta_description: 军工电子融资日报的HTTP 接口与外部系统：军工电子融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 军工电子、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -4,8 +4,8 @@ slug: /en/industry/finance-d014-c119-f008
 page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
-meta_title: Tool Calling and Plugins for Comprehensive Service Financial
-meta_description: Comprehensive service category financial report data mainly comes from public disclosure documents of domestic and overseas stock exchanges
+meta_title: Tool Calling and Plugins for Comprehensive Service
+meta_description: Tool Calling and Plugins for Comprehensive Service Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

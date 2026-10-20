@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interfaces and External Systems for Optical Module
-meta_description: Optical module research report data primarily comes from third-party financial research institutions in the communications industry, public technical
+meta_description: HTTP Interfaces and External Systems for Optical Module Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

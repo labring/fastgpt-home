@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 免税财报分析的向量模型与索引
-meta_description: 免税品类的财报数据主要来自上市免税企业的公开披露公告、年度及季度报告，以及月度经营简报。数据更新节奏为年度完整财报每财年结束后发布，季度财报每季度结束后1-
+meta_description: 免税财报分析的向量模型与索引：免税财报分析的向量模型与索引，涵盖配置与验证建议。
 keywords: 免税、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

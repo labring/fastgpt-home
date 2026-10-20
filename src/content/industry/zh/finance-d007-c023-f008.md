@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 军工电子收益率的工具调用与插件
-meta_description: 军工电子领域的收益率数据来源包括国防军工行业协会公开监测数据、军工电子细分领域上市公司公开披露信息、专业金融数据服务机构的板块行情快照。更新节奏分为三类：板
+meta_description: 军工电子收益率的工具调用与插件：军工电子收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 军工电子、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

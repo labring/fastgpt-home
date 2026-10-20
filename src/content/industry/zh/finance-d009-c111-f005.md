@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 畜禽养殖研报检索的多轮对话与提示词
-meta_description: 数据来源包括农业农村部畜牧兽医局公开监测数据、行业协会周度调研结果、券商农林牧渔团队专项研报、规模化养殖企业季度经营披露。更新节奏为行业监测数据按周更新，券
+meta_description: 畜禽养殖研报检索的多轮对话与提示词：畜禽养殖研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 畜禽养殖、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

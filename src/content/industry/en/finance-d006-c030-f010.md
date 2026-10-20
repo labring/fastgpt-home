@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Database and Operations for Cosmetic Investment Research
-meta_description: Cosmetic investment research data mainly comes from official brand filing documents, ingredient test reports, e-commerce platform user reviews
+meta_description: Database and Operations for Cosmetic Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -26,7 +26,7 @@ In addition, the sensitivity of cosmetic investment research data requires stric
 ## Configuration settings
 | Configuration Item | Recommended Value | Rationale |
 | --- | --- | --- |
-| `MONGO_CONNECTION_STRING` | `mongodb://fastgpt:cosmetic123@localhost:27017/fastgpt_cosmetic?authSource=admin` | Compatible with FastGPT v4.15 version. Cosmetic investment research data requires a dedicated database instance. Specify the authentication source and database name to avoid mixing with other business data |
+Reference only; verify against the target FastGPT release and deployment documentation.
 | `UPLOAD_FILE_MAX_SIZE` | `1000 MB` | Cosmetic filing reports and ingredient test reports are often large PDF or Excel files, so large file upload support is required |
 | `PARSE_FILE_TIMEOUT_SECONDS` | `300 seconds` | Cosmetic ingredient analysis documents have long content, so sufficient time is needed for OCR recognition and structured extraction |
 | `RECALL_TOP_K` | `Top 8 entries` | Cosmetic investment research requires retrieval results covering multiple dimensions including ingredients, compliance, and user feedback. Too many results will increase retrieval time |

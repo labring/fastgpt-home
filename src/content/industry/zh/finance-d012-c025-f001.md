@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 农商行营销内容的HTTP 接口与外部系统
-meta_description: 农商行的营销内容数据主要来源于内部客群管理系统、本地政务商户备案库及网点线下收集的客群信息。数据结构包含客户户籍乡镇编码、绑定网点ID、营销素材模板、适配客
+meta_description: 农商行营销内容的HTTP 接口与外部系统：农商行营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 农商行、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

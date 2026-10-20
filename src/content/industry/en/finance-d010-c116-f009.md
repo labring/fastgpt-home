@@ -4,8 +4,8 @@ slug: /en/industry/finance-d010-c116-f009
 page_type: Industry scenario page
 article_section: Bidding and Tender Reports
 is_part_of: FastGPT Tech Center
-meta_title: Reference Sources and Traceability for Competitor Quote and
-meta_description: Competitor quote data sources typically include public bidding platforms, compliance disclosure documents released by industry associations, and
+meta_title: Reference Sources and Traceability for Competitor Quote
+meta_description: Reference Sources and Traceability for Competitor Quote and Bidding Data
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

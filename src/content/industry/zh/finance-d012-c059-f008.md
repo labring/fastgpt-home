@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工业金属营销内容的工具调用与插件
-meta_description: 工业金属的数据来源包括公开现货交易平台、行业库存监测数据库及期货交易所行情接口。更新节奏为：现货价格每小时更新，库存数据每工作日更新，期货行情每5分钟更新。
+meta_description: 工业金属营销内容的工具调用与插件：工业金属营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 工业金属、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

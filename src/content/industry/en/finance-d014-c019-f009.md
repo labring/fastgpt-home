@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Citation Source and Traceability for Duty-Free Financial
-meta_description: Duty-free category financial report data primarily comes from periodic reports of listed companies disclosed by domestic and overseas stock exchanges
+meta_description: Citation Source and Traceability for Duty-Free Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -24,7 +24,7 @@ The segmented business fields of duty-free financial reports differ from general
 | --- | --- | --- |
 | `Recall Count` | Top 8 entries | Duty-free financial reports contain segmented business paragraphs. Too many recalls will introduce irrelevant data, while too few will lose valid business information |
 | `Similarity Threshold` | 0.75–0.85 | Duty-free business-specific keywords have high recognition. A threshold that is too low will retrieve irrelevant financial report paragraphs, while a threshold that is too high will miss valid content |
-| `Citation Template` | `{{content}} (Source: {{source}}, Disclosure Date: {{publish_date}}, Reporting Period: {{report_period}})` | Must clearly mark the source, disclosure time, and reporting cycle of duty-free financial reports to meet traceability requirements |
+| `Traceability details` | `the configured value (the configured source field, the configured disclosure-date field, the configured reporting-period field)` | Must clearly mark the source, disclosure time, and reporting cycle of duty-free financial reports to meet traceability requirements |
 | `PARSE_FILE_TIMEOUT_SECONDS` | 300 seconds | Duty-free financial report documents have long lengths, requiring sufficient parsing time to avoid timeout failures |
 | `Segment Length` | 800–1200 characters | Financial report paragraphs are long. Segmentation retains contextual associations to avoid losing business logic after splitting |
 | `Reranked Return Count` | Top 3 entries | Prioritize displaying the most relevant duty-free business data, avoiding excessive content that interferes with responses |
@@ -32,7 +32,7 @@ The segmented business fields of duty-free financial reports differ from general
 The parameter values provided on this page are common starting points for configuration. Actual values are influenced by material format, data volume, and business rules. Specific scenarios require tailored analysis. Testing on local samples is recommended before finalizing settings.
 
 ## Three Common Mistakes
-- Phenomenon: After configuring a custom citation template, no traceability information is displayed at the end of the response paragraph. Cause: The `Enable Citation` function switch is not activated, or the citation template does not include required placeholders such as {{source}} and {{publish_date}}.
+- Phenomenon: After configuring a custom citation template, no traceability information is displayed at the end of the response paragraph. Cause: The `Enable Citation` function switch is not activated, or the citation template does not include required placeholders such as example value and example value.
 - Phenomenon: A `504 Gateway Timeout` error may occur when parsing duty-free financial reports. Recommended adjustment: Tune relevant thresholds based on statistics or testing of local samples. Cause: The value set for `PARSE_FILE_TIMEOUT_SECONDS` is lower than the time required for document parsing.
 - Phenomenon: Non-duty-free business financial report data is included in responses. Cause: The `Similarity Threshold` is set below 0.7, or recall keywords dedicated to duty-free business fields are not configured.
 

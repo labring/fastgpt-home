@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水泥营销内容的向量模型与索引
-meta_description: 水泥的营销内容数据主要来自企业产品手册、经销商培训课件、线下推广物料、招投标技术文档与区域指导价公示。数据更新节奏随产品配方调整、区域市场政策变动不定期触发
+meta_description: 水泥营销内容的向量模型与索引：水泥营销内容的向量模型与索引，涵盖配置与验证建议。
 keywords: 水泥、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

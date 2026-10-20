@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Infrastructure
-meta_description: Data for infrastructure construction financial report analysis comes from audited annual and semi-annual reports of listed companies, special
+meta_description: Document Parsing and Chunking for Infrastructure Construction Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

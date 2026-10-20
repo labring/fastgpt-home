@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程机械收益率的模型接入与配置
-meta_description: 工程机械收益率相关数据主要来源于设备厂商运维后台、工程租赁平台台账、工程结算系统三类渠道。单日作业数据每日更新，包含单台设备的作业时长、台班单价、燃油消耗、
+meta_description: 工程机械收益率的模型接入与配置：工程机械收益率的模型接入与配置，涵盖配置与验证建议
 keywords: 工程机械、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化妆品财报分析的部署与升级
-meta_description: 化妆品品类的财报数据来源包括品牌方公开披露的定期报告、行业零售监测数据集、品牌线下门店运营台账。更新节奏以季度定期更新、年度全面更新为主，临时促销数据随对应
+meta_description: 化妆品财报分析的部署与升级：化妆品财报分析的部署与升级，涵盖配置与验证建议。。。
 keywords: 化妆品、财报分析与报告生成、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

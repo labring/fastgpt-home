@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 广告营销融资日报的知识库检索与召回
-meta_description: 广告营销融资日报的数据来源包括公开融资披露公告、广告代理机构的内部投放日报、媒体平台的刊例调整报表。数据每日更新，为当日汇总的广告营销领域融资相关信息。文档
+meta_description: 广告营销融资日报的知识库检索与召回：广告营销融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 广告营销、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

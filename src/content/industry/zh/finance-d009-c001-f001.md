@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: IT 服务研报检索的HTTP 接口与外部系统
-meta_description: IT服务类研报数据主要来自券商计算机行业研究报告、第三方行业数据库的IT细分赛道公开研报。更新节奏随研报发布动态同步，新发布研报实时入库，存量研报按季度归档
+meta_description: IT 服务研报检索的HTTP 接口与外部系统：IT 服务研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: IT 服务、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

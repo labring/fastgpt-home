@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 教育服务研报检索的文档解析与分块
-meta_description: 金融行业内教育服务领域的研报数据主要来源于教育行业研究机构、金融机构发布的教育赛道分析、政策发布平台、院校公开报告及教培企业公开文档。更新节奏随政策动态与行
+meta_description: 教育服务研报检索的文档解析与分块：教育服务研报检索的文档解析与分块，涵盖配置与验证建议
 keywords: 教育服务、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 钢铁贸易营销内容的工作流编排
-meta_description: 钢铁贸易面向金融机构的营销核心数据，多来自合作钢材贸易商的ERP进销存系统、现货交易平台台账、企业授信记录与客户询盘记录。数据更新节奏差异明显：现货报价按日
+meta_description: 钢铁贸易营销内容的工作流编排：钢铁贸易营销内容的工作流编排，涵盖配置与验证建议。
 keywords: 钢铁贸易、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

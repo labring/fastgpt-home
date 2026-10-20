@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物业管理智能尽调报告的部署与升级
-meta_description: 物业管理智能尽调报告的数据主要来自物业项目的运维台账、公共设施巡检记录、业主报修档案、专项维修资金明细、物业费收缴记录。数据更新节奏分两类：日常巡检、报修记
+meta_description: 物业管理智能尽调报告的部署与升级：物业管理智能尽调报告的部署与升级，涵盖配置与验证建议
 keywords: 物业管理、智能尽调报告、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

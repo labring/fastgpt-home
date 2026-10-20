@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油服工程研报检索的HTTP 接口与外部系统
-meta_description: 油服工程研报的数据来源涵盖国内油气勘探开发相关行业研究机构、油服企业内部技术档案、公开的油气工程技术报告。更新节奏分为三类：重大项目研报随施工节点即时更新，
+meta_description: 油服工程研报检索的HTTP 接口与外部系统：油服工程研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 油服工程、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

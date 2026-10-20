@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程咨询营销内容的部署与升级
-meta_description: 工程咨询的数据源主要来自项目归档文件、招投标技术需求书、行业合规规范文档及过往咨询交付成果。数据更新节奏随项目周期调整，中标后更新项目专属参数，年度同步最新
+meta_description: 工程咨询营销内容的部署与升级：工程咨询营销内容的部署与升级，涵盖配置与验证建议。
 keywords: 工程咨询、营销内容与获客、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

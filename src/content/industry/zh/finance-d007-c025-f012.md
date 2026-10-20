@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 农商行收益率的模型接入与配置
-meta_description: 农商行收益率与行情日报的数据来源于本行核心业务系统的当日交易流水与资产台账，更新节奏为每日日终后完成汇总，次一工作日上午生成正式文档。文档结构为按统计周期分
+meta_description: 农商行收益率的模型接入与配置：农商行收益率的模型接入与配置，涵盖配置与验证建议。
 keywords: 农商行、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 计算机设备融资日报的工作流编排
-meta_description: 计算机设备融资日报的数据来源为企业固定资产管理系统、采购审批系统及合作金融机构的授信台账。更新节奏为每日凌晨同步前一工作日的全量数据。单份日报文档包含设备唯
+meta_description: 计算机设备融资日报的工作流编排：计算机设备融资日报的工作流编排，涵盖配置与验证建议
 keywords: 计算机设备、融资日报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

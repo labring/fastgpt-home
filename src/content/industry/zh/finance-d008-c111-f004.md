@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 畜禽养殖智能尽调报告的向量模型与索引
-meta_description: 畜禽养殖智能尽调的数据主要来自养殖主体的日常养殖台账、动物检疫合格证明、出栏结算单据、养殖环境监测日志。更新节奏随养殖周期调整，批次出栏前每日更新存栏、饲料
+meta_description: 畜禽养殖智能尽调报告的向量模型与索引：畜禽养殖智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 畜禽养殖、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

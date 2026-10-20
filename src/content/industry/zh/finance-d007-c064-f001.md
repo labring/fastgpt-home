@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 影视院线收益率的HTTP 接口与外部系统
-meta_description: 影视院线的收益率数据主要来自院线内部POS结算系统、第三方影视数据服务接口，更新节奏为每日营业结束后1至2小时内完成当日数据同步。单条数据文档包含影院编码、
+meta_description: 影视院线收益率的HTTP 接口与外部系统：影视院线收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 影视院线、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

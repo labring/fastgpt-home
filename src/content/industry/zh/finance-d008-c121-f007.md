@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 耐火材料智能尽调报告的工作流编排
-meta_description: 耐火材料智能尽调报告的数据主要来自原料批次质检单、窑炉运行日志、成品性能检测报告三类数据源。数据更新节奏随生产批次变动，单批次报告生成周期为1-3个工作日。
+meta_description: 耐火材料智能尽调报告的工作流编排：耐火材料智能尽调报告的工作流编排，涵盖配置与验证建议
 keywords: 耐火材料、智能尽调报告、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

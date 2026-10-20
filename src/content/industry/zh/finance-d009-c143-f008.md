@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 软件开发研报检索的工具调用与插件
-meta_description: 软件开发相关研报的数据源主要包含专业科技领域证券研究报告、开源技术社区发布的技术白皮书、行业标准组织的技术演进文档。更新节奏随数据源类型差异明显，证券研报多
+meta_description: 软件开发研报检索的工具调用与插件：软件开发研报检索的工具调用与插件，涵盖配置与验证建议
 keywords: 软件开发、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

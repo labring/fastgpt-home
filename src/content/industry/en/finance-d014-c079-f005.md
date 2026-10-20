@@ -4,8 +4,8 @@ slug: /en/industry/finance-d014-c079-f005
 page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Dialogue and Prompt Engineering for General Steel
-meta_description: General steel financial report data primarily comes from periodic reports and temporary announcements of listed companies disclosed on the Shanghai
+meta_title: Multi-turn Dialogue and Prompt Engineering for General
+meta_description: Multi-turn Dialogue and Prompt Engineering for General Steel Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

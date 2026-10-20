@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 消费建材营销内容的部署与升级
-meta_description: 在金融行业的家装分期、家居理财等消费建材营销获客场景中，相关营销数据来源包含品牌方官方产品手册、经销商报备的库存与报价清单、线上电商平台的商品详情页，以及线
+meta_description: 消费建材营销内容的部署与升级：消费建材营销内容的部署与升级，涵盖配置与验证建议。
 keywords: 消费建材、营销内容与获客、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

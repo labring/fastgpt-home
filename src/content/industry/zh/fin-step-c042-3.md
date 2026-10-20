@@ -4,8 +4,8 @@ slug: /zh/industry/fin-step-c042-3
 page_type: 行业作业环节页
 article_section: 财富管理
 is_part_of: FastGPT 技术中心
-meta_title: 私人银行综合财富管理的协调多家产品提供方的适当性、合同：哪一
-meta_description: 私人银行综合财富管理的协调多家产品提供方的适当性、合同：哪一部分能交给系统
+meta_title: 私人银行综合财富管理的协调多家产品提供方的适当性、合同：哪一部分能交给系统
+meta_description: 私人银行综合财富管理的协调多家产品提供方的适当性、合同：哪一部分能交给系统：私人银行综合财富管理的协调多家产品提供方的适当性、合同：哪一部分能交给系统，涵盖配置与验证建议
 keywords: 私人银行综合财富管理、财富管理、环节3
 source_type: 金融业务分类与作业事实取自行业研究报告（含监管文件来源编号）
 date_published: 2026-09-15

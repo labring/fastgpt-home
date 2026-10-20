@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Citation Source and Traceability for E-commerce Service
-meta_description: E-commerce service research report data mainly comes from e-commerce platform official operation backends, public analysis documents from third-party
+meta_description: Citation Source and Traceability for E-commerce Service Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

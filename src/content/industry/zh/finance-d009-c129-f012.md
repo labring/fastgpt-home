@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 融资租赁研报检索的模型接入与配置
-meta_description: 融资租赁研报数据主要来自租赁公司内部业务台账、行业协会季度披露报告、监管部门月度报送文件。单份文档多为结构化表格形式，包含项目编号、承租人主体信息、租赁物原
+meta_description: 融资租赁研报检索的模型接入与配置：融资租赁研报检索的模型接入与配置，涵盖配置与验证建议
 keywords: 融资租赁、研报检索与问答、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

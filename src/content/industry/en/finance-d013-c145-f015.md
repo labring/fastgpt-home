@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Telecommunications Equipment
-meta_description: Telecommunications equipment financing daily report data is primarily sourced from national public resource trading platforms, internal centralized
+meta_description: Deployment and Upgrade for Telecommunications Equipment Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -34,7 +34,7 @@ The requirements for pulling multi-source data, cleaning field differences, and 
 
 ## Three Common Configuration Mistakes
 - After upgrading to version 4.9, calling the model interface returns `500 Internal Server Error`, with a prompt that model configuration fields are missing. Cause: The upgrade script did not synchronously update the environment variable configurations associated with the model, resulting in original configuration items being overwritten or not loaded.
-- Executing the command `curl --location --request POST 'https://{{host}}/api/admin/initv490'` returns `403 Forbidden`. Cause: No administrator API key is configured, or the key has insufficient permissions to execute the initialization upgrade interface.
+- Executing the command `curl --location --request POST 'https://example value/api/admin/initv490'` returns `403 Forbidden`. Cause: No administrator API key is configured, or the key has insufficient permissions to execute the initialization upgrade interface.
 - The "winning bid amount" field in the generated financing daily report is empty. Cause: The `DATA_FIELD_MAPPING` parameter is not configured, and no adaptation is made for field naming differences across data sources, resulting in the cleaning logic failing to match the corresponding data.
 
 ## How to Verify Successful Configuration

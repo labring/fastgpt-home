@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Citation Source and Traceability for Livestock and Poultry
-meta_description: Livestock and poultry farming investment research data is sourced from the Ministry of Agriculture and Rural Affairs official monitoring platform
+meta_description: Citation Source and Traceability for Livestock and Poultry Farming Investment Research Knowledge Base
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -26,7 +26,7 @@ The multi-source and multi-update-cycle nature of livestock and poultry farming 
 | `similarity threshold` | `0.72–0.85` | Livestock and poultry farming investment research questions often involve specialized terminology. A threshold that is too low will introduce irrelevant feed or disease data, while a threshold that is too high may miss valid information in the same field |
 | `PARSE_FILE_TIMEOUT_SECONDS` | `600 seconds` | Parsing large satellite image documents or batch structured reports takes significant time. 600 seconds covers most long document processing scenarios |
 | `segment length` | `800–1200 characters` | Most livestock and poultry farming documents mix structured tables and text. This segment length preserves field context and avoids losing field association relationships after splitting |
-| `citation display format` | `{{doc.source}} | {{doc.createTime}} | {{doc.title}}` | Investment research scenarios require clear traceability of data sources, times, and document titles. This format directly matches the reading habits of investment research personnel |
+| `citation display format` | `example value | example value | example value` | Investment research scenarios require clear traceability of data sources, times, and document titles. This format directly matches the reading habits of investment research personnel |
 | `workflow knowledge base search node variable binding` | `dynamic parameters passed via API request body` | Livestock and poultry farming investment research often requires switching between dedicated knowledge bases for different categories. Dynamic variable binding enables flexible invocation |
 
 > The parameter values provided on this page are common starting points for configuration. Actual values are affected by material format, data volume, and business rules. Specific issues require case-by-case analysis. It is recommended to test on your own samples before finalizing settings.

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁矿石营销内容的HTTP 接口与外部系统
-meta_description: 铁矿石营销相关的数据主要来源于大宗商品现货交易平台公开行情接口、海关进口统计接口及港口装卸调度数据接口。数据更新节奏按类型区分：现货报价每15至30分钟推送
+meta_description: 铁矿石营销内容的HTTP 接口与外部系统：铁矿石营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 铁矿石、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15
@@ -26,7 +26,7 @@ date_modified: 2026-09-15
 | `api_request_interval` | `15 分钟`（现货行情）、`1440 分钟`（港口库存） | 匹配对应品类数据的实际更新频率，平衡数据时效性与接口调用成本 |
 | `api_filter_params` | `{"grade": ["62% Fe", "65% Fe"], "origin": ["Australia", "Brazil"]}` | 聚焦铁矿石营销中最常见的主流品位与核心产地，缩小返回数据范围 |
 | `response_parse_field_map` | `{"spot_price": "price", "update_at": "update_time"}` | 统一不同外部接口的字段命名差异，确保内部数据处理的一致性 |
-| `webhook_payload_template` | `{"product": "{{symbol}}", "grade": "{{grade}}", "price": "{{price}}", "update_time": "{{update_time}}"}` | 标准化营销内容的输出格式，适配后续推广素材的生成需求 |
+| `webhook_payload_template` | `{"product": "待核验值", "grade": "待核验值", "price": "待核验值", "update_time": "待核验值"}` | 标准化营销内容的输出格式，适配后续推广素材的生成需求 |
 | `api_timeout` | `30 秒` | 预留足够的响应时间以拉取多组铁矿石行情数据，避免因超时导致拉取失败 |
 | `retry_max_times` | `3 次` | 应对外部接口的临时波动，少量重试可提升数据拉取的成功率 |
 

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 计算机设备收益率的多轮对话与提示词
-meta_description: 这个品类的数据来自企业IT资产管理系统、云服务商设备计费API及硬件厂商运维数据平台。日度行情数据每日固定时段生成，实时运行数据每10分钟同步一次。单条数据
+meta_description: 计算机设备收益率的多轮对话与提示词：计算机设备收益率的多轮对话与提示词，涵盖配置与验证建议
 keywords: 计算机设备、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

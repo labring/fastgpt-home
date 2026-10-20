@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 乳制品收益率的部署与升级
-meta_description: 面向金融理财场景的乳制品收益率与行情日报的数据主要来自农业农村部畜牧兽医局区域生鲜乳监测数据、第三方零售终端价格采集平台及头部乳企公开的供货指导价。数据更新
+meta_description: 乳制品收益率的部署与升级：乳制品收益率的部署与升级，涵盖配置与验证建议。。。。。
 keywords: 乳制品、收益率与行情日报播报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15
@@ -28,7 +28,7 @@ date_modified: 2026-09-15
 | `PARSE_FILE_TIMEOUT_SECONDS` | `600 秒` | 预留足够时间完成多源字段对齐与结构化解析，适配单份日报的较大数据量 |
 | `VECTOR_BATCH_INSERT_SIZE` | `150` | 适配乳制品行情数据的向量维度与PgVector的批量处理上限，提升入库稳定性 |
 | `REDIS_IMAGE` | `registry.cn-hangzhou.aliyuncs.com/library/redis:7.0.12` | 解决官方镜像拉取受网络限制的问题，加速容器部署流程 |
-| `PGVECTOR_PLUGIN_VERSION` | `0.4.2` | 适配FastGPT 4.9.7版本的插件接口，确保收益率计算逻辑正常运行 |
+仅作参考；请以目标 FastGPT 发布版本与部署文档核验。
 
 > 本页给出的参数取值均为常规建议，用于确定配置的起点。实际取值受材料形态、数据量与业务规则影响，具体问题需具体分析，建议在自有样本上实测后再定。
 

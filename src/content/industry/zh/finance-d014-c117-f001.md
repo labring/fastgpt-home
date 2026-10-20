@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 纺织制造财报分析的HTTP 接口与外部系统
-meta_description: 纺织制造类企业的财报数据主要来源于境内外证券交易所披露平台、企业投资者关系官网。更新节奏分为定期与临时两类，定期报告按年度、季度节点发布，临时公告随重大经营
+meta_description: 纺织制造财报分析的HTTP 接口与外部系统：纺织制造财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 纺织制造、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 综合服务融资日报的模型接入与配置
-meta_description: 综合服务融资日报的数据来源于交易所公开融资融券披露、官方金融统计平台及合规金融数据源，更新节奏为每日固定时段完成全量聚合。文档为结构化多表关联格式，包含当日
+meta_description: 综合服务融资日报的模型接入与配置：综合服务融资日报的模型接入与配置，涵盖配置与验证建议
 keywords: 综合服务、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

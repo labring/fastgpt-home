@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医疗器械融资日报的HTTP 接口与外部系统
-meta_description: 医疗器械融资日报的数据来源为医药生物行业公开融资披露信息、医疗器械企业官方公告及行业合规公示渠道。更新节奏为每日更新当日披露的医疗器械领域融资事件。单条数据
+meta_description: 医疗器械融资日报的HTTP 接口与外部系统：医疗器械融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 医疗器械、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

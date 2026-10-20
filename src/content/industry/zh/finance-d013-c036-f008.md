@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 半导体融资日报的工具调用与插件
-meta_description: 半导体融资日报的数据主要来源于境内外证券交易所公开披露的企业融资公告、行业协会发布的半导体赛道融资统计、头部财经媒体的企业投融资专栏。数据更新节奏为每日更新
+meta_description: 半导体融资日报的工具调用与插件：半导体融资日报的工具调用与插件，涵盖配置与验证建议
 keywords: 半导体、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

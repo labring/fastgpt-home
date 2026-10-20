@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 出版收益率的多轮对话与提示词
-meta_description: 出版行业收益率与行情日报的数据来源为公开行业监测数据库、合作发行渠道的结算接口、行业自律组织的统计报表。更新节奏为每日更新一次，覆盖前一自然日的全量发行数据
+meta_description: 出版收益率的多轮对话与提示词：出版收益率的多轮对话与提示词，涵盖配置与验证建议。
 keywords: 出版、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

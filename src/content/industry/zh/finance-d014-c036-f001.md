@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 半导体财报分析的HTTP 接口与外部系统
-meta_description: 半导体财报数据主要来源于境内外证券交易所官方披露平台、半导体行业专项统计数据库及企业官方投资者关系页面。季度报告于季度结束后45个自然日内披露，年度报告于年
+meta_description: 半导体财报分析的HTTP 接口与外部系统：半导体财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 半导体、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

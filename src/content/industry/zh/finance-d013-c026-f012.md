@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 出版融资日报的模型接入与配置
-meta_description: 出版融资日报的数据来源为出版企业公开融资公告、属地文旅出版监管平台备案信息、行业协会披露数据。更新节奏为每日更新，当日披露的融资信息当日录入系统。文档以结构
+meta_description: 出版融资日报的模型接入与配置：出版融资日报的模型接入与配置，涵盖配置与验证建议。
 keywords: 出版、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

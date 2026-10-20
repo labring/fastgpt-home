@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水泥研报检索的文档解析与分块
-meta_description: 水泥行业研报的数据来源包括中国建筑材料联合会、各区域水泥协会、上市水泥企业定期报告、第三方行业咨询机构出品的专项报告。数据更新匹配行业披露周期，涵盖月度出厂
+meta_description: 水泥研报检索的文档解析与分块：水泥研报检索的文档解析与分块，涵盖配置与验证建议。
 keywords: 水泥、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

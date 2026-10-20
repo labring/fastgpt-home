@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 兵器装备智能尽调报告的文档解析与分块
-meta_description: 兵器装备智能尽调报告的数据主要来自军工科研院所、装备承制单位的公开资质文件、定型鉴定资料、年度产能统计及供应链配套清单。更新节奏随装备定型周期、年度供应链调
+meta_description: 兵器装备智能尽调报告的文档解析与分块：兵器装备智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 兵器装备、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电网设备收益率的分享与嵌入
-meta_description: 电网设备相关收益率行情数据来源为电力设备细分赛道的公开行情接口，更新节奏为每个交易日收盘后完成当日数据更新，非交易日无新增数据。单条数据文档包含标的编码、标
+meta_description: 电网设备收益率的分享与嵌入：电网设备收益率的分享与嵌入，涵盖配置与验证建议。。。
 keywords: 电网设备、收益率与行情日报播报、分享与嵌入
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

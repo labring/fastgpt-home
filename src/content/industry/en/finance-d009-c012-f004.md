@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Residential Development
-meta_description: Residential development research report data sources primarily include public financial reports from real estate enterprises, public project approval
+meta_description: Vector Models and Indexing for Residential Development Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -19,7 +19,7 @@ Residential development research report data sources primarily include public fi
 ## Constraints for Vector Models and Indexing
 Residential development research reports have a high density of professional terminology, including concepts such as floor area ratio, plot area, and land premium rate. This requires vector models to have industry-specific semantic understanding capabilities. Single documents have relatively long lengths, so segmented processing must balance semantic integrity and retrieval efficiency. Structured content with multiple fields requires targeted vector extraction logic to avoid semantic deviation of professional fields by general models. Additionally, research reports are updated at a stable frequency with clear batches. Indexing must support incremental updates to reduce repeated computing overhead.
 
-This configuration is compatible with FastGPT v4.8.21 and later versions.
+Reference only; verify against the target FastGPT release and deployment documentation.
 
 ## How to Set Configuration
 | Configuration Item | Recommended Range | Rationale |

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interfaces and External Systems for Electronic
-meta_description: Data sources for electronic component data used in financial institution supply chain due diligence include original manufacturer public parameter
+meta_description: HTTP Interfaces and External Systems for Electronic Component Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -26,7 +26,7 @@ Differences in update rhythms across multiple data sources require interface agg
 | `max_retries` | `3 times` | Balances interface rate limiting risk and request success rate, to avoid triggering bans from repeated requests |
 | `field_mapping_rule` | `Map original manufacturer field names to standard electronic component fields` | Field naming varies widely across different data sources, unified mapping reduces parsing costs |
 | `unit_convert_enabled` | `Enabled` | Voltage and current units returned by different interfaces vary, unified conversion ensures report consistency |
-| `base_url` | `{{baseURL}}/v1/` | Complies with path specifications for most electronic component industry interfaces, adapts to common interface formats |
+| `base_url` | `example value/v1/` | Complies with path specifications for most electronic component industry interfaces, adapts to common interface formats |
 | `proxy_enable` | `Set based on actual testing` | Access restrictions vary across data sources, adjust based on actual network environment |
 
 > The parameter values provided on this page are common starting points for configuration. Actual values are affected by material form, data volume, and business rules. Specific issues require specific analysis, and it is recommended to test on your own samples before finalizing settings.

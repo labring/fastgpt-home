@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Customer Service and Account Enquiries
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for Product Consultation
-meta_description: Product consultation data primarily comes from internal product databases of financial institutions, official product manuals, and regulatory-required
+meta_description: Model Access and Configuration for Product Consultation Customer Service
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

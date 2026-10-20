@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 畜禽养殖收益率的工作流编排
-meta_description: 畜禽养殖收益率相关数据主要来自农业农村部畜禽生产监测平台、地方畜牧技术推广站的日度上报数据，以及规模化养殖主体的内部生产台账。数据更新节奏为每日固定时段同步
+meta_description: 畜禽养殖收益率的工作流编排：畜禽养殖收益率的工作流编排，涵盖配置与验证建议。。。
 keywords: 畜禽养殖、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 产业园区融资日报的知识库检索与召回
-meta_description: 产业园区融资日报的数据主要来源于园区招商部门的企业融资备案、园区运营系统的每日上报数据，以及公开渠道的企业融资公告。更新节奏为每日更新，覆盖前一日园区内所有
+meta_description: 产业园区融资日报的知识库检索与召回：产业园区融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 产业园区、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

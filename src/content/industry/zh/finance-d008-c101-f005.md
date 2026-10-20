@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物流智能尽调报告的多轮对话与提示词
-meta_description: 物流智能尽调报告的数据主要来自物流企业运单管理系统、仓储WMS系统、干线运输GPS定位终端、海关报关单据。数据更新节奏差异较大：运单信息随订单流转实时更新，
+meta_description: 物流智能尽调报告的多轮对话与提示词：物流智能尽调报告的多轮对话与提示词，涵盖配置与验证建议
 keywords: 物流、智能尽调报告、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

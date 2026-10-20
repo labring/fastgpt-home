@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁路公路研报检索的知识库检索与召回
-meta_description: 铁路公路研报的数据源涵盖交通运输行业研究机构公开报告、铁路与公路运营企业内部分析文档、行业协会发布的运营统计资料。更新节奏以月度、季度定期报告为主，伴随新线
+meta_description: 铁路公路研报检索的知识库检索与召回：铁路公路研报检索的知识库检索与召回，涵盖配置与验证建议
 keywords: 铁路公路、研报检索与问答、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

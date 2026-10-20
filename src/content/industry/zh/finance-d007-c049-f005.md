@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 基建工程收益率的多轮对话与提示词
-meta_description: 这个品类的数据主要来自全国公共资源交易平台的中标公示、省级住建厅发布的工程建设造价信息、项目业主方的月度进度报表。更新节奏分为两类：中标行情类数据实时更新，
+meta_description: 基建工程收益率的多轮对话与提示词：基建工程收益率的多轮对话与提示词，涵盖配置与验证建议
 keywords: 基建工程、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

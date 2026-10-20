@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 卫星通信研报检索的部署与升级
-meta_description: 卫星通信研报数据主要来自卫星运营商公开运营文档、行业产业白皮书、卫星发射任务官方通报及地面站运维日志。更新节奏随内容类型不同，运营商季度报告按季度更新，发射
+meta_description: 卫星通信研报检索的部署与升级：卫星通信研报检索的部署与升级，涵盖配置与验证建议。
 keywords: 卫星通信、研报检索与问答、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

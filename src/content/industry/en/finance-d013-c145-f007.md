@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Telecommunications Equipment
-meta_description: Data sources include operator public bid announcements, equipment manufacturer financing filing announcements, and industry association procurement
+meta_description: Workflow Orchestration for Telecommunications Equipment Financing Daily Reports: covering configuration and validation guidance.
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -39,12 +39,12 @@ The administrative division field for project locations must be associated with 
 ## Three Common Mistakes
 - Issue: After calling the MCP tool, only general call status is displayed, and detailed logs cannot be viewed. Cause: The `mcp_log_detail` configuration item is not enabled. By default, only basic call results are recorded.
 - Issue: The same task runs several times slower in the workflow than in the debug interface. Cause: No incremental synchronization filtering rule is configured for the workflow, and full historical data scanning is enabled, resulting in repeated pulling of redundant data.
-- Issue: When using the {{platform_current_date}} variable in a prompt, the displayed signature time does not match the actual current date. Cause: Real-time pulling of the system time variable is not enabled in the workflow’s variable configuration, or the time source bound to the variable is not synchronized to the current time zone.
+- Issue: When using the example value variable in a prompt, the displayed signature time does not match the actual current date. Cause: Real-time pulling of the system time variable is not enabled in the workflow’s variable configuration, or the time source bound to the variable is not synchronized to the current time zone.
 
 ## How to Confirm Proper Configuration
 - Manually trigger the workflow once, check if the running logs include standardized field data to confirm that the field mapping configuration takes effect.
 - Call the MCP tool to pull a test data entry, check if the logs include detailed request and response content to confirm that detailed logging is enabled.
 - Compare the time taken in the debug interface and workflow runs to confirm that full data scanning is not enabled, and only incremental data is processed.
-- Check if the {{platform_current_date}} variable in the prompt is replaced with the current day’s standard date format after running, to confirm that the variable binding is correct.
+- Check if the example value variable in the prompt is replaced with the current day’s standard date format after running, to confirm that the variable binding is correct.
 
 > Question material comes from public community discussions. Configuration values are common starting points and should be measured against your own samples. Verified on 2026-09-14.

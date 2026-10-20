@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 农化制品投研知识库建设的部署与升级
-meta_description: 农化制品投研数据主要来自行业协会月度产能监测报告、上市公司定期披露的经营数据、农药登记证官方数据库、田间试验原始记录、大宗商品原料价格行情数据源。文档类型涵
+meta_description: 农化制品投研知识库建设的部署与升级：农化制品投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 农化制品、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

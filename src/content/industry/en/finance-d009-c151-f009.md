@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Citation Source and Traceability for Railway and Highway
-meta_description: Railway and highway research report data sources include Ministry of Transport official operation announcements, China State Railway Group monthly
+meta_description: Citation Source and Traceability for Railway and Highway Research Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -30,7 +30,7 @@ Unique identification fields such as project approval numbers provide an anchor 
 | --- | --- | --- |
 | `recall_top_k` | Top 8-12 results | Railway and highway research report data covers passenger and freight, infrastructure, policy and other categories. Too many recall results introduce irrelevant content, while too few miss core operation data |
 | `PARSE_FILE_TIMEOUT_SECONDS` | 120 seconds | Single special research report files often exceed 10MB, leading to long parsing times. A timeout will cause file parsing to fail |
-| `source_reference_template` | `{doc_title} | {publish_time} | Field: {field_name}: {field_value}` | Railway and highway research reports include standardized data fields. Specific traceability fields must be clearly marked to meet industry compliance requirements |
+| `source_traceability details` | `{doc_title} | {publish_time} | Field: {field_name}: {field_value}` | Railway and highway research reports include standardized data fields. Specific traceability fields must be clearly marked to meet industry compliance requirements |
 | `chunk_size` | 800-1200 characters | Structured data paragraphs in research reports are long. Too short a chunk size breaks data connections, while too long a chunk size increases recall noise |
 | `similarity_threshold` | 0.75-0.85 | Railway and highway industry terminology is highly professional. A threshold that is too low introduces irrelevant research reports, while a threshold that is too high misses segmented data within the same field |
 | `enable_metadata_extraction` | Enabled | Unique identification fields such as project numbers and approval numbers must be extracted to enable accurate traceability |

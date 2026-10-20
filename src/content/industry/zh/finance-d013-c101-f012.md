@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物流融资日报的模型接入与配置
-meta_description: 物流融资日报的数据来源主要为物流企业运单管理系统、合作银行授信台账系统及第三方物流监控平台。更新节奏为每日T+1生成，即当日交易数据于次日汇总为日报。文档结
+meta_description: 物流融资日报的模型接入与配置：物流融资日报的模型接入与配置，涵盖配置与验证建议。
 keywords: 物流、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

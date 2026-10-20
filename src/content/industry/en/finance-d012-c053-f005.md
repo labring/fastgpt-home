@@ -4,8 +4,8 @@ slug: /en/industry/finance-d012-c053-f005
 page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
-meta_title: Multi-finance Marketing Content: Multi-turn Dialogues and
-meta_description: The marketing content data for multi-finance scenarios primarily originates from product prospectuses, wealth management plan terms, insurance
+meta_title: Multi-finance Marketing Content: Multi-turn Dialogues
+meta_description: Multi-finance Marketing Content: Multi-turn Dialogues and Prompt Engineering
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

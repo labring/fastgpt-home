@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦炭融资日报的知识库检索与召回
-meta_description: 焦炭融资日报的数据来源包括中国煤炭工业协会焦炭分会、国内沿海焦炭港口的公开监测数据、主力钢厂的采购报备信息。更新节奏为每日凌晨更新前一交易日的全量数据。文档
+meta_description: 焦炭融资日报的知识库检索与召回：焦炭融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 焦炭、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

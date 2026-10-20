@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Citation Source and Traceability for Professional Services
-meta_description: Financial report data in professional service scenarios comes primarily from exchange public disclosure platforms, professional financial databases
+meta_description: Citation Source and Traceability for Professional Services Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -32,9 +32,9 @@ The mixed structured and unstructured nature of financial report data means cita
 > The parameter values provided on this page are conventional recommendations used as a starting point for configuration. Actual values are affected by material form, data volume, and business rules. Specific issues require case-by-case analysis, and it is recommended to test on your own samples before finalizing.
 
 ## Three Common Configuration Errors
-- A `quote type error` error occurs, prompting abnormal variable format. Cause: The variable placeholder format specified in the `citation format` configuration item was not followed during filling, or a custom variable not defined in the knowledge base was referenced.
+- A `quote type error` error occurs, prompting abnormal variable format. Cause: The variable pending verification format specified in the `citation format` configuration item was not followed during filling, or a custom variable not defined in the knowledge base was referenced.
 - In FastGPT v4.6.7, setting the `citation limit` to 1500 still retrieves citation content exceeding this length. Cause: The `maxContext` parameter was not adjusted synchronously, or the knowledge base chunk size was set to 5000 tokens. Single chunk content exceeds the citation limit without truncation, and this version does not automatically verify the matching relationship between chunks and the citation limit.
-- The reply does not include the address information of the cited file. Cause: The `citation display toggle` was not enabled, or the file address placeholder was not added in the citation format configuration, resulting in missing traceability information.
+- The reply does not include the address information of the cited file. Cause: The `citation display toggle` was not enabled, or the file address pending verification was not added in the citation format configuration, resulting in missing traceability information.
 
 ## How to Confirm Configuration Is Complete
 - Upload a single financial report sample, trigger knowledge base retrieval, and check if the reply includes traceability information matching the configured format.

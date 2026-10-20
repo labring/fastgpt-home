@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for Small Home Appliance
-meta_description: The market trend and yield rate data for small home appliances mainly comes from brand-owned ERP systems, mainstream e-commerce platform sales
+meta_description: Model Access and Configuration for Small Home Appliance Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

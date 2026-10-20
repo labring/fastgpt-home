@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interface and External Systems for Optoelectronics
-meta_description: Data for optoelectronics financing daily reports comes from public financing announcements released by the Shanghai and Shenzhen Stock Exchanges and
+meta_description: HTTP Interface and External Systems for Optoelectronics Financing Daily Report
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

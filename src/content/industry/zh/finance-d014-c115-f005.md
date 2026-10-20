@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 种植业财报分析的多轮对话与提示词
-meta_description: 种植业财报数据主要来自上市种植企业公开披露的定期报告、农业农村主管部门发布的行业统计资料、行业协会整理的生产经营数据。数据更新节奏分为季度（企业季报）、年度
+meta_description: 种植业财报分析的多轮对话与提示词：种植业财报分析的多轮对话与提示词，涵盖配置与验证建议
 keywords: 种植业、财报分析与报告生成、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

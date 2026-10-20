@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Oil and Gas Extraction Marketing
-meta_description: Marketing-related data for oil and gas extraction customers targeting the financial services sector comes primarily from four sources: oilfield
+meta_description: Workflow Orchestration for Oil and Gas Extraction Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

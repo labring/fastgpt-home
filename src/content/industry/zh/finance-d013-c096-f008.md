@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦炭融资日报的工具调用与插件
-meta_description: 焦炭融资日报的数据主要来自大连商品交易所公开交割数据、国内多家煤炭大宗商品交易平台的现货融资台账，以及中国煤炭工业协会的行业监测数据。数据更新节奏为每日凌晨
+meta_description: 焦炭融资日报的工具调用与插件：焦炭融资日报的工具调用与插件，涵盖配置与验证建议。
 keywords: 焦炭、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 保险营销内容的工作流编排
-meta_description: 保险营销内容的数据来源包括内部保险产品管理系统、合规审核台账、代理人历史营销素材库。数据更新节奏为新险种上线时批量同步，营销节点前1-3天临时调整话术内容。
+meta_description: 保险营销内容的工作流编排：保险营销内容的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 保险、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 历史查询记录终端内自然语言检索的HTTP 接口与外部系统
-meta_description: 这个品类的数据来源于终端用户的自然语言交互日志，包含用户在理财、保险终端内发起的检索请求、查看的历史内容、关联的操作记录。更新节奏为实时生成，每完成一次用户
+meta_description: 历史查询记录终端内自然语言检索的HTTP 接口与外部系统：历史查询记录终端内自然语言检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 历史查询记录、终端内自然语言检索、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

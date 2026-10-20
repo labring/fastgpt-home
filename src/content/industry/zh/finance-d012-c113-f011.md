@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 白酒营销内容的文档解析与分块
-meta_description: 白酒营销相关文档的主要来源包括品牌方内部的产品手册、经销商培训课件、营销活动方案，以及公开渠道的种草笔记、行业分析报告。文档更新随新品上市、季度营销节点调整
+meta_description: 白酒营销内容的文档解析与分块：白酒营销内容的文档解析与分块，涵盖配置与验证建议。
 keywords: 白酒、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

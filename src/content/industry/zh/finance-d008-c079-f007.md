@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 普钢智能尽调报告的工作流编排
-meta_description: 普钢相关数据主要来自大宗商品交易所现货监测系统、钢厂出厂台账、行业协会公开报表。数据更新节奏存在分层差异：现货成交价格每日更新，钢厂排产计划每周更新，月度产
+meta_description: 普钢智能尽调报告的工作流编排：普钢智能尽调报告的工作流编排，涵盖配置与验证建议。
 keywords: 普钢、智能尽调报告、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

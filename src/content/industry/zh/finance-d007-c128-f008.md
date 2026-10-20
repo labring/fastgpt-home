@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航运港口收益率的工具调用与插件
-meta_description: 航运港口收益率相关数据主要来源于港口运营管理系统实时接口、交通运输部水运局公开数据集、国际航运公会的港口费率公告。更新节奏分为两类：实时作业数据每10分钟同
+meta_description: 航运港口收益率的工具调用与插件：航运港口收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 航运港口、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

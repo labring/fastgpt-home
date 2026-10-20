@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c109-f010
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: Database and Operations for Electronic Component Yield and
-meta_description: Electronic component market and yield data is sourced from public electronic component spot trading databases and original equipment manufacturer
+meta_title: Database and Operations for Electronic Component Yield
+meta_description: Database and Operations for Electronic Component Yield and Market Trends
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

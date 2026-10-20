@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Aviation Equipment Revenue Yield
-meta_description: Aviation equipment revenue yield data primarily comes from publicly disclosed model development costs, operation and maintenance ledgers, aircraft
+meta_description: Workflow Orchestration for Aviation Equipment Revenue Yield
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -24,7 +24,7 @@ The quarterly or semi-annual update cadence of aviation equipment revenue yield 
 | --- | --- | --- |
 | `Scheduled Trigger Interval` | `Once per quarter` | Matches the quarterly update cadence of aviation equipment revenue yield data, avoids repeated pulling of old data |
 | `HTTP Request Timeout` | `600 seconds` | Adapts to network latency when pulling multi-source data; loading speeds for some military industry public documents are relatively slow |
-| `Variable Replacement Format` | `{{variable name}}` | Adapts to the fix requirements of V4.8.18-FIX2, prevents failure of variable references using older formats |
+| `Variable Replacement Format` | `example value` | Adapts to the fix requirements of V4.8.18-FIX2, prevents failure of variable references using older formats |
 | `Evaluator Validation Rule` | `Match model naming regex` | Verifies the official naming format of aviation equipment models, filters invalid data |
 | `Knowledge Base Recall Count` | `Top 3 entries` | Fewer knowledge base entries related to aviation equipment, controls the precision of recall results |
 | `Multi-node Merge Deduplication Switch` | `Enabled` | Merges duplicate data pulled from multiple sources, ensures dataset uniqueness |
@@ -38,7 +38,7 @@ The quarterly or semi-annual update cadence of aviation equipment revenue yield 
 
 ## How to Confirm Correct Configuration
 - Trigger a manual workflow run, verify that the pulled dataset includes core fields such as preset aviation equipment model numbers, unit construction costs, and per-sortie revenue.
-- Check the workflow execution logs to confirm that there are no timeout errors in HTTP requests, and that variable replacement conforms to the `{{variable name}}` specification.
+- Check the workflow execution logs to confirm that there are no timeout errors in HTTP requests, and that variable replacement conforms to the `example value` specification.
 - Input an aviation equipment model that does not follow official naming rules, verify that the evaluator correctly intercepts invalid data.
 - Configure a test value for a custom global variable, confirm that the evaluator can properly read and match the corresponding condition rules.
 

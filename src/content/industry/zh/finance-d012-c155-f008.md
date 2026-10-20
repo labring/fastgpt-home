@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饲料营销内容的工具调用与插件
-meta_description: 饲料数据的来源主要包括饲料生产企业的配方管理系统、畜牧场的饲喂日志、原料贸易的入库单据。更新节奏存在差异：配方文档每季度随原料市场调整更新，饲喂记录随养殖批
+meta_description: 饲料营销内容的工具调用与插件：饲料营销内容的工具调用与插件，涵盖配置与验证建议。
 keywords: 饲料、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

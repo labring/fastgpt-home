@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航运港口收益率的部署与升级
-meta_description: 航运港口收益率相关数据主要来源于港口内部生产管理系统、权威航运指数机构的公开接口及船舶代理结算数据。数据按日度批量更新，核心实时指标按小时同步刷新。单条数据
+meta_description: 航运港口收益率的部署与升级：航运港口收益率的部署与升级，涵盖配置与验证建议。。。
 keywords: 航运港口、收益率与行情日报播报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 卫星通信融资日报的知识库检索与召回
-meta_description: 卫星通信融资日报的数据来源包括航天发射监管机构公开披露文档、卫星运营商官方项目公告、金融机构私募融资台账。更新节奏为每日凌晨更新前一日的行业融资动态。单份文
+meta_description: 卫星通信融资日报的知识库检索与召回：卫星通信融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 卫星通信、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

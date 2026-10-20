@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 影视院线收益率的多轮对话与提示词
-meta_description: 影视院线收益率相关数据主要来自全国影院排片管理系统、院线票房结算系统、第三方影视数据聚合平台。当日票房与营收数据每日凌晨完成更新，次日排片数据提前3个工作日
+meta_description: 影视院线收益率的多轮对话与提示词：影视院线收益率的多轮对话与提示词，涵盖配置与验证建议
 keywords: 影视院线、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

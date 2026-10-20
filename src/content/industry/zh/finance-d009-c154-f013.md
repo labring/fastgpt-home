@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饰品研报检索的知识库检索与召回
-meta_description: 饰品研报数据主要来自行业合规检测机构、品牌方新品研发文档、跨境电商平台的饰品销售监测报告。更新节奏随行业节点调整，情人节、圣诞等饰品销售旺季更新频次更高，常
+meta_description: 饰品研报检索的知识库检索与召回：饰品研报检索的知识库检索与召回，涵盖配置与验证建议
 keywords: 饰品、研报检索与问答、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

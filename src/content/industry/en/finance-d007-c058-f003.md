@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Share and Embed for Minor Metal Yield and Market Daily
-meta_description: Minor metal market daily data is sourced from a domestic professional non-ferrous metal industry market aggregation API. Data updates are completed
+meta_description: Share and Embed for Minor Metal Yield and Market Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

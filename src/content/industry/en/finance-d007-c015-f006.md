@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Conversation Logs and Auditing for Energy Storage Yield
-meta_description: Data sources for energy storage yield rate daily reports include public spot trading data from domestic power trading centers, and charge-discharge
+meta_description: Conversation Logs and Auditing for Energy Storage Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

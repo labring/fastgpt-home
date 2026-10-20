@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光学光电子收益率的数据库与运维
-meta_description: 光学光电子品类的行情与收益率数据，主要来自国内证券交易所公开行情接口、行业资讯平台的细分品类数据接口。更新节奏分为两类：日收益率数据在每个交易日收盘后批量更
+meta_description: 光学光电子收益率的数据库与运维：光学光电子收益率的数据库与运维，涵盖配置与验证建议
 keywords: 光学光电子、收益率与行情日报播报、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

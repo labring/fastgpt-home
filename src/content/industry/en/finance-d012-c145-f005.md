@@ -4,8 +4,8 @@ slug: /en/industry/finance-d012-c145-f005
 page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Dialogue and Prompt Engineering for
-meta_description: Marketing-related data for communications equipment comes primarily from three categories: equipment hardware specification documents, real-time
+meta_title: Multi-turn Dialogue and Prompt Engineering
+meta_description: Multi-turn Dialogue and Prompt Engineering for Communications Equipment Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

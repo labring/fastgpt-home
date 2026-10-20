@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 免税投研知识库建设的上下文与 token
-meta_description: 免税投研数据主要来自海关监管通关数据、离岛免税门店经营台账、财政部及海关总署发布的免税政策文件、品牌方免税专供商品SKU清单。政策类文档更新无固定周期，随监
+meta_description: 免税投研知识库建设的上下文与 token：免税投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 免税、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

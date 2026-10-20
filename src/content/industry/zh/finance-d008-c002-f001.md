@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专业服务智能尽调报告的HTTP 接口与外部系统
-meta_description: 专业服务类智能尽调报告的数据主要来源于工商行政管理档案、司法裁判文书库、行业监管公示平台、企业公开财报及第三方合规数据库。数据更新节奏随监管发布周期或企业合
+meta_description: 专业服务智能尽调报告的HTTP 接口与外部系统：专业服务智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 专业服务、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

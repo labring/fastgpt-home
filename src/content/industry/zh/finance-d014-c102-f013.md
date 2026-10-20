@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 特钢财报分析的知识库检索与召回
-meta_description: 特钢财报数据主要来自上市特钢企业的定期报告、全国特钢行业协会的月度监测数据、上游合金原料供应商的公开报价文档。更新节奏为月度行业数据、季度财报、年度完整报告
+meta_description: 特钢财报分析的知识库检索与召回：特钢财报分析的知识库检索与召回，涵盖配置与验证建议
 keywords: 特钢、财报分析与报告生成、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

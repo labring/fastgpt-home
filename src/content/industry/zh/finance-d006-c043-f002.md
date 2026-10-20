@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商业地产投研知识库建设的上下文与 token
-meta_description: 商业地产投研数据来源包括政府主管部门的项目备案信息、商圈运营机构的监测数据、物业方的日常运营台账、行业研究机构的公开调研资料，以及企业内部的招商、租约、运维
+meta_description: 商业地产投研知识库建设的上下文与 token：商业地产投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 商业地产、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

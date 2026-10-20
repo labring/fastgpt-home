@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 耐火材料融资日报的工作流编排
-meta_description: 耐火材料融资日报的数据来源覆盖全国重点耐火材料生产集群的产业融资备案系统、供应链金融服务平台的企业融资台账，更新频率为每日T+1更新。单条日报文档的结构包含
+meta_description: 耐火材料融资日报的工作流编排：耐火材料融资日报的工作流编排，涵盖配置与验证建议。
 keywords: 耐火材料、融资日报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

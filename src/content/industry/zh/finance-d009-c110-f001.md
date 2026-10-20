@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电网设备研报检索的HTTP 接口与外部系统
-meta_description: 面向金融领域的电网设备研报，主要来自电力行业专业研究院、电网运营机构公开披露的技术白皮书、行业协会发布的年度发展报告，更新节奏以季度常规报告、年度深度报告为
+meta_description: 电网设备研报检索的HTTP 接口与外部系统：电网设备研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 电网设备、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

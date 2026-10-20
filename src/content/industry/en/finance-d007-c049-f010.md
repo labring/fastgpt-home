@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Database and Operations for Infrastructure Construction
-meta_description: Data related to infrastructure construction project yield rates comes from project measurement and payment ledgers, progress cost documents issued by
+meta_description: Database and Operations for Infrastructure Construction Project Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

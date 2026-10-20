@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 白酒营销内容的多轮对话与提示词
-meta_description: 白酒营销相关数据主要来源于品牌官方发布的产品手册、品鉴指南、合规宣传规范，电商平台的用户评价与咨询记录，行业协会发布的香型分类标准，以及金融渠道的客户咨询记
+meta_description: 白酒营销内容的多轮对话与提示词：白酒营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 白酒、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

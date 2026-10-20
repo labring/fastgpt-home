@@ -4,8 +4,8 @@ slug: /en/industry/finance-d013-c131-f012
 page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
-meta_title: Model Integration and Configuration for Decoration and
-meta_description: Decoration and renovation financing daily report data mainly comes from financing application ledgers for renovation projects, supply chain financial
+meta_title: Model Integration and Configuration for Decoration
+meta_description: Model Integration and Configuration for Decoration and Renovation Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

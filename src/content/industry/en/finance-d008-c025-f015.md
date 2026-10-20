@@ -4,8 +4,8 @@ slug: /en/industry/finance-d008-c025-f015
 page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
-meta_title: Deployment and Upgrade for Rural Commercial Bank Intelligent
-meta_description: Data for rural commercial bank intelligent due diligence reports comes from four main sources: internal credit management systems, the People's Bank
+meta_title: Deployment and Upgrade for Rural Commercial Bank
+meta_description: Deployment and Upgrade for Rural Commercial Bank Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

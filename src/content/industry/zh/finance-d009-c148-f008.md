@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 酒店餐饮研报检索的工具调用与插件
-meta_description: 酒店餐饮研报的数据来源涵盖行业协会公开监测报告、第三方餐饮咨询机构月度调研、上市餐饮企业公开调研纪要及线下门店抽样数据。更新节奏分为三类：行业大盘报告月度更
+meta_description: 酒店餐饮研报检索的工具调用与插件：酒店餐饮研报检索的工具调用与插件，涵盖配置与验证建议
 keywords: 酒店餐饮、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

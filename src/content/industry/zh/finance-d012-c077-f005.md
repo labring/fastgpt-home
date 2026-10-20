@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 旅游景区营销内容的多轮对话与提示词
-meta_description: 旅游景区的营销内容数据主要来自官方导览手册、文旅局公示信息、景区票务系统、线下活动公告及游客反馈记录。数据更新节奏随运营节点调整，节假日、主题活动前会高频更
+meta_description: 旅游景区营销内容的多轮对话与提示词：旅游景区营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 旅游景区、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

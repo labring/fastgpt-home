@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 汽车零部件研报检索的部署与升级
-meta_description: 汽车零部件研报的数据主要来自券商研究所行业报告、国内汽车行业协会公开数据、主机厂技术白皮书及零部件厂商官方技术文档。更新节奏无固定周期，常规研报按季度、半年
+meta_description: 汽车零部件研报检索的部署与升级：汽车零部件研报检索的部署与升级，涵盖配置与验证建议
 keywords: 汽车零部件、研报检索与问答、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

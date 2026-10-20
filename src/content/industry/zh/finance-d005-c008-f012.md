@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 交易规则客户服务的模型接入与配置
-meta_description: 交易规则的数据主要来源于金融机构内部业务配置系统与监管机构公示文件。更新节奏随监管政策调整或业务迭代不定期触发，单次更新覆盖单类或多类交易场景。文档为结构化
+meta_description: 交易规则客户服务的模型接入与配置：交易规则客户服务的模型接入与配置，涵盖配置与验证建议
 keywords: 交易规则、客户服务与账户咨询、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

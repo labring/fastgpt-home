@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 操作规程合规的工作流编排
-meta_description: 操作规程的数据来源于企业内部合规手册、岗位操作指引、监管合规细则等正式文档。更新节奏随制度修订、监管要求变化按需触发，无固定周期。文档结构通常包含条款编号、
+meta_description: 操作规程合规的工作流编排：操作规程合规的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 操作规程、合规与内部制度问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

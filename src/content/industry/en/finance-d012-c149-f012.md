@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Model Integration and Configuration for Steel Trade
-meta_description: Steel trade data primarily comes from spot quotation systems, steel mill production ledgers, logistics waybills, and customer inquiry records.
+meta_description: Model Integration and Configuration for Steel Trade Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 酒店餐饮营销内容的工作流编排
-meta_description: 酒店餐饮的数据主要来自门店POS系统、预订管理系统、会员档案系统、菜单管理后台与第三方点评平台。数据更新节奏分为三类：订单、库存类数据实时同步，菜单、会员消
+meta_description: 酒店餐饮营销内容的工作流编排：酒店餐饮营销内容的工作流编排，涵盖配置与验证建议。
 keywords: 酒店餐饮、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

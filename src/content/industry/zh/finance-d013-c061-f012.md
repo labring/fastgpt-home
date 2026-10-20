@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程机械融资日报的模型接入与配置
-meta_description: 工程机械融资日报的数据来源于设备厂商的融资台账、合作银行的保理放款记录、租赁公司的每日回款报表。数据更新节奏为每日凌晨批量同步前一日的全量交易与状态数据。单
+meta_description: 工程机械融资日报的模型接入与配置：工程机械融资日报的模型接入与配置，涵盖配置与验证建议
 keywords: 工程机械、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -4,8 +4,8 @@ slug: /en/industry/finance-d008-c105-f004
 page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
-meta_title: Vector Models and Indexing for Biologics Smart Due Diligence
-meta_description: Biologics smart due diligence report data originates from National Medical Products Administration public approval documents, corporate clinical trial
+meta_title: Vector Models and Indexing for Biologics Smart Due
+meta_description: Vector Models and Indexing for Biologics Smart Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Insurance Claim First-Level Review
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Insurance
-meta_description: Expense list data is sourced from the billing systems or medical insurance settlement systems of treating medical institutions. It is submitted
+meta_description: Multi-turn Dialogue and Prompt Engineering for Insurance Claim Initial Review of Expense Lists
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

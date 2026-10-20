@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商业地产研报检索的工作流编排
-meta_description: 商业地产研报的数据来源涵盖行业协会公开监测数据、上市房企运营公告、专业咨询机构调研成果及地方商务局商圈统计信息。更新节奏存在分层：核心商圈客流、租金数据按月
+meta_description: 商业地产研报检索的工作流编排：商业地产研报检索的工作流编排，涵盖配置与验证建议。
 keywords: 商业地产、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

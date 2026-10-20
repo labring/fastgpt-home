@@ -4,8 +4,8 @@ slug: /en/industry/finance-d013-c122-f011
 page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
-meta_title: Document Parsing and Chunking for Joint-Stock Bank Financing
-meta_description: Joint-stock bank financing daily report data originates from the bank’s corporate credit ledgers, interbank borrowing trading systems, and regulatory
+meta_title: Document Parsing and Chunking for Joint-Stock Bank
+meta_description: Document Parsing and Chunking for Joint-Stock Bank Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -4,8 +4,8 @@ slug: /en/industry/finance-d008-c136-f008
 page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
-meta_title: Tool Calling and Plugins for Precious Metals Intelligent Due
-meta_description: Data primarily originates from official trading platforms including the Shanghai Gold Exchange and the London Bullion Market Association, as well as
+meta_title: Tool Calling and Plugins for Precious Metals Intelligent
+meta_description: Tool Calling and Plugins for Precious Metals Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

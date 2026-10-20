@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专业服务融资日报的知识库检索与召回
-meta_description: 专业服务领域的融资日报数据主要来源于公开监管披露文件、行业协会调研汇总、企业官方融资公告及第三方财经数据库。数据更新节奏为每日更新，单份日报文档覆盖当日全行
+meta_description: 专业服务融资日报的知识库检索与召回：专业服务融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 专业服务、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

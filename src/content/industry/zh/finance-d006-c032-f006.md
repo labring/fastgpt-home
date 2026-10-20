@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学原料投研知识库建设的对话日志与审计
-meta_description: 化学原料投研数据主要来源于MSDS安全技术说明书、大宗商品现货交易平台、行业协会月度监测报告、专利公开数据库与下游厂商供需纪要。数据更新节奏存在差异：现货报
+meta_description: 化学原料投研知识库建设的对话日志与审计：化学原料投研知识库建设的对话日志与审计，涵盖配置与验证建议
 keywords: 化学原料、投研知识库建设与治理、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

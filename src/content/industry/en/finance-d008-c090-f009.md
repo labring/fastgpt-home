@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for Intelligent Due
-meta_description: The main sources of coatings and inks related data include batch certificates of analysis (COA) issued by raw material suppliers, national and
+meta_description: Citation Sources and Traceability for Intelligent Due Diligence Reports on Coatings and Inks
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

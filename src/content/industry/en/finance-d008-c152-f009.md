@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for Footwear Smart Due
-meta_description: Footwear smart due diligence data sources include style numbers and production batch data from brand internal ERP systems, public quality inspection
+meta_description: Citation Sources and Traceability for Footwear Smart Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

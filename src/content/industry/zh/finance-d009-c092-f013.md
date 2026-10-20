@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 消费电子研报检索的知识库检索与召回
-meta_description: 消费电子研报数据主要来自券商研究所、行业协会、品牌官方发布会资料、供应链调研机构。更新节奏随新品发布周期、行业展会节点密集调整，日常也有每周或每月的市场动态
+meta_description: 消费电子研报检索的知识库检索与召回：消费电子研报检索的知识库检索与召回，涵盖配置与验证建议
 keywords: 消费电子、研报检索与问答、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通信服务智能尽调报告的部署与升级
-meta_description: 通信服务智能尽调报告的数据来源于通信运营商内部运维系统、第三方通信质量监测接口、行业合规备案文档。核心运维数据每日更新，合规备案文档每季度更新，招投标相关数
+meta_description: 通信服务智能尽调报告的部署与升级：通信服务智能尽调报告的部署与升级，涵盖配置与验证建议
 keywords: 通信服务、智能尽调报告、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 模型分配一体化 AI 平台的部署与升级
-meta_description: 模型分配品类的数据主要来源于两部分，一是平台接入的大模型元数据，包括模型标识、调用地址、鉴权密钥等；二是用户配置的流量路由规则与权重分配方案，以及实时采集的
+meta_description: 模型分配一体化 AI 平台的部署与升级：模型分配一体化 AI 平台的部署与升级，涵盖配置与验证建议
 keywords: 模型分配、一体化 AI 平台与多应用编排、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

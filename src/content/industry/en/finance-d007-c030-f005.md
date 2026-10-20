@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Cosmetics
-meta_description: Data sources for cosmetics profit margin and market trend data include official daily sales briefings published by brands, real-time sales monitoring
+meta_description: Multi-turn Dialogue and Prompt Engineering for Cosmetics Profit Margins
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

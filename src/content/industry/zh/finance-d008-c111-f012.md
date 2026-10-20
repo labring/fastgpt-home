@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 畜禽养殖智能尽调报告的模型接入与配置
-meta_description: 畜禽养殖智能尽调报告的数据来源包括养殖场物联网耳标、饲喂环控设备、畜牧部门检疫报表、第三方养殖监测平台。数据更新节奏分为实时（单头体重、饲喂量）、每日（存栏
+meta_description: 畜禽养殖智能尽调报告的模型接入与配置：畜禽养殖智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 畜禽养殖、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁路公路研报检索的引用来源与溯源
-meta_description: 铁路公路研报的数据来源涵盖交通运输部官方运营公告、国家铁路集团月度运营报表、公路建设项目批复文件、第三方交通咨询机构专项调研报告。更新节奏差异明显：官方公告
+meta_description: 铁路公路研报检索的引用来源与溯源：铁路公路研报检索的引用来源与溯源，涵盖配置与验证建议
 keywords: 铁路公路、研报检索与问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15
@@ -25,7 +25,7 @@ date_modified: 2026-09-15
 | --- | --- | --- |
 | `recall_top_k` | 前8-12条 | 铁路公路研报数据维度覆盖客货运、基建、政策多类，过多召回会引入无关内容，过少会遗漏核心运营数据 |
 | `PARSE_FILE_TIMEOUT_SECONDS` | 120秒 | 单份专项研报文件通常超过10MB，解析耗时较长，超时会导致文件解析失败 |
-| `source_reference_template` | `{doc_title} | {publish_time} | 字段：{field_name}：{field_value}` | 铁路公路研报包含标准化数据字段，需明确标注具体溯源字段，符合行业合规要求 |
+| `source_traceability details` | `{doc_title} | {publish_time} | 字段：{field_name}：{field_value}` | 铁路公路研报包含标准化数据字段，需明确标注具体溯源字段，符合行业合规要求 |
 | `chunk_size` | 800-1200字符 | 研报中结构化数据段落较长，拆分过短会割裂数据关联，过长会增加召回噪音 |
 | `similarity_threshold` | 0.75-0.85 | 铁路公路行业术语专业性强，阈值过低会引入不相关研报，过高会遗漏同领域细分数据 |
 | `enable_metadata_extraction` | 开启 | 需提取项目编号、批复文号等唯一标识字段，实现精准溯源 |

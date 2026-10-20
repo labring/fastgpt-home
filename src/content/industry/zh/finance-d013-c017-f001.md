@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光学光电子融资日报的HTTP 接口与外部系统
-meta_description: 光学光电子融资日报的数据来源为沪深交易所、北交所公开披露的企业融资公告，以及行业资讯聚合平台的官方汇总。数据更新节奏为每日凌晨完成前一日全量更新，单份日报文
+meta_description: 光学光电子融资日报的HTTP 接口与外部系统：光学光电子融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 光学光电子、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

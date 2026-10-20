@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 服装家纺营销内容的向量模型与索引
-meta_description: 本场景的数据来源为金融机构面向服装家纺客群的营销中台、合作品牌的商品素材库、客服知识库及线下导购话术归档文档。更新节奏为新品上市周期内批量新增营销素材，日常
+meta_description: 服装家纺营销内容的向量模型与索引：服装家纺营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 服装家纺、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

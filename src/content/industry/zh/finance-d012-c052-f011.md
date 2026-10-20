@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多元控股营销内容的文档解析与分块
-meta_description: 多元控股的营销内容文档来源覆盖旗下各子品牌的独立营销物料，包括各板块的活动方案、广告文案、合规提示文档、投放渠道规划表等。更新节奏随营销节点波动，常规月度活
+meta_description: 多元控股营销内容的文档解析与分块：多元控股营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 多元控股、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饲料财报分析的模型接入与配置
-meta_description: 饲料行业财报数据主要来自境内外证券交易所公开披露的年度报告、季度报告，以及行业协会发布的月度统计数据。文档以PDF格式为主，包含大量结构化表格与段落式说明，
+meta_description: 饲料财报分析的模型接入与配置：饲料财报分析的模型接入与配置，涵盖配置与验证建议。
 keywords: 饲料、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

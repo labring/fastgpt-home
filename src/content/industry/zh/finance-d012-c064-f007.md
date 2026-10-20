@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 影视院线营销内容的工作流编排
-meta_description: 影视院线的核心数据来源于院线排片管理系统、第三方票务平台开放API、自有营销素材库与会员运营系统。排片数据每日按单场次更新，包含影厅编号、场次时间、关联影片
+meta_description: 影视院线营销内容的工作流编排：影视院线营销内容的工作流编排，涵盖配置与验证建议。
 keywords: 影视院线、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15
@@ -25,7 +25,7 @@ date_modified: 2026-09-15
 | --- | --- | --- |
 | `trigger_mode` | `增量触发（按场次更新时间）` | 院线排片数据按单场次更新，全量触发会重复处理已处理的场次数据 |
 | `db_connect_timeout` | `30 秒` | 院线数据库多部署在内网，超时设置过短会导致连接失败，过长会阻塞工作流队列 |
-| `variable_ref_format` | `[{"film_id": "{{film_id}}", "schedule_id": "{{show_schedule_id}}"}]` | 营销内容需绑定具体影片与场次，需传递双维度关联参数 |
+| `variable_ref_format` | `[{"film_id": "待核验值", "schedule_id": "待核验值"}]` | 营销内容需绑定具体影片与场次，需传递双维度关联参数 |
 | `media_resize_limit` | `1080p、720p、480p` | 适配院线公众号、影院自助终端、第三方购票平台的不同素材分辨率要求 |
 | `workflow_retry_times` | `2 次` | 院线营销活动有严格时间窗口，重试过多会延误投放时机 |
 | `max_batch_process` | `10 条/次` | 单批次处理场次过多会导致数据库负载过高，影响院线售票系统稳定性 |

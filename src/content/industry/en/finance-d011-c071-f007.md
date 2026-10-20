@@ -4,8 +4,8 @@ slug: /en/industry/finance-d011-c071-f007
 page_type: Industry scenario page
 article_section: In-App Natural Language Search
 is_part_of: FastGPT Tech Center
-meta_title: Workflow Orchestration for In-App Natural Language Retrieval
-meta_description: Metric calibration data is sourced from internal core business systems, risk management systems, and financial report statistics systems at financial
+meta_title: Workflow Orchestration for In-App Natural Language
+meta_description: Workflow Orchestration for In-App Natural Language Retrieval of Metric Calibration
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

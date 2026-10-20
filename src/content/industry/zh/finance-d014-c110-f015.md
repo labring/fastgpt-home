@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电网设备财报分析的部署与升级
-meta_description: 电网设备行业的财报数据主要来源于证券交易所披露的定期报告、行业协会发布的运行简报。更新节奏分为三类：季度报告每3个月更新一次，年度报告每年更新一次，临时公告
+meta_description: 电网设备财报分析的部署与升级：电网设备财报分析的部署与升级，涵盖配置与验证建议。
 keywords: 电网设备、财报分析与报告生成、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 文娱用品收益率的工作流编排
-meta_description: 文娱用品收益率行情数据主要来自公开二手交易平台的实时挂牌数据、行业协会的交易统计数据库以及品牌方的官方出货公示。数据更新节奏分为两类：二手交易数据每日更新，
+meta_description: 文娱用品收益率的工作流编排：文娱用品收益率的工作流编排，涵盖配置与验证建议。。。
 keywords: 文娱用品、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

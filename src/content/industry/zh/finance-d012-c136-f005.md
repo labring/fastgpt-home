@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 贵金属营销内容的多轮对话与提示词
-meta_description: 贵金属相关数据分为实时行情与行业资讯两类，来源包括上海黄金交易所、伦敦金银市场协会的公开行情接口，以及合规行业资讯平台。实时行情每10秒推送一次更新，交易日
+meta_description: 贵金属营销内容的多轮对话与提示词：贵金属营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 贵金属、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

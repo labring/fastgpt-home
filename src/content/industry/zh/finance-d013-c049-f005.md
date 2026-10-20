@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 基建工程融资日报的多轮对话与提示词
-meta_description: 基建工程融资日报的数据来源主要包括各地住建主管部门公开的基建项目审批公示、政策性银行基建融资台账、行业协会月度统计报表。更新节奏为每日更新，重大项目审批或放
+meta_description: 基建工程融资日报的多轮对话与提示词：基建工程融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 基建工程、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

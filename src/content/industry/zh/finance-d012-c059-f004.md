@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工业金属营销内容的向量模型与索引
-meta_description: 工业金属相关数据主要来自行业协会的市场监测报告、现货交易平台的实时报价、期货交易所的交割数据，以及金融机构面向企业客户的套期保值方案、工业金属理财营销物料文
+meta_description: 工业金属营销内容的向量模型与索引：工业金属营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 工业金属、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

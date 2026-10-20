@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专用设备财报分析的文档解析与分块
-meta_description: 专用设备财报的数据来源为沪深/港交所披露的上市公司定期报告、行业协会发布的运行数据、企业官方披露的中标公告。更新节奏为季度定期更新，临时公告随业务节点发布。
+meta_description: 专用设备财报分析的文档解析与分块：专用设备财报分析的文档解析与分块，涵盖配置与验证建议
 keywords: 专用设备、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

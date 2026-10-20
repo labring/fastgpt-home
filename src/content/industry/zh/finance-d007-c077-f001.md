@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 旅游景区收益率的HTTP 接口与外部系统
-meta_description: 旅游景区的收益率相关数据主要来自内部票务POS系统、客流门禁系统与财务对账接口。数据更新节奏为每日闭园后生成前一日的统计结果，次日凌晨可对外提供访问。数据文
+meta_description: 旅游景区收益率的HTTP 接口与外部系统：旅游景区收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 旅游景区、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15
@@ -23,7 +23,7 @@ date_modified: 2026-09-15
 ## 配置怎么定
 | 配置项 | 建议取法 | 这样取的依据 |
 | --- | --- | --- |
-| `WORKFLOW_HTTP_NODE_TIMEOUT` | `600 秒` | 景区数据拉取需等待财务系统对账完成，600秒可覆盖常规对账周期，适配FastGPT 4.14.4版本的工作流执行上限 |
+仅作参考；请以目标 FastGPT 发布版本与部署文档核验。
 | `API_AUTH_TYPE` | `API_KEY` | 景区经营数据属于敏感信息，API_KEY鉴权可有效限制未授权访问 |
 | `RECALL_TOP_N` | `前 3 条` | 景区收益率相关的知识库内容通常条目较少，过多召回会引入无关信息 |
 | `HTTP_RESPONSE_PARSE_MODE` | `JSON_STRICT` | 景区数据接口返回结构化JSON格式，严格解析可避免格式错误导致的解析失败 |

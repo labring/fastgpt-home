@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for Kitchen and Bathroom
-meta_description: The data sources for kitchen and bathroom appliances mainly include brand official parameter pages, compliance reports issued by national energy
+meta_description: Citation Sources and Traceability for Kitchen and Bathroom Appliance Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -25,7 +25,7 @@ Decentralized data sources and non-fixed update cycles require the traceability 
 | `Recall Count` | Top 8 entries | Single parameter document for kitchen and bathroom appliances has moderate length; too many recalls will cause context redundancy, while too few cannot cover all core parameters |
 | `Similarity Threshold` | 0.72–0.85 | Matches the precision requirement for product model and parameter field matching, avoids mixing low-relevance non-target product content into recall results |
 | `Reranked Return Count` | Top 4 entries | Prioritizes recalling official compliance documents and brand official data sources to ensure the authority of traceability content |
-| `Citation Content Template` | `{source_title} | {product_model} | {field_name}: {field_value} | Certification Number: {cert_no}` | Matches the core parameter fields of kitchen and bathroom appliances, facilitating quick location of corresponding information and sources during traceability |
+| `Traceability details` | `{source_title} | {product_model} | {field_name}: {field_value} | Certification Number: {cert_no}` | Matches the core parameter fields of kitchen and bathroom appliances, facilitating quick location of corresponding information and sources during traceability |
 | `Knowledge Base Auto-refresh Interval` | 7 days | Adapts to the fluctuating rhythm of new product launches and compliance standard updates, ensuring data timeliness |
 | `Field Matching Rule` | Strictly match field names and units | Prevents traceability errors caused by inconsistent units, such as the expression difference between watts and kilowatts |
 

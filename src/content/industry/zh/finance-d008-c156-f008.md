@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 黑色家电智能尽调报告的工具调用与插件
-meta_description: 针对金融领域黑色家电智能尽调的数据来源包括品牌官方规格页、国家能效标识平台、电商平台商品详情页、第三方检测机构公开报告。更新节奏为新品发布后24小时内同步核
+meta_description: 黑色家电智能尽调报告的工具调用与插件：黑色家电智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 黑色家电、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

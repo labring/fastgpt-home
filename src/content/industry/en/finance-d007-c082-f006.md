@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Dialogue Logs and Auditing for Aquaculture Yield Rates
-meta_description: Data sources for aquaculture yield rates cover the full aquaculture lifecycle, including real-time water quality and feeding volume data from pond
+meta_description: Dialogue Logs and Auditing for Aquaculture Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

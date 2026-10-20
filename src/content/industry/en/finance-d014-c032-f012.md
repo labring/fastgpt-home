@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for Chemical Raw Materials
-meta_description: Financial report data for the chemical raw materials category comes primarily from listed companies’ annual/quarterly reports, exchange public
+meta_description: Model Access and Configuration for Chemical Raw Materials Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -38,7 +38,7 @@ The mostly structured document feature simplifies segmentation rules, but differ
 ## Three common configuration mistakes
 - Phenomenon: Large model node returns `500 Gateway forwarding error because service is disconnected`. Cause: No timeout reconnection mechanism for model access is configured, or the model service instance unexpectedly goes offline causing connection interruption.
 - Phenomenon: Financial report fields parsed by the model lose unit information. Cause: Association verification configuration between fields and units is not enabled, causing unit data bound to fields to be stripped during parsing.
-- Phenomenon: Model vendor icon fails to load, and the interface displays a blank placeholder. Cause: Correct model vendor logo mapping is not configured, or network access restrictions prevent normal loading of icon resources.
+- Phenomenon: Model vendor icon fails to load, and the interface displays a blank pending verification. Cause: Correct model vendor logo mapping is not configured, or network access restrictions prevent normal loading of icon resources.
 
 ## How to confirm the configuration is complete
 - Upload a single quarterly financial report document, check if the parsed fields retain unit information completely, and verify that the configured context length covers the core content of the document.

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学原料融资日报的多轮对话与提示词
-meta_description: 数据来源为国内大宗商品流通平台的企业融资挂牌信息、地方金融监管局公示的化工企业授信放款数据、行业协会的每日融资监测汇总；更新节奏为每日凌晨更新前一日的全量融
+meta_description: 化学原料融资日报的多轮对话与提示词：化学原料融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 化学原料、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

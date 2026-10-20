@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 中药融资日报的多轮对话与提示词
-meta_description: 中药融资日报的数据主要来自公开披露的企业融资公告、行业资讯平台的中药板块动态，以及地方金融监管部门的备案信息。更新节奏为每日更新，覆盖当日及前一日的公开融资
+meta_description: 中药融资日报的多轮对话与提示词：中药融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 中药、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水务投研知识库建设的数据库与运维
-meta_description: 水务投研数据主要来自市政水务集团的实时监测系统、水利站的水质与管网数据、水务项目的招投标与运维档案、水质检测实验室的正式报告。更新节奏分为三类：实时监测点位
+meta_description: 水务投研知识库建设的数据库与运维：水务投研知识库建设的数据库与运维，涵盖配置与验证建议
 keywords: 水务、投研知识库建设与治理、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

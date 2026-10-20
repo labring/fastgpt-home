@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通用设备财报分析的模型接入与配置
-meta_description: 通用设备财报相关数据主要来自上市公司年度报告、季度报告、临时公告及行业协会公开统计资料。数据更新节奏以季度和年度为固定周期，临时公告随业务变动不定期发布。文
+meta_description: 通用设备财报分析的模型接入与配置：通用设备财报分析的模型接入与配置，涵盖配置与验证建议
 keywords: 通用设备、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

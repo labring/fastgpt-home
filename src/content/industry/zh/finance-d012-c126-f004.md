@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航空机场营销内容的向量模型与索引
-meta_description: 航空机场营销内容的数据来源包括机场官方营销管理系统的广告排期、航线推广文案、航站楼互动物料、会员专属活动素材、合作品牌联动的宣传内容，以及机场公众号、航司A
+meta_description: 航空机场营销内容的向量模型与索引：航空机场营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 航空机场、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

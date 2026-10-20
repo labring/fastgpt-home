@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 涂料油墨营销内容的向量模型与索引
-meta_description: 该类营销内容多服务于金融行业合作的涂料油墨生产及销售企业，数据主要来自企业自有产品手册、合作经销商推广素材、行业合规公告及电商渠道商品详情页。更新节奏随新品
+meta_description: 涂料油墨营销内容的向量模型与索引：涂料油墨营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 涂料油墨、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

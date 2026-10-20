@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 卫星通信营销内容的模型接入与配置
-meta_description: 数据来源包括卫星通信链路状态上报系统、营销触达终端的交互日志、投放内容的分发记录。更新节奏为链路状态每10秒刷新一次，营销触达数据按单次投放批次归档。数据文
+meta_description: 卫星通信营销内容的模型接入与配置：卫星通信营销内容的模型接入与配置，涵盖配置与验证建议
 keywords: 卫星通信、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

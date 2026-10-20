@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小金属投研知识库建设的数据库与运维
-meta_description: 小金属行业数据来源涵盖国内小金属行业协会发布的行业数据、海关总署进出口报关数据、期货交易所盘面报价及矿山企业产能公告。现货报价数据按日更新，供需平衡表按月度
+meta_description: 小金属投研知识库建设的数据库与运维：小金属投研知识库建设的数据库与运维，涵盖配置与验证建议
 keywords: 小金属、投研知识库建设与治理、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

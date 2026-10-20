@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 特钢收益率的多轮对话与提示词
-meta_description: 特钢行业的收益率与行情数据主要来自现货交易平台、国内钢铁行业协会公开统计数据、期货市场挂牌合约行情，多用于金融端的特钢相关理财、保险产品的收益率测算与行情播
+meta_description: 特钢收益率的多轮对话与提示词：特钢收益率的多轮对话与提示词，涵盖配置与验证建议。
 keywords: 特钢、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

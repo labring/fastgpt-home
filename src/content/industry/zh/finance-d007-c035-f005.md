@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医美收益率的多轮对话与提示词
-meta_description: 医美收益率与行情的数据来自医美机构的每日经营台账、第三方医美行业监测平台的公开报价与消费数据。行情数据每日更新，单项目的收益相关统计数据每7日更新一次。单条
+meta_description: 医美收益率的多轮对话与提示词：医美收益率的多轮对话与提示词，涵盖配置与验证建议。
 keywords: 医美、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物业管理研报检索的文档解析与分块
-meta_description: 物业管理相关研报与运维数据来源覆盖项目日常运维档案、行业协会公开报告、地方住建部门监管公示文件。文档更新节奏随类型不同，日常运维台账按周或月度更新，行业业态
+meta_description: 物业管理研报检索的文档解析与分块：物业管理研报检索的文档解析与分块，涵盖配置与验证建议
 keywords: 物业管理、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

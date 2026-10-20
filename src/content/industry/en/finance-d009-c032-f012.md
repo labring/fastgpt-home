@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Model Integration and Configuration for Chemical Raw
-meta_description: Chemical raw materials research report data mainly comes from industry association public monitoring data, securities firm chemical industry research
+meta_description: Model Integration and Configuration for Chemical Raw Materials Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

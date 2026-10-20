@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 受益所有人KYC 的多轮对话与提示词
-meta_description: 受益所有人数据的来源包括工商行政管理部门公示信息、客户提交的股权架构说明文件、尽职调查工作底稿。更新节奏随客户股权结构变动、年度KYC复核触发。文档多为结构
+meta_description: 受益所有人KYC 的多轮对话与提示词：受益所有人KYC 的多轮对话与提示词，涵盖配置与验证建议
 keywords: 受益所有人、KYC 与反洗钱资料核验、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

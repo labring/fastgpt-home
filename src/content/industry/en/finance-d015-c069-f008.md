@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Risk Control and Credit Document Review
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Collateral Material Risk
-meta_description: Collateral material data primarily comes from bank credit systems, real estate registration centers, industrial and commercial archive platforms, and
+meta_description: Tool Calling and Plugins for Collateral Material Risk Control
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

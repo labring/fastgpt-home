@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Database and Operations for Cultural and Entertainment
-meta_description: Cultural and entertainment products fall under the light manufacturing category. Its market and yield data comes primarily from domestic trendy play
+meta_description: Database and Operations for Cultural and Entertainment Product Yields
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -29,7 +29,7 @@ The text format for condition grade requires database fields to support enumerat
 | Configuration Item | Recommended Setting | Rationale |
 | --- | --- | --- |
 | `DB_PARTITION_BY_DATE` | Enabled, partition by calendar day | Matches the daily update pattern of cultural and entertainment product market data, simplifies historical data querying and cleanup |
-| `VLLM_MAX_BATCH_SIZE` | 32–64 | Handles daily bulk market data pulls, balances concurrency and memory usage, compatible with FastGPT v4.15 workflow scheduling |
+Reference only; verify against the target FastGPT release and deployment documentation.
 | `PARSE_FILE_TIMEOUT_SECONDS` | 900 seconds | Average processing time for complete category ledger files is long, prevents timeout interruptions of the parsing process |
 | `UPLOAD_FILE_MAX_SIZE` | 2000 MB | Supports importing bulk historical transaction Excel files for SKUs, covers full category ledger import requirements |
 | `DB_CONN_RETRY_TIMES` | 5 times | Addresses temporary network fluctuations and interface rate limiting when connecting to multi-source external APIs |

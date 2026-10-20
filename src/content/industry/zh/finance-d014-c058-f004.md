@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小金属财报分析的向量模型与索引
-meta_description: 小金属财报数据主要来自上市公司定期报告、交易所公开公告及行业协会调研数据，更新节奏以季度、年度为核心周期，临时产能或价格变动公告会随机触发更新。文档结构包含
+meta_description: 小金属财报分析的向量模型与索引：小金属财报分析的向量模型与索引，涵盖配置与验证建议
 keywords: 小金属、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

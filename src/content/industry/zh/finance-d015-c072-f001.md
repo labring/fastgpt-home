@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 授信申请风控的HTTP 接口与外部系统
-meta_description: 授信申请风控的数据主要来自企业经营资质、个人征信报告、银行流水、资产证明、工商备案信息等外部系统，更新节奏分为实时（如流水交易记录）、每日（如征信快照）与月
+meta_description: 授信申请风控的HTTP 接口与外部系统：授信申请风控的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 授信申请、风控与授信材料审核、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

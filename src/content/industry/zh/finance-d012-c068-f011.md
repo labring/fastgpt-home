@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 投资平台营销内容的文档解析与分块
-meta_description: 这个品类的数据主要来自投资平台的营销物料与投教内容，包括基金/理财产品招募说明书、活动宣传文案、投教文章、用户常见问题文档等。数据来源涵盖运营团队自主编辑、
+meta_description: 投资平台营销内容的文档解析与分块：投资平台营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 投资平台、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

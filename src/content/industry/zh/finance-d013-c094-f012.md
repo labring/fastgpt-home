@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 炼化融资日报的模型接入与配置
-meta_description: 炼化融资日报的数据来源为石油石化行业融资披露平台、境内外交易所公开公告及行业资讯终端的炼化板块专项数据。更新节奏为每日收盘后1小时内更新当日新增的炼化相关融
+meta_description: 炼化融资日报的模型接入与配置：炼化融资日报的模型接入与配置，涵盖配置与验证建议。
 keywords: 炼化、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

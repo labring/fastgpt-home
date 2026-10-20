@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 文娱用品财报分析的HTTP 接口与外部系统
-meta_description: 文娱用品财报数据主要来自公开证券披露平台、行业协会月度调研数据。更新节奏分为定期与不定期：定期披露为季度、年度财报，不定期为新品上线、重大合作后的临时营收公
+meta_description: 文娱用品财报分析的HTTP 接口与外部系统：文娱用品财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 文娱用品、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

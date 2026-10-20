@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Personal Care Products Financial
-meta_description: Personal care products financial report data primarily comes from periodic reports disclosed by stock exchanges, official corporate announcements, and
+meta_description: Workflow Orchestration for Personal Care Products Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -34,7 +34,7 @@ These data characteristics impose three core constraints on workflow orchestrati
 ## Three common mistakes
 - Phenomenon: An error `chat:ai_input_is_e` is triggered when the output of a code node in the workflow is passed to a large model node. Cause: The `result_pass_mode` parameter is not configured correctly, causing the original format of the code output to not meet the input requirements of the large model, resulting in format parsing failure.
 - Phenomenon: When using a database connection plugin to connect to PostgreSQL, the interface prompts "Workflow verification failed, please check for missing or missing values, and whether the connections are normal". Checking the logs shows the words `connection_refused` or `missing_required_param`. Cause: Correct database port, username are not filled in, or SSL parameters required for intranet access are not configured. Personal care financial report databases are usually deployed in intranet environments, and additional connection parameters need to be configured.
-- Phenomenon: No response occurs when using the `[{datasetId: xxx}]` format for knowledge base variable reference. Cause: The standard FastGPT variable reference syntax is not used. It should be changed to `{{datasetId}}` or `{{$.inputs.datasetId}}` format.
+- Phenomenon: No response occurs when using the `[{datasetId: xxx}]` format for knowledge base variable reference. Cause: The standard FastGPT variable reference syntax is not used. It should be changed to `example value` or `example value` format.
 
 ## How to confirm proper configuration
 - Trigger a single test workflow, check the output logs of the code node, confirm that fields such as segmented revenue of personal care products, raw material unit cost, and online channel revenue proportion are complete and retain their original units.

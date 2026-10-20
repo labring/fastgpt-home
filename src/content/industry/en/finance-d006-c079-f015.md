@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade of Carbon Steel Investment Research
-meta_description: Carbon steel investment research data originates from steel mill monthly production reports, industry association public weekly reports, real-time
+meta_description: Deployment and Upgrade of Carbon Steel Investment Research Knowledge Bases
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

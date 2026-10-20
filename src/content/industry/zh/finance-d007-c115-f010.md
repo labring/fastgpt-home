@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 种植业收益率的数据库与运维
-meta_description: 种植业收益率相关的数据来源包括官方农业监测平台、产区合作社上报数据、田间物联网传感器采集信息。更新节奏因品类不同存在差异，大宗种植品类每日更新数据，小众特色
+meta_description: 种植业收益率的数据库与运维：种植业收益率的数据库与运维，涵盖配置与验证建议。。。
 keywords: 种植业、收益率与行情日报播报、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 动力煤营销内容的工具调用与插件
-meta_description: 动力煤的核心数据来源为国内大宗商品现货交易所、行业协会及沿海港口监测机构。数据更新节奏分两类：现货交易价格按日更新，长协合作价格按月更新；港口库存、到港船舶
+meta_description: 动力煤营销内容的工具调用与插件：动力煤营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 动力煤、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

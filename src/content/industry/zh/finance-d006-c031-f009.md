@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学制药投研知识库建设的引用来源与溯源
-meta_description: 化学制药投研数据主要来自公开临床试验报告、中国药典、全球专利数据库、CDE审批公示文件、药企年度研发年报。其中临床试验报告、专利文献为核心数据源，更新节奏差
+meta_description: 化学制药投研知识库建设的引用来源与溯源：化学制药投研知识库建设的引用来源与溯源，涵盖配置与验证建议
 keywords: 化学制药、投研知识库建设与治理、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

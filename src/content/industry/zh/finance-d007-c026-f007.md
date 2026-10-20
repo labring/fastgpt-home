@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 出版收益率的工作流编排
-meta_description: 该品类的数据来源为持牌金融行情接口、交易所公开披露端口，更新节奏为每个交易日收盘后完成批量汇总，次日发布正式日报。文档以结构化表格为核心载体，包含产品唯一标
+meta_description: 出版收益率的工作流编排：出版收益率的工作流编排，涵盖配置与验证建议。。。。。。。
 keywords: 出版、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

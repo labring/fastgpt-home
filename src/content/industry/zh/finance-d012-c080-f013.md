@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 服装家纺营销内容的知识库检索与召回
-meta_description: 服装家纺的知识库数据主要来源于品牌自有产品手册、供应链提供的面料检测报告、线下门店与直播的营销话术整理、官方详情页文案。更新节奏随新品上市周期、促销活动调整
+meta_description: 服装家纺营销内容的知识库检索与召回：服装家纺营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 服装家纺、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

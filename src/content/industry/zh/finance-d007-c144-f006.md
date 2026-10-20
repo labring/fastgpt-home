@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通信服务收益率的对话日志与审计
-meta_description: 通信服务领域的行情与收益率数据，来源为国内主流金融行情数据源的通信行业板块专属接口。更新节奏分为两类：实时行情每5秒刷新一次，当日收益率日报在每个交易日收盘
+meta_description: 通信服务收益率的对话日志与审计：通信服务收益率的对话日志与审计，涵盖配置与验证建议
 keywords: 通信服务、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Carbon Steel Investment
-meta_description: Carbon steel industry data sources mainly include daily steel mill ex-factory price reports, monthly supply and demand reports from the China Iron and
+meta_description: Document Parsing and Chunking for Carbon Steel Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 装修装饰投研知识库建设的部署与升级
-meta_description: 装修装饰投研数据主要来自行业标准图集、材料供应商报价单、施工工艺规范、招投标文件与现场监理日志。更新节奏因类型差异明显：材料报价随市场波动按月更新，工艺规范
+meta_description: 装修装饰投研知识库建设的部署与升级：装修装饰投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 装修装饰、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

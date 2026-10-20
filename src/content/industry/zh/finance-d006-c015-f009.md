@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 储能投研知识库建设的引用来源与溯源
-meta_description: 储能行业数据主要来自中国电力企业联合会的月度装机统计、上市公司定期财报、国家能源局的年度规划文件、电站运维日志与第三方可研报告。更新节奏覆盖月度、季度与年度
+meta_description: 储能投研知识库建设的引用来源与溯源：储能投研知识库建设的引用来源与溯源，涵盖配置与验证建议
 keywords: 储能、投研知识库建设与治理、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Water Utility Intelligent Due
-meta_description: Data sources for water utility due diligence reports include monthly operation reports from water supply and drainage enterprises, pipe network GIS
+meta_description: Workflow Orchestration for Water Utility Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 耐火材料融资日报的文档解析与分块
-meta_description: 耐火材料融资日报的数据来源为全国性建筑材料行业协会的融资动态汇总、地方工信部门发布的企业融资公示、第三方企业融资信息平台的公开数据。更新节奏为每日更新，单份
+meta_description: 耐火材料融资日报的文档解析与分块：耐火材料融资日报的文档解析与分块，涵盖配置与验证建议
 keywords: 耐火材料、融资日报、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

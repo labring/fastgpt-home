@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水泥营销内容的HTTP 接口与外部系统
-meta_description: 水泥营销相关数据主要来自生产企业ERP系统、经销商进销存管理系统及区域仓储数据。数据更新节奏按生产批次或每日同步，单次更新覆盖单批次全量参数。文档结构标准化
+meta_description: 水泥营销内容的HTTP 接口与外部系统：水泥营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 水泥、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 资金来源KYC 的多轮对话与提示词
-meta_description: 资金来源KYC的核验数据主要来自客户提交的三类材料：银行对公或个人账户流水、年度纳税申报表、固定资产或金融资产的评估证明。数据更新节奏为单次核验时的一次性提
+meta_description: 资金来源KYC 的多轮对话与提示词：资金来源KYC 的多轮对话与提示词，涵盖配置与验证建议
 keywords: 资金来源、KYC 与反洗钱资料核验、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 白酒投研知识库建设的数据库与运维
-meta_description: 白酒投研的数据来源涵盖公开行业研报、上市酒厂定期财报、行业协会统计数据、电商平台销售监测数据及专业品鉴机构评测内容。数据更新节奏差异显著：电商销售数据为日更
+meta_description: 白酒投研知识库建设的数据库与运维：白酒投研知识库建设的数据库与运维，涵盖配置与验证建议
 keywords: 白酒、投研知识库建设与治理、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

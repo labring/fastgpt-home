@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 兵器装备营销内容的知识库检索与召回
-meta_description: 数据来源包括兵器装备官方技术规范文档、定型试验公开资料、金融机构军工主题营销物料、合规宣传材料、装备维护手册。更新节奏随装备定型批次、金融机构年度军工主题营
+meta_description: 兵器装备营销内容的知识库检索与召回：兵器装备营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 兵器装备、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学原料收益率的模型接入与配置
-meta_description: 数据来源为国内大宗商品现货交易平台公开报价、化工行业协会发布的监测数据。更新节奏为每个交易日收盘后1小时内完成单次更新。文档为结构化JSON或CSV格式，包
+meta_description: 化学原料收益率的模型接入与配置：化学原料收益率的模型接入与配置，涵盖配置与验证建议
 keywords: 化学原料、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

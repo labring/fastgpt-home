@@ -4,8 +4,8 @@ slug: /en/industry/finance-d006-c080-f006
 page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
-meta_title: Conversation Logs and Auditing for Apparel and Home Textiles
-meta_description: Apparel and home textiles investment research data primarily comes from brand quarterly sales ledgers, fabric supplier ex-factory price databases
+meta_title: Conversation Logs and Auditing for Apparel and Home
+meta_description: Conversation Logs and Auditing for Apparel and Home Textiles Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -34,7 +34,7 @@ Cross-source log correlation needs require audit processes to support tracing ca
 > The parameter values provided on this page are common recommended starting points for configuration. Actual values are affected by material formats, data volume, and business rules. Specific issues require case-by-case analysis, and it is recommended to test on your own samples before finalizing.
 
 ## Three Common Misconfigurations
-- Phenomenon: The conversation log displays the token field as `fastgpt`, and the chat interface reports a connection failure. Cause: The data source access token was not configured correctly. The log records the default placeholder token, which cannot pass third-party interface verification.
+- Phenomenon: The conversation log displays the token field as `fastgpt`, and the chat interface reports a connection failure. Cause: The data source access token was not configured correctly. The log records the default pending verification token, which cannot pass third-party interface verification.
 - Phenomenon: Calling the full conversation log API only returns a small number of records, and complete logs for the specified time range cannot be obtained. Cause: The `audit_log_batch_size` configuration value was not adjusted. The default rule only pulls a limited number of logs.
 - Phenomenon: A large number of abnormal call logs appear outside of working hours, causing abnormal resource consumption. Cause: No time period verification rules were configured, and unauthorized scheduled call requests were not blocked.
 

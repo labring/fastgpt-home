@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 游戏研报检索的部署与升级
-meta_description: 游戏研报来源包括券商研究所行业分析报告、游戏产业第三方咨询机构月度/季度数据、上市游戏厂商公开财报、版号审批官方公告等。更新节奏无固定周期，财报季、版号发放
+meta_description: 游戏研报检索的部署与升级：游戏研报检索的部署与升级，涵盖配置与验证建议。。。。。
 keywords: 游戏、研报检索与问答、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

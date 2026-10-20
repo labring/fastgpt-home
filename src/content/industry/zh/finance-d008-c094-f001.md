@@ -4,8 +4,8 @@ slug: /zh/industry/finance-d008-c094-f001
 page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
-meta_title: 炼化智能尽调报告的HTTP 接口与外部系统
-meta_description: 炼化智能尽调报告的数据来源包括炼化企业公开披露文件、行业协会月度统计报表、供应链上下游交易凭证及环保监测公开数据，为金融机构尽调提供核心依据。更新节奏分为三
+meta_title: 炼化智能尽调报告的HTTP接口与外部系统
+meta_description: 炼化智能尽调报告的HTTP接口与外部系统：炼化智能尽调报告的HTTP接口与外部系统，涵盖配置与验证建议
 keywords: 炼化、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

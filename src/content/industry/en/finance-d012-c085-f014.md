@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Forms and Interactions for Cement Marketing Content
-meta_description: Cement category data comes primarily from three sources: production enterprise quality inspection reports, supply chain ledgers, and construction site
+meta_description: Forms and Interactions for Cement Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -32,7 +32,7 @@ At the same time, structured document field validation must adapt to units and v
 ## Configuration Settings
 | Configuration Item | Recommended Setting | Rationale |
 | --- | --- | --- |
-| `form_initial_values` | `{"cement_grade": "P.O42.5", "last_sync": "{{datetime.utcnow()}}"}` | Preset industry-standard cement grade to reduce user input costs, sync latest data update time |
+| `form_initial_values` | `{"cement_grade": "P.O42.5", "last_sync": "example value"}` | Preset industry-standard cement grade to reduce user input costs, sync latest data update time |
 | `global_variable_default_value` | `{"stock_threshold": 500, "unit": "吨"}` | Preset initial values for global variables used in supply chain finance marketing, to avoid uninitialized errors |
 | `conditional_branch_trigger` | `Field matching based on GPT output` | Match fields such as cement grade and demand tonnage, trigger marketing content branches for different financing plans |
 | `form_submit_timeout` | `30 seconds` | Adapt to the response duration of cement supply chain data interfaces, avoid timeout errors |

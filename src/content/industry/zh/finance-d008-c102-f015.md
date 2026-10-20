@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 特钢智能尽调报告的部署与升级
-meta_description: 特钢智能尽调报告的数据主要来自特钢企业的生产执行系统、质量检验报告、原材料采购台账、下游客户订单数据及行业供需监测信息。数据更新节奏存在差异：生产批次相关数
+meta_description: 特钢智能尽调报告的部署与升级：特钢智能尽调报告的部署与升级，涵盖配置与验证建议。
 keywords: 特钢、智能尽调报告、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

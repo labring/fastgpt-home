@@ -4,8 +4,8 @@ slug: /zh/industry/fin-step-c041-3
 page_type: 行业作业环节页
 article_section: 银行运营与支付
 is_part_of: FastGPT 技术中心
-meta_title: 监管统计与数据报送的复核报表、解释重大变动并完成审批报送：哪
-meta_description: 监管统计与数据报送的复核报表、解释重大变动并完成审批报送：哪一部分能交给系统
+meta_title: 监管统计与数据报送的复核报表、解释重大变动并完成审批报送：哪一部分能交给系统
+meta_description: 监管统计与数据报送的复核报表、解释重大变动并完成审批报送：哪一部分能交给系统：监管统计与数据报送的复核报表、解释重大变动并完成审批报送：哪一部分能交给系统，涵盖配置与验证建议
 keywords: 监管统计与数据报送、银行运营与支付、环节3
 source_type: 金融业务分类与作业事实取自行业研究报告（含监管文件来源编号）
 date_published: 2026-09-15

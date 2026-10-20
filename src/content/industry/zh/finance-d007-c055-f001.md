@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 大气治理收益率的HTTP 接口与外部系统
-meta_description: 大气治理项目的收益率与行情日报数据，主要来自现场监测传感器、企业环保运营台账、地方生态环境部门的减排核算系统。数据更新分为两个节奏：实时监测点位的污染物浓度
+meta_description: 大气治理收益率的HTTP 接口与外部系统：大气治理收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 大气治理、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

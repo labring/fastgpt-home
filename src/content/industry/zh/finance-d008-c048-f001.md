@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 城商行智能尽调报告的HTTP 接口与外部系统
-meta_description: 城商行智能尽调报告的数据主要来自四个渠道：本地银保监监管报送系统、人行金融统计监测接口、本行对公信贷台账、地方征信平台的企业授信数据。结构化台账数据每日同步
+meta_description: 城商行智能尽调报告的HTTP 接口与外部系统：城商行智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 城商行、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for Defense Electronics
-meta_description: Data sources for defense electronics intelligent due diligence mainly include industry information publicly disclosed by the National Defense Science
+meta_description: Citation Sources and Traceability for Defense Electronics Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -25,7 +25,7 @@ Defense electronics due diligence data sources are scattered and mostly carry pu
 | `Recall count` | `top 8-12 entries` | Defense electronics documents have many scattered fields. Too many recalled entries will introduce irrelevant fragments, while too few will fail to cover core technical indicators and compliance records |
 | `Similarity threshold` | `0.75-0.85` | Technical indicators for defense electronics are expressed precisely. This range filters low-match irrelevant documents while retaining compliance records with similar parameters |
 | `Chunk size` | `800-1200 characters` | Core technical paragraphs in defense electronics due diligence documents are long. Too short segments will split indicator associations, while too long segments will reduce accurate matching |
-| `Citation template` | `{{source}} | {{field}} | {{update_time}}` | Must clearly mark the source channel, corresponding field, and effective time to meet the traceability compliance requirements of defense electronics due diligence |
+| `Traceability details` | `the configured value | the configured value | the configured value` | Must clearly mark the source channel, corresponding field, and effective time to meet the traceability compliance requirements of defense electronics due diligence |
 | `Knowledge Base Refresh Trigger Mode` | `Triggered by project milestones` | Defense electronics data updates as projects progress. Fixed-cycle refreshes cannot match staged adjustment rhythms |
 | `Rerank result count` | `top 4-6 entries` | Core compliance and technical sources must be retained on the basis of accurate recall, to avoid excessive redundant information interfering with traceability |
 

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 综合服务智能尽调报告的工作流编排
-meta_description: 这个品类的数据来源包括公开监管公示接口、第三方征信数据源、企业自主报送的备案材料。更新节奏分为批量同步与实时拉取两类，监管类数据按自然日更新，企业报送数据随
+meta_description: 综合服务智能尽调报告的工作流编排：综合服务智能尽调报告的工作流编排，涵盖配置与验证建议
 keywords: 综合服务、智能尽调报告、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

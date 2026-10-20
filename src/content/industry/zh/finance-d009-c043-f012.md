@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商业地产研报检索的模型接入与配置
-meta_description: 商业地产研报的数据来源包括公开行业监测数据库、上市房企披露的商业项目运营数据、区域商业市场公开报告。更新节奏以季度常规更新为主，热点商圈的专项研报会根据市场
+meta_description: 商业地产研报检索的模型接入与配置：商业地产研报检索的模型接入与配置，涵盖配置与验证建议
 keywords: 商业地产、研报检索与问答、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calls and Plugins for Cultural and Entertainment
-meta_description: Cultural and entertainment product yield rate-related data originates primarily from domestically compliant cultural and entertainment category
+meta_description: Tool Calls and Plugins for Cultural and Entertainment Product Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade of Feed Marketing Content
-meta_description: Feed marketing content data is sourced primarily from public feed ingredient databases, feeding feedback logs from large-scale livestock farms
+meta_description: Deployment and Upgrade of Feed Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 个护用品营销内容的表单与交互
-meta_description: 个护用品的营销内容数据主要来自官方产品说明书、合规质检报告、电商平台官方详情页及线下终端物料。数据更新节奏随产品迭代调整，新品上市、成分或包装调整时触发更新
+meta_description: 个护用品营销内容的表单与交互：个护用品营销内容的表单与交互，涵盖配置与验证建议。
 keywords: 个护用品、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

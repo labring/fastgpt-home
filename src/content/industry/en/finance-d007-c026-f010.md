@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Database and Operations for Publishing Industry Yield Rates
-meta_description: Publishing industry daily yield and market trend reports draw data from regulated financial data service providers and publicly disclosed exchange
+meta_description: Database and Operations for Publishing Industry Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

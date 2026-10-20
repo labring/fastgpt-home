@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多元金融财报分析的工作流编排
-meta_description: 多元金融的财报数据来源包括境内外证券交易所披露平台、行业监管报送系统。更新节奏遵循季度、年度定期披露规则，伴随重大经营事项发布临时公告。文档以PDF格式呈现
+meta_description: 多元金融财报分析的工作流编排：多元金融财报分析的工作流编排，涵盖配置与验证建议。
 keywords: 多元金融、财报分析与报告生成、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

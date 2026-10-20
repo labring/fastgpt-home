@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 环境监测研报检索的引用来源与溯源
-meta_description: 环境监测研报数据主要来自生态环境主管部门公开监测站点数据、第三方环境监测机构专项报告、区域环境质量月度汇总文档。更新节奏覆盖小时级实时数据、日度监测报表、季
+meta_description: 环境监测研报检索的引用来源与溯源：环境监测研报检索的引用来源与溯源，涵盖配置与验证建议
 keywords: 环境监测、研报检索与问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 住宅开发收益率的部署与升级
-meta_description: 住宅开发收益率相关数据主要来自房企内部成本核算系统、住建部门备案的销售数据台账、银行融资回款记录三类来源。数据更新以项目开发节点或月度为主要节奏，支持临时调
+meta_description: 住宅开发收益率的部署与升级：住宅开发收益率的部署与升级，涵盖配置与验证建议。。。
 keywords: 住宅开发、收益率与行情日报播报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

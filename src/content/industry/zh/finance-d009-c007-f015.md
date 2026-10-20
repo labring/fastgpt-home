@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 乳制品研报检索的部署与升级
-meta_description: 乳制品研报的数据主要来自国内券商研究所、农业农村部畜牧兽医局公开数据、乳企年度报告、行业咨询机构公开文档。常规研报按季度、月度发布，突发行业事件后会有临时补
+meta_description: 乳制品研报检索的部署与升级：乳制品研报检索的部署与升级，涵盖配置与验证建议。。。
 keywords: 乳制品、研报检索与问答、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

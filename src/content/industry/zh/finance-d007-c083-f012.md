@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水务收益率的模型接入与配置
-meta_description: 水务收益率相关的日报数据，主要来自各地市政水务主管部门的公开运营报送数据、第三方水务行业监测机构的每日采集数据。数据更新节奏为每日一次，通常在次日凌晨完成当
+meta_description: 水务收益率的模型接入与配置：水务收益率的模型接入与配置，涵盖配置与验证建议。。。
 keywords: 水务、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 调味品收益率的数据库与运维
-meta_description: 数据来源包括国内食品饮料行业监测平台、线下商超POS终端、线上电商交易数据及供应链出厂报价数据。更新节奏分为三类：线下商超零售数据每日更新，线上电商实时交易
+meta_description: 调味品收益率的数据库与运维：调味品收益率的数据库与运维，涵盖配置与验证建议。。。
 keywords: 调味品、收益率与行情日报播报、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电子元件投研知识库建设的知识库检索与召回
-meta_description: 电子元件投研数据主要来源于原厂官方datasheet、行业供应链数据库、合规认证公告、季度行业供需报告。数据更新节奏差异显著：原厂规格文档随新品发布或参数调
+meta_description: 电子元件投研知识库建设的知识库检索与召回：电子元件投研知识库建设的知识库检索与召回，涵盖配置与验证建议
 keywords: 电子元件、投研知识库建设与治理、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

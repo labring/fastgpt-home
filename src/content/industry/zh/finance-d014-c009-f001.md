@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 产业园区财报分析的HTTP 接口与外部系统
-meta_description: 产业园区财报数据主要来自园区运营管理系统的招商台账、租金收缴记录、物业运维账单，以及属地产业监管平台的汇总数据。数据更新按周期区分：年度/季度财报按自然周期
+meta_description: 产业园区财报分析的HTTP 接口与外部系统：产业园区财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 产业园区、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

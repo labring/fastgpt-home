@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c092-f015
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: Deployment and Upgrade for Consumer Electronics Yield and
-meta_description: This category's data primarily comes from public industry monitoring platforms, official brand retail data, and supply chain quotation systems.
+meta_title: Deployment and Upgrade for Consumer Electronics Yield
+meta_description: Deployment and Upgrade for Consumer Electronics Yield and Market Daily Reporting
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

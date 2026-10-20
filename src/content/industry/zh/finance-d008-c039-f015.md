@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 厨卫电器智能尽调报告的部署与升级
-meta_description: 厨卫电器的智能尽调数据来源包括品牌官方参数页、电商平台商品详情页、国家强制性产品认证报告、售后维修台账。数据更新节奏无固定周期，新品上市时同步更新核心参数，
+meta_description: 厨卫电器智能尽调报告的部署与升级：厨卫电器智能尽调报告的部署与升级，涵盖配置与验证建议
 keywords: 厨卫电器、智能尽调报告、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

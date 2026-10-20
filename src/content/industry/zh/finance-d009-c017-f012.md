@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光学光电子研报检索的模型接入与配置
-meta_description: 光学光电子研报的数据主要来自券商研究所、行业协会公开报告、上市公司定期公告与技术白皮书。更新节奏以周度行业跟踪报告、月度深度分析、季度产业跟踪为主，部分前沿
+meta_description: 光学光电子研报检索的模型接入与配置：光学光电子研报检索的模型接入与配置，涵盖配置与验证建议
 keywords: 光学光电子、研报检索与问答、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

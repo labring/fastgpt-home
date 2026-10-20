@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 国有大行智能尽调报告的工具调用与插件
-meta_description: 国有大行智能尽调报告的数据来源主要包括内部信贷管理系统、人行征信报送接口、季度财报披露文件及监管合规报表。数据更新节奏分层管理：信贷台账数据每日更新，财报数
+meta_description: 国有大行智能尽调报告的工具调用与插件：国有大行智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 国有大行、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 特钢营销内容的多轮对话与提示词
-meta_description: 特钢的数据源包括钢厂生产台账、第三方质检报告、行业牌号标准文档、终端客户订单数据。更新节奏方面，生产参数与库存数据每日更新，牌号标准与技术规范每季度更新，市
+meta_description: 特钢营销内容的多轮对话与提示词：特钢营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 特钢、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

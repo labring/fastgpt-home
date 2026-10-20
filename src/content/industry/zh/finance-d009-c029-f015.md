@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 包装印刷研报检索的部署与升级
-meta_description: 包装印刷研报的数据来源包括券商轻工制造组研报、行业协会公开报告、包装印刷上市企业定期报告。更新节奏为常规月度深度报告、周度行业动态报告，政策变动时追加临时报
+meta_description: 包装印刷研报检索的部署与升级：包装印刷研报检索的部署与升级，涵盖配置与验证建议。
 keywords: 包装印刷、研报检索与问答、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

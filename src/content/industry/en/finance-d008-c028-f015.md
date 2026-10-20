@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Thermal Coal Intelligent Due
-meta_description: Data for thermal coal intelligent due diligence reports comes from domestic coal production ledgers, port loading and unloading daily reports, railway
+meta_description: Deployment and Upgrade for Thermal Coal Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

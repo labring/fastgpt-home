@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 燃气融资日报的向量模型与索引
-meta_description: 燃气融资日报的数据来源为燃气公用事业主体的官方融资披露公告、内部融资台账及行业监管报送文件。更新频率为每日一次，单篇文档包含固定字段：日期、融资主体全称、融
+meta_description: 燃气融资日报的向量模型与索引：燃气融资日报的向量模型与索引，涵盖配置与验证建议。
 keywords: 燃气、融资日报、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

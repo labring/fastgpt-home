@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for E-commerce Service
-meta_description: E-commerce service data mainly comes from e-commerce platform open APIs, third-party compliant monitoring tools, and due diligence materials submitted
+meta_description: Citation Sources and Traceability for E-commerce Service Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -34,7 +34,7 @@ The multi-source nature of e-commerce service data requires the traceability lin
 ## Three common errors
 - Phenomenon: When uploading 100 e-commerce due diligence files in batch, nearly half of the files show training exception status. Cause: The `file_upload_max_size` parameter is not configured. Some compliant qualification files exceed the single-file upload limit, causing training to interrupt.
 - Phenomenon: After switching the AI conversation component to variable reference mode, the temperature setting button disappears, and generation parameters cannot be adjusted. Cause: The `temperature_override_enable` configuration item is not enabled in variable reference mode, causing the parameter setting entry to be hidden.
-- Phenomenon: The `{{id}}` field displayed in cited content is empty, making it impossible to locate specific traceability data. Cause: The `source_id` placeholder is not configured in the knowledge base reference template, and no product ID or merchant main body identifier is bound as the unique traceability identifier.
+- Phenomenon: The `example value` field displayed in cited content is empty, making it impossible to locate specific traceability data. Cause: The `source_id` pending verification is not configured in the knowledge base reference template, and no product ID or merchant main body identifier is bound as the unique traceability identifier.
 
 ## How to confirm configurations are set correctly
 - Upload a single e-commerce due diligence file, view the segmented content after parsing by the knowledge base, and confirm that the segment length matches the configured `parse_chunk_size` range.

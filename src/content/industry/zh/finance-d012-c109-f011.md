@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电子元件营销内容的文档解析与分块
-meta_description: 面向金融行业的电子元件相关营销文档主要来源于原厂datasheet、授权经销商报价单、行业技术白皮书与品牌营销物料。文档更新节奏随来源不同存在差异，原厂规格
+meta_description: 电子元件营销内容的文档解析与分块：电子元件营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 电子元件、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

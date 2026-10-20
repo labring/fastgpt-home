@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 军工电子研报检索的文档解析与分块
-meta_description: 军工电子研报的数据来源包括公开券商行业研报、军工行业协会月度简报、军工上市企业定期报告、国防军工领域专项白皮书，多为金融投资领域从业者关注的行业分析文档。更
+meta_description: 军工电子研报检索的文档解析与分块：军工电子研报检索的文档解析与分块，涵盖配置与验证建议
 keywords: 军工电子、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

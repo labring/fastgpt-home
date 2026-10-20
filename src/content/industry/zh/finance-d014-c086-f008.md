@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 汽车服务财报分析的工具调用与插件
-meta_description: 汽车服务行业的财报分析数据，主要来源于公开上市主体的季度、年度财务报告，以及汽车后市场行业协会发布的月度经营监测数据。数据文档结构包含营收分类明细、单客服务
+meta_description: 汽车服务财报分析的工具调用与插件：汽车服务财报分析的工具调用与插件，涵盖配置与验证建议
 keywords: 汽车服务、财报分析与报告生成、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

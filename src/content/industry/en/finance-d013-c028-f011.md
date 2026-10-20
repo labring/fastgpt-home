@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Thermal Coal Financing
-meta_description: Thermal coal financing daily report data comes from domestic coal port trading platforms, futures exchange delivery data, and daily industry
+meta_description: Document Parsing and Chunking for Thermal Coal Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -20,7 +20,7 @@ Thermal coal financing daily report data comes from domestic coal port trading p
 Daily updated documents have fixed structures but dense fields and mixed data types. Processing must avoid splitting associated fields across multiple cells. Numeric fields include units. Processing must retain the binding between units and corresponding data to prevent unit misalignment after parsing. Batch processing of multiple daily reports requires stable parsing speed. Processing must avoid queue blocking caused by frequent updates. Some documents use merged headers. Processing must accurately identify the correspondence between headers and data rows to prevent incorrect field mapping.
 
 ## Configuration Settings
-This configuration applies to the knowledge base module of FastGPT v4.8.12-alpha open source version.
+Reference only; verify against the target FastGPT release and deployment documentation.
 
 | Configuration Item | Recommended Range | Rationale |
 | --- | --- | --- |

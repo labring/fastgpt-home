@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Dialogue Logging and Audit for Military Electronics
-meta_description: Military electronics investment research data is primarily sourced from industry public reports, product research reports, supply chain public
+meta_description: Dialogue Logging and Audit for Military Electronics Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

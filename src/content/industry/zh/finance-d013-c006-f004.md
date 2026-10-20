@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 中药融资日报的向量模型与索引
-meta_description: 该品类的数据均来自公开合规的行业及资本市场披露渠道，更新频率为每日同步前一自然日的公开融资信息。文档以结构化字段组合呈现，包含企业全称、中药业务赛道分类、融
+meta_description: 中药融资日报的向量模型与索引：中药融资日报的向量模型与索引，涵盖配置与验证建议。
 keywords: 中药、融资日报、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

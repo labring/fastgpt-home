@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 影视院线收益率的数据库与运维
-meta_description: 该数据为金融场景下影视院线收益率日报播报的核心数据源，来自院线内部票务结算系统、第三方影视数据服务商的公开接口，涵盖影院、院线、上映影片、当日运营数据等维度
+meta_description: 影视院线收益率的数据库与运维：影视院线收益率的数据库与运维，涵盖配置与验证建议。
 keywords: 影视院线、收益率与行情日报播报、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

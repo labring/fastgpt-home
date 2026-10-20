@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Snack Food Financing Daily
-meta_description: Data sources for snack food financing daily reports include public financing filing announcements from local financial bureaus and daily update
+meta_description: Workflow Orchestration for Snack Food Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

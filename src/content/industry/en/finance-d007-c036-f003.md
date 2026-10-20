@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Sharing and Embedding of Semiconductor Yield Data
-meta_description: Data for semiconductor yield and daily market reports comes from public market APIs of domestic and overseas stock exchanges, and official data
+meta_description: Sharing and Embedding of Semiconductor Yield Data
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

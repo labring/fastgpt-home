@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 费用清单保险理赔初审的模型接入与配置
-meta_description: 费用清单数据来源于理赔申请人提交的医院收费凭证、医保结算单据，或保险公司内部的理赔业务系统。每份清单对应单笔理赔申请，随理赔申请提交同步生成，无固定批量更新
+meta_description: 费用清单保险理赔初审的模型接入与配置：费用清单保险理赔初审的模型接入与配置，涵盖配置与验证建议
 keywords: 费用清单、保险理赔初审、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

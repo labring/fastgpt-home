@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 塑料橡胶营销内容的向量模型与索引
-meta_description: 该品类的营销内容数据主要来源于金融机构面向塑料橡胶企业的供应链金融推广素材、企业内部产品技术文档、经销商推广素材、行业协会发布的应用指南。更新节奏随新品上市
+meta_description: 塑料橡胶营销内容的向量模型与索引：塑料橡胶营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 塑料橡胶、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

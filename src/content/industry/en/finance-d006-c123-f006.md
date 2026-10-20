@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Dialogue Logging and Auditing for Energy Metals Investment
-meta_description: Energy metals data comes primarily from spot quotes on the London Metal Exchange and Shanghai Futures Exchange, monthly supply and demand reports from
+meta_description: Dialogue Logging and Auditing for Energy Metals Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

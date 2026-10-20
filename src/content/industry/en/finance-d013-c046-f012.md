@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for Solid Waste Treatment
-meta_description: Data sources for solid waste treatment financing daily reports include solid waste disposal project financing filings on public resource trading
+meta_description: Model Access and Configuration for Solid Waste Treatment Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

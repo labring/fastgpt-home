@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 种植业融资日报的工作流编排
-meta_description: 数据来源为农业农村部门种植主体融资监测数据库、涉农金融机构信贷报送系统、种植经营主体自主报备的融资信息。更新节奏为每日更新前一工作日的新增融资记录，每周生成
+meta_description: 种植业融资日报的工作流编排：种植业融资日报的工作流编排，涵盖配置与验证建议。。。
 keywords: 种植业、融资日报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15
@@ -25,7 +25,7 @@ date_modified: 2026-09-15
 | --- | --- | --- |
 | `cronExpression` | `0 30 1 * * ?` | 适配种植业融资日报每日T+1的更新节奏，避免占用日间业务资源 |
 | `requiredFields` | `["主体名称", "种植品类", "授信额度", "放款金额"]` | 覆盖种植业融资日报的核心统计维度，确保有效数据完整性 |
-| `httpRequestBodyTemplate` | `{"target_date": "{{prev_workday}}", "data_sources": ["agri_monitor", "bank_credit"]}` | 适配多源数据接口的参数规范，指定获取前一工作日的全量融资数据 |
+| `httpRequestBodyTemplate` | `{"target_date": "待核验值", "data_sources": ["agri_monitor", "bank_credit"]}` | 适配多源数据接口的参数规范，指定获取前一工作日的全量融资数据 |
 | `branchCondition` | `planting_category` | 按种植品类拆分工作流分支，适配不同品类的融资统计规则 |
 | `flowRetryCount` | `2` | 应对多源数据接口的临时波动，避免单次请求失败导致工作流中断 |
 | `codeNodeRuntime` | `PYTHON_3_9` | 适配用户编写的Python数据处理脚本版本，确保代码正常运行 |

@@ -4,8 +4,8 @@ slug: /zh/industry/fin-step-c032-3
 page_type: 行业作业环节页
 article_section: 银行信贷
 is_part_of: FastGPT 技术中心
-meta_title: 应收账款及供应链融资的持续核对付款义务人、电子凭证流转：哪一
-meta_description: 应收账款及供应链融资的持续核对付款义务人、电子凭证流转：哪一部分能交给系统
+meta_title: 应收账款及供应链融资的持续核对付款义务人、电子凭证流转：哪一部分能交给系统
+meta_description: 应收账款及供应链融资的持续核对付款义务人、电子凭证流转：哪一部分能交给系统：应收账款及供应链融资的持续核对付款义务人、电子凭证流转：哪一部分能交给系统，涵盖配置与验证建议
 keywords: 应收账款及供应链融资、银行信贷、环节3
 source_type: 金融业务分类与作业事实取自行业研究报告（含监管文件来源编号）
 date_published: 2026-09-15

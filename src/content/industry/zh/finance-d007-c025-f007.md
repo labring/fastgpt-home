@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 农商行收益率的工作流编排
-meta_description: 农商行收益率与行情日报的数据来源包括本行自营存贷、理财的内部核算系统，以及人民银行公布的辖区内同业利率行情接口。数据更新节奏为每日日终完成当日数据归集，T+
+meta_description: 农商行收益率的工作流编排：农商行收益率的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 农商行、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

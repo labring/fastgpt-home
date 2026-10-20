@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: IT 服务收益率的分享与嵌入
-meta_description: IT服务的收益率与行情数据，来源为金融机构内部项目核算模块、行业公开的金融IT服务行情数据源。更新节奏为每日固定生成当日日报文档。文档结构包含统计周期、服务
+meta_description: IT 服务收益率的分享与嵌入：IT 服务收益率的分享与嵌入，涵盖配置与验证建议。
 keywords: IT 服务、收益率与行情日报播报、分享与嵌入
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

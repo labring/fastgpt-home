@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通信服务财报分析的工具调用与插件
-meta_description: 通信服务财报数据主要来自境内外证券交易所公开披露的定期报告、企业官方发布的经营简报。更新节奏遵循监管要求，季度报告于季度结束后15个工作日内披露，年度报告于
+meta_description: 通信服务财报分析的工具调用与插件：通信服务财报分析的工具调用与插件，涵盖配置与验证建议
 keywords: 通信服务、财报分析与报告生成、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

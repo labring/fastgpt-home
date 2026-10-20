@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 股份制银行研报检索的部署与升级
-meta_description: 数据主要来自内部研究团队产出、外部合规采购的券商行业研报，以及监管机构公开披露的行业分析文档。更新节奏为每日同步新增研报，每周完成全量存量研报的索引刷新。单
+meta_description: 股份制银行研报检索的部署与升级：股份制银行研报检索的部署与升级，涵盖配置与验证建议
 keywords: 股份制银行、研报检索与问答、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

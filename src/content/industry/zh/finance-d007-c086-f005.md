@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 汽车服务收益率的多轮对话与提示词
-meta_description: 汽车服务收益率与行情日报的数据来源包括门店POS收银系统、车企区域运营平台、第三方汽车后市场行情接口。数据更新节奏为每日凌晨生成前一自然日的全量报表。文档结
+meta_description: 汽车服务收益率的多轮对话与提示词：汽车服务收益率的多轮对话与提示词，涵盖配置与验证建议
 keywords: 汽车服务、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

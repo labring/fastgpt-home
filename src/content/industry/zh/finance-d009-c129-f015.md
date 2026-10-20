@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 融资租赁研报检索的部署与升级
-meta_description: 来源为中国融资租赁行业协会发布的季度运营报告、持牌租赁公司公开的专项研报、监管部门公示的项目备案信息。更新节奏以季度为固定周期，专项项目研报随对应项目落地同
+meta_description: 融资租赁研报检索的部署与升级：融资租赁研报检索的部署与升级，涵盖配置与验证建议。
 keywords: 融资租赁、研报检索与问答、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -4,8 +4,8 @@ slug: /zh/industry/finance-d009-c062-f001
 page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
-meta_title: 广告营销研报检索的HTTP 接口与外部系统
-meta_description: 数据来源包括金融机构内部广告投放台账、第三方金融广告监测数据库、行业营销协会公开报告、金融品牌媒介资源报价文档。更新节奏为每周同步最新投放数据，每月发布完整
+meta_title: 广告营销研报检索的HTTP接口与外部系统
+meta_description: 广告营销研报检索的HTTP接口与外部系统：广告营销研报检索的HTTP接口与外部系统，涵盖配置与验证建议
 keywords: 广告营销、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

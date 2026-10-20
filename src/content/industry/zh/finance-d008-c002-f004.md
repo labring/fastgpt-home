@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专业服务智能尽调报告的向量模型与索引
-meta_description: 专业服务智能尽调报告的数据主要来自企业公开披露文件、工商登记档案、监管处罚公告、尽调访谈录音转写文本。更新节奏随客户委托项目周期或公开信息变动，常规委托报告
+meta_description: 专业服务智能尽调报告的向量模型与索引：专业服务智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 专业服务、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

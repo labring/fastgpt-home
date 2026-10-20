@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 其他综合融资日报的向量模型与索引
-meta_description: 其他综合融资日报的数据来源为公开行业聚合平台、企业融资公告及合规报送信息，更新节奏为每日T+1更新。单篇文档为结构化条目集合，每条记录包含融资主体全称、融资
+meta_description: 其他综合融资日报的向量模型与索引：其他综合融资日报的向量模型与索引，涵盖配置与验证建议
 keywords: 其他综合、融资日报、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

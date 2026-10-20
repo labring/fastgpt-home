@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 乳制品智能尽调报告的知识库检索与召回
-meta_description: 乳制品尽调相关数据主要来源于原辅料检测报告、生产批次记录、供应链溯源文档、国家食品安全标准文件及第三方质检报告。数据更新节奏随生产批次变动，原辅料批次数据每
+meta_description: 乳制品智能尽调报告的知识库检索与召回：乳制品智能尽调报告的知识库检索与召回，涵盖配置与验证建议
 keywords: 乳制品、智能尽调报告、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

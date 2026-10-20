@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 教育服务研报检索的知识库检索与召回
-meta_description: 教育服务类研报数据主要来自金融行业的理财教育白皮书、保险从业培训报告、金融素养发展研究文档、持牌机构自研的培训分析内容。更新节奏随内容类型区分，政策类研报随
+meta_description: 教育服务研报检索的知识库检索与召回：教育服务研报检索的知识库检索与召回，涵盖配置与验证建议
 keywords: 教育服务、研报检索与问答、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

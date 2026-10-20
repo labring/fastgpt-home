@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学制药营销内容的模型接入与配置
-meta_description: 化学制药的营销内容数据主要来源于药企内部的营销物料管理系统，包含药品说明书、合规推广话术、临床研究摘要、医生沟通材料等类型。数据更新节奏随药品注册进度、合规
+meta_description: 化学制药营销内容的模型接入与配置：化学制药营销内容的模型接入与配置，涵盖配置与验证建议
 keywords: 化学制药、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

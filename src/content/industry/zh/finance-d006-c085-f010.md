@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水泥投研知识库建设的数据库与运维
-meta_description: 水泥投研数据主要来自中国建筑材料联合会发布的行业监测报告、区域建材经销商的出货台账、水泥生产企业的出厂台账及第三方大宗商品交易平台数据。更新节奏分日度（区域
+meta_description: 水泥投研知识库建设的数据库与运维：水泥投研知识库建设的数据库与运维，涵盖配置与验证建议
 keywords: 水泥、投研知识库建设与治理、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

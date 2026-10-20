@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 耐火材料研报检索的知识库检索与召回
-meta_description: 耐火材料研报的数据主要来自行业协会公开报告、生产企业技术文档、第三方检测机构质检报告及学术研究文献。更新节奏分为定期与不定期两类：行业协会研报按季度发布更新
+meta_description: 耐火材料研报检索的知识库检索与召回：耐火材料研报检索的知识库检索与召回，涵盖配置与验证建议
 keywords: 耐火材料、研报检索与问答、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

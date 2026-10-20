@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 消费建材收益率的模型接入与配置
-meta_description: 消费建材的行情数据主要来自国内大宗商品建材交易平台公开报价、区域建材经销商上报数据、行业协会每日汇总数据。数据更新节奏为每日更新，当日的全品类行情数据于次日
+meta_description: 消费建材收益率的模型接入与配置：消费建材收益率的模型接入与配置，涵盖配置与验证建议
 keywords: 消费建材、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 房建工程研报检索的文档解析与分块
-meta_description: 房建工程研报的数据来源涵盖住建部门公开政策文件、行业协会发布的行业动态、设计院出具的技术方案、招投标平台发布的项目公告及头部房企的项目复盘报告。更新节奏随文
+meta_description: 房建工程研报检索的文档解析与分块：房建工程研报检索的文档解析与分块，涵盖配置与验证建议
 keywords: 房建工程、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

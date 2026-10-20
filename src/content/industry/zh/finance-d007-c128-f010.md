@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航运港口收益率的数据库与运维
-meta_description: 用于计算航运港口收益率的核心数据主要来自港口运营管理系统、海事数据交换平台与海关通关系统，部分辅助数据来自第三方航运数据服务商的公开接口。实时作业数据每5分
+meta_description: 航运港口收益率的数据库与运维：航运港口收益率的数据库与运维，涵盖配置与验证建议。
 keywords: 航运港口、收益率与行情日报播报、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

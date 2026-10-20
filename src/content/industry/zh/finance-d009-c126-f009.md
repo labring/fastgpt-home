@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航空机场研报检索的引用来源与溯源
-meta_description: 航空机场研报的数据来源主要包括券商航空行业研究所报告、民航局公开运营公告、机场集团月度或季度披露文件及行业协会研究资料。数据更新节奏存在差异：券商研报多按月
+meta_description: 航空机场研报检索的引用来源与溯源：航空机场研报检索的引用来源与溯源，涵盖配置与验证建议
 keywords: 航空机场、研报检索与问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

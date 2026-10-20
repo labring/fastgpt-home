@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 基建工程财报分析的工具调用与插件
-meta_description: 基建工程类企业的财报数据主要来自公开披露的定期报告、工程结算台账及行业监管公示信息。更新节奏遵循监管要求，季度报告于季度结束后1个月内发布，年度报告于年度结
+meta_description: 基建工程财报分析的工具调用与插件：基建工程财报分析的工具调用与插件，涵盖配置与验证建议
 keywords: 基建工程、财报分析与报告生成、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

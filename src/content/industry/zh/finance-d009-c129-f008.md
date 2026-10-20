@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 融资租赁研报检索的工具调用与插件
-meta_description: 融资租赁研报主要来自行业协会公开报告、租赁主体披露的定期报告、监管机构合规文件，更新分为月度行业动态与季度全品类研报两种节奏。文档多为结构化表格搭配分析文本
+meta_description: 融资租赁研报检索的工具调用与插件：融资租赁研报检索的工具调用与插件，涵盖配置与验证建议
 keywords: 融资租赁、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化妆品智能尽调报告的多轮对话与提示词
-meta_description: 化妆品智能尽调的核心数据来自国家药监局备案系统、第三方成分检测数据库、合规监管公告。数据源以结构化备案表、PDF检测报告、文本格式的成分清单为主。更新节奏随
+meta_description: 化妆品智能尽调报告的多轮对话与提示词：化妆品智能尽调报告的多轮对话与提示词，涵盖配置与验证建议
 keywords: 化妆品、智能尽调报告、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

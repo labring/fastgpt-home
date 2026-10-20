@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 动力煤研报检索的文档解析与分块
-meta_description: 动力煤研报的数据主要来自行业监管机构发布的供需报告、大型煤炭交易平台的实时行情、券商研究所的专项分析文档。更新节奏以周度、月度报告为主，伴随突发政策或行情变
+meta_description: 动力煤研报检索的文档解析与分块：动力煤研报检索的文档解析与分块，涵盖配置与验证建议
 keywords: 动力煤、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

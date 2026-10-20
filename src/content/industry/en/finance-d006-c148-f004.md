@@ -4,8 +4,8 @@ slug: /en/industry/finance-d006-c148-f004
 page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
-meta_title: Vector Models and Indexing for Hotel and Catering Investment
-meta_description: Hotel and catering investment research data mainly comes from store operation ledgers, supply chain procurement records, public industry research
+meta_title: Vector Models and Indexing for Hotel and Catering
+meta_description: Vector Models and Indexing for Hotel and Catering Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

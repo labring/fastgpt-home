@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商业物业财报分析的文档解析与分块
-meta_description: 商业物业财报类数据主要来源于自持物业运营台账、年度审计报告、租赁合同档案与公共能耗报表。数据更新节奏分为月度、季度与年度：运营台账与能耗报表按月更新，租赁合
+meta_description: 商业物业财报分析的文档解析与分块：商业物业财报分析的文档解析与分块，涵盖配置与验证建议
 keywords: 商业物业、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

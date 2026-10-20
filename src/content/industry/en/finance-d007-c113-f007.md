@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Baijiu Rate of Return
-meta_description: Data sources for baijiu industry rate of return and market trends come primarily from public securities market APIs and daily reports from industry
+meta_description: Workflow Orchestration for Baijiu Rate of Return
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

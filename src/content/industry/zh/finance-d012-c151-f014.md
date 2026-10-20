@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁路公路营销内容的表单与交互
-meta_description: 铁路公路的营销内容相关数据主要来自票务管理系统、线路调度平台、沿线客流监测终端与运维归档库。数据覆盖实时客流、固定班次计划、周期性维护记录三类。更新节奏差异
+meta_description: 铁路公路营销内容的表单与交互：铁路公路营销内容的表单与交互，涵盖配置与验证建议。
 keywords: 铁路公路、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 城商行研报检索的知识库检索与召回
-meta_description: 城商行研报的数据主要来自内部风险管理、普惠金融、区域经济调研部门产出的内部文档，以及对接地方金融监管机构的报送材料、合作地方经济研究院的定向调研成果。更新节
+meta_description: 城商行研报检索的知识库检索与召回：城商行研报检索的知识库检索与召回，涵盖配置与验证建议
 keywords: 城商行、研报检索与问答、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

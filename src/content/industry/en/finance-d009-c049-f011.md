@@ -4,8 +4,8 @@ slug: /en/industry/finance-d009-c049-f011
 page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
-meta_title: Document Parsing and Chunking for Infrastructure Engineering
-meta_description: Infrastructure engineering research reports mainly come from independently developed industry analysis reports from financial institutions and public
+meta_title: Document Parsing and Chunking for Infrastructure
+meta_description: Document Parsing and Chunking for Infrastructure Engineering Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

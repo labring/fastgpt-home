@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Risk Control and Credit Document Review
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Credit Report Risk Control
-meta_description: Credit report data primarily comes from licensed credit reporting agencies. Data submitting institutions update submissions monthly, so the overall
+meta_description: Tool Calling and Plugins for Credit Report Risk Control
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

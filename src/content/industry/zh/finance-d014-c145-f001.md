@@ -4,8 +4,8 @@ slug: /zh/industry/finance-d014-c145-f001
 page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
-meta_title: 通信设备财报分析的HTTP 接口与外部系统
-meta_description: 通信设备行业的财报数据主要来自境内外证券交易所的公开披露平台，以及上市公司投资者关系板块的官方公告。更新节奏分为定期披露与临时披露两类，定期报告按季度、半年
+meta_title: 通信设备财报分析的HTTP接口与外部系统
+meta_description: 通信设备财报分析的HTTP接口与外部系统：通信设备财报分析的HTTP接口与外部系统，涵盖配置与验证建议
 keywords: 通信设备、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

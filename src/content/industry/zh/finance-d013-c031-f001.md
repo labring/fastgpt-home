@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学制药融资日报的HTTP 接口与外部系统
-meta_description: 化学制药融资日报的数据主要来自沪深北交易所公开披露文件、医药行业投融资第三方数据库及行业协会公开信息。更新节奏为每日更新前一日全量融资事件，次日完成当日数据
+meta_description: 化学制药融资日报的HTTP 接口与外部系统：化学制药融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 化学制药、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

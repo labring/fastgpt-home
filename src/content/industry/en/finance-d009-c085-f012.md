@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Model Connection and Configuration for Cement Research
-meta_description: Cement research report data sources primarily include industry monitoring data released by a national building materials industry association
+meta_description: Model Connection and Configuration for Cement Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通用设备融资日报的模型接入与配置
-meta_description: 通用设备融资日报的数据来源包括各地金融监管部门的融资备案系统、合作融资租赁机构的业务台账、银行对公放款数据库。数据更新节奏为每日T+1归集前一日的业务数据，
+meta_description: 通用设备融资日报的模型接入与配置：通用设备融资日报的模型接入与配置，涵盖配置与验证建议
 keywords: 通用设备、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

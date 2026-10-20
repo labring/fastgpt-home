@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 普钢投研知识库建设的部署与升级
-meta_description: 普钢投研数据主要来自钢厂月度产能报告、行业协会公开周报、现货交易平台实时报价、期货盘面行情及下游制造业需求调研文档。现货报价按日更新，行业协会统计数据按周或
+meta_description: 普钢投研知识库建设的部署与升级：普钢投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 普钢、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

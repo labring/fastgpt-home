@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 固废处理财报分析的引用来源与溯源
-meta_description: 固废处理相关财报数据主要来自上市企业年度/季度报告的环境责任章节、地方生态环境部门的固废监管月度台账、企业自主披露的危废处置专项报告。数据更新节奏随披露主体
+meta_description: 固废处理财报分析的引用来源与溯源：固废处理财报分析的引用来源与溯源，涵盖配置与验证建议
 keywords: 固废处理、财报分析与报告生成、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

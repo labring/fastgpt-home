@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: IT 服务财报分析的HTTP 接口与外部系统
-meta_description: IT服务企业的财报数据主要来自境内外证券交易所披露平台、企业官方年报专区及合规第三方财报聚合渠道。数据更新节奏分为定期与不定期两类，定期更新包含年度、季度财
+meta_description: IT 服务财报分析的HTTP 接口与外部系统：IT 服务财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: IT 服务、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

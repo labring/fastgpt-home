@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电子元件融资日报的向量模型与索引
-meta_description: 电子元件融资日报的数据来源于证券交易所公开披露的上市公司融资公告、行业协会发布的电子元件供应链融资统计、垂直电子领域的财经媒体融资快讯。数据每日更新，单条日
+meta_description: 电子元件融资日报的向量模型与索引：电子元件融资日报的向量模型与索引，涵盖配置与验证建议
 keywords: 电子元件、融资日报、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

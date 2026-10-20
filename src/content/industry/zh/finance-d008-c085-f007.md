@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水泥智能尽调报告的工作流编排
-meta_description: 水泥尽调报告的数据来源主要包括建材行业协会发布的月度统计公报、水泥厂出厂台账、供应链提货单、第三方质检机构出具的检测报告。数据更新节奏分为两类：出厂批次数据
+meta_description: 水泥智能尽调报告的工作流编排：水泥智能尽调报告的工作流编排，涵盖配置与验证建议。
 keywords: 水泥、智能尽调报告、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

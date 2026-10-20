@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 中药智能尽调报告的文档解析与分块
-meta_description: 中药智能尽调报告的数据来源包括国家药典委员会发布的法定标准文件、中药材种植基地的种植档案、饮片生产企业的生产记录、第三方检测机构的检验报告、行业协会的流通数
+meta_description: 中药智能尽调报告的文档解析与分块：中药智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 中药、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

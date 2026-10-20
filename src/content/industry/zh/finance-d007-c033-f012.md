@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化纤收益率的模型接入与配置
-meta_description: 化纤收益率相关的行情数据主要来自国内大宗商品交易平台、行业协会的每日统计报告，更新节奏为每日凌晨更新前一交易日的完整数据。数据以结构化表格形式存储，常见格式
+meta_description: 化纤收益率的模型接入与配置：化纤收益率的模型接入与配置，涵盖配置与验证建议。。。
 keywords: 化纤、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

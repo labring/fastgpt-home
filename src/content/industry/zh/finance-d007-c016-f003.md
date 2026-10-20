@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光伏收益率的分享与嵌入
-meta_description: 光伏收益率与行情日报的数据来源于并网光伏电站的监控终端、电网结算系统及区域气象监测平台。数据更新节奏为每日固定时段产出前一自然日的完整报表。单份日报文档包含
+meta_description: 光伏收益率的分享与嵌入：光伏收益率的分享与嵌入，涵盖配置与验证建议。。。。。。。
 keywords: 光伏、收益率与行情日报播报、分享与嵌入
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

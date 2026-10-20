@@ -4,8 +4,8 @@ slug: /en/industry/finance-d014-c044-f004
 page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
-meta_title: Vector Models and Indexing for Commercial Property Financial
-meta_description: Commercial property financial report data primarily originates from property operation management systems, rent collection ledgers, business type
+meta_title: Vector Models and Indexing for Commercial Property
+meta_description: Vector Models and Indexing for Commercial Property Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 股份制银行收益率的工作流编排
-meta_description: 数据源包含本行信贷管理系统的自营贷款加权收益率数据、全国银行间同业拆借中心的同业存单报价接口数据、本行理财子公司的产品预期收益率台账数据。更新节奏为每日交易
+meta_description: 股份制银行收益率的工作流编排：股份制银行收益率的工作流编排，涵盖配置与验证建议。
 keywords: 股份制银行、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

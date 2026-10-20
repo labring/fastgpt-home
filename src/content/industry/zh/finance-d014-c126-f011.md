@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航空机场财报分析的文档解析与分块
-meta_description: 航空机场财报数据主要来自民航主管部门公开的行业运行统计、机场主体的季度/年度正式财报、航班时刻备案文件与运营月报。数据更新节奏分月度起降与客流统计、季度营收
+meta_description: 航空机场财报分析的文档解析与分块：航空机场财报分析的文档解析与分块，涵盖配置与验证建议
 keywords: 航空机场、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电网设备收益率的HTTP 接口与外部系统
-meta_description: 电网设备收益率相关数据主要来源于省级电力交易结算系统、设备运维管理平台。数据更新节奏分为每日凌晨2点完成前一日全量汇总，每小时同步增量运行数据。文档采用结构
+meta_description: 电网设备收益率的HTTP 接口与外部系统：电网设备收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 电网设备、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

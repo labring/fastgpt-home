@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学制药收益率的工具调用与插件
-meta_description: 化学制药收益率与行情数据主要来自公开上市企业定期报告、医药流通交易接口、证券交易所行情端口及行业集采中标公示。更新节奏分为三类：交易日行情数据在收盘后1.5
+meta_description: 化学制药收益率的工具调用与插件：化学制药收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 化学制药、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

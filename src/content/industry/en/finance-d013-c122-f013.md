@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for Joint-Stock Bank
-meta_description: Data sources for joint-stock bank financing daily reports primarily include in-house credit management systems, public data from the National
+meta_description: Knowledge Base Retrieval and Recall for Joint-Stock Bank Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

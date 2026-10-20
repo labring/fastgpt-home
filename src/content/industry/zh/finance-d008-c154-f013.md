@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饰品智能尽调报告的知识库检索与召回
-meta_description: 数据源包含品牌方出具的材质质检报告、供应链原料溯源档案、行业协会发布的品类合规标准文档，以及实物检测的留存记录。更新节奏随新品上架、合规标准修订或原料批次变
+meta_description: 饰品智能尽调报告的知识库检索与召回：饰品智能尽调报告的知识库检索与召回，涵盖配置与验证建议
 keywords: 饰品、智能尽调报告、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

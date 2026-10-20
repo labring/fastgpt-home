@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专业连锁收益率的HTTP 接口与外部系统
-meta_description: 专业连锁的收益率数据主要来自内部POS收银系统、供应链进销存系统及门店运营台账。数据更新节奏为每日营业结束后批量生成当日全量报表。数据文档为结构化格式，包含
+meta_description: 专业连锁收益率的HTTP 接口与外部系统：专业连锁收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 专业连锁、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

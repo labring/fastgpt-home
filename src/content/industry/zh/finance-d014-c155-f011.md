@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饲料财报分析的文档解析与分块
-meta_description: 饲料行业财报数据主要来自公开披露的上市公司定期报告、行业协会发布的运行简报，以及企业自主发布的经营公告。更新节奏以季度、年度固定周期为主，行业简报按月或季度
+meta_description: 饲料财报分析的文档解析与分块：饲料财报分析的文档解析与分块，涵盖配置与验证建议。
 keywords: 饲料、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

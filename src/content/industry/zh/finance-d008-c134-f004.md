@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 调味品智能尽调报告的向量模型与索引
-meta_description: 调味品品类的数据源主要包括生产企业出具的批次质检报告、经销商进销存台账、线下商超POS销售数据及行业协会公开监测数据。数据更新节奏随来源不同有所差异：质检报
+meta_description: 调味品智能尽调报告的向量模型与索引：调味品智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 调味品、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

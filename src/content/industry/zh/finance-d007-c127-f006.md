@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航空装备收益率的对话日志与审计
-meta_description: 航空装备收益率相关数据主要来自军工行业公开监测数据库、航空装备制造商的运营披露文档、第三方航空产业行情聚合平台。数据更新节奏为每日更新，覆盖前一自然日的全量
+meta_description: 航空装备收益率的对话日志与审计：航空装备收益率的对话日志与审计，涵盖配置与验证建议
 keywords: 航空装备、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

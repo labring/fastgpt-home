@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 住宅开发营销内容的HTTP 接口与外部系统
-meta_description: 住宅开发的营销内容数据主要来自售楼管理系统、住建部门预售证公示平台、项目客研数据库、户型设计文档及周边配套公示信息，同时包含金融机构提供的房贷产品信息，如首
+meta_description: 住宅开发营销内容的HTTP 接口与外部系统：住宅开发营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 住宅开发、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

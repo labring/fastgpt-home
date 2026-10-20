@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Commercial Real Estate Yield
-meta_description: Data related to commercial real estate yield is sourced from property ERP systems, lease management ledgers, and local real estate filing platforms.
+meta_description: Deployment and Upgrade for Commercial Real Estate Yield Reporting
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Dialogue Logging and Auditing for Thermal Energy Investment
-meta_description: Thermal energy investment research data primarily comes from real-time monitoring sensors of heating pipelines, thermal production scheduling systems
+meta_description: Dialogue Logging and Auditing for Thermal Energy Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

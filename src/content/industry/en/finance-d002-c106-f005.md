@@ -4,8 +4,8 @@ slug: /en/industry/finance-d002-c106-f005
 page_type: Industry scenario page
 article_section: Unified AI Platform and Multi-App Orchestration
 is_part_of: FastGPT Tech Center
-meta_title: Usage Statistics: Multi-Turn Dialogue and Prompt Engineering
-meta_description: This category is compatible with FastGPT 4.10.0 and later versions. Data sources include platform API call logs, session storage modules, and
+meta_title: Usage Statistics: Multi-Turn Dialogue and Prompt
+meta_description: Usage Statistics: Multi-Turn Dialogue and Prompt Engineering for the All-in-One AI Platform
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -14,7 +14,7 @@ date_modified: 2026-09-15
 # Usage Statistics: Multi-Turn Dialogue and Prompt Engineering for the All-in-One AI Platform
 
 ## What the data for this category looks like
-This category is compatible with FastGPT 4.10.0 and later versions. Data sources include platform API call logs, session storage modules, and reporting data from model call chains. Updates follow a near-real-time aggregation schedule: summary slices are generated every 5 minutes, and detail logs are written immediately after a session ends.
+Reference only; verify against the target FastGPT release and deployment documentation.
 The document structure uses structured records. Each record includes fields such as `session_id`, `user_id`, `invoke_time`, `model_name`, `input_token`, `output_token`, `context_rounds`, and `prompt_version`. Units are as follows: session identifier string, user identifier string, milliseconds, model type name, count, count, turns, and version identifier string.
 
 ## What constraints these characteristics impose on the multi-turn dialogue and prompt engineering link

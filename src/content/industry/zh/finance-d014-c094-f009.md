@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 炼化财报分析的引用来源与溯源
-meta_description: 炼化品类的财报数据主要来自证券交易所披露的上市公司年报、季度报告，以及行业主管部门发布的运行简报。数据更新节奏为年度完整财报定期更新，季度板块数据每季度更新
+meta_description: 炼化财报分析的引用来源与溯源：炼化财报分析的引用来源与溯源，涵盖配置与验证建议。
 keywords: 炼化、财报分析与报告生成、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

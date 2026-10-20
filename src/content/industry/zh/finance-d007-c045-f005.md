@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商用车收益率的多轮对话与提示词
-meta_description: 商用车收益率与行情日报的数据来源包含车队管理系统的运营日志、货运平台的实时运价数据、能源补给平台的消费记录。数据更新节奏为每日凌晨聚合前一日的全量运营数据，
+meta_description: 商用车收益率的多轮对话与提示词：商用车收益率的多轮对话与提示词，涵盖配置与验证建议
 keywords: 商用车、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

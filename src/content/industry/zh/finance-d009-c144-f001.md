@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通信服务研报检索的HTTP 接口与外部系统
-meta_description: 通信服务研报的数据来源主要包含国内通信行业协会发布的行业分析报告、头部通信服务企业的季度经营研报、第三方通信咨询机构的专项技术报告。更新节奏以季度常规更新为
+meta_description: 通信服务研报检索的HTTP 接口与外部系统：通信服务研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 通信服务、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

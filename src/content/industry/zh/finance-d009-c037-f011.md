@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 卫星通信研报检索的文档解析与分块
-meta_description: 卫星通信研报数据主要来自卫星运营商季度运营报告、行业咨询机构细分赛道研究文档、航天院所技术白皮书，以及卫星频谱分配官方公示文件。更新节奏随文档类型有所区分，
+meta_description: 卫星通信研报检索的文档解析与分块：卫星通信研报检索的文档解析与分块，涵盖配置与验证建议
 keywords: 卫星通信、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

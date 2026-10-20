@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 钢铁贸易财报分析的向量模型与索引
-meta_description: 钢铁贸易的财报相关数据来源包括企业内部经营台账、定期披露的财报文件、上下游购销凭证。更新节奏分为两类，月度经营数据按业务进度实时更新，季度、年度财报按监管要
+meta_description: 钢铁贸易财报分析的向量模型与索引：钢铁贸易财报分析的向量模型与索引，涵盖配置与验证建议
 keywords: 钢铁贸易、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

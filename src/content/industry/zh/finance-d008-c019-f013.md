@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 免税智能尽调报告的知识库检索与召回
-meta_description: 免税智能尽调报告的数据主要来源于海关离岛免税监管台账、免税经营主体备案文件、离岛免税政策官方公告、供应商资质审核材料。数据更新节奏分为两类：政策类内容随监管
+meta_description: 免税智能尽调报告的知识库检索与召回：免税智能尽调报告的知识库检索与召回，涵盖配置与验证建议
 keywords: 免税、智能尽调报告、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

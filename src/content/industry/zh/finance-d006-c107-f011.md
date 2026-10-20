@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电力投研知识库建设的文档解析与分块
-meta_description: 电力投研的数据来源涵盖行业监管机构发布的并网运行报告、电价政策文件，发电企业的机组运行日志、月度运营报表，行业协会的技术简报，以及设备厂商的技术白皮书。更新
+meta_description: 电力投研知识库建设的文档解析与分块：电力投研知识库建设的文档解析与分块，涵盖配置与验证建议
 keywords: 电力、投研知识库建设与治理、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

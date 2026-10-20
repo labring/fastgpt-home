@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 畜禽养殖融资日报的引用来源与溯源
-meta_description: 畜禽养殖融资日报的数据主要来自全国畜牧总站公开监测报表、各省市农业农村部门备案的养殖主体融资信息，以及行业第三方调研机构的每日汇总数据。更新节奏为每日凌晨更
+meta_description: 畜禽养殖融资日报的引用来源与溯源：畜禽养殖融资日报的引用来源与溯源，涵盖配置与验证建议
 keywords: 畜禽养殖、融资日报、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

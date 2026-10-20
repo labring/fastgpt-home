@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 环境监测收益率的工具调用与插件
-meta_description: 数据来源为国家生态环境监测网络、物联网监测站点、第三方环境数据服务商的公开接口。更新节奏为分钟级采样，日报批次为每日凌晨生成前一日全量汇总数据。文档结构为结
+meta_description: 环境监测收益率的工具调用与插件：环境监测收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 环境监测、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

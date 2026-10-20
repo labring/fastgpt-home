@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光模块智能尽调报告的文档解析与分块
-meta_description: 光模块智能尽调报告的数据主要来源于原厂datasheet、行业标准规范、供应链报价文档与第三方检测报告。原厂文档随新品发布、规格迭代更新，行业标准每季度或年
+meta_description: 光模块智能尽调报告的文档解析与分块：光模块智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 光模块、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

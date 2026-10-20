@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 投资平台研报检索的HTTP 接口与外部系统
-meta_description: 投资平台的研报数据主要来自持牌券商研究所、合规行业数据库及上市公司公开公告。数据更新随研报正式发布同步触发，无固定周期但覆盖交易日实时推送。单篇研报文档结构
+meta_description: 投资平台研报检索的HTTP 接口与外部系统：投资平台研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 投资平台、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

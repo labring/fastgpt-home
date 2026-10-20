@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Infrastructure Engineering Yield
-meta_description: Data related to infrastructure engineering yield is sourced from project financial accounting systems, engineering supervision progress reports, and
+meta_description: Deployment and Upgrade for Infrastructure Engineering Yield Reporting
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

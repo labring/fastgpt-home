@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade of Refining and Petrochemical
-meta_description: Data sources for refining and petrochemical financing daily reports include oil and petrochemical industry supply chain financing platforms, refined
+meta_description: Deployment and Upgrade of Refining and Petrochemical Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

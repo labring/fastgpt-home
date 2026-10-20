@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 投资平台研报检索的知识库检索与召回
-meta_description: 数据来源主要为券商研究所、公募基金投研部门、行业自律组织发布的公开研报，更新节奏为工作日常态化发布，季度、年度财报发布周期内更新密度提升。文档结构包含标题、
+meta_description: 投资平台研报检索的知识库检索与召回：投资平台研报检索的知识库检索与召回，涵盖配置与验证建议
 keywords: 投资平台、研报检索与问答、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

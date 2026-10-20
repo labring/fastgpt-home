@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化纤营销内容的模型接入与配置
-meta_description: 化纤相关数据来自企业生产台账、贸易订单系统、行业质检数据库与实时行情API。更新节奏分为两类：生产数据每日更新，贸易与行情数据实时或每小时更新。文档包含结构
+meta_description: 化纤营销内容的模型接入与配置：化纤营销内容的模型接入与配置，涵盖配置与验证建议。
 keywords: 化纤、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

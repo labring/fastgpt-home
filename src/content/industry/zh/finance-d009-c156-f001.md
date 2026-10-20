@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 黑色家电研报检索的HTTP 接口与外部系统
-meta_description: 黑色家电研报来源包含券商研究所、家电行业专业监测机构、品牌方公开披露的行业分析文档，主要服务于金融领域的投资与行业分析需求。更新节奏包含常规月度行业监测报告
+meta_description: 黑色家电研报检索的HTTP 接口与外部系统：黑色家电研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 黑色家电、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

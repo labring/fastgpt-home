@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Sharing and Embedding for White Goods Yield Rate Reports
-meta_description: Data related to white goods yield rates is sourced from domestic home appliance industry monitoring institutions, public sales data from major
+meta_description: Sharing and Embedding for White Goods Yield Rate Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

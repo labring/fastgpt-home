@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Refractory Materials
-meta_description: Data for refractory materials intelligent due diligence reports primarily comes from industry association public quality inspection bulletins, factory
+meta_description: Tool Calling and Plugins for Refractory Materials Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -31,7 +31,7 @@ Batch number as the unique identifier field requires precise matching of field n
 Chemical and physical parameters with multiple coexisting units requires built-in unit conversion logic in plugins, to avoid generating incorrect due diligence data due to unit mismatches.
 
 ## How to configure the settings
-This configuration applies to FastGPT v4.9.3 and above.
+Reference only; verify against the target FastGPT release and deployment documentation.
 
 | Configuration Item | Recommended Setting | Rationale |
 | ---- | ---- | ---- |

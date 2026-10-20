@@ -4,8 +4,8 @@ slug: /en/industry/finance-d008-c107-f011
 page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
-meta_title: Document Parsing and Chunking for Power Industry Intelligent
-meta_description: Data sources for power industry intelligent due diligence reports include power project feasibility study reports, grid connection acceptance
+meta_title: Document Parsing and Chunking for Power Industry
+meta_description: Document Parsing and Chunking for Power Industry Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

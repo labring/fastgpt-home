@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 房建工程研报检索的模型接入与配置
-meta_description: 房建工程研报的数据来源主要包括全国住建部公开的工程定额文件、地方住建委发布的房建工程计价规范、行业协会期刊及头部设计院专项研报。更新节奏差异明显：国家标准每
+meta_description: 房建工程研报检索的模型接入与配置：房建工程研报检索的模型接入与配置，涵盖配置与验证建议
 keywords: 房建工程、研报检索与问答、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompting for Refining Financial
-meta_description: Refining sector financial report data is sourced primarily from annual and quarterly regulatory filings publicly disclosed by domestic and overseas
+meta_description: Multi-turn Dialogue and Prompting for Refining Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

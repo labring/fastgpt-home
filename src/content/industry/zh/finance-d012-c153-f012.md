@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 风电营销内容的模型接入与配置
-meta_description: 风电营销相关的数据来源包括整机厂商提供的风机参数手册、风电场可研报告、区域风能资源评估文档、营销项目案例库及潜在客户资质数据。更新节奏分为三类：风机技术参数
+meta_description: 风电营销内容的模型接入与配置：风电营销内容的模型接入与配置，涵盖配置与验证建议。
 keywords: 风电、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

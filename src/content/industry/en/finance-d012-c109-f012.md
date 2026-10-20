@@ -4,8 +4,8 @@ slug: /en/industry/finance-d012-c109-f012
 page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
-meta_title: Model Integration and Configuration for Electronic Component
-meta_description: In financial, insurance, and wealth management scenarios, data related to electronic components mainly comes from official supplier specifications
+meta_title: Model Integration and Configuration for Electronic
+meta_description: Model Integration and Configuration for Electronic Component Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

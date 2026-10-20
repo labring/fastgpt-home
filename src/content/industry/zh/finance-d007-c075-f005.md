@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 整车收益率的多轮对话与提示词
-meta_description: 数据来源为乘联会每日零售监测数据集、整车厂商终端销售台账公开披露信息；更新频率为每日T+1更新前一日全量数据，细分车型数据存在1-2个工作日的延迟；文档结构
+meta_description: 整车收益率的多轮对话与提示词：整车收益率的多轮对话与提示词，涵盖配置与验证建议。
 keywords: 整车、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 房建工程收益率的对话日志与审计
-meta_description: 房建工程的收益率数据来源于项目造价管理系统、月度计量支付台账、分包结算审核文件与资金收付流水。数据按项目月度计量节点更新，单项目数据更新周期不晚于当月计量完
+meta_description: 房建工程收益率的对话日志与审计：房建工程收益率的对话日志与审计，涵盖配置与验证建议
 keywords: 房建工程、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

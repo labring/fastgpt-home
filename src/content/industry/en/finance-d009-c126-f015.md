@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade of Aviation Airport Research Report
-meta_description: Aviation airport research report data is primarily sourced from official operational monthly reports and infrastructure announcements released by
+meta_description: Deployment and Upgrade of Aviation Airport Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

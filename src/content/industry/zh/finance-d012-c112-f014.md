@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 白色家电营销内容的表单与交互
-meta_description: 金融场景下的白色家电营销数据来源包括合作品牌的产品管理系统、主流电商平台的SKU档案、金融机构积分商城的库存同步接口。文档以单个SKU为最小存储单元，包含型
+meta_description: 白色家电营销内容的表单与交互：白色家电营销内容的表单与交互，涵盖配置与验证建议。
 keywords: 白色家电、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

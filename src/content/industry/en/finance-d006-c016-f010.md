@@ -4,8 +4,8 @@ slug: /en/industry/finance-d006-c016-f010
 page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
-meta_title: Database and Operations for Photovoltaic Investment Research
-meta_description: Photovoltaic investment research data comes from several sources: public technical documents from component manufacturers, regular financial reports
+meta_title: Database and Operations for Photovoltaic Investment
+meta_description: Database and Operations for Photovoltaic Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

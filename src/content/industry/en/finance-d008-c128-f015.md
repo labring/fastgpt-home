@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Shipping Port Intelligent Due
-meta_description: Data sources for shipping port intelligent due diligence reports include port administration public operational data, shipping company berthing
+meta_description: Deployment and Upgrade for Shipping Port Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

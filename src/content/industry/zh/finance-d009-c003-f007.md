@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专业连锁研报检索的工作流编排
-meta_description: 专业连锁研报的数据主要来自国内商贸零售行业协会发布的行业监测报告、第三方零售大数据平台的月度跟踪数据、连锁品牌公开的经营简报。数据更新节奏分为两类：行业整体
+meta_description: 专业连锁研报检索的工作流编排：专业连锁研报检索的工作流编排，涵盖配置与验证建议。
 keywords: 专业连锁、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

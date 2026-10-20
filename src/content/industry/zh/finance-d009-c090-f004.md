@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 涂料油墨研报检索的向量模型与索引
-meta_description: 涂料油墨研报的数据来源包括中国涂料工业协会公开统计资料、券商化工行业研报、上市涂料企业年度及季度报告、大宗商品供应链交易平台数据。更新节奏为：协会数据按季度
+meta_description: 涂料油墨研报检索的向量模型与索引：涂料油墨研报检索的向量模型与索引，涵盖配置与验证建议
 keywords: 涂料油墨、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

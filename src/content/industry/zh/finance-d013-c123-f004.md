@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 能源金属融资日报的向量模型与索引
-meta_description: 能源金属融资日报数据主要来自国内有色金属行业协会公开披露、交易所挂牌企业公告及专业行业资讯平台。更新节奏为每日更新，单份日报覆盖当日全品类能源金属融资事件。
+meta_description: 能源金属融资日报的向量模型与索引：能源金属融资日报的向量模型与索引，涵盖配置与验证建议
 keywords: 能源金属、融资日报、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Engineering Consulting Marketing
-meta_description: Marketing data for engineering consulting targeting the financial industry mainly comes from bidding documents and technical plans of cooperating
+meta_description: Workflow Orchestration for Engineering Consulting Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -23,7 +23,7 @@ Engineering consulting marketing data targeting the financial industry is stored
 | Configuration Item | Recommended Setting | Rationale |
 |---|---|---|
 | `Knowledge Base Chunk Threshold` | `1000–1500 characters` | Matches the single-chapter length of engineering consulting technical proposal documents, to avoid truncating professional parameters during chunking |
-| `Variable Reference Format` | `{{Variable Name}}` | Adapts to the fixes in version V4.8.18-FIX2, and is compatible with multi-source variable reference rules |
+| `Variable Reference Format` | `example value` | Adapts to the fixes in version V4.8.18-FIX2, and is compatible with multi-source variable reference rules |
 | `HTTP Node Timeout Duration` | `600 seconds` | Adapts to the time required for parsing engineering consulting project documents, to avoid interruptions during long document parsing |
 | `Judgment Trigger Condition` | `Match by global variable field values` | Adapts to the multi-field verification requirements of engineering consulting projects, such as range judgments for construction periods and costs |
 | `Global Variable Synchronization Trigger Mode` | `Trigger by project update events` | Matches the irregular update rhythm of engineering consulting data, to avoid unnecessary synchronization |
@@ -33,7 +33,7 @@ The parameter values provided on this page are all conventional recommendations,
 
 ## Three Common Mistakes
 - Phenomenon: Global variables selected with a custom type as a knowledge base cannot have conditions configured in the judgment node. Cause: The field exposure switch for global variables is not enabled, so the metadata of the variables is not loaded into the configuration options of the judgment node.
-- Phenomenon: Variables referenced using the `{{Variable Name}}` format in the workflow do not take effect, and the large model output does not limit the number of words as required by the prompt. Cause: The version is not upgraded to V4.8.18-FIX2 or later, and the compatibility issue with variable references has not been fixed.
+- Phenomenon: Variables referenced using the `example value` format in the workflow do not take effect, and the large model output does not limit the number of words as required by the prompt. Cause: The version is not upgraded to V4.8.18-FIX2 or later, and the compatibility issue with variable references has not been fixed.
 - Phenomenon: The workflow terminates directly halfway through execution, with no subsequent process or error prompt. Cause: No timeout fallback branch is configured for the HTTP node, and the timeout threshold is set too short to meet the time requirements for long document parsing.
 
 ## How to Confirm Proper Configuration

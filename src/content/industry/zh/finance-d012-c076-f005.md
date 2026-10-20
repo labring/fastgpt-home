@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 文娱用品营销内容的多轮对话与提示词
-meta_description: 金融机构的文娱用品营销相关数据主要来自内部商品管理系统、合作电商平台后台、历史营销素材库及用户评论标签。数据更新节奏随新品上架、促销活动调整，新品上线时全量
+meta_description: 文娱用品营销内容的多轮对话与提示词：文娱用品营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 文娱用品、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

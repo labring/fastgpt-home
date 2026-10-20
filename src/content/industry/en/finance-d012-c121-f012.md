@@ -4,8 +4,8 @@ slug: /en/industry/finance-d012-c121-f012
 page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
-meta_title: Model Integration and Configuration for Refractory Materials
-meta_description: Data related to refractory material marketing content mainly comes from enterprise production management systems, quality inspection archive files
+meta_title: Model Integration and Configuration for Refractory
+meta_description: Model Integration and Configuration for Refractory Materials Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

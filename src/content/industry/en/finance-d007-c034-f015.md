@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Medical Device Yield Rate
-meta_description: Data sources for medical device yield rate and market trend daily reports include winning bid announcements from regional national public resource
+meta_description: Deployment and Upgrade for Medical Device Yield Rate Reporting
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

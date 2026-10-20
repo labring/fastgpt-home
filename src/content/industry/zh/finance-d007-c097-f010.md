@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦煤收益率的数据库与运维
-meta_description: 焦煤的行情与收益率数据主要来自国内期货交易场所公开接口与行业协会现货报价源。更新节奏覆盖期货交易时段的实时推送，以及每个交易日收盘后的固定日报生成。单条数据
+meta_description: 焦煤收益率的数据库与运维：焦煤收益率的数据库与运维，涵盖配置与验证建议。。。。。
 keywords: 焦煤、收益率与行情日报播报、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

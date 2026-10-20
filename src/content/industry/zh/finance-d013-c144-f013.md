@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通信服务融资日报的知识库检索与召回
-meta_description: 通信服务融资日报的数据来源包括通信行业协会公开融资公示、上市通信企业的定期公告、第三方投融资平台的通信赛道融资动态。更新节奏为每日更新，数据载体多为结构化表
+meta_description: 通信服务融资日报的知识库检索与召回：通信服务融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 通信服务、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

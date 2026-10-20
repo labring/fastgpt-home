@@ -4,8 +4,8 @@ slug: /en/industry/finance-d013-c046-f008
 page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
-meta_title: Tool Calling and Plugins for Solid Waste Treatment Financing
-meta_description: Data sources for solid waste treatment financing daily reports include solid waste disposal project filing records from local ecological environment
+meta_title: Tool Calling and Plugins for Solid Waste Treatment
+meta_description: Tool Calling and Plugins for Solid Waste Treatment Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

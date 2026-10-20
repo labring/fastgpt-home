@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 广告营销财报分析的知识库检索与召回
-meta_description: 广告营销行业的财报数据来源包括公开定期披露文件、内部运营台账、第三方监测结算凭证。公开财报按季度、年度更新，内部运营台账按每日或每周更新，文档格式多为PDF
+meta_description: 广告营销财报分析的知识库检索与召回：广告营销财报分析的知识库检索与召回，涵盖配置与验证建议
 keywords: 广告营销、财报分析与报告生成、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

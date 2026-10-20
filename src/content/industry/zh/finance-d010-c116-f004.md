@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 竞对报价竞价的向量模型与索引
-meta_description: 竞对报价数据主要来源于公开招投标平台的中标公示、企业内部投标响应文件附件、第三方竞调数据集。数据更新随单个招投标项目周期触发，开标前1-3天更新投标方提交的
+meta_description: 竞对报价竞价的向量模型与索引：竞对报价竞价的向量模型与索引，涵盖配置与验证建议。
 keywords: 竞对报价、竞价与投标报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电子元件投研知识库建设的模型接入与配置
-meta_description: 电子元件投研的数据来源包括原厂公开datasheet、行业协会供应链报告、终端厂商选型手册、公开交易平台报价信息。数据更新节奏存在差异：原厂datashee
+meta_description: 电子元件投研知识库建设的模型接入与配置：电子元件投研知识库建设的模型接入与配置，涵盖配置与验证建议
 keywords: 电子元件、投研知识库建设与治理、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

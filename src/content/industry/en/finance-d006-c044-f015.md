@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade of Commercial Property Investment
-meta_description: The data sources for commercial property investment research include internal operation systems, leasing management platforms, energy consumption
+meta_description: Deployment and Upgrade of Commercial Property Investment Research Knowledge Base
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

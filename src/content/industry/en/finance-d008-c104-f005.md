@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Glass
-meta_description: The data for glass intelligent due diligence reports comes from three main sources: batch factory inspection reports for architectural glass, on-site
+meta_description: Multi-turn Dialogue and Prompt Engineering for Glass Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 软件开发财报分析的引用来源与溯源
-meta_description: 软件开发场景下的财报数据，来源为境内外证券交易所披露的公开财报文件，包含PDF格式的公告文档与XBRL结构化文件，同时覆盖企业官方发布的年报、季报及临时财报
+meta_description: 软件开发财报分析的引用来源与溯源：软件开发财报分析的引用来源与溯源，涵盖配置与验证建议
 keywords: 软件开发、财报分析与报告生成、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

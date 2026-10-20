@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦煤收益率的模型接入与配置
-meta_description: 焦煤行情与收益率数据主要来源于大连商品交易所期货行情接口、大宗商品行业资讯平台的公开数据源。更新节奏为每个交易日收盘后生成当日完整日报，非交易日无更新。文档
+meta_description: 焦煤收益率的模型接入与配置：焦煤收益率的模型接入与配置，涵盖配置与验证建议。。。
 keywords: 焦煤、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

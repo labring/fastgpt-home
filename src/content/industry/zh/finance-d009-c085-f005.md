@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水泥研报检索的多轮对话与提示词
-meta_description: 水泥研报的数据主要来自行业协会发布的月度监测数据、券商研究机构的专题分析、行业门户网站的产业动态。更新节奏以月度为核心周期，区域价格、产能利用率等核心指标按
+meta_description: 水泥研报检索的多轮对话与提示词：水泥研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 水泥、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

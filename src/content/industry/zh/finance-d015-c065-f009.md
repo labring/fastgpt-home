@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 征信报告风控的引用来源与溯源
-meta_description: 征信报告数据主要来自央行征信中心、地方征信管理平台及合规征信服务机构。数据更新节奏固定，个人征信报告按月同步更新，企业征信报告更新周期为季度。文档结构分为身
+meta_description: 征信报告风控的引用来源与溯源：征信报告风控的引用来源与溯源，涵盖配置与验证建议。
 keywords: 征信报告、风控与授信材料审核、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

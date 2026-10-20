@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 畜禽养殖融资日报的工具调用与插件
-meta_description: 畜禽养殖融资日报的数据来源于官方畜牧产业监测平台与银行业涉农融资报送系统，每日凌晨更新前一自然日的全量数据。文档以生猪、白羽肉鸡、肉牛等核心养殖品类为一级分
+meta_description: 畜禽养殖融资日报的工具调用与插件：畜禽养殖融资日报的工具调用与插件，涵盖配置与验证建议
 keywords: 畜禽养殖、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

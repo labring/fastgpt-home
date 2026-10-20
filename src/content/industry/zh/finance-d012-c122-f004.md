@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 股份制银行营销内容的向量模型与索引
-meta_description: 股份制银行营销内容的数据源包含内部营销素材库、客户经理话术库、线上活动页文案、信用卡权益说明文档等，更新节奏分为固定周期与临时触发两类：固定周期为季度主题营
+meta_description: 股份制银行营销内容的向量模型与索引：股份制银行营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 股份制银行、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

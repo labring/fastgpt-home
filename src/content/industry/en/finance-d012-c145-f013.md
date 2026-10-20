@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for Telecom Equipment
-meta_description: For telecom equipment targeting financial, insurance, or wealth management scenarios, data sources include internal enterprise equipment specification
+meta_description: Knowledge Base Retrieval and Recall for Telecom Equipment Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -40,6 +40,6 @@ The mixed attributes of telecom equipment data for financial, insurance, or weal
 - Upload a test document containing equipment model and operating frequency band, verify that the data processing step generates non-empty chunked content.
 - Initiate a retrieval by entering a specified equipment model, verify that the returned results include associated content of corresponding technical parameters and marketing copy.
 - Trigger an incremental update, verify that updated documents are added to the retrieval candidate pool within a reasonable time frame.
-- Insert an equipment schematic link, verify that the AI reply displays the accessible link instead of a placeholder.
+- Insert an equipment schematic link, verify that the AI reply displays the accessible link instead of a pending verification.
 
 > Question material comes from public community discussions. Configuration values are common starting points and should be measured against your own samples. Verified on 2026-09-14.

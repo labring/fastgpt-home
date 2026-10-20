@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通用设备智能尽调报告的模型接入与配置
-meta_description: 通用设备智能尽调报告的数据主要来自制造商出厂参数文档、设备运维日志、第三方质检报告及行业标准规范。出厂参数为静态文档，随设备型号固定发布；运维日志按设备运行
+meta_description: 通用设备智能尽调报告的模型接入与配置：通用设备智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 通用设备、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

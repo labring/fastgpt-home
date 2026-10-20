@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光学光电子营销内容的文档解析与分块
-meta_description: 面向金融行业的光学光电子领域的营销内容数据，主要来源于企业内部的产品参数手册、销售跟进文档、展会电子宣传册、csv格式的业务统计表格，以及飞书协作的多级目录
+meta_description: 光学光电子营销内容的文档解析与分块：光学光电子营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 光学光电子、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

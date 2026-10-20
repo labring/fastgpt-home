@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化妆品研报检索的知识库检索与召回
-meta_description: 化妆品研报的数据来源包括公开行业研究报告、品牌官方披露文档、合规备案公示信息、美妆垂类平台的实测数据。更新节奏随品牌新品推出、行业合规更新、季度行业盘点发布
+meta_description: 化妆品研报检索的知识库检索与召回：化妆品研报检索的知识库检索与召回，涵盖配置与验证建议
 keywords: 化妆品、研报检索与问答、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

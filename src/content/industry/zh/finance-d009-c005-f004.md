@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 个护用品研报检索的向量模型与索引
-meta_description: 金融领域的个护用品研报数据来源包括行业公开专项报告、品牌官方技术文档、电商平台商品详情页与用户评论数据集、第三方消费调研数据。更新节奏随内容类型不同：单品参
+meta_description: 个护用品研报检索的向量模型与索引：个护用品研报检索的向量模型与索引，涵盖配置与验证建议
 keywords: 个护用品、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

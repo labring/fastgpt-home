@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interfaces and External Systems for Large State-Owned
-meta_description: Data for large state-owned bank financing daily reports originates from corporate credit core business systems and headquarters operation ledger
+meta_description: HTTP Interfaces and External Systems for Large State-Owned Bank Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

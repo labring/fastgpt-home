@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Textile
-meta_description: Textile manufacturing enterprise data mainly comes from production MES systems, fabric test reports, e-commerce store backends, custom order ledgers
+meta_description: Multi-turn Dialogue and Prompt Engineering for Textile Manufacturing Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -32,7 +32,7 @@ The precise unit requirements for fabric parameters mean multi-turn dialogue pro
 > The parameter values provided on this page are all conventional recommendations used as starting points for configuration. Actual values are affected by material form, data volume, and business rules. Specific issues require case-by-case analysis, and it is recommended to test on your own samples before finalizing settings.
 
 ## Three common misconfigurations
-- Issue: Generated marketing copy uses an incorrect date in the signature, or the date format does not meet business requirements. Root cause: The system-provided `{{currentDate}}` variable is not properly called in the prompt, and no output format rules are configured for the variable.
+- Issue: Generated marketing copy uses an incorrect date in the signature, or the date format does not meet business requirements. Root cause: The system-provided `example value` variable is not properly called in the prompt, and no output format rules are configured for the variable.
 - Issue: HTTP request nodes in the workflow fail to execute, and AI dialogue-generated content is called directly. Root cause: Trigger logic between nodes is not properly configured, and the execution result of the preceding node is not used as the trigger condition for the current node.
 - Issue: The final output includes reply content from the previous AI dialogue node. Root cause: The workflow is not set to only extract output from the target node, and residual context from prior conversations is not cleared.
 

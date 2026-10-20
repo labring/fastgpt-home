@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 煤化工研报检索的向量模型与索引
-meta_description: 煤化工研报的数据来源包括券商公开研报、行业协会月度监测报告、煤化工园区公开运营数据。更新节奏分为两类：券商研报按周、月发布专项分析，行业运营数据按旬更新。文
+meta_description: 煤化工研报检索的向量模型与索引：煤化工研报检索的向量模型与索引，涵盖配置与验证建议
 keywords: 煤化工、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

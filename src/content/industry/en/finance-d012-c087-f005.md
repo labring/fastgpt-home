@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Auto Parts
-meta_description: The data for auto parts marketing content mainly comes from official supporting lists of original equipment manufacturers (OEMs), brand after-sales
+meta_description: Multi-turn Dialogue and Prompt Engineering for Auto Parts Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

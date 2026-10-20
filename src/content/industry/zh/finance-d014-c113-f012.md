@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 白酒财报分析的模型接入与配置
-meta_description: 白酒上市公司的财报数据主要来源于沪深交易所公开披露的定期报告，更新节奏固定：年度报告于次年4月30日前披露，半年度报告于每年8月31日前披露，季度报告于季度
+meta_description: 白酒财报分析的模型接入与配置：白酒财报分析的模型接入与配置，涵盖配置与验证建议。
 keywords: 白酒、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

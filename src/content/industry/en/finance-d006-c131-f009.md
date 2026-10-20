@@ -4,8 +4,8 @@ slug: /en/industry/finance-d006-c131-f009
 page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
-meta_title: Citation Source and Traceability for Construction and
-meta_description: Construction and decoration investment research data comes from multiple sources: decoration quota standards released by the Ministry of Housing and
+meta_title: Citation Source and Traceability for Construction
+meta_description: Citation Source and Traceability for Construction and Decoration Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -46,7 +46,7 @@ In multi-round investment research follow-up scenarios, historical cited documen
 
 ## Three Common Configuration Mistakes
 
-- Returning only citations without reply content: The phenomenon is that API calls return empty text but include source links. The cause is that the citation template for `llm_response_prompt` is not configured, or the template only retains the source placeholder without adding reply generation logic.
+- Returning only citations without reply content: The phenomenon is that API calls return empty text but include source links. The cause is that the citation template for `llm_response_prompt` is not configured, or the template only retains the source pending verification without adding reply generation logic.
 - Citation function fails for password-free shared links: The phenomenon is that in version 4.9.6, the original text can still be viewed after disabling the citation viewing permission for password-free shared links. The cause is that the associated configuration of `share_link_permission` and `source_view_permission` was not updated synchronously, or there is a permission check logic bug in the version.
 - Multi-round conversation context is not included in traceability: The phenomenon is that subsequent follow-up questions do not associate with historically cited documents. The cause is that the `enable_multi_round_recall` parameter is not enabled, or the context window size is set too small to cover historical interactions.
 

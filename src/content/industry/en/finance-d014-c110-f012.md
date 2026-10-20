@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for Power Grid Equipment
-meta_description: Financial report data for the power grid equipment category comes primarily from publicly disclosed periodic reports of listed companies on platforms
+meta_description: Model Access and Configuration for Power Grid Equipment Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

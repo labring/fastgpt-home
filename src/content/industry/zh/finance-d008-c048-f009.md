@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 城商行智能尽调报告的引用来源与溯源
-meta_description: 城商行智能尽调报告的数据来源包括内部信贷管理系统的授信档案、地方金融监管局的季度报送报表、当地征信中心的企业信用报告。数据更新节奏为每季度一次，实时合规记录
+meta_description: 城商行智能尽调报告的引用来源与溯源：城商行智能尽调报告的引用来源与溯源，涵盖配置与验证建议
 keywords: 城商行、智能尽调报告、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for Livestock and Poultry
-meta_description: Livestock and poultry farming profitability market data is sourced from official livestock industry monitoring databases, bulk agricultural and
+meta_description: Model Access and Configuration for Livestock and Poultry Farming Profitability
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 免税投研知识库建设的模型接入与配置
-meta_description: 免税品类的投研数据主要来自海关总署离岛免税备案库、离岛免税店每日销售台账、财政部及各省市的免税政策公告、第三方消费调研数据集。结构化数据包含商品编码、完税价
+meta_description: 免税投研知识库建设的模型接入与配置：免税投研知识库建设的模型接入与配置，涵盖配置与验证建议
 keywords: 免税、投研知识库建设与治理、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通信服务收益率的工作流编排
-meta_description: 数据来源主要为公开证券行情接口、通信行业监管机构披露的运营数据接口。更新节奏以日更为主，实时行情节点每15分钟刷新一次。文档结构为结构化JSON格式，包含标
+meta_description: 通信服务收益率的工作流编排：通信服务收益率的工作流编排，涵盖配置与验证建议。。。
 keywords: 通信服务、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15
@@ -26,7 +26,7 @@ date_modified: 2026-09-15
 | `trigger_type` | `["schedule", "webhook"]` | 适配通信服务行情的日更定时触发与实时行情推送双场景 |
 | `loop_exit_condition` | `"target_yield > 0 or total_items >= 20"` | 匹配批量拉取行情数据后的循环终止逻辑，适配循环体条件结束的配置需求 |
 | `parse_node_timeout` | `600 秒` | 适配通信服务行情接口的常规响应时长，避免超时中断流程 |
-| `variable_reference_mode` | `{{field_name}}` | 符合V4.8.18-FIX2版本的变量引用兼容规范，修复格式引用问题 |
+| `variable_reference_mode` | `待核验值` | 符合V4.8.18-FIX2版本的变量引用兼容规范，修复格式引用问题 |
 | `webhook_auth_type` | `api_key` | 保障通信服务行情接口的调用权限安全 |
 
 > 本页给出的参数取值均为常规建议，用于确定配置的起点。实际取值受材料形态、数据量与业务规则影响，具体问题需具体分析，建议在自有样本上实测后再定。

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Citation Source and Traceability for General Equipment
-meta_description: General equipment investment research data sources include monthly operation monitoring data released by the China General Machinery Industry
+meta_description: Citation Source and Traceability for General Equipment Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

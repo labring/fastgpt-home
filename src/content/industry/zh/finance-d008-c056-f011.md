@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 家居用品智能尽调报告的文档解析与分块
-meta_description: 家居用品智能尽调报告的数据来源包括品牌方提供的SKU台账、第三方质检机构出具的材质检测报告、供应链上游的供货明细文档，更新节奏随新品上架、季度抽检或合规要求
+meta_description: 家居用品智能尽调报告的文档解析与分块：家居用品智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 家居用品、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

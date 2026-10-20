@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程咨询收益率的对话日志与审计
-meta_description: 面向金融、理财、保险行业的工程咨询收益率与行情数据，来源于建筑装饰行业造价管理机构发布的当期建材价格指数、项目现场的成本归集台账与公开招投标报价数据。更新节
+meta_description: 工程咨询收益率的对话日志与审计：工程咨询收益率的对话日志与审计，涵盖配置与验证建议
 keywords: 工程咨询、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

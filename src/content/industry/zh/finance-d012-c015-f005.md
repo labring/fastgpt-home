@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 储能营销内容的多轮对话与提示词
-meta_description: 储能面向金融客户的营销相关数据来源包括产品规格书、并网检测报告、运维日志、项目投资收益报告、营销物料文档。更新节奏为：产品规格书随型号迭代更新，运维日志按日
+meta_description: 储能营销内容的多轮对话与提示词：储能营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 储能、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

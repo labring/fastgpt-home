@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通信设备收益率的分享与嵌入
-meta_description: 通信设备收益率数据的来源包含行业公开招标中标价、设备厂商出货均价、第三方行业监测机构的交易统计数据。更新节奏分为两类，通用通信设备按月度更新，核心品类如5G
+meta_description: 通信设备收益率的分享与嵌入：通信设备收益率的分享与嵌入，涵盖配置与验证建议。。。
 keywords: 通信设备、收益率与行情日报播报、分享与嵌入
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

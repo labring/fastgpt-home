@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 消费建材研报检索的部署与升级
-meta_description: 消费建材研报的数据源主要来自券商消费建材研究团队、行业协会公开报告、头部建材企业的年度调研文档。更新节奏随行业事件调整，重大原材料价格波动、地产政策出台时会
+meta_description: 消费建材研报检索的部署与升级：消费建材研报检索的部署与升级，涵盖配置与验证建议。
 keywords: 消费建材、研报检索与问答、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

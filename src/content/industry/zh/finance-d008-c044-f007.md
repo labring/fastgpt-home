@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商业物业智能尽调报告的工作流编排
-meta_description: 商业物业智能尽调报告的数据来源包括官方不动产登记机构、物业运营方后台系统、商圈管委会公开数据。数据更新节奏存在差异：权属类数据按季度更新，运营类数据按月度更
+meta_description: 商业物业智能尽调报告的工作流编排：商业物业智能尽调报告的工作流编排，涵盖配置与验证建议
 keywords: 商业物业、智能尽调报告、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程机械研报检索的模型接入与配置
-meta_description: 工程机械研报的数据主要来自中国工程机械工业协会官方统计报告、头部主机厂商公开经营简报、第三方行业咨询机构的公开研报。更新节奏分为三类：月度销量数据每月固定周
+meta_description: 工程机械研报检索的模型接入与配置：工程机械研报检索的模型接入与配置，涵盖配置与验证建议
 keywords: 工程机械、研报检索与问答、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

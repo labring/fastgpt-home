@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 厨卫电器财报分析的模型接入与配置
-meta_description: 厨卫电器财报数据主要来自上市企业公开定期报告、行业协会披露的行业销售数据，更新节奏为季度、半年度及年度周期。文档多为PDF或Word格式，包含主营业务拆分、
+meta_description: 厨卫电器财报分析的模型接入与配置：厨卫电器财报分析的模型接入与配置，涵盖配置与验证建议
 keywords: 厨卫电器、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

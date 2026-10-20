@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c044-f012
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: Model Access and Configuration for Commercial Property Yield
-meta_description: Data related to commercial property yield rates comes from three core data sources: property lease management systems, energy consumption monitoring
+meta_title: Model Access and Configuration for Commercial Property
+meta_description: Model Access and Configuration for Commercial Property Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

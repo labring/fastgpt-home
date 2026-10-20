@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工业金属研报检索的文档解析与分块
-meta_description: 工业金属研报的数据来自行业协会公开报告、期货交易所行情数据、头部矿企与加工企业的公开分析文档。更新节奏覆盖日报（现货价格、日内行情）、周报（库存数据、周度供
+meta_description: 工业金属研报检索的文档解析与分块：工业金属研报检索的文档解析与分块，涵盖配置与验证建议
 keywords: 工业金属、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

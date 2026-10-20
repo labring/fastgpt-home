@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Commercial Real Estate
-meta_description: Commercial real estate due diligence data comes primarily from public records of real estate registration agencies, filing documents from housing and
+meta_description: Tool Calling and Plugins for Commercial Real Estate Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

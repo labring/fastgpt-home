@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 生物制品营销内容的向量模型与索引
-meta_description: 金融场景下生物制品营销内容的数据源主要包括产品备案文件、临床试验总结报告、官方合规说明书、市场推广物料及合规备案更新材料，同时包含健康险相关的生物制品报销规
+meta_description: 生物制品营销内容的向量模型与索引：生物制品营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 生物制品、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

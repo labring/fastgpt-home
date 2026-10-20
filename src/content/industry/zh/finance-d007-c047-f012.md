@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 国有大行收益率的模型接入与配置
-meta_description: 国有大行收益率与行情数据的来源包括官方手机银行、官网的公开披露页面，以及监管机构的大行利率报备平台。数据更新节奏为每日固定时点更新前一交易日的产品收益变动情
+meta_description: 国有大行收益率的模型接入与配置：国有大行收益率的模型接入与配置，涵盖配置与验证建议
 keywords: 国有大行、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

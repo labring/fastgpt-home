@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Consumer
-meta_description: Data sources include supply chain financing ledgers for the building materials industry, credit approval filings for building material enterprises
+meta_description: Multi-turn Dialogue and Prompt Engineering for Consumer Building Materials Financing Daily Report
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -28,7 +28,7 @@ The feature of accessing multiple data sources requires the dialogue flow to pro
 ## Configuration Settings
 | Configuration Item | Recommended Value | Rationale |
 | --- | --- | --- |
-| `maxContext` | 8000–12000 characters | Compatible with FastGPT V4.9.1. Each single entry of the consumer building materials financing daily report is approximately 300-500 characters. This range can accommodate 15-20 daily financing entries, meeting the context requirements of multi-turn dialogue. |
+Reference only; verify against the target FastGPT release and deployment documentation.
 | `Recall Count` | Top 10 entries | Daily financing entries typically do not exceed 20. Recalling the top 10 entries covers major transaction subjects, avoiding redundant information interfering with multi-turn dialogue. |
 | `Similarity Threshold` | 0.75–0.85 | There are many sub-categories of building material categories. This threshold prevents cross-category financing data from being incorrectly recalled, improving the accuracy of matching user questions. |
 | `memory_window` | 5 dialogue turns | Multi-turn dialogue for financing daily reports usually focuses on details of that day's financing. A 5-turn window retains key questions and field verification information, avoiding context overflow. |

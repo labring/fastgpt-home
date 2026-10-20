@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 投资平台财报分析的部署与升级
-meta_description: 投资平台对接的财报数据主要来自公开交易所披露的上市公司定期报告、临时公告，更新节奏集中在季度末、年末的披露窗口期，日常伴随突发公告更新。文档包含结构化财务报
+meta_description: 投资平台财报分析的部署与升级：投资平台财报分析的部署与升级，涵盖配置与验证建议。
 keywords: 投资平台、财报分析与报告生成、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电力财报分析的HTTP 接口与外部系统
-meta_description: 电力行业财报数据主要来自公开监管披露、上市主体定期报告及电力交易平台公开数据。更新节奏分年度、半年度定期报告，以及月度电网运营、交易结算的临时数据。单份文档
+meta_description: 电力财报分析的HTTP 接口与外部系统：电力财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 电力、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

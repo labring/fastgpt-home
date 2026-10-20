@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Cultural and Entertainment
-meta_description: Cultural and entertainment product data mainly comes from internal enterprise SKU ledgers, product detail pages, marketing asset libraries, and user
+meta_description: Workflow Orchestration for Cultural and Entertainment Products Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

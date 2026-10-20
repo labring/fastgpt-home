@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interfaces and External Systems for Personal Care
-meta_description: In financial industry scenarios, personal care product marketing content is primarily sourced from official brand stores, mainstream e-commerce
+meta_description: HTTP Interfaces and External Systems for Personal Care Product Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

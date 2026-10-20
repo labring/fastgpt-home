@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化纤财报分析的HTTP 接口与外部系统
-meta_description: 化纤行业的财报数据主要来自境内外证券交易所公开披露的上市公司年报、季报，以及行业协会发布的运行报告。数据更新分为固定周期与临时触发：固定周期为季度报告（每3
+meta_description: 化纤财报分析的HTTP 接口与外部系统：化纤财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 化纤、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

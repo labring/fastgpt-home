@@ -4,8 +4,8 @@ slug: /en/industry/finance-d012-c012-f015
 page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
-meta_title: Deployment and Upgrade for Residential Development Marketing
-meta_description: Residential development marketing-related data comes primarily from sales office operation ledgers, official floor plan PDFs, pre-sale permit public
+meta_title: Deployment and Upgrade for Residential Development
+meta_description: Deployment and Upgrade for Residential Development Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

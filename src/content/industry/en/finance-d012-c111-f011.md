@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Livestock and Poultry
-meta_description: Data for this category mainly comes from large-scale farming manuals, disease prevention and control guides, feed formula documents, marketing scripts
+meta_description: Document Parsing and Chunking for Livestock and Poultry Farming Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -4,8 +4,8 @@ slug: /en/industry/finance-d009-c059-f015
 page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
-meta_title: Deployment and Upgrade for Industrial Metals Research Report
-meta_description: Sources for industrial metals research report data include industry associations, futures exchanges, securities firm research institutes, and
+meta_title: Deployment and Upgrade for Industrial Metals Research
+meta_description: Deployment and Upgrade for Industrial Metals Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

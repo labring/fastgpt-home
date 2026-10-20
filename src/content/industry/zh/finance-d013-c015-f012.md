@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 储能融资日报的模型接入与配置
-meta_description: 储能融资日报的数据来源于地方能源局项目公示平台、行业融资备案系统及公开招标公告，每日更新单条日报文档。单条文档包含项目名称、储能技术路线、融资金额、投资方主
+meta_description: 储能融资日报的模型接入与配置：储能融资日报的模型接入与配置，涵盖配置与验证建议。
 keywords: 储能、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

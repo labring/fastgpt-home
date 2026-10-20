@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Conversation Logging and Auditing for Software Development
-meta_description: Data for this category originates from compliant financial market data APIs and official disclosure documents. It is generated in batches each trading
+meta_description: Conversation Logging and Auditing for Software Development Revenue Yield
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

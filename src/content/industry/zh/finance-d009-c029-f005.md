@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 包装印刷研报检索的多轮对话与提示词
-meta_description: 包装印刷研报数据主要来自轻工制造行业公开数据库、行业协会的月度/季度报告、上市企业包装板块年报及印刷设备厂商的技术白皮书。数据更新节奏分三类：行业宏观报告按
+meta_description: 包装印刷研报检索的多轮对话与提示词：包装印刷研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 包装印刷、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

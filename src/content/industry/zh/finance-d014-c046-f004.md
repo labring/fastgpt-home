@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 固废处理财报分析的向量模型与索引
-meta_description: 数据主要来自固废处理企业公开披露的年度、半年度、季度财务报告，以及内部运营台账的结构化导出文件。更新节奏按企业披露周期与运营数据维度区分，常规为季度、半年度
+meta_description: 固废处理财报分析的向量模型与索引：固废处理财报分析的向量模型与索引，涵盖配置与验证建议
 keywords: 固废处理、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

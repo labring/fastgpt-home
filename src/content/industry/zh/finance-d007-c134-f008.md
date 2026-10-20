@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 调味品收益率的工具调用与插件
-meta_description: 调味品收益率与行情数据主要来自国内主要农产品批发市场的每日报价监测，以及行业协会的经销商出货跟踪数据，更新频率为每日16点前完成当日全量数据汇总。单条数据为
+meta_description: 调味品收益率的工具调用与插件：调味品收益率的工具调用与插件，涵盖配置与验证建议。
 keywords: 调味品、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

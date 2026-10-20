@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦炭投研知识库建设的文档解析与分块
-meta_description: 焦炭行业的投研数据来源覆盖期货交易所公告、行业协会月度报告、钢厂采购台账、港口库存日报与海关进出口数据。更新节奏覆盖每日（期货收盘价、港口报价）、每周（行业
+meta_description: 焦炭投研知识库建设的文档解析与分块：焦炭投研知识库建设的文档解析与分块，涵盖配置与验证建议
 keywords: 焦炭、投研知识库建设与治理、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

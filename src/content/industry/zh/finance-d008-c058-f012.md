@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小金属智能尽调报告的模型接入与配置
-meta_description: 小金属行业的数据源涵盖现货报价单、海关进出口报关单、矿山企业披露的产能报告、行业协会发布的库存周报与研报等。数据来源包括国内有色金属行业协会、大宗商品交易所
+meta_description: 小金属智能尽调报告的模型接入与配置：小金属智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 小金属、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 消费电子投研知识库建设的文档解析与分块
-meta_description: 消费电子投研的数据来源包括行业协会发布的供应链报告、终端厂商公开的财报与技术白皮书、第三方评测机构的终端参数文档、供应链上下游的报价CSV文件等。更新节奏随
+meta_description: 消费电子投研知识库建设的文档解析与分块：消费电子投研知识库建设的文档解析与分块，涵盖配置与验证建议
 keywords: 消费电子、投研知识库建设与治理、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

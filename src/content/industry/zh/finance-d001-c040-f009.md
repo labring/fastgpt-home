@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 受益所有人KYC 的引用来源与溯源
-meta_description: 受益所有人KYC数据主要来源于工商行政管理部门的股权登记信息、金融机构报送的监管核验材料、第三方股权穿透服务文档。数据更新节奏随工商变更实时同步，监管材料按
+meta_description: 受益所有人KYC 的引用来源与溯源：受益所有人KYC 的引用来源与溯源，涵盖配置与验证建议
 keywords: 受益所有人、KYC 与反洗钱资料核验、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

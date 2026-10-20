@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光伏智能尽调报告的模型接入与配置
-meta_description: 光伏智能尽调报告的数据来源包括电站现场勘测文件、并网验收检测报告、运维台账及区域气象数据。项目核心参数在项目竣工后按季度同步更新，日常运维数据每日更新。文档
+meta_description: 光伏智能尽调报告的模型接入与配置：光伏智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 光伏、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

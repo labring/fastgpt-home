@@ -4,8 +4,8 @@ slug: /en/industry/finance-d008-c076-f011
 page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
-meta_title: Document Parsing and Chunking for Cultural and Entertainment
-meta_description: Intelligent due diligence report data for cultural and entertainment supplies mainly comes from supplier-submitted production ledgers, IP licensing
+meta_title: Document Parsing and Chunking for Cultural
+meta_description: Document Parsing and Chunking for Cultural and Entertainment Supplies Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

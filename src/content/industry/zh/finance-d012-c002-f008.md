@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专业服务营销内容的工具调用与插件
-meta_description: 专业服务营销内容的数据主要来自内部营销素材库、合规审核系统与客户咨询工单。数据更新节奏随营销活动上线、合规审核完成触发，无固定周期但单次更新量较小。文档结构
+meta_description: 专业服务营销内容的工具调用与插件：专业服务营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 专业服务、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

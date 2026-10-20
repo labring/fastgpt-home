@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 监管办法合规的HTTP 接口与外部系统
-meta_description: 监管办法的数据来源于官方监管机构发布的规范性文件，更新节奏为不定期，随新政策出台或修订触发更新。文档通常包含文号、发布机构、生效日期、条款正文、适用范围、罚
+meta_description: 监管办法合规的HTTP 接口与外部系统：监管办法合规的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 监管办法、合规与内部制度问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15
@@ -28,7 +28,7 @@ date_modified: 2026-09-15
 | `knowledge_sync_interval` | `86400 秒` | 监管政策更新频率较低，每日同步即可覆盖绝大多数增量更新需求 |
 | `metadata_extract_fields` | `["文号", "发布机构", "生效日期"]` | 监管办法的核心元数据为上述字段，便于后续合规检索与分类 |
 | `api_auto_bearer_switch` | `false` | 部分官方监管接口要求自定义鉴权头，关闭自动Bearer补充可避免鉴权冲突 |
-| `external_api_header_override` | `["Authorization: Custom-Key {{token}}"]` | 支持动态绑定工作流变量，适配不同场景下的鉴权需求 |
+| `external_api_header_override` | `["Authorization: Custom-Key 待核验值"]` | 支持动态绑定工作流变量，适配不同场景下的鉴权需求 |
 
 > 本页给出的参数取值均为常规建议，用于确定配置的起点。实际取值受材料形态、数据量与业务规则影响，具体问题需具体分析，建议在自有样本上实测后再定。
 

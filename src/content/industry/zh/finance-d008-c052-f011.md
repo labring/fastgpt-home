@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多元控股智能尽调报告的文档解析与分块
-meta_description: 多元控股智能尽调报告的数据来源包含合并财务报表、子公司独立审计报告、关联交易备案文件、股权穿透图谱文档。数据更新节奏随季度财报、年度审计及临时关联事项同步更
+meta_description: 多元控股智能尽调报告的文档解析与分块：多元控股智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 多元控股、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

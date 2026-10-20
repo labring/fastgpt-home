@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商业物业财报分析的工作流编排
-meta_description: 商业物业财报的数据来源包括内部收费系统、能耗管理平台、商户签约档案与公共区域运维记录。更新节奏分为月度日常运营数据、季度汇总报表、年度正式财报三类。文档结构
+meta_description: 商业物业财报分析的工作流编排：商业物业财报分析的工作流编排，涵盖配置与验证建议。
 keywords: 商业物业、财报分析与报告生成、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

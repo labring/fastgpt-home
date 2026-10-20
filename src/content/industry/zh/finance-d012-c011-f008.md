@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 休闲食品营销内容的工具调用与插件
-meta_description: 休闲食品的营销相关数据主要来源于品牌官方sku台账、主流电商平台商品详情页、线下门店促销公告及金融机构权益兑换平台的休闲食品专区数据。数据更新节奏随新品上架
+meta_description: 休闲食品营销内容的工具调用与插件：休闲食品营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 休闲食品、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

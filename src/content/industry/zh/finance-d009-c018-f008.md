@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光模块研报检索的工具调用与插件
-meta_description: 光模块研报数据主要来自通信行业协会公开资料、光模块厂商官方技术文档、第三方行业研究机构发布的专题研报。更新节奏随厂商新品发布、行业标准迭代及季度行业调研周期
+meta_description: 光模块研报检索的工具调用与插件：光模块研报检索的工具调用与插件，涵盖配置与验证建议
 keywords: 光模块、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

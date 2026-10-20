@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 储能研报检索的模型接入与配置
-meta_description: 储能研报作为金融投研场景中的电力设备细分品类数据来源，主要为公开券商电力设备行业研报、国内储能行业协会公开报告、并网储能项目公示文档。更新节奏分为三类：季度
+meta_description: 储能研报检索的模型接入与配置：储能研报检索的模型接入与配置，涵盖配置与验证建议。
 keywords: 储能、研报检索与问答、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

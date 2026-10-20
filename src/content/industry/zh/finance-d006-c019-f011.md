@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 免税投研知识库建设的文档解析与分块
-meta_description: 免税投研的数据来源包含海关总署离岛免税监管数据、财政部免税政策公告、离岛免税店月度经营报表、券商行业研报四类。数据更新节奏无固定周期，政策公告随政策发布更新
+meta_description: 免税投研知识库建设的文档解析与分块：免税投研知识库建设的文档解析与分块，涵盖配置与验证建议
 keywords: 免税、投研知识库建设与治理、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

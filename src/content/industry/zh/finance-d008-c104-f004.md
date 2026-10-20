@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 玻璃智能尽调报告的向量模型与索引
-meta_description: 玻璃智能尽调数据来源于生产厂商内部质检档案、国家级建筑材料检测机构的公开检测报告、建筑项目施工验收档案。数据更新节奏差异显著：生产批次数据随生产批次生成更新
+meta_description: 玻璃智能尽调报告的向量模型与索引：玻璃智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 玻璃、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

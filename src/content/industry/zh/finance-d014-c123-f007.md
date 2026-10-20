@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 能源金属财报分析的工作流编排
-meta_description: 能源金属相关上市公司的财报数据，主要来自上海证券交易所、深圳证券交易所、香港联合交易所官方披露平台及企业官方投资者关系页面的PDF文档。年度财报需在次年4月
+meta_description: 能源金属财报分析的工作流编排：能源金属财报分析的工作流编排，涵盖配置与验证建议。
 keywords: 能源金属、财报分析与报告生成、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

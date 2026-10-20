@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 免税智能尽调报告的部署与升级
-meta_description: 免税智能尽调报告的数据主要来自海关通关备案系统、离岛免税店销售台账、品牌方授权文件、供应链报关单据与合规校验报告。数据更新节奏分为三类：日常销售流水按日更新
+meta_description: 免税智能尽调报告的部署与升级：免税智能尽调报告的部署与升级，涵盖配置与验证建议。
 keywords: 免税、智能尽调报告、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

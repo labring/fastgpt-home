@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦炭营销内容的工作流编排
-meta_description: 焦炭相关数据主要来自大连商品交易所、国内煤炭行业协会及主要港口、钢厂的公开统计。数据更新节奏分两类：期货行情数据随交易日实时更新，现货交易数据每日更新一次。
+meta_description: 焦炭营销内容的工作流编排：焦炭营销内容的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 焦炭、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

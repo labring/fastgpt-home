@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小家电营销内容的多轮对话与提示词
-meta_description: 小家电营销相关的数据主要来自品牌官方产品库、电商平台商品详情页、已上线的营销素材包。数据字段涵盖电气参数、外观尺寸、适配场景、合规标识等，单位多为瓦、伏特、
+meta_description: 小家电营销内容的多轮对话与提示词：小家电营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 小家电、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

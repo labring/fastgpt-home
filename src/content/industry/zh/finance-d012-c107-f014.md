@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电力营销内容的表单与交互
-meta_description: 电力营销相关数据主要来自用电采集系统、客户营销管理系统及线下报装工单。数据更新节奏为每日同步新增的用电户档案、触达记录，每月完成全量历史数据校准。文档以结构
+meta_description: 电力营销内容的表单与交互：电力营销内容的表单与交互，涵盖配置与验证建议。。。。。
 keywords: 电力、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

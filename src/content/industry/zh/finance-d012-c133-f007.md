@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 证券营销内容的工作流编排
-meta_description: 证券营销内容依赖的数据主要来自交易所公开披露平台、券商内部研报系统、第三方行情接口。更新节奏：上市公司公告随披露实时推送，行业研报按工作日分批更新，行情数据
+meta_description: 证券营销内容的工作流编排：证券营销内容的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 证券、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 国有大行投研知识库建设的上下文与 token
-meta_description: 国有大行投研数据主要来自行内宏观研究团队产出的定期研报、央行及银保监会发布的公开监管文件、同业机构披露的经营数据、宏观经济数据库的公开指标。更新节奏随数据类
+meta_description: 国有大行投研知识库建设的上下文与 token：国有大行投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 国有大行、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

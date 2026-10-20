@@ -4,8 +4,8 @@ slug: /en/industry/finance-d013-c009-f012
 page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
-meta_title: Model Access and Configuration for Industrial Park Financing
-meta_description: Data for industrial park financing daily reports comes from three sources: park operator investment promotion filing systems, financing reporting
+meta_title: Model Access and Configuration for Industrial Park
+meta_description: Model Access and Configuration for Industrial Park Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光学光电子营销内容的部署与升级
-meta_description: 光学光电子用于金融/保险/理财领域的营销内容数据，来源包括企业内部的设备规格文档、金融机构的设备采购需求文档、行业技术标准文件，以及公开的金融场景应用案例白
+meta_description: 光学光电子营销内容的部署与升级：光学光电子营销内容的部署与升级，涵盖配置与验证建议
 keywords: 光学光电子、营销内容与获客、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

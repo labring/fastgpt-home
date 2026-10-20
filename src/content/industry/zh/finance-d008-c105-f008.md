@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 生物制品智能尽调报告的工具调用与插件
-meta_description: 生物制品智能尽调的数据主要来自国家药品监督管理局公开审评档案、企业年度披露报告、临床试验公共登记平台。数据更新节奏随审评流程波动，新受理品种每周更新，批签发
+meta_description: 生物制品智能尽调报告的工具调用与插件：生物制品智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 生物制品、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

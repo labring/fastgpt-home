@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商业物业收益率的对话日志与审计
-meta_description: 这个品类的数据主要来自物业运营管理系统的租金收缴台账、运维成本结算单据、公共配套（停车场、广告位）营收报表。更新节奏为月度，对应自然月的运营周期完成核算后生
+meta_description: 商业物业收益率的对话日志与审计：商业物业收益率的对话日志与审计，涵盖配置与验证建议
 keywords: 商业物业、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

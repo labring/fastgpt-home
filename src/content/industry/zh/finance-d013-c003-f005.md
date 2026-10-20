@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专业连锁融资日报的多轮对话与提示词
-meta_description: 专业连锁融资日报的数据来源为各门店POS系统、总部财务核算模块及供应链合作方结算单据。更新节奏为每日凌晨自动同步前一自然日的业务与融资数据。单份日报文档按区
+meta_description: 专业连锁融资日报的多轮对话与提示词：专业连锁融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 专业连锁、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

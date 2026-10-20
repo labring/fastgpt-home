@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Unified AI Platform and Multi-App Orchestration
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompting for Model Allocation
-meta_description: This category of data primarily comes from platform model invocation logs, session context records, and model allocation rule configuration files.
+meta_description: Multi-turn Dialogue and Prompting for Model Allocation Integrated AI Platform
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

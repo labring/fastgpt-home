@@ -4,8 +4,8 @@ slug: /en/industry/finance-d009-c037-f009
 page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
-meta_title: Citation Source and Traceability for Satellite Communication
-meta_description: Satellite communication research reports are professional materials used by financial institutions for investment analysis of the communications
+meta_title: Citation Source and Traceability for Satellite
+meta_description: Citation Source and Traceability for Satellite Communication Research Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -32,7 +32,7 @@ Some documents have large file sizes. When parsing in segments, the association 
 | `chunk_size` | 1200-1500 characters | Satellite research reports contain long paragraphs of professional parameter analysis. This segment length retains complete technical description context and avoids splitting core parameter groups |
 | `score_threshold` | 0.72-0.85 | Semantic matching in professional fields requires a high-precision threshold to filter low-correlation documents unrelated to satellite communications |
 | `source_metadata_fields` | `Observation Time, Satellite ID, Link Bandwidth, Issuing Organization` | This configuration extracts the most core traceability metadata from satellite research reports, ensuring key identifying information can be displayed during citations |
-| `reference_template` | `Source: {{source}} | Publish Time: {{publish_time}} | Chunk Position: {{chunk_start}}-{{chunk_end}} characters` | This template standardizes traceability information display and avoids interfering with response readability due to original document formatting |
+| `traceability details` | `the configured source field | the configured publish-time field | the configured excerpt-position field` | This template standardizes traceability information display and avoids interfering with response readability due to original document formatting |
 | `parse_timeout` | 300 seconds | Large-volume satellite observation reports require sufficient parsing time to avoid interrupting the parsing process due to timeout |
 
 > The parameter values provided on this page are common recommended starting points for configuration. Actual values are affected by material format, data volume and business rules. Specific issues require case-by-case analysis. It is recommended to test on your own samples before finalizing settings.

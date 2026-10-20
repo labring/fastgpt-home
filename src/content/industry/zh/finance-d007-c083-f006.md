@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水务收益率的对话日志与审计
-meta_description: 水务收益率日报的数据来源于水务企业的运营台账、财务核算系统、供水排水计量平台。数据更新节奏为每日凌晨完成前一日全量数据的汇总生成，供当日播报使用。文档采用结
+meta_description: 水务收益率的对话日志与审计：水务收益率的对话日志与审计，涵盖配置与验证建议。。。
 keywords: 水务、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

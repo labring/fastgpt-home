@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 热力投研知识库建设的知识库检索与召回
-meta_description: 热力品类的数据主要来自热力场站SCADA监测系统、管网压力温度采集平台、用户供热诉求上报系统及季度供热规划文档。实时监测类数据包括供水温度、回水压力、管网流
+meta_description: 热力投研知识库建设的知识库检索与召回：热力投研知识库建设的知识库检索与召回，涵盖配置与验证建议
 keywords: 热力、投研知识库建设与治理、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

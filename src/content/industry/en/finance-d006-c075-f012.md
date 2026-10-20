@@ -4,8 +4,8 @@ slug: /en/industry/finance-d006-c075-f012
 page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
-meta_title: Model Access and Configuration for Vehicle Sector Investment
-meta_description: Vehicle sector investment research data comes from publicly available automaker financial reports, Ministry of Industry and Information Technology
+meta_title: Model Access and Configuration for Vehicle Sector
+meta_description: Model Access and Configuration for Vehicle Sector Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 用量统计一体化 AI 平台的部署与升级
-meta_description: 用量统计品类的数据来源于平台内置的API调用链路埋点、容器资源监控探针以及应用运行日志。数据按配置的统计时间窗口生成聚合快照，文档结构包含应用唯一标识、统计
+meta_description: 用量统计一体化 AI 平台的部署与升级：用量统计一体化 AI 平台的部署与升级，涵盖配置与验证建议
 keywords: 用量统计、一体化 AI 平台与多应用编排、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

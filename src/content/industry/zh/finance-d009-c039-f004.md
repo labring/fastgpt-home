@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 厨卫电器研报检索的向量模型与索引
-meta_description: 厨卫电器研报的数据主要来自家电行业研究机构公开报告、品牌官方产品技术文档、线下零售监测数据及电商平台商品详情页。更新节奏分为两类：行业研报按季度或年度更新，
+meta_description: 厨卫电器研报检索的向量模型与索引：厨卫电器研报检索的向量模型与索引，涵盖配置与验证建议
 keywords: 厨卫电器、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

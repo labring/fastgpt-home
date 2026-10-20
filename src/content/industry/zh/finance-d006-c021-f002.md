@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 其他综合投研知识库建设的上下文与 token
-meta_description: 其他综合投研的数据源涵盖行业第三方非标准化指标库、地方监管地方性政策文件、小众细分产业调研笔记、跨品类联动数据报告。更新节奏无统一周期，部分数据源按季度或月
+meta_description: 其他综合投研知识库建设的上下文与 token：其他综合投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 其他综合、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

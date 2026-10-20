@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Intelligent Due Diligence
-meta_description: Data sources for intelligent due diligence reports on investment platforms include annual/quarterly financial reports of listed entities, public
+meta_description: Document Parsing and Chunking for Intelligent Due Diligence Reports on Investment Platforms
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

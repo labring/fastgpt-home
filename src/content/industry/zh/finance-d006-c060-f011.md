@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程咨询投研知识库建设的文档解析与分块
-meta_description: 工程咨询的核心数据来源于金融机构基建项目投研所需的项目可研报告、造价估算文件、招标工程量清单、行业技术规范、项目进度台账等。文档形式涵盖带官方目录的长PDF
+meta_description: 工程咨询投研知识库建设的文档解析与分块：工程咨询投研知识库建设的文档解析与分块，涵盖配置与验证建议
 keywords: 工程咨询、投研知识库建设与治理、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

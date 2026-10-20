@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c064-f005
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Dialogues and Prompt Engineering for Film Theater
-meta_description: Primary sources of film theater revenue rate data include national theater scheduling management systems, theater box office settlement systems, and
+meta_title: Multi-turn Dialogues and Prompt Engineering for Film
+meta_description: Multi-turn Dialogues and Prompt Engineering for Film Theater Revenue Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

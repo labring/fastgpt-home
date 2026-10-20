@@ -4,8 +4,8 @@ slug: /en/industry/finance-d012-c076-f015
 page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
-meta_title: Deployment and Upgrade for Marketing Content of Cultural and
-meta_description: Marketing-related data for cultural and recreational products primarily comes from SKU profiles in product management systems, product detail pages on
+meta_title: Deployment and Upgrade for Marketing Content of Cultural
+meta_description: Deployment and Upgrade for Marketing Content of Cultural and Recreational Products
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 包装印刷营销内容的多轮对话与提示词
-meta_description: 包装印刷营销内容的数据来自企业内部印刷订单管理系统、营销物料设计库、客户需求沟通台账，更新节奏随单个印刷项目启动、调整或季度物料库更新。文档包含结构化工艺参
+meta_description: 包装印刷营销内容的多轮对话与提示词：包装印刷营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 包装印刷、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

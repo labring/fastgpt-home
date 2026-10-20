@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医美财报分析的模型接入与配置
-meta_description: 医美财报数据主要来自公开披露的医美连锁机构、上游医美耗材厂商的季度与年度经营报表，以及行业月度运营监测数据。更新节奏分为两类：季度财报于季度结束后1-2个月
+meta_description: 医美财报分析的模型接入与配置：医美财报分析的模型接入与配置，涵盖配置与验证建议。
 keywords: 医美、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

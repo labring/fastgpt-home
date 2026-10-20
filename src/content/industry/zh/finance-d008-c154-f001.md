@@ -4,8 +4,8 @@ slug: /zh/industry/finance-d008-c154-f001
 page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
-meta_title: 饰品智能尽调报告的HTTP 接口与外部系统
-meta_description: 饰品智能尽调报告的数据主要来自品牌方SKU台账、第三方质检机构的材质检测报告、供应链上游的原料批次记录及电商平台上架公示信息。数据更新节奏随新品上线、库存调
+meta_title: 饰品智能尽调报告的HTTP接口与外部系统
+meta_description: 饰品智能尽调报告的HTTP接口与外部系统：饰品智能尽调报告的HTTP接口与外部系统，涵盖配置与验证建议
 keywords: 饰品、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

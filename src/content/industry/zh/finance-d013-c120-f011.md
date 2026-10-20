@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 网络安全融资日报的文档解析与分块
-meta_description: 网络安全融资日报的数据来源主要包括行业垂直监测平台、上市及非上市安全企业的公开融资公告、专业安全媒体的动态汇总、政府采购招投标的相关融资信息。更新节奏为每日
+meta_description: 网络安全融资日报的文档解析与分块：网络安全融资日报的文档解析与分块，涵盖配置与验证建议
 keywords: 网络安全、融资日报、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

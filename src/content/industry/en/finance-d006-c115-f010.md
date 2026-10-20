@@ -4,8 +4,8 @@ slug: /en/industry/finance-d006-c115-f010
 page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
-meta_title: Database and Operations for Crop Farming Investment Research
-meta_description: Crop farming investment research data sources include public monitoring data from the Ministry of Agriculture and Rural Affairs, breeding test records
+meta_title: Database and Operations for Crop Farming Investment
+meta_description: Database and Operations for Crop Farming Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interfaces and External Systems for Rural Commercial
-meta_description: Data for rural commercial bank yield reporting comes from the product ledger module of the bank’s core business system and the interbank interest rate
+meta_description: HTTP Interfaces and External Systems for Rural Commercial Bank Yield Data
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

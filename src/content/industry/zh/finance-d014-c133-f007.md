@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 证券财报分析的工作流编排
-meta_description: 证券财报数据主要来自境内外证券交易所公开披露平台，更新节奏为季度（季报）、半年度（半年报）、年度（年报）固定周期，临时公告则随重大事项触发。文档以PDF格式
+meta_description: 证券财报分析的工作流编排：证券财报分析的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 证券、财报分析与报告生成、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

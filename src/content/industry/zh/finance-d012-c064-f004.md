@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 影视院线营销内容的向量模型与索引
-meta_description: 影视院线的营销内容数据主要来自自有营销素材库、合作片方提供的宣发物料、线下影院活动记录与线上会员推送文案。更新节奏随新片宣发周期波动，新片定档前后会批量更新
+meta_description: 影视院线营销内容的向量模型与索引：影视院线营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 影视院线、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

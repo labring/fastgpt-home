@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航空装备营销内容的HTTP 接口与外部系统
-meta_description: 航空装备营销内容的数据来源包括主机厂官方技术文档、航展公开资料、适航监管机构发布的合规文件。更新节奏随新机型立项、适航认证更新、营销素材迭代调整，无固定周期
+meta_description: 航空装备营销内容的HTTP 接口与外部系统：航空装备营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 航空装备、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

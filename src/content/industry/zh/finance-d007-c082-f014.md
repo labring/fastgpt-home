@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水产养殖收益率的表单与交互
-meta_description: 水产养殖收益率与行情日报播报的核心数据主要来自塘口物联网监测设备、养殖台账系统与区域收购报价平台。数据更新节奏分三类：塘口溶解氧、水温等水质指标为小时级更新
+meta_description: 水产养殖收益率的表单与交互：水产养殖收益率的表单与交互，涵盖配置与验证建议。。。
 keywords: 水产养殖、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

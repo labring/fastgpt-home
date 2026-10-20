@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦煤研报检索的HTTP 接口与外部系统
-meta_description: 这个品类的数据主要来自券商煤炭行业研究团队、专业煤炭咨询机构及国内煤炭行业协会。更新节奏分为多个层级，现货挂牌价格数据每日更新，行业供需动态周报每周发布，季
+meta_description: 焦煤研报检索的HTTP 接口与外部系统：焦煤研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 焦煤、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

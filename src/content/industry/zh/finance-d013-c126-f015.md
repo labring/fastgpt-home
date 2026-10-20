@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航空机场融资日报的部署与升级
-meta_description: 航空机场融资日报的数据来源包括民航地区管理局公开运行统计、机场集团内部财务报备台账、航油航材采购结算单据等。数据更新节奏为每日更新，通常在前一日22点前生成
+meta_description: 航空机场融资日报的部署与升级：航空机场融资日报的部署与升级，涵盖配置与验证建议。
 keywords: 航空机场、融资日报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

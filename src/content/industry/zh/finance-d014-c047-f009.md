@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 国有大行财报分析的引用来源与溯源
-meta_description: 国有大行的财报数据来源为官方投资者关系板块、银行业监管披露平台，更新节奏为季度终了后1个月内披露季报，年度终了4个月内披露年度报告。文档多为PDF或结构化导
+meta_description: 国有大行财报分析的引用来源与溯源：国有大行财报分析的引用来源与溯源，涵盖配置与验证建议
 keywords: 国有大行、财报分析与报告生成、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

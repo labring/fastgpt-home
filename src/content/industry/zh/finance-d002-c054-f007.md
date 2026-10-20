@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多应用路由一体化 AI 平台的工作流编排
-meta_description: 多应用路由的数据来源于平台内已创建的各类独立AI应用实例，包括知识库问答、对话生成、工具调用等类型。数据更新节奏与应用状态同步，每次修改应用配置、新增或删除
+meta_description: 多应用路由一体化 AI 平台的工作流编排：多应用路由一体化 AI 平台的工作流编排，涵盖配置与验证建议
 keywords: 多应用路由、一体化 AI 平台与多应用编排、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

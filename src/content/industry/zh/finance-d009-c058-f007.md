@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小金属研报检索的工作流编排
-meta_description: 小金属研报数据主要来自中国有色金属工业协会小金属分会月度统计、券商有色行业研究报告、专业现货资讯平台。更新节奏分三类：现货价格与库存数据每日更新，行业供需统
+meta_description: 小金属研报检索的工作流编排：小金属研报检索的工作流编排，涵盖配置与验证建议。。。
 keywords: 小金属、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

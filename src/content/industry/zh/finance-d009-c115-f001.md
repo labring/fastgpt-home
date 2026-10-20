@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 种植业研报检索的HTTP 接口与外部系统
-meta_description: 种植业研报数据主要来自农业农村部官方监测平台、全国农业技术推广服务中心公开报告、地方农科院调研数据及全国农业行业协会公开资料，这类研报是金融机构投研、保险农
+meta_description: 种植业研报检索的HTTP 接口与外部系统：种植业研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 种植业、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饰品收益率的分享与嵌入
-meta_description: 饰品收益率相关数据主要来源于品牌经销商供货台账、线下门店POS销售数据及行业终端监测平台。数据更新节奏为每周同步一次，当周全量数据于次周一凌晨完成更新。文档
+meta_description: 饰品收益率的分享与嵌入：饰品收益率的分享与嵌入，涵盖配置与验证建议。。。。。。。
 keywords: 饰品、收益率与行情日报播报、分享与嵌入
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

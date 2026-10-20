@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 军工电子研报检索的HTTP 接口与外部系统
-meta_description: 军工电子研报的数据主要来自国防科技工业主管部门公开资料、军工上市公司定期公告、专业军工行业咨询机构报告及券商军工行业研报。更新随行业重大型号节点、季度财报发
+meta_description: 军工电子研报检索的HTTP 接口与外部系统：军工电子研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 军工电子、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

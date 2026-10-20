@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 塑料橡胶智能尽调报告的向量模型与索引
-meta_description: 塑料橡胶行业的尽调数据来源包括行业协会的月度统计报告、大宗商品交易所的行情数据，以及下游加工企业的公开招投标信息。数据更新节奏覆盖每日（出厂价、期货盘面）、
+meta_description: 塑料橡胶智能尽调报告的向量模型与索引：塑料橡胶智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 塑料橡胶、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

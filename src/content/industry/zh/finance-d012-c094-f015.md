@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 炼化营销内容的部署与升级
-meta_description: 炼化营销内容的数据源主要包括炼化企业的产品报价单、下游客户询价记录、行业动态研报三类。产品报价单为结构化数据，包含产品牌号、密度、硫含量、出厂单价等字段，单
+meta_description: 炼化营销内容的部署与升级：炼化营销内容的部署与升级，涵盖配置与验证建议。。。。。
 keywords: 炼化、营销内容与获客、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

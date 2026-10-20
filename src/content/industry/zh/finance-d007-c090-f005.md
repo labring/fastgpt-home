@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 涂料油墨收益率的多轮对话与提示词
-meta_description: 这个品类的数据主要来自国内化工品现货交易平台、中国涂料工业协会的行业监测数据库、上游树脂与颜料供应商的公开报价端口。现货报价类数据每日更新，行业供需周报每周
+meta_description: 涂料油墨收益率的多轮对话与提示词：涂料油墨收益率的多轮对话与提示词，涵盖配置与验证建议
 keywords: 涂料油墨、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

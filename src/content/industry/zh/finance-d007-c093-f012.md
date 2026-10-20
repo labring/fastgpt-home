@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 游戏收益率的模型接入与配置
-meta_description: 游戏收益率与行情数据主要来自游戏厂商官方运营后台的结构化导出文件、第三方游戏数据聚合平台的公开API接口。数据更新节奏分为两类：全量日度数据每日固定时段更新
+meta_description: 游戏收益率的模型接入与配置：游戏收益率的模型接入与配置，涵盖配置与验证建议。。。
 keywords: 游戏、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

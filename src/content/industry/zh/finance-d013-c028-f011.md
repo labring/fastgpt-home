@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 动力煤融资日报的文档解析与分块
-meta_description: 动力煤融资日报数据主要来自国内煤炭港口交易平台、期货交易所交割数据及行业协会每日汇总。更新节奏为每日T+1发布，文档多为Excel或标准化PDF格式，包含当
+meta_description: 动力煤融资日报的文档解析与分块：动力煤融资日报的文档解析与分块，涵盖配置与验证建议
 keywords: 动力煤、融资日报、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

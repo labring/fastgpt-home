@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Multi-Holdings Group Yield Multi-Turn Dialogue and Prompt
-meta_description: The market and yield data for this group is sourced from transaction systems of each subordinate business segment, public market data APIs, and
+meta_description: Multi-Holdings Group Yield Multi-Turn Dialogue and Prompt Engineering
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

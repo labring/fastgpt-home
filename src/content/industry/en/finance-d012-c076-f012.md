@@ -4,8 +4,8 @@ slug: /en/industry/finance-d012-c076-f012
 page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
-meta_title: Model Access and Configuration for Cultural and
-meta_description: Marketing-related data for cultural and entertainment products mainly originates from brand product management systems, e-commerce platform SPU
+meta_title: Model Access and Configuration for Cultural
+meta_description: Model Access and Configuration for Cultural and Entertainment Products Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 旅游景区营销内容的表单与交互
-meta_description: 旅游景区的营销相关数据主要来自官方票务系统、游客预约端口、线下服务台账及周边合作业态数据。数据更新节奏分两类：票务、预约数据每日同步，活动宣传文案、业态联动
+meta_description: 旅游景区营销内容的表单与交互：旅游景区营销内容的表单与交互，涵盖配置与验证建议。
 keywords: 旅游景区、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

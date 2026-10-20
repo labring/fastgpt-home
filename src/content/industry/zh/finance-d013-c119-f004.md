@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 综合服务融资日报的向量模型与索引
-meta_description: 综合服务类融资日报的数据来源涵盖地方金融监管局公开公示、商业银行授信公告、企业工商披露信息等多类公开渠道。更新节奏为每日更新，当日融资数据于次日凌晨完成汇总
+meta_description: 综合服务融资日报的向量模型与索引：综合服务融资日报的向量模型与索引，涵盖配置与验证建议
 keywords: 综合服务、融资日报、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

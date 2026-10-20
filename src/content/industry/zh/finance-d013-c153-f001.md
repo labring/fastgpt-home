@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 风电融资日报的HTTP 接口与外部系统
-meta_description: 风电融资日报的数据来源包括风电产业链融资备案平台、合作金融机构的授信系统、公开的企业融资公告。数据更新节奏为每日T+1更新，每日凌晨完成前一日全量数据的归集
+meta_description: 风电融资日报的HTTP 接口与外部系统：风电融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 风电、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

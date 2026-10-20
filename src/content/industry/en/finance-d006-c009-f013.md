@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for Industrial Park
-meta_description: Industrial park investment research data sources include investment promotion ledgers from park operators, annual operating reports of settled
+meta_description: Knowledge Base Retrieval and Recall for Industrial Park Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 废标项竞价的模型接入与配置
-meta_description: 废标项数据主要来自政府采购公共服务平台、行业招投标官网及企业内部投标档案库。更新节奏随招投标项目节点实时更新，新废标项产生时同步推送更新。单条数据以结构化字
+meta_description: 废标项竞价的模型接入与配置：废标项竞价的模型接入与配置，涵盖配置与验证建议。。。
 keywords: 废标项、竞价与投标报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

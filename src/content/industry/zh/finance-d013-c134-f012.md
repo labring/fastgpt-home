@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 调味品融资日报的模型接入与配置
-meta_description: 调味品融资日报的数据来源为公开工商披露信息、行业投融资平台的公开融资公告，更新频率为每日固定时段更新前一日的全量有效融资条目。单条数据文档包含企业全称、主营
+meta_description: 调味品融资日报的模型接入与配置：调味品融资日报的模型接入与配置，涵盖配置与验证建议
 keywords: 调味品、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

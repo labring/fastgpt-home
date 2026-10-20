@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 保障责任保险理赔初审的向量模型与索引
-meta_description: 保障责任数据主要来源于保险公司官方合同条款的保障责任章节、已归档的理赔初审案卷标注记录、理赔申请人提交的出险证明与诊疗材料中的责任关联片段。数据更新包含两种
+meta_description: 保障责任保险理赔初审的向量模型与索引：保障责任保险理赔初审的向量模型与索引，涵盖配置与验证建议
 keywords: 保障责任、保险理赔初审、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 热力融资日报的HTTP 接口与外部系统
-meta_description: 热力融资日报的数据来自各地公用事业监管平台、热力企业运营系统及官方融资登记平台。更新节奏为每日更新，通常在凌晨完成当日数据汇总。文档结构为结构化表格形式，包
+meta_description: 热力融资日报的HTTP 接口与外部系统：热力融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 热力、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

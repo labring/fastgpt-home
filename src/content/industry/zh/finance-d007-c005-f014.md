@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 个护用品收益率的表单与交互
-meta_description: 个护用品收益率的行情数据来自品牌内部销售台账、第三方零售监测平台的公开数据接口。数据每日刷新一次，覆盖前一自然日的全量有效交易数据，延迟不超过4小时，且仅保
+meta_description: 个护用品收益率的表单与交互：个护用品收益率的表单与交互，涵盖配置与验证建议。。。
 keywords: 个护用品、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

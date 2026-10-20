@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油服工程融资日报的工具调用与插件
-meta_description: 油服工程融资日报数据来源于国内石油石化行业融资备案公示平台、境内外交易所公开披露文件及行业自律组织公开信息。更新节奏为每个工作日更新当日新增的油服工程领域融
+meta_description: 油服工程融资日报的工具调用与插件：油服工程融资日报的工具调用与插件，涵盖配置与验证建议
 keywords: 油服工程、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

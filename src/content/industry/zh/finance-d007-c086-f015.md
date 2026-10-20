@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 汽车服务收益率的部署与升级
-meta_description: 汽车服务领域的收益率日报数据，主要来源于门店的POS收银系统、会员管理模块及总部财务对账平台。数据更新节奏为每日T+1，即次日凌晨生成前一日的全量统计结果。
+meta_description: 汽车服务收益率的部署与升级：汽车服务收益率的部署与升级，涵盖配置与验证建议。。。
 keywords: 汽车服务、收益率与行情日报播报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

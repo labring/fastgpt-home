@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 教育服务研报检索的向量模型与索引
-meta_description: 教育服务研报的数据来源包括金融监管部门发布的投资者教育调研文档、持牌金融机构的理财教育行业分析报告、教育科技企业的金融素养培训市场研究文稿；更新节奏随金融监
+meta_description: 教育服务研报检索的向量模型与索引：教育服务研报检索的向量模型与索引，涵盖配置与验证建议
 keywords: 教育服务、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

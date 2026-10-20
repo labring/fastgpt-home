@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 竞对报价竞价的文档解析与分块
-meta_description: 竞对报价数据主要来自公开招标公示文件、供应商提交的投标响应文件、企业内部竞品报价台账。更新节奏随单个招标项目周期推进，单项目周期内更新频率随报价文件补充调整
+meta_description: 竞对报价竞价的文档解析与分块：竞对报价竞价的文档解析与分块，涵盖配置与验证建议。
 keywords: 竞对报价、竞价与投标报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 网络安全融资日报的知识库检索与召回
-meta_description: 网络安全融资日报的数据主要来自证券监管机构公开披露的投融资公告、垂直安全行业媒体的动态汇总、头部安全厂商的官方融资公示。数据更新节奏为每日更新，单篇文档对应
+meta_description: 网络安全融资日报的知识库检索与召回：网络安全融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 网络安全、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

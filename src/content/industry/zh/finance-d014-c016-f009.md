@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光伏财报分析的引用来源与溯源
-meta_description: 光伏行业财报数据主要来自A股上市公司定期报告、中国光伏行业协会公开统计报告及第三方行业调研数据。更新节奏以季度财报为主，每季度结束后45天内发布正式报告，行
+meta_description: 光伏财报分析的引用来源与溯源：光伏财报分析的引用来源与溯源，涵盖配置与验证建议。
 keywords: 光伏、财报分析与报告生成、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

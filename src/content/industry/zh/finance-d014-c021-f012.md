@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 其他综合财报分析的模型接入与配置
-meta_description: 其他综合财报分析的数据源为企业公开披露的其他综合收益相关公告，更新节奏以季度、半年度、年度为周期。文档多为结构化PDF或标准化报表格式，包含项目名称、期初余
+meta_description: 其他综合财报分析的模型接入与配置：其他综合财报分析的模型接入与配置，涵盖配置与验证建议
 keywords: 其他综合、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

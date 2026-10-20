@@ -4,8 +4,8 @@ slug: /en/industry/finance-d009-c061-f008
 page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
-meta_title: Tool Calling and Plugins for Construction Machinery Research
-meta_description: Construction machinery research report data originates from public statistics released by the China Construction Machinery Industry Association
+meta_title: Tool Calling and Plugins for Construction Machinery
+meta_description: Tool Calling and Plugins for Construction Machinery Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

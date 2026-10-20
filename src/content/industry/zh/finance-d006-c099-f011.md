@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 燃气投研知识库建设的文档解析与分块
-meta_description: 燃气投研相关数据主要来源于燃气生产企业的月度运营简报、年度年报、管网巡检报告，上游气源供应商的报价单，以及住建、能源监管部门发布的燃气安全通报、供需规划文件
+meta_description: 燃气投研知识库建设的文档解析与分块：燃气投研知识库建设的文档解析与分块，涵盖配置与验证建议
 keywords: 燃气、投研知识库建设与治理、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

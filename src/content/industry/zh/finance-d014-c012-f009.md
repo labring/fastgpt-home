@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 住宅开发财报分析的引用来源与溯源
-meta_description: 住宅开发类财报数据主要来自上市房企公开披露的年度、半年度定期报告，以及专项项目开发备案文件。数据更新节奏为定期披露，年报每年更新一次，半年报每半年更新一次，
+meta_description: 住宅开发财报分析的引用来源与溯源：住宅开发财报分析的引用来源与溯源，涵盖配置与验证建议
 keywords: 住宅开发、财报分析与报告生成、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

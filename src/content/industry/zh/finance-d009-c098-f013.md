@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 煤化工研报检索的知识库检索与召回
-meta_description: 煤化工研报的主要来源包括煤炭行业协会公开报告、券商化工行业细分研报、专业煤化工咨询机构的定期分析文档。更新节奏分为三类：常规行业跟踪研报按月更新，深度产业链
+meta_description: 煤化工研报检索的知识库检索与召回：煤化工研报检索的知识库检索与召回，涵盖配置与验证建议
 keywords: 煤化工、研报检索与问答、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

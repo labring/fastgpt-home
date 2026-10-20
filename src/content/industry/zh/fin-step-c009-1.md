@@ -4,7 +4,7 @@ slug: /zh/industry/fin-step-c009-1
 page_type: 行业作业环节页
 article_section: 保险
 is_part_of: FastGPT 技术中心
-meta_title: 企业财产保险承保与理赔的核对厂房、设备、存货等保险标的和价值
+meta_title: 企业财产保险承保与理赔的核对厂房、设备、存货等保险标的和价值：哪一部分能交给系统
 meta_description: 企业财产保险承保与理赔的核对厂房、设备、存货等保险标的和价值：哪一部分能交给系统
 keywords: 企业财产保险承保与理赔、保险、环节1
 source_type: 金融业务分类与作业事实取自行业研究报告（含监管文件来源编号）

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogues and Prompt Engineering for Precious
-meta_description: Precious metals-related data is divided into two categories: real-time market data and industry news. Sources include public market APIs from the
+meta_description: Multi-turn Dialogues and Prompt Engineering for Precious Metals Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

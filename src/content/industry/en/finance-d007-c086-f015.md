@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Auto Service Revenue Rate Daily
-meta_description: Auto service revenue rate daily data is sourced from store POS cash registers, member management modules, and headquarters financial reconciliation
+meta_description: Deployment and Upgrade for Auto Service Revenue Rate Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

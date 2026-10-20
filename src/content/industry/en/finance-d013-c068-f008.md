@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Investment Platform Financing
-meta_description: Financing daily report data is sourced from official exchange disclosure documents, broker proprietary trading interfaces, and third-party financial
+meta_description: Tool Calling and Plugins for Investment Platform Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

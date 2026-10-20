@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 中药研报检索的引用来源与溯源
-meta_description: 中药研报的数据主要来源于国家药典委员会公开标准、中医药行业协会年度报告、上市药企研发公告及中医药院校学术论文。更新节奏随内容类型不同：药典标准每5年修订一次
+meta_description: 中药研报检索的引用来源与溯源：中药研报检索的引用来源与溯源，涵盖配置与验证建议。
 keywords: 中药、研报检索与问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

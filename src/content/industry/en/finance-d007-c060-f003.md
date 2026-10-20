@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Share and Embed for Engineering Consulting Yield Data
-meta_description: Engineering consulting yield-related data originates primarily from calculation files exported by cost analysis software, and API interfaces from
+meta_description: Share and Embed for Engineering Consulting Yield Data
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -31,7 +31,7 @@ Additionally, engineering consulting data often syncs to client portals. Share l
 | Configuration Item | Recommended Value | Rationale |
 | ---- | ---- | ---- |
 | `shareExpireTime` | `7 days` | Matches the sync cycle of engineering consulting project weekly/monthly reports, prevents data leaks from long-lived share links |
-| `embedWidgetFilter` | `project_id:{{current_project}}` | Engineering consulting data splits by project section. Must bind the project identifier of the current embedded page to prevent cross-project data leaks |
+| `embedWidgetFilter` | `project_id:example value` | Engineering consulting data splits by project section. Must bind the project identifier of the current embedded page to prevent cross-project data leaks |
 | `cacheTTL` | `12 hours` | Matches the weekly/daily update cycle of batch project data, balances data timeliness and loading performance |
 | `customShareIcon` | `Engineering consulting-specific SVG icon` | Replaces the default share icon to align with brand visual standards for engineering consulting scenarios |
 | `crossDomainAllowList` | `["https://project-console.example.com", "https://client-portal.example.com"]` | Restricts embedded domains to prevent malicious sites from stealing shared content |

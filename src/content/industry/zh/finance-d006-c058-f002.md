@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小金属投研知识库建设的上下文与 token
-meta_description: 小金属数据主要来自行业权威统计机构、现货交易平台、矿山与冶炼企业公开披露报告。更新节奏分为多档：现货价格数据每日更新，行业供需报告按周或月度发布，产业政策与
+meta_description: 小金属投研知识库建设的上下文与 token：小金属投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 小金属、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专用设备收益率的模型接入与配置
-meta_description: 专用设备收益率与行情日报的数据来源包含设备内置的运行传感器、对接的第三方金融行情接口，以及本地存储的历史交易日志。数据更新节奏分为实时行情与日报两类：实时行
+meta_description: 专用设备收益率的模型接入与配置：专用设备收益率的模型接入与配置，涵盖配置与验证建议
 keywords: 专用设备、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

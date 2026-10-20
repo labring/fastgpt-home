@@ -4,8 +4,8 @@ slug: /en/industry/finance-d014-c033-f008
 page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
-meta_title: Tool Calling and Plugins for Chemical Fiber Financial Report
-meta_description: Financial report data for the chemical fiber category comes primarily from publicly disclosed periodic reports of listed companies on domestic and
+meta_title: Tool Calling and Plugins for Chemical Fiber Financial
+meta_description: Tool Calling and Plugins for Chemical Fiber Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

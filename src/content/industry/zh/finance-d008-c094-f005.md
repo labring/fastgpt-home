@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 炼化智能尽调报告的多轮对话与提示词
-meta_description: 炼化智能尽调报告的数据主要来自企业内部生产报表、装置运行台账、合规检测报告及供应链协同文档。更新节奏以月度定期更新为主，重大装置检修、工艺调整时同步更新。文
+meta_description: 炼化智能尽调报告的多轮对话与提示词：炼化智能尽调报告的多轮对话与提示词，涵盖配置与验证建议
 keywords: 炼化、智能尽调报告、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

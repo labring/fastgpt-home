@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水务收益率的HTTP 接口与外部系统
-meta_description: 水务收益率相关数据主要来自地方住建部门公用事业监测平台、水务运营企业公开运营台账。更新节奏为每个自然日18点前完成前一日数据的汇总发布。单条数据文档包含项目
+meta_description: 水务收益率的HTTP 接口与外部系统：水务收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 水务、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

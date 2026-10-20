@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医美投研知识库建设的文档解析与分块
-meta_description: 医美投研数据主要来自医美机构公开年报、行业协会调研资料、医美产品注册备案文件、临床治疗案例报告与监管政策文件。更新节奏随文档类型差异较大，产品备案文件随新品
+meta_description: 医美投研知识库建设的文档解析与分块：医美投研知识库建设的文档解析与分块，涵盖配置与验证建议
 keywords: 医美、投研知识库建设与治理、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

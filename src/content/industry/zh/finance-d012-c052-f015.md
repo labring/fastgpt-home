@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多元控股营销内容的部署与升级
-meta_description: 数据来源包括集团旗下各业务板块的营销素材管理系统、客户关系管理数据库、线下网点的活动记录与线上渠道的互动数据。更新节奏为各子品牌独立更新素材与客群标签，集团
+meta_description: 多元控股营销内容的部署与升级：多元控股营销内容的部署与升级，涵盖配置与验证建议。
 keywords: 多元控股、营销内容与获客、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

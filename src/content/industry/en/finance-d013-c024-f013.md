@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for Agrochemical
-meta_description: Data sources for agrochemical financing daily reports include public monitoring data from agrochemical industry associations, regular disclosure
+meta_description: Knowledge Base Retrieval and Recall for Agrochemical Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

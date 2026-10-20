@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小金属智能尽调报告的多轮对话与提示词
-meta_description: 数据来源包括国内有色金属行业协会公开统计、期货交易所现货挂牌数据、海关进出口报关数据、矿山与冶炼企业公开披露的生产数据。更新节奏分为日度（现货价格、库存变动
+meta_description: 小金属智能尽调报告的多轮对话与提示词：小金属智能尽调报告的多轮对话与提示词，涵盖配置与验证建议
 keywords: 小金属、智能尽调报告、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

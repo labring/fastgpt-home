@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for Special Steel
-meta_description: The data for special steel financing daily reports comes from domestic special steel manufacturers' direct reporting systems, public transaction data
+meta_description: Citation Sources and Traceability for Special Steel Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -30,7 +30,7 @@ The special steel financing daily report has a large number of single data entri
 | --- | --- | --- |
 | `Recall count` | Top 8-12 entries | The special steel financing daily report has high product segmentation, with fewer data entries per category. Recalling enough entries covers target products and avoids omissions |
 | `Similarity threshold` | 0.75-0.85 | Special steel product specification descriptions are long and have high similarity. A higher threshold filters irrelevant recall results and avoids matching data from other steel categories |
-| `Citation template` | `{{source}} | {{product_name}} | {{spec}} | {{price}} yuan/ton | {{volume}} ton | {{update_time}}` | The core traceability fields of the special steel financing daily report include data source, product name, specification, price, transaction volume, and update time. The template must fully include these fields to meet traceability requirements |
+| `Traceability details` | `the configured value | the configured value | the configured value | the configured value yuan/ton | the configured value ton | the configured value` | The core traceability fields of the special steel financing daily report include data source, product name, specification, price, transaction volume, and update time. The template must fully include these fields to meet traceability requirements |
 | `Knowledge Base Scheduled Sync Cycle` | Daily 2:00 AM | The special steel financing daily report updates daily. The synchronization cycle matches the release rhythm to ensure the timeliness of knowledge base data |
 | `Rerank result count` | Top 3-5 entries | Special steel products have high similarity. Reranking retains the most relevant results and avoids citing redundant data |
 | `Context Window Length` | 1200-1500 characters | Special steel specification descriptions are long. A sufficient context window accommodates complete product information and avoids truncation leading to traceability failures |

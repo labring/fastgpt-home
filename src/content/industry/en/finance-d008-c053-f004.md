@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Multi-Financial Intelligent
-meta_description: Data comes from institutional operating data published by regulators, counterparty-provided target financial statements, internal due diligence
+meta_description: Vector Models and Indexing for Multi-Financial Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

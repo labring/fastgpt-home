@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 贵金属营销内容的模型接入与配置
-meta_description: 贵金属相关数据主要来自合规贵金属交易场所的实时行情接口、行业资讯平台的品类动态文档。更新节奏分为实时行情（秒级更新）与每日研报、产品手册（每日/每周更新）。
+meta_description: 贵金属营销内容的模型接入与配置：贵金属营销内容的模型接入与配置，涵盖配置与验证建议
 keywords: 贵金属、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 招标公告竞价的HTTP 接口与外部系统
-meta_description: 招标公告的数据主要来源于各级政府采购网、公共资源交易中心官方平台，更新节奏随对应招标项目的进度触发，发布后可能伴随补遗、变更公告进行更新。单篇文档结构包含项
+meta_description: 招标公告竞价的HTTP 接口与外部系统：招标公告竞价的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 招标公告、竞价与投标报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

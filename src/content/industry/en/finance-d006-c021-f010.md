@@ -4,8 +4,8 @@ slug: /en/industry/finance-d006-c021-f010
 page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
-meta_title: Database and Operations for General Miscellaneous Investment
-meta_description: Data sources for this category include public research reports across cross-segment industries, third-party comprehensive industry databases, public
+meta_title: Database and Operations for General Miscellaneous
+meta_description: Database and Operations for General Miscellaneous Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

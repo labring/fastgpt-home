@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商业地产融资日报的HTTP 接口与外部系统
-meta_description: 商业地产融资日报的数据来源为商业不动产项目的融资台账系统、合作银行的对公信贷报送接口、地方不动产交易登记的每日更新数据。数据更新节奏为每日凌晨完成前一日全量
+meta_description: 商业地产融资日报的HTTP 接口与外部系统：商业地产融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 商业地产、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

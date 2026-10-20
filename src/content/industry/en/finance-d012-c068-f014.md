@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Forms and Interactions for Investment Platform Marketing
-meta_description: Marketing-related data for investment platforms comes primarily from three sources: platform-owned user behavior databases, partner institution
+meta_description: Forms and Interactions for Investment Platform Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -34,7 +34,7 @@ Additionally, form data submitted by users must link with backend user profiles 
 | `formFieldValidationRules` | Restrict monetary fields to positive real numbers; bind risk level fields to backend enumerated values | Match the structured characteristics of investment platform form fields, avoid invalid inputs and mismatched enumerated values |
 | `recallTopK` | Top 3-5 entries | Investment platform product information has a large number of entries. Too many recall entries increase form loading time; too few fail to cover user potential needs |
 | `workflowModelSelectSync` | Bind the list of models deployed on the platform | Avoid empty model dropdowns, ensure the workflow can call configured available models |
-| `chatReferenceReturn` | Manually enable based on business needs | Adapt to the default return reference exception in FastGPT 4.9.4 version, manually control the display logic of reference content |
+Reference only; verify against the target FastGPT release and deployment documentation.
 | `apiRequestTimeout` | 15 seconds | Investment platform marketing forms require fast user response. Timeouts lead to user churn, so balance data pulling and response speed |
 
 > The parameter values provided on this page are common starting points for configuration. Actual values are affected by material form, data volume, and business rules. Specific issues require case-by-case analysis. It is recommended to test on your own samples before finalizing settings.

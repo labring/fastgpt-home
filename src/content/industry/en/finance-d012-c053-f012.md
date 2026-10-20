@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for Diversified Financial
-meta_description: Diversified financial marketing data mainly comes from internal marketing platforms, compliance management systems, and customer inquiry logs. Data
+meta_description: Model Access and Configuration for Diversified Financial Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

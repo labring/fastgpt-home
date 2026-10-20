@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 生物制品投研知识库建设的上下文与 token
-meta_description: 生物制品投研数据主要来源于国家药品监督管理局药品审评中心公开资料、上市企业年度及季度报告、临床试验公共数据库、中国药典生物制品通则、行业协会发布的质量监测报
+meta_description: 生物制品投研知识库建设的上下文与 token：生物制品投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 生物制品、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

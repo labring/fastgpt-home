@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Infrastructure
-meta_description: Data sources for infrastructure construction intelligent due diligence reports include project approval documents, bidding documents, construction
+meta_description: Document Parsing and Chunking for Infrastructure Construction Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

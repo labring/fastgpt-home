@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Database and Operations for Coatings and Inks Research
-meta_description: Coatings and inks research data mainly comes from upstream chemical raw material supplier quality inspection reports, industry association public
+meta_description: Database and Operations for Coatings and Inks Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

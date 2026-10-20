@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Multi-round Dialogue and Prompt Engineering for Diversified
-meta_description: Data for diversified financial financing daily reports primarily comes from internal business systems of non-bank financial institutions
+meta_description: Multi-round Dialogue and Prompt Engineering for Diversified Financial Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

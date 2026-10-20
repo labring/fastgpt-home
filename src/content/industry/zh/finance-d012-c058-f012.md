@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小金属营销内容的模型接入与配置
-meta_description: 小金属的数据来源主要为有色金属行业公开数据库、现货交易平台及行业协会公示信息。更新节奏存在明显差异：现货报价每日更新，行业库存数据周度更新，政策动态实时推送
+meta_description: 小金属营销内容的模型接入与配置：小金属营销内容的模型接入与配置，涵盖配置与验证建议
 keywords: 小金属、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

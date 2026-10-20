@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Jewelry Yield Rate
-meta_description: Public quotation platforms for the domestic jewelry industry and daily released wholesale and retail prices from brand parties are the primary data
+meta_description: Deployment and Upgrade for Jewelry Yield Rate
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

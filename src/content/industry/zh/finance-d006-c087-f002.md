@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 汽车零部件投研知识库建设的上下文与 token
-meta_description: 汽车零部件投研数据主要来自主机厂公开财报、行业协会发布的月度/季度报告、零部件厂商官方公告、专利检索数据库的技术文档、供应链上下游公开交易数据。更新节奏存在
+meta_description: 汽车零部件投研知识库建设的上下文与 token：汽车零部件投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 汽车零部件、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

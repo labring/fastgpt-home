@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油服工程收益率的模型接入与配置
-meta_description: 油服工程的数据源主要来自油服企业作业管理系统、油气生产物联网平台及行业公开的作业成本与产出数据集。更新节奏分为两类：单井作业实时数据为分钟级，区块综合收益率
+meta_description: 油服工程收益率的模型接入与配置：油服工程收益率的模型接入与配置，涵盖配置与验证建议
 keywords: 油服工程、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

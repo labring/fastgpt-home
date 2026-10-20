@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程机械融资日报的知识库检索与召回
-meta_description: 工程机械融资日报的数据来源于融资租赁公司的每日放款台账、工程机械厂商的经销商融资报表、行业监测机构的公开融资统计。数据更新节奏为每日汇总，当日18点前完成当
+meta_description: 工程机械融资日报的知识库检索与召回：工程机械融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 工程机械、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

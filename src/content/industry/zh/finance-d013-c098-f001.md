@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 煤化工融资日报的HTTP 接口与外部系统
-meta_description: 煤化工融资日报的数据来源于区域能源行业协会公开披露的煤化工项目融资备案信息、合作银行的授信报送接口、煤炭交易中心配套的融资台账数据。更新节奏为每日凌晨更新前
+meta_description: 煤化工融资日报的HTTP 接口与外部系统：煤化工融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 煤化工、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

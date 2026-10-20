@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 教育服务营销内容的表单与交互
-meta_description: 金融行业下的理财教育服务核心数据来源于官网咨询弹窗、课程详情页留资入口、线下转线上的交互留资。数据更新节奏为实时提交或按小时批量同步。单条数据文档结构包含咨
+meta_description: 教育服务营销内容的表单与交互：教育服务营销内容的表单与交互，涵盖配置与验证建议。
 keywords: 教育服务、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

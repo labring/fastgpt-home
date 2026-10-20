@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 城商行融资日报的工作流编排
-meta_description: 城商行融资日报的数据主要来源于本行信贷管理系统、同业业务台账及央行金融统计报送接口，每日日终完成全量更新。单份日报为结构化表格形式，核心字段包含融资主体全称
+meta_description: 城商行融资日报的工作流编排：城商行融资日报的工作流编排，涵盖配置与验证建议。。。
 keywords: 城商行、融资日报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

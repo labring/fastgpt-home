@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Cited Source and Traceability for Traditional Chinese
-meta_description: TCM investment research data primarily comes from the Chinese Pharmacopoeia series, local Chinese medicinal material processing specifications
+meta_description: Cited Source and Traceability for Traditional Chinese Medicine Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

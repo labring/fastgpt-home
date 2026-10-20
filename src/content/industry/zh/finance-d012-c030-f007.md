@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化妆品营销内容的工作流编排
-meta_description: 化妆品营销内容的数据主要来自金融机构合作品牌的内部产品管理系统、合规备案平台及电商详情页，用于金融场景下的获客营销。数据更新节奏随新品上线、成分合规调整或营
+meta_description: 化妆品营销内容的工作流编排：化妆品营销内容的工作流编排，涵盖配置与验证建议。。。
 keywords: 化妆品、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

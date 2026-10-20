@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Jewelry Financing Daily
-meta_description: Data for jewelry financing daily reports comes from daily financing ledger exports from brands or supply chain service providers. Reports are updated
+meta_description: Document Parsing and Chunking for Jewelry Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

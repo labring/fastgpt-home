@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interfaces and External Systems for Chemical Raw
-meta_description: Data sources include public corporate financing announcements from domestic basic chemical industry associations, listing information from local
+meta_description: HTTP Interfaces and External Systems for Chemical Raw Material Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

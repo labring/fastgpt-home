@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c023-f006
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: Dialogue Logging and Auditing for Military Electronics Yield
-meta_description: Data related to military electronics yield is primarily sourced from public trading quotes for constituent stocks in the military electronics sector
+meta_title: Dialogue Logging and Auditing for Military Electronics
+meta_description: Dialogue Logging and Auditing for Military Electronics Yield Data
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

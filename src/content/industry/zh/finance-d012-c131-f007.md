@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 装修装饰营销内容的工作流编排
-meta_description: 装修装饰行业的营销内容数据来源包含三类核心库：装修公司的实景案例库、建材供应商的产品参数库、本地住建部门的装修规范文档。数据更新节奏随内容类型差异调整：实景
+meta_description: 装修装饰营销内容的工作流编排：装修装饰营销内容的工作流编排，涵盖配置与验证建议。
 keywords: 装修装饰、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Unified AI Platform and Multi-App Orchestration
 is_part_of: FastGPT Tech Center
 meta_title: Form and Interaction for Model Allocation Integrated AI
-meta_description: Data for this category comes from three main sources: platform-built large model metadata, user-added model configuration files, and performance logs
+meta_description: Form and Interaction for Model Allocation Integrated AI Platform
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

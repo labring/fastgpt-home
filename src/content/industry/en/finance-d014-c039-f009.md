@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for Kitchen and Bathroom
-meta_description: Kitchen and bathroom appliance financial report data primarily comes from annual and quarterly reports publicly released by listed kitchen and
+meta_description: Citation Sources and Traceability for Kitchen and Bathroom Appliance Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

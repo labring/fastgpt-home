@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Risk Control and Credit Document Review
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Credit
-meta_description: Credit application risk control data primarily comes from electronic materials submitted by applicants, structured data pushed by partner credit
+meta_description: Multi-turn Dialogue and Prompt Engineering for Credit Application Risk Control
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 其他综合财报分析的引用来源与溯源
-meta_description: 其他综合财报分析的数据主要来源于上市公司公开披露的年度、半年度或季度财报附注中的其他综合收益相关内容，包含结构化明细数据与非结构化附注文字。数据更新节奏严格
+meta_description: 其他综合财报分析的引用来源与溯源：其他综合财报分析的引用来源与溯源，涵盖配置与验证建议
 keywords: 其他综合、财报分析与报告生成、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

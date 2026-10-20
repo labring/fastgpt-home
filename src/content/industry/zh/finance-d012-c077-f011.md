@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 旅游景区营销内容的文档解析与分块
-meta_description: 旅游景区的营销内容文档主要来源于官方公众号推文、官网活动公告、合作渠道的宣传物料、内部活动策划文档及票务政策通知。更新节奏随运营节奏调整，节假日及旅游旺季前
+meta_description: 旅游景区营销内容的文档解析与分块：旅游景区营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 旅游景区、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

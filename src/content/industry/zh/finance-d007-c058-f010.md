@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小金属收益率的数据库与运维
-meta_description: 小金属行情数据来自国内有色金属行业专业监测机构，每日在收盘后完成当日数据归集，更新频率为每日一次。单条数据对应一个小金属品种，包含品种编码、品种名称、当日结
+meta_description: 小金属收益率的数据库与运维：小金属收益率的数据库与运维，涵盖配置与验证建议。。。
 keywords: 小金属、收益率与行情日报播报、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

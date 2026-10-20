@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 塑料橡胶收益率的多轮对话与提示词
-meta_description: 塑料橡胶品类的行情数据主要来自国内大宗商品现货交易平台、行业协会市场监测数据与期货交割仓单公开数据。更新节奏分为三类：现货报价每日收盘后更新，期货行情在交易
+meta_description: 塑料橡胶收益率的多轮对话与提示词：塑料橡胶收益率的多轮对话与提示词，涵盖配置与验证建议
 keywords: 塑料橡胶、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Apparel and Home Textile
-meta_description: Data sources for apparel and home textile financing daily reports are public corporate financing announcements and corporate financing filing data
+meta_description: Tool Calling and Plugins for Apparel and Home Textile Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

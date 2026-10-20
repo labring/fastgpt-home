@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 房建工程收益率的数据库与运维
-meta_description: 房建工程的收益率数据主要来自内部造价管理系统、财务ERP的项目核算模块，以及工程监理方出具的阶段性成本核验报告。数据以单个在建或竣工房建项目为单位，按月度核
+meta_description: 房建工程收益率的数据库与运维：房建工程收益率的数据库与运维，涵盖配置与验证建议。
 keywords: 房建工程、收益率与行情日报播报、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

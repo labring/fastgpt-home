@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 教育服务营销内容的多轮对话与提示词
-meta_description: 教育服务的营销内容数据主要来自课程研发文档、学员反馈素材、招生简章、试听课程脚本与教研讲义。数据更新节奏随新季度开班、课程迭代或招生节点调整。单份文档多包含
+meta_description: 教育服务营销内容的多轮对话与提示词：教育服务营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 教育服务、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

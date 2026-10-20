@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 酒店餐饮收益率的工具调用与插件
-meta_description: 酒店餐饮的收益率相关数据主要来自门店POS收银系统、酒店管理系统（PMS）及第三方营业数据对接接口。全量日度数据通常在每日02:00-04:00完成同步，实
+meta_description: 酒店餐饮收益率的工具调用与插件：酒店餐饮收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 酒店餐饮、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

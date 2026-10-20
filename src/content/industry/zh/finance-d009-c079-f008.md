@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 普钢研报检索的工具调用与插件
-meta_description: 普钢研报主要来自行业公开数据库、专业研究机构报告、行业协会发布的月度运行数据。按周度、月度周期更新核心供需数据，单日更新现货行情类片段。文档多以PDF格式发
+meta_description: 普钢研报检索的工具调用与插件：普钢研报检索的工具调用与插件，涵盖配置与验证建议。
 keywords: 普钢、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

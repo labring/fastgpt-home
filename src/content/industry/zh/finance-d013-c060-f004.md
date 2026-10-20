@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程咨询融资日报的向量模型与索引
-meta_description: 数据主要来自公开招投标平台、工程咨询机构内部项目台账、银行授信审批公示文件。更新节奏为每个工作日更新单份日报，单份日报覆盖当周落地的工程类融资项目。文档结构
+meta_description: 工程咨询融资日报的向量模型与索引：工程咨询融资日报的向量模型与索引，涵盖配置与验证建议
 keywords: 工程咨询、融资日报、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

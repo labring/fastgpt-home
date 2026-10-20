@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 装修装饰智能尽调报告的向量模型与索引
-meta_description: 装修装饰智能尽调报告的数据主要来自项目备案档案、施工合同、材料采购清单、现场勘查记录、施工进度日志与竣工验收文件。数据更新节奏随项目推进调整，立项阶段更新基
+meta_description: 装修装饰智能尽调报告的向量模型与索引：装修装饰智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 装修装饰、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

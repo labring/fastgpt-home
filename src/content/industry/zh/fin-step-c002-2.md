@@ -4,8 +4,8 @@ slug: /zh/industry/fin-step-c002-2
 page_type: 行业作业环节页
 article_section: 证券投行
 is_part_of: FastGPT 技术中心
-meta_title: IPO 保荐承销的把财务、法律、业务底稿与申报文件逐项勾稽：
-meta_description: IPO 保荐承销的把财务、法律、业务底稿与申报文件逐项勾稽：哪一部分能交给系统
+meta_title: IPO 保荐承销的把财务、法律、业务底稿与申报文件逐项勾稽：哪一部分能交给系统
+meta_description: IPO 保荐承销的把财务、法律、业务底稿与申报文件逐项勾稽：哪一部分能交给系统：IPO 保荐承销的把财务、法律、业务底稿与申报文件逐项勾稽：哪一部分能交给系统，涵盖配置与验证建议
 keywords: IPO 保荐承销、证券投行、环节2
 source_type: 金融业务分类与作业事实取自行业研究报告（含监管文件来源编号）
 date_published: 2026-09-15

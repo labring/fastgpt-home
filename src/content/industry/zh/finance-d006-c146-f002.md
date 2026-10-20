@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通用设备投研知识库建设的上下文与 token
-meta_description: 通用设备投研数据主要来自行业协会公开统计、设备厂商官方产品文档、设备运行运维日志、专利数据库及供应链报价平台。数据更新节奏依类型区分：行业报告按季度或年度发
+meta_description: 通用设备投研知识库建设的上下文与 token：通用设备投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 通用设备、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

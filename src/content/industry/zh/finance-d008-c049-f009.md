@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 基建工程智能尽调报告的引用来源与溯源
-meta_description: 基建工程智能尽调报告的数据来源包含立项批复文件、招投标公告、施工日志、监理报告、竣工结算书等。数据更新节奏随项目阶段变化：立项阶段为季度更新，施工阶段为月度
+meta_description: 基建工程智能尽调报告的引用来源与溯源：基建工程智能尽调报告的引用来源与溯源，涵盖配置与验证建议
 keywords: 基建工程、智能尽调报告、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

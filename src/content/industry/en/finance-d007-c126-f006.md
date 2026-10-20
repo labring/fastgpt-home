@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Conversation Logging and Auditing for Airport and Airfield
-meta_description: This page addresses use cases for the aviation airport industry, focused on revenue yield and daily market briefing workflows, with a core capability
+meta_description: Conversation Logging and Auditing for Airport and Airfield Revenue Yield and Daily Market Briefings
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

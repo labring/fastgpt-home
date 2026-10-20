@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通用设备营销内容的向量模型与索引
-meta_description: 通用设备的营销内容数据主要来自金融机构、设备服务商的官方产品手册、技术参数文档、销售推广物料及官网产品详情页。更新节奏随新产品立项、核心参数调整或金融场景适
+meta_description: 通用设备营销内容的向量模型与索引：通用设备营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 通用设备、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 能源金属投研知识库建设的上下文与 token
-meta_description: 能源金属投研的数据主要来自行业协会公开报告、期货交易所现货报价、矿业企业财报及第三方行业资讯平台。更新节奏覆盖实时动态（如当日现货价格）、每日收盘数据、季度
+meta_description: 能源金属投研知识库建设的上下文与 token：能源金属投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 能源金属、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

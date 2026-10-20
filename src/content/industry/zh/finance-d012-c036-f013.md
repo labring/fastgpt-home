@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 半导体营销内容的知识库检索与召回
-meta_description: 半导体营销相关数据主要来源于官方技术规格书、新品发布公告、行业标准文档、代理商分销物料及客户应用案例摘要，用于支撑营销获客的内容输出。数据更新无固定周期，随
+meta_description: 半导体营销内容的知识库检索与召回：半导体营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 半导体、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

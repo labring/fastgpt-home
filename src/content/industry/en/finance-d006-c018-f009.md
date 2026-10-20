@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Citation Source and Traceability for Optical Module
-meta_description: Optical module data sources include communication industry standard documents, original manufacturer specification sheets, third-party test reports
+meta_description: Citation Source and Traceability for Optical Module Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -33,14 +33,14 @@ Long documents require segment processing, with traceability information bound t
 | `Recall count` | Top 10 entries | Optical module parameter documents have numerous fields. Sufficient candidate documents must be recalled to cover relevant parameter groups |
 | `Similarity threshold` | 0.75-0.85 | Filter low-relevance non-optical module documents, and avoid recalling irrelevant communication device parameters |
 | `Chunk size` | 800-1200 characters | Ensure each segment contains a complete parameter set for a single optical module model, enabling precise citation source positioning |
-| `Citation template` | `{{content}} Source: {{sourceName}}, Update Time: {{updateTime}}` | Clearly mark the source document name and update time, meeting traceability requirements for investment research scenarios |
+| `Traceability details` | `the configured value the configured source field, the configured update-time field` | Clearly mark the source document name and update time, meeting traceability requirements for investment research scenarios |
 | `MAX_REFERENCE_TIMEOUT` | 300 seconds | Adapt to the actual parsing time of optical module documents, and avoid traceability failure caused by parsing timeout |
 | `Multi-source Recall Switch` | Enabled | Support cross-manufacturer document source comparison, and avoid parameter bias from a single data source |
 
 > The parameter values provided on this page are common starting points for configuration setup. Actual values are affected by material format, data volume, and business rules. Analyze specific issues on a case-by-case basis. It is recommended to test on your own samples before finalizing settings.
 
 ## Three Common Misconfiguration Issues
-- Symptom: No citation source appears at the end of the generated answer. Cause: The `Citation template` configuration is not enabled, or the source placeholder is missing from the template. This prevents FastGPT from generating traceability information.
+- Symptom: No citation source appears at the end of the generated answer. Cause: The `Citation template` configuration is not enabled, or the source pending verification is missing from the template. This prevents FastGPT from generating traceability information.
 - Symptom: Question and answer requests timeout and return error code 504. Cause: The `MAX_REFERENCE_TIMEOUT` setting value is lower than the actual parsing time of optical module documents. This causes the traceability link to time out before completion.
 - Symptom: Citation sources point to the wrong document version. Cause: Document version tracking configuration is not enabled. Only the latest uploaded document copy is retained, making it impossible to retrieve parameter information from historical versions.
 

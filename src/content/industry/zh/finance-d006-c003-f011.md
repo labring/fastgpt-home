@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专业连锁投研知识库建设的文档解析与分块
-meta_description: 专业连锁的投研数据源包含门店运营日报、供应链采购台账、竞品门店调研文档、品牌VI手册等。数据来源涵盖线下门店POS系统、供应链管理平台、内部调研笔记。更新节
+meta_description: 专业连锁投研知识库建设的文档解析与分块：专业连锁投研知识库建设的文档解析与分块，涵盖配置与验证建议
 keywords: 专业连锁、投研知识库建设与治理、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

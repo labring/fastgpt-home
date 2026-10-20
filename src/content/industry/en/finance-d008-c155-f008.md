@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Feed Intelligent Due Diligence
-meta_description: Feed industry due diligence report data comes from four main sources: internal enterprise production ledgers, third-party raw material test reports
+meta_description: Tool Calling and Plugins for Feed Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

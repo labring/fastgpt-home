@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 其他综合智能尽调报告的HTTP 接口与外部系统
-meta_description: 其他综合智能尽调报告的数据来源包含企业工商公示系统、第三方征信数据库、自定义上传的尽调附件及行业调研资料。更新节奏按需触发或按周同步，无固定实时周期。文档结
+meta_description: 其他综合智能尽调报告的HTTP 接口与外部系统：其他综合智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 其他综合、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

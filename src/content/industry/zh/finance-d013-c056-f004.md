@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 家居用品融资日报的向量模型与索引
-meta_description: 数据来源为轻工制造领域的行业融资公示平台、合作银行的普惠融资放款台账、家居品牌公开的供应链融资公告。更新节奏为每日更新，当日发布前一工作日的融资交易记录。单
+meta_description: 家居用品融资日报的向量模型与索引：家居用品融资日报的向量模型与索引，涵盖配置与验证建议
 keywords: 家居用品、融资日报、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

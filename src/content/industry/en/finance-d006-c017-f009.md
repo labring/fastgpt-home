@@ -4,8 +4,8 @@ slug: /en/industry/finance-d006-c017-f009
 page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
-meta_title: Citation Source and Traceability for Optical and
-meta_description: Investment research data for the optical and optoelectronics field comes from multiple sources. These include monthly supply and demand reports from
+meta_title: Citation Source and Traceability for Optical
+meta_description: Citation Source and Traceability for Optical and Optoelectronics Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -25,7 +25,7 @@ Professional parameter unit labeling requires traceability information to includ
 Data sources with different update frequencies require regular synchronization of traceability metadata. This prevents traceability information from outdated documents from being disconnected from current data.
 
 ## Configuration Settings
-This configuration applies to FastGPT 4.8.10 and later versions.
+Reference only; verify against the target FastGPT release and deployment documentation.
 
 | Configuration Item | Recommended Value Range | Rationale |
 | --- | --- | --- |

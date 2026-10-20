@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 钢铁贸易融资日报的HTTP 接口与外部系统
-meta_description: 钢铁贸易融资日报数据来源于钢铁贸易企业的内部进销存管理系统、合作银行的授信台账及当日货权质押登记系统。数据更新节奏为每日凌晨同步前一工作日的完整数据，单份日
+meta_description: 钢铁贸易融资日报的HTTP 接口与外部系统：钢铁贸易融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 钢铁贸易、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

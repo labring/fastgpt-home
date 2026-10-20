@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小家电研报检索的引用来源与溯源
-meta_description: 小家电研报的数据来源主要为家电行业协会公开报告、电商平台销售监测数据、品牌官方产品手册与合规认证文件。更新节奏随新品发布、季度销售盘点调整，无固定周期但核心
+meta_description: 小家电研报检索的引用来源与溯源：小家电研报检索的引用来源与溯源，涵盖配置与验证建议
 keywords: 小家电、研报检索与问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade of Marketing Content for Large
-meta_description: Data sources for this marketing content include headquarters brand departments, branch operation databases, and compliance-reviewed promotional
+meta_description: Deployment and Upgrade of Marketing Content for Large State-Owned Commercial Banks: covering configuration and validation guidance.
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

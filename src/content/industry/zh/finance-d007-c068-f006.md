@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 投资平台收益率的对话日志与审计
-meta_description: 投资平台的收益率与行情数据主要来自证券交易所、基金登记结算机构及平台自有交易数据库。数据更新节奏严格匹配交易日周期，每个交易日收盘后完成当日全量数据刷新。单
+meta_description: 投资平台收益率的对话日志与审计：投资平台收益率的对话日志与审计，涵盖配置与验证建议
 keywords: 投资平台、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

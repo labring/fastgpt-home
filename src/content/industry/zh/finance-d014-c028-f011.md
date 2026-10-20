@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 动力煤财报分析的文档解析与分块
-meta_description: 动力煤财报的数据来源包括煤炭行业协会月度供需报告、上市煤企季度年报、港口交割数据及期货交易所公告。更新节奏分为月度、季度与年度三类，月度数据于次月中下旬发布
+meta_description: 动力煤财报分析的文档解析与分块：动力煤财报分析的文档解析与分块，涵盖配置与验证建议
 keywords: 动力煤、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

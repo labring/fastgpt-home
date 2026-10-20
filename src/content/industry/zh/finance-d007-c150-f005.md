@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁矿石收益率的多轮对话与提示词
-meta_description: 铁矿石行情与收益率数据主要来源于大连商品交易所期货交易数据、国内主流现货贸易平台的每日报价数据。期货数据随交易日每5分钟更新一次，现货数据每日早间更新一次。
+meta_description: 铁矿石收益率的多轮对话与提示词：铁矿石收益率的多轮对话与提示词，涵盖配置与验证建议
 keywords: 铁矿石、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

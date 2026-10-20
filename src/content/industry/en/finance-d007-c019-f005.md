@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Duty-Free
-meta_description: Duty-free yield-related data is primarily sourced from daily operating reports of offshore duty-free business operators, aggregated passenger
+meta_description: Multi-turn Dialogue and Prompt Engineering for Duty-Free Yield Data
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

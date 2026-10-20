@@ -4,8 +4,8 @@ slug: /en/industry/finance-d008-c076-f009
 page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
-meta_title: Citation Sources and Traceability for Cultural and
-meta_description: In financial compliance due diligence scenarios for cultural and entertainment categories, cultural and entertainment supplies fall under the light
+meta_title: Citation Sources and Traceability for Cultural
+meta_description: Citation Sources and Traceability for Cultural and Entertainment Supplies Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

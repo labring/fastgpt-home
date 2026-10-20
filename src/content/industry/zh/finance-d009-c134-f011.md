@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 调味品研报检索的文档解析与分块
-meta_description: 调味品研报数据主要来自券商行业研报、食品饮料行业协会公开报告、头部调味品企业年度及季度财报。更新节奏随报告发布节点，常规季度、年度更新，伴随企业重大经营动作
+meta_description: 调味品研报检索的文档解析与分块：调味品研报检索的文档解析与分块，涵盖配置与验证建议
 keywords: 调味品、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

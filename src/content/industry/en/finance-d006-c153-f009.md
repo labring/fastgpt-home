@@ -4,8 +4,8 @@ slug: /en/industry/finance-d006-c153-f009
 page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
-meta_title: Wind Power Investment Research Knowledge Base Citation and
-meta_description: Wind power investment research data mainly comes from public technical manuals of wind turbine manufacturers, public operation data of power grid
+meta_title: Wind Power Investment Research Knowledge Base Citation
+meta_description: Wind Power Investment Research Knowledge Base Citation and Traceability: covering configuration and validation guidance.
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -21,7 +21,7 @@ The multi-source update cycle differences of wind power investment research data
 ## How to configure the settings
 | Configuration Item | Recommended Value | Rationale |
 | --- | --- | --- |
-| `Citation Content Template` | `{doc.content}\nSource: {doc.source} | Paragraph Location: {doc.paragraph_num} | Update Time: {doc.update_time}` | Wind power investment research parameters are prone to change with product model iterations. Clearly marking sources and update times helps avoid confusion across data from different sources |
+| `Traceability details` | `{doc.content}\nSource: {doc.source} | Paragraph Location: {doc.paragraph_num} | Update Time: {doc.update_time}` | Wind power investment research parameters are prone to change with product model iterations. Clearly marking sources and update times helps avoid confusion across data from different sources |
 | `Number of Retrieved Results` | `Top 8-12` | Wind power investment research requires comparing parameters of multiple wind turbines and data from multiple projects. Sufficient retrieved volume covers comparison needs while avoiding redundancy |
 | `Similarity Threshold` | `0.75-0.85` | Wind power parameters are mostly standardized values. A threshold that is too low may introduce irrelevant operation logs or policy texts, while a threshold that is too high may miss parameters of different batches of the same wind turbine model |
 | `PARSE_FILE_TIMEOUT_SECONDS` | `600 seconds` | Wind turbine manufacturer manuals often contain multi-page structured tables, which take longer to parse. This setting prevents document content from being truncated due to timeout, leading to missing traceability information |

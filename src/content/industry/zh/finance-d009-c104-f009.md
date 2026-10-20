@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 玻璃研报检索的引用来源与溯源
-meta_description: 玻璃研报的数据来源涵盖建筑玻璃行业协会公开报告、第三方建材检测机构的抽检数据、生产企业披露的季度运营文件。更新节奏涵盖月度现货价格更新、季度产能盘点、年度行
+meta_description: 玻璃研报检索的引用来源与溯源：玻璃研报检索的引用来源与溯源，涵盖配置与验证建议。
 keywords: 玻璃、研报检索与问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水务智能尽调报告的向量模型与索引
-meta_description: 水务智能尽调报告的数据来源涵盖水务运营主体的日常运营台账、管网监测系统导出数据、地方住建部门的供水统计报表、第三方审计报告与企业年度财报。更新节奏覆盖每日、
+meta_description: 水务智能尽调报告的向量模型与索引：水务智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 水务、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

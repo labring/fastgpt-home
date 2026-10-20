@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 休闲食品投研知识库建设的部署与升级
-meta_description: 休闲食品投研数据主要来自品牌方SKU档案、线下终端动销报表、电商平台销量与评论数据、行业协会品类监测报告。数据更新节奏随新品上线、促销节点调整，通常季度或月
+meta_description: 休闲食品投研知识库建设的部署与升级：休闲食品投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 休闲食品、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

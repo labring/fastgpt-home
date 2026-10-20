@@ -4,8 +4,8 @@ slug: /zh/industry/finance-d014-c050-f001
 page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
-meta_title: 塑料橡胶财报分析的HTTP 接口与外部系统
-meta_description: 塑料橡胶品类的财报数据主要来自交易所公开披露的上市公司定期报告、行业协会产销简报及大宗商品现货平台公开信息。更新节奏分为季度、年度两类，季度财报在季度结束后
+meta_title: 塑料橡胶财报分析的HTTP接口与外部系统
+meta_description: 塑料橡胶财报分析的HTTP接口与外部系统：塑料橡胶财报分析的HTTP接口与外部系统，涵盖配置与验证建议
 keywords: 塑料橡胶、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

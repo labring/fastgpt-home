@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 网络安全营销内容的文档解析与分块
-meta_description: 面向金融行业的网络安全营销内容的文档来源包括安全厂商自主产出的解决方案白皮书、产品参数手册、获客用攻防案例集，以及金融合规监管机构发布的适配指南、金融客户提
+meta_description: 网络安全营销内容的文档解析与分块：网络安全营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 网络安全、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

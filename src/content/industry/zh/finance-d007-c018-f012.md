@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光模块收益率的模型接入与配置
-meta_description: 光模块收益率与行情数据主要来源于证券市场光模块板块的公开交易数据、行业供应链监测数据与厂商出货公开信息。数据更新节奏为每日盘后同步，次日上午完成全量更新。数
+meta_description: 光模块收益率的模型接入与配置：光模块收益率的模型接入与配置，涵盖配置与验证建议。
 keywords: 光模块、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

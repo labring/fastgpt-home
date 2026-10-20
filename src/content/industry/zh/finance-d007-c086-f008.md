@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 汽车服务收益率的工具调用与插件
-meta_description: 汽车服务领域的收益率与行情数据，主要来自企业内部财务核算系统、汽车金融合作方的批量导出接口，以及第三方汽车行业行情数据接口。数据更新节奏为每日凌晨完成前一日
+meta_description: 汽车服务收益率的工具调用与插件：汽车服务收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 汽车服务、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15
@@ -25,7 +25,7 @@ date_modified: 2026-09-15
 | --- | --- | --- |
 | `mcp_data_source_auth` | 按数据源配置多组鉴权参数，每组绑定`service_category`过滤规则 | 汽车服务收益率数据来自多个合作方与内部系统，需按服务类别隔离鉴权 |
 | `tool_call_timeout` | `600 秒` | 批量拉取多门店收益率数据时，需预留足够的接口响应时间 |
-| `api_permission_scope` | `store_id:{{current_user.store_ids}}` | 按门店维度隔离数据，避免跨门店权限泄露 |
+| `api_permission_scope` | `store_id:待核验值` | 按门店维度隔离数据，避免跨门店权限泄露 |
 | `scheduled_task_cron` | `0 3 * * *` | 匹配日报数据每日02:00的更新节奏，定时触发工具调用 |
 | `response_field_filter` | 保留`service_category`、`stat_period`、`yield_value`、`update_time` | 过滤无关字段，简化工具返回结果，提升调用效率 |
 | `cache_expire_seconds` | `86400 秒` | 匹配日报数据的更新周期，避免重复拉取未更新的数据 |

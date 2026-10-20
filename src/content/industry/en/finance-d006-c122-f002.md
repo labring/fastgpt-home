@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Context and Token for Joint-Stock Bank Research Knowledge
-meta_description: Joint-stock bank research data sources include internal industry research reports, regulatory agency public documents, real-time market data for
+meta_description: Context and Token for Joint-Stock Bank Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

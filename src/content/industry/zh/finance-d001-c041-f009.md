@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 名单筛查KYC 的引用来源与溯源
-meta_description: 名单筛查KYC的数据主要来源于各国金融监管机构、国际反洗钱组织发布的制裁清单、政治公众人物（PEP）数据库、失信被执行人公示平台等权威渠道。数据更新节奏随监
+meta_description: 名单筛查KYC 的引用来源与溯源：名单筛查KYC 的引用来源与溯源，涵盖配置与验证建议
 keywords: 名单筛查、KYC 与反洗钱资料核验、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

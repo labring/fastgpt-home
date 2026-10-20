@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 造纸财报分析的向量模型与索引
-meta_description: 造纸行业财报数据主要来自上市公司公开披露的年度报告、半年度报告、季度报告，以及中国造纸协会发布的行业月度运行数据。更新节奏为年度、半年度、季度及月度。单份财
+meta_description: 造纸财报分析的向量模型与索引：造纸财报分析的向量模型与索引，涵盖配置与验证建议。
 keywords: 造纸、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

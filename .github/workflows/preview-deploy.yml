@@ -2,12 +2,12 @@ name: Preview Home Page — Deploy Worker
 
 on:
   workflow_run:
-    workflows: ['Preview Home Page — Build']
+    workflows: ["Preview Home Page — Build"]
     types: [completed]
   workflow_dispatch:
     inputs:
       build_run_id:
-        description: 'Successful Preview Home Page — Build run to deploy'
+        description: "Successful Preview Home Page — Build run to deploy"
         required: true
         type: string
 
@@ -34,19 +34,28 @@ jobs:
     environment: international-worker-production
 
     env:
-      NEXT_PUBLIC_POLICE_FILING: '浙公网安备33011002017871号'
-      NEXT_PUBLIC_FILING_ADDRESS: '粤ICP备2023048773号'
+      NEXT_PUBLIC_POLICE_FILING: "浙公网安备33011002017871号"
+      NEXT_PUBLIC_FILING_ADDRESS: "粤ICP备2023048773号"
       NEXT_PUBLIC_HOME_URL: https://fastgpt.io
       NEXT_PUBLIC_SITE_VARIANT: preview
       NEXT_PUBLIC_CN_HOME_URL: https://fastgpt.cn
       NEXT_PUBLIC_IO_HOME_URL: https://fastgpt.io
       NEXT_PUBLIC_USER_URL: https://cloud.fastgpt.io
-      NEXT_PUBLIC_CRM_API_URL: ''
-      NEXT_PUBLIC_ATTRIBUTION_SOURCE: ''
+      NEXT_PUBLIC_CRM_API_URL: ""
+      NEXT_PUBLIC_ATTRIBUTION_SOURCE: ""
       NEXT_PUBLIC_LANGUAGE_REGION: en-US
       CLOUDFLARE_STATIC_ASSETS_FILE_LIMIT: 100000
     steps:
       # Only default-branch verification code runs in this privileged workflow.
+      - name: Free runner space
+        id: cleanup
+        uses: justinthelaw/maximize-github-runner-space@v0.12.3
+        with:
+          cleanup-profile: max
+          skip-components: cached-tools,cached-node
+          swapfile-size: 16GiB
+      - run: echo "Reclaimed ${{ steps.cleanup.outputs.reclaimed-bytes }} bytes"
+
       - uses: actions/checkout@v4
         with:
           path: verifier
@@ -135,7 +144,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_WORKER_API_TOKEN }}
           accountId: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
-          wranglerVersion: '4.136.3'
+          wranglerVersion: "4.136.3"
           command: deploy --config ./verified-preview/payload/wrangler.json --name ${{ steps.worker.outputs.name }}
           quiet: false
 

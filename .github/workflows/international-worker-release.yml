@@ -27,7 +27,7 @@ jobs:
       NEXT_PUBLIC_IO_HOME_URL: https://fastgpt.io
       NEXT_PUBLIC_USER_URL: https://cloud.fastgpt.io
       NEXT_PUBLIC_LANGUAGE_REGION: en-US
-      NEXT_PUBLIC_ATTRIBUTION_COOKIE_DOMAIN: '.fastgpt.io'
+      NEXT_PUBLIC_ATTRIBUTION_COOKIE_DOMAIN: ".fastgpt.io"
       NEXT_PUBLIC_ATTRIBUTION_STORAGE_MODE: ${{ vars.NEXT_PUBLIC_ATTRIBUTION_STORAGE_MODE }}
       NEXT_PUBLIC_ATTRIBUTION_SOURCE: home-io
       NEXT_PUBLIC_CRM_API_URL: ${{ secrets.NEXT_PUBLIC_CRM_API_URL }}
@@ -38,6 +38,15 @@ jobs:
       NEXT_PUBLIC_RYBBIT_TONGJI: ${{ secrets.NEXT_PUBLIC_RYBBIT_TONGJI }}
       NEXT_PUBLIC_RYBBIT_TONGJI_SITEID: ${{ secrets.NEXT_PUBLIC_RYBBIT_TONGJI_SITEID }}
     steps:
+      - name: Free runner space
+        id: cleanup
+        uses: justinthelaw/maximize-github-runner-space@v0.12.3
+        with:
+          cleanup-profile: max
+          skip-components: cached-tools,cached-node
+          swapfile-size: 16GiB
+      - run: echo "Reclaimed ${{ steps.cleanup.outputs.reclaimed-bytes }} bytes"
+
       - uses: actions/checkout@v4
         with:
           persist-credentials: false

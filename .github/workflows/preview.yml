@@ -47,7 +47,7 @@ jobs:
         with:
           cleanup-profile: max
           skip-components: cached-tools,cached-node
-          swapfile-size: 2GiB
+          swapfile-size: 16GiB
       - run: echo "Reclaimed ${{ steps.cleanup.outputs.reclaimed-bytes }} bytes"
 
       - name: Checkout merge result or selected manual revision

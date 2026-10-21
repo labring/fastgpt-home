@@ -118,7 +118,7 @@ function resolveApplicationArea(
   if (declaredArea !== undefined && !isIndustryArea(declaredArea)) {
     fail(
       sourcePath,
-      `unknown application_area: ${declaredArea}; expected finance, biomed, or research`
+      `unknown application_area: ${declaredArea}; expected finance, biomed, research, or manufacturing`
     );
   }
   if (historicalArea && declaredArea && historicalArea !== declaredArea) {
@@ -128,7 +128,11 @@ function resolveApplicationArea(
     );
   }
   const area = declaredArea || historicalArea;
-  if (!area) fail(sourcePath, 'missing application_area; expected finance, biomed, or research');
+  if (!area)
+    fail(
+      sourcePath,
+      'missing application_area; expected finance, biomed, research, or manufacturing'
+    );
   return area;
 }
 

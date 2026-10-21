@@ -1,7 +1,8 @@
 export const INDUSTRY_AREAS = {
   finance: { en: 'Finance', zh: '金融' },
   biomed: { en: 'Biopharma', zh: '生物医药' },
-  research: { en: 'Scientific Research', zh: '科研' }
+  research: { en: 'Scientific Research', zh: '科研' },
+  manufacturing: { en: 'Manufacturing', zh: '制造 / 生产加工' }
 } as const;
 
 export type IndustryArea = keyof typeof INDUSTRY_AREAS;
@@ -23,7 +24,7 @@ export function isIndustryArea(value: string): value is IndustryArea {
 }
 
 export function getIndustryAreaCounts(entries: IndustrySummary[]): IndustryAreaCounts {
-  const counts = { all: entries.length, finance: 0, biomed: 0, research: 0 };
+  const counts = { all: entries.length, finance: 0, biomed: 0, research: 0, manufacturing: 0 };
   for (const entry of entries) counts[entry.area] += 1;
   return counts;
 }

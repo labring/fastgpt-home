@@ -7758,5 +7758,105 @@
     "publicPath": "/reference/llm-quote-budget-bands",
     "sourceType": "官方文档",
     "minutes": 4
+  },
+  {
+    "identity": "en|/guide/code-execution-environment-selection",
+    "title": "Where Custom Code Runs: the Code Node or the Agent VM, and Which Sandbox Backs the VM",
+    "description": "Where Custom Code Runs: the Code Node or the Agent VM, and Which Sandbox Backs the VM When this decision has to be made This decision is required when wor…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/code-execution-environment-selection",
+    "sourceType": "深度场景内容",
+    "minutes": 26
+  },
+  {
+    "identity": "en|/guide/dataset-permission-granularity",
+    "title": "Knowledge Base Permissions: Team Roles, Dataset Collaborators or Collection-Level Access",
+    "description": "Knowledge Base Permissions: Team Roles, Dataset Collaborators or Collection-Level Access When this decision has to be made You must make this decision whe…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/dataset-permission-granularity",
+    "sourceType": "深度场景内容",
+    "minutes": 27
+  },
+  {
+    "identity": "en|/guide/im-bot-channel-integration",
+    "title": "FastGPT: Connecting Apps to WeCom, WeChat Official Accounts, Lark, and DingTalk — Version Requirements, Callbacks, and Session Boundaries",
+    "description": "FastGPT: Connecting Apps to WeCom, WeChat Official Accounts, Lark, and DingTalk — Version Requirements, Callbacks, and Session Boundaries When this become…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/im-bot-channel-integration",
+    "sourceType": "深度场景内容",
+    "minutes": 22
+  },
+  {
+    "identity": "en|/guide/im-bot-channel-selection",
+    "title": "Connecting a Bot to Chat Apps: WeCom, Feishu, DingTalk, Official Accounts and Personal WeChat",
+    "description": "Connecting a Bot to Chat Apps: WeCom, Feishu, DingTalk, Official Accounts and Personal WeChat When this decision has to be made You must make this decisio…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/im-bot-channel-selection",
+    "sourceType": "深度场景内容",
+    "minutes": 26
+  },
+  {
+    "identity": "en|/guide/kb-scope-and-split-selection",
+    "title": "One Knowledge Base or Several: Collection Tags, Merged Search or Splitting by Use Case",
+    "description": "One Knowledge Base or Several: Collection Tags, Merged Search or Splitting by Use Case When this decision has to be made You must make this decision when…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/kb-scope-and-split-selection",
+    "sourceType": "深度场景内容",
+    "minutes": 21
+  },
+  {
+    "identity": "en|/guide/loop-vs-parallel-execution",
+    "title": "Batch Work in Workflows: Loop Node, Batch Run or Parallel Run",
+    "description": "Batch Work in Workflows: Loop Node, Batch Run or Parallel Run When this decision has to be made You must make this decision when your workflow needs to pr…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/loop-vs-parallel-execution",
+    "sourceType": "深度场景内容",
+    "minutes": 23
+  },
+  {
+    "identity": "en|/guide/mcp-toolset-and-server-identity",
+    "title": "Decision Guide for Bidirectional MCP Integration with FastGPT v4.17.2",
+    "description": "Decision Guide for Bidirectional MCP Integration with FastGPT v4.17.2 When this becomes a decision This decision becomes necessary when your business need…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/mcp-toolset-and-server-identity",
+    "sourceType": "深度场景内容",
+    "minutes": 21
+  },
+  {
+    "identity": "en|/guide/plugin-source-selection",
+    "title": "Where Tools Come From: System Tools, Team-Installed Plugins or Your Own",
+    "description": "Where Tools Come From: System Tools, Team-Installed Plugins or Your Own When this decision has to be made You face this mandatory decision when your enter…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/plugin-source-selection",
+    "sourceType": "深度场景内容",
+    "minutes": 19
+  },
+  {
+    "identity": "en|/reference/env-variable-changes-v4172",
+    "title": "FastGPT Environment Variable Changes: v4.16.2 to v4.17.2",
+    "description": "FastGPT Environment Variable Changes: v4.16.2 to v4.17.2 This page compares the official environment variable reference of FastGPT v4.16.2 and v4.17.2 lin…",
+    "category": "reference",
+    "locale": "en",
+    "publicPath": "/reference/env-variable-changes-v4172",
+    "sourceType": "官方文档",
+    "minutes": 11
+  },
+  {
+    "identity": "en|/reference/openapi-endpoint-reference",
+    "title": "FastGPT OpenAPI Endpoint Reference (v4.17.2)",
+    "description": "FastGPT OpenAPI Endpoint Reference (v4.17.2) This page lists the 33 endpoints that appear in the FastGPT v4.17.2 OpenAPI documentation (apps, chat and kno…",
+    "category": "reference",
+    "locale": "en",
+    "publicPath": "/reference/openapi-endpoint-reference",
+    "sourceType": "官方文档",
+    "minutes": 11
   }
 ]

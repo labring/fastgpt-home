@@ -49638,5 +49638,185 @@
     "publicPath": "/reference/llm-quote-budget-bands",
     "sourceType": "官方文档",
     "minutes": 3
+  },
+  {
+    "identity": "zh|/guide/code-execution-environment-selection",
+    "title": "代码执行环境选型：代码运行节点、Agent虚拟机及沙箱提供方",
+    "description": "代码执行环境选型：代码运行节点、Agent虚拟机及沙箱提供方 这个决定什么时候必须做 当工作流需要执行自定义数据处理、格式转换或逻辑计算代码，或Agent需要动态规划执行代码、处理上传文件时，该决定成为必须考虑的事项。若在需求未明确时提前选择方案，会增加不必要的部署复杂度与资源消耗。若延迟决策，当现有环境无…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/code-execution-environment-selection",
+    "sourceType": "深度场景内容",
+    "minutes": 10
+  },
+  {
+    "identity": "zh|/guide/dataset-permission-granularity",
+    "title": "知识库权限粒度选型：团队角色、协作者与集合权限决策矩阵",
+    "description": "知识库权限粒度选型：团队角色、协作者与集合权限决策矩阵 这个决定什么时候必须做 当团队内存在多角色协作需求，或知识库包含不同敏感级别的内容，或需要按项目、部门划分访问权限时，该决定成为必须解决的问题。团队规模扩张至跨部门协作阶段，或知识库内文件数量增多、出现差异化访问需求时，若未提前规划权限粒度，会引发权限…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/dataset-permission-granularity",
+    "sourceType": "深度场景内容",
+    "minutes": 8
+  },
+  {
+    "identity": "zh|/guide/faq-agent-build-and-ops",
+    "title": "FastGPT 常见问答：智能体搭建与运维（120 篇清单）",
+    "description": "FastGPT 常见问答：智能体搭建与运维 本页汇总站内已发布的智能体的设计、集成、上线、监控与稳定性相关问答。该类已发布 217 篇，本页按标题排序列出其中 120 篇，其余可通过站内搜索查找。 这一类问答通常在问什么 1. 智能体与外部系统怎样对接、需要哪些接口 2. 上线后怎样监控、优化与保持稳定 3…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/faq-agent-build-and-ops",
+    "sourceType": "官方文档",
+    "minutes": 21
+  },
+  {
+    "identity": "zh|/guide/faq-ai-concepts",
+    "title": "FastGPT 常见问答：模型与技术原理（120 篇清单）",
+    "description": "FastGPT 常见问答：模型与技术原理 本页汇总站内已发布的大模型原理、提示词、训练方法、评测指标与上下文窗口相关问答。该类已发布 187 篇，本页按标题排序列出其中 120 篇，其余可通过站内搜索查找。 这一类问答通常在问什么 1. Transformer、RLHF、思维链这类基础概念是什么 2. 提示…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/faq-ai-concepts",
+    "sourceType": "官方文档",
+    "minutes": 17
+  },
+  {
+    "identity": "zh|/guide/faq-customer-service-and-marketing",
+    "title": "FastGPT 常见问答：客服与营销（120 篇清单）",
+    "description": "FastGPT 常见问答：客服与营销 本页汇总站内已发布的客户服务、投诉处理、营销内容与客户分析相关问答。该类已发布 231 篇，本页按标题排序列出其中 120 篇，其余可通过站内搜索查找。 这一类问答通常在问什么 1. 客服答不上来时怎样处理、怎样转人工 2. 投诉、售后与客户满意度相关的分析与生成 3.…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/faq-customer-service-and-marketing",
+    "sourceType": "官方文档",
+    "minutes": 19
+  },
+  {
+    "identity": "zh|/guide/faq-industry-scenarios",
+    "title": "FastGPT 常见问答：行业场景（120 篇清单）",
+    "description": "FastGPT 常见问答：行业场景 本页汇总站内已发布的医疗、金融、教育、物流、能源等具体行业里的用法相关问答。该类已发布 160 篇，本页按标题排序列出其中 120 篇，其余可通过站内搜索查找。 这一类问答通常在问什么 1. 医疗、金融、教育等行业先落哪些环节 2. 物流、供应链与能源行业里的调度与预测类…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/faq-industry-scenarios",
+    "sourceType": "官方文档",
+    "minutes": 20
+  },
+  {
+    "identity": "zh|/guide/faq-knowledge-base",
+    "title": "FastGPT 常见问答：知识库与检索（95 篇清单）",
+    "description": "FastGPT 常见问答：知识库与检索 本页汇总站内已发布的知识库建设、检索增强生成（RAG）与搜索效果相关问答。该类已发布 96 篇，本页按标题排序列出其中 95 篇，其余可通过站内搜索查找。 这一类问答通常在问什么 1. RAG 是什么、为什么问答要依赖知识库 2. 知识库的目录、图谱与多维度搜索怎样组…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/faq-knowledge-base",
+    "sourceType": "官方文档",
+    "minutes": 16
+  },
+  {
+    "identity": "zh|/guide/faq-office-automation",
+    "title": "FastGPT 常见问答：办公与内容生成（120 篇清单）",
+    "description": "FastGPT 常见问答：办公与内容生成 本页汇总站内已发布的报告、会议、文案、财务与流程类的办公内容生成相关问答。该类已发布 204 篇，本页按标题排序列出其中 120 篇，其余可通过站内搜索查找。 这一类问答通常在问什么 1. 日报、周报、会议纪要与报告的自动生成 2. 财务、审批与质检类流程里的辅助处…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/faq-office-automation",
+    "sourceType": "官方文档",
+    "minutes": 20
+  },
+  {
+    "identity": "zh|/guide/faq-overview",
+    "title": "FastGPT 常见问答全景：按问题类型找到对应清单",
+    "description": "FastGPT 常见问答全景 本页把站内已发布的 1490 篇常见问答按问题类型归类，用于先判断一个问题属于哪一类，再进入对应清单查具体条目。归类依据文档标题中的关键词。 先判断问题属于哪一类 | 问题里出现的对象 | 指向的类别 | | --- | --- | | 开源版、商业版、授权、私有部署、产品对比…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/faq-overview",
+    "sourceType": "官方文档",
+    "minutes": 12
+  },
+  {
+    "identity": "zh|/guide/faq-security-and-compliance",
+    "title": "FastGPT 常见问答：数据安全与合规（111 篇清单）",
+    "description": "FastGPT 常见问答：数据安全与合规 本页汇总站内已发布的数据存储、隐私保护、权限、日志留存与合规要求相关问答，共 111 篇，按标题排序列出。 这一类问答通常在问什么 1. 数据存放在哪里、怎样加密与脱敏 2. 权限怎样分层、日志与会话记录能保留多久 3. 备份与容灾怎样做、出现隐私或安全事件怎样处置…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/faq-security-and-compliance",
+    "sourceType": "官方文档",
+    "minutes": 20
+  },
+  {
+    "identity": "zh|/guide/im-bot-channel-integration",
+    "title": "FastGPT企业级多渠道机器人接入：版本、配置与运维边界",
+    "description": "FastGPT企业级多渠道机器人接入：版本、配置与运维边界 这件事在什么时候变成问题 当企业需要将FastGPT构建的AI应用能力嵌入员工日常使用的办公协作平台，或面向外部用户通过主流社交渠道提供服务时，该需求会从技术探索转化为需落地的业务问题。具体触发场景包括：内部团队无需额外登录FastGPT平台，即可…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/im-bot-channel-integration",
+    "sourceType": "深度场景内容",
+    "minutes": 9
+  },
+  {
+    "identity": "zh|/guide/im-bot-channel-selection",
+    "title": "FastGPT 即时通讯机器人接入渠道选型决策矩阵",
+    "description": "FastGPT 即时通讯机器人接入渠道选型决策矩阵 这个决定什么时候必须做 当企业需要将FastGPT的AI能力通过即时通讯渠道触达内部员工或外部客户时，该决定需正式执行。具体触发场景包括：需搭建企业内部智能客服、群聊协作助手，或为公众号/个人号用户提供AI交互服务。若部署的FastGPT版本满足对应渠道的…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/im-bot-channel-selection",
+    "sourceType": "深度场景内容",
+    "minutes": 11
+  },
+  {
+    "identity": "zh|/guide/kb-scope-and-split-selection",
+    "title": "企业知识库拆分与检索范围选型决策矩阵",
+    "description": "企业知识库拆分与检索范围选型决策矩阵 这个决定什么时候必须做 当企业知识库内集合数量突破可手动管理的阈值，或业务出现多场景数据隔离、权限管控需求，或全局检索出现无关内容干扰时，该决定成为必须。过早推进选型会增加初期配置成本，浪费前期部署的简化逻辑。过晚推进则会导致检索精度持续下降，数据权限无法合规管控，团队…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/kb-scope-and-split-selection",
+    "sourceType": "深度场景内容",
+    "minutes": 7
+  },
+  {
+    "identity": "zh|/guide/loop-vs-parallel-execution",
+    "title": "批量任务处理方式选型：循环、批量执行与并行执行",
+    "description": "批量任务处理方式选型：循环、批量执行与并行执行 这个决定什么时候必须做 当工作流需要处理多组同类型输入、需重复执行特定子流程，或需提升批量任务的处理效率时，该决定成为必须纳入工作流设计的环节。若未提前选型，直接使用单节点串联流程，会导致流程冗余、执行效率低下，无法满足批量任务的处理需求，后续重构将耗费大量时…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/loop-vs-parallel-execution",
+    "sourceType": "深度场景内容",
+    "minutes": 9
+  },
+  {
+    "identity": "zh|/guide/mcp-toolset-and-server-identity",
+    "title": "FastGPT MCP 双方向实践：工具集接入与服务发布决策指南",
+    "description": "FastGPT MCP 双方向实践：工具集接入与服务发布决策指南 这件事在什么时候变成问题 当企业需要将现有外部服务接入大模型调用链路，或需要将FastGPT构建的AI应用以标准化MCP协议对外提供服务时，原有的工具调用或应用发布方式可能无法满足跨平台统一通信的需求。当团队需要对接多厂商支持MCP协议的客户…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/mcp-toolset-and-server-identity",
+    "sourceType": "深度场景内容",
+    "minutes": 9
+  },
+  {
+    "identity": "zh|/guide/plugin-source-selection",
+    "title": "工具来源选型：系统工具、团队安装插件与自行开发工具",
+    "description": "工具来源选型：系统工具、团队安装插件与自行开发工具 这个决定什么时候必须做 当企业需要新增对接第三方服务、自定义业务逻辑的工具能力，或现有工具无法覆盖业务需求时，该决定成为必须解决的问题。提前选型的代价在于，未明确业务边界与使用场景就投入资源，可能导致冗余开发或配置，造成人力与资源浪费。例如过早部署自研工具…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/plugin-source-selection",
+    "sourceType": "深度场景内容",
+    "minutes": 7
+  },
+  {
+    "identity": "zh|/reference/env-variable-changes-v4172",
+    "title": "FastGPT 环境变量变化表：v4.16.2 → v4.17.2",
+    "description": "FastGPT 环境变量变化表：v4.16.2 → v4.17.2 本页逐行比对 FastGPT v4.16.2 与 v4.17.2 两个发布版本的官方环境变量说明，列出新增、移除与默认值有变化的变量，并把每一项回到 v4.17.2 的开源仓库源码（共 12 个 env.ts 定义文件）核对。 | 变化类型…",
+    "category": "reference",
+    "locale": "zh",
+    "publicPath": "/reference/env-variable-changes-v4172",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "zh|/reference/openapi-endpoint-reference",
+    "title": "FastGPT OpenAPI 接口速查表（v4.17.2）",
+    "description": "FastGPT OpenAPI 接口速查表（v4.17.2） 本页汇总 FastGPT v4.17.2 官方 OpenAPI 文档（应用、对话、知识库三篇）中出现的 33 个接口，并按 v4.17.2 的开源仓库目录核对 projects/app/src/pages/api/ 下是否有对应路由文件。 | 方…",
+    "category": "reference",
+    "locale": "zh",
+    "publicPath": "/reference/openapi-endpoint-reference",
+    "sourceType": "官方文档",
+    "minutes": 7
   }
 ]

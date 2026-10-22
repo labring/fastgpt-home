@@ -45,7 +45,7 @@ jobs:
         uses: justinthelaw/maximize-github-runner-space@v0.12.3
         with:
           cleanup-profile: max
-          skip-components: cached-tools,cached-node
+          skip-components: cached-tools,cached-node,docker-engine,kubectl
           swapfile-size: 16GiB
       - run: echo "Reclaimed ${{ steps.cleanup.outputs.reclaimed-bytes }} bytes"
 

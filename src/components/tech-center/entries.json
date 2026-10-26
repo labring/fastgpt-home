@@ -58121,7 +58121,7 @@
     "sourceType": "深度场景内容",
     "summary": "知识库权限粒度选型：团队角色、协作者与集合权限决策矩阵 这个决定什么时候必须做 当团队内存在多角色协作需求，或知识库包含不同敏感级别的内容，或需要按项目、部门划分访问权限时，该决定成为必须解决的问题。团队规模扩张至跨部门协作阶段，或知识库内文件数量增多、出现差异化访问需求时，若未提前规划权限粒度，会引发权限…",
     "minutes": 8,
-    "dateModified": "2026-10-14"
+    "dateModified": "2026-10-21"
   },
   {
     "title": "FastGPT 常见问答：智能体搭建与运维（120 篇清单）",
@@ -58289,7 +58289,7 @@
     "sourceType": "深度场景内容",
     "summary": "Knowledge Base Permissions: Team Roles, Dataset Collaborators or Collection-Level Access When this decision has to be made You must make this decision whe…",
     "minutes": 27,
-    "dateModified": "2026-10-14"
+    "dateModified": "2026-10-21"
   },
   {
     "title": "FastGPT: Connecting Apps to WeCom, WeChat Official Accounts, Lark, and DingTalk — Version Requirements, Callbacks, and Session Boundaries",

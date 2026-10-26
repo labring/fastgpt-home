@@ -2629,3 +2629,18 @@ test('Industry shares editorial checks while preserving data descriptions and te
     assert.match(dirty.stderr, /D-07 citation-policy/);
   });
 });
+
+test('citation policy treats source keys inside interpolation templates as reader data', () => {
+  const body = [
+    '# Industry example',
+    '',
+    '| Variable reference format | `{{datasetId:xxx,source:cdn}}` |',
+    ''
+  ].join('\n');
+
+  withFixture({ 'src/content/industry/en/template.md': body }, (root) => {
+    const result = runFixture(root);
+    assert.equal(result.status, 0, result.stderr);
+    assert.equal(result.stderr, '');
+  });
+});

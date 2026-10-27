@@ -1,5 +1,5 @@
 ---
-status: accepted
+status: superseded by ADR-0018
 ---
 
 # ADR 0016: Publish the International Site through Workers Static Assets
@@ -24,6 +24,8 @@ ADR 0007 assigns the China Site to Docker/Nginx and keeps publication at the Clo
 Worker-first handling invokes the Worker for every request. This preserves redirect-before-asset behavior for the first comparison release; a later release can narrow Worker routing after equivalent behavior is established.
 
 The first deployment is reachable through `workers.dev` while production DNS continues to serve the retained Pages publication. A failed comparison can return to Pages without changing the China Site path or the PR Preview Worker path.
+
+The workers.dev-only deployment target and manual trigger were superseded by ADR 0018. The Worker/Static Assets artifact and verification contract remain in force.
 
 ## Alternatives considered
 

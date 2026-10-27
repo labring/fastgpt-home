@@ -16,7 +16,7 @@ const { verifyWorkerArtifact } = require('./lib/worker-publication');
 
 const ROOT = path.resolve(__dirname, '..');
 const OUT_DIR = path.join(ROOT, 'out');
-const CONFIG_PATH = path.join(ROOT, 'wrangler.json');
+const CONFIG_PATH = path.join(ROOT, 'wrangler.production.json');
 const PACKAGE = require('../package.json');
 const LOCK = require('../package-lock.json');
 const WRANGLER_BIN = path.join(ROOT, 'node_modules', 'wrangler', 'bin', 'wrangler.js');
@@ -62,6 +62,7 @@ function getAvailablePort() {
 
 function startWrangler(port, persistDir, root = ROOT) {
   // Match deploy bundling: --no-bundle recursively loads out/ HTML and TXT as modules.
+  const configPath = root === ROOT ? CONFIG_PATH : path.join(root, 'wrangler.json');
   const child = spawn(
     process.execPath,
     [
@@ -69,7 +70,7 @@ function startWrangler(port, persistDir, root = ROOT) {
       'dev',
       '--local',
       '--config',
-      path.join(root, 'wrangler.json'),
+      configPath,
       '--ip',
       '127.0.0.1',
       '--port',
@@ -146,6 +147,11 @@ async function verifyHttpSurface(port, worker, env) {
   assert.match(home.headers.get('content-security-policy') || '', /frame-ancestors 'none'/);
   assert.equal(home.headers.get('x-robots-tag'), null, 'International Site must remain indexable');
   const homeHtml = await home.text();
+  assert.match(
+    homeHtml,
+    /<html\b[^>]*\blang=["']en-US["']/i,
+    'Homepage must render English at /'
+  );
   assertCanonical(homeHtml, env.io);
 
   const faqId = getPublishedFaqIds(ROOT).english[0];

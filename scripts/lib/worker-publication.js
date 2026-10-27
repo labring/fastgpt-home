@@ -109,7 +109,7 @@ function verifyWorkerArtifact({
     trustedConfig,
     'Worker configuration differs from the trusted publication profile'
   );
-  assert.equal(config.workers_dev, true, 'First-stage publication must use workers.dev');
+  assert.equal(config.workers_dev, true, 'workers.dev endpoint must remain enabled');
   assert.equal(config.main, './out/_worker.js', 'Worker entrypoint must come from the export');
   assert.equal(config.assets?.directory, './out', 'Static Assets must use the complete export');
   assert.equal(config.assets?.binding, 'ASSETS', 'Worker must bind Static Assets as ASSETS');

@@ -1,6 +1,9 @@
 name: International Site Worker Release
 
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
 concurrency:
@@ -73,9 +76,9 @@ jobs:
       - name: Verify the sealed Worker artifact
         run: |
           node -e "const {getPublicationInputs,siteArtifactIdentity}=require('./scripts/lib/site-artifact-identity');require('node:fs').writeFileSync('expected-site.json', JSON.stringify(getPublicationInputs(siteArtifactIdentity())))"
-          node scripts/verify-site-artifact.js --bundle .release-artifacts/site/io-configured --identity expected-site.json --trusted-config wrangler.json
+          node scripts/verify-site-artifact.js --bundle .release-artifacts/site/io-configured --identity expected-site.json --trusted-config wrangler.production.json
 
-      - name: Deploy verified Worker and Static Assets to workers.dev
+      - name: Deploy verified Worker and Static Assets to fastgpt.io
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_WORKER_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
@@ -95,14 +98,22 @@ jobs:
           const payloadRoot = path.join(artifactRoot, 'payload');
           const artifact = JSON.parse(fs.readFileSync(path.join(artifactRoot, 'manifest.json'), 'utf8'));
           const aliases = JSON.parse(fs.readFileSync(path.join(payloadRoot, 'url-alias/io/release/manifest.json'), 'utf8'));
+          const workerConfig = JSON.parse(
+            fs.readFileSync(path.join(payloadRoot, 'wrangler.json'), 'utf8')
+          );
+          const productionDomain = workerConfig.routes?.find((route) => route.custom_domain)?.pattern;
+          if (productionDomain !== 'fastgpt.io') {
+            throw new Error('Deployed artifact is missing the fastgpt.io production Custom Domain');
+          }
           const deployOutput = fs.readFileSync('.release-artifacts/worker-deploy.log', 'utf8');
-          const deployedUrl = deployOutput.match(/https:\/\/[^\s]+\.workers\.dev/)?.[0];
-          if (!deployedUrl) throw new Error('Wrangler output omitted the workers.dev address');
+          const workersDevUrl =
+            deployOutput.match(/https:\/\/[^\s]+\.workers\.dev/)?.[0] || null;
           const record = {
             sourceRevision: process.env.SOURCE_REVISION,
             workflowRunId: process.env.WORKFLOW_RUN_ID,
             workerName: 'fastgpt-io-worker',
-            deployedUrl,
+            deployedUrl: `https://${productionDomain}`,
+            workersDevUrl,
             wranglerVersion: require('./package.json').devDependencies.wrangler,
             siteArtifactSha256: artifact.inventory.sha256,
             urlAliasAuthorityDigest: aliases.authority.digest,

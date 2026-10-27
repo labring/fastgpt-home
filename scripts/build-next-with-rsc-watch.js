@@ -1,186 +1,147 @@
 #!/usr/bin/env node
 
+/**
+ * Prune disposable RSC build artifacts while preserving exported HTML.
+ */
 const fs = require('node:fs');
 const path = require('node:path');
 const { spawn } = require('node:child_process');
-const { isReplaceableRscPayload } = require('./clean-faq-rsc');
 
 const rootDir = path.join(__dirname, '..');
-const outDir = path.join(rootDir, 'out');
-const DELETE_DELAY_MS = 5000;
+const RSC_STABLE_MS = 5000;
+const RSC_SCAN_INTERVAL_MS = 10000;
+const SKIP_STATIC_RSC_EXPORT = 'FASTGPT_SKIP_STATIC_RSC_EXPORT';
+
+function isWithin(parent, child) {
+  return child.startsWith(`${parent}${path.sep}`);
+}
+
+function installStaticRscCopyFilter(buildRoot = rootDir) {
+  const appDir = path.resolve(buildRoot, '.next', 'server', 'app');
+  const outDir = path.resolve(buildRoot, 'out');
+  const originalCopyFile = fs.promises.copyFile;
+
+  const filteredCopyFile = function (source, destination, ...args) {
+    if (typeof source === 'string' && typeof destination === 'string') {
+      const sourcePath = path.resolve(source);
+      const destinationPath = path.resolve(destination);
+      if (
+        sourcePath.endsWith('.rsc') &&
+        destinationPath.endsWith('.txt') &&
+        isWithin(appDir, sourcePath) &&
+        isWithin(outDir, destinationPath)
+      ) {
+        return Promise.resolve();
+      }
+    }
+
+    return originalCopyFile.call(fs.promises, source, destination, ...args);
+  };
+
+  // shortcut: Next 16 copies disposable RSC through copyFile; revisit if export changes.
+  fs.promises.copyFile = filteredCopyFile;
+  return () => {
+    if (fs.promises.copyFile === filteredCopyFile) {
+      fs.promises.copyFile = originalCopyFile;
+    }
+  };
+}
+
+if (process.env[SKIP_STATIC_RSC_EXPORT] === '1') {
+  installStaticRscCopyFilter();
+}
+
+function getRouteHtmlPath(dir, filename, appDir) {
+  let currentDir = dir;
+  while (currentDir !== appDir && isWithin(appDir, currentDir)) {
+    if (path.basename(currentDir).endsWith('.segments')) {
+      return `${currentDir.slice(0, -'.segments'.length)}.html`;
+    }
+    currentDir = path.dirname(currentDir);
+  }
+  return path.join(dir, `${filename.slice(0, -'.rsc'.length)}.html`);
+}
+
+function cleanAgedRscFiles(dir, now = Date.now(), buildStartedAt = 0, force = false, appDir = dir) {
+  let entries;
+  try {
+    entries = fs.readdirSync(dir, { withFileTypes: true });
+  } catch (error) {
+    if (error.code === 'ENOENT') return 0;
+    throw error;
+  }
+
+  let removed = 0;
+  for (const entry of entries) {
+    const fullPath = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      removed += cleanAgedRscFiles(fullPath, now, buildStartedAt, force, appDir);
+      continue;
+    }
+    if (!entry.isFile() || !entry.name.endsWith('.rsc')) continue;
+
+    try {
+      const { mtimeMs } = fs.statSync(fullPath);
+      if (mtimeMs < buildStartedAt || (!force && mtimeMs + RSC_STABLE_MS > now)) continue;
+      if (!fs.existsSync(getRouteHtmlPath(dir, entry.name, appDir))) {
+        continue;
+      }
+      fs.unlinkSync(fullPath);
+      removed++;
+    } catch (error) {
+      if (error.code !== 'ENOENT') throw error;
+    }
+  }
+
+  return removed;
+}
 
 function startRscWatcher(watchRoot = rootDir) {
-  const watchedOutDir = path.join(watchRoot, 'out');
-  const pendingDirectories = new Map();
-  let rootWatcher;
-  let outWatcher;
-  let outIdentity;
-  let timer;
-  let refreshTimer;
-  let timerDue = Infinity;
+  const appDir = path.join(watchRoot, '.next', 'server', 'app');
+  const buildStartedAt = Date.now();
   let removed = 0;
-  let disabled = false;
+  let timer;
   let stopped = false;
+  let disabled = false;
 
-  function disable(error) {
-    if (disabled) return;
-    disabled = true;
-    clearTimeout(timer);
-    clearTimeout(refreshTimer);
-    rootWatcher?.close();
-    outWatcher?.close();
-    console.warn(
-      `[rsc-watch] disabled: ${error.message}; final cleanup will handle remaining payloads`
-    );
-  }
-
-  function removeAgedPayloads(dir, now) {
-    let retryAt = Infinity;
-    let entries;
-    try {
-      entries = fs.readdirSync(dir, { withFileTypes: true });
-    } catch (error) {
-      if (error.code === 'ENOENT') return retryAt;
-      throw error;
-    }
-
-    for (const entry of entries) {
-      if (!entry.isFile() || !isReplaceableRscPayload(dir, entry.name)) continue;
-
-      const filePath = path.join(dir, entry.name);
-      try {
-        const readyAt = fs.statSync(filePath).mtimeMs + DELETE_DELAY_MS;
-        if (readyAt > now) {
-          retryAt = Math.min(retryAt, readyAt);
-          continue;
-        }
-        fs.unlinkSync(filePath);
-        removed++;
-      } catch (error) {
-        if (error.code !== 'ENOENT') throw error;
-      }
-    }
-
-    return retryAt;
-  }
-
-  function scheduleAt(dueAt) {
-    if (disabled || stopped || (timer && dueAt >= timerDue)) return;
-    clearTimeout(timer);
-    timerDue = dueAt;
-    timer = setTimeout(runPending, Math.max(0, dueAt - Date.now()));
-  }
-
-  function queueDirectory(dir) {
-    if (disabled || stopped || pendingDirectories.has(dir)) return;
-    const dueAt = Date.now() + DELETE_DELAY_MS;
-    pendingDirectories.set(dir, dueAt);
-    scheduleAt(dueAt);
-  }
-
-  function runPending() {
-    timer = null;
-    timerDue = Infinity;
-    const now = Date.now();
-
-    for (const [dir, dueAt] of pendingDirectories) {
-      if (dueAt > now) continue;
-      pendingDirectories.delete(dir);
-      try {
-        const retryAt = removeAgedPayloads(dir, now);
-        if (Number.isFinite(retryAt)) {
-          const nextAttempt = Math.max(retryAt, Date.now() + 250);
-          pendingDirectories.set(dir, nextAttempt);
-        }
-      } catch (error) {
-        disable(error);
-        return;
-      }
-    }
-
-    for (const dueAt of pendingDirectories.values()) scheduleAt(dueAt);
-  }
-
-  function onOutputEvent(_eventType, filename) {
-    if (filename == null) return;
-    const relativePath = filename.toString();
-    if (!relativePath.endsWith('.txt')) return;
-    queueDirectory(path.dirname(path.join(watchedOutDir, relativePath)));
-  }
-
-  function scheduleOutputWatcherRefresh() {
-    if (disabled || stopped || refreshTimer) return;
-    refreshTimer = setTimeout(() => {
-      refreshTimer = undefined;
-      attachOutputWatcher();
-    }, 100);
-  }
-
-  function attachOutputWatcher() {
-    if (disabled) return;
-
-    let stats;
-    try {
-      stats = fs.statSync(watchedOutDir);
-    } catch (error) {
-      if (error.code !== 'ENOENT') disable(error);
-      outWatcher?.close();
-      outWatcher = undefined;
-      outIdentity = undefined;
-      return;
-    }
-
-    if (!stats.isDirectory()) return;
-    const identity = `${stats.dev}:${stats.ino}`;
-    if (outWatcher && identity === outIdentity) return;
-
-    outWatcher?.close();
-    outWatcher = undefined;
-    try {
-      const watcher = fs.watch(watchedOutDir, { recursive: true }, onOutputEvent);
-      outWatcher = watcher;
-      outIdentity = identity;
-      watcher.on('error', (error) => {
-        watcher.close();
-        if (outWatcher === watcher) {
-          outWatcher = undefined;
-          outIdentity = undefined;
-        }
-        if (error.code === 'ENOENT') scheduleOutputWatcherRefresh();
-        else disable(error);
-      });
-    } catch (error) {
-      disable(error);
-    }
-  }
-
-  try {
-    rootWatcher = fs.watch(watchRoot, (_eventType, filename) => {
-      if (filename?.toString() !== 'out') return;
-      scheduleOutputWatcherRefresh();
-    });
-    rootWatcher.on('error', disable);
-    attachOutputWatcher();
-  } catch (error) {
-    disable(error);
-  }
-
-  return function stopRscWatcher() {
+  function stopRscWatcher(finalScan = false) {
     if (stopped) return;
     stopped = true;
     clearTimeout(timer);
-    clearTimeout(refreshTimer);
-    rootWatcher?.close();
-    outWatcher?.close();
-    console.log(`[rsc-watch] removed=${removed}; pendingDirectories=${pendingDirectories.size}`);
-  };
+    if (finalScan) {
+      try {
+        removed += cleanAgedRscFiles(appDir, Date.now(), buildStartedAt, true);
+      } catch (error) {
+        console.warn(`[rsc-watch] final scan failed: ${error.message}`);
+      }
+    }
+    console.log(`[rsc-watch] removed=${removed}`);
+  }
+
+  function scan() {
+    if (stopped || disabled) return;
+    try {
+      removed += cleanAgedRscFiles(appDir, Date.now(), buildStartedAt);
+    } catch (error) {
+      disabled = true;
+      console.warn(
+        `[rsc-watch] disabled: ${error.message}; build continues without background cleanup`
+      );
+      return;
+    }
+    timer = setTimeout(scan, RSC_SCAN_INTERVAL_MS);
+  }
+
+  timer = setTimeout(scan, RSC_SCAN_INTERVAL_MS);
+  return stopRscWatcher;
 }
 
 function runNextBuild() {
   const nextCli = require.resolve('next/dist/bin/next');
   const stopRscWatcher = startRscWatcher();
-  const child = spawn(process.execPath, [nextCli, 'build', '--webpack'], {
+  const child = spawn(process.execPath, ['--require', __filename, nextCli, 'build', '--webpack'], {
     cwd: rootDir,
+    env: { ...process.env, [SKIP_STATIC_RSC_EXPORT]: '1' },
     stdio: 'inherit'
   });
   let interrupted = false;
@@ -196,7 +157,7 @@ function runNextBuild() {
     finished = true;
     process.off('SIGINT', onSigint);
     process.off('SIGTERM', onSigterm);
-    stopRscWatcher();
+    stopRscWatcher(true);
     process.exitCode = code;
   }
 
@@ -219,4 +180,4 @@ function runNextBuild() {
 
 if (require.main === module) runNextBuild();
 
-module.exports = { startRscWatcher };
+module.exports = { cleanAgedRscFiles, installStaticRscCopyFilter, startRscWatcher };

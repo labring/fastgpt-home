@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "prebuild": "node scripts/prepare-build.js && node scripts/generate-robots.js && node scripts/generate-llms.js",
-    "build": "next build --webpack && node scripts/clean-locale-output.js && node scripts/clean-faq-rsc.js && node scripts/fix-html-lang.js && npm run generate:blog-pagefind",
+    "build": "node scripts/build-next-with-rsc-watch.js && node scripts/clean-locale-output.js && node scripts/clean-faq-rsc.js && node scripts/fix-html-lang.js && npm run generate:blog-pagefind",
     "start": "npx serve@latest out",
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\"",
     "prepare": "husky",

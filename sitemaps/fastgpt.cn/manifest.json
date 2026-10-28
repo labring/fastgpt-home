@@ -1,0 +1,55 @@
+{
+  "schema": 1,
+  "site": "https://fastgpt.cn",
+  "shards": [
+    {
+      "bucket": "core",
+      "file": "sitemap-core-000-8bb72e73.xml",
+      "sequence": 0,
+      "sha256": "8bb72e73e2b757910871d33962fede1d4ba84d70bf1370142a241a7e510ad2f2",
+      "urls": 5000
+    },
+    {
+      "bucket": "core",
+      "file": "sitemap-core-001-c061c0bd.xml",
+      "sequence": 1,
+      "sha256": "c061c0bd95a80c572c431b419ec3ca57beea809f854c42ff9512b8e428abfdcb",
+      "urls": 1920
+    },
+    {
+      "bucket": "industry-biomed",
+      "file": "sitemap-industry-biomed-000-708dedc2.xml",
+      "sequence": 0,
+      "sha256": "708dedc299f6b6acb49a632612c1b18ab60373308471f02961f170669209c3df",
+      "urls": 5000
+    },
+    {
+      "bucket": "industry-biomed",
+      "file": "sitemap-industry-biomed-001-7c2d8787.xml",
+      "sequence": 1,
+      "sha256": "7c2d87873400f673083b8f0536e9b1f2df0a086732dbd4cffd9c9d2379a1c085",
+      "urls": 977
+    },
+    {
+      "bucket": "industry-fin",
+      "file": "sitemap-industry-fin-000-721e4767.xml",
+      "sequence": 0,
+      "sha256": "721e47670c46ea9b30ebe73e3e5b01a13d97db6968671115c5ec4a86ff23245c",
+      "urls": 1080
+    },
+    {
+      "bucket": "industry-finance",
+      "file": "sitemap-industry-finance-000-68e13519.xml",
+      "sequence": 0,
+      "sha256": "68e135199a4f42de25d9cd8a05e0e93cbd84c7eebe6cdf0d5ce652bce8762621",
+      "urls": 5000
+    },
+    {
+      "bucket": "industry-finance",
+      "file": "sitemap-industry-finance-001-bd80fdb4.xml",
+      "sequence": 1,
+      "sha256": "bd80fdb4acc332c2f574730a26181fc5f937aad186e18207ffe47f98b722112b",
+      "urls": 4000
+    }
+  ]
+}

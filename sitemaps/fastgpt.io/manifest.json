@@ -1,0 +1,69 @@
+{
+  "schema": 1,
+  "site": "https://fastgpt.io",
+  "shards": [
+    {
+      "bucket": "core",
+      "file": "sitemap-core-000-3c57e423.xml",
+      "sequence": 0,
+      "sha256": "3c57e4238a7b3ea00156f0172a1c77f268a840b09f301f68429305586d893c2a",
+      "urls": 2320
+    },
+    {
+      "bucket": "industry-biomed",
+      "file": "sitemap-industry-biomed-000-d8e2072a.xml",
+      "sequence": 0,
+      "sha256": "d8e2072aafacec0c269bca65539d8d45a3f48ae19f57983ae4aeb7ecbaa52348",
+      "urls": 5000
+    },
+    {
+      "bucket": "industry-biomed",
+      "file": "sitemap-industry-biomed-001-61efefd2.xml",
+      "sequence": 1,
+      "sha256": "61efefd2095a1e595ea827a7beeb0d474bd465278a9e54ed32d7b3ff661ce761",
+      "urls": 678
+    },
+    {
+      "bucket": "industry-finance",
+      "file": "sitemap-industry-finance-000-d283c6b2.xml",
+      "sequence": 0,
+      "sha256": "d283c6b2e36a992661632ac1d787015bf877de7df8340d306791a7eb482149f5",
+      "urls": 5000
+    },
+    {
+      "bucket": "industry-finance",
+      "file": "sitemap-industry-finance-001-d01a25fb.xml",
+      "sequence": 1,
+      "sha256": "d01a25fbe88f63f92df4fee7a84b57504c7de0b2cbcb2415eaca5291231da25b",
+      "urls": 4000
+    },
+    {
+      "bucket": "industry-govt",
+      "file": "sitemap-industry-govt-000-cd6d23a2.xml",
+      "sequence": 0,
+      "sha256": "cd6d23a2f7c4d20a52057bb555a1991615e03877cd8a2d6dab40eed0ce95e1ee",
+      "urls": 5000
+    },
+    {
+      "bucket": "industry-govt",
+      "file": "sitemap-industry-govt-001-eab01f87.xml",
+      "sequence": 1,
+      "sha256": "eab01f878bc141f18e9ac5b4b125eb119a0ebe3b996c0f26442ad3e8329aaba1",
+      "urls": 2980
+    },
+    {
+      "bucket": "industry-mfg",
+      "file": "sitemap-industry-mfg-000-3b521f5c.xml",
+      "sequence": 0,
+      "sha256": "3b521f5cdb49e23e3d3cb9db56b16b88831da1cf40f5a00427d7e76a0450dbe1",
+      "urls": 5000
+    },
+    {
+      "bucket": "industry-mfg",
+      "file": "sitemap-industry-mfg-001-54a8f11a.xml",
+      "sequence": 1,
+      "sha256": "54a8f11adaaf0ad3e6078934929a6bbe7ed1013363c7d9d7b4d65fc51c645119",
+      "urls": 355
+    }
+  ]
+}

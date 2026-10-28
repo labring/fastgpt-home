@@ -138,10 +138,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const industryEntries = getIndustrySitemapEntries(currentSiteVariant);
   const industryLocale = resolveIndustryLocale(getDefaultLocaleForSiteVariant(currentSiteVariant));
   if (industryEntries.length && industryLocale) {
-    addEntry(
-      getIndustryHubCanonicalUrl(industryLocale),
-      getLatestDate(industryEntries.map((article) => new Date(`${article.dateModified}T00:00:00Z`)))
-    );
+    // The hub has no independent modification date; article dates stay on article URLs.
+    addEntry(getIndustryHubCanonicalUrl(industryLocale));
   }
   for (const article of industryEntries) {
     addEntry(

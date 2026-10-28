@@ -1,104 +1,801 @@
+#!/usr/bin/env node
+/** Persists content-addressed shards under sitemaps/<host> and assembles static output. */
+const crypto = require('node:crypto');
 const fs = require('node:fs');
 const path = require('node:path');
+const { gzipSync } = require('node:zlib');
+const { DOMParser, XMLSerializer } = require('@xmldom/xmldom');
+const { getProductionBaseUrls, resolveSiteVariant } = require('./lib/site-variant');
 
 const SITEMAP_NAMESPACE = 'http://www.sitemaps.org/schemas/sitemap/0.9';
+const XMLNS_NAMESPACE = 'http://www.w3.org/2000/xmlns/';
 const XML_DECLARATION = '<?xml version="1.0" encoding="UTF-8"?>';
 const URL_LIMIT = 5000;
-const BYTE_LIMIT = 50 * 1024 * 1024;
+const SHARD_BYTE_LIMIT = 10 * 1024 * 1024;
+const PROTOCOL_BYTE_LIMIT = 50 * 1024 * 1024;
+const SHARD_NAME = /^sitemap-(.+)-(\d+)-([a-f0-9]{8})\.xml$/;
+const serializer = new XMLSerializer();
 
-function buildUrlset(urlBlocks) {
-  return [
-    XML_DECLARATION,
-    `<urlset xmlns="${SITEMAP_NAMESPACE}">`,
-    ...urlBlocks,
-    '</urlset>',
-    ''
-  ].join('\n');
+function normalizeSite(value) {
+  let url;
+  try {
+    url = new URL(value);
+  } catch {
+    throw new Error(`Invalid sitemap site origin: ${value}`);
+  }
+  if (
+    url.protocol !== 'https:' ||
+    url.username ||
+    url.password ||
+    url.pathname !== '/' ||
+    url.search ||
+    url.hash
+  ) {
+    throw new Error(`Sitemap site must be a bare HTTPS origin: ${value}`);
+  }
+  return url.origin;
 }
 
-function buildSitemapShards(xml, limit = URL_LIMIT) {
-  if (!Number.isInteger(limit) || limit < 1 || limit > 50000) {
-    throw new Error('Sitemap shard limit must be an integer between 1 and 50000');
-  }
-  if (!/<urlset\b[^>]*>/.test(xml) || !/<\/urlset>/.test(xml) || /<sitemapindex\b/.test(xml)) {
-    throw new Error('Expected a complete sitemap urlset');
+function parseXmlDocument(input, label) {
+  const bytes = Buffer.isBuffer(input) ? input : Buffer.from(input, 'utf8');
+  if (!bytes.length || bytes.length > PROTOCOL_BYTE_LIMIT) {
+    throw new Error(`${label} is empty or exceeds the 50 MiB protocol limit`);
   }
 
-  // Next emits one url block per entry; retain each block so lastmod stays source-derived.
-  const urlBlocks = xml.match(/<url\b[^>]*>[\s\S]*?<\/url>/g) || [];
-  if (!urlBlocks.length || urlBlocks.length !== (xml.match(/<url\b/g) || []).length) {
-    throw new Error('Sitemap contains no URLs or has an incomplete url block');
+  let xml;
+  try {
+    xml = new TextDecoder('utf-8', { fatal: true }).decode(bytes);
+  } catch {
+    throw new Error(`${label} must be valid UTF-8 XML`);
+  }
+  if (/<!\s*(?:DOCTYPE|ENTITY)\b/i.test(xml)) {
+    throw new Error(`${label} must not contain DTD or entity declarations`);
   }
 
-  let siteOrigin;
+  const errors = [];
+  let document;
+  try {
+    document = new DOMParser({
+      onError: (level, message) => errors.push(`${level}: ${message}`)
+    }).parseFromString(xml, 'application/xml');
+  } catch (error) {
+    throw new Error(`${label} XML parse failed: ${error.message || error}`);
+  }
+  if (errors.length) throw new Error(`${label} XML parse failed: ${errors[0]}`);
+  if (!document.documentElement) throw new Error(`${label} has no document element`);
+  return document;
+}
+
+function elementChildren(node) {
+  return Array.from(node.childNodes || []).filter((child) => child.nodeType === 1);
+}
+
+function getNamespaceAttributes(root) {
+  const attributes = [];
+  for (let i = 0; i < root.attributes.length; i += 1) {
+    const attribute = root.attributes.item(i);
+    if (attribute.namespaceURI !== XMLNS_NAMESPACE && !attribute.name.startsWith('xmlns:')) {
+      throw new Error(`Sitemap root attribute ${attribute.name} requires an explicit adapter`);
+    }
+    attributes.push({ name: attribute.name, value: attribute.value });
+  }
+  return attributes.sort((a, b) => (a.name < b.name ? -1 : a.name > b.name ? 1 : 0));
+}
+
+function escapeXml(value) {
+  return String(value)
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&apos;');
+}
+
+function validateLoc(value, site) {
+  if (
+    !value ||
+    value.length >= 2048 ||
+    /[\u0000-\u0020\u007f-\u009f\\]/.test(value) ||
+    value.includes('#')
+  ) {
+    throw new Error(`Invalid sitemap loc: ${value}`);
+  }
+
+  let url;
+  try {
+    url = new URL(value);
+  } catch {
+    throw new Error(`Invalid sitemap loc: ${value}`);
+  }
+  if (url.protocol !== 'https:') throw new Error(`Sitemap loc must use HTTPS: ${value}`);
+  if (url.origin !== site) throw new Error(`Sitemap loc uses another origin: ${value}`);
+  if (url.username || url.password)
+    throw new Error(`Sitemap loc must not contain credentials: ${value}`);
+  return value;
+}
+
+function validateLastmod(value, loc) {
+  const match = value.match(
+    /^(\d{4})-(\d{2})-(\d{2})(?:T(\d{2}):(\d{2}):(\d{2})(?:\.\d+)?(Z|[+-]\d{2}:\d{2}))?$/
+  );
+  if (!match) throw new Error(`Invalid W3C lastmod for ${loc}: ${value}`);
+
+  const [year, month, day] = match.slice(1, 4).map(Number);
+  const calendarDate = new Date(`${match[1]}-${match[2]}-${match[3]}T00:00:00Z`);
+  if (
+    calendarDate.getUTCFullYear() !== year ||
+    calendarDate.getUTCMonth() !== month - 1 ||
+    calendarDate.getUTCDate() !== day
+  ) {
+    throw new Error(`Invalid calendar date in lastmod for ${loc}: ${value}`);
+  }
+  if (match[4] !== undefined) {
+    const [, , , , hour, minute, second, timezone] = match;
+    if (Number(hour) > 23 || Number(minute) > 59 || Number(second) > 59) {
+      throw new Error(`Invalid time in lastmod for ${loc}: ${value}`);
+    }
+    if (timezone !== 'Z') {
+      const [, offsetHour, offsetMinute] = timezone.match(/[+-](\d{2}):(\d{2})/);
+      if (Number(offsetHour) > 23 || Number(offsetMinute) > 59) {
+        throw new Error(`Invalid timezone in lastmod for ${loc}: ${value}`);
+      }
+    }
+  }
+  if (!Number.isFinite(Date.parse(value))) {
+    throw new Error(`Invalid W3C lastmod for ${loc}: ${value}`);
+  }
+}
+
+function bucketForLoc(loc) {
+  const segments = new URL(loc).pathname.split('/').filter(Boolean);
+  const industryIndex = segments.indexOf('industry');
+  if (industryIndex < 0) return 'core';
+  if (industryIndex === segments.length - 1) return 'core';
+
+  const category = segments[industryIndex + 1]
+    .split('-')[0]
+    .toLowerCase()
+    .replace(/[^a-z0-9-]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+  return `industry-${category || 'other'}`;
+}
+
+function parseUrlset(input, site, maxUrlCount = 50000) {
+  const normalizedSite = normalizeSite(site);
+  const document = parseXmlDocument(input, 'Sitemap urlset');
+  const root = document.documentElement;
+  if (root.namespaceURI !== SITEMAP_NAMESPACE || root.localName !== 'urlset') {
+    throw new Error('Expected a namespaced sitemap urlset');
+  }
+  if ([...root.childNodes].some((child) => child.nodeType === 3 && child.nodeValue.trim())) {
+    throw new Error('Sitemap urlset contains unexpected text');
+  }
+
+  const namespaceAttributes = getNamespaceAttributes(root);
+  const rootOpen = `<${root.nodeName}${namespaceAttributes
+    .map(({ name, value }) => ` ${name}="${escapeXml(value)}"`)
+    .join('')}>`;
+  const rootClose = `</${root.nodeName}>`;
+  const namespaceFingerprint = namespaceAttributes
+    .map(({ name, value }) => `${name}=${value}`)
+    .join('\n');
+  const rootInfo = { rootOpen, rootClose, namespaceFingerprint };
+  const entries = [];
   const seen = new Set();
-  for (const block of urlBlocks) {
-    const loc = block.match(/<loc>([\s\S]*?)<\/loc>/)?.[1]?.trim();
-    if (!loc) throw new Error('Sitemap URL is missing a loc');
 
-    let url;
+  for (const child of elementChildren(root)) {
+    if (child.namespaceURI !== SITEMAP_NAMESPACE || child.localName !== 'url') {
+      throw new Error(`Unexpected sitemap urlset child: ${child.nodeName}`);
+    }
+    const children = elementChildren(child);
+    const locElements = children.filter(
+      (element) => element.namespaceURI === SITEMAP_NAMESPACE && element.localName === 'loc'
+    );
+    if (locElements.length !== 1 || elementChildren(locElements[0]).length) {
+      throw new Error('Each sitemap url requires exactly one text-only loc');
+    }
+
+    const loc = validateLoc(locElements[0].textContent.trim(), normalizedSite);
+    if (seen.has(loc)) throw new Error(`Duplicate sitemap loc: ${loc}`);
+    seen.add(loc);
+
+    const lastmods = children.filter(
+      (element) => element.namespaceURI === SITEMAP_NAMESPACE && element.localName === 'lastmod'
+    );
+    if (lastmods.length > 1 || lastmods.some((element) => elementChildren(element).length)) {
+      throw new Error(`Invalid or duplicate lastmod for ${loc}`);
+    }
+    if (lastmods.length) validateLastmod(lastmods[0].textContent.trim(), loc);
+
+    for (const node of Array.from(child.childNodes)) {
+      if (node.nodeType !== 3 && node.nodeType !== 4) continue;
+      if (node.nodeValue.trim()) throw new Error(`Unexpected text in sitemap url: ${loc}`);
+      child.removeChild(node);
+    }
+
+    let xml;
     try {
-      url = new URL(loc.replace(/&amp;/g, '&'));
-    } catch {
-      throw new Error(`Invalid sitemap loc: ${loc}`);
+      xml = serializer.serializeToString(child);
+    } catch (error) {
+      throw new Error(`Could not preserve sitemap metadata for ${loc}: ${error.message || error}`);
     }
-    if (url.protocol !== 'https:') throw new Error(`Sitemap loc must use HTTPS: ${loc}`);
-    if (!siteOrigin) siteOrigin = url.origin;
-    if (url.origin !== siteOrigin) throw new Error(`Sitemap loc uses another origin: ${loc}`);
-    if (seen.has(url.href)) throw new Error(`Duplicate sitemap loc: ${loc}`);
-    seen.add(url.href);
+    entries.push({
+      bucket: bucketForLoc(loc),
+      fingerprint: `${namespaceFingerprint}\n${xml}`,
+      loc,
+      xml,
+      xmlBytes: Buffer.byteLength(xml)
+    });
+    if (entries.length > maxUrlCount) throw new Error('Sitemap url count exceeds 50,000');
   }
 
-  const emptyShardBytes = Buffer.byteLength(buildUrlset([]));
-  const shards = [];
+  if (!entries.length) throw new Error('Sitemap urlset is empty');
+  return { entries, rootInfo, site: normalizedSite };
+}
+
+function renderUrlset(rootInfo, entries) {
+  const body = entries.map((entry) => entry.xml).join('\n');
+  return `${XML_DECLARATION}\n${rootInfo.rootOpen}\n${body}${body ? '\n' : ''}${
+    rootInfo.rootClose
+  }\n`;
+}
+
+function validateShardLimits(maxUrlsPerShard, maxShardBytes) {
+  if (!Number.isInteger(maxUrlsPerShard) || maxUrlsPerShard < 1 || maxUrlsPerShard > URL_LIMIT) {
+    throw new Error(`Sitemap shard URL limit must be between 1 and ${URL_LIMIT}`);
+  }
+  if (
+    !Number.isInteger(maxShardBytes) ||
+    maxShardBytes < 1024 ||
+    maxShardBytes > SHARD_BYTE_LIMIT
+  ) {
+    throw new Error(`Sitemap shard byte limit must be between 1 KiB and ${SHARD_BYTE_LIMIT}`);
+  }
+}
+
+function compareLoc(a, b) {
+  return a.loc < b.loc ? -1 : a.loc > b.loc ? 1 : 0;
+}
+
+function chunkEntries(entries, rootInfo, maxUrlsPerShard, maxShardBytes) {
+  validateShardLimits(maxUrlsPerShard, maxShardBytes);
+  const sorted = [...entries].sort(compareLoc);
+  const emptyBytes = Buffer.byteLength(renderUrlset(rootInfo, []));
+  const chunks = [];
   let current = [];
-  let currentBytes = emptyShardBytes;
+  let currentBytes = emptyBytes;
 
-  for (const block of urlBlocks) {
-    const blockBytes = Buffer.byteLength(block);
-    const nextBytes = currentBytes + (current.length ? 1 : 0) + blockBytes;
-    if (current.length && (current.length >= limit || nextBytes > BYTE_LIMIT)) {
-      shards.push(buildUrlset(current));
+  for (const entry of sorted) {
+    const nextBytes = currentBytes + entry.xmlBytes + 1;
+    if (current.length && (current.length >= maxUrlsPerShard || nextBytes > maxShardBytes)) {
+      chunks.push(current);
       current = [];
-      currentBytes = emptyShardBytes;
+      currentBytes = emptyBytes;
+    }
+    const entryBytes = currentBytes + entry.xmlBytes + 1;
+    if (entryBytes > maxShardBytes) {
+      throw new Error(`A single sitemap URL exceeds the ${maxShardBytes}-byte shard budget`);
+    }
+    current.push(entry);
+    currentBytes = entryBytes;
+  }
+  if (current.length) chunks.push(current);
+  return chunks;
+}
+
+function sha256(bytes) {
+  return crypto.createHash('sha256').update(bytes).digest('hex');
+}
+
+function deterministicGzip(bytes) {
+  const gzip = gzipSync(bytes, { level: 6, mtime: 0 });
+  gzip.fill(0, 4, 8);
+  gzip[9] = 255;
+  return gzip;
+}
+
+function shardFileName(bucket, sequence, digest) {
+  if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(bucket)) {
+    throw new Error(`Invalid sitemap shard bucket: ${bucket}`);
+  }
+  return `sitemap-${bucket}-${String(sequence).padStart(3, '0')}-${digest.slice(0, 8)}.xml`;
+}
+
+function parseShardFileName(file) {
+  const match = file.match(SHARD_NAME);
+  if (!match || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(match[1])) return null;
+  const sequence = Number(match[2]);
+  if (!Number.isSafeInteger(sequence) || String(sequence).padStart(3, '0') !== match[2])
+    return null;
+  return { bucket: match[1], hash: match[3], sequence };
+}
+
+function makeShard(rootInfo, bucket, sequence, entries) {
+  const xml = Buffer.from(renderUrlset(rootInfo, entries), 'utf8');
+  const digest = sha256(xml);
+  return {
+    bytes: xml,
+    descriptor: {
+      bucket,
+      file: shardFileName(bucket, sequence, digest),
+      sequence,
+      sha256: digest,
+      urls: entries.length
+    },
+    gzip: deterministicGzip(xml)
+  };
+}
+
+function atomicWriteIfChanged(file, content) {
+  fs.mkdirSync(path.dirname(file), { recursive: true });
+  const bytes = Buffer.isBuffer(content) ? content : Buffer.from(content, 'utf8');
+  if (fs.existsSync(file) && fs.readFileSync(file).equals(bytes)) return false;
+
+  const temporary = path.join(path.dirname(file), `.${path.basename(file)}.${process.pid}.tmp`);
+  try {
+    fs.writeFileSync(temporary, bytes);
+    fs.renameSync(temporary, file);
+  } finally {
+    fs.rmSync(temporary, { force: true });
+  }
+  return true;
+}
+
+function writeImmutableShard(stateDirectory, shard) {
+  const xmlPath = path.join(stateDirectory, shard.descriptor.file);
+  if (fs.existsSync(xmlPath) && !fs.readFileSync(xmlPath).equals(shard.bytes)) {
+    throw new Error(`Eight-character sitemap hash collision: ${shard.descriptor.file}`);
+  }
+  atomicWriteIfChanged(xmlPath, shard.bytes);
+  atomicWriteIfChanged(`${xmlPath}.gz`, shard.gzip);
+}
+
+function scanHistory(stateDirectory) {
+  if (!fs.existsSync(stateDirectory)) {
+    return { files: new Map(), maxSequences: new Map() };
+  }
+  const files = new Map();
+  const maxSequences = new Map();
+
+  for (const file of fs.readdirSync(stateDirectory)) {
+    if (!file.startsWith('sitemap-') || !file.endsWith('.xml')) continue;
+    const name = parseShardFileName(file);
+    if (!name) throw new Error(`Invalid persisted sitemap shard name: ${file}`);
+
+    const bytes = fs.readFileSync(path.join(stateDirectory, file));
+    if (sha256(bytes).slice(0, 8) !== name.hash)
+      throw new Error(`Persisted sitemap hash mismatch: ${file}`);
+    if (bytes.length > SHARD_BYTE_LIMIT)
+      throw new Error(`Persisted sitemap shard exceeds 10 MiB: ${file}`);
+    const gzipPath = path.join(stateDirectory, `${file}.gz`);
+    if (!fs.existsSync(gzipPath)) atomicWriteIfChanged(gzipPath, deterministicGzip(bytes));
+    files.set(file, { bytes, file, ...name });
+    maxSequences.set(name.bucket, Math.max(maxSequences.get(name.bucket) ?? -1, name.sequence));
+  }
+  return { files, maxSequences };
+}
+
+function readSnapshot(stateDirectory, site, history) {
+  const manifestPath = path.join(stateDirectory, 'manifest.json');
+  if (!fs.existsSync(manifestPath)) {
+    const hasPartialState =
+      history.files.size > 0 ||
+      (fs.existsSync(stateDirectory) &&
+        fs.readdirSync(stateDirectory).some((file) => /^sitemap(?:\.|-)/.test(file)));
+    if (hasPartialState)
+      throw new Error(`Persisted sitemap state has no manifest: ${stateDirectory}`);
+    return [];
+  }
+
+  let manifest;
+  try {
+    manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
+  } catch (error) {
+    throw new Error(`Invalid persisted sitemap manifest: ${error.message || error}`);
+  }
+  if (
+    manifest.schema !== 1 ||
+    manifest.site !== site ||
+    !Array.isArray(manifest.shards) ||
+    !manifest.shards.length
+  ) {
+    throw new Error(`Persisted sitemap manifest has invalid identity or schema: ${manifestPath}`);
+  }
+
+  const files = new Set();
+  const slots = new Set();
+  const urls = new Set();
+  const previousShards = [];
+  for (const shard of manifest.shards) {
+    if (
+      !shard ||
+      !Number.isSafeInteger(shard.sequence) ||
+      shard.sequence < 0 ||
+      !Number.isInteger(shard.urls) ||
+      shard.urls < 1 ||
+      shard.urls > URL_LIMIT ||
+      !/^[a-f0-9]{64}$/.test(shard.sha256)
+    ) {
+      throw new Error('Persisted sitemap manifest contains an invalid shard descriptor');
+    }
+    const expectedFile = shardFileName(shard.bucket, shard.sequence, shard.sha256);
+    if (shard.file !== expectedFile || files.has(shard.file)) {
+      throw new Error(
+        `Persisted sitemap manifest has an invalid or duplicate shard: ${shard.file}`
+      );
+    }
+    const slot = `${shard.bucket}:${shard.sequence}`;
+    if (slots.has(slot)) throw new Error(`Persisted sitemap manifest repeats shard slot ${slot}`);
+    files.add(shard.file);
+    slots.add(slot);
+
+    const stored = history.files.get(shard.file);
+    if (!stored || sha256(stored.bytes) !== shard.sha256) {
+      throw new Error(`Persisted sitemap shard disagrees with manifest: ${shard.file}`);
+    }
+    const parsed = parseUrlset(stored.bytes, site);
+    if (parsed.entries.length !== shard.urls || parsed.entries.length > URL_LIMIT) {
+      throw new Error(`Persisted sitemap shard has an invalid URL count: ${shard.file}`);
+    }
+    if (parsed.entries.some((entry) => entry.bucket !== shard.bucket)) {
+      throw new Error(`Persisted sitemap shard contains a URL from another bucket: ${shard.file}`);
+    }
+    for (const entry of parsed.entries) {
+      if (urls.has(entry.loc)) throw new Error(`Duplicate persisted sitemap loc: ${entry.loc}`);
+      urls.add(entry.loc);
+    }
+    previousShards.push({ ...shard, entries: parsed.entries });
+  }
+  return previousShards;
+}
+
+function nextSequence(bucket, maxSequences) {
+  const sequence = (maxSequences.get(bucket) ?? -1) + 1;
+  maxSequences.set(bucket, sequence);
+  return sequence;
+}
+
+function buildInitialShards(entries, rootInfo, maxSequences, maxUrlsPerShard, maxShardBytes) {
+  const groups = new Map();
+  for (const entry of entries) {
+    if (!groups.has(entry.bucket)) groups.set(entry.bucket, []);
+    groups.get(entry.bucket).push(entry);
+  }
+
+  const descriptors = [];
+  const shards = [];
+  for (const bucket of [...groups.keys()].sort()) {
+    for (const chunk of chunkEntries(
+      groups.get(bucket),
+      rootInfo,
+      maxUrlsPerShard,
+      maxShardBytes
+    )) {
+      const shard = makeShard(rootInfo, bucket, nextSequence(bucket, maxSequences), chunk);
+      descriptors.push(shard.descriptor);
+      shards.push(shard);
+    }
+  }
+  return {
+    descriptors: descriptors.map(({ bucket, file, sequence, sha256: digest, urls }) => ({
+      bucket,
+      file,
+      sequence,
+      sha256: digest,
+      urls
+    })),
+    shards
+  };
+}
+
+function reconcileShards(
+  entries,
+  rootInfo,
+  previousShards,
+  maxSequences,
+  maxUrlsPerShard,
+  maxShardBytes
+) {
+  maxSequences = new Map(maxSequences);
+  if (!previousShards.length) {
+    return buildInitialShards(entries, rootInfo, maxSequences, maxUrlsPerShard, maxShardBytes);
+  }
+
+  const currentByLoc = new Map(entries.map((entry) => [entry.loc, entry]));
+  const assigned = new Set();
+  const descriptors = [];
+  const shards = [];
+
+  for (const previous of previousShards) {
+    const updatedEntries = [];
+    let changed = false;
+    for (const oldEntry of previous.entries) {
+      const current = currentByLoc.get(oldEntry.loc);
+      if (!current || current.bucket !== previous.bucket) {
+        changed = true;
+        continue;
+      }
+      assigned.add(current.loc);
+      updatedEntries.push(current);
+      if (current.fingerprint !== oldEntry.fingerprint) changed = true;
     }
 
-    const shardBytes = currentBytes + (current.length ? 1 : 0) + blockBytes;
-    if (shardBytes > BYTE_LIMIT)
-      throw new Error(`A single sitemap URL exceeds ${BYTE_LIMIT} bytes`);
-    current.push(block);
-    currentBytes = shardBytes;
-  }
-  if (current.length) shards.push(buildUrlset(current));
+    if (!changed) {
+      descriptors.push(previous);
+      continue;
+    }
 
-  const index = [
+    const chunks = chunkEntries(updatedEntries, rootInfo, maxUrlsPerShard, maxShardBytes);
+    for (const [index, chunk] of chunks.entries()) {
+      const sequence =
+        index === 0 ? previous.sequence : nextSequence(previous.bucket, maxSequences);
+      const shard = makeShard(rootInfo, previous.bucket, sequence, chunk);
+      descriptors.push(shard.descriptor);
+      shards.push(shard);
+    }
+  }
+
+  const additions = entries.filter((entry) => !assigned.has(entry.loc));
+  const additionsByBucket = new Map();
+  for (const entry of additions) {
+    if (!additionsByBucket.has(entry.bucket)) additionsByBucket.set(entry.bucket, []);
+    additionsByBucket.get(entry.bucket).push(entry);
+  }
+  for (const bucket of [...additionsByBucket.keys()].sort()) {
+    for (const chunk of chunkEntries(
+      additionsByBucket.get(bucket),
+      rootInfo,
+      maxUrlsPerShard,
+      maxShardBytes
+    )) {
+      const shard = makeShard(rootInfo, bucket, nextSequence(bucket, maxSequences), chunk);
+      descriptors.push(shard.descriptor);
+      shards.push(shard);
+    }
+  }
+  return {
+    descriptors: descriptors.map(({ bucket, file, sequence, sha256: digest, urls }) => ({
+      bucket,
+      file,
+      sequence,
+      sha256: digest,
+      urls
+    })),
+    shards
+  };
+}
+
+function buildIndex(site, host, shards) {
+  if (!shards.length || shards.length > 50000) {
+    throw new Error('Sitemap index must contain between 1 and 50,000 shards');
+  }
+  const entries = shards.map((shard) => {
+    const loc = `${site}/sitemap-shards/${host}/${shard.file}`;
+    return `  <sitemap>\n    <loc>${escapeXml(loc)}</loc>\n  </sitemap>`;
+  });
+  return [
     XML_DECLARATION,
     `<sitemapindex xmlns="${SITEMAP_NAMESPACE}">`,
-    ...shards.map(
-      (_, i) => `  <sitemap>\n    <loc>${siteOrigin}/sitemap-${i}.xml</loc>\n  </sitemap>`
-    ),
+    ...entries,
     '</sitemapindex>',
     ''
   ].join('\n');
-
-  return { entryCount: urlBlocks.length, index, shards };
 }
 
-function splitSitemapFile(outputDirectory) {
-  const sitemapPath = path.join(outputDirectory, 'sitemap.xml');
-  const result = buildSitemapShards(fs.readFileSync(sitemapPath, 'utf8'));
-  const currentFiles = new Set(result.shards.map((_, i) => `sitemap-${i}.xml`));
+function parseSitemapIndex(input, site) {
+  const normalizedSite = normalizeSite(site);
+  const document = parseXmlDocument(input, 'Sitemap index');
+  const root = document.documentElement;
+  if (root.namespaceURI !== SITEMAP_NAMESPACE || root.localName !== 'sitemapindex') {
+    throw new Error('Expected a namespaced sitemapindex');
+  }
+  getNamespaceAttributes(root);
 
-  result.shards.forEach((shard, i) => {
-    fs.writeFileSync(path.join(outputDirectory, `sitemap-${i}.xml`), shard, 'utf8');
-  });
+  const locs = [];
+  const seen = new Set();
+  for (const child of elementChildren(root)) {
+    if (child.namespaceURI !== SITEMAP_NAMESPACE || child.localName !== 'sitemap') {
+      throw new Error(`Unexpected sitemapindex child: ${child.nodeName}`);
+    }
+    const locElements = elementChildren(child).filter(
+      (element) => element.namespaceURI === SITEMAP_NAMESPACE && element.localName === 'loc'
+    );
+    if (locElements.length !== 1 || elementChildren(locElements[0]).length) {
+      throw new Error('Each sitemap index entry requires exactly one text-only loc');
+    }
+    const loc = validateLoc(locElements[0].textContent.trim(), normalizedSite);
+    if (seen.has(loc)) throw new Error(`Duplicate sitemap shard reference: ${loc}`);
+    seen.add(loc);
+    locs.push(loc);
+  }
+  if (!locs.length || locs.length > 50000)
+    throw new Error('Sitemap index is empty or exceeds 50,000 shards');
+  return locs;
+}
+
+function sitemapUrls(site, host, shards) {
+  return shards.map((shard) => `${site}/sitemap-shards/${host}/${shard.file}`);
+}
+
+function assertSameEntries(actualEntries, expectedEntries) {
+  const actual = new Map();
+  const expected = new Map();
+  for (const entry of actualEntries) {
+    if (actual.has(entry.loc)) throw new Error(`Duplicate sitemap loc across shards: ${entry.loc}`);
+    actual.set(entry.loc, entry.fingerprint);
+  }
+  for (const entry of expectedEntries) {
+    if (expected.has(entry.loc)) throw new Error(`Duplicate source sitemap loc: ${entry.loc}`);
+    expected.set(entry.loc, entry.fingerprint);
+  }
+
+  const missing = [...expected.keys()].filter((loc) => !actual.has(loc));
+  const extra = [...actual.keys()].filter((loc) => !expected.has(loc));
+  const changed = [...expected.keys()].filter(
+    (loc) => actual.has(loc) && actual.get(loc) !== expected.get(loc)
+  );
+  if (missing.length || extra.length || changed.length) {
+    throw new Error(
+      `Sitemap identity mismatch: ${JSON.stringify({
+        missing: missing.slice(0, 10),
+        missingCount: missing.length,
+        extra: extra.slice(0, 10),
+        extraCount: extra.length,
+        metadataChanged: changed.slice(0, 10),
+        metadataChangedCount: changed.length
+      })}`
+    );
+  }
+}
+
+function verifyActiveShards(stateDirectory, site, descriptors, expectedEntries) {
+  const actualEntries = [];
+  for (const descriptor of descriptors) {
+    const bytes = fs.readFileSync(path.join(stateDirectory, descriptor.file));
+    if (
+      bytes.length > SHARD_BYTE_LIMIT ||
+      sha256(bytes) !== descriptor.sha256 ||
+      descriptor.file !== shardFileName(descriptor.bucket, descriptor.sequence, descriptor.sha256)
+    ) {
+      throw new Error(`Sitemap shard verification failed: ${descriptor.file}`);
+    }
+    const parsed = parseUrlset(bytes, site);
+    if (parsed.entries.length !== descriptor.urls || parsed.entries.length > URL_LIMIT) {
+      throw new Error(`Sitemap shard has an invalid URL count: ${descriptor.file}`);
+    }
+    if (parsed.entries.some((entry) => entry.bucket !== descriptor.bucket)) {
+      throw new Error(`Sitemap shard contains a URL from another bucket: ${descriptor.file}`);
+    }
+    actualEntries.push(...parsed.entries);
+  }
+  assertSameEntries(actualEntries, expectedEntries);
+}
+
+function writeImmutableFiles(stateDirectory, shards) {
+  for (const shard of shards) writeImmutableShard(stateDirectory, shard);
+}
+
+function saveSnapshot(stateDirectory, site, descriptors, index) {
+  const manifest = {
+    schema: 1,
+    site,
+    shards: descriptors.map(({ bucket, file, sequence, sha256: digest, urls }) => ({
+      bucket,
+      file,
+      sequence,
+      sha256: digest,
+      urls
+    }))
+  };
+  const indexBytes = Buffer.from(index, 'utf8');
+  atomicWriteIfChanged(
+    path.join(stateDirectory, 'manifest.json'),
+    `${JSON.stringify(manifest, null, 2)}\n`
+  );
+  atomicWriteIfChanged(path.join(stateDirectory, 'sitemap.xml.gz'), deterministicGzip(indexBytes));
+  atomicWriteIfChanged(path.join(stateDirectory, 'sitemap.xml'), indexBytes);
+}
+
+function copyShardsToOutput(stateDirectory, outputDirectory, history, host) {
+  const shardDirectory = path.join(outputDirectory, 'sitemap-shards', host);
+  fs.rmSync(shardDirectory, { recursive: true, force: true });
+  fs.mkdirSync(shardDirectory, { recursive: true });
+  // shortcut: retain old hashes indefinitely; add pruning if repo/export growth needs a cap.
+  for (const shard of history.files.values()) {
+    const source = path.join(stateDirectory, shard.file);
+    const gzip = `${source}.gz`;
+    fs.copyFileSync(source, path.join(shardDirectory, shard.file));
+    fs.copyFileSync(gzip, path.join(shardDirectory, `${shard.file}.gz`));
+  }
+}
+
+function removeLegacyShards(outputDirectory) {
+  if (!fs.existsSync(outputDirectory)) return;
   for (const file of fs.readdirSync(outputDirectory)) {
-    if (/^sitemap-\d+\.xml$/.test(file) && !currentFiles.has(file)) {
-      fs.unlinkSync(path.join(outputDirectory, file));
+    if (/^sitemap-\d+\.xml(?:\.gz)?$/.test(file)) {
+      fs.rmSync(path.join(outputDirectory, file), { force: true });
     }
   }
-  fs.writeFileSync(sitemapPath, result.index, 'utf8');
-  console.log(`[split-sitemap] ${result.entryCount} URLs -> ${result.shards.length} shards`);
+}
+
+function removePreviewSitemaps(outputDirectory) {
+  removeLegacyShards(outputDirectory);
+  fs.rmSync(path.join(outputDirectory, 'sitemap.xml'), { force: true });
+  fs.rmSync(path.join(outputDirectory, 'sitemap.xml.gz'), { force: true });
+  const hosts = new Set(['fastgpt.cn', 'fastgpt.io']);
+  for (const base of Object.values(getProductionBaseUrls())) {
+    try {
+      hosts.add(new URL(base).hostname);
+    } catch {
+      // The production build validates configured origins before writing sitemap files.
+    }
+  }
+  for (const host of hosts) {
+    fs.rmSync(path.join(outputDirectory, 'sitemap-shards', host), {
+      recursive: true,
+      force: true
+    });
+  }
+}
+
+function splitSitemapFile(outputDirectory, options = {}) {
+  const output = path.resolve(outputDirectory);
+  const variant = options.variant || resolveSiteVariant();
+  if (variant === 'preview') {
+    removePreviewSitemaps(output);
+    console.log('[split-sitemap] Preview sitemap removed');
+    return { skipped: true, entryCount: 0, shards: [] };
+  }
+
+  const bases = getProductionBaseUrls();
+  const site = normalizeSite(options.site || bases[variant]);
+  const host = new URL(site).hostname;
+  const root = path.resolve(__dirname, '..');
+  const stateDirectory = path.resolve(options.stateDirectory || path.join(root, 'sitemaps', host));
+  const maxUrlsPerShard = options.maxUrlsPerShard ?? URL_LIMIT;
+  const maxShardBytes = options.maxShardBytes ?? SHARD_BYTE_LIMIT;
+  validateShardLimits(maxUrlsPerShard, maxShardBytes);
+  removeLegacyShards(output);
+
+  const sourcePath = path.join(output, 'sitemap.xml');
+  const source = parseUrlset(fs.readFileSync(sourcePath), site);
+  const history = scanHistory(stateDirectory);
+  const previousShards = readSnapshot(stateDirectory, site, history);
+  const reconciled = reconcileShards(
+    source.entries,
+    source.rootInfo,
+    previousShards,
+    history.maxSequences,
+    maxUrlsPerShard,
+    maxShardBytes
+  );
+
+  writeImmutableFiles(stateDirectory, reconciled.shards);
+  const currentHistory = scanHistory(stateDirectory);
+  verifyActiveShards(stateDirectory, site, reconciled.descriptors, source.entries);
+
+  const index = buildIndex(site, host, reconciled.descriptors);
+  const expectedIndexUrls = sitemapUrls(site, host, reconciled.descriptors);
+  const actualIndexUrls = parseSitemapIndex(index, site);
+  if (JSON.stringify(actualIndexUrls) !== JSON.stringify(expectedIndexUrls)) {
+    throw new Error('Generated sitemap index references do not match the persisted shard set');
+  }
+
+  copyShardsToOutput(stateDirectory, output, currentHistory, host);
+  saveSnapshot(stateDirectory, site, reconciled.descriptors, index);
+  const indexBytes = Buffer.from(index, 'utf8');
+  atomicWriteIfChanged(path.join(output, 'sitemap.xml.gz'), deterministicGzip(indexBytes));
+  atomicWriteIfChanged(path.join(output, 'sitemap.xml'), indexBytes);
+
+  console.log(
+    `[split-sitemap] ${source.entries.length} URLs -> ${reconciled.descriptors.length} shards (${host})`
+  );
+  return {
+    skipped: false,
+    entryCount: source.entries.length,
+    shards: reconciled.descriptors,
+    index
+  };
 }
 
 if (require.main === module) {
@@ -110,4 +807,4 @@ if (require.main === module) {
   }
 }
 
-module.exports = { buildSitemapShards, splitSitemapFile };
+module.exports = { bucketForLoc, parseSitemapIndex, parseUrlset, splitSitemapFile };

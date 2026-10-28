@@ -114,9 +114,6 @@ removePath(path.join(outDir, '_redirects'));
 
 let previewHtmlPatched = 0;
 if (variant === 'preview') {
-  for (const entry of fs.readdirSync(outDir)) {
-    if (entry.startsWith('sitemap')) removed += removePath(path.join(outDir, entry));
-  }
   previewHtmlPatched = patchPreviewRobots();
   writeCloudflareWorker(outDir, new Map(), true, aliasAuthorityMetadata);
   fs.writeFileSync(path.join(outDir, '.assetsignore'), '_worker.js\n');

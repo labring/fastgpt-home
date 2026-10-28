@@ -7,6 +7,7 @@ const { load } = require('js-yaml');
 const { inspectWorkerAssets, verifyWorkerArtifact } = require('./lib/worker-publication');
 const {
   getAvailablePort,
+  normalizeRedirectLocation,
   startWrangler,
   waitForWrangler,
   stopWrangler
@@ -40,6 +41,20 @@ function createWorkerArtifact({ assetsIgnore = '/_worker.js\n', legacyRedirects 
   );
   return { root, outDir, configPath };
 }
+
+test('Worker redirect comparison ignores origin and preserves path and query', () => {
+  const pathAndQuery = '/faq/can-ai-agent-be-integrated?worker_probe=1&keep=%E4%B8%AD';
+
+  assert.equal(
+    normalizeRedirectLocation(`http://127.0.0.1:41333${pathAndQuery}`),
+    pathAndQuery
+  );
+  assert.equal(normalizeRedirectLocation(`https://fastgpt.io${pathAndQuery}`), pathAndQuery);
+  assert.notEqual(
+    normalizeRedirectLocation(`https://fastgpt.io${pathAndQuery}`),
+    normalizeRedirectLocation('https://fastgpt.io/faq/different?worker_probe=1&keep=%E4%B8%AD')
+  );
+});
 
 test('Worker artifact validates its deployment contract and hides the entrypoint', () => {
   const fixture = createWorkerArtifact();

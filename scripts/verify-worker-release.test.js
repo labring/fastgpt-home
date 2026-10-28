@@ -52,6 +52,30 @@ test('Worker artifact validates its deployment contract and hides the entrypoint
   }
 });
 
+test('production Worker uses the fastgpt.io Custom Domain while Preview stays isolated', () => {
+  const projectRoot = path.join(__dirname, '..');
+  const productionConfigPath = path.join(projectRoot, 'wrangler.production.json');
+  const productionConfig = JSON.parse(fs.readFileSync(productionConfigPath, 'utf8'));
+  const previewConfig = JSON.parse(
+    fs.readFileSync(path.join(projectRoot, 'wrangler.json'), 'utf8')
+  );
+  assert.deepEqual(productionConfig.routes, [{ pattern: 'fastgpt.io', custom_domain: true }]);
+  assert.equal(previewConfig.routes, undefined);
+
+  const fixture = createWorkerArtifact();
+  try {
+    fs.writeFileSync(fixture.configPath, JSON.stringify(productionConfig));
+    const result = verifyWorkerArtifact({
+      ...fixture,
+      trustedConfigPath: productionConfigPath,
+      wranglerVersion: '4.136.3'
+    });
+    assert.equal(result.assetCount, 4);
+  } finally {
+    fs.rmSync(fixture.root, { recursive: true, force: true });
+  }
+});
+
 test('Worker artifact accepts relative export and configuration paths', () => {
   const fixture = createWorkerArtifact();
   try {
@@ -184,16 +208,41 @@ test('Worker release uses its dedicated environment credential', () => {
   );
   const workflowSource = fs.readFileSync(workflowPath, 'utf8');
   const workflow = load(workflowSource);
+  const triggers = workflow.on || workflow[true];
   const job = workflow.jobs.deploy;
   const credentialSteps = job.steps.filter((step) => step.env?.CLOUDFLARE_API_TOKEN);
 
+  assert.deepEqual(triggers.push.branches, ['main']);
+  assert(Object.hasOwn(triggers, 'workflow_dispatch'));
   assert.equal(job.environment, 'international-worker-production');
+  assert.equal(job.env.NEXT_PUBLIC_SITE_VARIANT, 'io');
   assert.equal(credentialSteps.length, 2);
   for (const step of credentialSteps) {
     assert.equal(step.env.CLOUDFLARE_API_TOKEN, '${{ secrets.CLOUDFLARE_WORKER_API_TOKEN }}');
     assert.equal(step.env.CLOUDFLARE_ACCOUNT_ID, '${{ vars.CLOUDFLARE_ACCOUNT_ID }}');
   }
   assert.doesNotMatch(workflowSource, /secrets\.CLOUDFLARE_API_TOKEN/);
+});
+
+test('Preview deploy and cleanup use the isolated Preview environment credential', () => {
+  const workflow = (file) =>
+    load(fs.readFileSync(path.join(__dirname, '..', '.github/workflows', file), 'utf8'));
+  const previewDeploy = workflow('preview-deploy.yml').jobs.deploy;
+  const deployAction = previewDeploy.steps.find(
+    (step) => step.uses === 'cloudflare/wrangler-action@v3'
+  );
+  const previewCleanup = workflow('preview-worker-cleanup.yml').jobs.cleanup;
+
+  assert.equal(previewDeploy.environment, 'international-worker-preview');
+  assert.equal(
+    deployAction.with.apiToken,
+    '${{ secrets.CLOUDFLARE_PREVIEW_WORKER_API_TOKEN }}'
+  );
+  assert.equal(previewCleanup.environment, 'international-worker-preview');
+  assert.equal(
+    previewCleanup.env.CLOUDFLARE_API_TOKEN,
+    '${{ secrets.CLOUDFLARE_PREVIEW_WORKER_API_TOKEN }}'
+  );
 });
 
 test('Wrangler serves HTML and TXT as Static Assets without attaching them as Worker modules', async () => {

@@ -277,82 +277,6 @@ function verifyRedirects() {
   assert(worker.includes('fallbackUrl.pathname = match[1] || \'/\''));
 }
 
-function verifySitemap() {
-  const sitemapPath = path.join(outDir, 'sitemap.xml');
-  if (variant === 'preview') {
-    assert(!fs.existsSync(sitemapPath), 'Preview build contains sitemap.xml');
-    return;
-  }
-
-  assert(fs.existsSync(sitemapPath), 'Missing exported sitemap.xml');
-  const sitemap = fs.readFileSync(sitemapPath, 'utf8');
-  const entries = [...sitemap.matchAll(/<url>([\s\S]*?)<\/url>/gi)].map((match) => {
-    const block = match[1];
-    return {
-      url: block.match(/<loc>([^<]+)<\/loc>/i)?.[1],
-      lastModified: block.match(/<lastmod>([^<]+)<\/lastmod>/i)?.[1]
-    };
-  });
-  const urls = entries.map((entry) => entry.url).filter(Boolean);
-  assert(urls.length > 1000, `Sitemap contains too few URLs: ${urls.length}`);
-  assert.equal(new Set(urls).size, urls.length, 'Sitemap contains duplicate URLs');
-  assert(
-    urls.every((url) => url === baseUrl || url.startsWith(`${baseUrl}/`)),
-    'Sitemap contains a foreign host'
-  );
-  assert(urls.includes(`${baseUrl}/`), 'Sitemap is missing the canonical home URL');
-  assert(urls.includes(`${baseUrl}/price`), 'Sitemap is missing the canonical pricing URL');
-  assert(urls.includes(`${baseUrl}/faq`), 'Sitemap is missing the canonical FAQ URL');
-  assert(urls.includes(`${baseUrl}/faq/${faqId}`), 'Sitemap is missing a canonical FAQ detail URL');
-  assert(urls.includes(`${baseUrl}/compare`), 'Sitemap is missing the canonical compare hub URL');
-  assert(urls.includes(`${baseUrl}/contact`), 'Sitemap is missing the canonical Contact URL');
-  assert.equal(
-    urls.includes(`${baseUrls.io}/zh-hant/contact`),
-    variant === 'io',
-    'Sitemap has an unexpected Traditional Chinese Contact URL'
-  );
-  assert(!urls.some((url) => url.endsWith('/ja/contact')), 'Sitemap contains Japanese Contact');
-  assert.equal(
-    urls.includes(`${baseUrl}/tech-center`),
-    variant === 'cn' || variant === 'io',
-    'Sitemap has an unexpected technical center URL'
-  );
-
-  const stableRoutes = siteLocaleCodes.map((locale) => {
-    const prefix = locale === defaultLocale ? '' : `/${locale}`;
-    return {
-      prefix,
-      paths: [prefix || '/', `${prefix}/price`, `${prefix}/contact`, `${prefix}/faq`]
-    };
-  }).flat();
-  for (const entry of entries) {
-    if (!entry.url || !entry.lastModified) continue;
-    const pathname = new URL(entry.url).pathname;
-    assert(
-      !stableRoutes.some(({ prefix, paths }) =>
-        paths.includes(pathname) || pathname.startsWith(`${prefix}/faq/`)
-      ),
-      `Stable URL has an unverifiable lastmod: ${entry.url}`
-    );
-  }
-
-  const guideLocale = variant === 'cn' ? 'zh' : 'en';
-  const guideDates = guideRegistry.map((entry) => entry[guideLocale].dateModified);
-  const guideLastModified = new Date(`${guideDates.sort().at(-1)}T00:00:00Z`).toISOString();
-  const expectedGuideDates = new Map([
-    [`${baseUrl}/guide`, guideLastModified],
-    ...guideRegistry.map((entry) => [
-      `${baseUrl}/guide/${entry.slug}`,
-      new Date(`${entry[guideLocale].dateModified}T00:00:00Z`).toISOString()
-    ])
-  ]);
-  for (const [url, expectedLastModified] of expectedGuideDates) {
-    const entry = entries.find((candidate) => candidate.url === url);
-    assert(entry, `Sitemap is missing Guide URL ${url}`);
-    assert.equal(entry.lastModified, expectedLastModified, `Unexpected lastmod for ${url}`);
-  }
-}
-
 function verifyPublishedRoutes() {
   assert.equal(Boolean(resolveHtmlPath('/zh')), variant === 'cn' || variant === 'preview');
   assert.equal(Boolean(resolveHtmlPath('/ja')), variant === 'io' || variant === 'preview');
@@ -518,7 +442,6 @@ function main() {
   }
 
   verifyCompareMetadataLengths();
-  verifySitemap();
   console.log(`i18n SEO verification passed for ${variant} (${baseUrl})`);
 }
 

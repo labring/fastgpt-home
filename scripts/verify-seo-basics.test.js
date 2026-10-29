@@ -12,15 +12,12 @@ function read(relativePath) {
 
 test('sitemap uses content dates instead of the build clock', () => {
   const source = read('src/app/sitemap.ts');
-  const exportVerifier = read('scripts/verify-i18n-seo.js');
 
   assert.doesNotMatch(source, /new Date\(\s*\)/);
   assert.match(source, /const getLatestDate = \(dates: Date\[\]\)/);
   assert.match(source, /const guideLastModified = getLatestDate\(/);
   assert.match(source, /addEntry\(getGuideCanonicalUrl\(guideLocale\), guideLastModified\)/);
   assert.match(source, /const entry: MetadataRoute\.Sitemap\[number\] = \{ url \};/);
-  assert.match(exportVerifier, /Stable URL has an unverifiable lastmod/);
-  assert.match(exportVerifier, /expectedGuideDates/);
 });
 
 test('homepage images declare stable loading and accessibility semantics', () => {

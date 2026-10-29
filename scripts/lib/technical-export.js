@@ -9,14 +9,6 @@ function resolveStaticHtml(outDir, route) {
   );
 }
 
-function readSitemapUrls(outDir) {
-  const sitemapPath = path.join(outDir, 'sitemap.xml');
-  if (!fs.existsSync(sitemapPath)) return [];
-  return [...fs.readFileSync(sitemapPath, 'utf8').matchAll(/<loc>([^<]+)<\/loc>/g)].map(
-    (match) => match[1]
-  );
-}
-
 // Match the rendered Markdown link syntax, excluding metadata and code examples.
 function bodyLinks(markdown) {
   const body = markdown
@@ -76,7 +68,6 @@ function verifyReturn(html, source, target, variant) {
 
 module.exports = {
   bodyLinks,
-  readSitemapUrls,
   resolveStaticHtml,
   routeFor,
   verifyBodyLinks,

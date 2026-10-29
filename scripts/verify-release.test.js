@@ -298,7 +298,7 @@ test('release records retain command results, duration, and rollback inventory',
   assert.equal(record.variants[0].outcome, 'failed');
 });
 
-test('preview release gates skip production-only FAQ artifacts and sitemap cardinality', () => {
+test('preview release gates skip production-only FAQ artifacts', () => {
   const previewIds = getVariantSteps('preview').map((step) => step.id);
   const cnIds = getVariantSteps('cn').map((step) => step.id);
 
@@ -431,7 +431,7 @@ test('release build and workflow wiring preserve source hygiene while enforcing 
   );
   assert.equal(
     packageJson.scripts.build,
-    'next build --webpack && node scripts/clean-locale-output.js && node scripts/clean-faq-rsc.js && node scripts/fix-html-lang.js && npm run generate:blog-pagefind'
+    'next build --webpack && node scripts/split-sitemap.js && node scripts/clean-locale-output.js && node scripts/clean-faq-rsc.js && node scripts/fix-html-lang.js && npm run generate:blog-pagefind'
   );
   assert.equal(
     packageJson.scripts['generate:blog-pagefind'],

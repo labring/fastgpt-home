@@ -10,6 +10,7 @@ const { parseSitemapIndex, parseUrlset, splitSitemapFile } = require('./split-si
 const SITEMAP_NAMESPACE = 'http://www.sitemaps.org/schemas/sitemap/0.9';
 const IMAGE_NAMESPACE = 'http://www.google.com/schemas/sitemap-image/1.1';
 const SITE = 'https://fastgpt.io';
+const CN_SITE = 'https://fastgpt.cn';
 
 function makeUrlset(entries, rootAttributes = '') {
   return [
@@ -340,25 +341,70 @@ test('rejects malformed, empty, duplicate, cross-origin, HTTP, and invalid metad
   );
 });
 
-test('preview removes mixed-origin sitemap output without parsing it', (t) => {
+test('preview emits canonical mixed-origin sitemap shards without persisting them', (t) => {
   const fixture = createFixture(t);
-  writeSource(
-    fixture.outputDirectory,
-    makeUrlset([makeUrl('https://fastgpt.io/'), makeUrl('https://fastgpt.cn/')])
-  );
+  const source = makeUrlset([
+    makeUrl(`${SITE}/faq/io-a`),
+    makeUrl(`${SITE}/blog/io-b`),
+    makeUrl(`${SITE}/industry/io-a`),
+    makeUrl(`${SITE}/industry/io-b`),
+    makeUrl(`${CN_SITE}/faq/cn-a`),
+    makeUrl(`${CN_SITE}/industry/cn-a`)
+  ]);
+  writeSource(fixture.outputDirectory, source);
   fs.writeFileSync(path.join(fixture.outputDirectory, 'sitemap-0.xml'), 'old shard');
-  const previewShardDirectory = path.join(fixture.outputDirectory, 'sitemap-shards', 'fastgpt.io');
-  fs.mkdirSync(previewShardDirectory, { recursive: true });
-  fs.writeFileSync(path.join(previewShardDirectory, 'stale.xml'), 'stale');
+  const staleShard = path.join(fixture.outputDirectory, 'sitemap-shards', 'stale', 'stale.xml');
+  fs.mkdirSync(path.dirname(staleShard), { recursive: true });
+  fs.writeFileSync(staleShard, 'stale');
 
   const result = splitSitemapFile(fixture.outputDirectory, {
     variant: 'preview',
-    stateDirectory: fixture.stateDirectory
+    stateDirectory: fixture.stateDirectory,
+    maxContentUrlsPerShard: 1,
+    maxIndustryUrlsPerShard: 1
   });
 
-  assert.equal(result.skipped, true);
-  assert.equal(fs.existsSync(path.join(fixture.outputDirectory, 'sitemap.xml')), false);
+  assert.equal(result.skipped, false);
+  assert.equal(result.entryCount, 6);
+  assert.equal(fs.existsSync(path.join(fixture.outputDirectory, 'sitemap.xml')), true);
   assert.equal(fs.existsSync(path.join(fixture.outputDirectory, 'sitemap-0.xml')), false);
-  assert.equal(fs.existsSync(previewShardDirectory), false);
+  assert.equal(fs.existsSync(staleShard), false);
   assert.equal(fs.existsSync(fixture.stateDirectory), false);
+
+  const index = fs.readFileSync(path.join(fixture.outputDirectory, 'sitemap.xml'));
+  assert.deepEqual(
+    parseSitemapIndex(index, [SITE, CN_SITE]),
+    result.shards.map(({ site, host, file }) => `${site}/sitemap-shards/${host}/${file}`)
+  );
+  assert.deepEqual(
+    result.shards.map(({ host, bucket, urls }) => [host, bucket, urls]),
+    [
+      ['fastgpt.cn', 'content', 1],
+      ['fastgpt.cn', 'industry', 1],
+      ['fastgpt.io', 'content', 1],
+      ['fastgpt.io', 'content', 1],
+      ['fastgpt.io', 'industry', 1],
+      ['fastgpt.io', 'industry', 1]
+    ]
+  );
+
+  const actualLocs = result.shards.flatMap(({ site, host, file }) => {
+    const shardPath = path.join(fixture.outputDirectory, 'sitemap-shards', host, file);
+    const xml = fs.readFileSync(shardPath, 'utf8');
+    assert.match(file, /^sitemap-(content|industry)-\d+-[a-f0-9]{8}\.xml$/);
+    assert.equal(
+      crypto.createHash('sha256').update(xml).digest('hex').slice(0, 8),
+      file.match(/-([a-f0-9]{8})\.xml$/)[1]
+    );
+    return parseUrlset(xml, site).entries.map((entry) => {
+      assert.equal(new URL(entry.loc).hostname, host);
+      return entry.loc;
+    });
+  });
+  assert.deepEqual(
+    actualLocs.sort(),
+    parseUrlset(source, [SITE, CN_SITE])
+      .entries.map((entry) => entry.loc)
+      .sort()
+  );
 });

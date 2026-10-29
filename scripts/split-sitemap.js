@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/** Persists content-addressed shards under sitemaps/<host> and assembles static output. */
+/** Persists production shards and emits build-local Preview shards. */
 const crypto = require('node:crypto');
 const fs = require('node:fs');
 const path = require('node:path');
@@ -34,6 +34,12 @@ function normalizeSite(value) {
     throw new Error(`Sitemap site must be a bare HTTPS origin: ${value}`);
   }
   return url.origin;
+}
+
+function normalizeSites(values) {
+  const sites = [...new Set((Array.isArray(values) ? values : [values]).map(normalizeSite))];
+  if (!sites.length) throw new Error('Sitemap requires at least one site origin');
+  return new Set(sites);
 }
 
 function parseXmlDocument(input, label) {
@@ -91,7 +97,7 @@ function escapeXml(value) {
     .replaceAll("'", '&apos;');
 }
 
-function validateLoc(value, site) {
+function validateLoc(value, sites) {
   if (
     !value ||
     value.length >= 2048 ||
@@ -108,7 +114,7 @@ function validateLoc(value, site) {
     throw new Error(`Invalid sitemap loc: ${value}`);
   }
   if (url.protocol !== 'https:') throw new Error(`Sitemap loc must use HTTPS: ${value}`);
-  if (url.origin !== site) throw new Error(`Sitemap loc uses another origin: ${value}`);
+  if (!sites.has(url.origin)) throw new Error(`Sitemap loc uses another origin: ${value}`);
   if (url.username || url.password)
     throw new Error(`Sitemap loc must not contain credentials: ${value}`);
   return value;
@@ -153,7 +159,7 @@ function bucketForLoc(loc) {
 }
 
 function parseUrlset(input, site, maxUrlCount = PROTOCOL_URL_LIMIT) {
-  const normalizedSite = normalizeSite(site);
+  const normalizedSites = normalizeSites(site);
   const document = parseXmlDocument(input, 'Sitemap urlset');
   const root = document.documentElement;
   if (root.namespaceURI !== SITEMAP_NAMESPACE || root.localName !== 'urlset') {
@@ -187,7 +193,7 @@ function parseUrlset(input, site, maxUrlCount = PROTOCOL_URL_LIMIT) {
       throw new Error('Each sitemap url requires exactly one text-only loc');
     }
 
-    const loc = validateLoc(locElements[0].textContent.trim(), normalizedSite);
+    const loc = validateLoc(locElements[0].textContent.trim(), normalizedSites);
     if (seen.has(loc)) throw new Error(`Duplicate sitemap loc: ${loc}`);
     seen.add(loc);
 
@@ -218,11 +224,17 @@ function parseUrlset(input, site, maxUrlCount = PROTOCOL_URL_LIMIT) {
       xml,
       xmlBytes: Buffer.byteLength(xml)
     });
-    if (entries.length > maxUrlCount) throw new Error('Sitemap url count exceeds 50,000');
+    if (entries.length > maxUrlCount) {
+      throw new Error(`Sitemap url count exceeds ${maxUrlCount}`);
+    }
   }
 
   if (!entries.length) throw new Error('Sitemap urlset is empty');
-  return { entries, rootInfo, site: normalizedSite };
+  return {
+    entries,
+    rootInfo,
+    site: normalizedSites.size === 1 ? normalizedSites.values().next().value : null
+  };
 }
 
 function renderUrlset(rootInfo, entries) {
@@ -626,7 +638,7 @@ function buildIndex(site, host, shards) {
     throw new Error('Sitemap index must contain between 1 and 50,000 shards');
   }
   const entries = shards.map((shard) => {
-    const loc = `${site}/sitemap-shards/${host}/${shard.file}`;
+    const loc = `${shard.site || site}/sitemap-shards/${shard.host || host}/${shard.file}`;
     return `  <sitemap>\n    <loc>${escapeXml(loc)}</loc>\n  </sitemap>`;
   });
   return [
@@ -639,7 +651,7 @@ function buildIndex(site, host, shards) {
 }
 
 function parseSitemapIndex(input, site) {
-  const normalizedSite = normalizeSite(site);
+  const normalizedSites = normalizeSites(site);
   const document = parseXmlDocument(input, 'Sitemap index');
   const root = document.documentElement;
   if (root.namespaceURI !== SITEMAP_NAMESPACE || root.localName !== 'sitemapindex') {
@@ -659,7 +671,7 @@ function parseSitemapIndex(input, site) {
     if (locElements.length !== 1 || elementChildren(locElements[0]).length) {
       throw new Error('Each sitemap index entry requires exactly one text-only loc');
     }
-    const loc = validateLoc(locElements[0].textContent.trim(), normalizedSite);
+    const loc = validateLoc(locElements[0].textContent.trim(), normalizedSites);
     if (seen.has(loc)) throw new Error(`Duplicate sitemap shard reference: ${loc}`);
     seen.add(loc);
     locs.push(loc);
@@ -798,33 +810,77 @@ function removeLegacyShards(outputDirectory) {
   }
 }
 
-function removePreviewSitemaps(outputDirectory) {
+function clearPreviewSitemaps(outputDirectory) {
   removeLegacyShards(outputDirectory);
   fs.rmSync(path.join(outputDirectory, 'sitemap.xml'), { force: true });
   fs.rmSync(path.join(outputDirectory, 'sitemap.xml.gz'), { force: true });
-  const hosts = new Set(['fastgpt.cn', 'fastgpt.io']);
-  for (const base of Object.values(getProductionBaseUrls())) {
-    try {
-      hosts.add(new URL(base).hostname);
-    } catch {
-      // The production build validates configured origins before writing sitemap files.
+  fs.rmSync(path.join(outputDirectory, 'sitemap-shards'), { recursive: true, force: true });
+}
+
+function writePreviewSitemaps(outputDirectory, options) {
+  const bases = getProductionBaseUrls();
+  const sites = [...new Set(Object.values(bases).map(normalizeSite))];
+  const sourcePath = path.join(outputDirectory, 'sitemap.xml');
+  const source = parseUrlset(fs.readFileSync(sourcePath), sites, PROTOCOL_URL_LIMIT * sites.length);
+  const siteByHost = new Map(sites.map((site) => [new URL(site).hostname, site]));
+  if (siteByHost.size !== sites.length) {
+    throw new Error('Preview sitemap origins must use distinct hostnames');
+  }
+
+  const entriesByHost = new Map();
+  for (const entry of source.entries) {
+    const host = new URL(entry.loc).hostname;
+    if (!siteByHost.has(host))
+      throw new Error(`Preview sitemap uses an unknown host: ${entry.loc}`);
+    if (!entriesByHost.has(host)) entriesByHost.set(host, { content: [], industry: [] });
+    entriesByHost.get(host)[entry.bucket].push(entry);
+  }
+
+  clearPreviewSitemaps(outputDirectory);
+  const shards = [];
+  for (const host of [...entriesByHost.keys()].sort()) {
+    const site = siteByHost.get(host);
+    for (const bucket of ['content', 'industry']) {
+      const limits = getShardLimits(bucket, options);
+      const chunks = chunkEntries(
+        entriesByHost.get(host)[bucket],
+        source.rootInfo,
+        limits.maxUrlsPerShard,
+        limits.maxShardBytes
+      );
+      for (const [sequence, entries] of chunks.entries()) {
+        const shard = makeShard(source.rootInfo, bucket, sequence, entries);
+        const descriptor = { ...shard.descriptor, host, site };
+        atomicWriteIfChanged(
+          path.join(outputDirectory, 'sitemap-shards', host, descriptor.file),
+          shard.bytes
+        );
+        shards.push(descriptor);
+      }
     }
   }
-  for (const host of hosts) {
-    fs.rmSync(path.join(outputDirectory, 'sitemap-shards', host), {
-      recursive: true,
-      force: true
-    });
+
+  const index = buildIndex(undefined, undefined, shards);
+  const expectedIndexUrls = shards.map(
+    ({ site, host, file }) => `${site}/sitemap-shards/${host}/${file}`
+  );
+  const actualIndexUrls = parseSitemapIndex(index, sites);
+  if (JSON.stringify(actualIndexUrls) !== JSON.stringify(expectedIndexUrls)) {
+    throw new Error('Preview sitemap index references do not match its shard files');
   }
+  atomicWriteIfChanged(sourcePath, index);
+  return { skipped: false, entryCount: source.entries.length, shards, index };
 }
 
 function splitSitemapFile(outputDirectory, options = {}) {
   const output = path.resolve(outputDirectory);
   const variant = options.variant || resolveSiteVariant();
   if (variant === 'preview') {
-    removePreviewSitemaps(output);
-    console.log('[split-sitemap] Preview sitemap removed');
-    return { skipped: true, entryCount: 0, shards: [] };
+    const result = writePreviewSitemaps(output, options);
+    console.log(
+      `[split-sitemap] Preview ${result.entryCount} URLs -> ${result.shards.length} shards`
+    );
+    return result;
   }
 
   const bases = getProductionBaseUrls();

@@ -82,6 +82,7 @@ function retainVerifiedSiteArtifact(root, destination, variant, record) {
   const identity = JSON.parse(
     fs.readFileSync(path.join(root, '.next/cache/site-identity.json'), 'utf8')
   );
+  const wranglerConfig = variant === 'io' ? 'wrangler.production.json' : 'wrangler.json';
   assert.equal(identity.siteVariant, variant, 'Artifact variant differs from built identity');
   verifyBuildRecord(record, identity);
   const publicationInputs = getPublicationInputs(identity);
@@ -109,7 +110,7 @@ function retainVerifiedSiteArtifact(root, destination, variant, record) {
       fs.cpSync(aliases, path.join(payload, 'url-alias', variant), { recursive: true });
     }
     if (variant === 'io' || variant === 'preview') {
-      fs.copyFileSync(path.join(root, 'wrangler.json'), path.join(payload, 'wrangler.json'));
+      fs.copyFileSync(path.join(root, wranglerConfig), path.join(payload, 'wrangler.json'));
     }
     if (variant === 'cn') {
       fs.mkdirSync(path.join(payload, 'runtime'));
@@ -141,7 +142,7 @@ function retainVerifiedSiteArtifact(root, destination, variant, record) {
     };
     fs.writeFileSync(path.join(staging, 'manifest.json'), `${JSON.stringify(manifest, null, 2)}\n`);
     verifySiteArtifact(staging, publicationInputs, {
-      trustedConfigPath: path.join(root, 'wrangler.json')
+      trustedConfigPath: path.join(root, wranglerConfig)
     });
     // Seal the replacement before touching an existing rollback unit.
     const previous = `${staging}.previous`;

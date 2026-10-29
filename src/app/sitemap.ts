@@ -38,13 +38,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const localizedPaths = ['', '/price', '/blog'];
   const entries: MetadataRoute.Sitemap = [];
   const seenUrls = new Set<string>();
+  const staticUrls = new Set<string>();
 
   const getLatestDate = (dates: Date[]) =>
     dates.length ? new Date(Math.max(...dates.map((date) => date.getTime()))) : undefined;
 
-  const addEntry = (url: string, lastModified?: Date) => {
+  const addEntry = (url: string, lastModified?: Date, isStatic = false) => {
     if (seenUrls.has(url)) return;
     seenUrls.add(url);
+    if (isStatic) staticUrls.add(url);
     const entry: MetadataRoute.Sitemap[number] = { url };
     if (lastModified) entry.lastModified = lastModified;
     entries.push(entry);
@@ -60,25 +62,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
         path === '/blog'
           ? getLatestDate(getPublishedBlogs(locale).map((post) => post.dateModified || post.date))
           : undefined;
-      addEntry(getOwnedLocaleUrl(locale, path), lastModified);
+      addEntry(getOwnedLocaleUrl(locale, path), lastModified, true);
     }
   }
 
   if (currentSiteVariant === 'cn') {
-    addEntry(getOwnedLocaleUrl('zh', '/videos'));
-    addEntry(getOwnedLocaleUrl('zh', '/wiki'), new Date('2026-09-21'));
+    addEntry(getOwnedLocaleUrl('zh', '/videos'), undefined, true);
+    addEntry(getOwnedLocaleUrl('zh', '/wiki'), new Date('2026-09-21'), true);
   }
 
   for (const locale of contactPublishedLocaleCodes.filter((locale) =>
     siteLocales.includes(locale)
   )) {
-    addEntry(getOwnedLocaleUrl(locale, '/contact'));
+    addEntry(getOwnedLocaleUrl(locale, '/contact'), undefined, true);
   }
 
   const publishedFaqLocales = faqContentLocaleCodes.filter((code) => siteLocales.includes(code));
 
   for (const locale of publishedFaqLocales) {
-    addEntry(getOwnedFaqUrl(locale));
+    addEntry(getOwnedFaqUrl(locale), undefined, true);
   }
 
   for (const locale of publishedFaqLocales) {
@@ -136,10 +138,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const industryEntries = getIndustrySitemapEntries(currentSiteVariant);
   const industryLocale = resolveIndustryLocale(getDefaultLocaleForSiteVariant(currentSiteVariant));
   if (industryEntries.length && industryLocale) {
-    addEntry(
-      getIndustryHubCanonicalUrl(industryLocale),
-      getLatestDate(industryEntries.map((article) => new Date(`${article.dateModified}T00:00:00Z`)))
-    );
+    // The hub has no independent modification date; article dates stay on article URLs.
+    addEntry(getIndustryHubCanonicalUrl(industryLocale));
   }
   for (const article of industryEntries) {
     addEntry(
@@ -170,5 +170,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
-  return entries;
+  const staticEntries = entries.filter(({ url }) => staticUrls.has(url));
+  const dynamicEntries = entries
+    .filter(({ url }) => !staticUrls.has(url))
+    .sort((a, b) => (a.url < b.url ? -1 : a.url > b.url ? 1 : 0));
+
+  return [...staticEntries, ...dynamicEntries];
 }

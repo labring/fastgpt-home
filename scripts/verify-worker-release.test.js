@@ -7,10 +7,13 @@ const { load } = require('js-yaml');
 const { inspectWorkerAssets, verifyWorkerArtifact } = require('./lib/worker-publication');
 const {
   getAvailablePort,
+  normalizeRedirectLocation,
   startWrangler,
   waitForWrangler,
   stopWrangler
 } = require('./verify-worker-release');
+
+const SITEMAP_WORKER_BYPASS = ['/*', '!/sitemap.xml', '!/sitemap-shards/*'];
 
 function createWorkerArtifact({ assetsIgnore = '/_worker.js\n', legacyRedirects = false } = {}) {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), 'fastgpt-worker-artifact-'));
@@ -21,6 +24,10 @@ function createWorkerArtifact({ assetsIgnore = '/_worker.js\n', legacyRedirects 
   }
   fs.writeFileSync(path.join(outDir, '_worker.js'), 'export default { fetch() {} };');
   fs.writeFileSync(path.join(outDir, '.assetsignore'), assetsIgnore);
+  fs.writeFileSync(
+    path.join(outDir, '_headers'),
+    '/sitemap-shards/*\n  ! Cache-Control\n  Cache-Control: public, max-age=31536000, immutable\n'
+  );
   if (legacyRedirects) fs.writeFileSync(path.join(outDir, '_redirects'), '');
   const configPath = path.join(root, 'wrangler.json');
   fs.writeFileSync(
@@ -33,7 +40,7 @@ function createWorkerArtifact({ assetsIgnore = '/_worker.js\n', legacyRedirects 
       assets: {
         directory: './out',
         binding: 'ASSETS',
-        run_worker_first: true,
+        run_worker_first: SITEMAP_WORKER_BYPASS,
         not_found_handling: '404-page'
       }
     })
@@ -41,12 +48,52 @@ function createWorkerArtifact({ assetsIgnore = '/_worker.js\n', legacyRedirects 
   return { root, outDir, configPath };
 }
 
+test('Worker redirect comparison ignores origin and preserves path and query', () => {
+  const pathAndQuery = '/faq/can-ai-agent-be-integrated?worker_probe=1&keep=%E4%B8%AD';
+
+  assert.equal(
+    normalizeRedirectLocation(`http://127.0.0.1:41333${pathAndQuery}`),
+    pathAndQuery
+  );
+  assert.equal(normalizeRedirectLocation(`https://fastgpt.io${pathAndQuery}`), pathAndQuery);
+  assert.notEqual(
+    normalizeRedirectLocation(`https://fastgpt.io${pathAndQuery}`),
+    normalizeRedirectLocation('https://fastgpt.io/faq/different?worker_probe=1&keep=%E4%B8%AD')
+  );
+});
+
 test('Worker artifact validates its deployment contract and hides the entrypoint', () => {
   const fixture = createWorkerArtifact();
   try {
     const result = verifyWorkerArtifact({ ...fixture, wranglerVersion: '4.136.3' });
     assert.equal(result.assetCount, 4);
     assert.equal(result.largestAssetBytes, 'sitemap.xml'.length);
+  } finally {
+    fs.rmSync(fixture.root, { recursive: true, force: true });
+  }
+});
+
+test('production Worker uses the fastgpt.io Custom Domain while Preview stays isolated', () => {
+  const projectRoot = path.join(__dirname, '..');
+  const productionConfigPath = path.join(projectRoot, 'wrangler.production.json');
+  const productionConfig = JSON.parse(fs.readFileSync(productionConfigPath, 'utf8'));
+  const previewConfig = JSON.parse(
+    fs.readFileSync(path.join(projectRoot, 'wrangler.json'), 'utf8')
+  );
+  assert.deepEqual(productionConfig.routes, [{ pattern: 'fastgpt.io', custom_domain: true }]);
+  assert.equal(previewConfig.routes, undefined);
+  assert.deepEqual(productionConfig.assets.run_worker_first, SITEMAP_WORKER_BYPASS);
+  assert.deepEqual(previewConfig.assets.run_worker_first, SITEMAP_WORKER_BYPASS);
+
+  const fixture = createWorkerArtifact();
+  try {
+    fs.writeFileSync(fixture.configPath, JSON.stringify(productionConfig));
+    const result = verifyWorkerArtifact({
+      ...fixture,
+      trustedConfigPath: productionConfigPath,
+      wranglerVersion: '4.136.3'
+    });
+    assert.equal(result.assetCount, 4);
   } finally {
     fs.rmSync(fixture.root, { recursive: true, force: true });
   }
@@ -106,7 +153,7 @@ test('Worker artifact rejects extra ignore rules and untrusted Wrangler settings
         assets: {
           directory: './out',
           binding: 'ASSETS',
-          run_worker_first: true,
+          run_worker_first: SITEMAP_WORKER_BYPASS,
           not_found_handling: '404-page'
         }
       })
@@ -122,7 +169,7 @@ test('Worker artifact rejects extra ignore rules and untrusted Wrangler settings
         assets: {
           directory: './out',
           binding: 'ASSETS',
-          run_worker_first: true,
+          run_worker_first: SITEMAP_WORKER_BYPASS,
           not_found_handling: '404-page'
         }
       })
@@ -176,6 +223,16 @@ test('Worker Static Assets enforce both file-count and largest-file limits', () 
   );
 });
 
+test('Nginx compresses XML and gives hashed sitemap shards immutable caching', () => {
+  const projectRoot = path.join(__dirname, '..');
+  const nginx = fs.readFileSync(path.join(projectRoot, 'nginx.conf'), 'utf8');
+  assert.match(nginx, /gzip_types[^;]*\bapplication\/xml\b/);
+  assert.match(
+    nginx,
+    /location \^~ \/sitemap-shards\/[\s\S]*?Cache-Control "public, max-age=31536000, immutable"/
+  );
+});
+
 test('Worker release uses its dedicated environment credential', () => {
   const workflowPath = path.join(
     __dirname,
@@ -184,10 +241,14 @@ test('Worker release uses its dedicated environment credential', () => {
   );
   const workflowSource = fs.readFileSync(workflowPath, 'utf8');
   const workflow = load(workflowSource);
+  const triggers = workflow.on || workflow[true];
   const job = workflow.jobs.deploy;
   const credentialSteps = job.steps.filter((step) => step.env?.CLOUDFLARE_API_TOKEN);
 
+  assert.deepEqual(triggers.push.branches, ['main']);
+  assert(Object.hasOwn(triggers, 'workflow_dispatch'));
   assert.equal(job.environment, 'international-worker-production');
+  assert.equal(job.env.NEXT_PUBLIC_SITE_VARIANT, 'io');
   assert.equal(credentialSteps.length, 2);
   for (const step of credentialSteps) {
     assert.equal(step.env.CLOUDFLARE_API_TOKEN, '${{ secrets.CLOUDFLARE_WORKER_API_TOKEN }}');
@@ -196,13 +257,51 @@ test('Worker release uses its dedicated environment credential', () => {
   assert.doesNotMatch(workflowSource, /secrets\.CLOUDFLARE_API_TOKEN/);
 });
 
+test('Preview deploy and cleanup use the isolated Preview environment credential', () => {
+  const workflow = (file) =>
+    load(fs.readFileSync(path.join(__dirname, '..', '.github/workflows', file), 'utf8'));
+  const previewDeploy = workflow('preview-deploy.yml').jobs.deploy;
+  const deployAction = previewDeploy.steps.find(
+    (step) => step.uses === 'cloudflare/wrangler-action@v3'
+  );
+  const previewCleanup = workflow('preview-worker-cleanup.yml').jobs.cleanup;
+
+  assert.equal(previewDeploy.environment, 'international-worker-preview');
+  assert.equal(
+    deployAction.with.apiToken,
+    '${{ secrets.CLOUDFLARE_PREVIEW_WORKER_API_TOKEN }}'
+  );
+  assert.equal(previewCleanup.environment, 'international-worker-preview');
+  assert.equal(
+    previewCleanup.env.CLOUDFLARE_API_TOKEN,
+    '${{ secrets.CLOUDFLARE_PREVIEW_WORKER_API_TOKEN }}'
+  );
+});
+
 test('Wrangler serves HTML and TXT as Static Assets without attaching them as Worker modules', async () => {
   const fixture = createWorkerArtifact();
   let child;
   try {
     fs.mkdirSync(path.join(fixture.outDir, 'faq'));
+    fs.mkdirSync(path.join(fixture.outDir, 'sitemap-shards'));
     fs.writeFileSync(path.join(fixture.outDir, 'faq/example.html'), '<h1>FAQ fixture</h1>');
     fs.writeFileSync(path.join(fixture.outDir, 'faq/example.txt'), 'FAQ text fixture');
+    fs.writeFileSync(
+      path.join(fixture.outDir, 'sitemap-shards', 'sitemap-content-000-aabbccdd.xml'),
+      '<urlset></urlset>'
+    );
+    fs.writeFileSync(
+      path.join(fixture.outDir, '_headers'),
+      [
+        '/*',
+        '  Cache-Control: public, max-age=3600, stale-while-revalidate=86400',
+        '',
+        '/sitemap-shards/*',
+        '  ! Cache-Control',
+        '  Cache-Control: public, max-age=31536000, immutable',
+        ''
+      ].join('\n')
+    );
     fs.writeFileSync(
       path.join(fixture.outDir, '_worker.js'),
       `export default {
@@ -231,6 +330,18 @@ test('Wrangler serves HTML and TXT as Static Assets without attaching them as Wo
       assert.equal(response.headers.get('x-worker-fixture'), 'executed', route);
       assert.match(response.headers.get('content-type'), type, route);
       assert.equal(await response.text(), body, route);
+    }
+    for (const [route, cacheControl] of [
+      ['/sitemap.xml', 'public, max-age=3600, stale-while-revalidate=86400'],
+      ['/sitemap-shards/sitemap-content-000-aabbccdd.xml', 'public, max-age=31536000, immutable']
+    ]) {
+      const response = await fetch(`http://127.0.0.1:${port}${route}`, {
+        redirect: 'manual',
+        signal: AbortSignal.timeout(5_000)
+      });
+      assert.equal(response.status, 200, route);
+      assert.equal(response.headers.get('x-worker-fixture'), null, route);
+      assert.equal(response.headers.get('cache-control'), cacheControl, route);
     }
     for (const route of ['/missing', '/_worker.js']) {
       const response = await fetch(`http://127.0.0.1:${port}${route}`, {

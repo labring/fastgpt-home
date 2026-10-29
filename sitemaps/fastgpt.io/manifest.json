@@ -1,0 +1,55 @@
+{
+  "schema": 2,
+  "site": "https://fastgpt.io",
+  "shards": [
+    {
+      "bucket": "content",
+      "file": "sitemap-content-000-3c57e423.xml",
+      "sequence": 0,
+      "sha256": "3c57e4238a7b3ea00156f0172a1c77f268a840b09f301f68429305586d893c2a",
+      "urls": 2320
+    },
+    {
+      "bucket": "industry",
+      "file": "sitemap-industry-000-d8e2072a.xml",
+      "sequence": 0,
+      "sha256": "d8e2072aafacec0c269bca65539d8d45a3f48ae19f57983ae4aeb7ecbaa52348",
+      "urls": 5000
+    },
+    {
+      "bucket": "industry",
+      "file": "sitemap-industry-001-382277fa.xml",
+      "sequence": 1,
+      "sha256": "382277fa2b1cd3ebe9f1887f129973eb6d2e472c4dc5fe802ce3fee600477a6d",
+      "urls": 5000
+    },
+    {
+      "bucket": "industry",
+      "file": "sitemap-industry-002-f8c366f5.xml",
+      "sequence": 2,
+      "sha256": "f8c366f539f899fcf24e4b4162c15f8693cd83f65388c3037134c9dee3b0b3fd",
+      "urls": 5000
+    },
+    {
+      "bucket": "industry",
+      "file": "sitemap-industry-003-6f7e07a9.xml",
+      "sequence": 3,
+      "sha256": "6f7e07a9b8385095442899458c0fdc74d8a2a65a1d180eaa305586ecf3757ba3",
+      "urls": 5000
+    },
+    {
+      "bucket": "industry",
+      "file": "sitemap-industry-004-c923614c.xml",
+      "sequence": 4,
+      "sha256": "c923614cf59d6ebe99e816fbbaa2678632f19308dfd47ea2dfd6eabb4de0000b",
+      "urls": 5000
+    },
+    {
+      "bucket": "industry",
+      "file": "sitemap-industry-005-eb012ca9.xml",
+      "sequence": 5,
+      "sha256": "eb012ca91326813f797d588d4211cccd552048c24ffe752412c1f135fd341f0c",
+      "urls": 3013
+    }
+  ]
+}

@@ -16,7 +16,7 @@ const { verifyWorkerArtifact } = require('./lib/worker-publication');
 
 const ROOT = path.resolve(__dirname, '..');
 const OUT_DIR = path.join(ROOT, 'out');
-const CONFIG_PATH = path.join(ROOT, 'wrangler.json');
+const CONFIG_PATH = path.join(ROOT, 'wrangler.production.json');
 const PACKAGE = require('../package.json');
 const LOCK = require('../package-lock.json');
 const WRANGLER_BIN = path.join(ROOT, 'node_modules', 'wrangler', 'bin', 'wrangler.js');
@@ -62,6 +62,7 @@ function getAvailablePort() {
 
 function startWrangler(port, persistDir, root = ROOT) {
   // Match deploy bundling: --no-bundle recursively loads out/ HTML and TXT as modules.
+  const configPath = root === ROOT ? CONFIG_PATH : path.join(root, 'wrangler.json');
   const child = spawn(
     process.execPath,
     [
@@ -69,7 +70,7 @@ function startWrangler(port, persistDir, root = ROOT) {
       'dev',
       '--local',
       '--config',
-      path.join(root, 'wrangler.json'),
+      configPath,
       '--ip',
       '127.0.0.1',
       '--port',
@@ -128,6 +129,11 @@ async function stopWrangler(child) {
   });
 }
 
+function normalizeRedirectLocation(location) {
+  const { pathname, search } = new URL(location);
+  return `${pathname}${search}`;
+}
+
 async function verifyHttpSurface(port, worker, env) {
   const request = (route) =>
     fetch(`http://127.0.0.1:${port}${route}`, {
@@ -146,6 +152,11 @@ async function verifyHttpSurface(port, worker, env) {
   assert.match(home.headers.get('content-security-policy') || '', /frame-ancestors 'none'/);
   assert.equal(home.headers.get('x-robots-tag'), null, 'International Site must remain indexable');
   const homeHtml = await home.text();
+  assert.match(
+    homeHtml,
+    /<html\b[^>]*\blang=["']en-US["']/i,
+    'Homepage must render English at /'
+  );
   assertCanonical(homeHtml, env.io);
 
   const faqId = getPublishedFaqIds(ROOT).english[0];
@@ -212,15 +223,23 @@ async function verifyHttpSurface(port, worker, env) {
   const expectedLocation = new URL(target);
   expectedLocation.search = query;
   assert.equal(redirect.status, 301, `Worker redirect ${sourcePath}`);
-  assert.equal(
-    redirect.headers.get('location'),
-    expectedLocation.href,
-    'Worker redirect query preservation'
-  );
+  const redirectLocation = redirect.headers.get('location');
+  assert(redirectLocation, `Worker redirect Location for ${sourcePath}`);
 
   const baseline = await worker.fetch(new Request(`${env.io}${sourcePath}${query}`), {
     ASSETS: { fetch: async () => new Response('missing', { status: 404 }) }
   });
+  assert.equal(baseline.status, 301, 'Generated Worker redirect status');
+  assert.equal(
+    baseline.headers.get('location'),
+    expectedLocation.href,
+    'Generated Worker production redirect target'
+  );
+  assert.equal(
+    normalizeRedirectLocation(redirectLocation),
+    normalizeRedirectLocation(baseline.headers.get('location')),
+    'Worker redirect query preservation'
+  );
   assert.equal(
     redirect.status,
     baseline.status,
@@ -228,7 +247,6 @@ async function verifyHttpSurface(port, worker, env) {
   );
   for (const header of [
     'content-type',
-    'location',
     'cache-control',
     'content-security-policy',
     'referrer-policy',
@@ -384,4 +402,10 @@ if (require.main === module) {
   });
 }
 
-module.exports = { getAvailablePort, startWrangler, waitForWrangler, stopWrangler };
+module.exports = {
+  getAvailablePort,
+  normalizeRedirectLocation,
+  startWrangler,
+  waitForWrangler,
+  stopWrangler
+};

@@ -13,6 +13,8 @@ const {
   stopWrangler
 } = require('./verify-worker-release');
 
+const SITEMAP_WORKER_BYPASS = ['/*', '!/sitemap.xml', '!/sitemap-shards/*'];
+
 function createWorkerArtifact({ assetsIgnore = '/_worker.js\n', legacyRedirects = false } = {}) {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), 'fastgpt-worker-artifact-'));
   const outDir = path.join(root, 'out');
@@ -22,6 +24,10 @@ function createWorkerArtifact({ assetsIgnore = '/_worker.js\n', legacyRedirects 
   }
   fs.writeFileSync(path.join(outDir, '_worker.js'), 'export default { fetch() {} };');
   fs.writeFileSync(path.join(outDir, '.assetsignore'), assetsIgnore);
+  fs.writeFileSync(
+    path.join(outDir, '_headers'),
+    '/sitemap-shards/*\n  ! Cache-Control\n  Cache-Control: public, max-age=31536000, immutable\n'
+  );
   if (legacyRedirects) fs.writeFileSync(path.join(outDir, '_redirects'), '');
   const configPath = path.join(root, 'wrangler.json');
   fs.writeFileSync(
@@ -34,7 +40,7 @@ function createWorkerArtifact({ assetsIgnore = '/_worker.js\n', legacyRedirects 
       assets: {
         directory: './out',
         binding: 'ASSETS',
-        run_worker_first: true,
+        run_worker_first: SITEMAP_WORKER_BYPASS,
         not_found_handling: '404-page'
       }
     })
@@ -76,6 +82,8 @@ test('production Worker uses the fastgpt.io Custom Domain while Preview stays is
   );
   assert.deepEqual(productionConfig.routes, [{ pattern: 'fastgpt.io', custom_domain: true }]);
   assert.equal(previewConfig.routes, undefined);
+  assert.deepEqual(productionConfig.assets.run_worker_first, SITEMAP_WORKER_BYPASS);
+  assert.deepEqual(previewConfig.assets.run_worker_first, SITEMAP_WORKER_BYPASS);
 
   const fixture = createWorkerArtifact();
   try {
@@ -145,7 +153,7 @@ test('Worker artifact rejects extra ignore rules and untrusted Wrangler settings
         assets: {
           directory: './out',
           binding: 'ASSETS',
-          run_worker_first: true,
+          run_worker_first: SITEMAP_WORKER_BYPASS,
           not_found_handling: '404-page'
         }
       })
@@ -161,7 +169,7 @@ test('Worker artifact rejects extra ignore rules and untrusted Wrangler settings
         assets: {
           directory: './out',
           binding: 'ASSETS',
-          run_worker_first: true,
+          run_worker_first: SITEMAP_WORKER_BYPASS,
           not_found_handling: '404-page'
         }
       })
@@ -215,6 +223,16 @@ test('Worker Static Assets enforce both file-count and largest-file limits', () 
   );
 });
 
+test('Nginx compresses XML and gives hashed sitemap shards immutable caching', () => {
+  const projectRoot = path.join(__dirname, '..');
+  const nginx = fs.readFileSync(path.join(projectRoot, 'nginx.conf'), 'utf8');
+  assert.match(nginx, /gzip_types[^;]*\bapplication\/xml\b/);
+  assert.match(
+    nginx,
+    /location \^~ \/sitemap-shards\/[\s\S]*?Cache-Control "public, max-age=31536000, immutable"/
+  );
+});
+
 test('Worker release uses its dedicated environment credential', () => {
   const workflowPath = path.join(
     __dirname,
@@ -265,8 +283,25 @@ test('Wrangler serves HTML and TXT as Static Assets without attaching them as Wo
   let child;
   try {
     fs.mkdirSync(path.join(fixture.outDir, 'faq'));
+    fs.mkdirSync(path.join(fixture.outDir, 'sitemap-shards'));
     fs.writeFileSync(path.join(fixture.outDir, 'faq/example.html'), '<h1>FAQ fixture</h1>');
     fs.writeFileSync(path.join(fixture.outDir, 'faq/example.txt'), 'FAQ text fixture');
+    fs.writeFileSync(
+      path.join(fixture.outDir, 'sitemap-shards', 'sitemap-content-000-aabbccdd.xml'),
+      '<urlset></urlset>'
+    );
+    fs.writeFileSync(
+      path.join(fixture.outDir, '_headers'),
+      [
+        '/*',
+        '  Cache-Control: public, max-age=3600, stale-while-revalidate=86400',
+        '',
+        '/sitemap-shards/*',
+        '  ! Cache-Control',
+        '  Cache-Control: public, max-age=31536000, immutable',
+        ''
+      ].join('\n')
+    );
     fs.writeFileSync(
       path.join(fixture.outDir, '_worker.js'),
       `export default {
@@ -295,6 +330,18 @@ test('Wrangler serves HTML and TXT as Static Assets without attaching them as Wo
       assert.equal(response.headers.get('x-worker-fixture'), 'executed', route);
       assert.match(response.headers.get('content-type'), type, route);
       assert.equal(await response.text(), body, route);
+    }
+    for (const [route, cacheControl] of [
+      ['/sitemap.xml', 'public, max-age=3600, stale-while-revalidate=86400'],
+      ['/sitemap-shards/sitemap-content-000-aabbccdd.xml', 'public, max-age=31536000, immutable']
+    ]) {
+      const response = await fetch(`http://127.0.0.1:${port}${route}`, {
+        redirect: 'manual',
+        signal: AbortSignal.timeout(5_000)
+      });
+      assert.equal(response.status, 200, route);
+      assert.equal(response.headers.get('x-worker-fixture'), null, route);
+      assert.equal(response.headers.get('cache-control'), cacheControl, route);
     }
     for (const route of ['/missing', '/_worker.js']) {
       const response = await fetch(`http://127.0.0.1:${port}${route}`, {

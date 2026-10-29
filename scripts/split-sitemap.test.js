@@ -1,8 +1,8 @@
 const assert = require('node:assert/strict');
+const crypto = require('node:crypto');
 const fs = require('node:fs');
 const os = require('node:os');
 const path = require('node:path');
-const { gunzipSync } = require('node:zlib');
 const test = require('node:test');
 
 const { parseSitemapIndex, parseUrlset, splitSitemapFile } = require('./split-sitemap');
@@ -52,13 +52,27 @@ function readShard(fixture, file) {
   return fs.readFileSync(path.join(fixture.stateDirectory, file), 'utf8');
 }
 
+function assertNoGzipFiles(fixture) {
+  assert.equal(
+    fs.readdirSync(fixture.stateDirectory).some((file) => file.endsWith('.gz')),
+    false
+  );
+  assert.equal(fs.existsSync(path.join(fixture.outputDirectory, 'sitemap.xml.gz')), false);
+  assert.equal(
+    fs
+      .readdirSync(path.join(fixture.outputDirectory, 'sitemap-shards', 'fastgpt.io'))
+      .some((file) => file.endsWith('.gz')),
+    false
+  );
+}
+
 function shardRecords(fixture, result) {
   return result.shards.flatMap(
     (shard) => parseUrlset(readShard(fixture, shard.file), SITE).entries
   );
 }
 
-test('persists deterministic 8-character shards and preserves XML metadata', (t) => {
+test('persists deterministic XML shards and combines non-industry routes', (t) => {
   const fixture = createFixture(t);
   const source = makeUrlset([
     [
@@ -69,144 +83,219 @@ test('persists deterministic 8-character shards and preserves XML metadata', (t)
       '</url>'
     ].join('\n'),
     makeUrl(`${SITE}/blog`, '<lastmod>2026-10-28T08:00:00+08:00</lastmod>'),
-    makeUrl(`${SITE}/faq/example`)
+    makeUrl(`${SITE}/faq/example`),
+    makeUrl(`${SITE}/industry`),
+    makeUrl(`${SITE}/industry/finance-a`)
   ]);
 
-  const first = runSplit(fixture, source, { maxUrlsPerShard: 2 });
-  assert.equal(first.entryCount, 3);
+  const first = runSplit(fixture, source);
+  assert.equal(first.entryCount, 5);
   assert.deepEqual(
-    first.shards.map(({ urls }) => urls),
-    [2, 1]
+    first.shards.map(({ bucket, urls }) => [bucket, urls]),
+    [
+      ['content', 4],
+      ['industry', 1]
+    ]
   );
-  assert.match(first.shards[0].file, /^sitemap-core-000-[a-f0-9]{8}\.xml$/);
-  assert.ok(
-    first.shards.every((shard) =>
-      fs.existsSync(path.join(fixture.stateDirectory, `${shard.file}.gz`))
-    )
-  );
+  assert.match(first.shards[0].file, /^sitemap-content-000-[a-f0-9]{8}\.xml$/);
 
   const firstShard = readShard(fixture, first.shards[0].file);
   assert.match(firstShard, /<url\b[^>]*><loc>/);
   assert.match(firstShard, /<lastmod>2026-10-28<\/lastmod>/);
   assert.match(firstShard, /image:image/);
   assert.deepEqual(
-    gunzipSync(fs.readFileSync(path.join(fixture.stateDirectory, `${first.shards[0].file}.gz`))),
-    Buffer.from(firstShard)
-  );
-  assert.deepEqual(
     parseSitemapIndex(fs.readFileSync(path.join(fixture.outputDirectory, 'sitemap.xml')), SITE),
     first.shards.map((shard) => `${SITE}/sitemap-shards/fastgpt.io/${shard.file}`)
   );
 
   const firstIndex = fs.readFileSync(path.join(fixture.outputDirectory, 'sitemap.xml'));
-  const firstGzip = fs.readFileSync(path.join(fixture.outputDirectory, 'sitemap.xml.gz'));
-  const second = runSplit(fixture, source, { maxUrlsPerShard: 2 });
+  const second = runSplit(fixture, source);
   assert.deepEqual(second.shards, first.shards);
   assert.deepEqual(fs.readFileSync(path.join(fixture.outputDirectory, 'sitemap.xml')), firstIndex);
-  assert.deepEqual(
-    fs.readFileSync(path.join(fixture.outputDirectory, 'sitemap.xml.gz')),
-    firstGzip
-  );
+  assertNoGzipFiles(fixture);
 });
 
-test('new industry articles use delta shards while all old references stay stable', (t) => {
+test('industry additions fill the current tail and preserve full shards', (t) => {
   const fixture = createFixture(t);
   const firstSource = makeUrlset([
     makeUrl(`${SITE}/industry`),
     makeUrl(`${SITE}/industry/finance-a`, '<lastmod>2026-10-25</lastmod>'),
-    makeUrl(`${SITE}/industry/finance-b`, '<lastmod>2026-10-26</lastmod>')
+    makeUrl(`${SITE}/industry/finance-b`, '<lastmod>2026-10-26</lastmod>'),
+    makeUrl(`${SITE}/industry/finance-c`, '<lastmod>2026-10-27</lastmod>')
   ]);
-  const first = runSplit(fixture, firstSource, { maxUrlsPerShard: 2 });
-  const oldArticleShard = first.shards.find((shard) => shard.bucket === 'industry-finance');
-  const oldArticleBytes = fs.readFileSync(path.join(fixture.stateDirectory, oldArticleShard.file));
+  const first = runSplit(fixture, firstSource, { maxIndustryUrlsPerShard: 2 });
+  const firstIndustry = first.shards.filter((shard) => shard.bucket === 'industry');
+  const sealedFile = firstIndustry[0].file;
+  const openFile = firstIndustry[1].file;
+  const sealedBytes = fs.readFileSync(path.join(fixture.stateDirectory, sealedFile));
 
   const nextSource = makeUrlset([
     makeUrl(`${SITE}/industry`),
     makeUrl(`${SITE}/industry/finance-a`, '<lastmod>2026-10-25</lastmod>'),
     makeUrl(`${SITE}/industry/finance-b`, '<lastmod>2026-10-26</lastmod>'),
-    makeUrl(`${SITE}/industry/finance-c`, '<lastmod>2026-10-28</lastmod>')
+    makeUrl(`${SITE}/industry/finance-c`, '<lastmod>2026-10-27</lastmod>'),
+    makeUrl(`${SITE}/industry/finance-d`, '<lastmod>2026-10-28</lastmod>')
   ]);
-  const next = runSplit(fixture, nextSource, { maxUrlsPerShard: 2 });
-  const nextArticleShards = next.shards.filter((shard) => shard.bucket === 'industry-finance');
+  const next = runSplit(fixture, nextSource, { maxIndustryUrlsPerShard: 2 });
+  const nextIndustry = next.shards.filter((shard) => shard.bucket === 'industry');
 
-  assert.ok(nextArticleShards.some((shard) => shard.file === oldArticleShard.file));
   assert.deepEqual(
-    next.shards.slice(0, first.shards.length).map((shard) => shard.file),
-    first.shards.map((shard) => shard.file)
+    nextIndustry.map(({ urls }) => urls),
+    [2, 2]
   );
+  assert.equal(nextIndustry[0].file, sealedFile);
+  assert.notEqual(nextIndustry[1].file, openFile);
+  assert.deepEqual(fs.readFileSync(path.join(fixture.stateDirectory, sealedFile)), sealedBytes);
+  assert.equal(fs.existsSync(path.join(fixture.stateDirectory, openFile)), true);
+  assert.equal(
+    fs.existsSync(path.join(fixture.outputDirectory, 'sitemap-shards/fastgpt.io', openFile)),
+    true
+  );
+
+  const finalSource = makeUrlset([
+    makeUrl(`${SITE}/industry`),
+    makeUrl(`${SITE}/industry/finance-a`, '<lastmod>2026-10-25</lastmod>'),
+    makeUrl(`${SITE}/industry/finance-b`, '<lastmod>2026-10-26</lastmod>'),
+    makeUrl(`${SITE}/industry/finance-c`, '<lastmod>2026-10-27</lastmod>'),
+    makeUrl(`${SITE}/industry/finance-d`, '<lastmod>2026-10-28</lastmod>'),
+    makeUrl(`${SITE}/industry/finance-e`, '<lastmod>2026-10-29</lastmod>')
+  ]);
+  const final = runSplit(fixture, finalSource, { maxIndustryUrlsPerShard: 2 });
+  const finalIndustry = final.shards.filter((shard) => shard.bucket === 'industry');
   assert.deepEqual(
-    fs.readFileSync(path.join(fixture.stateDirectory, oldArticleShard.file)),
-    oldArticleBytes
+    finalIndustry.map(({ sequence, urls }) => [sequence, urls]),
+    [
+      [0, 2],
+      [1, 2],
+      [2, 1]
+    ]
   );
-  assert.equal(nextArticleShards.length, 2);
-  assert.equal(shardRecords(fixture, next).length, 4);
+  assert.equal(finalIndustry[0].file, sealedFile);
+  assert.equal(shardRecords(fixture, final).length, 6);
+  assertNoGzipFiles(fixture);
+});
+
+test('rebuilds content independently when blog or FAQ entries change', (t) => {
+  const fixture = createFixture(t);
+  const firstSource = makeUrlset([
+    makeUrl(`${SITE}/blog/a`, '<lastmod>2026-10-26</lastmod>'),
+    makeUrl(`${SITE}/faq/a`),
+    makeUrl(`${SITE}/industry`),
+    makeUrl(`${SITE}/industry/article-a`, '<lastmod>2026-10-27</lastmod>')
+  ]);
+  const first = runSplit(fixture, firstSource);
+  const firstContent = first.shards.find((shard) => shard.bucket === 'content');
+  const firstIndustry = first.shards.find((shard) => shard.bucket === 'industry');
+  const industryBytes = fs.readFileSync(path.join(fixture.stateDirectory, firstIndustry.file));
+
+  const nextSource = makeUrlset([
+    makeUrl(`${SITE}/blog/b`, '<lastmod>2026-10-28</lastmod>'),
+    makeUrl(`${SITE}/faq/a`),
+    makeUrl(`${SITE}/industry`),
+    makeUrl(`${SITE}/industry/article-a`, '<lastmod>2026-10-27</lastmod>')
+  ]);
+  const next = runSplit(fixture, nextSource);
+  const nextContent = next.shards.find((shard) => shard.bucket === 'content');
+  const nextIndustry = next.shards.find((shard) => shard.bucket === 'industry');
+
+  assert.equal(next.entryCount, first.entryCount);
+  assert.notEqual(nextContent.file, firstContent.file);
+  assert.equal(nextIndustry.file, firstIndustry.file);
+  assert.deepEqual(
+    fs.readFileSync(path.join(fixture.stateDirectory, firstIndustry.file)),
+    industryBytes
+  );
   assert.deepEqual(
     shardRecords(fixture, next)
       .map((entry) => entry.loc)
       .sort(),
+    [`${SITE}/blog/b`, `${SITE}/faq/a`, `${SITE}/industry`, `${SITE}/industry/article-a`].sort()
+  );
+  assert.match(readShard(fixture, nextContent.file), /<lastmod>2026-10-28<\/lastmod>/);
+});
+
+test('content exceeds industry batch size while industry splits at 5,000 URLs', (t) => {
+  const fixture = createFixture(t);
+  const content = Array.from({ length: 5001 }, (_, index) => makeUrl(`${SITE}/faq/${index}`));
+  const industry = Array.from({ length: 5001 }, (_, index) =>
+    makeUrl(`${SITE}/industry/article-${index}`)
+  );
+  const result = runSplit(fixture, makeUrlset([...content, ...industry]));
+  assert.deepEqual(
+    result.shards.map(({ bucket, urls }) => [bucket, urls]),
     [
-      `${SITE}/industry`,
-      `${SITE}/industry/finance-a`,
-      `${SITE}/industry/finance-b`,
-      `${SITE}/industry/finance-c`
-    ].sort()
-  );
-});
-
-test('replaces only changed shards and checks URLs plus metadata when counts match', (t) => {
-  const fixture = createFixture(t);
-  const firstSource = makeUrlset([
-    makeUrl(`${SITE}/faq/a`, '<lastmod>2026-10-26</lastmod>'),
-    makeUrl(`${SITE}/faq/b`),
-    makeUrl(`${SITE}/faq/c`),
-    makeUrl(`${SITE}/faq/d`)
-  ]);
-  const first = runSplit(fixture, firstSource, { maxUrlsPerShard: 2 });
-  const unchanged = first.shards[1];
-  const changed = first.shards[0];
-
-  const nextSource = makeUrlset([
-    makeUrl(`${SITE}/faq/a`, '<lastmod>2026-10-28</lastmod>'),
-    makeUrl(`${SITE}/faq/c`),
-    makeUrl(`${SITE}/faq/d`),
-    makeUrl(`${SITE}/faq/e`)
-  ]);
-  const next = runSplit(fixture, nextSource, { maxUrlsPerShard: 2 });
-  const nextLocs = shardRecords(fixture, next)
-    .map((entry) => entry.loc)
-    .sort();
-
-  assert.equal(next.entryCount, first.entryCount);
-  assert.notEqual(next.shards[0].file, changed.file);
-  assert.ok(next.shards.some((shard) => shard.file === unchanged.file));
-  assert.equal(fs.existsSync(path.join(fixture.stateDirectory, changed.file)), true);
-  assert.deepEqual(
-    nextLocs,
-    [`${SITE}/faq/a`, `${SITE}/faq/c`, `${SITE}/faq/d`, `${SITE}/faq/e`].sort()
-  );
-  assert.match(readShard(fixture, next.shards[0].file), /<lastmod>2026-10-28<\/lastmod>/);
-});
-
-test('enforces 5,000 URLs and 10 MiB per shard', (t) => {
-  const fixture = createFixture(t);
-  const entries = Array.from({ length: 5001 }, (_, index) => makeUrl(`${SITE}/faq/${index}`));
-  const result = runSplit(fixture, makeUrlset(entries));
-
-  assert.deepEqual(
-    result.shards.map(({ urls }) => urls),
-    [5000, 1]
+      ['content', 5001],
+      ['industry', 5000],
+      ['industry', 1]
+    ]
   );
   assert.ok(
     result.shards.every(
-      (shard) => fs.statSync(path.join(fixture.stateDirectory, shard.file)).size <= 10 * 1024 * 1024
+      (shard) =>
+        fs.statSync(path.join(fixture.stateDirectory, shard.file)).size <=
+        (shard.bucket === 'industry' ? 10 : 50) * 1024 * 1024
     )
   );
 
-  const tooLarge = makeUrlset([makeUrl(`${SITE}/faq/${'a'.repeat(1200)}`)]);
+  const tooLarge = makeUrlset([makeUrl(`${SITE}/industry/${'a'.repeat(1200)}`)]);
   assert.throws(
-    () => runSplit(createFixture(t), tooLarge, { maxShardBytes: 1024 }),
+    () => runSplit(createFixture(t), tooLarge, { maxIndustryShardBytes: 1024 }),
     /shard budget/
   );
+});
+
+test('rebuilds schema 1 snapshots and removes legacy gzip files', (t) => {
+  const fixture = createFixture(t);
+  fs.mkdirSync(fixture.stateDirectory, { recursive: true });
+  const oldXml = Buffer.from(makeUrlset([makeUrl(`${SITE}/faq/old`)]));
+  const digest = crypto.createHash('sha256').update(oldXml).digest('hex');
+  const oldFile = `sitemap-core-000-${digest.slice(0, 8)}.xml`;
+  fs.writeFileSync(path.join(fixture.stateDirectory, oldFile), oldXml);
+  fs.writeFileSync(path.join(fixture.stateDirectory, `${oldFile}.gz`), 'legacy gzip');
+  fs.writeFileSync(path.join(fixture.stateDirectory, 'sitemap.xml.gz'), 'legacy gzip index');
+  fs.writeFileSync(
+    path.join(fixture.stateDirectory, 'manifest.json'),
+    JSON.stringify({ schema: 1, site: SITE, shards: [] })
+  );
+  fs.writeFileSync(path.join(fixture.outputDirectory, 'sitemap.xml.gz'), 'legacy gzip index');
+
+  const result = runSplit(
+    fixture,
+    makeUrlset([makeUrl(`${SITE}/faq/new`), makeUrl(`${SITE}/industry/article`)]),
+    { maxIndustryUrlsPerShard: 2 }
+  );
+  const manifest = JSON.parse(fs.readFileSync(path.join(fixture.stateDirectory, 'manifest.json')));
+
+  assert.equal(manifest.schema, 2);
+  assert.equal(fs.existsSync(path.join(fixture.stateDirectory, oldFile)), false);
+  assert.equal(result.entryCount, 2);
+  assertNoGzipFiles(fixture);
+});
+
+test('preserves schema 1 snapshot when exporting new shards fails', (t) => {
+  const fixture = createFixture(t);
+  fs.mkdirSync(fixture.stateDirectory, { recursive: true });
+  const oldXml = Buffer.from(makeUrlset([makeUrl(`${SITE}/faq/old`)]));
+  const digest = crypto.createHash('sha256').update(oldXml).digest('hex');
+  const oldFile = `sitemap-core-000-${digest.slice(0, 8)}.xml`;
+  fs.writeFileSync(path.join(fixture.stateDirectory, oldFile), oldXml);
+  fs.writeFileSync(path.join(fixture.stateDirectory, `${oldFile}.gz`), 'legacy gzip');
+  fs.writeFileSync(
+    path.join(fixture.stateDirectory, 'manifest.json'),
+    JSON.stringify({ schema: 1, site: SITE, shards: [] })
+  );
+  fs.writeFileSync(path.join(fixture.outputDirectory, 'sitemap-shards'), 'blocked output');
+
+  assert.throws(
+    () => runSplit(fixture, makeUrlset([makeUrl(`${SITE}/faq/new`)])),
+    /ENOTDIR|not a directory/i
+  );
+  assert.equal(
+    JSON.parse(fs.readFileSync(path.join(fixture.stateDirectory, 'manifest.json'))).schema,
+    1
+  );
+  assert.equal(fs.existsSync(path.join(fixture.stateDirectory, oldFile)), true);
+  assert.equal(fs.existsSync(path.join(fixture.stateDirectory, `${oldFile}.gz`)), true);
 });
 
 test('rejects malformed, empty, duplicate, cross-origin, HTTP, and invalid metadata', () => {

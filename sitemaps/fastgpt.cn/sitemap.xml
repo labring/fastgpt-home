@@ -1,24 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
-    <loc>https://fastgpt.cn/sitemap-shards/fastgpt.cn/sitemap-core-000-8bb72e73.xml</loc>
+    <loc>https://fastgpt.cn/sitemap-shards/fastgpt.cn/sitemap-content-000-d1462df2.xml</loc>
   </sitemap>
   <sitemap>
-    <loc>https://fastgpt.cn/sitemap-shards/fastgpt.cn/sitemap-core-001-c061c0bd.xml</loc>
+    <loc>https://fastgpt.cn/sitemap-shards/fastgpt.cn/sitemap-industry-000-708dedc2.xml</loc>
   </sitemap>
   <sitemap>
-    <loc>https://fastgpt.cn/sitemap-shards/fastgpt.cn/sitemap-industry-biomed-000-708dedc2.xml</loc>
+    <loc>https://fastgpt.cn/sitemap-shards/fastgpt.cn/sitemap-industry-001-87814fae.xml</loc>
   </sitemap>
   <sitemap>
-    <loc>https://fastgpt.cn/sitemap-shards/fastgpt.cn/sitemap-industry-biomed-001-7c2d8787.xml</loc>
+    <loc>https://fastgpt.cn/sitemap-shards/fastgpt.cn/sitemap-industry-002-c9403abc.xml</loc>
   </sitemap>
   <sitemap>
-    <loc>https://fastgpt.cn/sitemap-shards/fastgpt.cn/sitemap-industry-fin-000-721e4767.xml</loc>
-  </sitemap>
-  <sitemap>
-    <loc>https://fastgpt.cn/sitemap-shards/fastgpt.cn/sitemap-industry-finance-000-68e13519.xml</loc>
-  </sitemap>
-  <sitemap>
-    <loc>https://fastgpt.cn/sitemap-shards/fastgpt.cn/sitemap-industry-finance-001-bd80fdb4.xml</loc>
+    <loc>https://fastgpt.cn/sitemap-shards/fastgpt.cn/sitemap-industry-003-3c213826.xml</loc>
   </sitemap>
 </sitemapindex>

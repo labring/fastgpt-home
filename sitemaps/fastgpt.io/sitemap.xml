@@ -1,30 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
-    <loc>https://fastgpt.io/sitemap-shards/fastgpt.io/sitemap-core-000-3c57e423.xml</loc>
+    <loc>https://fastgpt.io/sitemap-shards/fastgpt.io/sitemap-content-000-3c57e423.xml</loc>
   </sitemap>
   <sitemap>
-    <loc>https://fastgpt.io/sitemap-shards/fastgpt.io/sitemap-industry-biomed-000-d8e2072a.xml</loc>
+    <loc>https://fastgpt.io/sitemap-shards/fastgpt.io/sitemap-industry-000-d8e2072a.xml</loc>
   </sitemap>
   <sitemap>
-    <loc>https://fastgpt.io/sitemap-shards/fastgpt.io/sitemap-industry-biomed-001-61efefd2.xml</loc>
+    <loc>https://fastgpt.io/sitemap-shards/fastgpt.io/sitemap-industry-001-382277fa.xml</loc>
   </sitemap>
   <sitemap>
-    <loc>https://fastgpt.io/sitemap-shards/fastgpt.io/sitemap-industry-finance-000-d283c6b2.xml</loc>
+    <loc>https://fastgpt.io/sitemap-shards/fastgpt.io/sitemap-industry-002-f8c366f5.xml</loc>
   </sitemap>
   <sitemap>
-    <loc>https://fastgpt.io/sitemap-shards/fastgpt.io/sitemap-industry-finance-001-d01a25fb.xml</loc>
+    <loc>https://fastgpt.io/sitemap-shards/fastgpt.io/sitemap-industry-003-6f7e07a9.xml</loc>
   </sitemap>
   <sitemap>
-    <loc>https://fastgpt.io/sitemap-shards/fastgpt.io/sitemap-industry-govt-000-cd6d23a2.xml</loc>
+    <loc>https://fastgpt.io/sitemap-shards/fastgpt.io/sitemap-industry-004-c923614c.xml</loc>
   </sitemap>
   <sitemap>
-    <loc>https://fastgpt.io/sitemap-shards/fastgpt.io/sitemap-industry-govt-001-eab01f87.xml</loc>
-  </sitemap>
-  <sitemap>
-    <loc>https://fastgpt.io/sitemap-shards/fastgpt.io/sitemap-industry-mfg-000-3b521f5c.xml</loc>
-  </sitemap>
-  <sitemap>
-    <loc>https://fastgpt.io/sitemap-shards/fastgpt.io/sitemap-industry-mfg-001-54a8f11a.xml</loc>
+    <loc>https://fastgpt.io/sitemap-shards/fastgpt.io/sitemap-industry-005-eb012ca9.xml</loc>
   </sitemap>
 </sitemapindex>

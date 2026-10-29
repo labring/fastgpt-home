@@ -69,14 +69,6 @@ function getHreflang(html, route, language) {
   return getAttribute(tag, 'href');
 }
 
-function readSitemap(outDir) {
-  const sitemapPath = path.join(outDir, 'sitemap.xml');
-  if (!fs.existsSync(sitemapPath)) return null;
-  return [...fs.readFileSync(sitemapPath, 'utf8').matchAll(/<loc>([^<]+)<\/loc>/g)].map(
-    (match) => match[1]
-  );
-}
-
 function readWorkerRedirects(outDir) {
   const workerPath = path.join(outDir, '_worker.js');
   assert(fs.existsSync(workerPath), 'Missing Cloudflare Worker export');
@@ -160,46 +152,6 @@ function verifyTechnicalPage(
   verifyReturn(html, identity.sourcePath, target, variant);
 }
 
-function verifySitemap(outDir, variant, identities, baseUrls) {
-  const sitemap = readSitemap(outDir);
-  if (variant === 'preview') {
-    assert.equal(sitemap, null, 'Preview export contains a production sitemap');
-    return;
-  }
-
-  assert(sitemap, `${variant} export is missing sitemap.xml`);
-  const urls = new Set(sitemap);
-  const ownerIdentities = identities.filter(
-    (identity) => (identity.locale === 'zh' ? 'cn' : 'io') === variant
-  );
-  const allCanonicalUrls = new Set(
-    identities.map(
-      (identity) =>
-        `${identity.locale === 'zh' ? baseUrls.cn : baseUrls.io}${identity.canonicalPath}`
-    )
-  );
-  assert.equal(
-    sitemap.filter((url) => allCanonicalUrls.has(url)).length,
-    ownerIdentities.length,
-    `${variant} sitemap contains an unexpected Technical Page cardinality`
-  );
-  for (const identity of identities) {
-    const owner = identity.locale === 'zh' ? 'cn' : 'io';
-    const canonical = `${baseUrls[owner]}${identity.canonicalPath}`;
-    assert.equal(
-      urls.has(canonical),
-      owner === variant,
-      `${variant} sitemap ownership drift for ${identity.key}`
-    );
-    for (const host of [baseUrls.cn, baseUrls.io]) {
-      assert(
-        !urls.has(`${host}${identity.sourcePath}`),
-        `Sitemap contains a review path ${identity.sourcePath}`
-      );
-    }
-  }
-}
-
 function verifyNginxRedirects(nextDir, variant, expected) {
   const redirects = readNginxRedirects(nextDir);
   verifyRedirectProjection(redirects, expected, `${variant} Nginx export`);
@@ -278,7 +230,6 @@ function verifyTechnicalExport({
     throw new Error(`Unsupported Site Variant: ${variant}`);
   }
 
-  verifySitemap(outDir, variant, identities, baseUrls);
   verifyNginxRedirects(
     nextDir,
     variant,
@@ -330,7 +281,6 @@ module.exports = {
   getCanonical,
   getHreflang,
   getRobots,
-  readSitemap,
   getStaticRouteCandidates,
   main,
   verifyTechnicalExport

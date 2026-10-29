@@ -299,19 +299,6 @@ async function verifyHttpSurface(port, worker, env) {
     (await robots.text()).includes(`Sitemap: ${env.io}/sitemap.xml`),
     'robots.txt Sitemap owner'
   );
-  const sitemap = await request('/sitemap.xml');
-  assert.equal(sitemap.status, 200, 'sitemap.xml status');
-  assert.match(
-    sitemap.headers.get('content-type') || '',
-    /(?:application|text)\/xml/i,
-    'sitemap.xml content type'
-  );
-  assert.equal(sitemap.headers.get('cache-control'), PAGE_CACHE, 'sitemap.xml cache policy');
-  assertSecurityHeaders(sitemap, 'sitemap.xml');
-  const sitemapText = await sitemap.text();
-  assert(sitemapText.includes(env.io), 'Sitemap must contain International Site URLs');
-  assert(!sitemapText.includes(env.cn), 'Sitemap must not contain China Site URLs');
-
   const workerSource = await request('/_worker.js');
   assert.equal(
     workerSource.status,

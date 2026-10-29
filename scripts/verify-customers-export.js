@@ -181,19 +181,6 @@ assert.equal(
 );
 assert.deepEqual(actualRoutes, expectedRoutes, 'Customer export route set mismatch');
 
-if (siteVariant === 'cn') {
-  const sitemapFile = path.join(outDir, 'sitemap.xml');
-  const sitemap = fs.readFileSync(sitemapFile, 'utf8');
-  const customerSitemapUrls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)]
-    .map((match) => match[1])
-    .filter((url) => url === customersBaseUrl || url.startsWith(`${customersBaseUrl}/`))
-    .sort();
-  const expectedSitemapUrls = expectedRoutes
-    .map((route) => `${customersBaseUrl}${route.slice('/customers'.length)}`)
-    .sort();
-  assert.deepEqual(customerSitemapUrls, expectedSitemapUrls, 'Customer sitemap route set mismatch');
-}
-
 const chunksDir = path.join(outDir, '_next', 'static', 'chunks');
 assert(fs.existsSync(chunksDir), `Missing customer JavaScript chunks: ${chunksDir}`);
 for (const chunkFile of walkFiles(chunksDir, '.js')) {

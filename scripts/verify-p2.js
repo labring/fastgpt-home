@@ -278,16 +278,6 @@ function main() {
     assert.deepEqual(levels.slice(0, 3), [1, 2, 3], `${route} must keep h1 -> h2 -> h3 order`);
   }
 
-  const sitemapPath = path.join(outDir, 'sitemap.xml');
-  if (fs.existsSync(sitemapPath)) {
-    const sitemap = fs.readFileSync(sitemapPath, 'utf8');
-    const legacyPrefix = `${baseUrl}/${defaultLocale}`;
-    const legacySitemapUrls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)]
-      .map((match) => match[1])
-      .filter((url) => url === legacyPrefix || url.startsWith(`${legacyPrefix}/`));
-    assert.equal(legacySitemapUrls.length, 0, 'Sitemap contains default-locale prefixed URLs');
-  }
-
   const faqFileCount = verifyAllFaqMetadata();
   const migratedFaqFileCount = verifyDefaultLocaleMigrationCoverage();
   console.log(

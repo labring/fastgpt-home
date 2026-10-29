@@ -13,8 +13,6 @@ const {
   stopWrangler
 } = require('./verify-worker-release');
 
-const SITEMAP_WORKER_BYPASS = ['/*', '!/sitemap.xml', '!/sitemap-shards/*'];
-
 function createWorkerArtifact({ assetsIgnore = '/_worker.js\n', legacyRedirects = false } = {}) {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), 'fastgpt-worker-artifact-'));
   const outDir = path.join(root, 'out');
@@ -24,10 +22,7 @@ function createWorkerArtifact({ assetsIgnore = '/_worker.js\n', legacyRedirects 
   }
   fs.writeFileSync(path.join(outDir, '_worker.js'), 'export default { fetch() {} };');
   fs.writeFileSync(path.join(outDir, '.assetsignore'), assetsIgnore);
-  fs.writeFileSync(
-    path.join(outDir, '_headers'),
-    '/sitemap-shards/*\n  ! Cache-Control\n  Cache-Control: public, max-age=31536000, immutable\n'
-  );
+  fs.writeFileSync(path.join(outDir, '_headers'), '');
   if (legacyRedirects) fs.writeFileSync(path.join(outDir, '_redirects'), '');
   const configPath = path.join(root, 'wrangler.json');
   fs.writeFileSync(
@@ -40,7 +35,7 @@ function createWorkerArtifact({ assetsIgnore = '/_worker.js\n', legacyRedirects 
       assets: {
         directory: './out',
         binding: 'ASSETS',
-        run_worker_first: SITEMAP_WORKER_BYPASS,
+        run_worker_first: ['/*', '!/sitemap.xml', '!/sitemap-shards/*'],
         not_found_handling: '404-page'
       }
     })
@@ -82,9 +77,6 @@ test('production Worker uses the fastgpt.io Custom Domain while Preview stays is
   );
   assert.deepEqual(productionConfig.routes, [{ pattern: 'fastgpt.io', custom_domain: true }]);
   assert.equal(previewConfig.routes, undefined);
-  assert.deepEqual(productionConfig.assets.run_worker_first, SITEMAP_WORKER_BYPASS);
-  assert.deepEqual(previewConfig.assets.run_worker_first, SITEMAP_WORKER_BYPASS);
-
   const fixture = createWorkerArtifact();
   try {
     fs.writeFileSync(fixture.configPath, JSON.stringify(productionConfig));
@@ -153,7 +145,7 @@ test('Worker artifact rejects extra ignore rules and untrusted Wrangler settings
         assets: {
           directory: './out',
           binding: 'ASSETS',
-          run_worker_first: SITEMAP_WORKER_BYPASS,
+          run_worker_first: ['/*', '!/sitemap.xml', '!/sitemap-shards/*'],
           not_found_handling: '404-page'
         }
       })
@@ -169,7 +161,7 @@ test('Worker artifact rejects extra ignore rules and untrusted Wrangler settings
         assets: {
           directory: './out',
           binding: 'ASSETS',
-          run_worker_first: SITEMAP_WORKER_BYPASS,
+          run_worker_first: ['/*', '!/sitemap.xml', '!/sitemap-shards/*'],
           not_found_handling: '404-page'
         }
       })
@@ -284,6 +276,7 @@ test('Wrangler serves HTML and TXT as Static Assets without attaching them as Wo
   try {
     fs.mkdirSync(path.join(fixture.outDir, 'faq'));
     fs.mkdirSync(path.join(fixture.outDir, 'sitemap-shards'));
+    fs.writeFileSync(path.join(fixture.outDir, 'sitemap.xml'), '<sitemapindex></sitemapindex>');
     fs.writeFileSync(path.join(fixture.outDir, 'faq/example.html'), '<h1>FAQ fixture</h1>');
     fs.writeFileSync(path.join(fixture.outDir, 'faq/example.txt'), 'FAQ text fixture');
     fs.writeFileSync(

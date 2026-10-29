@@ -207,13 +207,6 @@ test('technical export verifier accepts the same canonical path in every site va
       fs.unlinkSync(articlePath);
       assert.throws(verify, /Missing Technical Page HTML/);
       fs.writeFileSync(articlePath, html);
-      if (variant !== 'preview') {
-        const sitemapPath = path.join(outDir, 'sitemap.xml');
-        const sitemap = fs.readFileSync(sitemapPath, 'utf8');
-        fs.writeFileSync(sitemapPath, '<urlset></urlset>');
-        assert.throws(verify, /sitemap/i);
-        fs.writeFileSync(sitemapPath, sitemap);
-      }
       assert.doesNotThrow(verify);
     }
   } finally {

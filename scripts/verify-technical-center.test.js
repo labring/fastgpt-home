@@ -190,7 +190,6 @@ test('pagination export covers each locale and rejects missing pages, repeated e
     fs.mkdirSync(path.join(outDir, '_next/static'), { recursive: true });
     fs.writeFileSync(path.join(outDir, '_next/static/app.js'), 'console.log("pagination");');
     const locales = variant === 'preview' ? ['zh', 'en'] : [variant === 'cn' ? 'zh' : 'en'];
-    const sitemap = [];
     const baseUrl = (locale) => `https://fastgpt.${locale === 'zh' ? 'cn' : 'io'}`;
     const htmlFiles = [];
     try {
@@ -240,14 +239,8 @@ test('pagination export covers each locale and rejects missing pages, repeated e
           )}</script><script src="/_next/static/app.js"></script>`;
           fs.writeFileSync(file, html);
           htmlFiles.push(file);
-          sitemap.push(canonical);
         }
       }
-      if (variant !== 'preview')
-        fs.writeFileSync(
-          path.join(outDir, 'sitemap.xml'),
-          `<urlset>${sitemap.map((url) => `<url><loc>${url}</loc></url>`).join('')}</urlset>`
-        );
       const verify = () => verifyTechnicalCenterPagination({ outDir, variant, registryPath });
       assert.equal(verify().pages, variant === 'preview' ? 5 : variant === 'cn' ? 3 : 2);
       const file = htmlFiles[1];

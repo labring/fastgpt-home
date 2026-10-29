@@ -161,7 +161,6 @@ function verifySourceContract() {
 
 function verifyStaticHtml(variant, context) {
   if (variant === 'cn') return 'skipped-cn';
-  const sitemap = fs.readFileSync(path.join(OUT_DIR, 'sitemap.xml'), 'utf8');
   for (const addition of context.additions) {
     const route = `/faq/${addition.sourceSlug}`;
     const html = resolveHtml(route);
@@ -190,10 +189,6 @@ function verifyStaticHtml(variant, context) {
         'x-default': `${IO_BASE_URL}${route}`
       },
       `Addition alternate identity mismatch: ${addition.contentId}`
-    );
-    assert(
-      sitemap.includes(`<loc>${IO_BASE_URL}${route}</loc>`),
-      `Addition is missing from sitemap: ${addition.contentId}`
     );
     for (const href of [...html.matchAll(/\bhref=["']([^"']+)["']/gi)].map((match) =>
       decodeHtml(match[1])

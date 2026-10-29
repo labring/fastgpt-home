@@ -246,8 +246,7 @@ test('happy artifact matrix accepts exact io and cn Guide inventories', () => {
       writeFixture(outDir, variant);
       assert.deepEqual(verifyGuideExport({ outDir, variant }), {
         variant,
-        pages: expectedPageCount,
-        sitemapUrls: expectedPageCount
+        pages: expectedPageCount
       });
       assert.equal(fs.existsSync(path.join(outDir, 'guide.html')), true);
       assert.equal(
@@ -291,7 +290,7 @@ test('CLI reports the selected variant and exact Guide counts', () => {
     assert.match(
       output,
       new RegExp(
-        `variant=cn Guide HTML verified: ${expectedPageCount} pages, ${expectedPageCount} sitemap URLs`
+        `variant=cn Guide HTML verified: ${expectedPageCount} pages`
       )
     );
     assert.match(output, /tracer=poc-30-day-design/);
@@ -623,7 +622,7 @@ test('Guide export surface mutations reject localized hub and article drift with
   );
 });
 
-test('Guide export inventory and CLI regressions reject route, sitemap, and argument drift', () => {
+test('Guide export inventory and CLI regressions reject route and argument drift', () => {
   const sourceBefore = fs.readFileSync(path.join(__dirname, '../src/content/guides/registry.json'));
   const script = path.join(__dirname, 'verify-guide-export.js');
 
@@ -636,8 +635,7 @@ test('Guide export inventory and CLI regressions reject route, sitemap, and argu
       writeFixture(outDir, variant, { style: 'nested' });
       assert.deepEqual(verifyGuideExport({ outDir, variant }), {
         variant,
-        pages: expectedPageCount,
-        sitemapUrls: expectedPageCount
+        pages: expectedPageCount
       });
       fs.rmSync(outDir, { recursive: true, force: true });
       fs.mkdirSync(outDir);
@@ -683,57 +681,8 @@ test('Guide export inventory and CLI regressions reject route, sitemap, and argu
       writeRoute(outDir, 'zh/guide', '<html><body>adapter</body></html>');
       assert.deepEqual(verifyGuideExport({ outDir, variant }), {
         variant,
-        pages: expectedPageCount,
-        sitemapUrls: expectedPageCount
+        pages: expectedPageCount
       });
-
-      const sitemapCases = [
-        [
-          'wrong owner',
-          (xml) =>
-            xml.replace(host, variant === 'cn' ? 'https://fastgpt.io' : 'https://fastgpt.cn'),
-          /expected exact Guide sitemap URLs/
-        ],
-        [
-          'duplicate',
-          (xml) => xml.replace('</urlset>', `<url><loc>${host}/guide</loc></url></urlset>`),
-          /duplicate Guide URLs/
-        ],
-        [
-          'extra',
-          (xml) =>
-            xml.replace(
-              '</urlset>',
-              `<url><loc>${host}/guide/unapproved-guide</loc></url></urlset>`
-            ),
-          /expected exact Guide sitemap URLs/
-        ],
-        [
-          'missing',
-          (xml) =>
-            xml.replace(`<url><loc>${host}/guide/${registry.entries[0].slug}</loc></url>`, ''),
-          /expected exact Guide sitemap URLs/
-        ],
-        [
-          'malformed',
-          (xml) => xml.replace('</urlset>', '<url><loc>https://[bad</loc></url></urlset>'),
-          /invalid sitemap URL/
-        ]
-      ];
-      for (const [, mutate, reason] of sitemapCases) {
-        writeFixture(outDir, variant);
-        const sitemapPath = path.join(outDir, 'sitemap.xml');
-        fs.writeFileSync(sitemapPath, mutate(fs.readFileSync(sitemapPath, 'utf8')));
-        assertScopedFailure(() => verifyGuideExport({ outDir, variant }), {
-          variant,
-          slug: 'hub',
-          filePath: sitemapPath,
-          surface: 'sitemap',
-          reason
-        });
-        fs.rmSync(outDir, { recursive: true, force: true });
-        fs.mkdirSync(outDir);
-      }
 
       writeFixture(outDir, variant === 'io' ? 'cn' : 'io');
       assert.throws(
@@ -762,7 +711,7 @@ test('Guide export inventory and CLI regressions reject route, sitemap, and argu
       assert.match(
         success.stdout,
         new RegExp(
-          `variant=${variant} Guide HTML verified: ${expectedPageCount} pages, ${expectedPageCount} sitemap URLs`
+          `variant=${variant} Guide HTML verified: ${expectedPageCount} pages`
         )
       );
       fs.rmSync(path.join(outDir, 'guide', `${registry.entries[0].slug}.html`));

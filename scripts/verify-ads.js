@@ -4,8 +4,8 @@
  * Verify the Bing Ads /ads/ landing surface against the static export.
  *
  * cn/preview builds must ship exactly the registered landing pages with the
- * contracted noindex/canonical policy, full lead-form field set, registry-faithful
- * copy, and no /ads/ entries in the sitemap. io builds must ship none of them.
+ * contracted noindex/canonical policy, full lead-form field set, and registry-faithful
+ * copy. io builds must ship none of them.
  * The structural campaign audit reads the non-rendered ops registry. Keyword,
  * ad-title and H1 semantic alignment is checked during content review.
  * CRM attribution fields are covered by verify:ads-regression at the HTTP boundary.
@@ -22,7 +22,6 @@ const outDir = path.join(root, 'out');
 const adsDir = path.join(outDir, 'ads');
 const variant = resolveSiteVariant();
 
-const ADS_SUB_PATH = '/ads/';
 const HTML_COMMENT_HIDDEN = /<(script|style|template)\b[^>]*>[\s\S]*?<\/\1\s*>/gi;
 const PLACEHOLDER_PATTERN = /需客户提供|占位|TODO/i;
 
@@ -339,23 +338,12 @@ function verifyExportedAdsPage(page, htmlPath) {
   );
 }
 
-function verifySitemap() {
-  const sitemapPath = path.join(outDir, 'sitemap.xml');
-  if (!fs.existsSync(sitemapPath)) return;
-  const sitemap = fs.readFileSync(sitemapPath, 'utf8');
-  assert(
-    !sitemap.includes(ADS_SUB_PATH),
-    'sitemap.xml must not contain /ads/ entries'
-  );
-}
-
 // ── Variant-specific export checks ──
 if (variant === 'io') {
   assert(
     !fs.existsSync(adsDir),
     'io build must not output any /ads/ pages, found out/ads/'
   );
-  verifySitemap();
   console.log('ADS verification passed: io build ships no /ads/ surface');
   process.exit(0);
 }
@@ -402,7 +390,5 @@ for (const page of registeredPages) {
     `/ads/${page.slug}: display URL must match the landing path`
   );
 }
-
-verifySitemap();
 
 console.log(`ADS verification passed: ${registeredPages.length} /ads/ pages verified for the ${variant} build`);

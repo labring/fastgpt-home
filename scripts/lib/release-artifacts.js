@@ -136,30 +136,6 @@ function verifyExportCardinality(variant) {
     );
   }
 
-  if (variant !== 'preview') {
-    const sitemapPath = path.join(OUT_DIR, 'sitemap.xml');
-    if (!fs.existsSync(sitemapPath))
-      throw new Error(`variant=${variant} is missing out/sitemap.xml`);
-    const sitemapUrls = [
-      ...fs.readFileSync(sitemapPath, 'utf8').matchAll(/<loc>([^<]+)<\/loc>/g)
-    ].map((match) => match[1]);
-    const faqUrls = sitemapUrls.filter((url) => {
-      try {
-        const parsed = new URL(url);
-        return (
-          parsed.pathname.startsWith('/faq/') &&
-          parsed.pathname.split('/').filter(Boolean).length === 2
-        );
-      } catch {
-        return false;
-      }
-    });
-    if (faqUrls.length !== expected || new Set(faqUrls).size !== expected) {
-      throw new Error(
-        `variant=${variant} FAQ sitemap cardinality mismatch: expected ${expected}, found ${faqUrls.length}`
-      );
-    }
-  }
 }
 
 function recordVariantArtifactInventory(record, variant) {

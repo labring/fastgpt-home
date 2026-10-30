@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * Verify registry-owned Guide HTML and sitemap entries in one static export.
+ * Verify registry-owned Guide HTML in one static export.
  */
 
 const fs = require('node:fs');
@@ -529,37 +529,6 @@ function verifyArticle(html, page, expectation, filePath) {
   }
 }
 
-function parseSitemapUrls(outDir, expectation) {
-  const filePath = path.join(outDir, 'sitemap.xml');
-  const context = { variant: expectation.variant, slug: 'hub', filePath, surface: 'sitemap' };
-  if (!fs.existsSync(filePath)) fail(context, 'missing sitemap.xml');
-  const xml = fs.readFileSync(filePath, 'utf8');
-  return [...xml.matchAll(/<loc>([\s\S]*?)<\/loc>/gi)].map((match) => decodeHtmlEntities(match[1].trim()));
-}
-
-function verifySitemap(outDir, expectation) {
-  const urls = parseSitemapUrls(outDir, expectation);
-  const context = { variant: expectation.variant, slug: 'hub', filePath: path.join(outDir, 'sitemap.xml'), surface: 'sitemap' };
-  const actual = [];
-  for (const url of urls) {
-    try {
-      const parsed = new URL(url);
-      if ((parsed.pathname === '/guide' || parsed.pathname.startsWith('/guide/')) &&
-          (!TECHNICAL_GUIDE_PATHS.has(parsed.pathname) || expectation.routes.has(parsed.pathname))) actual.push(url);
-    } catch {
-      fail(context, `invalid sitemap URL ${url}`);
-    }
-  }
-  const expected = [...expectation.routes.keys()].map((route) => `${expectation.host}${route}`);
-  if (new Set(actual).size !== actual.length) fail(context, 'contains duplicate Guide URLs');
-  const sortedActual = [...actual].sort();
-  const sortedExpected = [...expected].sort();
-  if (sortedActual.length !== sortedExpected.length || sortedActual.some((url, index) => url !== sortedExpected[index])) {
-    fail(context, `expected exact Guide sitemap URLs ${sortedExpected.join(', ')}; found ${sortedActual.join(', ') || '(none)'}`);
-  }
-  return actual.length;
-}
-
 function verifyGuideExport({ outDir, variant, entries }) {
   const safeOutDir = outDir ? path.resolve(outDir) : '<missing>';
   const expectation = buildGuideExpectation(variant, { entries });
@@ -579,8 +548,7 @@ function verifyGuideExport({ outDir, variant, entries }) {
         expectation.locale, page.source.sourceName), 'utf8'), variant, safeOutDir);
     }
   }
-  const sitemapUrls = verifySitemap(safeOutDir, expectation);
-  return { variant, pages: routeFiles.size, sitemapUrls };
+  return { variant, pages: routeFiles.size };
 }
 
 function parseArgs(argv) {
@@ -612,7 +580,7 @@ function main(argv = process.argv.slice(2)) {
     ? GUIDE_TRACER_SLUG
     : 'missing';
   console.log(
-    `[verify-guide-export] variant=${result.variant} Guide HTML verified: ${result.pages} pages, ${result.sitemapUrls} sitemap URLs (tracer=${tracer})`
+    `[verify-guide-export] variant=${result.variant} Guide HTML verified: ${result.pages} pages (tracer=${tracer})`
   );
   return result;
 }

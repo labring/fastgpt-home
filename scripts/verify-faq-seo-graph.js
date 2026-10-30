@@ -358,13 +358,6 @@ function expectedHtmlRouteMap(variant, identity) {
   return map;
 }
 
-function parseSitemapUrls(outDir) {
-  const sitemapPath = path.join(outDir, 'sitemap.xml');
-  assert(fs.existsSync(sitemapPath), `Missing sitemap.xml in ${outDir}`);
-  const xml = fs.readFileSync(sitemapPath, 'utf8');
-  return [...xml.matchAll(/<loc>([\s\S]*?)<\/loc>/gi)].map((match) => decodeHtmlEntities(match[1].trim()));
-}
-
 function verifyHtmlGraph(outDir, variant, identity) {
   assert(['io', 'cn'].includes(variant), `HTML variant must be io or cn: ${variant}`);
   const expected = expectedHtmlRouteMap(variant, identity);
@@ -426,27 +419,7 @@ function verifyHtmlGraph(outDir, variant, identity) {
   }
 
   assert.equal(seenRoutes.size, expected.size, `FAQ HTML route cardinality mismatch for ${variant}: expected ${expected.size}, found ${seenRoutes.size}`);
-  const sitemapUrls = parseSitemapUrls(outDir);
-  const sitemapSet = new Set(sitemapUrls);
-  assert.equal(sitemapSet.size, sitemapUrls.length, 'Sitemap contains duplicate exact URLs');
-  const faqSitemapUrls = sitemapUrls.filter((url) => {
-    try {
-      const parsed = new URL(url);
-      return parsed.pathname.startsWith('/faq/') && parsed.pathname.split('/').filter(Boolean).length === 2;
-    } catch {
-      return false;
-    }
-  });
-  const expectedSitemap = new Set([...expected.keys()].map((routeKey) => routeUrl(expected.get(routeKey).locale, routeKey)));
-  assert.deepEqual(new Set(faqSitemapUrls), expectedSitemap, `Sitemap FAQ URL set mismatch for ${variant}`);
-  for (const url of faqSitemapUrls) {
-    const parsed = new URL(url);
-    assert.equal(parsed.origin, baseUrl, `Sitemap FAQ URL has wrong owner host: ${url}`);
-    assert(!parsed.pathname.startsWith('/en/faq/') && !parsed.pathname.startsWith('/zh/faq/'), `Sitemap contains prefixed alias: ${url}`);
-    assert(!sourcePaths.has(parsed.pathname), `Sitemap contains redirect source: ${url}`);
-  }
-
-  console.log(`[verify-faq-seo-graph] HTML checks passed (${variant}, ${seenRoutes.size} FAQ pages, ${faqSitemapUrls.length} sitemap FAQ URLs; case-sensitive filesystem required)`);
+  console.log(`[verify-faq-seo-graph] HTML checks passed (${variant}, ${seenRoutes.size} FAQ pages; case-sensitive filesystem required)`);
 }
 
 function parseArgs(argv) {

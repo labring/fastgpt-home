@@ -279,10 +279,8 @@ function runVariantChecks(failures, variant, env, record) {
       variant,
       record,
       (output) => {
-        const match = output.match(
-          /Guide HTML verified: (\d+) pages, (\d+) sitemap URLs \(tracer=([^)]+)\)/
-        );
-        return match ? `tracer=${match[3]} pages=${match[1]} sitemapUrls=${match[2]}` : undefined;
+        const match = output.match(/Guide HTML verified: (\d+) pages \(tracer=([^)]+)\)/);
+        return match ? `tracer=${match[2]} pages=${match[1]}` : undefined;
       }
     );
   }

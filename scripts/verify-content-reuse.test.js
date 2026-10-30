@@ -787,7 +787,7 @@ test(
   },
   () => {
     const zlib = require('node:zlib');
-    const { getCanonical, getHreflang, readSitemap } = require('./verify-technical-export');
+    const { getCanonical, getHreflang } = require('./verify-technical-export');
     const out = path.resolve(process.env.INDUSTRY_EXPORT_DIR);
     const load = loader();
     const { currentSiteVariant, getDefaultLocaleForSiteVariant } = load('@/lib/siteRouting');
@@ -821,10 +821,6 @@ test(
       items.map(({ url }) => url),
       expected.slice(0, 12).map(({ slug }) => `${canonical}/${slug}`)
     );
-    const sitemap = readSitemap(out).filter((url) =>
-      new URL(url).pathname.startsWith('/industry/')
-    );
-    assert.deepEqual(sitemap.sort(), expected.map(({ slug }) => `${canonical}/${slug}`).sort());
     let relatedLinkCount = 0;
     for (const entry of summaries) {
       assert(

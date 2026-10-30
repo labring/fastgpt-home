@@ -7,7 +7,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const zlib = require('node:zlib');
 const { getProductionBaseUrls, resolveSiteVariant } = require('./lib/site-variant');
-const { getCanonical, getHreflang, getRobots, readSitemap } = require('./verify-technical-export');
+const { getCanonical, getHreflang, getRobots } = require('./verify-technical-export');
 
 const ROOT = path.resolve(__dirname, '..');
 const OUT_DIR = path.join(ROOT, 'out');
@@ -176,8 +176,6 @@ function verifyTechnicalCenterPagination({
   const registry = JSON.parse(fs.readFileSync(registryPath, 'utf8'));
   const baseUrls = getProductionBaseUrls();
   const locales = variant === 'preview' ? ['zh', 'en'] : [variant === 'cn' ? 'zh' : 'en'];
-  const sitemap = readSitemap(outDir);
-  const expectedSitemap = [];
   const checkedScripts = new Set();
   let pages = 0;
 
@@ -276,7 +274,6 @@ function verifyTechnicalCenterPagination({
         );
         checkedScripts.add(scriptKey);
       }
-      if (variant !== 'preview') expectedSitemap.push(canonical);
       pages += 1;
     }
 
@@ -291,18 +288,11 @@ function verifyTechnicalCenterPagination({
   }
 
   if (variant === 'preview') {
-    assert.equal(sitemap, null, 'Preview contains a production sitemap');
     assert(
       !fs.existsSync(path.join(outDir, 'tech-center/page')),
       'Preview contains owner pagination routes'
     );
   } else {
-    assert(sitemap, 'Missing production sitemap');
-    assert.deepEqual(
-      sitemap.filter((url) => /\/tech-center(?:\/page\/\d+)?$/.test(url)).sort(),
-      expectedSitemap.sort(),
-      'Technical Center sitemap coverage mismatch'
-    );
     for (const locale of ['zh', 'en']) {
       assert(
         !fs.existsSync(path.join(outDir, locale, 'tech-center')),

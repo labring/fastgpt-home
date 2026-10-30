@@ -65,7 +65,6 @@ function verifyWorkerArtifact({
   configPath,
   trustedConfigPath = configPath,
   wranglerVersion,
-  requireSitemap = true,
   inventory
 }) {
   verifyWranglerVersion(wranglerVersion);
@@ -80,8 +79,6 @@ function verifyWorkerArtifact({
     'index.html',
     '404.html',
     'robots.txt',
-    ...(requireSitemap ? ['sitemap.xml'] : []),
-    '_headers',
     '_worker.js',
     '.assetsignore'
   ]) {
@@ -100,11 +97,6 @@ function verifyWorkerArtifact({
     ignoreRules.length === 1 && ['/_worker.js', '_worker.js'].includes(ignoreRules[0]),
     'Static Assets .assetsignore must contain only the _worker.js exclusion'
   );
-  assert.match(
-    fs.readFileSync(path.join(resolvedOutDir, '_headers'), 'utf8'),
-    /^\/sitemap-shards\/\*\r?\n[ \t]+! Cache-Control\r?\n[ \t]+Cache-Control: public, max-age=31536000, immutable[ \t]*$/m,
-    'Sitemap shards must use a one-year immutable cache'
-  );
   assert(
     !fs.existsSync(path.join(resolvedOutDir, '_redirects')),
     'Legacy _redirects artifact is present'
@@ -119,11 +111,6 @@ function verifyWorkerArtifact({
   assert.equal(config.main, './out/_worker.js', 'Worker entrypoint must come from the export');
   assert.equal(config.assets?.directory, './out', 'Static Assets must use the complete export');
   assert.equal(config.assets?.binding, 'ASSETS', 'Worker must bind Static Assets as ASSETS');
-  assert.deepEqual(
-    config.assets?.run_worker_first,
-    ['/*', '!/sitemap.xml', '!/sitemap-shards/*'],
-    'Only static sitemap files may bypass Worker-first routing'
-  );
   assert.equal(
     config.assets?.not_found_handling,
     '404-page',

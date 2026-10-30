@@ -12,7 +12,10 @@ const nextConfig = {
   transpilePackages: ['@heroui/react', '@heroui/theme'],
 
   // Avoid child-process static-path workers in development environments with invalid stdio handles.
-  ...(!isExport && { experimental: { workerThreads: true } }),
+  experimental: {
+    agentUpgrade: 'security',
+    ...(!isExport && { workerThreads: true })
+  },
   
   // Enable compression
   compress: true,

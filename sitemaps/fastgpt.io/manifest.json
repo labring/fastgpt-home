@@ -46,10 +46,17 @@
     },
     {
       "bucket": "industry",
-      "file": "sitemap-industry-005-eb012ca9.xml",
+      "file": "sitemap-industry-005-9fe0f6e9.xml",
       "sequence": 5,
-      "sha256": "eb012ca91326813f797d588d4211cccd552048c24ffe752412c1f135fd341f0c",
-      "urls": 3013
+      "sha256": "9fe0f6e9345001b1cb6929936aa9a15b6493b4b971036212ccfe8f2736b0e173",
+      "urls": 5000
+    },
+    {
+      "bucket": "industry",
+      "file": "sitemap-industry-006-fb7a916e.xml",
+      "sequence": 6,
+      "sha256": "fb7a916ed333cdf8d6e6a157e0fac71fc33c763c7fb1b0c1ead1ac61687932a3",
+      "urls": 2931
     }
   ]
 }

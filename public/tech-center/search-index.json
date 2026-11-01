@@ -49818,5 +49818,105 @@
     "publicPath": "/reference/openapi-endpoint-reference",
     "sourceType": "官方文档",
     "minutes": 7
+  },
+  {
+    "identity": "zh|/guide/ref-agent-skill-plugin",
+    "title": "FastGPT 配置与开发参考：Agent、技能与插件（106 篇清单）",
+    "description": "FastGPT 配置与开发参考：Agent、技能与插件 本页汇总站内已发布的对话 Agent、技能、系统插件、MCP 与沙盒的配置相关文档，共 106 篇，按标题排序列出。 这一类文档通常在讲什么 1. 对话 Agent 的提示词、虚拟机与调试功能怎样配置 2. 技能怎样开发、发布、回滚与绑定到智能体 3.…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/ref-agent-skill-plugin",
+    "sourceType": "官方文档",
+    "minutes": 19
+  },
+  {
+    "identity": "zh|/guide/ref-api-and-publishing",
+    "title": "FastGPT 配置与开发参考：API 与对外发布（110 篇清单）",
+    "description": "FastGPT 配置与开发参考：API 与对外发布 本页汇总站内已发布的OpenAPI 接口调用、鉴权，以及发布到即时通讯渠道与网页相关文档，共 110 篇，按标题排序列出。 这一类文档通常在讲什么 1. OpenAPI 的鉴权、对话接口与知识库接口怎样调用 2. 接口返回值与常见报错的含义 3. 发布到企…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/ref-api-and-publishing",
+    "sourceType": "官方文档",
+    "minutes": 19
+  },
+  {
+    "identity": "zh|/guide/ref-deploy-and-env",
+    "title": "FastGPT 配置与开发参考：部署与环境配置（67 篇清单）",
+    "description": "FastGPT 配置与开发参考：部署与环境配置 本页汇总站内已发布的Docker 部署、数据库、对象存储、镜像与环境变量相关文档，共 67 篇，按标题排序列出。 这一类文档通常在讲什么 1. Docker 与 Docker Compose 部署的步骤与常见问题 2. MongoDB、PostgreSQL 与…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/ref-deploy-and-env",
+    "sourceType": "官方文档",
+    "minutes": 14
+  },
+  {
+    "identity": "zh|/guide/ref-knowledge-base",
+    "title": "FastGPT 配置与开发参考：知识库与检索（99 篇清单）",
+    "description": "FastGPT 配置与开发参考：知识库与检索 本页汇总站内已发布的知识库建设、第三方知识库接入、检索参数与引用相关文档，共 99 篇，按标题排序列出。 这一类文档通常在讲什么 1. 知识库检索增强生成的原理与搜索参数 2. 飞书、钉钉、语雀等第三方知识库与网页同步的接入 3. 引用展示、集合过滤与检索效果的…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/ref-knowledge-base",
+    "sourceType": "官方文档",
+    "minutes": 18
+  },
+  {
+    "identity": "zh|/guide/ref-model-integration",
+    "title": "FastGPT 配置与开发参考：模型接入与配置（77 篇清单）",
+    "description": "FastGPT 配置与开发参考：模型接入与配置 本页汇总站内已发布的语言模型、索引模型、重排模型与语音模型的接入和配置相关文档，共 77 篇，按标题排序列出。 这一类文档通常在讲什么 1. 怎样接入 Ollama、Xinference 或第三方平台上的模型 2. 自定义模型的请求地址与参数怎样填写 3. 向…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/ref-model-integration",
+    "sourceType": "官方文档",
+    "minutes": 15
+  },
+  {
+    "identity": "zh|/guide/ref-upgrade-and-changes",
+    "title": "FastGPT 配置与开发参考：版本升级与变更说明（170 篇清单）",
+    "description": "FastGPT 配置与开发参考：版本升级与变更说明 本页汇总站内已发布的各版本的升级操作、升级脚本、环境变量变更与更新内容相关文档，共 170 篇，按标题排序列出。 这一类文档通常在讲什么 1. 某个版本升级要执行哪些脚本、按什么顺序操作 2. 某个版本改了哪些环境变量、旧配置怎样适配 3. 某个版本新增、…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/ref-upgrade-and-changes",
+    "sourceType": "官方文档",
+    "minutes": 29
+  },
+  {
+    "identity": "zh|/guide/ref-workflow-nodes",
+    "title": "FastGPT 配置与开发参考：工作流与节点（88 篇清单）",
+    "description": "FastGPT 配置与开发参考：工作流与节点 本页汇总站内已发布的工作流各节点的用法、参数与运行规则相关文档，共 88 篇，按标题排序列出。 这一类文档通常在讲什么 1. 问题分类、判断器、文本提取等节点的参数与用法 2. 循环、并行与 HTTP 请求节点的注意事项 3. 工作流的运行流程与节点执行规则 若…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/ref-workflow-nodes",
+    "sourceType": "官方文档",
+    "minutes": 16
+  },
+  {
+    "identity": "zh|/guide/reference-overview",
+    "title": "FastGPT 配置与开发参考全景：按主题找到对应清单",
+    "description": "FastGPT 配置与开发参考全景 本页把站内已发布的 909 篇配置与开发参考文档（速查、术语、教程、节点、集成、接口、知识库七个栏目）按主题归类，用于先判断一个问题属于哪个主题，再进入对应清单查具体条目。归类依据文档标题中的关键词。 先判断问题属于哪个主题 | 问题里出现的对象 | 指向的主题 | |…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/reference-overview",
+    "sourceType": "官方文档",
+    "minutes": 13
+  },
+  {
+    "identity": "zh|/reference/model-config-fields-v4172",
+    "title": "FastGPT 模型配置字段对照表（v4.17.2）",
+    "description": "FastGPT 模型配置字段对照表（v4.17.2） 本页把 FastGPT v4.17.2 官方「模型配置说明」里语言模型、索引模型、重排模型、语音合成模型、语音识别模型五类字段示例（合计 50 个字段），逐个对照同一版本源码 packages/global/core/ai/model/schema.ts…",
+    "category": "reference",
+    "locale": "zh",
+    "publicPath": "/reference/model-config-fields-v4172",
+    "sourceType": "官方文档",
+    "minutes": 12
+  },
+  {
+    "identity": "zh|/reference/permission-items-reference",
+    "title": "FastGPT 权限项对照表（v4.17.2）",
+    "description": "FastGPT 权限项对照表（v4.17.2） 本页把 FastGPT v4.17.2 官方「团队 & 成员组 & 权限」文档中的资源权限表（13 项）逐项对照同一版本源码 packages/global/support/permission/ 下的权限定义。 权限判定按文档的规则：先看成员本人的权限，再看…",
+    "category": "reference",
+    "locale": "zh",
+    "publicPath": "/reference/permission-items-reference",
+    "sourceType": "官方文档",
+    "minutes": 6
   }
 ]

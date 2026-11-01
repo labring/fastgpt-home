@@ -53,7 +53,19 @@ function parseFrontMatter(source: string, sourcePath: string) {
     if (field === 'application_area' && Object.hasOwn(metadata, field)) {
       fail(sourcePath, 'duplicate application_area; declare exactly one primary area');
     }
-    metadata[field] = line.slice(separator + 1).trim();
+    let value = line.slice(separator + 1).trim();
+    if (value.startsWith('"') && value.endsWith('"')) {
+      try {
+        const parsed: unknown = JSON.parse(value);
+        if (typeof parsed !== 'string') fail(sourcePath, `invalid quoted value for ${field}`);
+        value = parsed;
+      } catch {
+        fail(sourcePath, `invalid quoted value for ${field}`);
+      }
+    } else if (value.startsWith("'") && value.endsWith("'")) {
+      value = value.slice(1, -1).replaceAll("''", "'");
+    }
+    metadata[field] = value;
   }
 
   const body = normalized.slice(match[0].length).trim();
@@ -118,7 +130,7 @@ function resolveApplicationArea(
   if (declaredArea !== undefined && !isIndustryArea(declaredArea)) {
     fail(
       sourcePath,
-      `unknown application_area: ${declaredArea}; expected finance, biomed, research, or manufacturing`
+      `unknown application_area: ${declaredArea}; expected finance, biomed, research, manufacturing, or technology`
     );
   }
   if (historicalArea && declaredArea && historicalArea !== declaredArea) {
@@ -131,7 +143,7 @@ function resolveApplicationArea(
   if (!area)
     fail(
       sourcePath,
-      'missing application_area; expected finance, biomed, research, or manufacturing'
+      'missing application_area; expected finance, biomed, research, manufacturing, or technology'
     );
   return area;
 }

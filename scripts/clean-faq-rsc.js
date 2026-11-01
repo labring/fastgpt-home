@@ -12,6 +12,16 @@ const CLOUDFLARE_STATIC_ASSETS_FILE_LIMIT = Number(
 
 let removed = 0;
 
+function isReplaceableRscPayload(dir, filename) {
+  if (!filename.endsWith('.txt')) return false;
+
+  const fullPath = path.join(dir, filename);
+  if (fs.existsSync(fullPath.replace(/\.txt$/, '.html'))) return true;
+  if (!filename.startsWith('__next.')) return false;
+
+  return fs.existsSync(`${dir}.html`) || fs.existsSync(path.join(dir, 'index.html'));
+}
+
 function cleanDir(dir) {
   if (!fs.existsSync(dir)) return;
 
@@ -24,54 +34,54 @@ function cleanDir(dir) {
       continue;
     }
 
-    const isSegmentPayload =
-      entry.name.startsWith('__next.') &&
-      entry.name.endsWith('.txt') &&
-      (fs.existsSync(`${dir}.html`) || fs.existsSync(path.join(dir, 'index.html')));
-    const isRoutePayload =
-      entry.name.endsWith('.txt') &&
-      fs.existsSync(fullPath.replace(/\.txt$/, '.html'));
-
-    if (!isSegmentPayload && !isRoutePayload) continue;
+    if (!isReplaceableRscPayload(dir, entry.name)) continue;
     fs.unlinkSync(fullPath);
     removed++;
   }
 }
 
-cleanDir(outDir);
+function runCleanup() {
+  cleanDir(outDir);
 
-let total = 0;
-function countFiles(dir) {
-  const entries = fs.readdirSync(dir, { withFileTypes: true });
-  for (const entry of entries) {
-    if (entry.isDirectory()) {
-      countFiles(path.join(dir, entry.name));
-    } else {
-      total++;
+  let total = 0;
+  function countFiles(dir) {
+    const entries = fs.readdirSync(dir, { withFileTypes: true });
+    for (const entry of entries) {
+      if (entry.isDirectory()) {
+        countFiles(path.join(dir, entry.name));
+      } else {
+        total++;
+      }
     }
   }
-}
-countFiles(outDir);
-console.log(`[clean-faq-rsc] removed=${removed}; files=${total}`);
+  countFiles(outDir);
+  console.log(`[clean-faq-rsc] removed=${removed}; files=${total}`);
 
-if (process.env.PREVIEW_METRICS_PATH) {
-  fs.mkdirSync(path.dirname(process.env.PREVIEW_METRICS_PATH), { recursive: true });
-  fs.writeFileSync(
-    process.env.PREVIEW_METRICS_PATH,
-    `${JSON.stringify(
-      {
-        rscPayloadFilesRemoved: removed,
-        staticExportFilesAfterCleanup: total,
-        staticAssetFileLimit: CLOUDFLARE_STATIC_ASSETS_FILE_LIMIT
-      },
-      null,
-      2
-    )}\n`
-  );
+  if (process.env.PREVIEW_METRICS_PATH) {
+    fs.mkdirSync(path.dirname(process.env.PREVIEW_METRICS_PATH), { recursive: true });
+    fs.writeFileSync(
+      process.env.PREVIEW_METRICS_PATH,
+      `${JSON.stringify(
+        {
+          rscPayloadFilesRemoved: removed,
+          staticExportFilesAfterCleanup: total,
+          staticAssetFileLimit: CLOUDFLARE_STATIC_ASSETS_FILE_LIMIT
+        },
+        null,
+        2
+      )}\n`
+    );
+  }
+
+  if (total > CLOUDFLARE_STATIC_ASSETS_FILE_LIMIT) {
+    throw new Error(
+      `Static Assets supports at most ${CLOUDFLARE_STATIC_ASSETS_FILE_LIMIT.toLocaleString(
+        'en-US'
+      )} files; found ${total}.`
+    );
+  }
 }
 
-if (total > CLOUDFLARE_STATIC_ASSETS_FILE_LIMIT) {
-  throw new Error(
-    `Static Assets supports at most ${CLOUDFLARE_STATIC_ASSETS_FILE_LIMIT.toLocaleString('en-US')} files; found ${total}.`
-  );
-}
+if (require.main === module) runCleanup();
+
+module.exports = { isReplaceableRscPayload };

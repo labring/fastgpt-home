@@ -594,7 +594,11 @@ function labelledCitationEntries(value) {
 function isReaderDataLabel(text, index, value) {
   const prefix = text.slice(0, index);
   if (/fact\s+$/i.test(prefix)) return false;
+  const interpolationStart = text.lastIndexOf('{{', index);
+  const insideInterpolation =
+    interpolationStart > text.lastIndexOf('}}', index) && text.indexOf('}}', index) > index;
   return (
+    insideInterpolation ||
     (/\w\s+$/i.test(prefix) && /^[a-z]/.test(text.slice(index))) ||
     /\bdata\s+$/i.test(prefix) ||
     (/[\p{Script=Han}]$/u.test(prefix) && text.startsWith('来源', index)) ||

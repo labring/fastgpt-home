@@ -7858,5 +7858,135 @@
     "publicPath": "/reference/openapi-endpoint-reference",
     "sourceType": "官方文档",
     "minutes": 11
+  },
+  {
+    "identity": "en|/guide/external-operation-handoff-hub",
+    "title": "External Operation Handoff Checks in FastGPT",
+    "description": "External Operation Handoff Checks in FastGPT When an application built with FastGPT needs to hand off operations to an external system, a series of checks…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/external-operation-handoff-hub",
+    "sourceType": "官方文档",
+    "minutes": 11
+  },
+  {
+    "identity": "en|/guide/model-runtime-checks-hub",
+    "title": "FastGPT Model Runtime Checks and Verification",
+    "description": "FastGPT Model Runtime Checks and Verification Model runtime checks help isolate issues related to model connections, platform upgrades, and context handli…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/model-runtime-checks-hub",
+    "sourceType": "官方文档",
+    "minutes": 12
+  },
+  {
+    "identity": "en|/guide/retail-input-checks-hub",
+    "title": "Retail Input and Interaction Starting Points | FastGPT",
+    "description": "Retail Input and Interaction Starting Points | FastGPT FastGPT workflows can be designed to handle retail interactions by collecting user input, routing d…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/retail-input-checks-hub",
+    "sourceType": "官方文档",
+    "minutes": 8
+  },
+  {
+    "identity": "en|/guide/retrieval-evidence-checks-hub",
+    "title": "FastGPT Retrieval and Evidence Checks",
+    "description": "FastGPT Retrieval and Evidence Checks FastGPT provides configurable retrieval and citation features to support applications that must check responses agai…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/retrieval-evidence-checks-hub",
+    "sourceType": "官方文档",
+    "minutes": 11
+  },
+  {
+    "identity": "en|/guide/citation-evidence-display-choice",
+    "title": "Choosing How to Carry and Present Evidence in FastGPT",
+    "description": "Choosing How to Carry and Present Evidence in FastGPT A FastGPT application can present evidence from knowledge base documents to support its answers. The…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/citation-evidence-display-choice",
+    "sourceType": "官方文档",
+    "minutes": 9
+  },
+  {
+    "identity": "en|/guide/document-validity-routing",
+    "title": "Routing Documents by Validity in FastGPT",
+    "description": "Routing Documents by Validity in FastGPT Applications that depend on document validity require a reliable method for routing queries to current and applic…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/document-validity-routing",
+    "sourceType": "官方文档",
+    "minutes": 12
+  },
+  {
+    "identity": "en|/guide/external-read-write-boundary",
+    "title": "Separating External Reads and Writes in FastGPT",
+    "description": "Separating External Reads and Writes in FastGPT FastGPT provides distinct mechanisms for interacting with external systems: direct HTTP requests and model…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/external-read-write-boundary",
+    "sourceType": "官方文档",
+    "minutes": 13
+  },
+  {
+    "identity": "en|/guide/question-optimization-vs-form-collection",
+    "title": "Resolve References or Collect Missing Inputs with FastGPT",
+    "description": "Resolve References or Collect Missing Inputs with FastGPT When a user's question is incomplete or ambiguous, a choice arises between attempting to resolve…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/question-optimization-vs-form-collection",
+    "sourceType": "官方文档",
+    "minutes": 13
+  },
+  {
+    "identity": "en|/guide/response-schema-vs-business-validation",
+    "title": "Separating Reply Format from Business Validation",
+    "description": "Separating Reply Format from Business Validation A key implementation decision is whether to enforce a reply structure within the model's response or to u…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/response-schema-vs-business-validation",
+    "sourceType": "官方文档",
+    "minutes": 11
+  },
+  {
+    "identity": "en|/guide/retrieval-empty-output-handling",
+    "title": "Choosing a No-Evidence Response Path in FastGPT",
+    "description": "Choosing a No-Evidence Response Path in FastGPT A FastGPT knowledge base search can return an empty citation array, indicating that no relevant evidence w…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/retrieval-empty-output-handling",
+    "sourceType": "官方文档",
+    "minutes": 12
+  },
+  {
+    "identity": "en|/reference/retrieval-quote-array-contract",
+    "title": "FastGPT Retrieval Parameters and Output Baseline",
+    "description": "FastGPT Retrieval Parameters and Output Baseline A fixed-version baseline makes changes easier to investigate: a search-mode change, a citation-volume lim…",
+    "category": "reference",
+    "locale": "en",
+    "publicPath": "/reference/retrieval-quote-array-contract",
+    "sourceType": "官方文档",
+    "minutes": 7
+  },
+  {
+    "identity": "en|/guide/empty-retrieval-evidence-handoff",
+    "title": "FastGPT Continuing a Workflow When Retrieval Has No Evidence",
+    "description": "FastGPT Continuing a Workflow When Retrieval Has No Evidence When a knowledge base search provides no usable evidence, the first step is to determine whet…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/empty-retrieval-evidence-handoff",
+    "sourceType": "官方文档",
+    "minutes": 21
+  },
+  {
+    "identity": "en|/guide/tool-result-handoff-and-stop",
+    "title": "FastGPT Handling Tool Results and Termination",
+    "description": "FastGPT Handling Tool Results and Termination Before a tool's results enter a business process, it is necessary to check the invocation conditions, the ac…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/tool-result-handoff-and-stop",
+    "sourceType": "官方文档",
+    "minutes": 21
   }
 ]

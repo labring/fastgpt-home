@@ -269,8 +269,21 @@ date_modified: ${date}
 Reader content.
 `;
   const files = {
-    zh: { 'shared.md': article('zh', 'shared'), 'only.md': article('zh', 'only') },
-    en: { 'shared.md': article('en', 'shared') }
+    zh: {
+      'shared.md': article('zh', 'shared'),
+      'only.md': article('zh', 'only'),
+      'retail-01.md': article('zh', 'retail-01').replace(
+        'application_area: research',
+        'application_area: retail'
+      )
+    },
+    en: {
+      'shared.md': article('en', 'shared'),
+      'retail-01.md': article('en', 'retail-01').replace(
+        'application_area: research',
+        'application_area: retail'
+      )
+    }
   };
   const read = () =>
     loader({
@@ -287,17 +300,25 @@ Reader content.
     });
   const load = read();
   const content = load('@/lib/industryContent');
-  assert.equal(content.industryArticles.length, 3);
+  assert.equal(content.industryArticles.length, 5);
   assert.equal(content.getIndustryArticle('en', 'shared').dateModified, '2026-09-26');
   assert.deepEqual(content.getIndustryArticle('en', 'shared').keywords, ['useful', 'keywords']);
   assert.deepEqual(content.getIndustryArticle('zh', 'only').publishedLocales, ['zh']);
   assert.deepEqual(content.getIndustryArticle('en', 'shared').publishedLocales, ['zh', 'en']);
   assert.equal(content.getIndustryOwnerParams('preview').length, 1);
-  assert.equal(content.getIndustryReviewParams('preview').length, 3);
-  assert.deepEqual(content.getIndustryOwnerParams('cn'), [{ slug: 'only' }, { slug: 'shared' }]);
-  assert.deepEqual(content.getIndustryOwnerParams('io'), [{ slug: 'shared' }]);
-  assert.equal(content.getIndustrySitemapEntries('cn').length, 2);
-  assert.equal(content.getIndustrySitemapEntries('io').length, 1);
+  assert.equal(content.getIndustryReviewParams('preview').length, 5);
+  assert.equal(content.getIndustryArticle('en', 'retail-01').area, 'retail');
+  assert.deepEqual(content.getIndustryOwnerParams('cn'), [
+    { slug: 'only' },
+    { slug: 'retail-01' },
+    { slug: 'shared' }
+  ]);
+  assert.deepEqual(content.getIndustryOwnerParams('io'), [
+    { slug: 'retail-01' },
+    { slug: 'shared' }
+  ]);
+  assert.equal(content.getIndustrySitemapEntries('cn').length, 3);
+  assert.equal(content.getIndustrySitemapEntries('io').length, 2);
   const seo = load('@/lib/industrySeo');
   assert.equal(
     seo.getIndustryCanonicalUrl(content.getIndustryArticle('zh', 'shared')),
@@ -554,8 +575,24 @@ test('Industry summaries expose the complete locale collection with stable pages
   } = load('@/lib/industryListing');
   const zh = content.getIndustrySummaries('zh');
   const en = content.getIndustrySummaries('en');
-  assert.deepEqual(getIndustryAreaCounts(zh), { all: 27, finance: 25, biomed: 1, research: 1 });
-  assert.deepEqual(getIndustryAreaCounts(en), { all: 2, finance: 1, biomed: 1, research: 0 });
+  assert.deepEqual(getIndustryAreaCounts(zh), {
+    all: 27,
+    finance: 25,
+    biomed: 1,
+    research: 1,
+    manufacturing: 0,
+    technology: 0,
+    retail: 0
+  });
+  assert.deepEqual(getIndustryAreaCounts(en), {
+    all: 2,
+    finance: 1,
+    biomed: 1,
+    research: 0,
+    manufacturing: 0,
+    technology: 0,
+    retail: 0
+  });
   assert.deepEqual(Object.keys(zh[0]).sort(), ['area', 'description', 'href', 'slug', 'title']);
   assert.equal(zh[0].href, '/industry/biomed-rd');
   assert.equal(zh[0].description, 'Practical workflow guidance.');
@@ -644,7 +681,15 @@ test('Industry hub renders twelve useful links and accessible browsing controls 
       React.createElement(Page, {
         locale,
         initialEntries: entries,
-        counts: { all: 27, finance: 25, biomed: 2, research: 0 }
+        counts: {
+          all: 27,
+          finance: 25,
+          biomed: 2,
+          research: 0,
+          manufacturing: 0,
+          technology: 0,
+          retail: 0
+        }
       })
     );
     assert.equal((html.match(/href="\/industry\/finance-/g) || []).length, 12);
@@ -691,7 +736,15 @@ test('Industry browsing uses loaded snapshot counts and areas across publication
       React.createElement(Browser, {
         locale: 'en',
         initialEntries: initial.slice(0, 12),
-        counts: { all: 25, finance: 25, biomed: 0, research: 0 },
+        counts: {
+          all: 25,
+          finance: 25,
+          biomed: 0,
+          research: 0,
+          manufacturing: 0,
+          technology: 0,
+          retail: 0
+        },
         indexPath: '/industry-index/en/index.json',
         articlePrefix: '/industry/'
       })

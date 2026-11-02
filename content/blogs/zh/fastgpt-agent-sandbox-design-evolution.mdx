@@ -2,12 +2,12 @@
 category: engineering
 date: 2026-10-30
 dateModified: 2026-10-30
-title: Agent Sandbox：从代码执行到可持续工作的应用空间
-summary: 从代码执行服务与 Agent Workspace 两条路线出发，拆解 FastGPT Agent Sandbox 的架构设计，以及应用内用户级 Workspace、Runtime Prepare 与快照归档三个核心设计变更。
+title: Agent Sandbox 设计：FastGPT 如何把 Agent 沙箱从代码执行器做成持久 Workspace
+summary: Agent 沙箱只能跑一次性代码，Agent 就接不上多轮任务。本文拆解 FastGPT Agent Sandbox 的四层架构，对比 Dify、Coze Studio 的沙箱方案，并回顾用户级 Workspace、Runtime Prepare、快照归档三次关键设计变更。
 draft: false
 ---
 
-## 引言
+## 为什么 Agent 需要的不只是代码执行器
 
 在 FastGPT 中，Agent 不仅要完成知识库问答与工作流编排，还需要处理复杂的文件交互、运行 Python 脚本、动态安装第三方依赖，并持续产出能被后续多轮任务复用的成果。
 
@@ -19,7 +19,7 @@ draft: false
 - 环境就绪度解耦：从固定镜像生命周期，走向支持镜像源配置与脚本注入的 Runtime Prepare。
 - 计算与状态分离：通过快照归档释放长闲置实例，同时保留 Workspace 的即时可恢复性。
 
-## Agent Sandbox 的本质：可执行的状态空间
+## 什么是 Agent Sandbox
 
 Agent 本质上是一个无状态的决策器。它依靠当前上下文规划下一步动作，但生成的文件、安装的依赖、进程产物和中间状态，必须交由外部计算环境维护。
 
@@ -44,7 +44,7 @@ Agent Sandbox = 受控计算环境 + Workspace + Agent 工具 + 生命周期管�
 
 在 FastGPT 内部，Agent Loop 并不直接穿透到底层物理容器，而是通过 SandboxClient 消费由运行时调度并就绪的 Workspace。
 
-## 行业方案与设计取向
+## Agent 沙箱的两条路线：Dify、Coze Studio 与 FastGPT 对比
 
 开源社区中，围绕代码运行与 Agent 环境的实现通常沿着两条路线演进：
 
@@ -53,7 +53,7 @@ Agent Sandbox = 受控计算环境 + Workspace + Agent 工具 + 生命周期管�
 
 我们选取同处于应用与 Agent 编排层的 Dify 和 Coze Studio 进行横向对比：
 
-### Dify：从独立执行服务走向会话级 Workspace
+### Dify：从独立执行服务到会话级 Workspace
 
 Dify 传统上使用独立的 Dify Sandbox 承载不可信代码执行。随着 Agent 复杂度的提升，其最新的 Agent Runtime 引入了包含 Workspace、Home Snapshot、Execution Binding 与 RuntimeLease 的运行时资源模型，使 Agent 能够获得类似本地终端的操作体验。
 
@@ -64,13 +64,13 @@ Dify 传统上使用独立的 Dify Sandbox 承载不可信代码执行。随着 
 
 在 Dify 当前的开源实现中，Sandbox Workspace 的归属绑定于 conversation、build draft 或 Workflow run 等产品对象。同一对话内的多轮交互可以共享工作区，但开启新会话通常意味着分配新的工作区；跨会话延续的主要是 Agent 级的不可变 Home Snapshot（如由 Build Draft 生成），而非用户在对话中持续产生的工作文件。
 
-### Coze Studio：工作流驱动的沙箱模式切换
+### Coze Studio：工作流节点级沙箱
 
 Coze Studio 的 Workflow 代码节点可在部署时选择 local 与 sandbox 两种运行模式（local 基于 venv，不做环境隔离；sandbox 基于 Deno + Pyodide）。其沙箱核心聚焦于单节点的安全限制：控制环境变量读取、限制文件读写路径、约束可执行指令白名单、按白名单限制网络访问，并硬性限制执行超时与内存占用。
 
 这种设计将沙箱明确界定为工作流图中的受控执行算子，配置清晰且便于调试。但它并未围绕长期持续演进的 Agent 交互构建工作区身份，对于需要连续几天反复操作同一批本地资产的 Agent，依然需要上层平台额外设计工作区存储与还原机制。
 
-### 方案对比与 FastGPT 的选择
+### 方案对比
 
 | 维度 | 独立代码执行器（如 Coze Studio 代码节点 / Dify Sandbox） | 会话级 Workspace（新 Dify Agent Runtime） | 应用内用户级 Workspace（FastGPT） |
 | --- | --- | --- | --- |
@@ -81,7 +81,7 @@ Coze Studio 的 Workflow 代码节点可在部署时选择 local 与 sandbox 两
 
 FastGPT 选择跳过单纯的会话级绑定，将普通 App Chat 的执行环境提升至“应用内用户级”，并在底层贯穿了环境动态就绪（Runtime Prepare）与对象存储归档机制。
 
-## 技术架构：一条请求如何转化为可用环境
+## FastGPT Agent Sandbox 技术架构
 
 FastGPT 的 Agent Sandbox 在工程架构上分为四层：
 
@@ -96,7 +96,7 @@ FastGPT 的 Agent Sandbox 在工程架构上分为四层：
 
 图 1：一次 Agent 请求从业务入口到计算环境的处理链路
 
-### 1. 业务身份确定
+### 1. 用业务身份确定 Sandbox 归属
 
 Sandbox 的归属由三元组唯一确定：
 
@@ -113,7 +113,7 @@ Chat ID 不参与决定物理 Sandbox 的归属，仅作为工作目录的细分
 - 用户清理单条聊天记录，不会连带清空其在该应用下积累的代码、三方依赖与生成物；
 - 只有当整个 App 或 Skill 被显式删除时，才级联清理底层的 Sandbox 与归档资源。
 
-### 2. Workspace 目录组织
+### 2. Workspace 目录结构
 
 一个 Workspace 在文件系统层面划分为明确的边界：
 
@@ -123,7 +123,7 @@ Chat ID 不参与决定物理 Sandbox 的归属，仅作为工作目录的细分
 
 这种结构允许用户在会话 B 中直接读取会话 A 生成的中间数据，但默认写操作收敛于自身会话目录。
 
-### 3. 标准化工具抽象：SandboxClient
+### 3. 统一工具层：SandboxClient
 
 Agent Loop 交互的不是原生 Docker 或 Kubernetes API，而是统一封装的 SandboxClient。核心工具包含：
 
@@ -151,7 +151,7 @@ Prepare 管线由一系列可组合的幂等步骤顺序编排：
 - 初始化脚本执行：运行应用或 Skill 指定的预置构建脚本；
 - 能力元数据扫描：提取就绪的 Skill 接口定义，注入 Agent 上下文。
 
-### 5. Skill 运行态挂载
+### 5. Skill 挂载与按需加载
 
 Skill 不只是提示词中的静态说明，它往往伴随着可执行脚本、环境包与前置依赖。
 
@@ -161,7 +161,7 @@ Skill 不只是提示词中的静态说明，它往往伴随着可执行脚本�
 
 图 3：Skill 从发布版本到 Agent 能力索引的部署过程
 
-### 6. 状态流转与并发租约
+### 6. 生命周期状态与并发控制
 
 Sandbox 的主生命周期包含三种稳定态：running（实例在线）、stopped（计算释放、本地盘保留）、archived（计算释放、全量状态沉淀为对象存储快照）。
 
@@ -171,11 +171,11 @@ Sandbox 的主生命周期包含三种稳定态：running（实例在线）、st
 - Prepare Lease：当同一用户在同一应用内同时打开多个 Chat 触发初始化时，锁住共享 Workspace 的环境准备与脚本执行过程，防止三方包安装交织破坏环境；
 - Mongo CAS 状态机：所有生命周期流转记录细粒度进度（如 archiveUploaded、providerDeleted），以“状态 + 操作令牌（operation id）”做条件更新，实现乐观并发控制与故障分步重试。
 
-## 驱动演进的三个核心设计变更
+## 三个关键设计变更
 
 当前稳定的 Sandbox 方案，是在解决实际业务摩擦的过程中迭代成型的。以下三个核心变更构成了整个架构的演进主线。
 
-### 变更一：从 Chat 级独立沙箱，到应用内用户级共享 Workspace
+### 变更一：从 Chat 级沙箱到应用内用户级 Workspace
 
 在原型阶段，为每个 Chat 独立创建 Sandbox 是最直接的设计：Chat 启动时新建容器，会话终止时直接销毁。
 
@@ -194,7 +194,7 @@ Sandbox 的主生命周期包含三种稳定态：running（实例在线）、st
 
 这一变更将 Sandbox 从“短命的执行器”重构为“属于用户的工作区”，为复杂、跨周期的 Agent 任务提供了连续性支持。
 
-### 变更二：从静态启动，到可组合可重试的 Runtime Prepare
+### 变更二：从静态镜像启动到可重试的 Runtime Prepare
 
 早期的沙箱生命周期极其简单：创建容器 → 等待启动 → 执行命令 → 停止容器。环境完全依赖静态构建好的基础镜像。
 
@@ -212,7 +212,7 @@ Sandbox 的主生命周期包含三种稳定态：running（实例在线）、st
 - 执行幂等性：镜像源配置、初始化脚本和内置 Skill 同步等关键步骤记录指纹（Hash / ETag），Skill 入口脚本按不可变版本 ID 记录，内容未变更时直接跳过；
 - 失败可重试：初始化脚本失败或超时只记录日志、不写入成功指纹，下次准备时会重新执行，且不阻断 Agent 主流程；实例本身无法就绪时（如仍在初始化或生命周期操作未完成）则返回明确的不可用状态，不会把未就绪的沙箱交给 Agent Loop。
 
-### 变更三：通过快照归档实现计算与存储的弹性解耦
+### 变更三：用快照归档分离计算与存储
 
 当沙箱从 Chat 级提升为用户级长期空间后，第二个系统性问题浮出水面：实例闲置率与资源成本。
 
@@ -227,7 +227,7 @@ Sandbox 的主生命周期包含三种稳定态：running（实例在线）、st
 
 需要说明的是，归档只打包 Workspace 目录本身；安装在 Workspace 之外（如系统目录或用户 HOME）的依赖不会进入快照，恢复后由初始化脚本按需重新安装。
 
-## 结语：从临时容器到可持续基础设施
+## 总结
 
 如果我们的目标仅仅是在工作流中安全地执行几行 Python 脚本并返回一个数值，一个无状态的一次性代码执行器就足够了。
 

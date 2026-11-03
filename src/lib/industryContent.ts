@@ -120,7 +120,7 @@ function resolveApplicationArea(
   metadata: Record<string, string>,
   slug: string,
   sourcePath: string
-) {
+): IndustryArea {
   const historicalArea = /^(?:finance|fin)-/.test(slug)
     ? 'finance'
     : slug.startsWith('biomed-')
@@ -130,7 +130,7 @@ function resolveApplicationArea(
   if (declaredArea !== undefined && !isIndustryArea(declaredArea)) {
     fail(
       sourcePath,
-      `unknown application_area: ${declaredArea}; expected finance, biomed, research, manufacturing, or technology`
+      `unknown application_area: ${declaredArea}; expected a supported application area`
     );
   }
   if (historicalArea && declaredArea && historicalArea !== declaredArea) {

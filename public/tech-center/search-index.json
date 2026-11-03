@@ -49918,5 +49918,145 @@
     "publicPath": "/reference/permission-items-reference",
     "sourceType": "官方文档",
     "minutes": 6
+  },
+  {
+    "identity": "zh|/guide/external-operation-handoff-hub",
+    "title": "外部业务操作的实施检查入口",
+    "description": "外部业务操作的实施检查入口 在将FastGPT应用接入外部业务系统时，需要一个清晰的检查入口来验证数据交换、操作执行与权限边界。本文以一个说明性的MCN机构达人管理场景为例，阐述如何根据具体任务选择不同的技术路径，并定位到相应的配置文档。这个说明性场景不代表任何实际业务操作。 任务一：直接调用已知外部接口…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/external-operation-handoff-hub",
+    "sourceType": "深度场景内容",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/guide/model-runtime-checks-hub",
+    "title": "模型调用与运行边界检查入口",
+    "description": "模型调用与运行边界检查入口 在将大型语言模型集成到业务流程时，需要对模型调用、配置及运行边界进行系统性检查。这包括核对模型接入配置的准确性、部署与升级过程中的环境一致性，以及处理上下文与 token 限制时的内容完整性。每个环节都涉及具体的环境变量、版本依赖和参数设置，直接影响应用功能的稳定性和预期结果的达…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/model-runtime-checks-hub",
+    "sourceType": "深度场景内容",
+    "minutes": 4
+  },
+  {
+    "identity": "zh|/guide/retail-input-checks-hub",
+    "title": "电商问答输入与交互入口",
+    "description": "电商问答输入与交互入口 在电商问答场景中，应用需要通过不同入口收集信息、响应用户交互。FastGPT工作流提供了多种节点，用于构建从接收输入到调用外部系统的完整流程。设计时需要明确各节点的职责边界，例如，表单节点负责收集信息，但不内置业务数据库；HTTP节点负责与外部系统通信，但不负责鉴权凭证的生成。 任务…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/retail-input-checks-hub",
+    "sourceType": "深度场景内容",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/guide/retrieval-evidence-checks-hub",
+    "title": "检索与引用证据检查入口",
+    "description": "检索与引用证据检查入口 在构建基于FastGPT的问答应用时，检索效果与引用准确性是关键环节。本入口将检索与溯源过程分解为三个独立的检查任务，分别对应不同的技术配置与验证阶段。用户可根据当前遇到的具体问题，选择相应的入口深入了解配置方法与核查逻辑。 任务一：配置与评估初步检索效果 当需要从零开始配置知识库搜…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/retrieval-evidence-checks-hub",
+    "sourceType": "深度场景内容",
+    "minutes": 4
+  },
+  {
+    "identity": "zh|/guide/citation-evidence-display-choice",
+    "title": "引用证据如何承接与展示",
+    "description": "引用证据如何承接与展示 在 FastGPT 中，知识库检索节点会输出一个包含引用原文的数组，后续环节可利用此数组展示证据来源。如何有效承接与展示这些引用证据，涉及对信息流转路径的设计与权衡。核心决策在于选择由大语言模型在回答中直接整合引用，还是构建独立的用户界面来展示来源，或是将判断转交人工处理。 引用信息…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/citation-evidence-display-choice",
+    "sourceType": "深度场景内容",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/guide/document-validity-routing",
+    "title": "资料版本如何进入回答判断",
+    "description": "资料版本如何进入回答判断 在 FastGPT 中，要让问答系统使用正确的资料版本，需要从数据处理、知识库配置和应用设计等多个层面进行规划。将版本信息有效传递至最终的回答环节，是组合多种策略的结果。 版本信息的保留与传递 首先，版本信息必须在数据处理阶段得到保留。原始资料的身份标识和版本号应在解析和分块时被视…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/document-validity-routing",
+    "sourceType": "深度场景内容",
+    "minutes": 4
+  },
+  {
+    "identity": "zh|/guide/external-read-write-boundary",
+    "title": "外部查询和写入怎么划界",
+    "description": "外部查询和写入怎么划界 在 FastGPT 中与外部系统交互时，需要明确区分只读查询与包含写入的操作。这个界限的划分取决于多个技术因素，包括外部接口的能力、数据校验责任的归属，以及交互流程的设计。选择合适的实现路径，可以有效管理数据一致性与操作风险。 实现路径决策 与外部系统集成时，首要任务是根据业务需求和…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/external-read-write-boundary",
+    "sourceType": "深度场景内容",
+    "minutes": 4
+  },
+  {
+    "identity": "zh|/guide/question-optimization-vs-form-collection",
+    "title": "指代消除与补问怎么分工",
+    "description": "指代消除与补问怎么分工 在 FastGPT 应用中，处理用户输入时常面临信息不完整或指代不明的问题。此时，需要决定是使用“问题优化”节点进行指代消除，还是通过“表单输入”节点发起交互式补问。这两种方式服务于不同前提，分工明确，也可以组合使用，其选择取决于原始问题的清晰度、上下文信息的可用性以及任务执行的必要…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/question-optimization-vs-form-collection",
+    "sourceType": "深度场景内容",
+    "minutes": 4
+  },
+  {
+    "identity": "zh|/guide/response-schema-vs-business-validation",
+    "title": "回复格式和业务校验怎么分工",
+    "description": "回复格式和业务校验怎么分工 在 FastGPT 应用中，模型生成的回复需要满足特定格式，其内容也需要符合业务规则。这两种需求可以通过不同方式实现：一种是利用模型本身的能力生成结构化文本，另一种是通过 HTTP 接口调用外部系统进行校验。选择哪种方式，或如何组合，取决于接收回复的系统、现有接口的能力以及对业务…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/response-schema-vs-business-validation",
+    "sourceType": "深度场景内容",
+    "minutes": 4
+  },
+  {
+    "identity": "zh|/guide/retrieval-empty-output-handling",
+    "title": "无证据回答路径怎么选",
+    "description": "无证据回答路径怎么选 FastGPT知识库搜索节点返回空引用数组时，流程不会自动中止。此时需要区分问题缺少主体、知识库未包含相关资料，以及需要人工决策等不同情况，再选择相应的处理路径。设计工作流时，可以规划补充信息、补查外部来源或转交人工这三种路径，并根据实际业务需求进行组合。 补充交互：处理输入信息不完整…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/retrieval-empty-output-handling",
+    "sourceType": "深度场景内容",
+    "minutes": 4
+  },
+  {
+    "identity": "zh|/reference/http-variable-availability",
+    "title": "FastGPT HTTP变量可用性与调试模式基准",
+    "description": "FastGPT HTTP变量可用性与调试模式基准 HTTP节点的变量是否存在，要结合运行入口判断。FastGPT v4.17.2文档明确列出了测试模式下不可用的身份变量，以及历史记录的默认条数。联调时先按这份固定版本基准核变量来源，再检查外部接口收到的请求，避免把调试环境缺少变量误判为业务系统故障。 系统变…",
+    "category": "reference",
+    "locale": "zh",
+    "publicPath": "/reference/http-variable-availability",
+    "sourceType": "深度场景内容",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/reference/retrieval-quote-array-contract",
+    "title": "FastGPT检索参数与空引用输出基准",
+    "description": "FastGPT检索参数与空引用输出基准 搜索模式、引用上限和空引用输出分别影响检索路径、内容量与后续承接。FastGPT v4.17.2官方文档对这些条目给出了取值形式和生效条件。本表将明确记载的行为作为配置复核基准，不把范围中任意一个值写成项目推荐值，也不将文档说明当作准确率或性能实测。 参数与输出基准…",
+    "category": "reference",
+    "locale": "zh",
+    "publicPath": "/reference/retrieval-quote-array-contract",
+    "sourceType": "深度场景内容",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/guide/empty-retrieval-evidence-handoff",
+    "title": "检索没有依据时如何继续：空引用、补问与业务转交",
+    "description": "检索没有依据时如何继续：空引用、补问与业务转交 知识库搜索没有提供可用依据时，先查清缺少的是问题主体、原始资料，还是已经入库内容的召回结果，再决定补问、补查或转交。FastGPT知识库搜索节点的引用输出是数组，长度允许为零；空数组不会自动使工作流报错终止。后续如何响应，需要在应用设计中明确落实。零售售后场景…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/empty-retrieval-evidence-handoff",
+    "sourceType": "深度场景内容",
+    "minutes": 5
+  },
+  {
+    "identity": "zh|/guide/tool-result-handoff-and-stop",
+    "title": "工具结果怎么承接：必须参数、模型选择与终止后的处理",
+    "description": "工具结果怎么承接：必须参数、模型选择与终止后的处理 工具结果进入业务流程之前，需要核对调用条件、真实请求、返回内容和接收环节。FastGPT工具调用模块可以让模型选择已连接的工具，工具介绍和参数说明用于解释用途，不代表每次一定执行。涉及订单、合同或库存时，还要区分读取资料与实际业务操作。工具返回一段可读文本…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/tool-result-handoff-and-stop",
+    "sourceType": "深度场景内容",
+    "minutes": 5
   }
 ]

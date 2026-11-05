@@ -27,5 +27,7 @@ Each field has specific requirements: `q` and `a` are required single-column fie
 ## UI & Skill Management Improvements
 The Skill list now includes empty-state guidance to assist new users navigating the interface, and users can directly create linked skills from the Skill selector to streamline workflow construction.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/4-16/4160)
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/4-16/41601)
+## References
+
+- [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/4-16/4160)
+- [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/4-16/41601)

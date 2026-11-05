@@ -4,10 +4,10 @@
   "shards": [
     {
       "bucket": "content",
-      "file": "sitemap-content-000-b28b83d7.xml",
+      "file": "sitemap-content-000-a01d9444.xml",
       "sequence": 0,
-      "sha256": "b28b83d7cd06b730017edf15f6a6886795bcf00d54efff93d2576b3ccb22ae55",
-      "urls": 2333
+      "sha256": "a01d94443bc622719a6790ab8b16ffcff9c26c145b78faa77beafaae62b7ab4a",
+      "urls": 2337
     },
     {
       "bucket": "industry",
@@ -60,10 +60,17 @@
     },
     {
       "bucket": "industry",
-      "file": "sitemap-industry-007-37721ff7.xml",
+      "file": "sitemap-industry-007-b01070ee.xml",
       "sequence": 7,
-      "sha256": "37721ff7339708ab6b73f34f4c3e312d365086434b1649792dbd32f2a887aa2a",
-      "urls": 2931
+      "sha256": "b01070eed3e3f325c0431a506a2eba317d6f6cfc9fe027646a9877f87a3fcd97",
+      "urls": 5000
+    },
+    {
+      "bucket": "industry",
+      "file": "sitemap-industry-008-3827bfe2.xml",
+      "sequence": 8,
+      "sha256": "3827bfe272e6ea45d6869270ae1f7d1d2643fb6b79a75879986061a795bb9d0b",
+      "urls": 2831
     }
   ]
 }

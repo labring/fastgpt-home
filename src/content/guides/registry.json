@@ -2263,6 +2263,214 @@
         "datePublished": "2026-09-08",
         "dateModified": "2026-09-08"
       }
+    },
+    {
+      "slug": "file-level-permission-visibility",
+      "group": "decision",
+      "zh": {
+        "sourceName": "file-level-permission-visibility.zh.md",
+        "sourceSha256": "47c4c4b41fdf7d64467c2ca5d0417db3ce7e7e10503f208aad30ff4bb5d5250e",
+        "bodySha256": "cb189cff0c7a91b9a5b18f52581587f3eec99e863167e370b5f220adad3fa8f8",
+        "h1": "FastGPT文件级权限与成员可见范围：判断顺序与核对动作",
+        "metaTitle": "FastGPT文件级权限与成员可见范围",
+        "metaDescription": "Check all FastGPT v4.17.2 file permissions, member visibility, deletion rights and retrieval scope before publishing any shared knowledge base.",
+        "keywords": "文件读权限,成员身份鉴权,检索过滤,删除仅创建者",
+        "canonical": "https://fastgpt.cn/guide/file-level-permission-visibility",
+        "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/file-level-permission-visibility | en → https://fastgpt.io/guide/file-level-permission-visibility | x-default → https://fastgpt.io/guide/file-level-permission-visibility",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList",
+        "sourceImageDirective": "none",
+        "sourceInternalLinkLabels": [],
+        "assetPolicy": {
+          "status": "none"
+        },
+        "configuredInternalLinks": [],
+        "datePublished": "2026-11-03",
+        "dateModified": "2026-11-03"
+      },
+      "en": {
+        "sourceName": "file-level-permission-visibility.en.md",
+        "sourceSha256": "08769b883a0ea62c129db0bb59eec21a2bd74e935d2a4e292b83a9aaeb4e9e95",
+        "bodySha256": "80597a5161785d3a1d5a3055dad7e21160a8c3847ac0644d0e29fec02a4c7b69",
+        "h1": "FastGPT File-Level Permissions and Member Visibility Scope: Decision Order and Verification Actions",
+        "metaTitle": "FastGPT File Permissions: Member Access and Retrieval",
+        "metaDescription": "Check all FastGPT v4.17.2 file permissions, member visibility, deletion rights and retrieval scope before publishing any shared knowledge base.",
+        "keywords": "",
+        "canonical": "https://fastgpt.io/guide/file-level-permission-visibility",
+        "hreflang": "en | zh-CN → https://fastgpt.cn/guide/file-level-permission-visibility | en → https://fastgpt.io/guide/file-level-permission-visibility | x-default → https://fastgpt.io/guide/file-level-permission-visibility",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList",
+        "sourceImageDirective": "none",
+        "sourceInternalLinkLabels": [],
+        "assetPolicy": {
+          "status": "none"
+        },
+        "configuredInternalLinks": [],
+        "datePublished": "2026-11-03",
+        "dateModified": "2026-11-03"
+      }
+    },
+    {
+      "slug": "form-and-choice-handoff",
+      "group": "decision",
+      "zh": {
+        "sourceName": "form-and-choice-handoff.zh.md",
+        "sourceSha256": "3e0d3791028e10a9e81e66bf40aa1d109a70c48ed67177c9834f72c755de489b",
+        "bodySha256": "de7f0e1e1387d4b3ac8bb4fb006f57f465c23f708050c5f8da2410135946794b",
+        "h1": "表单输入与选择节点的数据交接：formInputResult 与 selectResult 怎么走",
+        "metaTitle": "表单输入与选择节点的数据交接",
+        "metaDescription": "梳理FastGPT表单输入与用户选择节点的交互顺序、输出归属和下游引用方式，结合必填缺项、选项分支与运行记录说明核对方法，区分用户选择和按字段自动比较的判断器。",
+        "keywords": "表单输入节点,选择节点,formInputResult,selectResult",
+        "canonical": "https://fastgpt.cn/guide/form-and-choice-handoff",
+        "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/form-and-choice-handoff | en → https://fastgpt.io/guide/form-and-choice-handoff | x-default → https://fastgpt.io/guide/form-and-choice-handoff",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList",
+        "sourceImageDirective": "none",
+        "sourceInternalLinkLabels": [],
+        "assetPolicy": {
+          "status": "none"
+        },
+        "configuredInternalLinks": [],
+        "datePublished": "2026-11-03",
+        "dateModified": "2026-11-03"
+      },
+      "en": {
+        "sourceName": "form-and-choice-handoff.en.md",
+        "sourceSha256": "be4d6ed24fb3189e61214a78c9018d9e56398456731e42ef158035ca5db8f14d",
+        "bodySha256": "ad4db43b7cf751a2333f3d6eddd732ce75f67b56177d0bd96504f5d18679dd76",
+        "h1": "Data Handoff Between Form Input and User Selection Nodes: How formInputResult and selectResult Flow",
+        "metaTitle": "FastGPT Forms and Choices: Outputs and Workflow Handoffs",
+        "metaDescription": "Check FastGPT form and user selection outputs, variable references, required inputs and branch connections, with clear tests for each interaction stage.",
+        "keywords": "",
+        "canonical": "https://fastgpt.io/guide/form-and-choice-handoff",
+        "hreflang": "en | zh-CN → https://fastgpt.cn/guide/form-and-choice-handoff | en → https://fastgpt.io/guide/form-and-choice-handoff | x-default → https://fastgpt.io/guide/form-and-choice-handoff",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList",
+        "sourceImageDirective": "none",
+        "sourceInternalLinkLabels": [],
+        "assetPolicy": {
+          "status": "none"
+        },
+        "configuredInternalLinks": [],
+        "datePublished": "2026-11-03",
+        "dateModified": "2026-11-03"
+      }
+    },
+    {
+      "slug": "index-status-and-rebuild-scope",
+      "group": "decision",
+      "zh": {
+        "sourceName": "index-status-and-rebuild-scope.zh.md",
+        "sourceSha256": "e75540ab3b91ef8af0ba6dfd65cf0b57c4561e2781e828078df5536e674f5286",
+        "bodySha256": "4c3d5246a8fb4582bc0ea6a23f222dee3aa21a029258a1b92c5ef724228ee981",
+        "h1": "索引状态与重建范围：FastGPT 知识库检索的常见误区",
+        "metaTitle": "索引状态与重建范围：FastGPT 知识库检索的常见误区",
+        "metaDescription": "解析后立即落库为数据行，索引状态分已解析、索引中、已完成三态。待索引不参与召回，换模型重建只覆盖已完成索引。理解这些机制，才能正确判断检索失败原因与重建范围。",
+        "keywords": "索引状态,重建范围,数据行落库,召回",
+        "canonical": "https://fastgpt.cn/guide/index-status-and-rebuild-scope",
+        "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/index-status-and-rebuild-scope | en → https://fastgpt.io/guide/index-status-and-rebuild-scope | x-default → https://fastgpt.io/guide/index-status-and-rebuild-scope",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList",
+        "sourceImageDirective": "none",
+        "sourceInternalLinkLabels": [],
+        "assetPolicy": {
+          "status": "none"
+        },
+        "configuredInternalLinks": [],
+        "datePublished": "2026-11-03",
+        "dateModified": "2026-11-03"
+      },
+      "en": {
+        "sourceName": "index-status-and-rebuild-scope.en.md",
+        "sourceSha256": "8675c23220a6ba775692ff8ac3da8fb620b2e0ac02bc974a49e9af19d3412e8b",
+        "bodySha256": "87fefcfb8b32379972f6fb7cb0f0c0941a45b136ec21bf37544d923fd1e052e0",
+        "h1": "Index Status and Rebuild Scope: Common Misconceptions in FastGPT Knowledge Base Retrieval",
+        "metaTitle": "FastGPT Index States, Vector Models and Rebuild Scope",
+        "metaDescription": "Understand FastGPT index states, retrieval eligibility and model-switch rebuild scope, with checks for pending rows, completed indexes and source versions.",
+        "keywords": "",
+        "canonical": "https://fastgpt.io/guide/index-status-and-rebuild-scope",
+        "hreflang": "en | zh-CN → https://fastgpt.cn/guide/index-status-and-rebuild-scope | en → https://fastgpt.io/guide/index-status-and-rebuild-scope | x-default → https://fastgpt.io/guide/index-status-and-rebuild-scope",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList",
+        "sourceImageDirective": "none",
+        "sourceInternalLinkLabels": [],
+        "assetPolicy": {
+          "status": "none"
+        },
+        "configuredInternalLinks": [],
+        "datePublished": "2026-11-03",
+        "dateModified": "2026-11-03"
+      }
+    },
+    {
+      "slug": "upgrade-and-migration-order",
+      "group": "decision",
+      "zh": {
+        "sourceName": "upgrade-and-migration-order.zh.md",
+        "sourceSha256": "a2f2b337436c1acfceb448e152841bf9d38cd8f4730fac275dc63c2b74fc623f",
+        "bodySha256": "9b7fc7d6f1c7ae391a2982b30ebb9f91acbac4cef367eec9bb976c592b08ddf7",
+        "h1": "FastGPT 版本升级迁移顺序：先镜像还是先跑脚本",
+        "metaTitle": "FastGPT升级迁移任务的执行顺序",
+        "metaDescription": "梳理FastGPT v4.17.2升级中镜像tag更新、历史分块训练任务迁移、知识库重建状态迁移与脚本不阻塞启动之间的先后依赖，给出可核对的执行顺序与失败表现。",
+        "keywords": "镜像tag更新,历史分块训练任务迁移,知识库重建状态迁移,脚本不阻塞启动",
+        "canonical": "https://fastgpt.cn/guide/upgrade-and-migration-order",
+        "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/upgrade-and-migration-order | en → https://fastgpt.io/guide/upgrade-and-migration-order | x-default → https://fastgpt.io/guide/upgrade-and-migration-order",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList",
+        "sourceImageDirective": "none",
+        "sourceInternalLinkLabels": [],
+        "assetPolicy": {
+          "status": "none"
+        },
+        "configuredInternalLinks": [],
+        "datePublished": "2026-11-03",
+        "dateModified": "2026-11-03"
+      },
+      "en": {
+        "sourceName": "upgrade-and-migration-order.en.md",
+        "sourceSha256": "6423f2033facfa5ed6718258fa7169c8c8bc332a23b9af1fcc40b40b0836abab",
+        "bodySha256": "4f3519ce04a456c2bced75689205dc098c7c3b2120c7d3524790cadc861a3417",
+        "h1": "FastGPT Version Upgrade Migration Order: Update the Image First or Run the Scripts First",
+        "metaTitle": "FastGPT v4.17.2 Upgrade and Manual Migration Order",
+        "metaDescription": "Plan a FastGPT v4.17.2 upgrade: update images, stop old instances, wait for task leases, run both manual migrations in order and verify retrieval results.",
+        "keywords": "",
+        "canonical": "https://fastgpt.io/guide/upgrade-and-migration-order",
+        "hreflang": "en | zh-CN → https://fastgpt.cn/guide/upgrade-and-migration-order | en → https://fastgpt.io/guide/upgrade-and-migration-order | x-default → https://fastgpt.io/guide/upgrade-and-migration-order",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList",
+        "sourceImageDirective": "none",
+        "sourceInternalLinkLabels": [],
+        "assetPolicy": {
+          "status": "none"
+        },
+        "configuredInternalLinks": [],
+        "datePublished": "2026-11-03",
+        "dateModified": "2026-11-03"
+      }
     }
   ]
 }

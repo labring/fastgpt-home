@@ -39,5 +39,7 @@ FastGPT strongly recommends using a different origin from the main FastGPT site.
 ## Verify Service Accessibility
 To confirm the agent sandbox proxy service is operational and accessible, visit the official health check endpoint at `https://{{host}}/health`, replacing `{{host}}` with your deployment’s actual domain or public IP address. This endpoint will return a valid response if the service is running correctly.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/4-16/4160)
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/4-16/41601)
+## References
+
+- [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/4-16/4160)
+- [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/4-16/41601)

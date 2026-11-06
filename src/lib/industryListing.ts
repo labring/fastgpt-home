@@ -4,7 +4,8 @@ export const INDUSTRY_AREAS = {
   research: { en: 'Scientific Research', zh: '科研' },
   manufacturing: { en: 'Manufacturing', zh: '制造 / 生产加工' },
   technology: { en: 'Technology', zh: '电子、互联网与 IT' },
-  retail: { en: 'Retail & E-commerce', zh: '电商零售贸易' }
+  retail: { en: 'Retail & E-commerce', zh: '电商零售贸易' },
+  education: { en: 'Education', zh: '教育' }
 } as const;
 
 export type IndustryArea = keyof typeof INDUSTRY_AREAS;
@@ -33,7 +34,8 @@ export function getIndustryAreaCounts(entries: IndustrySummary[]): IndustryAreaC
     research: 0,
     manufacturing: 0,
     technology: 0,
-    retail: 0
+    retail: 0,
+    education: 0
   };
   for (const entry of entries) counts[entry.area] += 1;
   return counts;

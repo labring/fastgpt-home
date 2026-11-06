@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
-    <loc>https://fastgpt.io/sitemap-shards/fastgpt.io/sitemap-content-000-b28b83d7.xml</loc>
+    <loc>https://fastgpt.io/sitemap-shards/fastgpt.io/sitemap-content-000-a01d9444.xml</loc>
   </sitemap>
   <sitemap>
     <loc>https://fastgpt.io/sitemap-shards/fastgpt.io/sitemap-industry-000-d8e2072a.xml</loc>
@@ -25,6 +25,9 @@
     <loc>https://fastgpt.io/sitemap-shards/fastgpt.io/sitemap-industry-006-9257ac0c.xml</loc>
   </sitemap>
   <sitemap>
-    <loc>https://fastgpt.io/sitemap-shards/fastgpt.io/sitemap-industry-007-37721ff7.xml</loc>
+    <loc>https://fastgpt.io/sitemap-shards/fastgpt.io/sitemap-industry-007-b01070ee.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://fastgpt.io/sitemap-shards/fastgpt.io/sitemap-industry-008-3827bfe2.xml</loc>
   </sitemap>
 </sitemapindex>

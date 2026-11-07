@@ -220,13 +220,17 @@ test('Worker Static Assets enforce both file-count and largest-file limits', () 
   );
 });
 
-test('Nginx compresses XML and revalidates stable sitemap shards', () => {
+test('Nginx compresses XML and caches sitemap indexes and shards separately', () => {
   const projectRoot = path.join(__dirname, '..');
   const nginx = fs.readFileSync(path.join(projectRoot, 'nginx.conf'), 'utf8');
   assert.match(nginx, /gzip_types[^;]*\bapplication\/xml\b/);
   assert.match(
     nginx,
-    /location \^~ \/sitemap-shards\/[\s\S]*?Cache-Control "public, max-age=3600"/
+    /location = \/sitemap\.xml[\s\S]*?Cache-Control "public, max-age=300, s-maxage=300, must-revalidate"/
+  );
+  assert.match(
+    nginx,
+    /location \^~ \/sitemap-shards\/[\s\S]*?Cache-Control "public, max-age=31536000, immutable"/
   );
 });
 
@@ -369,7 +373,11 @@ test('Wrangler serves HTML and TXT as Static Assets without attaching them as Wo
         '',
         '/sitemap-shards/*',
         '  ! Cache-Control',
-        '  Cache-Control: public, max-age=3600',
+        '  Cache-Control: public, max-age=31536000, immutable',
+        '',
+        '/sitemap.xml',
+        '  ! Cache-Control',
+        '  Cache-Control: public, max-age=300, s-maxage=300, must-revalidate',
         ''
       ].join('\n')
     );
@@ -403,8 +411,11 @@ test('Wrangler serves HTML and TXT as Static Assets without attaching them as Wo
       assert.equal(await response.text(), body, route);
     }
     for (const [route, cacheControl] of [
-      ['/sitemap.xml', 'public, max-age=3600, stale-while-revalidate=86400'],
-      ['/sitemap-shards/sitemap-content-000.xml', 'public, max-age=3600']
+      ['/sitemap.xml', 'public, max-age=300, s-maxage=300, must-revalidate'],
+      [
+        '/sitemap-shards/sitemap-content-000.xml',
+        'public, max-age=31536000, immutable'
+      ]
     ]) {
       const response = await fetch(`http://127.0.0.1:${port}${route}`, {
         redirect: 'manual',

@@ -91,6 +91,7 @@
     "verify:llms": "node scripts/verify-llms.js",
     "verify:site-artifact": "node --test scripts/verify-site-artifact.test.js scripts/verify-preview-artifact.test.js",
     "verify:learning-center": "node scripts/verify-learning-center.js",
+    "verify:video-schema": "node scripts/verify-video-schema.js",
     "verify:blog-mdx": "node --test scripts/verify-blog-mdx.test.js",
     "build:preview": "node scripts/build-preview.js",
     "package:preview": "node scripts/package-preview-artifact.js"

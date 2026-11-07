@@ -1,8 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import LearningCenterPage from '@/components/learning-center/LearningCenterPage';
-import { staticVideos } from '@/components/learning-center/videos';
-import { videoSchemaMetadata } from '@/components/learning-center/videoSchemaMetadata';
+import { buildVideoObjectItems } from '@/components/learning-center/videoSchema';
 import { JsonLdScript } from '@/components/JsonLd';
 import { getDictionary } from '@/lib/i18n';
 import { getAlternates } from '@/lib/seo';
@@ -24,25 +23,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function VideosPage() {
   if (currentSiteVariant === 'io') notFound();
   const dict = await getDictionary('zh');
-  const videoItems = staticVideos
-    .map((video) => {
-      const bvid = video.url.match(/bilibili\.com\/video\/(BV[a-zA-Z0-9]+)/)?.[1];
-      const metadata = bvid ? videoSchemaMetadata[bvid] : undefined;
-      return metadata
-        ? {
-            '@type': 'VideoObject',
-            name: video.title,
-            description: video.desc,
-            thumbnailUrl: metadata.thumbnailUrl,
-            uploadDate: metadata.uploadDate,
-            duration: metadata.duration,
-            contentUrl: video.url,
-            embedUrl: video.url,
-            inLanguage: 'zh-CN'
-          }
-        : null;
-    })
-    .filter((video): video is NonNullable<typeof video> => Boolean(video));
+  const videoItems = buildVideoObjectItems();
 
   return (
     <>

@@ -45,6 +45,12 @@ function runSplit(fixture, xml, options = {}) {
     variant: 'io',
     site: SITE,
     stateDirectory: fixture.stateDirectory,
+    indexableIndustrySlugs: new Set(
+      [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)]
+        .map((match) => match[1])
+        .filter((url) => url.includes('/industry/'))
+        .map((url) => new URL(url).pathname.split('/').at(-1))
+    ),
     ...options
   });
 }

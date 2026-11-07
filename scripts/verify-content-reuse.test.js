@@ -253,20 +253,20 @@ test('CN publication applies the existing document and cloud URL policy to all d
 
 test('Industry uses the production loader for identities, dates, and owner projections', () => {
   const article = (locale, slug, date = '2026-09-26') => `---
-title: Example
+title: ${slug}
 slug: /${locale}/industry/${slug}
 page_type: Scenario
 application_area: research
-meta_title: Example title
-meta_description: Example description
+meta_title: ${slug} | Research
+meta_description: A distinct research workflow description for ${slug}.
 keywords: useful, keywords
 date_published: 2026-09-15
 date_modified: ${date}
 ---
 
-# Example
+# ${slug}
 
-Reader content.
+Research workflow for ${slug}. ${'Research knowledge workflow. '.repeat(30)}
 `;
   const files = {
     zh: {
@@ -301,6 +301,12 @@ Reader content.
   const load = read();
   const content = load('@/lib/industryContent');
   assert.equal(content.industryArticles.length, 5);
+  assert.deepEqual(
+    content.industryArticles
+      .filter((article) => !article.indexable && article.slug !== 'retail-01')
+      .map((article) => [article.slug, article.qualityIssues]),
+    []
+  );
   assert.equal(content.getIndustryArticle('en', 'shared').dateModified, '2026-09-26');
   assert.deepEqual(content.getIndustryArticle('en', 'shared').keywords, ['useful', 'keywords']);
   assert.deepEqual(content.getIndustryArticle('zh', 'only').publishedLocales, ['zh']);
@@ -317,8 +323,8 @@ Reader content.
     { slug: 'retail-01' },
     { slug: 'shared' }
   ]);
-  assert.equal(content.getIndustrySitemapEntries('cn').length, 3);
-  assert.equal(content.getIndustrySitemapEntries('io').length, 2);
+  assert.equal(content.getIndustrySitemapEntries('cn').length, 2);
+  assert.equal(content.getIndustrySitemapEntries('io').length, 1);
   const seo = load('@/lib/industrySeo');
   assert.equal(
     seo.getIndustryCanonicalUrl(content.getIndustryArticle('zh', 'shared')),
@@ -354,19 +360,32 @@ function industryFixture(files, overrides = {}) {
 }
 
 function industrySource(slug, area, title = 'Example') {
+  const resolvedArea =
+    area ??
+    (slug.startsWith('finance') || slug.startsWith('finace')
+      ? 'finance'
+      : slug.startsWith('biomed')
+      ? 'biomed'
+      : 'research');
+  const topic = {
+    finance: 'Finance investment banking compliance research.',
+    biomed: 'Biomedical clinical diagnostic cell research.',
+    research: 'Research public policy government archive.'
+  }[resolvedArea];
+  const body = `${topic} `.repeat(30);
   return `---
 title: ${title}
 slug: /industry/${slug}
 page_type: Scenario
-${area === undefined ? '' : `application_area: ${area}\n`}meta_title: ${title}
-meta_description: Practical workflow guidance.
+${area === undefined ? '' : `application_area: ${area}\n`}meta_title: ${title} | ${resolvedArea}
+meta_description: Practical research and clinical workflow guidance.
 date_published: 2026-09-15
 date_modified: 2026-09-26
 ---
 
 # ${title}
 
-Reader content.
+${body}
 `;
 }
 
@@ -597,7 +616,7 @@ test('Industry summaries expose the complete locale collection with stable pages
   });
   assert.deepEqual(Object.keys(zh[0]).sort(), ['area', 'description', 'href', 'slug', 'title']);
   assert.equal(zh[0].href, '/industry/biomed-rd');
-  assert.equal(zh[0].description, 'Practical workflow guidance.');
+  assert.equal(zh[0].description, 'Practical research and clinical workflow guidance.');
   const list = (query, entries = zh) => getIndustryListing(entries, new URLSearchParams(query));
   assert.deepEqual(
     list('').entries.map(({ slug }) => slug),

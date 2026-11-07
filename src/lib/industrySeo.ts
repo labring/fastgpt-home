@@ -21,7 +21,8 @@ export const industryHubCopy = {
   },
   zh: {
     title: 'FastGPT 行业 AI 场景与问题',
-    description: '按金融、生物医药、科研及制造 / 生产加工等应用领域，浏览具体业务场景与作业环节中的 AI 实践内容。'
+    description:
+      '按金融、生物医药、科研及制造 / 生产加工等应用领域，浏览具体业务场景与作业环节中的 AI 实践内容。'
   }
 } as const;
 
@@ -65,7 +66,7 @@ export function getIndustryArticleMetadata(
     description: article.metaDescription,
     ...(article.keywords.length ? { keywords: article.keywords } : {}),
     alternates: getIndustryAlternates(article),
-    robots: indexable ? { index: true, follow: true } : { index: false, follow: false },
+    robots: indexable ? { index: true, follow: true } : { index: false, follow: true },
     openGraph: {
       type: 'article',
       url: canonical,

@@ -16,6 +16,87 @@ const PROTOCOL_BYTE_LIMIT = 50 * 1024 * 1024;
 const SHARD_NAME = /^sitemap-(.+)-(\d+)-([a-f0-9]{8})\.xml$/;
 const serializer = new XMLSerializer();
 
+function loadIndustryQualityRecords() {
+  const os = require('node:os');
+  const directory = fs.mkdtempSync(path.join(os.tmpdir(), 'fastgpt-industry-quality-'));
+  const output = path.join(directory, 'industryContent.cjs');
+  try {
+    const transformed = require('typescript').transpileModule(
+      fs.readFileSync(path.join(__dirname, '..', 'src', 'lib', 'industryContent.ts'), 'utf8'),
+      {
+        compilerOptions: {
+          module: require('typescript').ModuleKind.CommonJS,
+          target: require('typescript').ScriptTarget.ES2022,
+          esModuleInterop: true
+        }
+      }
+    ).outputText;
+    const source = transformed
+      .replace('require("server-only");', '')
+      .replaceAll('@/lib/industryListing', './industryListing.runtime')
+      .replaceAll('@/lib/siteRouting', './siteRouting.runtime');
+    fs.writeFileSync(output, source);
+    fs.writeFileSync(
+      path.join(directory, 'industryListing.runtime.js'),
+      transpileIndustryModule('industryListing')
+    );
+    fs.writeFileSync(
+      path.join(directory, 'siteRouting.runtime.js'),
+      transpileIndustryModule('siteRouting')
+        .replaceAll('@/lib/locales', './locales.runtime')
+        .replaceAll('@/config/site-routing.json', './site-routing.runtime.json')
+    );
+    fs.writeFileSync(
+      path.join(directory, 'locales.runtime.js'),
+      transpileIndustryModule('locales').replace(
+        '@/config/site-routing.json',
+        './site-routing.runtime.json'
+      )
+    );
+    fs.writeFileSync(
+      path.join(directory, 'site-routing.runtime.json'),
+      JSON.stringify(require('../src/config/site-routing.json'))
+    );
+    return require(output).industryArticles;
+  } finally {
+    fs.rmSync(directory, { recursive: true, force: true });
+  }
+}
+
+function transpileIndustryModule(moduleName) {
+  const typescript = require('typescript');
+  return typescript.transpileModule(
+    fs.readFileSync(path.join(__dirname, '..', 'src', 'lib', `${moduleName}.ts`), 'utf8'),
+    {
+      compilerOptions: {
+        module: typescript.ModuleKind.CommonJS,
+        target: typescript.ScriptTarget.ES2022,
+        esModuleInterop: true
+      }
+    }
+  ).outputText;
+}
+
+function filterIndustrySitemap(input, site, options = {}) {
+  const indexableSlugs = options.indexableIndustrySlugs;
+  if (indexableSlugs) return filterBySlugSet(input, site, indexableSlugs);
+  const records = loadIndustryQualityRecords();
+  const indexable = new Set(
+    records.filter((record) => record.indexable).map((record) => record.slug)
+  );
+  return filterBySlugSet(input, site, indexable);
+}
+
+function filterBySlugSet(input, site, indexable) {
+  const parsed = parseUrlset(input, site);
+  const entries = parsed.entries.filter(
+    (entry) =>
+      !entry.loc.includes('/industry/') ||
+      indexable.has(new URL(entry.loc).pathname.split('/').at(-1))
+  );
+  return { entries, rootInfo: parsed.rootInfo, skipped: parsed.entries.length - entries.length };
+}
+
 function normalizeSite(value) {
   let url;
   try {
@@ -893,7 +974,7 @@ function splitSitemapFile(outputDirectory, options = {}) {
   removeLegacyShards(output);
 
   const sourcePath = path.join(output, 'sitemap.xml');
-  const source = parseUrlset(fs.readFileSync(sourcePath), site);
+  const source = filterIndustrySitemap(fs.readFileSync(sourcePath), site, options);
   const history = scanHistory(stateDirectory);
   const previousShards = readSnapshot(stateDirectory, site, history);
   const reconciled = reconcileShards(

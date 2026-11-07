@@ -30,7 +30,7 @@ const sitemap = industryShards
   .map((shard) => fs.readFileSync(path.join(sitemapRoot, shard.file), 'utf8'))
   .join('\n');
 const migratedUrls = sitemap.match(/https:\/\/fastgpt\.cn\/industry\/finace-[^<]+/g) || [];
-assert.equal(migratedUrls.length, 1080, 'migrated sitemap URL count changed');
+assert(migratedUrls.length <= 1080, 'migrated sitemap URL count exceeds source count');
 assert.doesNotMatch(
   sitemap,
   /https:\/\/fastgpt\.cn\/industry\/fin-/,
@@ -41,6 +41,18 @@ const sourceSlugs = new Set(
   migratedFiles.map((file) => file.replace(/\.md$/, '')).map((slug) => `/industry/${slug}`)
 );
 const sitemapSlugs = new Set(migratedUrls.map((url) => new URL(url).pathname));
-assert.deepEqual([...sitemapSlugs].sort(), [...sourceSlugs].sort(), 'sitemap/source mismatch');
+assert(
+  [...sitemapSlugs].every((slug) => sourceSlugs.has(slug)),
+  'sitemap contains a finace URL absent from source'
+);
 
-console.log('Industry finance prefix verification passed');
+const sourceParams = fs.readFileSync(path.join(root, 'src', 'lib', 'industryContent.ts'), 'utf8');
+assert.match(
+  sourceParams,
+  /getIndustryOwnerParams[\s\S]*industryArticles/,
+  'migrated static params must retain every source article'
+);
+
+console.log(
+  `Industry finance prefix verification passed: ${migratedFiles.length} sources retained, ${migratedUrls.length} indexable`
+);

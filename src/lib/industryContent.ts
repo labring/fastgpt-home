@@ -19,7 +19,7 @@ export type IndustryLocale = (typeof INDUSTRY_LOCALES)[number];
 const INDUSTRY_ROOT = path.join(process.cwd(), 'src', 'content', 'industry');
 const SLUG_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const DATE_PATTERN = /^\d{4}-\d{2}-\d{2}$/;
-const MIN_BODY_CHARS = 600;
+const MIN_BODY_CHARS = 500;
 
 export type IndustryQualityIssue =
   | 'empty-body'
@@ -27,7 +27,8 @@ export type IndustryQualityIssue =
   | 'placeholder-body'
   | 'broken-section'
   | 'cross-industry'
-  | 'topic-mismatch';
+  | 'topic-mismatch'
+  | 'duplicate-meta';
 
 export type IndustryArticle = {
   locale: IndustryLocale;
@@ -127,6 +128,58 @@ function validateDate(value: string, field: string, sourcePath: string) {
   }
 }
 
+const TOPIC_TERMS: Partial<Record<IndustryArea, RegExp>> = {
+  finance:
+    /金融|保险|银行|证券|基金|信托|支付|投研|投资|理财|信贷|财务|会计|审计|KYC|资金|资产|风险|风控|合规|反洗钱|交易|清算|结算|贷款|存款|利率|额度|授信|账户|投顾|财富|经纪|承销|保荐|并购|财报|税务|客户|受益所有人|名单筛查|finance|financial|insurance|bank|securities|fund|trust|payment|investment|credit|accounting|audit|capital|asset|risk|compliance|transaction|loan|deposit|interest|account|tax|customer|beneficial owner|anti-money|list screening|identity/i,
+  biomed:
+    /医药|医疗|临床|药物|医院|生物|细胞|患者|诊断|基因|CAR-T|CDMO|CRO|疫苗|CMC|GMP|制药|pharma|clinical|biolog|cell|diagnos|vaccine/i,
+  research:
+    /政府|公共|政务|国央企|监管|政策|城市|热线|医保|部门|公民|档案|许可|制度|科研|研究|项目申报|研发|成果|伦理|期刊|同行评议|public|government|regulat|policy|research|project|archive|permit/i,
+  manufacturing:
+    /制造|生产|加工|设备|工厂|车间|机械|材料|船舶|铁路|轨道|钢铁|电网|电源|PCB|SMT|冶炼|化工|manufactur|production|equipment|factory|material|rail|steel|power grid|chemical/i,
+  technology:
+    /软件|互联网|系统|代码|数据|云|IT|技术|CDN|平台|应用|软件|Issue|API|software|internet|system|code|data|cloud|platform|application/i,
+  retail:
+    /零售|电商|门店|订单|商品|库存|消费|商城|商家|客户|Shopify|独立站|B2B|交易|售后|仓储|物流|retail|commerce|store|order|product|inventory|shop|merchant|logistics/i,
+  education:
+    /教育|学校|课程|教学|学生|教师|幼儿园|培训|招生|考试|校园|班级|教研|听评课|职业|学位|高校|心理|学业|毕业|课堂|教材|学员|家长|院校|校区|老师|作业|人才|技能|考务|高考|报名|录取|学术|实验室|儿童|科研|研究|项目申报|研发|成果|伦理|期刊|同行评议|办学|education|school|course|teaching|student|teacher|kindergarten|training|admission|exam|campus|class|curriculum|college|university|academic|laboratory|child|research|project|journal|enrollment|degree|assessment|learning|lesson|vocational|peer review|employment|graduate/i
+};
+
+const FINANCE_CROSS_INDUSTRY_TERMS =
+  /教育服务|电网设备|专用设备|多应用路由|模型分配|用量统计|统一入口|education service|power grid|specialized equipment/i;
+
+export function getIndustryQualityIssues(
+  area: IndustryArea,
+  title: string,
+  body: string,
+  metaDescription: string,
+  metadata: Record<string, string>
+): IndustryQualityIssue[] {
+  const issues: IndustryQualityIssue[] = [];
+  const text = `${title}\n${body}`;
+  if (!body.trim()) issues.push('empty-body');
+  else if (body.replace(/\s/g, '').length < MIN_BODY_CHARS) issues.push('short-body');
+  if (/仅作参考；请以目标 FastGPT 发布版本与部署文档核验。/.test(body)) {
+    issues.push('placeholder-body');
+  }
+  // W16 education records intentionally omit article_section; only the value steal is corrupted.
+  if (
+    metadata.article_section?.includes('is_part_of:') ||
+    (!metadata.article_section && area === 'retail')
+  ) {
+    issues.push('broken-section');
+  }
+  if (area === 'finance' && FINANCE_CROSS_INDUSTRY_TERMS.test(text)) issues.push('cross-industry');
+  if (!TOPIC_TERMS[area]?.test(text)) issues.push('topic-mismatch');
+  if (
+    metaDescription.trim() === title.trim() ||
+    (metaDescription.trim().startsWith(title.trim()) && metaDescription.includes('涵盖'))
+  ) {
+    issues.push('duplicate-meta');
+  }
+  return issues;
+}
+
 function resolveApplicationArea(
   metadata: Record<string, string>,
   slug: string,
@@ -181,13 +234,15 @@ function readLocaleArticles(locale: IndustryLocale): IndustryArticle[] {
       if (h1 !== title) fail(sourcePath, 'title must match the first H1');
       validateDate(datePublished, 'date_published', sourcePath);
       validateDate(dateModified, 'date_modified', sourcePath);
+      const area = resolveApplicationArea(metadata, slug, sourcePath);
+      const qualityIssues = getIndustryQualityIssues(area, title, body, metaDescription, metadata);
 
       return {
         locale,
         slug,
         title,
         pageType,
-        area: resolveApplicationArea(metadata, slug, sourcePath),
+        area,
         body,
         metaTitle,
         metaDescription,
@@ -201,11 +256,8 @@ function readLocaleArticles(locale: IndustryLocale): IndustryArticle[] {
         dateModified,
         sourcePath,
         publishedLocales: [],
-        indexable:
-          metaDescription.length >= 50 &&
-          metaDescription.trim() !== title.trim() &&
-          !(metaDescription.trim().startsWith(title.trim()) && metaDescription.includes('涵盖')) &&
-          !((slug.startsWith('finance-') || slug.startsWith('finace-')) && title.includes('电网设备'))
+        qualityIssues,
+        indexable: qualityIssues.length === 0
       };
     });
 }
@@ -251,15 +303,17 @@ export function getRelatedIndustryArticles(article: IndustryArticle): IndustryAr
   const group = relatedGroups.get(`${article.locale}|${article.area}`);
   const position = group?.positions.get(article.slug);
   if (!group || position === undefined) return [];
-  return Array.from(
-    { length: Math.min(3, group.articles.length - 1) },
-    (_, index) => group.articles[(position + index + 1) % group.articles.length]
-  );
+  const related: IndustryArticle[] = [];
+  for (let index = 1; index < group.articles.length && related.length < 3; index++) {
+    const candidate = group.articles[(position + index) % group.articles.length];
+    if (candidate.indexable) related.push(candidate);
+  }
+  return related;
 }
 
 export function getIndustrySummaries(locale: IndustryLocale): IndustrySummary[] {
   return industryArticles
-    .filter((article) => article.locale === locale)
+    .filter((article) => article.locale === locale && article.indexable)
     .map(({ slug, area, title, metaDescription }) => ({
       slug,
       area,

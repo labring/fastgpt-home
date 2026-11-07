@@ -45,16 +45,20 @@ function writeSource(outputDirectory, xml) {
 
 function runSplit(fixture, xml, options = {}) {
   writeSource(fixture.outputDirectory, xml);
+  const industryRecords = options.industryRecords || [
+    ...[...xml.matchAll(/<loc>([^<]+)<\/loc>/g)]
+      .map((match) => match[1])
+      .filter((url) => url.includes('/industry/'))
+      .map((url) => ({
+        locale: 'en',
+        slug: new URL(url).pathname.split('/').at(-1)
+      }))
+  ];
   return splitSitemapFile(fixture.outputDirectory, {
     variant: 'io',
     site: SITE,
     stateDirectory: fixture.stateDirectory,
-    indexableIndustrySlugs: new Set(
-      [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)]
-        .map((match) => match[1])
-        .filter((url) => url.includes('/industry/'))
-        .map((url) => new URL(url).pathname.split('/').at(-1))
-    ),
+    industryRecords,
     ...options
   });
 }
@@ -136,7 +140,7 @@ test('persists deterministic XML shards and combines non-industry routes', (t) =
   assertNoGzipFiles(fixture);
 });
 
-test('locale filtering fills indexable industry URLs missing from the source', () => {
+test('locale filtering fills industry URLs missing from the source', () => {
   const source = makeUrlset([
     makeUrl(`${SITE}/`),
     makeUrl(`${SITE}/industry/finance-a`)
@@ -145,8 +149,8 @@ test('locale filtering fills indexable industry URLs missing from the source', (
     source,
     SITE,
     [
-      { locale: 'en', slug: 'finance-a', indexable: true, dateModified: '2026-10-25' },
-      { locale: 'en', slug: 'finance-b', indexable: true, dateModified: '2026-10-26' }
+      { locale: 'en', slug: 'finance-a', dateModified: '2026-10-25' },
+      { locale: 'en', slug: 'finance-b', dateModified: '2026-10-26' }
     ],
     'en'
   );

@@ -77,21 +77,13 @@ function transpileIndustryModule(moduleName) {
 }
 
 function filterIndustrySitemap(input, site, options = {}) {
-  const indexableSlugs = options.indexableIndustrySlugs;
-  if (indexableSlugs) return filterBySlugSet(input, site, indexableSlugs);
+  if (options.industryRecords) {
+    const locale = options.locale || (new URL(site).hostname === 'fastgpt.cn' ? 'zh' : 'en');
+    return filterByLocaleSlugs(input, site, options.industryRecords, locale);
+  }
   const records = loadIndustryQualityRecords();
   const locale = options.locale || (new URL(site).hostname === 'fastgpt.cn' ? 'zh' : 'en');
   return filterByLocaleSlugs(input, site, records, locale);
-}
-
-function filterBySlugSet(input, site, indexable) {
-  const parsed = parseUrlset(input, site);
-  const entries = parsed.entries.filter(
-    (entry) =>
-      !entry.loc.includes('/industry/') ||
-      indexable.has(new URL(entry.loc).pathname.split('/').at(-1))
-  );
-  return { entries, rootInfo: parsed.rootInfo, skipped: parsed.entries.length - entries.length };
 }
 
 function filterByLocaleSlugs(input, site, records, locale) {

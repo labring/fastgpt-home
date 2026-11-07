@@ -269,8 +269,8 @@ function buildRedirects(rootDir, env = process.env) {
   addRedirect(ioRedirects, '/pricing', `${ioUrl}/price`);
   addRedirect(cnRedirects, '/docs', 'https://doc.fastgpt.cn/docs/introduction');
   addRedirect(ioRedirects, '/docs', 'https://doc.fastgpt.io/docs/introduction');
-  addRedirect(cnRedirects, '/docs/:path*', 'https://doc.fastgpt.cn/docs/introduction');
-  addRedirect(ioRedirects, '/docs/:path*', 'https://doc.fastgpt.io/docs/introduction');
+  addRedirect(cnRedirects, '/docs/:path*', 'https://doc.fastgpt.cn/docs/:path*');
+  addRedirect(ioRedirects, '/docs/:path*', 'https://doc.fastgpt.io/docs/:path*');
 
   for (const [source, targetPath] of getRetiredDeepContentRedirects()) {
     addRedirect(cnRedirects, source, `${cnUrl}${targetPath}`);
@@ -303,6 +303,10 @@ export default {
       (url.pathname.startsWith('/docs/') ? redirects.get('/docs/:path*') : undefined);
     if (target) {
       const redirectUrl = new URL(target);
+      redirectUrl.pathname = redirectUrl.pathname.replace(
+        '/:path*',
+        url.pathname.slice('/docs'.length)
+      );
       redirectUrl.search = url.search;
       return Response.redirect(redirectUrl, 301);
     }
@@ -376,7 +380,7 @@ function writeNginxRedirectMap(nextDir, redirects, metadata = {}) {
   for (const [source, target] of [...redirects].sort(compareRedirectEntries)) {
     if (source.endsWith('/:path*')) {
       const prefix = escapeRegex(source.slice(0, -'/:path*'.length));
-      lines.push(`  ~^${prefix}(?:/.*)?$ "${target}";`);
+      lines.push(`  ~^${prefix}(/.*)$ "${target.replace('/:path*', '$1')}";`);
       continue;
     }
     const key = caseSensitiveSources.has(source)
@@ -402,7 +406,10 @@ function parseNginxRedirectMap(content) {
     get(source) {
       const literalTarget = literal.get(source);
       if (literalTarget !== undefined) return literalTarget;
-      return patterns.find(({ pattern }) => pattern.test(source))?.target;
+      for (const { pattern, target } of patterns) {
+        const match = source.match(pattern);
+        if (match) return target.replace('$1', match[1] || '');
+      }
     },
     has(source) {
       return this.get(source) !== undefined;

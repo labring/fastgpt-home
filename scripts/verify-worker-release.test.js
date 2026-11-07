@@ -242,7 +242,7 @@ test('Legacy pricing and docs entrypoints redirect to their canonical destinatio
     assert.equal(projection.get('/pricing/'), `${baseUrl}/price`);
     assert.equal(projection.get('/docs'), docsUrl);
     assert.equal(projection.get('/docs/'), docsUrl);
-    assert.equal(projection.get('/docs/:path*'), docsUrl);
+    assert.equal(projection.get('/docs/:path*'), `${new URL(docsUrl).origin}/docs/:path*`);
   }
 });
 
@@ -258,16 +258,20 @@ test('Worker redirects legacy docs subpaths and preserves their query strings', 
       .replace('export default', 'globalThis.worker =');
     const context = { Headers, Map, Request, Response, URL };
     require('node:vm').runInNewContext(workerSource, context);
-    for (const pathname of ['/docs', '/docs/', '/docs/guide/getting-started']) {
+    for (const [pathname, expected] of [
+      ['/docs', 'https://doc.fastgpt.io/docs/introduction?utm=keep'],
+      ['/docs/', 'https://doc.fastgpt.io/docs/introduction?utm=keep'],
+      [
+        '/docs/guide/getting-started',
+        'https://doc.fastgpt.io/docs/guide/getting-started?utm=keep'
+      ]
+    ]) {
       const response = await context.worker.fetch(
         new Request(`https://fastgpt.io${pathname}?utm=keep`),
         { ASSETS: { fetch: async () => new Response('asset') } }
       );
       assert.equal(response.status, 301);
-      assert.equal(
-        response.headers.get('location'),
-        'https://doc.fastgpt.io/docs/introduction?utm=keep'
-      );
+      assert.equal(response.headers.get('location'), expected);
     }
   } finally {
     fs.rmSync(root, { recursive: true, force: true });
@@ -284,7 +288,7 @@ test('Nginx serializes legacy docs prefix redirects without a redundant key', ()
     const redirects = parseNginxRedirectMap(source);
     assert.equal(
       redirects.get('/docs/guide/getting-started'),
-      'https://doc.fastgpt.io/docs/introduction'
+      'https://doc.fastgpt.io/docs/guide/getting-started'
     );
   } finally {
     fs.rmSync(root, { recursive: true, force: true });

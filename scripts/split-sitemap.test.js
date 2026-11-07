@@ -136,19 +136,36 @@ test('locale filtering fills indexable industry URLs missing from the source', (
     source,
     SITE,
     [
-      { locale: 'en', slug: 'finance-a', indexable: true },
-      { locale: 'en', slug: 'finance-b', indexable: true }
+      { locale: 'en', slug: 'finance-a', indexable: true, dateModified: '2026-10-25' },
+      { locale: 'en', slug: 'finance-b', indexable: true, dateModified: '2026-10-26' }
     ],
     'en'
   );
-  const industryUrls = result.entries
-    .filter(({ bucket }) => bucket === 'industry')
-    .map(({ loc }) => loc);
+  const industryEntries = result.entries.filter(({ bucket }) => bucket === 'industry');
+  const reparsed = new Map(
+    parseUrlset(
+      makeUrlset(industryEntries.map(({ xml }) => xml)),
+      SITE
+    ).entries.map((entry) => [entry.loc, entry])
+  );
 
-  assert.deepEqual(industryUrls.sort(), [
+  assert.deepEqual(industryEntries.map(({ loc }) => loc).sort(), [
     `${SITE}/industry/finance-a`,
     `${SITE}/industry/finance-b`
   ]);
+  const filled = reparsed.get(`${SITE}/industry/finance-b`);
+  assert.equal(
+    filled.fingerprint,
+    industryEntries.find(({ loc }) => loc === filled.loc).fingerprint,
+    'filled entry must use the canonical serialized fingerprint'
+  );
+  assert.match(filled.xml, /<lastmod>2026-10-26<\/lastmod>/);
+  const existing = reparsed.get(`${SITE}/industry/finance-a`);
+  assert.match(
+    existing.xml,
+    /<lastmod>2026-10-25<\/lastmod>/,
+    'existing industry URLs must also use source modification dates'
+  );
 });
 
 test('industry additions fill the current tail and preserve full shards', (t) => {

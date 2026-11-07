@@ -81,7 +81,7 @@ function filterIndustrySitemap(input, site, options = {}) {
   const indexableSlugs = options.indexableIndustrySlugs;
   if (indexableSlugs) return filterBySlugSet(input, site, indexableSlugs);
   const records = loadIndustryQualityRecords();
-  const locale = new URL(site).hostname === 'fastgpt.cn' ? 'zh' : 'en';
+  const locale = options.locale || (new URL(site).hostname === 'fastgpt.cn' ? 'zh' : 'en');
   return filterByLocaleSlugs(input, site, records, locale);
 }
 
@@ -101,27 +101,31 @@ function filterByLocaleSlugs(input, site, records, locale) {
   const origin = new URL(site).origin;
   const indexableRecords = records.filter((record) => record.locale === locale && record.indexable);
   const indexable = new Set(indexableRecords.map((record) => record.slug));
-  const entries = parsed.entries.filter(
-    (entry) => {
-      const url = new URL(entry.loc);
-      if (url.origin !== origin || !url.pathname.includes('/industry/')) return true;
-      return indexable.has(industrySlugFromPath(url.pathname, locale));
-    }
-  );
-  const present = new Set(entries.map((entry) => entry.loc));
+  const entries = parsed.entries.filter((entry) => {
+    const url = new URL(entry.loc);
+    if (url.origin !== origin || !url.pathname.includes('/industry/')) return true;
+    return indexable.has(industrySlugFromPath(url.pathname, locale));
+  });
+  const industryEntries = new Map();
   for (const record of indexableRecords) {
     const loc = `${origin}/industry/${record.slug}`;
-    if (present.has(loc)) continue;
-    const xml = `<url><loc>${escapeXml(loc)}</loc></url>`;
-    entries.push({
-      bucket: 'industry',
+    const lastmod = record.dateModified
+      ? `<lastmod>${escapeXml(record.dateModified)}</lastmod>`
+      : '';
+    const xml = `<url xmlns="${SITEMAP_NAMESPACE}"><loc>${escapeXml(loc)}</loc>${lastmod}</url>`;
+    industryEntries.set(loc, {
+      bucket: bucketForLoc(loc),
       fingerprint: `${parsed.rootInfo.namespaceFingerprint}\n${xml}`,
       loc,
       xml,
       xmlBytes: Buffer.byteLength(xml)
     });
   }
-  return { entries, rootInfo: parsed.rootInfo, skipped: sourceCount - entries.length };
+  const rebuilt = parsed.entries
+    .filter((entry) => !entry.loc.includes('/industry/'))
+    .concat([...industryEntries.values()])
+    .sort((left, right) => (left.loc < right.loc ? -1 : left.loc > right.loc ? 1 : 0));
+  return { entries: rebuilt, rootInfo: parsed.rootInfo, skipped: sourceCount - rebuilt.length };
 }
 
 function industrySlugFromPath(pathname, locale) {
@@ -1010,7 +1014,10 @@ function splitSitemapFile(outputDirectory, options = {}) {
   if (/<sitemapindex\b/.test(sourceXml.toString('utf8'))) {
     throw new Error('Production sitemap input must be a complete urlset, not a sharded index');
   }
-  const source = filterIndustrySitemap(sourceXml, site, options);
+  const source = filterIndustrySitemap(sourceXml, site, {
+    ...options,
+    locale: variant === 'cn' ? 'zh' : 'en'
+  });
   const history = scanHistory(stateDirectory);
   const previousShards = readSnapshot(stateDirectory, site, history);
   const reconciled = reconcileShards(

@@ -115,35 +115,37 @@ try {
       fs.readFileSync(path.join(root, 'sitemaps', host, 'manifest.json'))
     );
     const industryShards = manifest.shards.filter((shard) => shard.bucket === 'industry');
-    const urls = industryShards.flatMap((shard) =>
+    const entries = industryShards.flatMap((shard) =>
       [
         ...fs
           .readFileSync(path.join(root, 'sitemaps', host, shard.file), 'utf8')
-          .matchAll(/<loc>(.*?)<\/loc>/g)
-      ].map((match) => match[1])
-    );
-    const actual = new Set(
-      urls.map((url) => {
-        const pathname = new URL(url).pathname;
-        const marker = '/industry/';
-        return pathname.slice(pathname.indexOf(marker) + marker.length);
+          .matchAll(/<url\b[^>]*>([\s\S]*?)<\/url>/g)
+      ].map((match) => {
+        const url = match[1].match(/<loc>(.*?)<\/loc>/)?.[1];
+        const lastmod = match[1].match(/<lastmod>(.*?)<\/lastmod>/)?.[1];
+        return { url, lastmod };
       })
     );
+    const actual = new Set(entries.map(({ url }) => new URL(url).pathname.split('/').at(-1)));
     assert(
       [...actual].every(Boolean),
       `${host} contains a sitemap URL without an industry slug`
     );
-    const expectedSlugs = new Set(
+    const expectedBySlug = new Map(
       content.industryArticles
         .filter((article) => article.locale === locale && article.indexable)
-        .map((article) => article.slug)
+        .map((article) => [article.slug, article.dateModified])
     );
     assert.deepEqual(
       [...actual].sort(),
-      [...expectedSlugs].sort(),
+      [...expectedBySlug.keys()].sort(),
       `${host} sitemap must match its indexable inventory`
     );
-    assert(!urls.some((url) => url.endsWith(`/industry/${finance.slug}`)));
+    for (const { url, lastmod } of entries) {
+      const slug = new URL(url).pathname.split('/').at(-1);
+      assert.equal(lastmod, expectedBySlug.get(slug), `${host} lastmod mismatch for ${slug}`);
+    }
+    assert(!entries.some(({ url }) => url.endsWith(`/industry/${finance.slug}`)));
   }
 
   console.log(

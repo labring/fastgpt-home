@@ -15,8 +15,20 @@ if (!cases.includes('alt={`${data.title}案例展示`}')) {
   throw new Error('Home case images must use case-specific alt text');
 }
 
-if (!brands.includes('aria-hidden="true"') || !brands.includes('alt=""')) {
-  throw new Error('Decorative brand wall must stay hidden from assistive tech');
+const brandLogos = [
+  ...brands.matchAll(/\[\s*'([^']+\.png)',\s*'([^']+)'\s*\]/g)
+].map(([, file, name]) => ({ file, name }));
+if (brandLogos.length !== 48) {
+  throw new Error(`Brand wall must expose 48 customer logos, found ${brandLogos.length}`);
+}
+if (
+  brands.includes('aria-hidden="true"') ||
+  !brands.includes('alt={`${name} 公司 logo`}')
+) {
+  throw new Error('Brand logos must use company-specific alt text');
+}
+if (brandLogos.some(({ name }) => !name.trim())) {
+  throw new Error('Brand logo names must not be empty');
 }
 
 if (

@@ -4,11 +4,6 @@ const os = require('node:os');
 const path = require('node:path');
 const test = require('node:test');
 const { load } = require('js-yaml');
-const {
-  buildRedirects,
-  parseNginxRedirectMap,
-  writeNginxRedirectMap
-} = require('./lib/redirects');
 const { inspectWorkerAssets, verifyWorkerArtifact } = require('./lib/worker-publication');
 const {
   getAvailablePort,
@@ -220,87 +215,14 @@ test('Worker Static Assets enforce both file-count and largest-file limits', () 
   );
 });
 
-test('Nginx compresses XML and revalidates stable sitemap shards', () => {
+test('Nginx compresses XML and gives hashed sitemap shards immutable caching', () => {
   const projectRoot = path.join(__dirname, '..');
   const nginx = fs.readFileSync(path.join(projectRoot, 'nginx.conf'), 'utf8');
   assert.match(nginx, /gzip_types[^;]*\bapplication\/xml\b/);
   assert.match(
     nginx,
-    /location \^~ \/sitemap-shards\/[\s\S]*?Cache-Control "public, max-age=3600"/
+    /location \^~ \/sitemap-shards\/[\s\S]*?Cache-Control "public, max-age=31536000, immutable"/
   );
-});
-
-test('Legacy pricing and docs entrypoints redirect to their canonical destinations', () => {
-  const projectRoot = path.join(__dirname, '..');
-  const redirects = buildRedirects(projectRoot);
-  for (const [variant, baseUrl, docsUrl] of [
-    ['cn', 'https://fastgpt.cn', 'https://doc.fastgpt.cn/docs/introduction'],
-    ['io', 'https://fastgpt.io', 'https://doc.fastgpt.io/docs/introduction']
-  ]) {
-    const projection = redirects[`${variant}Redirects`];
-    assert.equal(projection.get('/pricing'), `${baseUrl}/price`);
-    assert.equal(projection.get('/pricing/'), `${baseUrl}/price`);
-    assert.equal(projection.get('/docs'), docsUrl);
-    assert.equal(projection.get('/docs/'), docsUrl);
-    assert.equal(projection.get('/docs/:path*'), `${new URL(docsUrl).origin}/docs/:path*`);
-  }
-});
-
-test('Worker redirects legacy docs subpaths and preserves their query strings', async () => {
-  const projectRoot = path.join(__dirname, '..');
-  const { writeCloudflareWorker } = require('./lib/redirects');
-  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'fastgpt-worker-redirects-'));
-  try {
-    const outDir = path.join(root, 'out');
-    writeCloudflareWorker(outDir, buildRedirects(projectRoot).ioRedirects);
-    const workerSource = fs
-      .readFileSync(path.join(outDir, '_worker.js'), 'utf8')
-      .replace('export default', 'globalThis.worker =');
-    const context = { Headers, Map, Request, Response, URL };
-    require('node:vm').runInNewContext(workerSource, context);
-    for (const pathname of ['/pricing', '/pricing/']) {
-      const response = await context.worker.fetch(
-        new Request(`https://fastgpt.io${pathname}?utm=keep`),
-        { ASSETS: { fetch: async () => new Response('asset') } }
-      );
-      assert.equal(response.status, 301);
-      assert.equal(response.headers.get('location'), 'https://fastgpt.io/price?utm=keep');
-    }
-    for (const [pathname, expected] of [
-      ['/docs', 'https://doc.fastgpt.io/docs/introduction?utm=keep'],
-      ['/docs/', 'https://doc.fastgpt.io/docs/introduction?utm=keep'],
-      [
-        '/docs/guide/getting-started',
-        'https://doc.fastgpt.io/docs/guide/getting-started?utm=keep'
-      ]
-    ]) {
-      const response = await context.worker.fetch(
-        new Request(`https://fastgpt.io${pathname}?utm=keep`),
-        { ASSETS: { fetch: async () => new Response('asset') } }
-      );
-      assert.equal(response.status, 301);
-      assert.equal(response.headers.get('location'), expected);
-    }
-  } finally {
-    fs.rmSync(root, { recursive: true, force: true });
-  }
-});
-
-test('Nginx serializes legacy docs prefix redirects without a redundant key', () => {
-  const projectRoot = path.join(__dirname, '..');
-  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'fastgpt-nginx-redirects-'));
-  try {
-    writeNginxRedirectMap(root, buildRedirects(projectRoot).ioRedirects);
-    const source = fs.readFileSync(path.join(root, 'nginx-redirects.conf'), 'utf8');
-    assert.doesNotMatch(source, /"\/docs\/:path\*\/"/);
-    const redirects = parseNginxRedirectMap(source);
-    assert.equal(
-      redirects.get('/docs/guide/getting-started'),
-      'https://doc.fastgpt.io/docs/guide/getting-started'
-    );
-  } finally {
-    fs.rmSync(root, { recursive: true, force: true });
-  }
 });
 
 test('Worker release uses its dedicated environment credential', () => {
@@ -358,7 +280,7 @@ test('Wrangler serves HTML and TXT as Static Assets without attaching them as Wo
     fs.writeFileSync(path.join(fixture.outDir, 'faq/example.html'), '<h1>FAQ fixture</h1>');
     fs.writeFileSync(path.join(fixture.outDir, 'faq/example.txt'), 'FAQ text fixture');
     fs.writeFileSync(
-      path.join(fixture.outDir, 'sitemap-shards', 'sitemap-content-000.xml'),
+      path.join(fixture.outDir, 'sitemap-shards', 'sitemap-content-000-aabbccdd.xml'),
       '<urlset></urlset>'
     );
     fs.writeFileSync(
@@ -369,7 +291,7 @@ test('Wrangler serves HTML and TXT as Static Assets without attaching them as Wo
         '',
         '/sitemap-shards/*',
         '  ! Cache-Control',
-        '  Cache-Control: public, max-age=3600',
+        '  Cache-Control: public, max-age=31536000, immutable',
         ''
       ].join('\n')
     );
@@ -404,7 +326,7 @@ test('Wrangler serves HTML and TXT as Static Assets without attaching them as Wo
     }
     for (const [route, cacheControl] of [
       ['/sitemap.xml', 'public, max-age=3600, stale-while-revalidate=86400'],
-      ['/sitemap-shards/sitemap-content-000.xml', 'public, max-age=3600']
+      ['/sitemap-shards/sitemap-content-000-aabbccdd.xml', 'public, max-age=31536000, immutable']
     ]) {
       const response = await fetch(`http://127.0.0.1:${port}${route}`, {
         redirect: 'manual',

@@ -328,6 +328,11 @@ Research workflow for ${slug}. ${'Research knowledge workflow. '.repeat(30)}
     'industry metadata must not use a quality threshold'
   );
   assert.equal(
+    seo.getIndustryArticleMetadata(content.getIndustryArticle('zh', 'shared'), false).robots.index,
+    false,
+    'preview metadata must remain noindex'
+  );
+  assert.equal(
     seo.getIndustryCanonicalUrl(content.getIndustryArticle('zh', 'shared')),
     'https://fastgpt.cn/industry/shared'
   );

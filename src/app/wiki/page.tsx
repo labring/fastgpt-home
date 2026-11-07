@@ -97,7 +97,8 @@ export default async function WikiPage() {
           title: dict.FAQ.sidebarTitle,
           description: dict.FAQ.sidebarDescription,
           consultLabel: dict.Home.navCta.consult,
-          trialLabel: dict.FAQ.sidebarCta
+          trialLabel: dict.FAQ.sidebarCta,
+          priceLabel: '查看价格'
         }}
       />
     </>

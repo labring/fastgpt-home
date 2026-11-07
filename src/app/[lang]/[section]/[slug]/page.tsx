@@ -49,7 +49,8 @@ export default async function TechArticleRoute({
           title: dict.FAQ.sidebarTitle,
           description: dict.FAQ.sidebarDescription,
           consultLabel: dict.Home.navCta.consult,
-          trialLabel: dict.FAQ.sidebarCta
+          trialLabel: dict.FAQ.sidebarCta,
+          priceLabel: locale === 'zh' ? '查看价格' : 'View pricing'
         }}
       />
     </>

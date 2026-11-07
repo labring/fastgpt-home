@@ -250,7 +250,8 @@ function addRedirect(redirects, source, target) {
     redirects.set(sourcePath, target);
   };
   setRedirect(source);
-  if (source !== '/' && !source.endsWith('/')) setRedirect(`${source}/`);
+  if (source !== '/' && !source.endsWith('/') && !source.endsWith('/:path*'))
+    setRedirect(`${source}/`);
 }
 
 function compareRedirectEntries([left], [right]) {
@@ -263,6 +264,13 @@ function buildRedirects(rootDir, env = process.env) {
   const aliasAuthority = readUrlAliasAuthority(rootDir);
   const ioRedirects = new Map();
   const cnRedirects = new Map();
+
+  addRedirect(cnRedirects, '/pricing', `${cnUrl}/price`);
+  addRedirect(ioRedirects, '/pricing', `${ioUrl}/price`);
+  addRedirect(cnRedirects, '/docs', 'https://doc.fastgpt.cn/docs/introduction');
+  addRedirect(ioRedirects, '/docs', 'https://doc.fastgpt.io/docs/introduction');
+  addRedirect(cnRedirects, '/docs/:path*', 'https://doc.fastgpt.cn/docs/introduction');
+  addRedirect(ioRedirects, '/docs/:path*', 'https://doc.fastgpt.io/docs/introduction');
 
   for (const [source, targetPath] of getRetiredDeepContentRedirects()) {
     addRedirect(cnRedirects, source, `${cnUrl}${targetPath}`);
@@ -283,16 +291,16 @@ function buildRedirects(rootDir, env = process.env) {
 }
 
 function writeCloudflareWorker(outDir, redirects, noindex, metadata = {}) {
-  const redirectEntries = JSON.stringify(
-    [...redirects].sort(compareRedirectEntries)
-  );
+  const redirectEntries = JSON.stringify([...redirects].sort(compareRedirectEntries));
   const worker = `const redirectAuthority = ${JSON.stringify(metadata)};
 const redirects = new Map(${redirectEntries});
 
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
-    const target = redirects.get(url.pathname);
+    const target =
+      redirects.get(url.pathname) ||
+      (url.pathname.startsWith('/docs/') ? redirects.get('/docs/:path*') : undefined);
     if (target) {
       const redirectUrl = new URL(target);
       redirectUrl.search = url.search;
@@ -366,6 +374,11 @@ function writeNginxRedirectMap(nextDir, redirects, metadata = {}) {
   const escapeRegex = (value) => value.replace(/[\\^$.*+?()[\]{}|]/g, '\\$&');
 
   for (const [source, target] of [...redirects].sort(compareRedirectEntries)) {
+    if (source.endsWith('/:path*')) {
+      const prefix = escapeRegex(source.slice(0, -'/:path*'.length));
+      lines.push(`  ~^${prefix}(?:/.*)?$ "${target}";`);
+      continue;
+    }
     const key = caseSensitiveSources.has(source)
       ? `~^${escapeRegex(source)}$`
       : `"${source}"`;

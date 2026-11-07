@@ -4,6 +4,11 @@ const os = require('node:os');
 const path = require('node:path');
 const test = require('node:test');
 const { load } = require('js-yaml');
+const {
+  buildRedirects,
+  parseNginxRedirectMap,
+  writeNginxRedirectMap
+} = require('./lib/redirects');
 const { inspectWorkerAssets, verifyWorkerArtifact } = require('./lib/worker-publication');
 const {
   getAvailablePort,
@@ -223,6 +228,67 @@ test('Nginx compresses XML and gives hashed sitemap shards immutable caching', (
     nginx,
     /location \^~ \/sitemap-shards\/[\s\S]*?Cache-Control "public, max-age=31536000, immutable"/
   );
+});
+
+test('Legacy pricing and docs entrypoints redirect to their canonical destinations', () => {
+  const projectRoot = path.join(__dirname, '..');
+  const redirects = buildRedirects(projectRoot);
+  for (const [variant, baseUrl, docsUrl] of [
+    ['cn', 'https://fastgpt.cn', 'https://doc.fastgpt.cn/docs/introduction'],
+    ['io', 'https://fastgpt.io', 'https://doc.fastgpt.io/docs/introduction']
+  ]) {
+    const projection = redirects[`${variant}Redirects`];
+    assert.equal(projection.get('/pricing'), `${baseUrl}/price`);
+    assert.equal(projection.get('/pricing/'), `${baseUrl}/price`);
+    assert.equal(projection.get('/docs'), docsUrl);
+    assert.equal(projection.get('/docs/'), docsUrl);
+    assert.equal(projection.get('/docs/:path*'), docsUrl);
+  }
+});
+
+test('Worker redirects legacy docs subpaths and preserves their query strings', async () => {
+  const projectRoot = path.join(__dirname, '..');
+  const { writeCloudflareWorker } = require('./lib/redirects');
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'fastgpt-worker-redirects-'));
+  try {
+    const outDir = path.join(root, 'out');
+    writeCloudflareWorker(outDir, buildRedirects(projectRoot).ioRedirects);
+    const workerSource = fs
+      .readFileSync(path.join(outDir, '_worker.js'), 'utf8')
+      .replace('export default', 'globalThis.worker =');
+    const context = { Headers, Map, Request, Response, URL };
+    require('node:vm').runInNewContext(workerSource, context);
+    for (const pathname of ['/docs', '/docs/', '/docs/guide/getting-started']) {
+      const response = await context.worker.fetch(
+        new Request(`https://fastgpt.io${pathname}?utm=keep`),
+        { ASSETS: { fetch: async () => new Response('asset') } }
+      );
+      assert.equal(response.status, 301);
+      assert.equal(
+        response.headers.get('location'),
+        'https://doc.fastgpt.io/docs/introduction?utm=keep'
+      );
+    }
+  } finally {
+    fs.rmSync(root, { recursive: true, force: true });
+  }
+});
+
+test('Nginx serializes legacy docs prefix redirects without a redundant key', () => {
+  const projectRoot = path.join(__dirname, '..');
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'fastgpt-nginx-redirects-'));
+  try {
+    writeNginxRedirectMap(root, buildRedirects(projectRoot).ioRedirects);
+    const source = fs.readFileSync(path.join(root, 'nginx-redirects.conf'), 'utf8');
+    assert.doesNotMatch(source, /"\/docs\/:path\*\/"/);
+    const redirects = parseNginxRedirectMap(source);
+    assert.equal(
+      redirects.get('/docs/guide/getting-started'),
+      'https://doc.fastgpt.io/docs/introduction'
+    );
+  } finally {
+    fs.rmSync(root, { recursive: true, force: true });
+  }
 });
 
 test('Worker release uses its dedicated environment credential', () => {

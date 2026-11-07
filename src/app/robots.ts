@@ -11,7 +11,6 @@ export default function robots(): MetadataRoute.Robots {
 
   return {
     rules: [{ userAgent: '*', allow: '/' }],
-    sitemap: `${currentSiteBaseUrl}/sitemap.xml`,
-    host: currentSiteBaseUrl
+    sitemap: `${currentSiteBaseUrl}/sitemap.xml`
   };
 }

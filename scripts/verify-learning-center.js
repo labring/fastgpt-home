@@ -3,9 +3,12 @@
 const fs = require('node:fs');
 const path = require('node:path');
 
-const sourcePath = path.join(__dirname, '..', 'src/components/learning-center/LearningCenterPage.tsx');
+const sourcePath = path.join(__dirname, '..', 'src/components/learning-center/videos.ts');
 const source = fs.readFileSync(sourcePath, 'utf8');
 const urls = [...source.matchAll(/url:\s*["']([^"']+)["']/g)].map((match) => match[1]);
+if (urls.length !== 50) {
+  throw new Error(`Learning center must contain 50 video links, found ${urls.length}`);
+}
 const duplicates = urls.filter((url, index) => urls.indexOf(url) !== index);
 const forbidden = urls.filter(
   (url) =>

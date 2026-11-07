@@ -110,7 +110,7 @@ export default function Hero({ stars: initialStars, locale, t, children }: HeroP
               >
                 {t.brand}
               </m.p>
-              <h1 className="text-ink text-[48px] leading-[62px] tracking-[-1.44px] md:text-[58px] md:leading-[78px] md:tracking-[-1.74px] font-semibold">
+              <h1 className="max-w-[92vw] text-balance text-ink text-[32px] leading-[42px] tracking-[-0.6px] sm:text-[40px] sm:leading-[52px] md:max-w-none md:text-[58px] md:leading-[78px] md:tracking-[-1.74px] font-semibold">
                 {t.title}
               </h1>
             </div>

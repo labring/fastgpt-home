@@ -121,7 +121,7 @@ function resolveApplicationArea(
   slug: string,
   sourcePath: string
 ): IndustryArea {
-  const historicalArea = /^(?:finance|fin)-/.test(slug)
+  const historicalArea = /^(?:finance|finace)-/.test(slug)
     ? 'finance'
     : slug.startsWith('biomed-')
     ? 'biomed'
@@ -170,13 +170,14 @@ function readLocaleArticles(locale: IndustryLocale): IndustryArticle[] {
       if (h1 !== title) fail(sourcePath, 'title must match the first H1');
       validateDate(datePublished, 'date_published', sourcePath);
       validateDate(dateModified, 'date_modified', sourcePath);
+      const area = resolveApplicationArea(metadata, slug, sourcePath);
 
       return {
         locale,
         slug,
         title,
         pageType,
-        area: resolveApplicationArea(metadata, slug, sourcePath),
+        area,
         body,
         metaTitle,
         metaDescription,
@@ -235,10 +236,12 @@ export function getRelatedIndustryArticles(article: IndustryArticle): IndustryAr
   const group = relatedGroups.get(`${article.locale}|${article.area}`);
   const position = group?.positions.get(article.slug);
   if (!group || position === undefined) return [];
-  return Array.from(
-    { length: Math.min(3, group.articles.length - 1) },
-    (_, index) => group.articles[(position + index + 1) % group.articles.length]
-  );
+  const related: IndustryArticle[] = [];
+  for (let index = 1; index < group.articles.length && related.length < 3; index++) {
+    const candidate = group.articles[(position + index) % group.articles.length];
+    related.push(candidate);
+  }
+  return related;
 }
 
 export function getIndustrySummaries(locale: IndustryLocale): IndustrySummary[] {

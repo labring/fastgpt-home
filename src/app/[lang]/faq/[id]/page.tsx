@@ -180,7 +180,8 @@ export default async function FAQDetailPage({
                   title: dict.FAQ.sidebarTitle,
                   description: dict.FAQ.sidebarDescription,
                   consultLabel: dict.Home.navCta.consult,
-                  trialLabel: dict.FAQ.sidebarCta
+                  trialLabel: dict.FAQ.sidebarCta,
+                  priceLabel: langName === 'zh' ? '查看价格' : 'View pricing'
                 }}
                 consultSource="faq_detail_sidebar_consult"
                 trialSource="faq_detail_sidebar_trial"

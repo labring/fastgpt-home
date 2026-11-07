@@ -83,7 +83,8 @@ export async function GuideArticleRoute({
           title: dict.FAQ.sidebarTitle,
           description: dict.FAQ.sidebarDescription,
           consultLabel: dict.Home.navCta.consult,
-          trialLabel: dict.FAQ.sidebarCta
+          trialLabel: dict.FAQ.sidebarCta,
+          priceLabel: locale === 'zh' ? '查看价格' : 'View pricing'
         }}
       />
       <Footer t={dict.Home.footer} locale={locale} />

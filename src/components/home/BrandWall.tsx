@@ -109,6 +109,7 @@ export default function BrandWall({ t }: { t: BrandWallT }) {
             {logos.map((logo) => (
               <div
                 key={logo}
+                aria-hidden="true"
                 className="flex items-center justify-center bg-white rounded-md h-[40px] md:h-[52px] lg:h-[64px]"
               >
                 <Image

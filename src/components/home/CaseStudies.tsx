@@ -271,7 +271,7 @@ function CaseCard({
         {data.image ? (
           <Image
             src={data.image}
-            alt=""
+            alt={`${data.title}案例展示`}
             fill
             sizes="(min-width: 768px) 650px, 82vw"
             className="block select-none object-contain md:object-cover"

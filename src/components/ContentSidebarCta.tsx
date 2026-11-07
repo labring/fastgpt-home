@@ -78,18 +78,6 @@ export default function ContentSidebarCta({
         </p>
         <div className="grid gap-3">
           <a
-            href={priceUrl}
-            aria-label={`${copy.priceLabel}: ${copy.title}`}
-            className={secondaryLinkClassName}
-          >
-            <span>{copy.priceLabel}</span>
-            <ArrowUpRight
-              className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-              strokeWidth={1.8}
-              aria-hidden="true"
-            />
-          </a>
-          <a
             href={contactUrl}
             data-consultation-trigger="true"
             {...rybbitClickAttrs(
@@ -122,6 +110,18 @@ export default function ContentSidebarCta({
               aria-hidden="true"
             />
           </CloudEntryLink>
+          <a
+            href={priceUrl}
+            aria-label={`${copy.priceLabel}: ${copy.title}`}
+            className={secondaryLinkClassName}
+          >
+            <span>{copy.priceLabel}</span>
+            <ArrowUpRight
+              className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+              strokeWidth={1.8}
+              aria-hidden="true"
+            />
+          </a>
         </div>
       </div>
     </section>

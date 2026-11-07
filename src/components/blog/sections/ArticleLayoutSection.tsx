@@ -27,6 +27,7 @@ type ArticleLayoutSectionProps = {
     description: string;
     consultLabel: string;
     trialLabel: string;
+    priceLabel: string;
   };
 };
 
@@ -73,6 +74,7 @@ export default function ArticleLayoutSection({
               description={cta.description}
               consultLabel={cta.consultLabel}
               trialLabel={cta.trialLabel}
+              priceLabel={cta.priceLabel}
               category={post.category}
               slug={post.slug}
             />

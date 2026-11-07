@@ -139,7 +139,7 @@
       "githubStars": "Github Stars",
       "followUs": "Follow us",
       "brand": "FastGPT",
-      "title": "Enterprise AI Productivity Engine",
+      "title": "Enterprise AI Knowledge Base & RAG Agent Platform",
       "subtitle": "Build secure, controllable enterprise-grade AI Agents",
       "trial": "Get Started",
       "consult": "Contact Sales"
@@ -475,7 +475,10 @@
             "learning": "Learning Center",
             "cases": "Case Studies",
             "tech": "Technical Center",
-            "industry": "Industry"
+            "industry": "Industry",
+            "price": "Pricing",
+            "wiki": "Wiki",
+            "troubleshoot": "Troubleshooting"
           }
         },
         "partner": {

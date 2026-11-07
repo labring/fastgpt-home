@@ -89,8 +89,20 @@ for (const variant of ['cn', 'io']) {
         '{cases}': locale === 'zh' ? '/customers' : 'https://fastgpt.cn/customers',
         '{faq}': route(publishedLocale, 'faq'),
         '{tech}': route(publishedLocale, 'tech-center'),
-        '{industry}': '/industry'
+        '{industry}': '/industry',
+        '{price}': '/price',
+        '{wiki}': '/wiki',
+        '{troubleshoot}': '/troubleshoot'
       };
+      const footerLinks =
+        locale === 'zh' || locale === 'en'
+          ? [
+              ...baseline.links.slice(0, 10),
+              '{price}',
+              ...(locale === 'zh' ? ['{wiki}', '{troubleshoot}'] : []),
+              ...baseline.links.slice(10)
+            ]
+          : baseline.links;
 
       for (const police of [undefined, 'Police filing baseline']) {
         for (const registration of [undefined, 'Registration baseline']) {
@@ -118,7 +130,7 @@ for (const variant of ['cn', 'io']) {
           assert.deepEqual(
             links.map((link) => link.href),
             [
-              ...baseline.links.map(
+              ...footerLinks.map(
                 (href) =>
                   routes[href] ||
                   (variant === 'cn'

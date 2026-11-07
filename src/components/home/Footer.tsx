@@ -32,6 +32,9 @@ type FooterT = {
         cases: string;
         tech: string;
         industry: string;
+        price?: string;
+        wiki?: string;
+        troubleshoot?: string;
       };
     };
     partner: { title: string };
@@ -106,7 +109,16 @@ function buildColumns(t: FooterT['columns'], locale?: string): Column[] {
           label: t.links.items.industry,
           href: getReviewLocalePath(guideLocale, '/industry'),
           external: false
-        }
+        },
+        ...(t.links.items.price
+          ? [{ label: t.links.items.price, href: '/price', external: false }]
+          : []),
+        ...(normalizedLocale === 'zh' && t.links.items.wiki
+          ? [{ label: t.links.items.wiki, href: '/wiki', external: false }]
+          : []),
+        ...(normalizedLocale === 'zh' && t.links.items.troubleshoot
+          ? [{ label: t.links.items.troubleshoot, href: '/troubleshoot', external: false }]
+          : [])
       ]
     },
     {

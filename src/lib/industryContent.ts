@@ -34,6 +34,7 @@ export type IndustryArticle = {
   dateModified: string;
   sourcePath: string;
   publishedLocales: IndustryLocale[];
+  indexable: boolean;
 };
 
 function fail(sourcePath: string, message: string): never {
@@ -189,7 +190,11 @@ function readLocaleArticles(locale: IndustryLocale): IndustryArticle[] {
         datePublished,
         dateModified,
         sourcePath,
-        publishedLocales: []
+        publishedLocales: [],
+        indexable:
+          metaDescription.length >= 50 &&
+          metaDescription.trim() !== title.trim() &&
+          !(metaDescription.trim().startsWith(title.trim()) && metaDescription.includes('涵盖'))
       };
     });
 }
@@ -308,7 +313,7 @@ export function getIndustryPath(slug?: string) {
 export function getIndustrySitemapEntries(variant: SiteVariant = currentSiteVariant) {
   if (variant === 'preview') return [];
   return industryArticles
-    .filter((article) => getLocaleOwner(article.locale) === variant)
+    .filter((article) => article.indexable && getLocaleOwner(article.locale) === variant)
     .map((article) => ({
       slug: article.slug,
       locale: article.locale,

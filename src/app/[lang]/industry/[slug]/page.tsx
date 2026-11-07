@@ -38,6 +38,6 @@ export async function generateMetadata({
   const locale = resolveIndustryLocale(lang);
   const article = locale ? getIndustryArticle(locale, slug) : undefined;
   return article
-    ? getIndustryArticleMetadata(article, false)
+    ? getIndustryArticleMetadata(article)
     : { title: 'Industry article not found', robots: { index: false, follow: false } };
 }

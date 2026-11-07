@@ -57,7 +57,7 @@ export function getIndustryAlternates(
 
 export function getIndustryArticleMetadata(
   article: IndustryArticle,
-  indexable = !isPreviewSite
+  indexable = article.indexable && !isPreviewSite
 ): Metadata {
   const canonical = getIndustryCanonicalUrl(article);
   return {

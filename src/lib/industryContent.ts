@@ -19,6 +19,15 @@ export type IndustryLocale = (typeof INDUSTRY_LOCALES)[number];
 const INDUSTRY_ROOT = path.join(process.cwd(), 'src', 'content', 'industry');
 const SLUG_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const DATE_PATTERN = /^\d{4}-\d{2}-\d{2}$/;
+const MIN_BODY_CHARS = 600;
+
+export type IndustryQualityIssue =
+  | 'empty-body'
+  | 'short-body'
+  | 'placeholder-body'
+  | 'broken-section'
+  | 'cross-industry'
+  | 'topic-mismatch';
 
 export type IndustryArticle = {
   locale: IndustryLocale;
@@ -34,6 +43,7 @@ export type IndustryArticle = {
   dateModified: string;
   sourcePath: string;
   publishedLocales: IndustryLocale[];
+  qualityIssues: IndustryQualityIssue[];
   indexable: boolean;
 };
 
@@ -194,7 +204,8 @@ function readLocaleArticles(locale: IndustryLocale): IndustryArticle[] {
         indexable:
           metaDescription.length >= 50 &&
           metaDescription.trim() !== title.trim() &&
-          !(metaDescription.trim().startsWith(title.trim()) && metaDescription.includes('涵盖'))
+          !(metaDescription.trim().startsWith(title.trim()) && metaDescription.includes('涵盖')) &&
+          !((slug.startsWith('finance-') || slug.startsWith('finace-')) && title.includes('电网设备'))
       };
     });
 }

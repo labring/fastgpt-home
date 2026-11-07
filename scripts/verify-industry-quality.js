@@ -10,8 +10,8 @@ const sitemap = fs.readFileSync(path.join(root, 'src/app/sitemap.ts'), 'utf8');
 
 assert.match(
   loader,
-  /indexable:[\s\S]*metaDescription\.trim\(\) !== title\.trim\(\)[\s\S]*metaDescription\.includes\('涵盖'\)/,
-  'industry pages must carry the duplicate-meta quality gate'
+  /indexable:[\s\S]*metaDescription\.trim\(\) !== title\.trim\(\)[\s\S]*metaDescription\.includes\('涵盖'\)[\s\S]*title\.includes\('电网设备'\)/,
+  'industry pages must carry the duplicate-meta and cross-area quality gates'
 );
 assert.match(
   loader,
@@ -21,6 +21,7 @@ assert.match(
 
 let total = 0;
 let duplicate = 0;
+let crossArea = 0;
 for (const locale of fs.readdirSync(contentRoot)) {
   const localeRoot = path.join(contentRoot, locale);
   if (!fs.statSync(localeRoot).isDirectory()) continue;
@@ -37,14 +38,22 @@ for (const locale of fs.readdirSync(contentRoot)) {
         (description.startsWith(title) && description.includes('涵盖')))
     )
       duplicate += 1;
+    if (
+      file.match(/^(?:finance|finace)-/) &&
+      title?.includes('电网设备')
+    )
+      crossArea += 1;
   }
 }
 
 assert.equal(total, 87368, 'industry content count changed');
 assert.equal(duplicate, 45896, 'duplicate-meta inventory changed; review the quality gate');
+assert.equal(crossArea, 70, 'cross-area inventory changed; review the quality gate');
 assert(
   sitemap.includes('getIndustrySitemapEntries'),
   'sitemap must consume the filtered industry projection'
 );
 
-console.log(`Industry quality verification passed: ${duplicate}/${total} duplicate-meta pages noindexed`);
+console.log(
+  `Industry quality verification passed: ${duplicate} duplicate-meta and ${crossArea} cross-area pages noindexed`
+);

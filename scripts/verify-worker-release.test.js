@@ -358,7 +358,7 @@ test('Wrangler serves HTML and TXT as Static Assets without attaching them as Wo
     fs.writeFileSync(path.join(fixture.outDir, 'faq/example.html'), '<h1>FAQ fixture</h1>');
     fs.writeFileSync(path.join(fixture.outDir, 'faq/example.txt'), 'FAQ text fixture');
     fs.writeFileSync(
-      path.join(fixture.outDir, 'sitemap-shards', 'sitemap-content-000-aabbccdd.xml'),
+      path.join(fixture.outDir, 'sitemap-shards', 'sitemap-content-000.xml'),
       '<urlset></urlset>'
     );
     fs.writeFileSync(
@@ -404,7 +404,7 @@ test('Wrangler serves HTML and TXT as Static Assets without attaching them as Wo
     }
     for (const [route, cacheControl] of [
       ['/sitemap.xml', 'public, max-age=3600, stale-while-revalidate=86400'],
-      ['/sitemap-shards/sitemap-content-000-aabbccdd.xml', 'public, max-age=31536000, immutable']
+      ['/sitemap-shards/sitemap-content-000.xml', 'public, max-age=31536000, immutable']
     ]) {
       const response = await fetch(`http://127.0.0.1:${port}${route}`, {
         redirect: 'manual',

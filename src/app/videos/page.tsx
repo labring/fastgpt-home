@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import LearningCenterPage from '@/components/learning-center/LearningCenterPage';
 import { getDictionary } from '@/lib/i18n';
+import { getAlternates } from '@/lib/seo';
 import { currentSiteVariant, getOwnedLocaleUrl } from '@/lib/siteRouting';
 
 const title = 'FastGPT 学习中心';
@@ -13,7 +14,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title,
     description,
-    alternates: { canonical },
+    alternates: getAlternates('zh', '/videos', ['zh']),
     openGraph: { title, description, type: 'website', url: canonical }
   };
 }

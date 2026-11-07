@@ -4,6 +4,7 @@ import Footer from '@/components/home/Footer';
 import HomeThemeFix from '@/components/home/HomeThemeFix';
 import { getDictionary } from '@/lib/i18n';
 import { getSiteBaseUrl } from '@/lib/siteRouting';
+import { getAlternates } from '@/lib/seo';
 import { absoluteUrl } from '@customers/lib/site-url';
 import { buildSiteJsonLd } from '@customers/lib/site-json-ld';
 import '@customers/styles/customers.css';
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
   title: 'FastGPT 客户案例中心',
   description:
     '探索企业级 AI 解决方案。依托 FastGPT 强大的工作流引擎与知识库检索能力，我们为不同业务场景抽象出标准化、开箱即用的解决方案模板，助力企业快速落地。',
-  alternates: { canonical: absoluteUrl('/') },
+  alternates: getAlternates('zh', '/customers', ['zh']),
   robots: { index: true, follow: true },
   openGraph: {
     title: 'FastGPT 客户案例中心',

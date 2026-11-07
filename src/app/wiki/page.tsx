@@ -6,6 +6,7 @@ import { JsonLdScript } from '@/components/JsonLd';
 import TechArticlePage from '@/components/tech-center/TechArticlePage';
 import type { TechArticle } from '@/lib/tech-center-content';
 import { getDictionary } from '@/lib/i18n';
+import { getAlternates } from '@/lib/seo';
 import { currentSiteVariant, getOwnedLocaleUrl } from '@/lib/siteRouting';
 
 const WIKI_TITLE = 'FastGPT 百科';
@@ -113,7 +114,7 @@ export function generateMetadata(): Metadata {
       currentSiteVariant === 'preview'
         ? { index: false, follow: false }
         : { index: true, follow: true },
-    alternates: { canonical: WIKI_URL },
+    alternates: getAlternates('zh', '/wiki', ['zh']),
     openGraph: {
       title: WIKI_TITLE,
       description: WIKI_DESCRIPTION,

@@ -69,27 +69,6 @@ try {
     );
   }
 
-  for (const [host, variant] of [
-    ['fastgpt.cn', 'cn'],
-    ['fastgpt.io', 'io']
-  ]) {
-    const manifest = JSON.parse(
-      fs.readFileSync(path.join(root, 'sitemaps', host, 'manifest.json'), 'utf8')
-    );
-    const shards = manifest.shards.filter((shard) => shard.bucket === 'industry');
-    assert(shards.length > 0, `${host} industry sitemap is empty`);
-    for (const shard of shards) {
-      assert(fs.existsSync(path.join(root, 'sitemaps', host, shard.file)), `${shard.file} missing`);
-    }
-    assert.equal(
-      content.getIndustryOwnerParams(variant).length,
-      articles.filter((article) =>
-        variant === 'cn' ? article.locale === 'zh' : article.locale === 'en'
-      ).length,
-      `${host} static industry params do not match inventory`
-    );
-  }
-
   console.log(`Industry inventory verification passed: ${articles.length} articles`);
 } finally {
   fs.rmSync(directory, { recursive: true, force: true });

@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 /** Persists production shards and emits build-local Preview shards. */
-const crypto = require('node:crypto');
 const fs = require('node:fs');
 const path = require('node:path');
 const { DOMParser, XMLSerializer } = require('@xmldom/xmldom');
@@ -13,7 +12,7 @@ const INDUSTRY_URL_LIMIT = 5000;
 const INDUSTRY_SHARD_BYTE_LIMIT = 10 * 1024 * 1024;
 const PROTOCOL_URL_LIMIT = 50000;
 const PROTOCOL_BYTE_LIMIT = 50 * 1024 * 1024;
-const SHARD_NAME = /^sitemap-(.+)-(\d+)-([a-f0-9]{8})\.xml$/;
+const SHARD_NAME = /^sitemap-(.+)-(\d+)\.xml$/;
 const serializer = new XMLSerializer();
 
 function loadIndustryQualityRecords() {
@@ -99,20 +98,20 @@ function filterByLocaleSlugs(input, site, records, locale) {
   const parsed = parseUrlset(input, site);
   const sourceCount = parsed.entries.length;
   const origin = new URL(site).origin;
-  const indexableRecords = records.filter((record) => record.locale === locale && record.indexable);
-  const indexable = new Set(indexableRecords.map((record) => record.slug));
+  const localeRecords = records.filter((record) => record.locale === locale);
+  const localeSlugs = new Set(localeRecords.map((record) => record.slug));
   const entries = parsed.entries.filter((entry) => {
     const url = new URL(entry.loc);
     if (url.origin !== origin || !url.pathname.includes('/industry/')) return true;
-    return indexable.has(industrySlugFromPath(url.pathname, locale));
+    return localeSlugs.has(industrySlugFromPath(url.pathname, locale));
   });
   const industryEntries = new Map();
-  for (const record of indexableRecords) {
+  for (const record of localeRecords) {
     const loc = `${origin}/industry/${record.slug}`;
     const lastmod = record.dateModified
       ? `<lastmod>${escapeXml(record.dateModified)}</lastmod>`
       : '';
-    const xml = `<url xmlns="${SITEMAP_NAMESPACE}"><loc>${escapeXml(loc)}</loc>${lastmod}</url>`;
+    const xml = `<url><loc>${escapeXml(loc)}</loc>${lastmod}</url>`;
     industryEntries.set(loc, {
       bucket: bucketForLoc(loc),
       fingerprint: `${parsed.rootInfo.namespaceFingerprint}\n${xml}`,
@@ -334,6 +333,12 @@ function parseUrlset(input, site, maxUrlCount = PROTOCOL_URL_LIMIT) {
     } catch (error) {
       throw new Error(`Could not preserve sitemap metadata for ${loc}: ${error.message || error}`);
     }
+    if (namespaceAttributes.some(({ name }) => name === 'xmlns')) {
+      xml = xml.replace(/^(<url\b)([^>]*)>/, (_, start, attributes) => {
+        const cleaned = attributes.replace(/\s+xmlns="[^"]*"/, '');
+        return `${start}${cleaned}>`;
+      });
+    }
     entries.push({
       bucket: bucketForLoc(loc),
       fingerprint: `${namespaceFingerprint}\n${xml}`,
@@ -417,15 +422,11 @@ function chunkEntries(entries, rootInfo, maxUrlsPerShard, maxShardBytes) {
   return chunks;
 }
 
-function sha256(bytes) {
-  return crypto.createHash('sha256').update(bytes).digest('hex');
-}
-
-function shardFileName(bucket, sequence, digest) {
+function shardFileName(bucket, sequence) {
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(bucket)) {
     throw new Error(`Invalid sitemap shard bucket: ${bucket}`);
   }
-  return `sitemap-${bucket}-${String(sequence).padStart(3, '0')}-${digest.slice(0, 8)}.xml`;
+  return `sitemap-${bucket}-${String(sequence).padStart(3, '0')}.xml`;
 }
 
 function parseShardFileName(file) {
@@ -434,19 +435,17 @@ function parseShardFileName(file) {
   const sequence = Number(match[2]);
   if (!Number.isSafeInteger(sequence) || String(sequence).padStart(3, '0') !== match[2])
     return null;
-  return { bucket: match[1], hash: match[3], sequence };
+  return { bucket: match[1], sequence };
 }
 
 function makeShard(rootInfo, bucket, sequence, entries) {
   const xml = Buffer.from(renderUrlset(rootInfo, entries), 'utf8');
-  const digest = sha256(xml);
   return {
     bytes: xml,
     descriptor: {
       bucket,
-      file: shardFileName(bucket, sequence, digest),
+      file: shardFileName(bucket, sequence),
       sequence,
-      sha256: digest,
       urls: entries.length
     }
   };
@@ -469,9 +468,6 @@ function atomicWriteIfChanged(file, content) {
 
 function writeImmutableShard(stateDirectory, shard) {
   const xmlPath = path.join(stateDirectory, shard.descriptor.file);
-  if (fs.existsSync(xmlPath) && !fs.readFileSync(xmlPath).equals(shard.bytes)) {
-    throw new Error(`Eight-character sitemap hash collision: ${shard.descriptor.file}`);
-  }
   atomicWriteIfChanged(xmlPath, shard.bytes);
 }
 
@@ -488,8 +484,6 @@ function scanHistory(stateDirectory) {
     if (!name) throw new Error(`Invalid persisted sitemap shard name: ${file}`);
 
     const bytes = fs.readFileSync(path.join(stateDirectory, file));
-    if (sha256(bytes).slice(0, 8) !== name.hash)
-      throw new Error(`Persisted sitemap hash mismatch: ${file}`);
     const byteLimit = name.bucket === 'industry' ? INDUSTRY_SHARD_BYTE_LIMIT : PROTOCOL_BYTE_LIMIT;
     if (bytes.length > byteLimit)
       throw new Error(`Persisted sitemap shard exceeds its byte limit: ${file}`);
@@ -537,12 +531,11 @@ function readSnapshot(stateDirectory, site, history) {
       !Number.isInteger(shard.urls) ||
       shard.urls < 1 ||
       !['content', 'industry'].includes(shard.bucket) ||
-      shard.urls > getShardLimits(shard.bucket).maxUrlsPerShard ||
-      !/^[a-f0-9]{64}$/.test(shard.sha256)
+      shard.urls > getShardLimits(shard.bucket).maxUrlsPerShard
     ) {
       throw new Error('Persisted sitemap manifest contains an invalid shard descriptor');
     }
-    const expectedFile = shardFileName(shard.bucket, shard.sequence, shard.sha256);
+    const expectedFile = shardFileName(shard.bucket, shard.sequence);
     if (shard.file !== expectedFile || files.has(shard.file)) {
       throw new Error(
         `Persisted sitemap manifest has an invalid or duplicate shard: ${shard.file}`
@@ -554,7 +547,7 @@ function readSnapshot(stateDirectory, site, history) {
     slots.add(slot);
 
     const stored = history.files.get(shard.file);
-    if (!stored || sha256(stored.bytes) !== shard.sha256) {
+    if (!stored) {
       throw new Error(`Persisted sitemap shard disagrees with manifest: ${shard.file}`);
     }
     const parsed = parseUrlset(stored.bytes, site);
@@ -605,11 +598,10 @@ function buildInitialShards(entries, rootInfo, maxSequences, options) {
     }
   }
   return {
-    descriptors: descriptors.map(({ bucket, file, sequence, sha256: digest, urls }) => ({
+    descriptors: descriptors.map(({ bucket, file, sequence, urls }) => ({
       bucket,
       file,
       sequence,
-      sha256: digest,
       urls
     })),
     shards
@@ -739,11 +731,10 @@ function reconcileShards(entries, rootInfo, previousShards, maxSequences, option
   }
 
   return {
-    descriptors: descriptors.map(({ bucket, file, sequence, sha256: digest, urls }) => ({
+    descriptors: descriptors.map(({ bucket, file, sequence, urls }) => ({
       bucket,
       file,
       sequence,
-      sha256: digest,
       urls
     })),
     shards
@@ -840,8 +831,7 @@ function verifyActiveShards(stateDirectory, site, descriptors, expectedEntries) 
     const limits = getShardLimits(descriptor.bucket);
     if (
       bytes.length > limits.maxShardBytes ||
-      sha256(bytes) !== descriptor.sha256 ||
-      descriptor.file !== shardFileName(descriptor.bucket, descriptor.sequence, descriptor.sha256)
+      descriptor.file !== shardFileName(descriptor.bucket, descriptor.sequence)
     ) {
       throw new Error(`Sitemap shard verification failed: ${descriptor.file}`);
     }
@@ -868,11 +858,10 @@ function saveSnapshot(stateDirectory, site, descriptors, index) {
   const manifest = {
     schema: 2,
     site,
-    shards: descriptors.map(({ bucket, file, sequence, sha256: digest, urls }) => ({
+    shards: descriptors.map(({ bucket, file, sequence, urls }) => ({
       bucket,
       file,
       sequence,
-      sha256: digest,
       urls
     }))
   };

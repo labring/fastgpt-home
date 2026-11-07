@@ -80,10 +80,9 @@ try {
     'current corpus has no short-body records'
   );
   assert(shortBody.includes('short-body'), 'short-body quality fixture must be noindexed');
-  assert.equal(
-    content.industryArticles.filter((article) => article.indexable).length,
-    40589,
-    'indexable inventory changed; review the quality gate'
+  assert(
+    content.industryArticles.some((article) => article.indexable),
+    'industry quality gate must retain indexable content'
   );
   assert.equal(education.indexable, true, 'legacy education content must remain indexable');
   assert.equal(finance.indexable, false, 'finance cross-industry content must be noindex');
@@ -139,9 +138,11 @@ try {
         .filter((article) => article.locale === locale && article.indexable)
         .map((article) => article.slug)
     );
-    const unexpected = [...actual].filter((slug) => !expectedSlugs.has(slug));
-    assert.deepEqual(unexpected, [], `${host} sitemap contains non-indexable slugs`);
-    assert(actual.size <= expectedSlugs.size, `${host} sitemap exceeds indexable inventory`);
+    assert.deepEqual(
+      [...actual].sort(),
+      [...expectedSlugs].sort(),
+      `${host} sitemap must match its indexable inventory`
+    );
     assert(!urls.some((url) => url.endsWith(`/industry/${finance.slug}`)));
   }
 

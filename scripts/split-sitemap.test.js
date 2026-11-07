@@ -5,7 +5,12 @@ const os = require('node:os');
 const path = require('node:path');
 const test = require('node:test');
 
-const { parseSitemapIndex, parseUrlset, splitSitemapFile } = require('./split-sitemap');
+const {
+  filterByLocaleSlugs,
+  parseSitemapIndex,
+  parseUrlset,
+  splitSitemapFile
+} = require('./split-sitemap');
 
 const SITEMAP_NAMESPACE = 'http://www.sitemaps.org/schemas/sitemap/0.9';
 const IMAGE_NAMESPACE = 'http://www.google.com/schemas/sitemap-image/1.1';
@@ -120,6 +125,30 @@ test('persists deterministic XML shards and combines non-industry routes', (t) =
   assert.deepEqual(second.shards, first.shards);
   assert.deepEqual(fs.readFileSync(path.join(fixture.outputDirectory, 'sitemap.xml')), firstIndex);
   assertNoGzipFiles(fixture);
+});
+
+test('locale filtering fills indexable industry URLs missing from the source', () => {
+  const source = makeUrlset([
+    makeUrl(`${SITE}/`),
+    makeUrl(`${SITE}/industry/finance-a`)
+  ]);
+  const result = filterByLocaleSlugs(
+    source,
+    SITE,
+    [
+      { locale: 'en', slug: 'finance-a', indexable: true },
+      { locale: 'en', slug: 'finance-b', indexable: true }
+    ],
+    'en'
+  );
+  const industryUrls = result.entries
+    .filter(({ bucket }) => bucket === 'industry')
+    .map(({ loc }) => loc);
+
+  assert.deepEqual(industryUrls.sort(), [
+    `${SITE}/industry/finance-a`,
+    `${SITE}/industry/finance-b`
+  ]);
 });
 
 test('industry additions fill the current tail and preserve full shards', (t) => {

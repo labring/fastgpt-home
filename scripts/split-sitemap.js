@@ -97,12 +97,10 @@ function filterBySlugSet(input, site, indexable) {
 
 function filterByLocaleSlugs(input, site, records, locale) {
   const parsed = parseUrlset(input, site);
+  const sourceCount = parsed.entries.length;
   const origin = new URL(site).origin;
-  const indexable = new Set(
-    records
-      .filter((record) => record.locale === locale && record.indexable)
-      .map((record) => record.slug)
-  );
+  const indexableRecords = records.filter((record) => record.locale === locale && record.indexable);
+  const indexable = new Set(indexableRecords.map((record) => record.slug));
   const entries = parsed.entries.filter(
     (entry) => {
       const url = new URL(entry.loc);
@@ -110,7 +108,20 @@ function filterByLocaleSlugs(input, site, records, locale) {
       return indexable.has(industrySlugFromPath(url.pathname, locale));
     }
   );
-  return { entries, rootInfo: parsed.rootInfo, skipped: parsed.entries.length - entries.length };
+  const present = new Set(entries.map((entry) => entry.loc));
+  for (const record of indexableRecords) {
+    const loc = `${origin}/industry/${record.slug}`;
+    if (present.has(loc)) continue;
+    const xml = `<url><loc>${escapeXml(loc)}</loc></url>`;
+    entries.push({
+      bucket: 'industry',
+      fingerprint: `${parsed.rootInfo.namespaceFingerprint}\n${xml}`,
+      loc,
+      xml,
+      xmlBytes: Buffer.byteLength(xml)
+    });
+  }
+  return { entries, rootInfo: parsed.rootInfo, skipped: sourceCount - entries.length };
 }
 
 function industrySlugFromPath(pathname, locale) {
@@ -1049,4 +1060,10 @@ if (require.main === module) {
   }
 }
 
-module.exports = { bucketForLoc, parseSitemapIndex, parseUrlset, splitSitemapFile };
+module.exports = {
+  bucketForLoc,
+  filterByLocaleSlugs,
+  parseSitemapIndex,
+  parseUrlset,
+  splitSitemapFile
+};

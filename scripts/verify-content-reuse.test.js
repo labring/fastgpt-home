@@ -301,12 +301,8 @@ Research workflow for ${slug}. ${'Research knowledge workflow. '.repeat(30)}
   const load = read();
   const content = load('@/lib/industryContent');
   assert.equal(content.industryArticles.length, 5);
-  assert.deepEqual(
-    content.industryArticles
-      .filter((article) => !article.indexable && article.slug !== 'retail-01')
-      .map((article) => [article.slug, article.qualityIssues]),
-    []
-  );
+  assert.equal(content.getIndustrySummaries('zh').length, 3);
+  assert.equal(content.getIndustrySummaries('en').length, 2);
   assert.equal(content.getIndustryArticle('en', 'shared').dateModified, '2026-09-26');
   assert.deepEqual(content.getIndustryArticle('en', 'shared').keywords, ['useful', 'keywords']);
   assert.deepEqual(content.getIndustryArticle('zh', 'only').publishedLocales, ['zh']);
@@ -326,6 +322,11 @@ Research workflow for ${slug}. ${'Research knowledge workflow. '.repeat(30)}
   assert.equal(content.getIndustrySitemapEntries('cn').length, 3);
   assert.equal(content.getIndustrySitemapEntries('io').length, 2);
   const seo = load('@/lib/industrySeo');
+  assert.equal(
+    seo.getIndustryArticleMetadata(content.getIndustryArticle('zh', 'shared')).robots.index,
+    true,
+    'industry metadata must not use a quality threshold'
+  );
   assert.equal(
     seo.getIndustryCanonicalUrl(content.getIndustryArticle('zh', 'shared')),
     'https://fastgpt.cn/industry/shared'

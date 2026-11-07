@@ -5,7 +5,8 @@ const os = require('node:os');
 const path = require('node:path');
 
 const root = path.resolve(__dirname, '..');
-const out = path.join(fs.mkdtempSync(path.join(os.tmpdir(), 'industry-quality-')), 'industry.cjs');
+const directory = fs.mkdtempSync(path.join(os.tmpdir(), 'industry-inventory-'));
+const output = path.join(directory, 'industry.cjs');
 
 function transpile(file) {
   const ts = require('typescript');
@@ -19,7 +20,6 @@ function transpile(file) {
 }
 
 function loadIndustry() {
-  const directory = path.dirname(out);
   const files = [
     ['industryContent.ts', 'industry.cjs'],
     ['industryListing.ts', 'industryListing.js'],
@@ -28,9 +28,7 @@ function loadIndustry() {
   ];
   for (const [source, target] of files) {
     let code = transpile(path.join(root, 'src/lib', source));
-    if (source === 'industryContent.ts') {
-      code = code.replace('require("server-only");', '');
-    }
+    if (source === 'industryContent.ts') code = code.replace('require("server-only");', '');
     code = code
       .replaceAll('@/lib/industryListing', './industryListing')
       .replaceAll('@/lib/siteRouting', './siteRouting')
@@ -42,117 +40,57 @@ function loadIndustry() {
     path.join(directory, 'site-routing.json'),
     JSON.stringify(require('../src/config/site-routing.json'))
   );
-  return require(out);
+  return require(output);
 }
 
 try {
   const content = loadIndustry();
-  const bySlug = new Map(content.industryArticles.map((article) => [article.slug, article]));
-  const byIdentity = new Map(
-    content.industryArticles.map((article) => [`${article.locale}|${article.slug}`, article])
-  );
-  const education = bySlug.get('education-d001-c001-f002');
-  const finance = bySlug.get('finance-d012-c110-f015');
-  const brokenRetail = byIdentity.get('zh|retail-d002-c003-f005');
-  const indexableRetail = content.industryArticles.filter(
-    (article) => article.area === 'retail' && article.indexable
-  );
-  const placeholder = content.industryArticles.find((article) =>
-    article.qualityIssues.includes('placeholder-body')
-  );
-  const longLegacy = content.industryArticles.find((article) => article.slug === finance.slug);
-  const topic = content.industryArticles.find((article) =>
-    article.qualityIssues.includes('topic-mismatch')
-  );
-  const shortBody = content.getIndustryQualityIssues(
-    'retail',
-    'Retail customer order lookup',
-    '## Configuration\n\nShort retail content.',
-    'A distinct retail description for orders and customers.',
-    { article_section: 'Retail' }
-  );
+  const articles = content.industryArticles;
+  const identities = new Set(articles.map(({ locale, slug }) => `${locale}|${slug}`));
 
-  assert.equal(content.industryArticles.length, 87368, 'industry content count changed');
-  assert.equal(
-    content.industryArticles.filter((article) => article.qualityIssues.includes('short-body'))
-      .length,
-    0,
-    'current corpus has no short-body records'
+  assert.equal(identities.size, articles.length, 'industry identities must be unique');
+  assert.deepEqual(
+    [...new Set(articles.map(({ locale }) => locale))].sort(),
+    ['en', 'zh'],
+    'industry locales'
   );
-  assert(shortBody.includes('short-body'), 'short-body quality fixture must be noindexed');
-  assert(
-    content.industryArticles.some((article) => article.indexable),
-    'industry quality gate must retain indexable content'
-  );
-  assert.equal(education.indexable, true, 'legacy education content must remain indexable');
-  assert.equal(finance.indexable, false, 'finance cross-industry content must be noindex');
-  assert(finance.qualityIssues.includes('cross-industry'));
-  assert(finance.qualityIssues.includes('duplicate-meta'));
-  assert.equal(brokenRetail.qualityIssues.includes('broken-section'), false);
-  assert(indexableRetail.length > 0, 'retail pages must retain their valid indexable subset');
-  for (const article of [placeholder, longLegacy, topic]) {
-    assert(article, 'missing quality fixture');
-    assert.equal(article.indexable, false, `expected noindex for ${article.slug}`);
+  for (const locale of ['zh', 'en']) {
+    const localeArticles = articles.filter((article) => article.locale === locale);
+    assert(localeArticles.length > 0, `${locale} industry inventory is empty`);
+    assert.equal(
+      content.getIndustrySummaries(locale).length,
+      localeArticles.length,
+      `${locale} summaries must include every article`
+    );
+    assert.equal(
+      content.getIndustrySitemapEntries(locale === 'zh' ? 'cn' : 'io').length,
+      localeArticles.length,
+      `${locale} sitemap entries must include every article`
+    );
   }
-  assert.equal(
-    content.getIndustrySitemapEntries('cn').some((entry) => entry.slug === finance.slug),
-    false
-  );
-  assert.equal(
-    content.getIndustryOwnerParams('cn').some((entry) => entry.slug === finance.slug),
-    true
-  );
-  assert.equal(
-    content.getIndustrySummaries('zh').some((entry) => entry.slug === finance.slug),
-    false
-  );
-  assert.equal(content.getIndustryArticle('zh', finance.slug).indexable, false);
-  for (const [host, locale] of [
-    ['fastgpt.cn', 'zh'],
-    ['fastgpt.io', 'en']
+
+  for (const [host, variant] of [
+    ['fastgpt.cn', 'cn'],
+    ['fastgpt.io', 'io']
   ]) {
     const manifest = JSON.parse(
-      fs.readFileSync(path.join(root, 'sitemaps', host, 'manifest.json'))
+      fs.readFileSync(path.join(root, 'sitemaps', host, 'manifest.json'), 'utf8')
     );
-    const industryShards = manifest.shards.filter((shard) => shard.bucket === 'industry');
-    const entries = industryShards.flatMap((shard) =>
-      [
-        ...fs
-          .readFileSync(path.join(root, 'sitemaps', host, shard.file), 'utf8')
-          .matchAll(/<url\b[^>]*>([\s\S]*?)<\/url>/g)
-      ].map((match) => {
-        const url = match[1].match(/<loc>(.*?)<\/loc>/)?.[1];
-        const lastmod = match[1].match(/<lastmod>(.*?)<\/lastmod>/)?.[1];
-        return { url, lastmod };
-      })
-    );
-    const actual = new Set(entries.map(({ url }) => new URL(url).pathname.split('/').at(-1)));
-    assert(
-      [...actual].every(Boolean),
-      `${host} contains a sitemap URL without an industry slug`
-    );
-    const expectedBySlug = new Map(
-      content.industryArticles
-        .filter((article) => article.locale === locale && article.indexable)
-        .map((article) => [article.slug, article.dateModified])
-    );
-    assert.deepEqual(
-      [...actual].sort(),
-      [...expectedBySlug.keys()].sort(),
-      `${host} sitemap must match its indexable inventory`
-    );
-    for (const { url, lastmod } of entries) {
-      const slug = new URL(url).pathname.split('/').at(-1);
-      assert.equal(lastmod, expectedBySlug.get(slug), `${host} lastmod mismatch for ${slug}`);
+    const shards = manifest.shards.filter((shard) => shard.bucket === 'industry');
+    assert(shards.length > 0, `${host} industry sitemap is empty`);
+    for (const shard of shards) {
+      assert(fs.existsSync(path.join(root, 'sitemaps', host, shard.file)), `${shard.file} missing`);
     }
-    assert(!entries.some(({ url }) => url.endsWith(`/industry/${finance.slug}`)));
+    assert.equal(
+      content.getIndustryOwnerParams(variant).length,
+      articles.filter((article) =>
+        variant === 'cn' ? article.locale === 'zh' : article.locale === 'en'
+      ).length,
+      `${host} static industry params do not match inventory`
+    );
   }
 
-  console.log(
-    `Industry quality verification passed: ${
-      content.industryArticles.filter((article) => article.indexable).length
-    }/${content.industryArticles.length} indexable`
-  );
+  console.log(`Industry inventory verification passed: ${articles.length} articles`);
 } finally {
-  fs.rmSync(path.dirname(out), { recursive: true, force: true });
+  fs.rmSync(directory, { recursive: true, force: true });
 }

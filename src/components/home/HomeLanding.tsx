@@ -4,7 +4,6 @@ import HomeHeroSection from '@/components/home/HomeHeroSection';
 import ProductHighlights from '@/components/home/ProductHighlights';
 import Solutions from '@/components/home/Solutions';
 import CaseStudies from '@/components/home/CaseStudies';
-import HomeGuides from '@/components/home/HomeGuides';
 import BrandWall from '@/components/home/BrandWall';
 import Services from '@/components/home/Services';
 import FAQ from '@/components/home/FAQ';
@@ -34,7 +33,6 @@ export default function HomeLanding({
         <Solutions t={t.solutions} locale={locale} />
         <CaseStudies t={t.cases} locale={locale} />
         <BrandWall t={t.brandWall} />
-        <HomeGuides locale={locale} />
         <Services t={t.services} />
         <FAQ t={t.faq} />
         <CTA t={t.cta} locale={locale} />

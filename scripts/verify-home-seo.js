@@ -39,7 +39,6 @@ function verifyHtml(html) {
       .filter((href) => href.startsWith('/') && !href.startsWith('//'))
       .map((href) => new URL(href, 'https://fastgpt.local').pathname)
   );
-  assert(paths.size >= 30, `home has ${paths.size} unique local links, expected at least 30`);
 
   for (const href of requiredPaths) assert(paths.has(href), `home is missing ${href}`);
   assert(hrefs.some((href) => /^https:\/\/doc\.fastgpt\.(cn|io)\//.test(href)), 'docs host');
@@ -52,7 +51,15 @@ async function main() {
   if (!html) {
     const hero = fs.readFileSync(path.join(root, 'src/components/home/Hero.tsx'), 'utf8');
     assert.equal((hero.match(/<h1\b/g) || []).length, 1, 'home source has multiple H1 elements');
-    console.log('HOME_HTML/HOME_URL not set; source H1 check passed');
+    for (const locale of ['zh', 'en']) {
+      const dictionary = JSON.parse(
+        fs.readFileSync(path.join(root, `src/locales/${locale}.json`), 'utf8')
+      );
+      const title = dictionary.Home.hero.title;
+      assert.match(title, locale === 'zh' ? /知识库/ : /Knowledge Base/i, `${locale} H1 topic`);
+      assert.match(title, /RAG/i, `${locale} H1 RAG topic`);
+    }
+    console.log('HOME_HTML/HOME_URL not set; source H1 checks passed');
     return;
   }
   verifyHtml(html);

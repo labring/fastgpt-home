@@ -81,10 +81,8 @@ function filterIndustrySitemap(input, site, options = {}) {
   const indexableSlugs = options.indexableIndustrySlugs;
   if (indexableSlugs) return filterBySlugSet(input, site, indexableSlugs);
   const records = loadIndustryQualityRecords();
-  const indexable = new Set(
-    records.filter((record) => record.indexable).map((record) => record.slug)
-  );
-  return filterBySlugSet(input, site, indexable);
+  const locale = new URL(site).hostname === 'fastgpt.cn' ? 'zh' : 'en';
+  return filterByLocaleSlugs(input, site, records, locale);
 }
 
 function filterBySlugSet(input, site, indexable) {
@@ -95,6 +93,29 @@ function filterBySlugSet(input, site, indexable) {
       indexable.has(new URL(entry.loc).pathname.split('/').at(-1))
   );
   return { entries, rootInfo: parsed.rootInfo, skipped: parsed.entries.length - entries.length };
+}
+
+function filterByLocaleSlugs(input, site, records, locale) {
+  const parsed = parseUrlset(input, site);
+  const origin = new URL(site).origin;
+  const indexable = new Set(
+    records
+      .filter((record) => record.locale === locale && record.indexable)
+      .map((record) => record.slug)
+  );
+  const entries = parsed.entries.filter(
+    (entry) => {
+      const url = new URL(entry.loc);
+      if (url.origin !== origin || !url.pathname.includes('/industry/')) return true;
+      return indexable.has(industrySlugFromPath(url.pathname, locale));
+    }
+  );
+  return { entries, rootInfo: parsed.rootInfo, skipped: parsed.entries.length - entries.length };
+}
+
+function industrySlugFromPath(pathname, locale) {
+  const marker = '/industry/';
+  return pathname.slice(pathname.indexOf(marker) + marker.length);
 }
 
 function normalizeSite(value) {
@@ -974,7 +995,11 @@ function splitSitemapFile(outputDirectory, options = {}) {
   removeLegacyShards(output);
 
   const sourcePath = path.join(output, 'sitemap.xml');
-  const source = filterIndustrySitemap(fs.readFileSync(sourcePath), site, options);
+  const sourceXml = fs.readFileSync(sourcePath);
+  if (/<sitemapindex\b/.test(sourceXml.toString('utf8'))) {
+    throw new Error('Production sitemap input must be a complete urlset, not a sharded index');
+  }
+  const source = filterIndustrySitemap(sourceXml, site, options);
   const history = scanHistory(stateDirectory);
   const previousShards = readSnapshot(stateDirectory, site, history);
   const reconciled = reconcileShards(

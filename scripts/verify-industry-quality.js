@@ -48,9 +48,15 @@ function loadIndustry() {
 try {
   const content = loadIndustry();
   const bySlug = new Map(content.industryArticles.map((article) => [article.slug, article]));
+  const byIdentity = new Map(
+    content.industryArticles.map((article) => [`${article.locale}|${article.slug}`, article])
+  );
   const education = bySlug.get('education-d001-c001-f002');
   const finance = bySlug.get('finance-d012-c110-f015');
-  const brokenRetail = bySlug.get('retail-d002-c003-f005');
+  const brokenRetail = byIdentity.get('zh|retail-d002-c003-f005');
+  const indexableRetail = content.industryArticles.filter(
+    (article) => article.area === 'retail' && article.indexable
+  );
   const placeholder = content.industryArticles.find((article) =>
     article.qualityIssues.includes('placeholder-body')
   );
@@ -76,14 +82,15 @@ try {
   assert(shortBody.includes('short-body'), 'short-body quality fixture must be noindexed');
   assert.equal(
     content.industryArticles.filter((article) => article.indexable).length,
-    30956,
+    40589,
     'indexable inventory changed; review the quality gate'
   );
   assert.equal(education.indexable, true, 'legacy education content must remain indexable');
   assert.equal(finance.indexable, false, 'finance cross-industry content must be noindex');
   assert(finance.qualityIssues.includes('cross-industry'));
   assert(finance.qualityIssues.includes('duplicate-meta'));
-  assert.equal(brokenRetail.qualityIssues.includes('broken-section'), true);
+  assert.equal(brokenRetail.qualityIssues.includes('broken-section'), false);
+  assert(indexableRetail.length > 0, 'retail pages must retain their valid indexable subset');
   for (const article of [placeholder, longLegacy, topic]) {
     assert(article, 'missing quality fixture');
     assert.equal(article.indexable, false, `expected noindex for ${article.slug}`);
@@ -101,16 +108,13 @@ try {
     false
   );
   assert.equal(content.getIndustryArticle('zh', finance.slug).indexable, false);
-  const cnManifest = JSON.parse(
-    fs.readFileSync(path.join(root, 'sitemaps/fastgpt.cn/manifest.json'))
-  );
-  const ioManifest = JSON.parse(
-    fs.readFileSync(path.join(root, 'sitemaps/fastgpt.io/manifest.json'))
-  );
-  for (const [host, manifest, expected] of [
-    ['fastgpt.cn', cnManifest, 10201],
-    ['fastgpt.io', ioManifest, 15639]
+  for (const [host, locale] of [
+    ['fastgpt.cn', 'zh'],
+    ['fastgpt.io', 'en']
   ]) {
+    const manifest = JSON.parse(
+      fs.readFileSync(path.join(root, 'sitemaps', host, 'manifest.json'))
+    );
     const industryShards = manifest.shards.filter((shard) => shard.bucket === 'industry');
     const urls = industryShards.flatMap((shard) =>
       [
@@ -119,7 +123,25 @@ try {
           .matchAll(/<loc>(.*?)<\/loc>/g)
       ].map((match) => match[1])
     );
-    assert.equal(urls.length, expected, `${host} industry sitemap inventory changed`);
+    const actual = new Set(
+      urls.map((url) => {
+        const pathname = new URL(url).pathname;
+        const marker = '/industry/';
+        return pathname.slice(pathname.indexOf(marker) + marker.length);
+      })
+    );
+    assert(
+      [...actual].every(Boolean),
+      `${host} contains a sitemap URL without an industry slug`
+    );
+    const expectedSlugs = new Set(
+      content.industryArticles
+        .filter((article) => article.locale === locale && article.indexable)
+        .map((article) => article.slug)
+    );
+    const unexpected = [...actual].filter((slug) => !expectedSlugs.has(slug));
+    assert.deepEqual(unexpected, [], `${host} sitemap contains non-indexable slugs`);
+    assert(actual.size <= expectedSlugs.size, `${host} sitemap exceeds indexable inventory`);
     assert(!urls.some((url) => url.endsWith(`/industry/${finance.slug}`)));
   }
 

@@ -162,11 +162,8 @@ export function getIndustryQualityIssues(
   if (/仅作参考；请以目标 FastGPT 发布版本与部署文档核验。/.test(body)) {
     issues.push('placeholder-body');
   }
-  // W16 education records intentionally omit article_section; only the value steal is corrupted.
-  if (
-    metadata.article_section?.includes('is_part_of:') ||
-    (!metadata.article_section && area === 'retail')
-  ) {
+  // article_section is optional reader navigation data; only the value steal is corrupted.
+  if (metadata.article_section?.includes('is_part_of:')) {
     issues.push('broken-section');
   }
   if (area === 'finance' && FINANCE_CROSS_INDUSTRY_TERMS.test(text)) issues.push('cross-industry');

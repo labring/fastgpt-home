@@ -11,31 +11,31 @@
     },
     {
       "bucket": "industry",
-      "file": "sitemap-industry-000-96165e45.xml",
+      "file": "sitemap-industry-000-7d10d942.xml",
       "sequence": 0,
-      "sha256": "96165e45aba846ae152d0ee552f95ce78861f904671d91bf05542400d46f672b",
+      "sha256": "7d10d9427ca086ee5d544b08635421926949078df0babfdc935b7af596fe1c44",
       "urls": 5000
     },
     {
       "bucket": "industry",
-      "file": "sitemap-industry-001-0e8067f2.xml",
+      "file": "sitemap-industry-001-70a7d3b1.xml",
       "sequence": 1,
-      "sha256": "0e8067f2d8935ef05ae85da5eb95ba791c4edeab3dd8b8e89879245a560c0af4",
+      "sha256": "70a7d3b174b327b404d57bc4aea483ad25139f9b223766f089aa2e535233b4f9",
       "urls": 5000
     },
     {
       "bucket": "industry",
-      "file": "sitemap-industry-002-a6d39bac.xml",
+      "file": "sitemap-industry-002-1518af0d.xml",
       "sequence": 2,
-      "sha256": "a6d39bace1d3d53c720d42d101c76ef1311d7204e2e66c7ebabc3614fa29c885",
+      "sha256": "1518af0d3d270da75c07f67ffa4ac2ac02f561587d899ca2420480a178aa4551",
       "urls": 5000
     },
     {
       "bucket": "industry",
-      "file": "sitemap-industry-003-224b19a3.xml",
+      "file": "sitemap-industry-003-cb69a75c.xml",
       "sequence": 3,
-      "sha256": "224b19a306c75caa8d48d66a0aae2e57c54669df030ff906c6ecb8a2e18442d4",
-      "urls": 639
+      "sha256": "cb69a75c61392ce8badb7eb12b89ef2ffdd152488b379f2cd04757d5d30833f9",
+      "urls": 568
     }
   ]
 }

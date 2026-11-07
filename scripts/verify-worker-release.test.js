@@ -258,6 +258,14 @@ test('Worker redirects legacy docs subpaths and preserves their query strings', 
       .replace('export default', 'globalThis.worker =');
     const context = { Headers, Map, Request, Response, URL };
     require('node:vm').runInNewContext(workerSource, context);
+    for (const pathname of ['/pricing', '/pricing/']) {
+      const response = await context.worker.fetch(
+        new Request(`https://fastgpt.io${pathname}?utm=keep`),
+        { ASSETS: { fetch: async () => new Response('asset') } }
+      );
+      assert.equal(response.status, 301);
+      assert.equal(response.headers.get('location'), 'https://fastgpt.io/price?utm=keep');
+    }
     for (const [pathname, expected] of [
       ['/docs', 'https://doc.fastgpt.io/docs/introduction?utm=keep'],
       ['/docs/', 'https://doc.fastgpt.io/docs/introduction?utm=keep'],

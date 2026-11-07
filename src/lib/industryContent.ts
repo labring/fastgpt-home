@@ -121,7 +121,7 @@ function resolveApplicationArea(
   slug: string,
   sourcePath: string
 ): IndustryArea {
-  const historicalArea = /^(?:finance|fin)-/.test(slug)
+  const historicalArea = /^(?:finance|finace)-/.test(slug)
     ? 'finance'
     : slug.startsWith('biomed-')
     ? 'biomed'

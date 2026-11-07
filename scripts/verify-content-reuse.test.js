@@ -510,7 +510,7 @@ test('Industry classifies historical batches and explicitly authored research by
         undefined,
         'Pharmaceutical equity research'
       ),
-      'fin-report.md': industrySource('fin-report'),
+      'finace-report.md': industrySource('finace-report'),
       'biomed-rd.md': industrySource('biomed-rd'),
       'university.md': industrySource('university', 'research')
     }
@@ -520,7 +520,7 @@ test('Industry classifies historical batches and explicitly authored research by
     content.industryArticles.map(({ slug, area }) => [slug, area]),
     [
       ['biomed-rd', 'biomed'],
-      ['fin-report', 'finance'],
+      ['finace-report', 'finance'],
       ['finance-pharma', 'finance'],
       ['university', 'research']
     ]
@@ -529,7 +529,7 @@ test('Industry classifies historical batches and explicitly authored research by
     ['new-workflow', undefined, /missing application_area/],
     ['new-workflow', 'unknown', /unknown application_area/],
     ['finance-pharma', 'biomed', /conflicting application_area/],
-    ['fin-report', 'research', /conflicting application_area/],
+    ['finace-report', 'research', /conflicting application_area/],
     ['biomed-rd', 'finance', /conflicting application_area/]
   ]) {
     assert.throws(
@@ -582,7 +582,8 @@ test('Industry summaries expose the complete locale collection with stable pages
     research: 1,
     manufacturing: 0,
     technology: 0,
-    retail: 0
+    retail: 0,
+    education: 0
   });
   assert.deepEqual(getIndustryAreaCounts(en), {
     all: 2,
@@ -591,7 +592,8 @@ test('Industry summaries expose the complete locale collection with stable pages
     research: 0,
     manufacturing: 0,
     technology: 0,
-    retail: 0
+    retail: 0,
+    education: 0
   });
   assert.deepEqual(Object.keys(zh[0]).sort(), ['area', 'description', 'href', 'slug', 'title']);
   assert.equal(zh[0].href, '/industry/biomed-rd');

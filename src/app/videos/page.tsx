@@ -6,11 +6,10 @@ import { videoSchemaMetadata } from '@/components/learning-center/videoSchemaMet
 import { JsonLdScript } from '@/components/JsonLd';
 import { getDictionary } from '@/lib/i18n';
 import { getAlternates } from '@/lib/seo';
+import seoPageCopy from '@/lib/seoPageCopy.json';
 import { currentSiteVariant, getOwnedLocaleUrl } from '@/lib/siteRouting';
 
-const title = 'FastGPT 视频教程 - AI 知识库、RAG 与工作流搭建学习中心';
-const description =
-  '通过 FastGPT 视频教程，系统学习 AI 知识库、RAG、Agent 与工作流搭建，从入门操作到私有化部署和运维实践，帮助团队快速掌握产品能力。';
+const { title, description } = seoPageCopy.videos;
 
 export async function generateMetadata(): Promise<Metadata> {
   const canonical = getOwnedLocaleUrl('zh', '/videos');

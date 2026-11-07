@@ -1,24 +1,57 @@
 #!/usr/bin/env node
 const assert = require('node:assert/strict');
-const fs = require('node:fs');
 const path = require('node:path');
 
 const root = path.resolve(__dirname, '..');
-const pages = [
-  ['src/app/customers/layout.tsx', 'FastGPT 客户案例 - 企业 AI 知识库与智能体落地实践'],
-  ['src/app/videos/page.tsx', 'FastGPT 视频教程 - AI 知识库、RAG 与工作流搭建学习中心'],
-  ['src/app/wiki/page.tsx', 'FastGPT 百科 - AI 智能体、RAG、知识库概念详解']
-];
+const copy = require(path.join(root, 'src/lib/seoPageCopy.json'));
+const pages = Object.values(copy);
+const titles = new Set(pages.map(({ title }) => title));
 
-for (const [relativePath, title] of pages) {
-  const source = fs.readFileSync(path.join(root, relativePath), 'utf8');
-  assert(source.includes(title), `${relativePath} is missing the approved SEO title`);
+assert.equal(pages.length, 3, 'expected three landing page metadata entries');
+assert.equal(titles.size, pages.length, 'landing page titles must be unique');
+for (const page of pages) {
+  assert(page.title.length >= 20 && page.title.length <= 60, `invalid title length: ${page.title}`);
+  assert(
+    page.description.length >= 50 && page.description.length <= 120,
+    `invalid description length: ${page.description}`
+  );
 }
 
-const videoSource = fs.readFileSync(path.join(root, 'src/app/videos/page.tsx'), 'utf8');
-assert(
-  (videoSource.match(/AI 知识库、RAG、Agent 与工作流搭建/g) || []).length >= 1,
-  'video page description lost its topic coverage'
+const read = (relativePath) => require('node:fs').readFileSync(path.join(root, relativePath), 'utf8');
+const customers = read('src/app/customers/layout.tsx');
+const videos = read('src/app/videos/page.tsx');
+const wiki = read('src/app/wiki/page.tsx');
+for (const source of [customers, videos, wiki]) {
+  assert.match(
+    source,
+    /title(?:\s*:\s*title|\s*:\s*WIKI_TITLE|,)/,
+    'metadata title must use shared copy'
+  );
+  assert.match(
+    source,
+    /description(?:\s*:\s*description|\s*:\s*WIKI_DESCRIPTION|,)/,
+    'metadata description must use shared copy'
+  );
+}
+assert.match(
+  customers,
+  /openGraph:\s*\{[\s\S]*?title,[\s\S]*?description,[\s\S]*?\}[\s\S]*?twitter:\s*\{[\s\S]*?title,[\s\S]*?description,/,
+  'customers social metadata must use shared copy'
+);
+assert.match(
+  videos,
+  /openGraph:\s*\{\s*title,\s*description,/,
+  'videos OpenGraph metadata must use shared copy'
+);
+assert.match(
+  wiki,
+  /openGraph:\s*\{[\s\S]*?title:\s*WIKI_TITLE,[\s\S]*?description:\s*WIKI_DESCRIPTION/,
+  'wiki OpenGraph metadata must use shared copy'
+);
+assert.match(
+  wiki,
+  /twitter:\s*\{[\s\S]*?title:\s*WIKI_TITLE,[\s\S]*?description:\s*WIKI_DESCRIPTION/,
+  'wiki Twitter metadata must use shared copy'
 );
 
-console.log('SEO title verification passed');
+console.log('SEO landing page metadata verification passed');

@@ -5,21 +5,24 @@ import HomeThemeFix from '@/components/home/HomeThemeFix';
 import { getDictionary } from '@/lib/i18n';
 import { getSiteBaseUrl } from '@/lib/siteRouting';
 import { getAlternates } from '@/lib/seo';
+import seoPageCopy from '@/lib/seoPageCopy.json';
 import { absoluteUrl } from '@customers/lib/site-url';
 import { buildSiteJsonLd } from '@customers/lib/site-json-ld';
 import '@customers/styles/customers.css';
 
+const pageCopy = seoPageCopy.customers;
+const title = pageCopy.title;
+const description = pageCopy.description;
+
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteBaseUrl('cn')),
-  title: 'FastGPT 客户案例 - 企业 AI 知识库与智能体落地实践',
-  description:
-    '浏览 FastGPT 企业客户案例，了解 AI 知识库、RAG 与智能体在金融、制造、医疗、教育等场景的落地实践，以及可复用的行业解决方案与实施路径。',
+  title,
+  description,
   alternates: getAlternates('zh', '/customers', ['zh']),
   robots: { index: true, follow: true },
   openGraph: {
-    title: 'FastGPT 客户案例 - 企业 AI 知识库与智能体落地实践',
-    description:
-      '探索企业级 AI 解决方案，了解行业场景、落地案例、免费 POC 验证路径与生产级交付方式。',
+    title,
+    description,
     url: absoluteUrl('/'),
     siteName: 'FastGPT 客户案例中心',
     locale: 'zh_CN',
@@ -30,9 +33,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'FastGPT 客户案例 - 企业 AI 知识库与智能体落地实践',
-    description:
-      '探索企业级 AI 解决方案，了解行业场景、落地案例、免费 POC 验证路径与生产级交付方式。',
+    title,
+    description,
     images: [absoluteUrl('/og-image.png')]
   }
 };

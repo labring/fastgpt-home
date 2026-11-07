@@ -5,9 +5,9 @@ import { getDictionary } from '@/lib/i18n';
 import { getAlternates } from '@/lib/seo';
 import { currentSiteVariant, getOwnedLocaleUrl } from '@/lib/siteRouting';
 
-const title = 'FastGPT 学习中心';
+const title = 'FastGPT 视频教程 - AI 知识库、RAG 与工作流搭建学习中心';
 const description =
-  '从入门到精通，系统化学习 FastGPT 的使用技巧、部署方案和最佳实践。所有教程均由官方团队精心制作。';
+  '通过 FastGPT 视频教程，系统学习 AI 知识库、RAG、Agent 与工作流搭建，从入门操作到私有化部署和运维实践，帮助团队快速掌握产品能力。';
 
 export async function generateMetadata(): Promise<Metadata> {
   const canonical = getOwnedLocaleUrl('zh', '/videos');

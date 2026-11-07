@@ -11,13 +11,13 @@ import '@customers/styles/customers.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteBaseUrl('cn')),
-  title: 'FastGPT 客户案例中心',
+  title: 'FastGPT 客户案例 - 企业 AI 知识库与智能体落地实践',
   description:
-    '探索企业级 AI 解决方案。依托 FastGPT 强大的工作流引擎与知识库检索能力，我们为不同业务场景抽象出标准化、开箱即用的解决方案模板，助力企业快速落地。',
+    '浏览 FastGPT 企业客户案例，了解 AI 知识库、RAG 与智能体在金融、制造、医疗、教育等场景的落地实践，以及可复用的行业解决方案与实施路径。',
   alternates: getAlternates('zh', '/customers', ['zh']),
   robots: { index: true, follow: true },
   openGraph: {
-    title: 'FastGPT 客户案例中心',
+    title: 'FastGPT 客户案例 - 企业 AI 知识库与智能体落地实践',
     description:
       '探索企业级 AI 解决方案，了解行业场景、落地案例、免费 POC 验证路径与生产级交付方式。',
     url: absoluteUrl('/'),
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'FastGPT 客户案例中心',
+    title: 'FastGPT 客户案例 - 企业 AI 知识库与智能体落地实践',
     description:
       '探索企业级 AI 解决方案，了解行业场景、落地案例、免费 POC 验证路径与生产级交付方式。',
     images: [absoluteUrl('/og-image.png')]

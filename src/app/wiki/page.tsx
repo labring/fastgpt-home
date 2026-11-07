@@ -9,9 +9,9 @@ import { getDictionary } from '@/lib/i18n';
 import { getAlternates } from '@/lib/seo';
 import { currentSiteVariant, getOwnedLocaleUrl } from '@/lib/siteRouting';
 
-const WIKI_TITLE = 'FastGPT 百科';
+const WIKI_TITLE = 'FastGPT 百科 - AI 智能体、RAG、知识库概念详解';
 const WIKI_DESCRIPTION =
-  'FastGPT 是一款开源的 AI Agent（智能体）构建平台，提供知识库问答、可视化工作流编排、Agent 编排、工具调用与技能扩展等能力。';
+  'FastGPT 百科介绍 AI 智能体、RAG 检索增强生成与知识库的核心概念，并说明 FastGPT 如何通过可视化工作流、工具调用和权限治理，帮助企业构建可落地的 AI 应用。';
 const WIKI_DATE_MODIFIED = '2026-09-21';
 const WIKI_URL = getOwnedLocaleUrl('zh', '/wiki');
 const WIKI_SOURCE_PATH = path.join(process.cwd(), 'src/content/wiki/fastgpt.md');

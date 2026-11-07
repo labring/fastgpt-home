@@ -216,6 +216,7 @@ function verifyRobotsFile() {
   assert(/User-Agent:\s*\*/i.test(robots), 'robots.txt must define a wildcard crawler rule');
   assert(robots.includes('Allow: /'), 'robots.txt must allow crawling');
   assert(!robots.includes('Disallow: /'), 'robots.txt must allow production metadata discovery');
+  assert(!/^Host:/im.test(robots), 'robots.txt must not emit the obsolete Host directive');
   assert.equal(
     robots.includes('Sitemap:'),
     variant !== 'preview',

@@ -323,8 +323,8 @@ Research workflow for ${slug}. ${'Research knowledge workflow. '.repeat(30)}
     { slug: 'retail-01' },
     { slug: 'shared' }
   ]);
-  assert.equal(content.getIndustrySitemapEntries('cn').length, 2);
-  assert.equal(content.getIndustrySitemapEntries('io').length, 1);
+  assert.equal(content.getIndustrySitemapEntries('cn').length, 3);
+  assert.equal(content.getIndustrySitemapEntries('io').length, 2);
   const seo = load('@/lib/industrySeo');
   assert.equal(
     seo.getIndustryCanonicalUrl(content.getIndustryArticle('zh', 'shared')),

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import LearningCenterPage from '@/components/learning-center/LearningCenterPage';
-import { staticVideos } from '@/components/learning-center/LearningCenterPage';
+import { staticVideos } from '@/components/learning-center/videos';
 import { videoSchemaMetadata } from '@/components/learning-center/videoSchemaMetadata';
 import { JsonLdScript } from '@/components/JsonLd';
 import { getDictionary } from '@/lib/i18n';

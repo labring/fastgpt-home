@@ -12,13 +12,28 @@ const metadata = fs.readFileSync(
   path.join(root, 'src/components/learning-center/videoSchemaMetadata.ts'),
   'utf8'
 );
-const videos = fs.readFileSync(
+const learningCenter = fs.readFileSync(
   path.join(root, 'src/components/learning-center/LearningCenterPage.tsx'),
+  'utf8'
+);
+const videos = fs.readFileSync(
+  path.join(root, 'src/components/learning-center/videos.ts'),
   'utf8'
 );
 
 assert(source.includes("'@type': 'VideoObject'"), 'videos page must emit VideoObject schema');
 assert(source.includes("'@type': 'ItemList'"), 'videos page must emit an ItemList');
+assert.match(
+  source,
+  /import \{ staticVideos \} from '@\/components\/learning-center\/videos';/,
+  'videos page must import static data from the server-safe module'
+);
+assert.doesNotMatch(
+  source,
+  /import \{ staticVideos \} from '@\/components\/learning-center\/LearningCenterPage';/,
+  'videos page must not import static data from the client component'
+);
+assert.doesNotMatch(videos, /^['"]use client['"];?$/m, 'video data module must stay server-safe');
 const records = metadata.match(/^  BV[a-zA-Z0-9]+: \{/gm) || [];
 assert.equal(records.length, 45, `expected 45 video metadata records, found ${records.length}`);
 assert.equal(

@@ -24,6 +24,13 @@ type CasesT = {
   items: LocaleCase[];
 };
 
+const caseHrefs: Record<string, string> = {
+  cetc: '/customers/finance-insurance-wealth-management/securities-ai-platform-fastgpt',
+  cms: '/customers/manufacturing-production-processing/isap-it-ops-robot-solution',
+  snow: '/customers/e-commerce-retail-trade/retail-ai-dispatch-platform',
+  zhaozhao: '/customers/education-training-research-study/ai-intelligent-customer-service'
+};
+
 const iconByCaseKey: Record<string, MetricIcon[]> = {
   cetc: ['zap', 'zap', 'medal'],
   cms: ['arrow', 'medal', 'zap'],
@@ -337,7 +344,7 @@ function CaseCard({
         </div>
 
         <a
-          href={contactUrl}
+          href={caseHrefs[data.key] || contactUrl}
           data-consultation-trigger="true"
           {...rybbitClickAttrs(RYBBIT_EVENTS.businessConsultClick, 'home_case_study_consult', {
             case: data.key

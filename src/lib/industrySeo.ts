@@ -32,7 +32,7 @@ export function getIndustryHubCanonicalUrl(locale: IndustryLocale) {
 
 export function getIndustryHubMetadata(
   locale: IndustryLocale,
-  { indexable = !isPreviewSite }: { indexable?: boolean } = {}
+  { robotsIndex = !isPreviewSite }: { robotsIndex?: boolean } = {}
 ): Metadata {
   const copy = industryHubCopy[locale];
   const canonical = getIndustryHubCanonicalUrl(locale);
@@ -40,7 +40,7 @@ export function getIndustryHubMetadata(
     title: copy.title,
     description: copy.description,
     alternates: getAlternates(locale, getIndustryPath(), INDUSTRY_LOCALES),
-    robots: indexable ? { index: true, follow: true } : { index: false, follow: false },
+    robots: robotsIndex ? { index: true, follow: true } : { index: false, follow: false },
     openGraph: {
       type: 'website',
       url: canonical,
@@ -58,7 +58,7 @@ export function getIndustryAlternates(
 
 export function getIndustryArticleMetadata(
   article: IndustryArticle,
-  indexable = !isPreviewSite
+  robotsIndex = !isPreviewSite
 ): Metadata {
   const canonical = getIndustryCanonicalUrl(article);
   return {
@@ -66,7 +66,7 @@ export function getIndustryArticleMetadata(
     description: article.metaDescription,
     ...(article.keywords.length ? { keywords: article.keywords } : {}),
     alternates: getIndustryAlternates(article),
-    robots: indexable ? { index: true, follow: true } : { index: false, follow: true },
+    robots: robotsIndex ? { index: true, follow: true } : { index: false, follow: true },
     openGraph: {
       type: 'article',
       url: canonical,

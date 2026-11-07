@@ -124,6 +124,14 @@ test('persists deterministic XML shards and combines non-industry routes', (t) =
   const second = runSplit(fixture, source);
   assert.deepEqual(second.shards, first.shards);
   assert.deepEqual(fs.readFileSync(path.join(fixture.outputDirectory, 'sitemap.xml')), firstIndex);
+  const outputShardFiles = fs.readdirSync(
+    path.join(fixture.outputDirectory, 'sitemap-shards', 'fastgpt.io')
+  );
+  assert.deepEqual(
+    outputShardFiles.sort(),
+    second.shards.map(({ file }) => file).sort(),
+    'only manifest-referenced shards may be published'
+  );
   assertNoGzipFiles(fixture);
 });
 
@@ -202,8 +210,17 @@ test('industry additions fill the current tail and preserve full shards', (t) =>
   assert.equal(fs.existsSync(path.join(fixture.stateDirectory, openFile)), true);
   assert.equal(
     fs.existsSync(path.join(fixture.outputDirectory, 'sitemap-shards/fastgpt.io', openFile)),
-    true
+    false,
+    'superseded shards stay in state but are not published'
   );
+  for (const shard of nextIndustry) {
+    assert.equal(
+      fs.existsSync(
+        path.join(fixture.outputDirectory, 'sitemap-shards/fastgpt.io', shard.file)
+      ),
+      true
+    );
+  }
 
   const finalSource = makeUrlset([
     makeUrl(`${SITE}/industry`),

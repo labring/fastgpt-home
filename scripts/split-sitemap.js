@@ -884,13 +884,11 @@ function saveSnapshot(stateDirectory, site, descriptors, index) {
   atomicWriteIfChanged(path.join(stateDirectory, 'sitemap.xml'), indexBytes);
 }
 
-function copyShardsToOutput(stateDirectory, outputDirectory, history, host) {
+function copyShardsToOutput(stateDirectory, outputDirectory, descriptors, host) {
   const shardDirectory = path.join(outputDirectory, 'sitemap-shards', host);
   fs.rmSync(shardDirectory, { recursive: true, force: true });
   fs.mkdirSync(shardDirectory, { recursive: true });
-  // shortcut: retain old XML hashes indefinitely; add pruning if repo/export growth needs a cap.
-  for (const shard of history.files.values()) {
-    if (!['content', 'industry'].includes(shard.bucket)) continue;
+  for (const shard of descriptors) {
     const source = path.join(stateDirectory, shard.file);
     fs.copyFileSync(source, path.join(shardDirectory, shard.file));
   }
@@ -1038,8 +1036,7 @@ function splitSitemapFile(outputDirectory, options = {}) {
     throw new Error('Generated sitemap index references do not match the persisted shard set');
   }
 
-  const currentHistory = scanHistory(stateDirectory);
-  copyShardsToOutput(stateDirectory, output, currentHistory, host);
+  copyShardsToOutput(stateDirectory, output, reconciled.descriptors, host);
   const indexBytes = Buffer.from(index, 'utf8');
   saveSnapshot(stateDirectory, site, reconciled.descriptors, index);
   atomicWriteIfChanged(path.join(output, 'sitemap.xml'), indexBytes);

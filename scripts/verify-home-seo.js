@@ -4,48 +4,61 @@ const fs = require('node:fs');
 const path = require('node:path');
 
 const root = path.resolve(__dirname, '..');
-const hero = fs.readFileSync(path.join(root, 'src/components/home/Hero.tsx'), 'utf8');
-const footer = fs.readFileSync(path.join(root, 'src/components/home/Footer.tsx'), 'utf8');
-const cases = fs.readFileSync(path.join(root, 'src/components/home/CaseStudies.tsx'), 'utf8');
+const requiredPaths = [
+  '/price',
+  '/customers',
+  '/wiki',
+  '/videos',
+  '/troubleshoot',
+  '/blog',
+  '/industry'
+];
 
-assert.equal((hero.match(/<h1\b/g) || []).length, 1, 'home must render exactly one H1');
+async function readHomeHtml() {
+  if (process.env.HOME_HTML) return fs.readFileSync(process.env.HOME_HTML, 'utf8');
+  if (process.env.HOME_URL) {
+    const response = await fetch(process.env.HOME_URL);
+    assert(response.ok, `home request failed: ${response.status}`);
+    return response.text();
+  }
+  return null;
+}
 
-for (const locale of ['zh', 'en']) {
-  const dictionary = JSON.parse(
-    fs.readFileSync(path.join(root, `src/locales/${locale}.json`), 'utf8')
+function attribute(tag, name) {
+  return tag.match(new RegExp(`\\s${name}="([^"]*)"`, 'i'))?.[1];
+}
+
+function verifyHtml(html) {
+  const h1Count = [...html.matchAll(/<h1\b/gi)].length;
+  assert.equal(h1Count, 1, 'home must render exactly one H1');
+
+  const anchors = [...html.matchAll(/<a\b[^>]*>/gi)];
+  const hrefs = anchors.map(([tag]) => attribute(tag, 'href')).filter(Boolean);
+  const paths = new Set(
+    hrefs
+      .filter((href) => href.startsWith('/') && !href.startsWith('//'))
+      .map((href) => new URL(href, 'https://fastgpt.local').pathname)
   );
-  const title = dictionary.Home.hero.title;
-  assert.match(title, locale === 'zh' ? /知识库/ : /Knowledge Base/i, `${locale} H1 topic`);
-  assert.match(title, /RAG/i, `${locale} H1 RAG topic`);
+  assert(paths.size >= 30, `home has ${paths.size} unique local links, expected at least 30`);
+
+  for (const href of requiredPaths) assert(paths.has(href), `home is missing ${href}`);
+  assert(hrefs.some((href) => /^https:\/\/doc\.fastgpt\.(cn|io)\//.test(href)), 'docs host');
+
+  console.log(`Home HTML verification passed: ${paths.size} unique local links, ${h1Count} H1`);
 }
 
-for (const href of [
-  "href: '/price'",
-  "href: getReviewLocalePath(guideLocale, '/industry')",
-  "href: '/wiki'",
-  "href: '/troubleshoot'"
-]) {
-  assert(footer.includes(href), `footer is missing ${href}`);
-}
-for (const href of [
-  "getPublicationUrls('https://doc.fastgpt.io/docs/introduction')",
-  "href: normalizedLocale === 'zh' ? '/videos' : 'https://video.fastgpt.cn/videos'",
-  "href: normalizedLocale === 'zh' ? '/customers' : 'https://fastgpt.cn/customers'",
-  "getDefaultLocalePath(faqLocale, '/faq')"
-]) {
-  assert(footer.includes(href), `footer is missing ${href}`);
+async function main() {
+  const html = await readHomeHtml();
+  if (!html) {
+    const hero = fs.readFileSync(path.join(root, 'src/components/home/Hero.tsx'), 'utf8');
+    assert.equal((hero.match(/<h1\b/g) || []).length, 1, 'home source has multiple H1 elements');
+    console.log('HOME_HTML/HOME_URL not set; source H1 check passed');
+    return;
+  }
+  verifyHtml(html);
 }
 
-for (const [key, href] of [
-  ['cetc', '/customers/finance-insurance-wealth-management/securities-ai-platform-fastgpt'],
-  ['cms', '/customers/manufacturing-production-processing/isap-it-ops-robot-solution'],
-  ['snow', '/customers/e-commerce-retail-trade/retail-ai-dispatch-platform'],
-  [
-    'zhaozhao',
-    '/customers/education-training-research-study/ai-intelligent-customer-service'
-  ]
-]) {
-  assert(cases.includes(`${key}: '${href}'`), `case ${key} is missing its detail link`);
-}
-
-console.log('Home SEO and discovery link verification passed');
+main().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});

@@ -61,7 +61,4 @@ const nextConfig = {
   })
 };
 
-module.exports =
-  process.env.NODE_ENV === 'development'
-    ? nextConfig
-    : withContentCollections(nextConfig);
+module.exports = withContentCollections(nextConfig);

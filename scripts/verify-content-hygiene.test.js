@@ -928,6 +928,26 @@ test('HTML CLI accepts published version labels and rejects adjacent editorial w
   );
 });
 
+test('HTML CLI does not treat business revision copy as an editorial label', () => {
+  withFixture(
+    {
+      'index.html':
+        '<html><head><meta name="description" content="Program Revision: review context &amp; tokens"></head><body><p>Program Revision: review context &amp; tokens</p><script>{"description":"Program Revision: review context &amp; tokens"}</script></body></html>'
+    },
+    (root) => {
+      const result = spawnSync(
+        process.execPath,
+        [SCRIPT, '--mode', 'html', '--root', root, '--variant', 'io'],
+        {
+          cwd: ROOT,
+          encoding: 'utf8'
+        }
+      );
+      assert.equal(result.status, 0, result.stderr);
+    }
+  );
+});
+
 test('HTML CLI applies shared editorial labels and citation grammar to visible and payload projections', () => {
   withFixture(
     {

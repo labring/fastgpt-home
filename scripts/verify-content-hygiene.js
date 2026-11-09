@@ -196,6 +196,15 @@ const EDITORIAL_MATCHER = new RegExp(
   )})\\s*[:：]`,
   'iu'
 );
+const HTML_EDITORIAL_PATTERN = ENGLISH_EDITORIAL_LABELS.map((label) =>
+  label === 'revision' ? '(?<!Program )revision' : label
+).join('|');
+const EDITORIAL_HTML_MATCHER = new RegExp(
+  `(?<![\\p{L}\\p{N}_])(?:${HTML_EDITORIAL_PATTERN})\\s*[:：]|(?<![\\p{L}\\p{N}_])(?:${CHINESE_STANDALONE_EDITORIAL})\\s*[:：]|(?<![\\p{L}\\p{N}_])(?:${CHINESE_EDITORIAL_INLINE.join(
+    '|'
+  )})\\s*[:：]`,
+  'iu'
+);
 const EDITORIAL_PREAMBLE =
   /(?:文中产品能力与版本边界来自客户官方公开资料，核验日|(?:All )?product capabilities and version boundaries(?: referenced in this guide| in this article| are)? .*verified (?:as of |on )?\*?\*?(?:\d{4}-\d{2}-\d{2}|[A-Z][a-z]+ \d{1,2}, \d{4}))/i;
 // Bound offset metadata before entity-heavy HTML can grow heap usage disproportionately.
@@ -2529,7 +2538,7 @@ function inspectHtmlArtifact(relativePath, html, variant) {
   const visibleProjection = projectVisibleHtml(visible);
   const visiblePolicyProjection = normalizePolicyProjection(visibleProjection, true);
   for (const match of visiblePolicyProjection.text.matchAll(
-    new RegExp(EDITORIAL_MATCHER.source, 'giu')
+    new RegExp(EDITORIAL_HTML_MATCHER.source, 'giu')
   )) {
     findings.push(
       htmlFinding(
@@ -2580,7 +2589,7 @@ function inspectHtmlArtifact(relativePath, html, variant) {
   for (const payload of payloads) {
     const payloadProjection = projectPayloadHtml(payload.content, payload.offset);
     for (const match of payloadProjection.text.matchAll(
-      new RegExp(EDITORIAL_MATCHER.source, 'giu')
+      new RegExp(EDITORIAL_HTML_MATCHER.source, 'giu')
     )) {
       findings.push(
         htmlFinding(

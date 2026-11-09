@@ -1,11 +1,15 @@
 const assert = require('node:assert/strict');
-const crypto = require('node:crypto');
 const fs = require('node:fs');
 const os = require('node:os');
 const path = require('node:path');
 const test = require('node:test');
 
-const { parseSitemapIndex, parseUrlset, splitSitemapFile } = require('./split-sitemap');
+const {
+  filterByLocaleSlugs,
+  parseSitemapIndex,
+  parseUrlset,
+  splitSitemapFile
+} = require('./split-sitemap');
 
 const SITEMAP_NAMESPACE = 'http://www.sitemaps.org/schemas/sitemap/0.9';
 const IMAGE_NAMESPACE = 'http://www.google.com/schemas/sitemap-image/1.1';
@@ -41,10 +45,20 @@ function writeSource(outputDirectory, xml) {
 
 function runSplit(fixture, xml, options = {}) {
   writeSource(fixture.outputDirectory, xml);
+  const industryRecords = options.industryRecords || [
+    ...[...xml.matchAll(/<loc>([^<]+)<\/loc>/g)]
+      .map((match) => match[1])
+      .filter((url) => url.includes('/industry/'))
+      .map((url) => ({
+        locale: 'en',
+        slug: new URL(url).pathname.split('/').at(-1)
+      }))
+  ];
   return splitSitemapFile(fixture.outputDirectory, {
     variant: 'io',
     site: SITE,
     stateDirectory: fixture.stateDirectory,
+    industryRecords,
     ...options
   });
 }
@@ -98,9 +112,11 @@ test('persists deterministic XML shards and combines non-industry routes', (t) =
       ['industry', 1]
     ]
   );
-  assert.match(first.shards[0].file, /^sitemap-content-000-[a-f0-9]{8}\.xml$/);
+  assert.match(first.shards[0].file, /^sitemap-content-000\.xml$/);
 
   const firstShard = readShard(fixture, first.shards[0].file);
+  assert.match(firstShard, /^<urlset[^>]*xmlns="[^"]+"/m);
+  assert.doesNotMatch(firstShard, /<url\b[^>]*xmlns=/);
   assert.match(firstShard, /<url\b[^>]*><loc>/);
   assert.match(firstShard, /<lastmod>2026-10-28<\/lastmod>/);
   assert.match(firstShard, /image:image/);
@@ -113,7 +129,56 @@ test('persists deterministic XML shards and combines non-industry routes', (t) =
   const second = runSplit(fixture, source);
   assert.deepEqual(second.shards, first.shards);
   assert.deepEqual(fs.readFileSync(path.join(fixture.outputDirectory, 'sitemap.xml')), firstIndex);
+  const outputShardFiles = fs.readdirSync(
+    path.join(fixture.outputDirectory, 'sitemap-shards', 'fastgpt.io')
+  );
+  assert.deepEqual(
+    outputShardFiles.sort(),
+    second.shards.map(({ file }) => file).sort(),
+    'only manifest-referenced shards may be published'
+  );
   assertNoGzipFiles(fixture);
+});
+
+test('locale filtering fills industry URLs missing from the source', () => {
+  const source = makeUrlset([
+    makeUrl(`${SITE}/`),
+    makeUrl(`${SITE}/industry/finance-a`)
+  ]);
+  const result = filterByLocaleSlugs(
+    source,
+    SITE,
+    [
+      { locale: 'en', slug: 'finance-a', dateModified: '2026-10-25' },
+      { locale: 'en', slug: 'finance-b', dateModified: '2026-10-26' }
+    ],
+    'en'
+  );
+  const industryEntries = result.entries.filter(({ bucket }) => bucket === 'industry');
+  const reparsed = new Map(
+    parseUrlset(
+      makeUrlset(industryEntries.map(({ xml }) => xml)),
+      SITE
+    ).entries.map((entry) => [entry.loc, entry])
+  );
+
+  assert.deepEqual(industryEntries.map(({ loc }) => loc).sort(), [
+    `${SITE}/industry/finance-a`,
+    `${SITE}/industry/finance-b`
+  ]);
+  const filled = reparsed.get(`${SITE}/industry/finance-b`);
+  assert.equal(
+    filled.fingerprint,
+    industryEntries.find(({ loc }) => loc === filled.loc).fingerprint,
+    'filled entry must use the canonical serialized fingerprint'
+  );
+  assert.match(filled.xml, /<lastmod>2026-10-26<\/lastmod>/);
+  const existing = reparsed.get(`${SITE}/industry/finance-a`);
+  assert.match(
+    existing.xml,
+    /<lastmod>2026-10-25<\/lastmod>/,
+    'existing industry URLs must also use source modification dates'
+  );
 });
 
 test('industry additions fill the current tail and preserve full shards', (t) => {
@@ -145,13 +210,26 @@ test('industry additions fill the current tail and preserve full shards', (t) =>
     [2, 2]
   );
   assert.equal(nextIndustry[0].file, sealedFile);
-  assert.notEqual(nextIndustry[1].file, openFile);
+  assert.equal(nextIndustry[1].file, openFile);
   assert.deepEqual(fs.readFileSync(path.join(fixture.stateDirectory, sealedFile)), sealedBytes);
   assert.equal(fs.existsSync(path.join(fixture.stateDirectory, openFile)), true);
   assert.equal(
     fs.existsSync(path.join(fixture.outputDirectory, 'sitemap-shards/fastgpt.io', openFile)),
     true
   );
+  assert.match(
+    fs.readFileSync(path.join(fixture.outputDirectory, 'sitemap-shards/fastgpt.io', openFile), 'utf8'),
+    /finance-d/,
+    'stable filenames must be replaced when content changes'
+  );
+  for (const shard of nextIndustry) {
+    assert.equal(
+      fs.existsSync(
+        path.join(fixture.outputDirectory, 'sitemap-shards/fastgpt.io', shard.file)
+      ),
+      true
+    );
+  }
 
   const finalSource = makeUrlset([
     makeUrl(`${SITE}/industry`),
@@ -200,7 +278,7 @@ test('rebuilds content independently when blog or FAQ entries change', (t) => {
   const nextIndustry = next.shards.find((shard) => shard.bucket === 'industry');
 
   assert.equal(next.entryCount, first.entryCount);
-  assert.notEqual(nextContent.file, firstContent.file);
+  assert.equal(nextContent.file, firstContent.file);
   assert.equal(nextIndustry.file, firstIndustry.file);
   assert.deepEqual(
     fs.readFileSync(path.join(fixture.stateDirectory, firstIndustry.file)),
@@ -249,8 +327,7 @@ test('rebuilds schema 1 snapshots and removes legacy gzip files', (t) => {
   const fixture = createFixture(t);
   fs.mkdirSync(fixture.stateDirectory, { recursive: true });
   const oldXml = Buffer.from(makeUrlset([makeUrl(`${SITE}/faq/old`)]));
-  const digest = crypto.createHash('sha256').update(oldXml).digest('hex');
-  const oldFile = `sitemap-core-000-${digest.slice(0, 8)}.xml`;
+  const oldFile = 'sitemap-core-000.xml';
   fs.writeFileSync(path.join(fixture.stateDirectory, oldFile), oldXml);
   fs.writeFileSync(path.join(fixture.stateDirectory, `${oldFile}.gz`), 'legacy gzip');
   fs.writeFileSync(path.join(fixture.stateDirectory, 'sitemap.xml.gz'), 'legacy gzip index');
@@ -277,8 +354,7 @@ test('preserves schema 1 snapshot when exporting new shards fails', (t) => {
   const fixture = createFixture(t);
   fs.mkdirSync(fixture.stateDirectory, { recursive: true });
   const oldXml = Buffer.from(makeUrlset([makeUrl(`${SITE}/faq/old`)]));
-  const digest = crypto.createHash('sha256').update(oldXml).digest('hex');
-  const oldFile = `sitemap-core-000-${digest.slice(0, 8)}.xml`;
+  const oldFile = 'sitemap-core-000.xml';
   fs.writeFileSync(path.join(fixture.stateDirectory, oldFile), oldXml);
   fs.writeFileSync(path.join(fixture.stateDirectory, `${oldFile}.gz`), 'legacy gzip');
   fs.writeFileSync(
@@ -391,11 +467,7 @@ test('preview emits canonical mixed-origin sitemap shards without persisting the
   const actualLocs = result.shards.flatMap(({ site, host, file }) => {
     const shardPath = path.join(fixture.outputDirectory, 'sitemap-shards', host, file);
     const xml = fs.readFileSync(shardPath, 'utf8');
-    assert.match(file, /^sitemap-(content|industry)-\d+-[a-f0-9]{8}\.xml$/);
-    assert.equal(
-      crypto.createHash('sha256').update(xml).digest('hex').slice(0, 8),
-      file.match(/-([a-f0-9]{8})\.xml$/)[1]
-    );
+    assert.match(file, /^sitemap-(content|industry)-\d{3}\.xml$/);
     return parseUrlset(xml, site).entries.map((entry) => {
       assert.equal(new URL(entry.loc).hostname, host);
       return entry.loc;

@@ -48,7 +48,8 @@ export default async function BlogArticleRoute({ locale, slug }: { locale: strin
             title: copy.article.ctaTitle ?? dict.FAQ.sidebarTitle,
             description: copy.article.ctaDescription ?? dict.FAQ.sidebarDescription,
             consultLabel: dict.Home.navCta.consult,
-            trialLabel: dict.FAQ.sidebarCta
+            trialLabel: dict.FAQ.sidebarCta,
+            priceLabel: locale === 'zh' ? '查看价格' : 'View pricing'
           }}
         />
         <CTA t={dict.Home.cta} locale={locale} />

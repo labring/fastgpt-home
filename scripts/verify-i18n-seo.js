@@ -216,6 +216,7 @@ function verifyRobotsFile() {
   assert(/User-Agent:\s*\*/i.test(robots), 'robots.txt must define a wildcard crawler rule');
   assert(robots.includes('Allow: /'), 'robots.txt must allow crawling');
   assert(!robots.includes('Disallow: /'), 'robots.txt must allow production metadata discovery');
+  assert(!/^Host:/im.test(robots), 'robots.txt must not emit the obsolete Host directive');
   assert.equal(
     robots.includes('Sitemap:'),
     variant !== 'preview',
@@ -308,10 +309,18 @@ function verifyPublishedRoutes() {
 
 function verifyNotFoundFallback() {
   const html = resolveHtml('/404');
+  const robots = getTags(html, 'meta').filter((tag) => getAttribute(tag, 'name') === 'robots');
   const selector = `html${siteLocaleCodes
     .filter((locale) => locale !== defaultLocale)
     .map((locale) => `:not(:lang(${locale}))`)
     .join('')} .not-found-locale-${defaultLocale},`;
+  assert.equal(robots.length, 1, '404 page must emit exactly one robots meta tag');
+  assert.equal(getAttribute(robots[0], 'content'), 'noindex, follow', '404 robots policy');
+  assert.equal(
+    html.includes('<title>页面未找到 - FastGPT</title>'),
+    true,
+    '404 title'
+  );
   assert(html.includes(selector), `404 page is missing the ${defaultLocale} fallback selector`);
 }
 

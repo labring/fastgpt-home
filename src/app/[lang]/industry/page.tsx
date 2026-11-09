@@ -31,6 +31,6 @@ export async function generateMetadata({
   const { lang } = await params;
   const locale = resolveIndustryLocale(lang);
   return locale
-    ? getIndustryHubMetadata(locale, { indexable: false })
+    ? getIndustryHubMetadata(locale, { robotsIndex: false })
     : { title: 'Industry hub not found', robots: { index: false, follow: false } };
 }

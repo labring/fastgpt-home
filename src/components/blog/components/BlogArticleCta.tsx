@@ -2,6 +2,7 @@
 
 import CloudEntryLink from '@/components/home/CloudEntryLink';
 import { useContactUrl } from '@/components/home/hooks/useContactUrl';
+import { getDefaultLocalePath } from '@/lib/clientNavigation';
 import { RYBBIT_EVENTS, rybbitClickAttrs } from '@/lib/rybbitEvents';
 
 type BlogArticleCtaProps = {
@@ -10,6 +11,7 @@ type BlogArticleCtaProps = {
   description: string;
   consultLabel: string;
   trialLabel: string;
+  priceLabel: string;
   category: string;
   slug: string;
 };
@@ -20,10 +22,12 @@ export default function BlogArticleCta({
   description,
   consultLabel,
   trialLabel,
+  priceLabel,
   category,
   slug
 }: BlogArticleCtaProps) {
   const contactUrl = useContactUrl(locale);
+  const priceUrl = getDefaultLocalePath(locale, '/price');
   const trackingProperties = { category, slug };
 
   return (
@@ -54,6 +58,13 @@ export default function BlogArticleCta({
         >
           {trialLabel}
         </CloudEntryLink>
+        <a
+          href={priceUrl}
+          aria-label={`${priceLabel}: ${title}`}
+          className="inline-flex min-h-8 w-full items-center justify-center rounded-full bg-white px-4 py-1.5 text-xs font-medium text-ink ring-1 ring-black/10 transition-colors hover:bg-white/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ink focus-visible:ring-offset-2"
+        >
+          {priceLabel}
+        </a>
       </div>
     </div>
   );

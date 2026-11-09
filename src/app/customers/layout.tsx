@@ -4,21 +4,25 @@ import Footer from '@/components/home/Footer';
 import HomeThemeFix from '@/components/home/HomeThemeFix';
 import { getDictionary } from '@/lib/i18n';
 import { getSiteBaseUrl } from '@/lib/siteRouting';
+import { getAlternates } from '@/lib/seo';
+import seoPageCopy from '@/lib/seoPageCopy.json';
 import { absoluteUrl } from '@customers/lib/site-url';
 import { buildSiteJsonLd } from '@customers/lib/site-json-ld';
 import '@customers/styles/customers.css';
 
+const pageCopy = seoPageCopy.customers;
+const title = pageCopy.title;
+const description = pageCopy.description;
+
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteBaseUrl('cn')),
-  title: 'FastGPT 客户案例中心',
-  description:
-    '探索企业级 AI 解决方案。依托 FastGPT 强大的工作流引擎与知识库检索能力，我们为不同业务场景抽象出标准化、开箱即用的解决方案模板，助力企业快速落地。',
-  alternates: { canonical: absoluteUrl('/') },
+  title,
+  description,
+  alternates: getAlternates('zh', '/customers', ['zh']),
   robots: { index: true, follow: true },
   openGraph: {
-    title: 'FastGPT 客户案例中心',
-    description:
-      '探索企业级 AI 解决方案，了解行业场景、落地案例、免费 POC 验证路径与生产级交付方式。',
+    title,
+    description,
     url: absoluteUrl('/'),
     siteName: 'FastGPT 客户案例中心',
     locale: 'zh_CN',
@@ -29,9 +33,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'FastGPT 客户案例中心',
-    description:
-      '探索企业级 AI 解决方案，了解行业场景、落地案例、免费 POC 验证路径与生产级交付方式。',
+    title,
+    description,
     images: [absoluteUrl('/og-image.png')]
   }
 };

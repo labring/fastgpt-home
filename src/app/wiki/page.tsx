@@ -6,11 +6,11 @@ import { JsonLdScript } from '@/components/JsonLd';
 import TechArticlePage from '@/components/tech-center/TechArticlePage';
 import type { TechArticle } from '@/lib/tech-center-content';
 import { getDictionary } from '@/lib/i18n';
+import { getAlternates } from '@/lib/seo';
+import seoPageCopy from '@/lib/seoPageCopy.json';
 import { currentSiteVariant, getOwnedLocaleUrl } from '@/lib/siteRouting';
 
-const WIKI_TITLE = 'FastGPT 百科';
-const WIKI_DESCRIPTION =
-  'FastGPT 是一款开源的 AI Agent（智能体）构建平台，提供知识库问答、可视化工作流编排、Agent 编排、工具调用与技能扩展等能力。';
+const { title: WIKI_TITLE, description: WIKI_DESCRIPTION } = seoPageCopy.wiki;
 const WIKI_DATE_MODIFIED = '2026-09-21';
 const WIKI_URL = getOwnedLocaleUrl('zh', '/wiki');
 const WIKI_SOURCE_PATH = path.join(process.cwd(), 'src/content/wiki/fastgpt.md');
@@ -97,7 +97,8 @@ export default async function WikiPage() {
           title: dict.FAQ.sidebarTitle,
           description: dict.FAQ.sidebarDescription,
           consultLabel: dict.Home.navCta.consult,
-          trialLabel: dict.FAQ.sidebarCta
+          trialLabel: dict.FAQ.sidebarCta,
+          priceLabel: '查看价格'
         }}
       />
     </>
@@ -113,7 +114,7 @@ export function generateMetadata(): Metadata {
       currentSiteVariant === 'preview'
         ? { index: false, follow: false }
         : { index: true, follow: true },
-    alternates: { canonical: WIKI_URL },
+    alternates: getAlternates('zh', '/wiki', ['zh']),
     openGraph: {
       title: WIKI_TITLE,
       description: WIKI_DESCRIPTION,

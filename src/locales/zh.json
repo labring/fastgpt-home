@@ -139,7 +139,7 @@
       "githubStars": "Github Stars",
       "followUs": "关注我们",
       "brand": "FastGPT",
-      "title": "企业级AI生产力引擎",
+      "title": "企业级 AI 知识库与 RAG 智能体平台",
       "subtitle": "构建安全、可控的企业级 AI Agent",
       "trial": "立即开始",
       "consult": "商务咨询"
@@ -475,7 +475,10 @@
             "learning": "学习中心",
             "cases": "案例中心",
             "tech": "技术中心",
-            "industry": "行业"
+            "industry": "行业",
+            "price": "价格",
+            "wiki": "百科",
+            "troubleshoot": "问题排查"
           }
         },
         "partner": {

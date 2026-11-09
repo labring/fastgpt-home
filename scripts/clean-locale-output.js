@@ -62,15 +62,38 @@ function walkHtmlFiles(dir) {
   });
 }
 
+function replaceRobotsMeta(html, robotsTag) {
+  const robotsPattern = /<meta\s+name="robots"\s+content="[^"]*"\s*\/?>/gi;
+  let seen = false;
+  if (robotsPattern.test(html)) {
+    return html.replace(robotsPattern, () => {
+      if (seen) return '';
+      seen = true;
+      return robotsTag;
+    });
+  }
+  return html.replace(/<\/head>/i, `${robotsTag}</head>`);
+}
+
+function normalizeNotFoundRobots() {
+  const robotsTag = '<meta name="robots" content="noindex, follow"/>';
+  for (const fileName of ['404.html', '_not-found.html']) {
+    const filePath = path.join(outDir, fileName);
+    if (!fs.existsSync(filePath)) continue;
+    const html = fs.readFileSync(filePath, 'utf8');
+    const nextHtml = replaceRobotsMeta(html, robotsTag);
+    if (nextHtml !== html) {
+      fs.writeFileSync(filePath, nextHtml);
+    }
+  }
+}
+
 function patchPreviewRobots() {
   let patched = 0;
+  const robotsTag = '<meta name="robots" content="noindex, nofollow"/>';
   for (const filePath of walkHtmlFiles(outDir)) {
     const html = fs.readFileSync(filePath, 'utf8');
-    const robotsPattern = /<meta\s+name="robots"\s+content="[^"]*"\s*\/?>/gi;
-    const robotsTag = '<meta name="robots" content="noindex, nofollow"/>';
-    const nextHtml = robotsPattern.test(html)
-      ? html.replace(robotsPattern, robotsTag)
-      : html.replace(/<\/head>/i, `${robotsTag}</head>`);
+    const nextHtml = replaceRobotsMeta(html, robotsTag);
     if (nextHtml !== html) {
       fs.writeFileSync(filePath, nextHtml);
       patched += 1;
@@ -111,6 +134,7 @@ if (variant === 'io') {
 const { cnRedirects, ioRedirects } = buildRedirects(rootDir);
 writeNginxRedirectMap(nextDir, variant === 'cn' ? cnRedirects : new Map(), aliasAuthorityMetadata);
 removePath(path.join(outDir, '_redirects'));
+normalizeNotFoundRobots();
 
 let previewHtmlPatched = 0;
 if (variant === 'preview') {

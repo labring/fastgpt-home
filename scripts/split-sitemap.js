@@ -87,7 +87,8 @@ function filterIndustrySitemap(input, site, options = {}) {
 }
 
 function filterByLocaleSlugs(input, site, records, locale) {
-  const parsed = parseUrlset(input, site);
+  // Source is a complete aggregate; the 50,000 limit applies to each emitted shard.
+  const parsed = parseUrlset(input, site, Number.MAX_SAFE_INTEGER);
   const sourceCount = parsed.entries.length;
   const origin = new URL(site).origin;
   const localeRecords = records.filter((record) => record.locale === locale);

@@ -20,6 +20,10 @@ export async function generateMetadata(): Promise<Metadata> {
     creator: config.creator,
     icons: config.icons,
     metadataBase: new URL(baseUrl),
+    robots: {
+      index: true,
+      follow: true
+    },
     openGraph: {
       ...config.openGraph,
       locale: ogLocale,

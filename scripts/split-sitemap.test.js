@@ -323,6 +323,22 @@ test('content exceeds industry batch size while industry splits at 5,000 URLs', 
   );
 });
 
+test('accepts a complete source urlset above the per-shard limit', (t) => {
+  const fixture = createFixture(t);
+  const entries = Array.from({ length: 50001 }, (_, index) =>
+    makeUrl(`${SITE}/industry/article-${index}`)
+  );
+  const result = runSplit(fixture, makeUrlset(entries), {
+    maxIndustryUrlsPerShard: 5000
+  });
+
+  assert.equal(result.entryCount, 50001);
+  assert.equal(result.shards.length, 11);
+  assert.ok(
+    result.shards.every((shard) => shard.bucket === 'industry' && shard.urls <= 5000)
+  );
+});
+
 test('rebuilds schema 1 snapshots and removes legacy gzip files', (t) => {
   const fixture = createFixture(t);
   fs.mkdirSync(fixture.stateDirectory, { recursive: true });

@@ -9,6 +9,7 @@ import { getLanguageTargets, prepareLanguageLink } from '@/lib/languageNavigatio
 import { useStartUrl } from '@/components/home/hooks/useStartUrl';
 import { LangSwitcher } from '@/components/header/LangSwitcher';
 import LanguageRecommendation from '@/components/header/LanguageRecommendation';
+import TopBanner from '@/components/header/TopBanner';
 import Image from 'next/image';
 import { localeConfigs, normalizeLocale, type LocaleCode } from '@/lib/locales';
 import { RYBBIT_EVENTS, rybbitClickAttrs } from '@/lib/rybbitEvents';
@@ -70,6 +71,8 @@ export default function Navbar({
   const params = useParams<{ lang: string }>();
   const lang = normalizeLocale(locale || params?.lang || defaultLocale);
   const [recommendationHeight, setRecommendationHeight] = useState(0);
+  const [bannerHeight, setBannerHeight] = useState(0);
+  const topOffset = recommendationHeight + bannerHeight;
   const languageDialog = useRef<HTMLDialogElement>(null);
   const defaultContactUrl = useContactUrl(lang);
   const contactUrl = consultHref || defaultContactUrl;
@@ -179,9 +182,14 @@ export default function Navbar({
         targets={languageTargets}
         onHeightChange={setRecommendationHeight}
       />
-      <div aria-hidden="true" style={{ height: recommendationHeight }} />
+      <TopBanner
+        currentLocale={lang}
+        topOffset={recommendationHeight}
+        onHeightChange={setBannerHeight}
+      />
+      <div aria-hidden="true" style={{ height: topOffset }} />
       <nav
-        style={{ top: recommendationHeight }}
+        style={{ top: topOffset }}
         className={`fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ${
           hideNavbar ? '-translate-y-full' : 'translate-y-0'
         } ${variant === 'comparison' ? 'comparison-navbar' : ''}`}
@@ -308,7 +316,7 @@ export default function Navbar({
           className={`md:hidden fixed inset-0 z-40 bg-white ${
             variant === 'comparison' ? 'comparison-mobile-menu' : ''
           }`}
-          style={{ top: recommendationHeight }}
+          style={{ top: topOffset }}
           onClick={() => setMobileOpen(false)}
         >
           <div

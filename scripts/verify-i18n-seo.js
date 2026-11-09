@@ -315,7 +315,11 @@ function verifyNotFoundFallback() {
     .map((locale) => `:not(:lang(${locale}))`)
     .join('')} .not-found-locale-${defaultLocale},`;
   assert.equal(robots.length, 1, '404 page must emit exactly one robots meta tag');
-  assert.equal(getAttribute(robots[0], 'content'), 'noindex, follow', '404 robots policy');
+  assert.equal(
+    getAttribute(robots[0], 'content'),
+    variant === 'preview' ? 'noindex, nofollow' : 'noindex, follow',
+    '404 robots policy'
+  );
   assert.equal(
     html.includes('<title>页面未找到 - FastGPT</title>'),
     true,

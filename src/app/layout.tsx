@@ -35,6 +35,10 @@ export const metadata = {
   creator: siteConfig.creator,
   icons: siteConfig.icons,
   metadataBase: new URL(siteConfig.metadataBase as string),
+  robots: {
+    index: true,
+    follow: true
+  },
   openGraph: siteConfig.openGraph,
   twitter: siteConfig.twitter,
   other: {

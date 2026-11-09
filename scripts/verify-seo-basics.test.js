@@ -51,3 +51,17 @@ test('feature image dimensions match the layout contract', async () => {
     assert.equal(metadata.height, height, `${name}: height`);
   }
 });
+
+test('root layout and 404 post-build cleanup enforce a single robots meta tag', () => {
+  const layout = read('src/app/layout.tsx');
+  const cleanScript = read('scripts/clean-locale-output.js');
+  const verifyScript = read('scripts/verify-i18n-seo.js');
+
+  assert.match(layout, /robots:\s*\{\s*index:\s*true,\s*follow:\s*true\s*\}/);
+  assert.match(cleanScript, /function normalizeNotFoundRobots\(\)/);
+  assert.match(cleanScript, /normalizeNotFoundRobots\(\);/);
+  assert.match(
+    verifyScript,
+    /variant === 'preview' \? 'noindex, nofollow' : 'noindex, follow'/
+  );
+});

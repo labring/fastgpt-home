@@ -197,7 +197,11 @@ const EDITORIAL_MATCHER = new RegExp(
   'iu'
 );
 const HTML_EDITORIAL_PATTERN = ENGLISH_EDITORIAL_LABELS.map((label) =>
-  label === 'revision' ? '(?<!Program )revision' : label
+  label === 'revision'
+    ? '(?<!Program )revision'
+    : label === 'schedule'
+    ? '(?<![\\p{L}\\p{N}_]\\s+)schedule'
+    : label
 ).join('|');
 const EDITORIAL_HTML_MATCHER = new RegExp(
   `(?<![\\p{L}\\p{N}_])(?:${HTML_EDITORIAL_PATTERN})\\s*[:：]|(?<![\\p{L}\\p{N}_])(?:${CHINESE_STANDALONE_EDITORIAL})\\s*[:：]|(?<![\\p{L}\\p{N}_])(?:${CHINESE_EDITORIAL_INLINE.join(

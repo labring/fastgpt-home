@@ -57,7 +57,7 @@ export default function TopBanner({
           </div>
         </div>
         <a
-          href="https://sealos.cn/downloads"
+          href="https://sealos.cn/downloads?utm_source=fastgpt_home&utm_medium=referral&utm_campaign=sealos_desktop_launch&utm_content=top_banner"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex shrink-0 items-center gap-1.5 rounded-[10px] bg-white px-3.5 py-2 md:px-4 md:py-2 text-[12px] md:text-[13px] font-medium text-[#0F172A] shadow-[0_1px_2px_rgba(15,23,42,0.06)] transition-colors hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0066FF]"

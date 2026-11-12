@@ -22,7 +22,11 @@ function readSource(revision) {
   };
 }
 
-function packagePreviewArtifact(root = process.cwd(), buildMetrics) {
+function packagePreviewArtifact(
+  root = process.cwd(),
+  buildMetrics,
+  { consumeExport = false } = {}
+) {
   const destination = path.join(root, '.release-artifacts/site/preview-disabled');
   const identity = JSON.parse(
     fs.readFileSync(path.join(root, '.next/cache/site-identity.json'), 'utf8')
@@ -38,10 +42,48 @@ function packagePreviewArtifact(root = process.cwd(), buildMetrics) {
   const publicationInputs = getPublicationInputs(identity);
   fs.mkdirSync(path.dirname(destination), { recursive: true });
   const staging = fs.mkdtempSync(`${destination}.staging-`);
+  const payload = path.join(staging, 'payload');
+  const stagedOut = path.join(payload, 'out');
+  const previous = `${staging}.previous`;
+  let exportMoved = false;
+  let previousMoved = false;
+  let preserveStaging = false;
+
+  // 清理失败只报告残留位置，不能撤销已完成的发布或覆盖原始错误。
+  const cleanTemporaryDirectory = (directory) => {
+    try {
+      fs.rmSync(directory, { recursive: true, force: true });
+    } catch (error) {
+      console.warn(
+        `[package-preview-artifact] cleanup failed; retained ${directory}: ${error.message}`
+      );
+    }
+  };
+
   try {
-    const payload = path.join(staging, 'payload');
     fs.mkdirSync(payload, { recursive: true });
-    fs.cpSync(out, path.join(payload, 'out'), { recursive: true });
+    if (consumeExport) {
+      // CI 后续只使用 bundle；同盘移动避免保留两份完整静态输出。
+      try {
+        fs.renameSync(out, stagedOut);
+      } catch (error) {
+        if (error.code === 'EXDEV') {
+          throw Object.assign(
+            new Error(
+              'Consuming the preview export requires out and the artifact on the same filesystem',
+              {
+                cause: error
+              }
+            ),
+            { code: 'EXDEV' }
+          );
+        }
+        throw error;
+      }
+      exportMoved = true;
+    } else {
+      fs.cpSync(out, stagedOut, { recursive: true });
+    }
     fs.copyFileSync(path.join(root, 'wrangler.json'), path.join(payload, 'wrangler.json'));
     const inventory = inventoryPayload(payload);
     const exportedFiles = inventory.files.filter(({ path: file }) => file.startsWith('out/'));
@@ -64,12 +106,52 @@ function packagePreviewArtifact(root = process.cwd(), buildMetrics) {
       inventory
     };
     fs.writeFileSync(path.join(staging, 'manifest.json'), `${JSON.stringify(manifest, null, 2)}\n`);
-    fs.rmSync(destination, { recursive: true, force: true });
+    // 新产物准备完成后才替换旧包；替换失败仍能恢复上一份产物。
+    if (fs.existsSync(destination)) {
+      fs.renameSync(destination, previous);
+      previousMoved = true;
+    }
     fs.renameSync(staging, destination);
-    return destination;
+  } catch (error) {
+    const recoveryErrors = [];
+    if (exportMoved) {
+      try {
+        assert(!fs.existsSync(out), `Cannot restore the export over an existing path: ${out}`);
+        fs.renameSync(stagedOut, out);
+      } catch (recoveryError) {
+        // 恢复失败时保留唯一输出副本，禁止 finally 把它当临时文件删除。
+        preserveStaging = true;
+        recoveryErrors.push(
+          new Error(`Preview export retained at ${stagedOut}: ${recoveryError.message}`)
+        );
+      }
+    }
+    if (previousMoved) {
+      try {
+        assert(
+          !fs.existsSync(destination),
+          `Cannot restore over an existing artifact: ${destination}`
+        );
+        fs.renameSync(previous, destination);
+      } catch (recoveryError) {
+        recoveryErrors.push(
+          new Error(`Previous artifact retained at ${previous}: ${recoveryError.message}`)
+        );
+      }
+    }
+    if (recoveryErrors.length) {
+      throw new AggregateError(
+        [error, ...recoveryErrors],
+        `${error.message}; ${recoveryErrors.map((failure) => failure.message).join('; ')}`,
+        { cause: error }
+      );
+    }
+    throw error;
   } finally {
-    fs.rmSync(staging, { recursive: true, force: true });
+    if (!preserveStaging) cleanTemporaryDirectory(staging);
   }
+  if (previousMoved) cleanTemporaryDirectory(previous);
+  return destination;
 }
 
 if (require.main === module) {

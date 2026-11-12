@@ -402,3 +402,14 @@ Use the default labels `needs-triage`, `needs-info`, `ready-for-agent`, `ready-f
 ### Domain docs
 
 Single-context layout with root `CONTEXT.md` and `docs/adr/`. See `docs/agents/domain.md`.
+
+## Preview build disk usage
+
+- `build:preview` consumes the completed `out/` only after generation; the sealed export lives
+  at `.release-artifacts/site/preview-disabled/payload/out/`. Later Preview steps must use that
+  artifact instead of depending on the root `out/` directory.
+- Keep direct Preview packaging copy-compatible. A failed consuming package must preserve
+  the source export and previous artifact, including a recoverable staging path if rollback
+  fails. Never replace this with hard links or silently fall back to a full copy on `EXDEV`.
+- Disk diagnostics are observations, not proof of which directory caused an exhaustion.
+  See `docs/preview-build-disk-usage.md` for validation and capacity limits.

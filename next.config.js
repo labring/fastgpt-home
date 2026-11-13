@@ -14,6 +14,7 @@ const nextConfig = {
   // Avoid child-process static-path workers in development environments with invalid stdio handles.
   experimental: {
     agentUpgrade: 'security',
+    ...(process.env.NEXT_BUILD_CPUS ? { cpus: Number(process.env.NEXT_BUILD_CPUS) } : {}),
     ...(!isExport && { workerThreads: true })
   },
   

@@ -12,7 +12,7 @@ const targets = {
   io: 'https://docs-io.example.test'
 };
 
-function createContract(sample = ['/en/guide/example', '/en/guide/second']) {
+function createContract(sample = ['/guide/example', '/guide/second']) {
   return {
     schemaVersion: 1,
     kind: 'documentation-host-owner-routing',
@@ -30,23 +30,20 @@ function createContract(sample = ['/en/guide/example', '/en/guide/second']) {
 }
 
 function ownerBody(url) {
-  const basePath = url.pathname.replace(/^\/(?:en|zh-CN)(?=\/|$)/, '/en');
-  const zhPath = basePath.replace(/^\/en(?=\/|$)/, '/zh-CN');
+  const routePath = url.pathname.replace(/^\/(?:en|zh-CN)(?=\/|$)/, '') || '/';
   return [
     `<link rel="canonical" href="${url.origin}${url.pathname}/">`,
-    `<link rel="alternate" hreflang="zh-CN" href="${targets.cn}${zhPath}">`,
-    `<link rel="alternate" hreflang="en" href="${targets.io}${basePath}">`
+    `<link rel="alternate" hreflang="zh-CN" href="${targets.cn}${routePath}">`,
+    `<link rel="alternate" hreflang="en" href="${targets.io}${routePath}">`,
+    `<link rel="alternate" hreflang="x-default" href="${targets.io}${routePath}">`
   ].join('');
 }
 
 function createFetch({ loseQuery = false, wrongRobots = false, badCanonical = false } = {}) {
   return async (rawUrl) => {
     const url = new URL(rawUrl);
-    const isCn = url.origin === targets.cn;
-    const isOwner =
-      (isCn && url.pathname.startsWith('/zh-CN/')) || (!isCn && url.pathname.startsWith('/en/'));
-    const isRedirect =
-      (isCn && url.pathname.startsWith('/en/')) || (!isCn && url.pathname.startsWith('/zh-CN/'));
+    const localePrefixMatch = url.pathname.match(/^\/(en|zh-CN)(?=\/|$)(.*)$/);
+    const isOwner = localePrefixMatch === null && url.pathname.startsWith('/guide/');
 
     if (url.pathname === '/robots.txt') {
       const sitemap = wrongRobots ? targets.io : url.origin;
@@ -57,16 +54,16 @@ function createFetch({ loseQuery = false, wrongRobots = false, badCanonical = fa
     }
     if (url.pathname === '/sitemap.xml') {
       const sample = createContract().englishSample.paths;
-      const paths = isCn ? sample.map((path) => path.replace('/en', '/zh-CN')) : sample;
-      const body = paths.map((path) => `<url><loc>${url.origin}${path}</loc></url>`).join('');
+      const body = sample.map((path) => `<url><loc>${url.origin}${path}</loc></url>`).join('');
       return new Response(`<urlset>${body}</urlset>`, {
         status: 200,
         headers: { 'content-type': 'application/xml; charset=utf-8' }
       });
     }
-    if (isRedirect) {
-      const locationOrigin = isCn ? targets.io : targets.cn;
-      const location = `${locationOrigin}${url.pathname}${loseQuery ? '' : url.search}`;
+    if (localePrefixMatch !== null) {
+      const targetOrigin = localePrefixMatch[1] === 'en' ? targets.io : targets.cn;
+      const targetPath = localePrefixMatch[2] || '/';
+      const location = `${targetOrigin}${targetPath}${loseQuery ? '' : url.search}`;
       return new Response('', { status: 301, headers: { location } });
     }
     if (isOwner) {
@@ -107,7 +104,7 @@ test('documentation host runner checks owner pages, direct redirects, robots, si
     assert.equal(result.status, 'passed');
     assert.equal(result.englishSampleCount, 2);
     assert.deepEqual(result.ownerRouteCounts, { cn: 2, io: 2 });
-    assert.equal(result.checks.length, 2 * 2 + 2 * 2 + 2 * 2);
+    assert.equal(result.checks.length, 2 * 2 + 4 * 2 + 2 * 2);
     assert(result.checks.every((check) => check.status === 'passed'));
 
     const externalRollbackResult = await runDocumentationHostContract({

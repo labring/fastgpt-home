@@ -157,7 +157,7 @@ export const staticVideos: Video[] = [
   {
     title: 'FastGPT 更新日志',
     desc: '查看 FastGPT 最新版本更新内容，了解新功能、优化改进和问题修复。',
-    url: 'https://doc.fastgpt.cn/zh-CN/self-host/upgrading',
+    url: 'https://doc.fastgpt.cn/self-host/upgrading/upgrade-instruction',
     level: 'beginner',
     category: 'operations',
     type: 'doc'

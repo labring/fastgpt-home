@@ -77,7 +77,7 @@ function buildColumns(t: FooterT['columns'], locale?: string): Column[] {
       items: [
         {
           label: t.links.items.docs,
-          href: getPublicationUrls('https://doc.fastgpt.io/docs/introduction'),
+          href: getPublicationUrls('https://doc.fastgpt.io/guide/getting-started'),
           external: true
         },
         {

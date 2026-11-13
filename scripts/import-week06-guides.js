@@ -40,8 +40,8 @@ const specs = [
     },
     schema: 'HowTo + Article + BreadcrumbList',
     references: [
-      ['FastGPT self-hosted deployment documentation', 'https://doc.fastgpt.io/en/self-host/'],
-      ['FastGPT API documentation', 'https://doc.fastgpt.io/en/api/'],
+      ['FastGPT self-hosted deployment documentation', 'https://doc.fastgpt.io/self-host'],
+      ['FastGPT API documentation', 'https://doc.fastgpt.io/openapi/intro'],
       ['FastGPT product guide', 'https://fastgpt.io/guide']
     ]
   },
@@ -75,9 +75,9 @@ const specs = [
     },
     schema: 'HowTo + Article + BreadcrumbList',
     references: [
-      ['FastGPT API documentation', 'https://doc.fastgpt.io/en/api/'],
-      ['FastGPT integration documentation', 'https://doc.fastgpt.io/en/integration/'],
-      ['FastGPT getting started guide', 'https://doc.fastgpt.io/en/guide/getting-started']
+      ['FastGPT API documentation', 'https://doc.fastgpt.io/openapi/intro'],
+      ['FastGPT integration documentation', 'https://doc.fastgpt.io/guide/build/publish/versions'],
+      ['FastGPT getting started guide', 'https://doc.fastgpt.io/guide/getting-started']
     ]
   },
   {
@@ -99,9 +99,9 @@ const specs = [
     configuredInternalLinks: { zh: [], en: [] },
     schema: 'Article + BreadcrumbList',
     references: [
-      ['FastGPT self-hosted deployment documentation', 'https://doc.fastgpt.io/en/self-host/'],
+      ['FastGPT self-hosted deployment documentation', 'https://doc.fastgpt.io/self-host'],
       ['FastGPT documentation', 'https://doc.fastgpt.io/'],
-      ['FastGPT Chinese documentation', 'https://doc.fastgpt.cn/zh-CN/']
+      ['FastGPT Chinese documentation', 'https://doc.fastgpt.cn/']
     ]
   }
 ];

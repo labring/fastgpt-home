@@ -293,7 +293,7 @@ export default function PPlan({ langName, locale }: { langName: string; locale: 
                           &nbsp;
                           <Link
                             href={getPublicationUrls(
-                              'https://doc.fastgpt.io/docs/introduction/commercial'
+                              'https://doc.fastgpt.io/guide/version/commercial'
                             )}
                             target="_blank"
                             style={{ color: '#3b82f6' }}

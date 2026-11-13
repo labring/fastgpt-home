@@ -312,7 +312,7 @@ test('invalid analytics JSON and SDK failures preserve successful submission', a
 
 test('privacy policy is readable from the consent text', () => {
   const link = elements(form().render()).find((node) => node.type === 'a');
-  assert.equal(link.props.href, 'https://doc.fastgpt.cn/docs/protocol/privacy');
+  assert.equal(link.props.href, 'https://doc.fastgpt.cn/guide/version/cloud/privacy');
   assert.equal(link.props.target, '_blank');
 });
 
@@ -372,7 +372,7 @@ function verifyExport(entries, mutateHtml = (html) => html, mutateOps = () => {}
     )}"></head>
       <body>${chrome}<h1>${escape(page.h1)}</h1>
       <input name="name"><input name="phone"><input name="company"><select name="consultationTopic"></select>
-      <input type="checkbox" name="consent"><a href="https://doc.fastgpt.cn/docs/protocol/privacy">《隐私政策》</a>
+      <input type="checkbox" name="consent"><a href="https://doc.fastgpt.cn/guide/version/cloud/privacy">《隐私政策》</a>
       ${page.readingLinks.map((link) => `<a href="${link.url}">${link.label}</a>`).join('')}
       ${page.form.title} ${page.form.button} ${page.trustLine}
       平台能力 ${page.why?.title ?? ''} ${page.why?.subtitle ?? ''}

@@ -1,5 +1,45 @@
 [
   {
+    "identity": "en|/guide/aux-generation-acceptance-chain",
+    "title": "Acceptance Chain for Natural-Language Workflow Generation",
+    "description": "Review a FastGPT assisted workflow from brief to candidate, then test branch conditions, tool inputs and outputs, and the version selected for release.",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/aux-generation-acceptance-chain",
+    "sourceType": "深度场景内容",
+    "minutes": 3
+  },
+  {
+    "identity": "en|/guide/folder-permission-inheritance-and-retrieval-identity",
+    "title": "Folder Inheritance and Retrieval Identity in File-Level Permissions",
+    "description": "Trace FastGPT file visibility from folder inheritance and member identity to retrieval checks, navigation-only access, and published resource snapshots.",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/folder-permission-inheritance-and-retrieval-identity",
+    "sourceType": "深度场景内容",
+    "minutes": 3
+  },
+  {
+    "identity": "en|/guide/pricing-migration-and-billing-reconcile",
+    "title": "Pricing Unit Migration and Billing Reconciliation",
+    "description": "Check FastGPT v4.17.3 pricing fields and migration status, then trace token units and usage through model, application, and team records after upgrade.",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/pricing-migration-and-billing-reconcile",
+    "sourceType": "深度场景内容",
+    "minutes": 3
+  },
+  {
+    "identity": "en|/guide/sandbox-capacity-lifecycle",
+    "title": "Sandbox Capacity and Lifecycle Management",
+    "description": "Plan FastGPT Agent sandbox capacity using system and team quotas, idle and archive settings, plus Kubernetes resource reservations for new instances.",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/sandbox-capacity-lifecycle",
+    "sourceType": "深度场景内容",
+    "minutes": 3
+  },
+  {
     "identity": "en|/guide/api-authentication-issues",
     "title": "FastGPT API and authentication Issue List",
     "description": "Explore API and authentication Issue List with symptom-based checks, published article links and practical guidance for troubleshooting your deployment.",

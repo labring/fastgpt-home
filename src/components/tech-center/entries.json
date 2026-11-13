@@ -1,5 +1,327 @@
 [
   {
+    "title": "FastGPT 工作流辅助生成的验收入口",
+    "slug": "/zh/guide/aux-generation-review-hub",
+    "category": "troubleshoot",
+    "categoryLabel": "实施指南",
+    "sourceType": "深度场景内容",
+    "summary": "依据 FastGPT v4.17.3 官方更新说明，把工作流辅助生成拆成开启条件、候选版本落到画布、调试与发布、变量与回流四组人工验收入口，明确哪些环节必须人工确认。",
+    "minutes": 2,
+    "dateModified": "2026-11-09"
+  },
+  {
+    "title": "FastGPT 渠道配额与重试的核对入口",
+    "slug": "/zh/guide/channel-quota-and-retry-hub",
+    "category": "troubleshoot",
+    "categoryLabel": "实施指南",
+    "sourceType": "深度场景内容",
+    "summary": "依据 FastGPT v4.17.3 官方更新说明，说明 MCP 调用与外部渠道消息如何纳入团队每分钟请求数、超限后的返回与重试、消息去重计数及渠道接入的核对点。",
+    "minutes": 2,
+    "dateModified": "2026-11-09"
+  },
+  {
+    "title": "FastGPT 对话草稿与消息渲染的核对入口",
+    "slug": "/zh/guide/chat-input-draft-hub",
+    "category": "troubleshoot",
+    "categoryLabel": "实施指南",
+    "sourceType": "深度场景内容",
+    "summary": "依据 FastGPT v4.17.3 官方更新说明，说明对话输入草稿的保存份数与有效期、Markdown 有限 HTML 渲染范围、开场白与提示词入口及 CSRF 防御。",
+    "minutes": 2,
+    "dateModified": "2026-11-09"
+  },
+  {
+    "title": "FastGPT 知识库导出与备份的核对入口",
+    "slug": "/zh/guide/dataset-export-backup-hub",
+    "category": "troubleshoot",
+    "categoryLabel": "实施指南",
+    "sourceType": "深度场景内容",
+    "summary": "依据 FastGPT v4.17.3 官方更新说明，说明知识库导出按单库执行的限制、文件级权限对导出内容的过滤、API 文件库同步的差异核对与网站爬取的旧页清理时机。",
+    "minutes": 2,
+    "dateModified": "2026-11-09"
+  },
+  {
+    "title": "FastGPT 目录权限继承与导航的核对入口",
+    "slug": "/zh/guide/folder-permission-inheritance-hub",
+    "category": "troubleshoot",
+    "categoryLabel": "实施指南",
+    "sourceType": "深度场景内容",
+    "summary": "依据 FastGPT v4.17.3 官方更新说明，说明知识库目录的权限继承方式、创建文件夹时的继承选项、父目录只作导航入口的边界及发布快照与运行身份的差异。",
+    "minutes": 2,
+    "dateModified": "2026-11-09"
+  },
+  {
+    "title": "FastGPT 成员级模型与渠道的配置入口",
+    "slug": "/zh/guide/member-model-channel-hub",
+    "category": "troubleshoot",
+    "categoryLabel": "实施指南",
+    "sourceType": "深度场景内容",
+    "summary": "依据 FastGPT v4.17.3 官方更新说明，说明成员专属模型与渠道的配置入口、失效模型替换范围、渠道与 AI Proxy 的对应关系及权限隔离核对点，供多团队管理员使用。",
+    "minutes": 2,
+    "dateModified": "2026-11-09"
+  },
+  {
+    "title": "FastGPT 计费单位迁移的核对入口",
+    "slug": "/zh/guide/pricing-unit-migration-hub",
+    "category": "troubleshoot",
+    "categoryLabel": "实施指南",
+    "sourceType": "深度场景内容",
+    "summary": "依据 FastGPT v4.17.3 官方更新说明，把模型计费拆成字段、单位换算、迁移兜底与成员模型边界四组核对入口，用于确认账单金额与实际调用量对得上。",
+    "minutes": 2,
+    "dateModified": "2026-11-09"
+  },
+  {
+    "title": "FastGPT 4.17.3 升级的核对入口",
+    "slug": "/zh/guide/upgrade-4173-checks-hub",
+    "category": "troubleshoot",
+    "categoryLabel": "实施指南",
+    "source": "https://github.com/labring/FastGPT/releases/tag/v4.17.3",
+    "sourceType": "深度场景内容",
+    "summary": "依据 FastGPT 官方更新说明，把 4.17.3 升级拆成版本与镜像、两项手动迁移、三项后台回填、升级后回归四组核对入口，逐组说明入口位置、核对动作与失败表现。",
+    "minutes": 2,
+    "dateModified": "2026-11-09"
+  },
+  {
+    "title": "工作流用辅助生成还是手工搭",
+    "slug": "/zh/compare/aux-generation-vs-manual-build",
+    "category": "compare",
+    "categoryLabel": "决策对比",
+    "sourceType": "深度场景内容",
+    "summary": "依据 FastGPT v4.17.3 官方更新说明，比较工作流辅助生成与手工搭建在人工介入点、可复现性与权限依赖上的差别，给出搭建方式的选择矩阵与验收顺序。",
+    "minutes": 2,
+    "dateModified": "2026-11-09"
+  },
+  {
+    "title": "草稿留在本地还是进历史",
+    "slug": "/zh/compare/draft-cache-vs-history",
+    "category": "compare",
+    "categoryLabel": "决策对比",
+    "sourceType": "深度场景内容",
+    "summary": "依据 FastGPT v4.17.3 官方更新说明，比较对话输入草稿的本地缓存与对话历史的服务端记录在生命周期、一致性与多端表现上的差别，给出使用与排查的判定矩阵。",
+    "minutes": 2,
+    "dateModified": "2026-11-09"
+  },
+  {
+    "title": "知识库备份走导出还是接口同步",
+    "slug": "/zh/compare/export-vs-api-sync",
+    "category": "compare",
+    "categoryLabel": "决策对比",
+    "sourceType": "深度场景内容",
+    "summary": "依据 FastGPT v4.17.3 官方更新说明，比较整库导出与接口同步在覆盖范围、频率与权限过滤上的差别，给出知识库备份方式的选择矩阵与核对动作。",
+    "minutes": 2,
+    "dateModified": "2026-11-09"
+  },
+  {
+    "title": "目录继承与独立授权：权限放在哪一层",
+    "slug": "/zh/compare/inherit-vs-standalone-folder",
+    "category": "compare",
+    "categoryLabel": "决策对比",
+    "sourceType": "深度场景内容",
+    "summary": "依据 FastGPT v4.17.3 官方更新说明，比较知识库目录的继承授权与独立授权在扩散范围、维护成本与越权风险上的差别，给出选择矩阵与改授权前的核对动作。",
+    "minutes": 2,
+    "dateModified": "2026-11-09"
+  },
+  {
+    "title": "升级里的手动迁移与自动回填怎么排",
+    "slug": "/zh/compare/manual-migration-vs-auto-backfill",
+    "category": "compare",
+    "categoryLabel": "决策对比",
+    "source": "https://github.com/labring/FastGPT/releases/tag/v4.17.3",
+    "sourceType": "深度场景内容",
+    "summary": "依据 FastGPT v4.17.3 官方更新说明，比较版本升级中的手动迁移任务与启动后自动回填任务在顺序约束、可重试性与停机窗口上的差别，给出执行顺序矩阵。",
+    "minutes": 1,
+    "dateModified": "2026-11-09"
+  },
+  {
+    "title": "外部能力接 MCP 工具还是 HTTP 节点",
+    "slug": "/zh/compare/mcp-tool-vs-http-node",
+    "category": "compare",
+    "categoryLabel": "决策对比",
+    "sourceType": "深度场景内容",
+    "summary": "依据 FastGPT v4.17.3 官方更新说明，比较 MCP 工具与 HTTP 节点在协议形态、鉴权方式与配额计入上的差别，给出外部能力接入的选择矩阵与排查顺序。",
+    "minutes": 2,
+    "dateModified": "2026-11-09"
+  },
+  {
+    "title": "阶梯计价与单价计价：模型该用哪一种",
+    "slug": "/zh/compare/pricing-tiers-vs-unit-price",
+    "category": "compare",
+    "categoryLabel": "决策对比",
+    "sourceType": "深度场景内容",
+    "summary": "依据 FastGPT v4.17.3 官方更新说明，说明阶梯计价与单价计价各自的适用范围、单位换算方向与迁移期并存时的核对顺序，给出选择矩阵与切换代价。",
+    "minutes": 2,
+    "dateModified": "2026-11-09"
+  },
+  {
+    "title": "放量之前：先调配额还是先做退避",
+    "slug": "/zh/compare/qpm-limit-vs-retry",
+    "category": "compare",
+    "categoryLabel": "决策对比",
+    "sourceType": "深度场景内容",
+    "summary": "依据 FastGPT v4.17.3 官方更新说明，比较放量前先调整团队每分钟请求数与先做调用退避两种做法在成本、稳定性与观测上的差别，给出准备顺序矩阵。",
+    "minutes": 2,
+    "dateModified": "2026-11-09"
+  },
+  {
+    "title": "沙盒额度配在总额还是团队",
+    "slug": "/zh/compare/sandbox-total-vs-per-team-limit",
+    "category": "compare",
+    "categoryLabel": "决策对比",
+    "sourceType": "深度场景内容",
+    "summary": "依据 FastGPT v4.17.3 官方更新说明，比较沙盒活跃实例总额度与单团队额度的适用场景、配置优先级与超卖倍率的影响范围，给出配比矩阵与核对顺序。",
+    "minutes": 2,
+    "dateModified": "2026-11-09"
+  },
+  {
+    "title": "分享链接与 API Key：对外接入用哪一种",
+    "slug": "/zh/compare/share-link-vs-api-key",
+    "category": "compare",
+    "categoryLabel": "决策对比",
+    "sourceType": "深度场景内容",
+    "summary": "依据 FastGPT 官方文档与 v4.17.3 更新说明，比较分享链接与 API Key 在身份校验、凭据回收与配额归属上的差别，给出对外接入方式的选择矩阵与切换代价。",
+    "minutes": 2,
+    "dateModified": "2026-11-09"
+  },
+  {
+    "title": "团队渠道与成员专属模型：归属定在哪一层",
+    "slug": "/zh/compare/team-vs-member-model-ownership",
+    "category": "compare",
+    "categoryLabel": "决策对比",
+    "sourceType": "深度场景内容",
+    "summary": "依据 FastGPT v4.17.3 官方更新说明，比较团队渠道与成员专属模型在计费归属、人员流动与凭据管理上的差别，给出选择矩阵与叠加使用时的核对点。",
+    "minutes": 2,
+    "dateModified": "2026-11-09"
+  },
+  {
+    "title": "知识库数据源：爬网站还是接文件库",
+    "slug": "/zh/compare/web-crawl-vs-api-library",
+    "category": "compare",
+    "categoryLabel": "决策对比",
+    "sourceType": "深度场景内容",
+    "summary": "依据 FastGPT v4.17.3 官方更新说明，比较网站爬取与接口文件库两种数据源在更新方式、旧页清理时机与差异核对上的差别，给出知识库数据源的选择矩阵。",
+    "minutes": 2,
+    "dateModified": "2026-11-09"
+  },
+  {
+    "title": "FastGPT 4.17.3 接口分页与附件基准",
+    "slug": "/zh/reference/api-pagination-and-attachment-baseline",
+    "category": "reference",
+    "categoryLabel": "技术速查",
+    "source": "https://github.com/labring/FastGPT/releases/tag/v4.17.3",
+    "sourceType": "深度场景内容",
+    "summary": "依据 FastGPT v4.17.3 官方更新说明，说明接口分页参数的上限与优先级、附件类型的枚举变化与导出接口的库范围，便于按当前版本核对分页、过滤与备份行为。",
+    "minutes": 2,
+    "dateModified": "2026-11-09"
+  },
+  {
+    "title": "FastGPT 4.17.3 沙盒额度与资源基准",
+    "slug": "/zh/reference/sandbox-quota-baseline",
+    "category": "reference",
+    "categoryLabel": "技术速查",
+    "sourceType": "深度场景内容",
+    "summary": "依据 FastGPT v4.17.3 官方更新说明，整理沙盒活跃实例上限、单团队额度、单实例资源规格与生命周期、超卖倍率及已停用变量，便于按实例数与资源量核对部署配置。",
+    "minutes": 1,
+    "dateModified": "2026-11-09"
+  },
+  {
+    "title": "FastGPT 4.17.3 版本与镜像 tag 基准",
+    "slug": "/zh/reference/version-image-tags-baseline",
+    "category": "reference",
+    "categoryLabel": "技术速查",
+    "source": "https://github.com/labring/FastGPT/releases/tag/v4.17.3",
+    "sourceType": "深度场景内容",
+    "summary": "依据 FastGPT v4.17.3 官方更新说明，列出四处镜像 tag、源码运行时范围与升级后三项回填任务，便于部署前核对版本与迁移状态。",
+    "minutes": 2,
+    "dateModified": "2026-11-09"
+  },
+  {
+    "title": "工作流辅助生成的验收链路：从方案描述到发布的四道确认",
+    "slug": "/zh/guide/aux-generation-acceptance-chain",
+    "category": "troubleshoot",
+    "categoryLabel": "实施指南",
+    "source": "https://github.com/labring/FastGPT/releases/tag/v4.17.3",
+    "sourceType": "深度场景内容",
+    "summary": "以 FastGPT v4.17.3 官方更新说明为依据，拆解工作流辅助生成从方案描述到发布的四道确认，说明候选版本、节点输入输出、变量与回流、发布与回滚各自的核对动作。",
+    "minutes": 5,
+    "dateModified": "2026-11-09"
+  },
+  {
+    "title": "目录继承与检索身份：文件级权限的判断顺序",
+    "slug": "/zh/guide/folder-permission-inheritance-and-retrieval-identity",
+    "category": "troubleshoot",
+    "categoryLabel": "实施指南",
+    "source": "https://github.com/labring/FastGPT/releases/tag/v4.17.3",
+    "sourceType": "深度场景内容",
+    "summary": "以 FastGPT v4.17.3 官方更新说明为依据，说明知识库目录继承与独立授权的差别、父目录导航的边界、检索逐条鉴权与发布快照的运行身份，以及固定身份做对比测试的方法。",
+    "minutes": 5,
+    "dateModified": "2026-11-09"
+  },
+  {
+    "title": "计费单位迁移与账单对账：换算之后还要核什么",
+    "slug": "/zh/guide/pricing-migration-and-billing-reconcile",
+    "category": "troubleshoot",
+    "categoryLabel": "实施指南",
+    "source": "https://github.com/labring/FastGPT/releases/tag/v4.17.3",
+    "sourceType": "深度场景内容",
+    "summary": "以 FastGPT v4.17.3 官方更新说明为依据，说明模型计价的字段结构、百万单位换算方向、迁移未完成时的免费兜底，以及按模型、应用、团队三层对账的顺序。",
+    "minutes": 4,
+    "dateModified": "2026-11-09"
+  },
+  {
+    "title": "沙盒容量与生命周期：额度、复用、回收三本账",
+    "slug": "/zh/guide/sandbox-capacity-lifecycle",
+    "category": "troubleshoot",
+    "categoryLabel": "实施指南",
+    "source": "https://github.com/labring/FastGPT/releases/tag/v4.17.3",
+    "sourceType": "深度场景内容",
+    "summary": "以 FastGPT v4.17.3 官方更新说明为依据，说明沙盒两个额度变量的分工、用户级实例的复用方式、运行与暂停归档三段生命周期、超卖倍率的适用边界与容量规划顺序。",
+    "minutes": 4,
+    "dateModified": "2026-11-09"
+  },
+  {
+    "title": "Acceptance Chain for Natural-Language Workflow Generation",
+    "slug": "/en/guide/aux-generation-acceptance-chain",
+    "category": "troubleshoot",
+    "categoryLabel": "实施指南",
+    "source": "https://github.com/labring/FastGPT/releases/tag/v4.17.3",
+    "sourceType": "深度场景内容",
+    "summary": "Review a FastGPT assisted workflow from brief to candidate, then test branch conditions, tool inputs and outputs, and the version selected for release.",
+    "minutes": 3,
+    "dateModified": "2026-11-09"
+  },
+  {
+    "title": "Folder Inheritance and Retrieval Identity in File-Level Permissions",
+    "slug": "/en/guide/folder-permission-inheritance-and-retrieval-identity",
+    "category": "troubleshoot",
+    "categoryLabel": "实施指南",
+    "source": "https://github.com/labring/FastGPT/releases/tag/v4.17.3",
+    "sourceType": "深度场景内容",
+    "summary": "Trace FastGPT file visibility from folder inheritance and member identity to retrieval checks, navigation-only access, and published resource snapshots.",
+    "minutes": 3,
+    "dateModified": "2026-11-09"
+  },
+  {
+    "title": "Pricing Unit Migration and Billing Reconciliation",
+    "slug": "/en/guide/pricing-migration-and-billing-reconcile",
+    "category": "troubleshoot",
+    "categoryLabel": "实施指南",
+    "source": "https://github.com/labring/FastGPT/releases/tag/v4.17.3",
+    "sourceType": "深度场景内容",
+    "summary": "Check FastGPT v4.17.3 pricing fields and migration status, then trace token units and usage through model, application, and team records after upgrade.",
+    "minutes": 3,
+    "dateModified": "2026-11-09"
+  },
+  {
+    "title": "Sandbox Capacity and Lifecycle Management",
+    "slug": "/en/guide/sandbox-capacity-lifecycle",
+    "category": "troubleshoot",
+    "categoryLabel": "实施指南",
+    "source": "https://github.com/labring/FastGPT/releases/tag/v4.17.3",
+    "sourceType": "深度场景内容",
+    "summary": "Plan FastGPT Agent sandbox capacity using system and team quotas, idle and archive settings, plus Kubernetes resource reservations for new instances.",
+    "minutes": 3,
+    "dateModified": "2026-11-09"
+  },
+  {
     "title": "FastGPT 容器与编排 问题清单",
     "slug": "/zh/guide/container-orchestration-issues",
     "category": "troubleshoot",

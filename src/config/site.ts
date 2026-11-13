@@ -67,11 +67,11 @@ const baseSiteConfig = {
   ],
   footerService: [
     {
-      url: getPublicationUrls('https://doc.fastgpt.io/docs/protocol/terms'),
+      url: getPublicationUrls('https://doc.fastgpt.io/guide/version/cloud/terms'),
       name: 'Terms of Service'
     },
     {
-      url: getPublicationUrls('https://doc.fastgpt.io/docs/protocol/privacy'),
+      url: getPublicationUrls('https://doc.fastgpt.io/guide/version/cloud/privacy'),
       name: 'Privacy Policy'
     }
   ]

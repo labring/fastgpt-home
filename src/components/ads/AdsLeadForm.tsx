@@ -254,7 +254,7 @@ export default function AdsLeadForm({ copy }: { copy: AdsLeadFormCopy }) {
         <span>
           已阅读并同意
           <a
-            href="https://doc.fastgpt.cn/docs/protocol/privacy"
+            href="https://doc.fastgpt.cn/guide/version/cloud/privacy"
             target="_blank"
             rel="noopener noreferrer"
             className="underline"

@@ -199,7 +199,7 @@ function verifyExportedAdsPage(page, htmlPath) {
     `${label}: privacy consent checkbox missing`
   );
   assert(
-    /<a\b[^>]*href="https:\/\/doc\.fastgpt\.cn\/docs\/protocol\/privacy"[^>]*>《隐私政策》<\/a>/.test(html),
+    /<a\b[^>]*href="https:\/\/doc\.fastgpt\.cn\/guide\/version\/cloud\/privacy"[^>]*>《隐私政策》<\/a>/.test(html),
     `${label}: readable privacy policy link missing`
   );
 

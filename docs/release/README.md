@@ -43,8 +43,8 @@ targets.
 `npm run verify:documentation-host -- --cn-target <https-url> --io-target <https-url> \
   --contract scripts/fixtures/documentation-host-contract.json --output <json>` runs the
 external docs black-box contract with production targets supplied by the release operator. The
-contract checks owner HTTP 200/self-canonical pages, direct cross-host 301s with query
-preservation, reciprocal `zh-CN`/`en` hreflang, owner robots/sitemap signals, and the 203-path
+contract checks unprefixed owner HTTP 200/self-canonical pages, direct same-host and cross-host 301s with query
+preservation, reciprocal `zh-CN`/`en`/`x-default` hreflang, owner robots/sitemap signals, and the 224-path
 English audit sample. Responses are captured under `<output-basename>-responses/`.
 
 Pass `--rollback-input <json>` to provide the tested host-scoped rollback unit when it is kept in

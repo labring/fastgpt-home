@@ -130,11 +130,15 @@ function normalizeSamplePath(value, index) {
   }
   if (!samplePath.startsWith('/')) samplePath = `/${samplePath}`;
   if (samplePath === '/zh-CN' || samplePath.startsWith('/zh-CN/')) {
-    throw contractError(`englishSample[${index + 1}] must use the /en/ locale prefix`);
+    throw contractError(`englishSample[${index + 1}] must omit the /zh-CN/ locale prefix`);
   }
-  if (!samplePath.startsWith('/en')) samplePath = `/en${samplePath}`;
-  if (samplePath !== '/en' && !samplePath.startsWith('/en/')) {
-    throw contractError(`englishSample[${index + 1}] must use the /en/ locale prefix`);
+  if (samplePath === '/en') {
+    samplePath = '/';
+  } else if (samplePath.startsWith('/en/')) {
+    samplePath = samplePath.slice('/en'.length);
+  }
+  if (samplePath === '/') {
+    throw contractError(`englishSample[${index + 1}] must be a non-root documentation path`);
   }
   return normalizePath(samplePath, `englishSample[${index + 1}]`);
 }
@@ -158,8 +162,16 @@ function localePath(pathValue, locale, label) {
   return path;
 }
 
-function sampleLocalePath(englishPath, locale) {
-  return locale === 'en' ? englishPath : englishPath.replace(/^\/en(?=\/|$)/, `/${locale}`);
+function unprefixedOwnerPath(pathValue, label) {
+  const normalized = normalizePath(pathValue, label);
+  if (/^\/(?:zh-CN|en)(?:\/|$)/.test(normalized)) {
+    throw contractError(`${label} must omit locale prefix`);
+  }
+  return normalized;
+}
+
+function prefixedLocalePath(unprefixedPath, locale) {
+  return unprefixedPath === '/' ? `/${locale}` : `/${locale}${unprefixedPath}`;
 }
 
 function normalizeOwnerRoutes(contract, sample) {
@@ -169,36 +181,51 @@ function normalizeOwnerRoutes(contract, sample) {
   }
   const routes = {};
   for (const host of DOCUMENTATION_HOSTS) {
-    const locale = DOCUMENTATION_LOCALES[host];
     const configured = input?.[host];
     const paths =
       configured === undefined
-        ? sample.map((item) => sampleLocalePath(item, locale))
+        ? [...sample]
         : readPaths(configured, `ownerRoutes.${host}`);
     routes[host] = paths.map((item, index) =>
-      localePath(item, locale, `ownerRoutes.${host}.paths[${index + 1}]`)
+      unprefixedOwnerPath(item, `ownerRoutes.${host}.paths[${index + 1}]`)
     );
   }
   return routes;
 }
 
+function defaultRedirectRoutes(ownerRoutes) {
+  return [
+    ...ownerRoutes.io.map((pathValue) => ({
+      sourceHost: 'cn',
+      sourcePath: prefixedLocalePath(pathValue, 'en'),
+      targetHost: 'io',
+      targetPath: pathValue
+    })),
+    ...ownerRoutes.cn.map((pathValue) => ({
+      sourceHost: 'io',
+      sourcePath: prefixedLocalePath(pathValue, 'zh-CN'),
+      targetHost: 'cn',
+      targetPath: pathValue
+    })),
+    ...ownerRoutes.cn.map((pathValue) => ({
+      sourceHost: 'cn',
+      sourcePath: prefixedLocalePath(pathValue, 'zh-CN'),
+      targetHost: 'cn',
+      targetPath: pathValue
+    })),
+    ...ownerRoutes.io.map((pathValue) => ({
+      sourceHost: 'io',
+      sourcePath: prefixedLocalePath(pathValue, 'en'),
+      targetHost: 'io',
+      targetPath: pathValue
+    }))
+  ];
+}
+
 function normalizeRedirects(contract, ownerRoutes) {
   const configured = contract.redirects;
   if (configured === undefined) {
-    return [
-      ...ownerRoutes.io.map((pathValue) => ({
-        sourceHost: 'cn',
-        sourcePath: pathValue,
-        targetHost: 'io',
-        targetPath: pathValue
-      })),
-      ...ownerRoutes.cn.map((pathValue) => ({
-        sourceHost: 'io',
-        sourcePath: pathValue,
-        targetHost: 'cn',
-        targetPath: pathValue
-      }))
-    ];
+    return defaultRedirectRoutes(ownerRoutes);
   }
   if (!Array.isArray(configured)) throw contractError('redirects must be an array');
   return configured.map((redirect, index) => {
@@ -210,13 +237,16 @@ function normalizeRedirects(contract, ownerRoutes) {
     if (!DOCUMENTATION_HOSTS.includes(sourceHost) || !DOCUMENTATION_HOSTS.includes(targetHost)) {
       throw contractError(`redirects[${index + 1}] sourceHost and targetHost must be cn or io`);
     }
-    if (sourceHost === targetHost)
-      throw contractError(`redirects[${index + 1}] cannot stay on one host`);
     const sourcePath = normalizePath(redirect.sourcePath, `redirects[${index + 1}].sourcePath`);
-    const targetPath = normalizePath(redirect.targetPath, `redirects[${index + 1}].targetPath`);
+    const targetPath = unprefixedOwnerPath(
+      redirect.targetPath,
+      `redirects[${index + 1}].targetPath`
+    );
+    if (sourceHost === targetHost && sourcePath === targetPath) {
+      throw contractError(`redirects[${index + 1}] cannot redirect to itself`);
+    }
     const ownerLocale = DOCUMENTATION_LOCALES[targetHost];
     localePath(sourcePath, ownerLocale, `redirects[${index + 1}].sourcePath`);
-    localePath(targetPath, ownerLocale, `redirects[${index + 1}].targetPath`);
     return { sourceHost, sourcePath, targetHost, targetPath };
   });
 }
@@ -355,17 +385,19 @@ function validateContract(contract, targets = {}) {
     const key = `${redirect.sourceHost}:${redirect.sourcePath}`;
     if (redirectKeys.has(key)) throw contractError(`redirect source is duplicated: ${key}`);
     redirectKeys.add(key);
-    if (redirect.targetPath !== redirect.sourcePath) {
+    const strippedSource = redirect.sourcePath.replace(/^\/(?:en|zh-CN)(?=\/|$)/, '') || '/';
+    if (redirect.targetPath !== strippedSource) {
       throw contractError(`redirect must retain its path: ${key}`);
     }
     if (!ownerKeys.has(`${redirect.targetHost}:${redirect.targetPath}`)) {
       throw contractError(`redirect target is absent from owner routes: ${key}`);
     }
   }
-  const expectedRedirectKeys = new Set([
-    ...ownerRoutes.io.map((routePath) => `cn:${routePath}`),
-    ...ownerRoutes.cn.map((routePath) => `io:${routePath}`)
-  ]);
+  const expectedRedirectKeys = new Set(
+    defaultRedirectRoutes(ownerRoutes).map(
+      (redirect) => `${redirect.sourceHost}:${redirect.sourcePath}`
+    )
+  );
   if (redirectKeys.size !== expectedRedirectKeys.size) {
     throw contractError('redirects must cover every non-owner sample path');
   }
@@ -608,14 +640,9 @@ async function runDocumentationHostContract({
     for (const routePath of normalizedContract.ownerRoutes[host]) {
       const expectedCanonical = new URL(routePath, normalizedContract.targets[host]).href;
       const expectedAlternates = {
-        'zh-CN': new URL(
-          sampleLocalePath(routePath.replace(/^\/(?:en|zh-CN)(?=\/|$)/, '/en'), 'zh-CN'),
-          normalizedContract.targets.cn
-        ).href,
-        en: new URL(
-          sampleLocalePath(routePath.replace(/^\/(?:en|zh-CN)(?=\/|$)/, '/en'), 'en'),
-          normalizedContract.targets.io
-        ).href
+        'zh-CN': new URL(routePath, normalizedContract.targets.cn).href,
+        en: new URL(routePath, normalizedContract.targets.io).href,
+        'x-default': new URL(routePath, normalizedContract.targets.io).href
       };
       await run(`owner-${host}-${checks.length + 1}`, host, routePath, (response, body) => {
         const detail = [];
@@ -735,9 +762,8 @@ async function runDocumentationHostContract({
           const url = new URL(urlValue);
           if (url.origin !== normalizedContract.targets[host].origin)
             detail.push('sitemap contains a foreign host');
-          const ownerLocale = `/${DOCUMENTATION_LOCALES[host]}`;
-          if (url.pathname !== ownerLocale && !url.pathname.startsWith(`${ownerLocale}/`)) {
-            detail.push(`sitemap contains a non-owner locale: ${url.pathname}`);
+          if (/^\/(?:zh-CN|en)(?:\/|$)/.test(url.pathname)) {
+            detail.push(`sitemap contains a locale prefix: ${url.pathname}`);
           }
         } catch (error) {
           detail.push(`sitemap URL is invalid: ${error.message}`);

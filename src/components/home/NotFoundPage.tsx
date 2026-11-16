@@ -112,8 +112,8 @@ const localeVisibilityCss = `
 
 function getDocsUrl(lang: LocaleCode) {
   return lang === 'zh'
-    ? 'https://doc.fastgpt.cn/docs/introduction'
-    : 'https://doc.fastgpt.io/docs/introduction';
+    ? 'https://doc.fastgpt.cn/guide/getting-started'
+    : 'https://doc.fastgpt.io/guide/getting-started';
 }
 
 function getStartUrl(lang: LocaleCode) {

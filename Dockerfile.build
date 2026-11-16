@@ -1,0 +1,15 @@
+FROM node:24
+
+WORKDIR /app
+COPY package.json package-lock.json .npmrc ./
+RUN npm ci --no-audit --no-fund
+
+COPY . .
+ENV NEXT_PUBLIC_SITE_VARIANT=cn
+ENV NEXT_PUBLIC_HOME_URL=https://fastgpt.cn
+ENV NEXT_PUBLIC_LANGUAGE_REGION=zh-CN
+ENV NEXT_BUILD_CPUS=2
+
+RUN npm run verify:content-hygiene
+RUN npm run verify:technical-content
+RUN npm run build

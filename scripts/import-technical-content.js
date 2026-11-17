@@ -23,6 +23,7 @@ const OPTIONAL_FRONT_MATTER_KEYS = [
   'is_part_of',
   'meta_title',
   'meta_description',
+  'delivery_metadata',
   'keywords',
   'schema_type',
   'date_published',
@@ -234,6 +235,29 @@ function parseFrontMatter(source, sourcePath, strict = true) {
   };
 }
 
+function validateDeliveryMetadata(metadata, sourcePath) {
+  if (!metadata.delivery_metadata) return;
+  let value;
+  try {
+    value = JSON.parse(metadata.delivery_metadata);
+  } catch {
+    throw new Error(`Schema drift in ${sourcePath}: invalid delivery_metadata JSON`);
+  }
+  assertExactKeys(
+    value,
+    ['source_front_matter', 'editorial_notes'],
+    `${sourcePath} delivery_metadata`
+  );
+  assertObject(value.source_front_matter, `${sourcePath} delivery_metadata.source_front_matter`);
+  if (
+    Object.values(value.source_front_matter).some((item) => typeof item !== 'string') ||
+    !Array.isArray(value.editorial_notes) ||
+    value.editorial_notes.some((item) => typeof item !== 'string')
+  ) {
+    throw new Error(`Schema drift in ${sourcePath}: invalid delivery_metadata fields`);
+  }
+}
+
 function inferSourceType(source) {
   return source.includes('github.com/') ? 'GitHub issue' : '官方文档小节';
 }
@@ -241,7 +265,9 @@ function inferSourceType(source) {
 function readSourceDocument(source, record) {
   const normalized = normalizeLineEndings(source);
   if (normalized.startsWith('---\n')) {
-    return parseFrontMatter(normalized, record.file);
+    const document = parseFrontMatter(normalized, record.file);
+    validateDeliveryMetadata(document.metadata, record.file);
+    return document;
   }
   if (!normalized.trimStart().startsWith('#')) {
     throw new Error(`Schema drift in ${record.file}: missing front matter and Markdown heading`);
@@ -732,12 +758,9 @@ function buildImportPlan({ repoRoot = REPOSITORY_ROOT, sourcePath }) {
       throw new Error(`Schema drift in ${record.file}: title differs from delivery row`);
     if (metadata.source !== record.source)
       throw new Error(`Schema drift in ${record.file}: source differs from delivery row`);
-    const { locale } = parseIdentityFromSlug(metadata.slug, `${record.file} front matter slug`);
+    const identity = parseIdentityFromSlug(metadata.slug, `${record.file} front matter slug`);
+    const { locale } = identity;
     if (!['zh', 'en'].includes(locale)) throw new Error(`Unsupported technical locale: ${locale}`);
-    const identity = {
-      locale,
-      canonicalPath: normalizeCanonicalPath(`/${record.file.slice(0, -3)}`, record.file)
-    };
     const normalized = buildNormalizedTechnicalPage({
       metadata,
       identity,

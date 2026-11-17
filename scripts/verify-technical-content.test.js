@@ -20,6 +20,70 @@ const {
 const root = path.resolve(__dirname, '..');
 const fixture = path.join(root, 'scripts/fixtures/technical-page-delivery');
 
+test('imports localized source files with the same canonical path', () => {
+  const tempRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'technical-content-locales-'));
+  try {
+    const contentRoot = path.join(tempRoot, 'delivery');
+    const source = (locale) => `---
+title: Translation example
+slug: /${locale}/guide/translation-example
+page_type: Guide
+source: https://doc.fastgpt.cn/source
+source_type: 深度场景内容
+date_modified: 2026-11-16
+---
+
+# Translation example
+
+Localized body.`;
+    const accepted = ['zh', 'en'].map((locale) => {
+      const file = `${locale}/guide/translation-example.md`;
+      const filePath = path.join(contentRoot, file);
+      fs.mkdirSync(path.dirname(filePath), { recursive: true });
+      fs.writeFileSync(filePath, source(locale));
+      return {
+        file,
+        prefix: `${locale}/guide`,
+        slug: 'guide/translation-example',
+        title: 'Translation example',
+        pageType: 'Guide',
+        wordCount: 2,
+        sourceCount: 0,
+        source: 'https://doc.fastgpt.cn/source'
+      };
+    });
+    fs.mkdirSync(path.join(tempRoot, 'src/components/tech-center'), { recursive: true });
+    fs.writeFileSync(path.join(tempRoot, 'src/components/tech-center/entries.json'), '[\n]\n');
+    fs.writeFileSync(
+      path.join(contentRoot, 'delivery.json'),
+      `${JSON.stringify({ schemaVersion: 1, accepted, denied: [] }, null, 2)}\n`
+    );
+
+    const plan = buildImportPlan({ repoRoot: tempRoot, sourcePath: contentRoot });
+    assert.deepEqual(
+      plan.pages.map(({ identity, normalizedBodyPath, projection }) => ({
+        identity,
+        normalizedBodyPath,
+        slug: projection.slug
+      })),
+      [
+        {
+          identity: { locale: 'en', canonicalPath: '/guide/translation-example' },
+          normalizedBodyPath: 'src/content/tech-center/en/guide/translation-example.md',
+          slug: '/en/guide/translation-example'
+        },
+        {
+          identity: { locale: 'zh', canonicalPath: '/guide/translation-example' },
+          normalizedBodyPath: 'src/content/tech-center/guide/translation-example.md',
+          slug: '/zh/guide/translation-example'
+        }
+      ]
+    );
+  } finally {
+    fs.rmSync(tempRoot, { recursive: true, force: true });
+  }
+});
+
 test('Guide modification dates survive import and reject invalid dates or metadata drift', () => {
   const repoRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'technical-guide-date-'));
   try {

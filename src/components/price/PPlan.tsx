@@ -219,7 +219,7 @@ export default function PPlan({ langName, locale }: { langName: string; locale: 
                         color: '#020617'
                       }}
                     >
-                      {locale.upgrade}
+                      {item.key === 'free' ? locale.freePlanAction : locale.paidPlanAction}
                     </button>
                   </CloudPlanLink>
                 ) : (

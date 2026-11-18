@@ -8028,5 +8028,45 @@
     "publicPath": "/guide/tool-result-handoff-and-stop",
     "sourceType": "官方文档",
     "minutes": 21
+  },
+  {
+    "identity": "en|/guide/custom-agent-integration-existing-systems",
+    "title": "Custom Agent Integration: Scope, Interfaces and the Order of Work",
+    "description": "Custom Agent Integration: Scope, Interfaces and the Order of Work Custom agent projects rarely fail on the model. They fail on boundaries: which layer cha…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/custom-agent-integration-existing-systems",
+    "sourceType": "深度场景内容",
+    "minutes": 27
+  },
+  {
+    "identity": "en|/guide/perpetual-license-update-and-maintenance-review",
+    "title": "Perpetual Use and Product Updates in a FastGPT Deployment",
+    "description": "Perpetual Use and Product Updates in a FastGPT Deployment For a long-running internal application, separate the right to keep using the software from the…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/perpetual-license-update-and-maintenance-review",
+    "sourceType": "深度场景内容",
+    "minutes": 24
+  },
+  {
+    "identity": "en|/guide/private-deployment-data-flow-and-access-review",
+    "title": "Self-Hosted Deployment: Verifying Data Flow, Model Calls and Tiered Access",
+    "description": "Self-Hosted Deployment: Verifying Data Flow, Model Calls and Tiered Access Self-hosting answers where the software runs. A procurement review has to answe…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/private-deployment-data-flow-and-access-review",
+    "sourceType": "深度场景内容",
+    "minutes": 27
+  },
+  {
+    "identity": "en|/guide/vendor-support-in-project-acceptance",
+    "title": "Technical Support in Project Acceptance: Deployment, Training, Incidents and Upgrades",
+    "description": "Technical Support in Project Acceptance: Deployment, Training, Incidents and Upgrades Support is usually one sentence in a procurement file and five separ…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/vendor-support-in-project-acceptance",
+    "sourceType": "深度场景内容",
+    "minutes": 22
   }
 ]

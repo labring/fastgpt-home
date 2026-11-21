@@ -52,9 +52,13 @@ test('Preview packaging preserves the Worker boundary and rejects corrupted hand
     const options = { trustedConfigPath: path.join(root, 'wrangler.json') };
     const verify = () => verifyPreviewArtifact(bundle, inputs, options);
     assert.equal(verify().kind, 'preview');
+    write('out/index.html', 'changed source');
+    assert.equal(verify().kind, 'preview', 'Default packaging keeps an independent copy');
+    write('out/index.html', 'fixture');
     assert.throws(() => verifySiteArtifact(bundle, inputs), /Unsupported site artifact/);
     assert.throws(() => verifyPreviewArtifact(bundle, { ...inputs, siteVariant: 'cn' }, options));
     write('.release-artifacts/site/preview-disabled/payload/out/index.html', 'tampered');
+    assert.equal(fs.readFileSync(path.join(root, 'out/index.html'), 'utf8'), 'fixture');
     assert.throws(verify, /integrity/);
     write('.release-artifacts/site/preview-disabled/payload/out/index.html', 'fixture');
     const payload = path.join(bundle, 'payload');
@@ -84,6 +88,208 @@ test('Preview packaging preserves the Worker boundary and rejects corrupted hand
   } finally {
     fs.rmSync(root, { recursive: true, force: true });
   }
+});
+
+function previewFixture(t) {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'preview-consume-'));
+  t.after(() => {
+    t.mock.restoreAll();
+    fs.rmSync(root, { recursive: true, force: true });
+  });
+  const out = path.join(root, 'out');
+  fs.mkdirSync(path.join(out, 'nested'), { recursive: true });
+  for (const file of [
+    'index.html',
+    '404.html',
+    'robots.txt',
+    '_worker.js',
+    'nested/article.html'
+  ]) {
+    fs.writeFileSync(path.join(out, file), 'fixture');
+  }
+  fs.writeFileSync(path.join(out, '.assetsignore'), '_worker.js\n');
+  fs.copyFileSync(path.join(__dirname, '../wrangler.json'), path.join(root, 'wrangler.json'));
+  fs.mkdirSync(path.join(root, '.next/cache'), { recursive: true });
+  fs.writeFileSync(
+    path.join(root, '.next/cache/site-identity.json'),
+    JSON.stringify({
+      sourceRevision: 'a'.repeat(40),
+      lockfileDigest: 'b'.repeat(64),
+      siteVariant: 'preview',
+      crmMode: 'disabled',
+      publicSettings: { NEXT_PUBLIC_SITE_VARIANT: 'preview', NEXT_PUBLIC_CRM_API_URL: '' },
+      cnDomainPolicy: 'unchanged'
+    })
+  );
+  const bundle = packagePreviewArtifact(root);
+  const manifest = JSON.parse(fs.readFileSync(path.join(bundle, 'manifest.json')));
+  const verify = () =>
+    verifyPreviewArtifact(bundle, manifest.publicationInputs, {
+      trustedConfigPath: path.join(root, 'wrangler.json')
+    });
+  return { root, out, bundle, manifest, verify };
+}
+
+test('consuming a Preview export moves files without changing the publication contract', (t) => {
+  const { root, out, bundle, manifest, verify } = previewFixture(t);
+  const before = fs.statSync(path.join(out, 'nested/article.html'));
+  const copy = fs.cpSync;
+  t.mock.method(fs, 'cpSync', (source, ...args) => {
+    assert.notEqual(source, out, 'Consuming the export must not copy its tree');
+    return copy(source, ...args);
+  });
+  assert.equal(
+    packagePreviewArtifact(root, { buildSeconds: 12.5 }, { consumeExport: true }),
+    bundle
+  );
+  assert.equal(fs.existsSync(out), false);
+  const after = fs.statSync(path.join(bundle, 'payload/out/nested/article.html'));
+  assert.equal(after.dev, before.dev);
+  assert.equal(after.ino, before.ino, 'The file is moved, not copied or reconstructed');
+  const consumedManifest = verify();
+  assert.equal(consumedManifest.inventory.sha256, manifest.inventory.sha256);
+  assert.deepEqual(consumedManifest.publicationInputs, manifest.publicationInputs);
+  assert.deepEqual(consumedManifest.metrics, {
+    buildSeconds: 12.5,
+    artifactFiles: 6,
+    artifactBytes: 46,
+    htmlFiles: 3,
+    htmlBytes: 21
+  });
+  assert.equal(
+    fs.readFileSync(path.join(bundle, 'payload/out/.assetsignore'), 'utf8'),
+    '_worker.js\n'
+  );
+  assert.deepEqual(fs.readdirSync(path.dirname(bundle)), ['preview-disabled']);
+});
+
+test('a packaging failure restores the consumed export and leaves the previous Preview intact', (t) => {
+  const { root, out, bundle, manifest, verify } = previewFixture(t);
+  fs.writeFileSync(path.join(out, 'index.html'), 'new export');
+  const copy = fs.copyFileSync;
+  t.mock.method(fs, 'copyFileSync', (source, ...args) => {
+    if (source === path.join(root, 'wrangler.json')) throw new Error('Injected metadata failure');
+    return copy(source, ...args);
+  });
+  assert.throws(
+    () => packagePreviewArtifact(root, undefined, { consumeExport: true }),
+    /metadata failure/
+  );
+  assert.equal(fs.readFileSync(path.join(out, 'index.html'), 'utf8'), 'new export');
+  assert.deepEqual(verify().inventory, manifest.inventory);
+  assert.deepEqual(fs.readdirSync(path.dirname(bundle)), ['preview-disabled']);
+});
+
+test('a final rename failure restores both the export and the previous Preview', (t) => {
+  const { root, out, bundle, manifest, verify } = previewFixture(t);
+  fs.writeFileSync(path.join(out, 'index.html'), 'replacement');
+  const rename = fs.renameSync;
+  t.mock.method(fs, 'renameSync', (source, destination) => {
+    if (destination === bundle && !source.endsWith('.previous')) {
+      throw new Error('Injected installation failure');
+    }
+    return rename(source, destination);
+  });
+  assert.throws(
+    () => packagePreviewArtifact(root, undefined, { consumeExport: true }),
+    /installation failure/
+  );
+  assert.equal(fs.readFileSync(path.join(out, 'index.html'), 'utf8'), 'replacement');
+  assert.deepEqual(verify().inventory, manifest.inventory);
+  assert.deepEqual(fs.readdirSync(path.dirname(bundle)), ['preview-disabled']);
+});
+
+test('cross-filesystem consumption fails without copying or changing either export', (t) => {
+  const { root, out, bundle, manifest, verify } = previewFixture(t);
+  const rename = fs.renameSync;
+  t.mock.method(fs, 'renameSync', (source, destination) => {
+    if (source === out) throw Object.assign(new Error('Cross-device link'), { code: 'EXDEV' });
+    return rename(source, destination);
+  });
+  t.mock.method(fs, 'cpSync', () => assert.fail('Must not fall back to a full export copy'));
+  assert.throws(() => packagePreviewArtifact(root, undefined, { consumeExport: true }), {
+    code: 'EXDEV',
+    message: /same filesystem/
+  });
+  assert.equal(fs.readFileSync(path.join(out, 'index.html'), 'utf8'), 'fixture');
+  assert.deepEqual(verify().inventory, manifest.inventory);
+  assert.deepEqual(fs.readdirSync(path.dirname(bundle)), ['preview-disabled']);
+});
+
+test('failed export recovery retains its only copy and reports the recovery location', (t) => {
+  const { root, out, bundle, manifest, verify } = previewFixture(t);
+  fs.writeFileSync(path.join(out, 'index.html'), 'only new copy');
+  let retainedOut;
+  const rename = fs.renameSync;
+  t.mock.method(fs, 'renameSync', (source, destination) => {
+    if (source === out) retainedOut = destination;
+    if (destination === out) throw new Error('Injected recovery failure');
+    return rename(source, destination);
+  });
+  t.mock.method(fs, 'copyFileSync', () => {
+    throw new Error('Injected metadata failure');
+  });
+  assert.throws(
+    () => packagePreviewArtifact(root, undefined, { consumeExport: true }),
+    (error) => {
+      assert(error instanceof AggregateError);
+      assert(error.message.includes(retainedOut));
+      assert.match(error.message, /metadata failure/);
+      assert.match(error.message, /recovery failure/);
+      return true;
+    }
+  );
+  assert.equal(fs.existsSync(out), false);
+  assert.equal(fs.readFileSync(path.join(retainedOut, 'index.html'), 'utf8'), 'only new copy');
+  assert.deepEqual(verify().inventory, manifest.inventory);
+  assert(fs.existsSync(bundle));
+});
+
+test('failed rollback of the previous Preview preserves its recoverable directory', (t) => {
+  const { root, out, bundle, manifest } = previewFixture(t);
+  const rename = fs.renameSync;
+  let previous;
+  t.mock.method(fs, 'renameSync', (source, destination) => {
+    if (source === bundle) previous = destination;
+    if (destination === bundle) throw new Error('Injected installation and rollback failure');
+    return rename(source, destination);
+  });
+  assert.throws(
+    () => packagePreviewArtifact(root, undefined, { consumeExport: true }),
+    (error) => {
+      assert(error instanceof AggregateError);
+      assert(error.message.includes(previous));
+      return true;
+    }
+  );
+  assert.equal(fs.readFileSync(path.join(out, 'index.html'), 'utf8'), 'fixture');
+  assert.deepEqual(JSON.parse(fs.readFileSync(path.join(previous, 'manifest.json'))), manifest);
+  assert.equal(fs.existsSync(bundle), false);
+});
+
+test('failure to remove the old backup cannot undo an installed Preview', (t) => {
+  const { root, out, bundle, verify } = previewFixture(t);
+  fs.writeFileSync(path.join(out, 'index.html'), 'accepted replacement');
+  const remove = fs.rmSync;
+  let previous;
+  const warnings = [];
+  t.mock.method(console, 'warn', (message) => warnings.push(message));
+  t.mock.method(fs, 'rmSync', (directory, ...args) => {
+    if (directory.endsWith('.previous')) {
+      previous = directory;
+      throw new Error('Injected backup cleanup failure');
+    }
+    return remove(directory, ...args);
+  });
+  assert.equal(packagePreviewArtifact(root, undefined, { consumeExport: true }), bundle);
+  assert.equal(fs.existsSync(out), false);
+  assert.equal(verify().kind, 'preview');
+  assert.equal(
+    fs.readFileSync(path.join(bundle, 'payload/out/index.html'), 'utf8'),
+    'accepted replacement'
+  );
+  assert.equal(fs.readFileSync(path.join(previous, 'payload/out/index.html'), 'utf8'), 'fixture');
+  assert(warnings.some((message) => message.includes(previous)));
 });
 
 test('new Preview provenance binds automatic and manual deployments to the selected run', async () => {

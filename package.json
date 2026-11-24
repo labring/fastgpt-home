@@ -89,6 +89,8 @@
     "verify:customers-search": "node scripts/verify-customers-search.js",
     "verify:customers-export": "node scripts/verify-customers-export.js",
     "verify:llms": "node scripts/verify-llms.js",
+    "indexnow:submit": "node scripts/submit-indexnow.js",
+    "verify:indexnow": "node --test scripts/verify-indexnow.test.js",
     "verify:site-artifact": "node --test scripts/verify-site-artifact.test.js scripts/verify-preview-artifact.test.js",
     "verify:learning-center": "node scripts/verify-learning-center.js",
     "verify:video-schema": "node scripts/verify-video-schema.js",

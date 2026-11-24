@@ -78,6 +78,14 @@ jobs:
           node -e "const {getPublicationInputs,siteArtifactIdentity}=require('./scripts/lib/site-artifact-identity');require('node:fs').writeFileSync('expected-site.json', JSON.stringify(getPublicationInputs(siteArtifactIdentity())))"
           node scripts/verify-site-artifact.js --bundle .release-artifacts/site/io-configured --identity expected-site.json --trusted-config wrangler.production.json
 
+      - name: Snapshot live IO sitemap before deploy
+        run: |
+          node scripts/submit-indexnow.js \
+            --snapshot-live \
+            --variant io \
+            --out .release-artifacts/indexnow-io-before.json \
+            --soft-fail
+
       - name: Deploy verified Worker and Static Assets to fastgpt.io
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_WORKER_API_TOKEN }}
@@ -121,6 +129,26 @@ jobs:
           };
           fs.writeFileSync('.release-artifacts/worker-deployment.json', `${JSON.stringify(record, null, 2)}\n`);
           NODE
+
+      - name: Submit changed IO URLs to IndexNow
+        env:
+          GIT_BEFORE_SHA: ${{ github.event.before }}
+          GIT_HEAD_SHA: ${{ github.sha }}
+        run: |
+          if [[ "$GIT_BEFORE_SHA" =~ ^[a-f0-9]{40}$ ]] && [[ ! "$GIT_BEFORE_SHA" =~ ^0+$ ]]; then
+            git fetch --no-tags --depth=1 origin "$GIT_BEFORE_SHA" || true
+          fi
+          node scripts/submit-indexnow.js \
+            --mode diff \
+            --variant io \
+            --out-dir .release-artifacts/site/io-configured/payload/out \
+            --before-snapshot .release-artifacts/indexnow-io-before.json \
+            --git-base "$GIT_BEFORE_SHA" \
+            --git-head "$GIT_HEAD_SHA" \
+            --max-urls 10000 \
+            --chunk-size 2000 \
+            --receipt-out .release-artifacts/indexnow-io-receipt.json \
+            --soft-fail
 
       - name: Retain the verified release unit and deployment evidence
         if: always()

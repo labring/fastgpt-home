@@ -15,6 +15,7 @@ const {
   readUrlAliasAuthority
 } = require('./lib/url-alias-authority');
 const { getPublishedLocaleCodes, localeCodes, resolveSiteVariant } = require('./lib/site-variant');
+const { emitIndexNowKeyFile } = require('./lib/indexnow');
 
 const rootDir = path.join(__dirname, '..');
 const outDir = path.join(rootDir, 'out');
@@ -146,8 +147,10 @@ if (variant === 'preview') {
   fs.writeFileSync(path.join(outDir, '.assetsignore'), '_worker.js\n');
 }
 
+const indexnow = emitIndexNowKeyFile(outDir, variant);
+
 console.log(
   `[clean-locale-output] variant=${variant}; kept=${[...allowedLocales].join(
     ','
-  )}; removed=${removed}; previewHtmlPatched=${previewHtmlPatched}`
+  )}; removed=${removed}; previewHtmlPatched=${previewHtmlPatched}; indexnow=${indexnow.keyFileName || 'disabled'}`
 );

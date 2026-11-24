@@ -1,14 +1,20 @@
 #!/usr/bin/env node
+/**
+ * IndexNow submission CLI for fastgpt.cn (cn) and fastgpt.io (io).
+ * Keys live in scripts/lib/site-variant.js (INDEXNOW_KEYS) and are written to out/<key>.txt by clean-locale-output.js.
+ * Usage:
+ *   node scripts/submit-indexnow.js --snapshot --variant <cn|io> --out <file>
+ *   node scripts/submit-indexnow.js --diff --variant <cn|io> --out-dir <dir> --before <file> [--dry-run]
+ *   node scripts/submit-indexnow.js --submit --variant <cn|io> --urls "https://..." [--dry-run]
+ */
 
 const fs = require('node:fs');
 const path = require('node:path');
-const indexnowKeys = require('../src/config/indexnow.json');
-const { getProductionBaseUrls } = require('./lib/site-variant');
-const { bucketForLoc, parseSitemapIndex, parseUrlset } = require('./split-sitemap');
+const { parseArgs } = require('node:util');
+const { INDEXNOW_KEYS, getProductionBaseUrls } = require('./lib/site-variant');
 
 const INDEXNOW_ENDPOINT = 'https://api.indexnow.org/indexnow';
-const MAX_URLS_PER_BATCH = 10_000;
-const ISO_DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
+const MAX_URLS = 10_000;
 
 function sleep(ms) {
   return ms > 0 ? new Promise((resolve) => setTimeout(resolve, ms)) : Promise.resolve();
@@ -16,19 +22,27 @@ function sleep(ms) {
 
 function isEligibleUrl(rawUrl, host) {
   try {
-    const parsed = new URL(String(rawUrl).trim());
-    if (parsed.protocol !== 'https:' || parsed.hostname !== host || parsed.search || parsed.hash) {
-      return false;
-    }
-    const pathname = parsed.pathname.toLowerCase();
-    if (/^\/(?:[a-z]{2}(?:-[a-z0-9]+)?\/)?ads(?:\/|$)/.test(pathname)) return false;
-    if (pathname === '/_next' || pathname.startsWith('/_next/')) return false;
-    return !/\.(?:txt|xml|json|md|gz|ico|png|svg|jpe?g|webp|avif|gif|js|css|woff2?|map)$/.test(
-      pathname
-    );
+    const { protocol, hostname, search, hash } = new URL(String(rawUrl).trim());
+    return protocol === 'https:' && hostname === host && !search && !hash;
   } catch {
     return false;
   }
+}
+
+function isIndustryUrl(url) {
+  const segments = new URL(url).pathname.split('/').filter(Boolean);
+  const index = segments.indexOf('industry');
+  return index >= 0 && index < segments.length - 1;
+}
+
+function decodeXmlText(value) {
+  return value
+    .trim()
+    .replaceAll('&amp;', '&')
+    .replaceAll('&lt;', '<')
+    .replaceAll('&gt;', '>')
+    .replaceAll('&quot;', '"')
+    .replaceAll('&apos;', "'");
 }
 
 function withCacheBuster(rawUrl, stamp) {
@@ -37,42 +51,27 @@ function withCacheBuster(rawUrl, stamp) {
   return parsed.href;
 }
 
-function extractLastmods(xml, site, host) {
-  const { entries } = parseUrlset(xml, site);
-  const result = {};
-  for (const entry of entries) {
-    if (!isEligibleUrl(entry.loc, host)) continue;
-    const match = entry.xml.match(/<lastmod\b[^>]*>([^<]+)<\/lastmod>/i);
-    result[entry.loc] = match ? match[1].trim() : null;
-  }
-  return result;
-}
-
-async function fetchText(
+async function fetchWithRetry(
   url,
+  init = {},
   { fetchImpl = globalThis.fetch, retries = 2, retryDelayMs = 500, timeoutMs = 15_000 } = {}
 ) {
   let lastError;
   for (let attempt = 0; attempt <= retries; attempt += 1) {
     try {
       const response = await fetchImpl(url, {
-        method: 'GET',
-        cache: 'no-store',
-        headers: {
-          'cache-control': 'no-cache',
-          'user-agent': 'FastGPT-IndexNow-CI/1.0'
-        },
+        ...init,
+        headers: { 'user-agent': 'FastGPT-IndexNow-CI/1.0', ...init.headers },
         signal: AbortSignal.timeout(timeoutMs)
       });
-      if (response.status === 429 || response.status >= 500) {
-        throw new Error(`HTTP ${response.status} fetching ${url}`);
-      }
-      if (!response.ok) {
-        const error = new Error(`HTTP ${response.status} fetching ${url}`);
+      if (response.ok) return response;
+      const detail = (await response.text().catch(() => '')).slice(0, 200);
+      const error = new Error(`HTTP ${response.status}${detail ? `: ${detail}` : ''}`);
+      error.status = response.status;
+      if (response.status !== 429 && response.status < 500) {
         error.nonRetryable = true;
-        throw error;
       }
-      return await response.text();
+      throw error;
     } catch (error) {
       lastError = error;
       if (error.nonRetryable || attempt >= retries) break;
@@ -82,45 +81,35 @@ async function fetchText(
   throw lastError;
 }
 
-async function fetchLiveSitemap(baseUrl, options = {}) {
-  const origin = new URL(baseUrl).origin;
-  const host = new URL(baseUrl).hostname;
-  const stamp = options.stamp ?? Date.now();
-  const rootXml = await fetchText(withCacheBuster(`${origin}/sitemap.xml`, stamp), options);
+async function loadSitemap(readXml, baseUrl) {
+  const { origin, hostname: host } = new URL(baseUrl);
+  const rootXml = await readXml(`${origin}/sitemap.xml`);
+  let urlsetXmls = [rootXml];
 
-  if (!/<sitemapindex\b/.test(rootXml)) {
-    return extractLastmods(rootXml, origin, host);
-  }
-
-  const shardUrls = parseSitemapIndex(rootXml, origin);
-  const shardXmls = await Promise.all(
-    shardUrls.map((shardUrl) => fetchText(withCacheBuster(shardUrl, stamp), options))
-  );
-  const entries = {};
-  for (const xml of shardXmls) {
-    Object.assign(entries, extractLastmods(xml, origin, host));
-  }
-  return entries;
-}
-
-function readLocalSitemap(outDir, baseUrl) {
-  const resolvedOut = path.resolve(outDir);
-  const origin = new URL(baseUrl).origin;
-  const host = new URL(baseUrl).hostname;
-  const rootXml = fs.readFileSync(path.join(resolvedOut, 'sitemap.xml'), 'utf8');
-
-  if (!/<sitemapindex\b/.test(rootXml)) {
-    return extractLastmods(rootXml, origin, host);
-  }
-
-  const entries = {};
-  for (const shardUrl of parseSitemapIndex(rootXml, origin)) {
-    const relPath = new URL(shardUrl).pathname.replace(/^\/+/, '');
-    const shardPath = path.resolve(resolvedOut, relPath);
-    if (!shardPath.startsWith(`${resolvedOut}${path.sep}`)) {
-      throw new Error(`Refusing shard path outside outDir: ${relPath}`);
+  if (/<sitemapindex\b/i.test(rootXml)) {
+    const shardUrls = [];
+    for (const match of rootXml.matchAll(/<sitemap\b[\s\S]*?<loc\b[^>]*>([\s\S]*?)<\/loc>/gi)) {
+      const shardUrl = decodeXmlText(match[1]);
+      if (new URL(shardUrl).origin !== origin) {
+        throw new Error(`Sitemap shard uses another origin: ${shardUrl}`);
+      }
+      shardUrls.push(shardUrl);
     }
-    Object.assign(entries, extractLastmods(fs.readFileSync(shardPath, 'utf8'), origin, host));
+    if (!shardUrls.length) throw new Error(`Sitemap index has no shards for ${origin}`);
+    urlsetXmls = await Promise.all(shardUrls.map((shardUrl) => readXml(shardUrl)));
+  }
+
+  const entries = {};
+  for (const xml of urlsetXmls) {
+    for (const match of xml.matchAll(/<url\b[\s\S]*?<\/url>/gi)) {
+      const block = match[0];
+      const locMatch = block.match(/<loc\b[^>]*>([\s\S]*?)<\/loc>/i);
+      if (!locMatch) continue;
+      const loc = decodeXmlText(locMatch[1]);
+      if (!isEligibleUrl(loc, host)) continue;
+      const lastmodMatch = block.match(/<lastmod\b[^>]*>([\s\S]*?)<\/lastmod>/i);
+      entries[loc] = lastmodMatch ? decodeXmlText(lastmodMatch[1]) : null;
+    }
   }
   return entries;
 }
@@ -139,7 +128,7 @@ function diffSitemaps(before = {}, after = {}) {
   return { added, modified, removed };
 }
 
-function prioritizeAndCap(urls, host, limit = MAX_URLS_PER_BATCH) {
+function selectPrioritizedUrls(urls, host) {
   const seen = new Set();
   const eligible = [];
   for (const rawUrl of urls) {
@@ -148,43 +137,9 @@ function prioritizeAndCap(urls, host, limit = MAX_URLS_PER_BATCH) {
     seen.add(url);
     eligible.push(url);
   }
-
-  eligible.sort(
-    (left, right) =>
-      (bucketForLoc(left) === 'industry' ? 1 : 0) - (bucketForLoc(right) === 'industry' ? 1 : 0)
-  );
-
-  const cap = Number.isFinite(limit) && limit > 0 ? Math.floor(limit) : 0;
-  const capped = cap > 0 ? eligible.slice(0, cap) : eligible;
+  eligible.sort((left, right) => (isIndustryUrl(left) ? 1 : 0) - (isIndustryUrl(right) ? 1 : 0));
+  const capped = eligible.slice(0, MAX_URLS);
   return { urls: capped, total: eligible.length, truncated: eligible.length - capped.length };
-}
-
-function selectSubmitUrls({ since, urls, entries = {}, host, limit = MAX_URLS_PER_BATCH }) {
-  if (urls !== undefined) {
-    const list = (Array.isArray(urls) ? urls : String(urls).split(/[\s,]+/))
-      .map((entry) => entry.trim())
-      .filter(Boolean);
-    if (!list.length) throw new Error('--urls must contain at least one URL');
-    const invalid = list.filter((entry) => !isEligibleUrl(entry, host));
-    if (invalid.length) {
-      throw new Error(`Invalid or out-of-scope URL(s) for ${host}: ${invalid.slice(0, 5).join(', ')}`);
-    }
-    return prioritizeAndCap(list, host, limit);
-  }
-
-  if (since !== undefined) {
-    const cutoff = String(since).trim();
-    if (!ISO_DATE_RE.test(cutoff)) {
-      throw new Error(`Invalid --since "${since}": expected YYYY-MM-DD`);
-    }
-    const matched = Object.entries(entries)
-      .filter(([, lastmod]) => typeof lastmod === 'string' && lastmod.slice(0, 10) >= cutoff)
-      .sort(([, left], [, right]) => (right || '').slice(0, 10).localeCompare((left || '').slice(0, 10)))
-      .map(([url]) => url);
-    return prioritizeAndCap(matched, host, limit);
-  }
-
-  throw new Error('--submit requires --since YYYY-MM-DD or --urls "..."');
 }
 
 async function postIndexNow({
@@ -194,176 +149,111 @@ async function postIndexNow({
   urls,
   endpoint = INDEXNOW_ENDPOINT,
   dryRun = false,
-  fetchImpl = globalThis.fetch,
-  retries = 2,
-  retryDelayMs = 1_000,
-  timeoutMs = 15_000
+  ...fetchOpts
 }) {
-  if (!urls.length) return { status: 'skipped', planned: 0, submitted: 0, statuses: [] };
-  if (dryRun) return { status: 'dry-run', planned: urls.length, submitted: 0, statuses: [] };
-
-  let submitted = 0;
-  const statuses = [];
-  for (let offset = 0; offset < urls.length; offset += MAX_URLS_PER_BATCH) {
-    const batch = urls.slice(offset, offset + MAX_URLS_PER_BATCH);
-    let batchStatus = null;
-    let lastError = null;
-    let ok = false;
-
-    for (let attempt = 0; attempt <= retries; attempt += 1) {
-      try {
-        const response = await fetchImpl(endpoint, {
-          method: 'POST',
-          headers: {
-            'content-type': 'application/json; charset=utf-8',
-            'user-agent': 'FastGPT-IndexNow-CI/1.0'
-          },
-          body: JSON.stringify({ host, key, keyLocation, urlList: batch }),
-          signal: AbortSignal.timeout(timeoutMs)
-        });
-        batchStatus = response.status;
-        if (response.status >= 200 && response.status < 300) {
-          ok = true;
-          submitted += batch.length;
-          break;
-        }
-        const detail = (await response.text().catch(() => '')).slice(0, 200);
-        lastError = `HTTP ${response.status}${detail ? `: ${detail}` : ''}`;
-        if (response.status !== 429 && response.status < 500) break;
-      } catch (error) {
-        batchStatus = null;
-        lastError = error.message;
-      }
-      if (attempt < retries) await sleep(retryDelayMs * 2 ** attempt);
-    }
-
-    statuses.push(batchStatus);
-    if (!ok) {
-      return { status: 'failed', planned: urls.length, submitted, statuses, error: lastError };
-    }
+  if (!urls.length) return { status: 'skipped', planned: 0, submitted: 0, httpStatus: null };
+  if (urls.length > MAX_URLS) {
+    throw new Error(`IndexNow single batch limit is ${MAX_URLS}, received ${urls.length}`);
   }
+  if (dryRun) return { status: 'dry-run', planned: urls.length, submitted: 0, httpStatus: null };
 
-  return { status: 'submitted', planned: urls.length, submitted, statuses };
-}
-
-function parseArgs(argv) {
-  const options = {
-    mode: undefined,
-    variant: undefined,
-    out: undefined,
-    outDir: undefined,
-    before: undefined,
-    since: undefined,
-    urls: undefined,
-    limit: MAX_URLS_PER_BATCH,
-    dryRun: false,
-    softFail: false
-  };
-
-  for (let index = 0; index < argv.length; index += 1) {
-    const token = argv[index];
-    const readVal = () => {
-      const value = argv[++index];
-      if (value === undefined || value.startsWith('--')) {
-        throw new Error(`${token} requires a value`);
-      }
-      return value;
+  try {
+    const response = await fetchWithRetry(
+      endpoint,
+      {
+        method: 'POST',
+        headers: { 'content-type': 'application/json; charset=utf-8' },
+        body: JSON.stringify({ host, key, keyLocation, urlList: urls })
+      },
+      { retryDelayMs: 1_000, ...fetchOpts }
+    );
+    return { status: 'submitted', planned: urls.length, submitted: urls.length, httpStatus: response.status };
+  } catch (error) {
+    return {
+      status: 'failed',
+      planned: urls.length,
+      submitted: 0,
+      httpStatus: error.status ?? null,
+      error: error.message
     };
-
-    if (token === '--snapshot' || token === '--diff' || token === '--submit') {
-      if (options.mode) throw new Error(`Conflicting modes: --${options.mode} and ${token}`);
-      options.mode = token.slice(2);
-    } else if (token === '--variant') options.variant = readVal();
-    else if (token === '--out') options.out = readVal();
-    else if (token === '--out-dir') options.outDir = readVal();
-    else if (token === '--before') options.before = readVal();
-    else if (token === '--since') options.since = readVal();
-    else if (token === '--urls') options.urls = readVal();
-    else if (token === '--limit') options.limit = Number(readVal());
-    else if (token === '--dry-run') options.dryRun = true;
-    else if (token === '--soft-fail') options.softFail = true;
-    else throw new Error(`Unknown argument: ${token}`);
   }
-
-  return options;
 }
 
 async function main(argv = process.argv.slice(2), deps = {}) {
-  const options = parseArgs(argv);
-  if (!options.mode) throw new Error('Specify one mode: --snapshot, --diff, or --submit');
-  if (!Object.hasOwn(indexnowKeys, options.variant || '')) {
-    throw new Error(`--variant must be one of: ${Object.keys(indexnowKeys).join(', ')}`);
+  const { values } = parseArgs({
+    args: argv,
+    strict: true,
+    allowPositionals: false,
+    options: {
+      snapshot: { type: 'boolean' },
+      diff: { type: 'boolean' },
+      submit: { type: 'boolean' },
+      variant: { type: 'string' },
+      out: { type: 'string' },
+      'out-dir': { type: 'string' },
+      before: { type: 'string' },
+      urls: { type: 'string' },
+      'dry-run': { type: 'boolean' }
+    }
+  });
+
+  const modes = ['snapshot', 'diff', 'submit'].filter((name) => values[name]);
+  if (modes.length !== 1) throw new Error('Specify exactly one mode: --snapshot, --diff, or --submit');
+  const mode = modes[0];
+  if (!Object.hasOwn(INDEXNOW_KEYS, values.variant || '')) {
+    throw new Error(`--variant must be one of: ${Object.keys(INDEXNOW_KEYS).join(', ')}`);
   }
 
-  const key = indexnowKeys[options.variant];
-  const baseUrl = getProductionBaseUrls()[options.variant];
+  const key = INDEXNOW_KEYS[values.variant];
+  const baseUrl = getProductionBaseUrls()[values.variant];
   const host = new URL(baseUrl).hostname;
   const keyLocation = `${baseUrl}/${key}.txt`;
-  const failOrWarn = (message) => {
-    if (options.softFail) {
-      console.warn(`::warning::${message}`);
-      return 0;
-    }
-    console.error(message);
-    return 1;
-  };
 
-  if (options.mode === 'snapshot') {
-    if (!options.out) throw new Error('--snapshot requires --out <file>');
-    try {
-      const snapshot = await fetchLiveSitemap(baseUrl, deps);
-      const outPath = path.resolve(options.out);
-      fs.mkdirSync(path.dirname(outPath), { recursive: true });
-      fs.writeFileSync(outPath, `${JSON.stringify(snapshot, null, 2)}\n`, 'utf8');
-      console.log(`[indexnow] snapshot variant=${options.variant} urls=${Object.keys(snapshot).length}`);
-      return 0;
-    } catch (error) {
-      return failOrWarn(`[indexnow] snapshot failed for ${baseUrl}: ${error.message}`);
-    }
+  if (mode === 'snapshot') {
+    if (!values.out) throw new Error('--snapshot requires --out <file>');
+    const stamp = deps.stamp ?? Date.now();
+    const readRemote = async (url) => {
+      const response = await fetchWithRetry(
+        withCacheBuster(url, stamp),
+        { method: 'GET', cache: 'no-store', headers: { 'cache-control': 'no-cache' } },
+        deps
+      );
+      return response.text();
+    };
+    const snapshot = await loadSitemap(readRemote, baseUrl);
+    const outPath = path.resolve(values.out);
+    fs.mkdirSync(path.dirname(outPath), { recursive: true });
+    fs.writeFileSync(outPath, `${JSON.stringify(snapshot, null, 2)}\n`, 'utf8');
+    console.log(`[indexnow] snapshot variant=${values.variant} urls=${Object.keys(snapshot).length}`);
+    return 0;
   }
 
   let selected;
-  if (options.mode === 'diff') {
-    if (!options.outDir || !options.before) {
+  if (mode === 'diff') {
+    if (!values['out-dir'] || !values.before) {
       throw new Error('--diff requires --out-dir <dir> and --before <file>');
     }
-    const beforePath = path.resolve(options.before);
-    if (!fs.existsSync(beforePath)) {
-      console.warn(`[indexnow] Missing pre-deploy snapshot ${beforePath}; skipping diff submission`);
-      return 0;
-    }
-    let before;
-    try {
-      before = JSON.parse(fs.readFileSync(beforePath, 'utf8'));
-    } catch (error) {
-      console.warn(`[indexnow] Unreadable pre-deploy snapshot ${beforePath} (${error.message}); skipping`);
-      return 0;
-    }
+    const beforePath = path.resolve(values.before);
+    const before = JSON.parse(fs.readFileSync(beforePath, 'utf8'));
     if (!before || typeof before !== 'object' || Array.isArray(before)) {
-      console.warn(`[indexnow] Invalid pre-deploy snapshot ${beforePath}; skipping`);
-      return 0;
+      throw new Error(`Invalid pre-deploy snapshot: ${beforePath}`);
     }
-    const after = readLocalSitemap(options.outDir, baseUrl);
-    const diff = diffSitemaps(before, after);
-    selected = prioritizeAndCap(
-      [...diff.added, ...diff.modified, ...diff.removed],
-      host,
-      options.limit
+    const resolvedOut = path.resolve(values['out-dir']);
+    const after = await loadSitemap(
+      (url) => fs.readFileSync(path.join(resolvedOut, new URL(url).pathname.replace(/^\/+/, '')), 'utf8'),
+      baseUrl
     );
+    const diff = diffSitemaps(before, after);
+    selected = selectPrioritizedUrls([...diff.added, ...diff.modified, ...diff.removed], host);
   } else {
-    const entries =
-      options.urls !== undefined
-        ? {}
-        : options.outDir
-          ? readLocalSitemap(options.outDir, baseUrl)
-          : await fetchLiveSitemap(baseUrl, deps);
-    selected = selectSubmitUrls({
-      since: options.since,
-      urls: options.urls,
-      entries,
-      host,
-      limit: options.limit
-    });
+    if (!values.urls) throw new Error('--submit requires --urls "..."');
+    const list = values.urls.split(/[\s,]+/).filter(Boolean);
+    if (!list.length) throw new Error('--urls must contain at least one URL');
+    const invalid = list.filter((entry) => !isEligibleUrl(entry, host));
+    if (invalid.length) {
+      throw new Error(`Invalid or out-of-scope URL(s) for ${host}: ${invalid.slice(0, 5).join(', ')}`);
+    }
+    selected = selectPrioritizedUrls(list, host);
   }
 
   const result = await postIndexNow({
@@ -371,26 +261,23 @@ async function main(argv = process.argv.slice(2), deps = {}) {
     key,
     keyLocation,
     urls: selected.urls,
-    dryRun: options.dryRun,
+    dryRun: Boolean(values['dry-run']),
     ...deps
   });
 
   if (selected.truncated > 0) {
-    console.warn(
-      `[indexnow] truncated ${selected.truncated} URL(s) above limit=${options.limit} (total=${selected.total})`
-    );
+    console.warn(`[indexnow] truncated ${selected.truncated} URL(s) above limit=${MAX_URLS} (total=${selected.total})`);
   }
   console.log(
-    `[indexnow] variant=${options.variant} mode=${options.mode} status=${result.status} planned=${result.planned} submitted=${result.submitted} truncated=${selected.truncated}`
+    `[indexnow] variant=${values.variant} mode=${mode} status=${result.status} planned=${result.planned} submitted=${result.submitted} truncated=${selected.truncated}`
   );
-  if (selected.urls.length) {
-    for (const sample of selected.urls.slice(0, 10)) {
-      console.log(`  - ${sample}`);
-    }
+  for (const sample of selected.urls.slice(0, 10)) {
+    console.log(`  - ${sample}`);
   }
 
   if (result.status === 'failed') {
-    return failOrWarn(`[indexnow] submit failed for ${host}: ${result.error}`);
+    console.error(`[indexnow] submit failed for ${host}: ${result.error}`);
+    return 1;
   }
   return 0;
 }
@@ -401,29 +288,16 @@ if (require.main === module) {
       process.exitCode = code;
     },
     (error) => {
-      if (process.argv.includes('--soft-fail')) {
-        console.warn(`::warning::[indexnow] ${error.message}`);
-        process.exitCode = 0;
-      } else {
-        console.error(`[indexnow] ${error.message}`);
-        process.exitCode = 1;
-      }
+      console.error(`[indexnow] ${error.message}`);
+      process.exitCode = 1;
     }
   );
 }
 
 module.exports = {
   INDEXNOW_ENDPOINT,
-  MAX_URLS_PER_BATCH,
   diffSitemaps,
-  extractLastmods,
-  fetchLiveSitemap,
-  isEligibleUrl,
+  loadSitemap,
   main,
-  parseArgs,
-  postIndexNow,
-  prioritizeAndCap,
-  readLocalSitemap,
-  selectSubmitUrls,
-  withCacheBuster
+  postIndexNow
 };

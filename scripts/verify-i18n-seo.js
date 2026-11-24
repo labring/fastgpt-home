@@ -9,13 +9,13 @@ const {
   parseNginxRedirectMap
 } = require('./lib/redirects');
 const {
+  INDEXNOW_KEYS,
   getCanonicalBaseUrl,
   getDefaultLocale,
   getPublishedLocaleCodes,
   getProductionBaseUrls,
   resolveSiteVariant
 } = require('./lib/site-variant');
-const indexnowKeys = require('../src/config/indexnow.json');
 const { locales } = require('../src/config/site-routing.json');
 const guideRegistry = require('../src/content/guides/registry.json').entries;
 
@@ -226,7 +226,7 @@ function verifyRobotsFile() {
 }
 
 function verifyIndexNowKeyFile() {
-  for (const [owner, key] of Object.entries(indexnowKeys)) {
+  for (const [owner, key] of Object.entries(INDEXNOW_KEYS)) {
     const keyPath = path.join(outDir, `${key}.txt`);
     if (owner === variant) {
       assert(

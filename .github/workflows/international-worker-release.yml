@@ -79,7 +79,8 @@ jobs:
           node scripts/verify-site-artifact.js --bundle .release-artifacts/site/io-configured --identity expected-site.json --trusted-config wrangler.production.json
 
       - name: Snapshot live IO sitemap before deploy
-        run: node scripts/submit-indexnow.js --snapshot --variant io --out .release-artifacts/indexnow-io-before.json --soft-fail
+        continue-on-error: true
+        run: node scripts/submit-indexnow.js --snapshot --variant io --out "${{ runner.temp }}/indexnow-io-before.json"
 
       - name: Deploy verified Worker and Static Assets to fastgpt.io
         env:
@@ -126,7 +127,8 @@ jobs:
           NODE
 
       - name: Submit changed IO URLs to IndexNow
-        run: node scripts/submit-indexnow.js --diff --variant io --out-dir .release-artifacts/site/io-configured/payload/out --before .release-artifacts/indexnow-io-before.json --soft-fail
+        continue-on-error: true
+        run: node scripts/submit-indexnow.js --diff --variant io --out-dir .release-artifacts/site/io-configured/payload/out --before "${{ runner.temp }}/indexnow-io-before.json"
 
       - name: Retain the verified release unit and deployment evidence
         if: always()

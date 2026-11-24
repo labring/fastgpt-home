@@ -30,6 +30,7 @@ const context = {
     if (name.endsWith('/data')) {
       return {
         TECH_ENTRIES: [entry],
+        getTechEntriesForLocale: () => [entry],
         getTechnicalPageIdentity: () => ({
           locale: 'zh',
           canonicalPath: '/troubleshoot/description-example'
@@ -117,9 +118,15 @@ test('article dates use Markdown while aggregate dates retain the index shortcut
       context.exports.getTechArticleLastModified(entry).toISOString(),
       '2026-09-27T00:00:00.000Z'
     );
+    assert.equal(
+      context.exports.getTechCenterLastModified('zh').toISOString(),
+      '2026-09-27T00:00:00.000Z'
+    );
     dateMetadata = '';
     assert.equal(getTechArticle('troubleshoot', 'description-example').dateModified, undefined);
     delete entry.dateModified;
+    assert.equal(context.exports.getTechArticleLastModified(entry), undefined);
+    assert.equal(context.exports.getTechCenterLastModified('zh'), undefined);
     dateMetadata = 'date_modified: 2026-09-28\n';
     assert.equal(getTechArticle('troubleshoot', 'description-example').dateModified, '2026-09-28');
   } finally {

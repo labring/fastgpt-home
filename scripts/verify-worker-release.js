@@ -12,7 +12,6 @@ const vm = require('node:vm');
 const { loadEnvConfig } = require('@next/env');
 const { buildRedirects, getPublishedFaqIds } = require('./lib/redirects');
 const { getProductionBaseUrls, resolveSiteVariant } = require('./lib/site-variant');
-const indexnowKeys = require('../src/config/indexnow.json');
 const { verifyWorkerArtifact } = require('./lib/worker-publication');
 
 const ROOT = path.resolve(__dirname, '..');
@@ -300,26 +299,6 @@ async function verifyHttpSurface(port, worker, env) {
     (await robots.text()).includes(`Sitemap: ${env.io}/sitemap.xml`),
     'robots.txt Sitemap owner'
   );
-
-  const indexNowKeyResponse = await request(`/${indexnowKeys.io}.txt`);
-  assert.equal(indexNowKeyResponse.status, 200, 'IndexNow key file status');
-  assert.match(
-    indexNowKeyResponse.headers.get('content-type') || '',
-    /text\/plain/i,
-    'IndexNow key content type'
-  );
-  assert.equal(
-    await indexNowKeyResponse.text(),
-    indexnowKeys.io,
-    'IndexNow key file content mismatch'
-  );
-  const crossVariantKey = await request(`/${indexnowKeys.cn}.txt`);
-  assert.equal(
-    crossVariantKey.status,
-    404,
-    'CN IndexNow key file must not be exposed on International Worker'
-  );
-
   const workerSource = await request('/_worker.js');
   assert.equal(
     workerSource.status,

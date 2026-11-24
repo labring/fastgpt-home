@@ -108,7 +108,8 @@ jobs:
       - uses: azure/setup-kubectl@v4
 
       - name: Snapshot live CN sitemap before rollout
-        run: node scripts/submit-indexnow.js --snapshot --variant cn --out .release-artifacts/indexnow-cn-before.json --soft-fail
+        continue-on-error: true
+        run: node scripts/submit-indexnow.js --snapshot --variant cn --out "${{ runner.temp }}/indexnow-cn-before.json"
 
       - name: Deploy image and verify rollout
         env:
@@ -131,4 +132,5 @@ jobs:
           fi
 
       - name: Submit changed CN URLs to IndexNow
-        run: node scripts/submit-indexnow.js --diff --variant cn --out-dir .release-artifacts/site/cn-configured/payload/out --before .release-artifacts/indexnow-cn-before.json --soft-fail
+        continue-on-error: true
+        run: node scripts/submit-indexnow.js --diff --variant cn --out-dir .release-artifacts/site/cn-configured/payload/out --before "${{ runner.temp }}/indexnow-cn-before.json"

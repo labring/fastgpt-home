@@ -3,36 +3,29 @@ const fs = require('node:fs');
 const os = require('node:os');
 const path = require('node:path');
 const test = require('node:test');
-const indexnowKeys = require('../src/config/indexnow.json');
-const {
-  INDEXNOW_ENDPOINT,
-  diffSitemaps,
-  fetchLiveSitemap,
-  isEligibleUrl,
-  main,
-  postIndexNow,
-  prioritizeAndCap,
-  selectSubmitUrls
-} = require('./submit-indexnow');
+const { INDEXNOW_KEYS } = require('./lib/site-variant');
+const { INDEXNOW_ENDPOINT, diffSitemaps, loadSitemap, main, postIndexNow } = require('./submit-indexnow');
 
-test('src/config/indexnow.json defines distinct 32-hex keys for cn and io only', () => {
-  assert.deepEqual(Object.keys(indexnowKeys).sort(), ['cn', 'io']);
-  assert.match(indexnowKeys.cn, /^[a-f0-9]{32}$/);
-  assert.match(indexnowKeys.io, /^[a-f0-9]{32}$/);
-  assert.notEqual(indexnowKeys.cn, indexnowKeys.io);
+test('INDEXNOW_KEYS defines distinct 32-hex keys for cn and io only', () => {
+  assert.deepEqual(Object.keys(INDEXNOW_KEYS).sort(), ['cn', 'io']);
+  assert.match(INDEXNOW_KEYS.cn, /^[a-f0-9]{32}$/);
+  assert.match(INDEXNOW_KEYS.io, /^[a-f0-9]{32}$/);
+  assert.notEqual(INDEXNOW_KEYS.cn, INDEXNOW_KEYS.io);
 });
 
-test('diffSitemaps detects added, modified, and removed URLs while ignoring unchanged', () => {
+test('diffSitemaps detects added, modified, and removed URLs and ignores dropped mtime', () => {
   const before = {
     'https://fastgpt.cn/': null,
     'https://fastgpt.cn/guide/a': '2026-10-01',
     'https://fastgpt.cn/guide/b': '2026-10-01',
+    'https://fastgpt.cn/troubleshoot/legacy': '2026-09-14T02:18:15.089Z',
     'https://fastgpt.cn/guide/old': '2026-09-01'
   };
   const after = {
     'https://fastgpt.cn/': null,
     'https://fastgpt.cn/guide/a': '2026-10-01',
     'https://fastgpt.cn/guide/b': '2026-11-24',
+    'https://fastgpt.cn/troubleshoot/legacy': null,
     'https://fastgpt.cn/guide/new': '2026-11-24'
   };
 
@@ -43,200 +36,106 @@ test('diffSitemaps detects added, modified, and removed URLs while ignoring unch
   });
 });
 
-test('prioritizeAndCap keeps /industry hub in content ahead of industry pages and enforces limit', () => {
-  assert.equal(isEligibleUrl('https://fastgpt.cn/industry', 'fastgpt.cn'), true);
-  assert.equal(isEligibleUrl('https://fastgpt.cn/ads/bing', 'fastgpt.cn'), false);
-  assert.equal(isEligibleUrl('https://fastgpt.io/guide/a', 'fastgpt.cn'), false);
-  assert.equal(isEligibleUrl('http://fastgpt.cn/price', 'fastgpt.cn'), false);
-  assert.equal(isEligibleUrl('https://fastgpt.cn/price?utm=1', 'fastgpt.cn'), false);
-
-  const result = prioritizeAndCap(
-    [
-      'https://fastgpt.cn/industry/mfg-d002-c012-f002',
-      'https://fastgpt.cn/industry',
-      'https://fastgpt.cn/guide/new',
-      'https://fastgpt.cn/ads/excluded',
-      'https://fastgpt.cn/industry'
-    ],
-    'fastgpt.cn',
-    2
-  );
-
-  assert.equal(result.total, 3);
-  assert.equal(result.truncated, 1);
-  assert.deepEqual(result.urls, [
-    'https://fastgpt.cn/industry',
-    'https://fastgpt.cn/guide/new'
-  ]);
-});
-
-test('fetchLiveSitemap appends cache-buster query and parses index + shards via split-sitemap', async () => {
-  const requested = [];
-  const fetchImpl = async (url) => {
-    requested.push(url);
-    if (url.includes('/sitemap.xml')) {
-      return new Response(
-        `<?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <sitemap><loc>https://fastgpt.cn/sitemap-shards/fastgpt.cn/sitemap-content-000.xml</loc></sitemap>
-  <sitemap><loc>https://fastgpt.cn/sitemap-shards/fastgpt.cn/sitemap-industry-000.xml</loc></sitemap>
-</sitemapindex>`,
-        { status: 200 }
-      );
-    }
-    if (url.includes('sitemap-content-000.xml')) {
-      return new Response(
-        `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://fastgpt.cn/industry</loc></url>
-  <url><loc>https://fastgpt.cn/guide/a</loc><lastmod>2026-11-20</lastmod></url>
-</urlset>`,
-        { status: 200 }
-      );
-    }
-    return new Response(
-      `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://fastgpt.cn/industry/mfg-d002-c012-f002</loc><lastmod>2026-10-14</lastmod></url>
-</urlset>`,
-      { status: 200 }
-    );
+test('loadSitemap expands sitemapindex shards and filters out ineligible URLs', async () => {
+  const xmlByUrl = {
+    'https://fastgpt.cn/sitemap.xml':
+      '<sitemapindex><sitemap><loc>https://fastgpt.cn/sitemap-shards/fastgpt.cn/sitemap-content-000.xml</loc></sitemap></sitemapindex>',
+    'https://fastgpt.cn/sitemap-shards/fastgpt.cn/sitemap-content-000.xml': [
+      '<urlset>',
+      '  <url><loc>https://fastgpt.cn/industry</loc></url>',
+      '  <url><loc>https://fastgpt.cn/guide/a</loc><lastmod>2026-11-20</lastmod></url>',
+      '  <url><loc>https://fastgpt.cn/price?utm=1</loc></url>',
+      '  <url><loc>https://fastgpt.io/guide/other</loc></url>',
+      '</urlset>'
+    ].join('\n')
   };
 
-  const entries = await fetchLiveSitemap('https://fastgpt.cn', {
-    fetchImpl,
-    stamp: 12345,
-    retryDelayMs: 0
-  });
-
-  assert.deepEqual(requested, [
-    'https://fastgpt.cn/sitemap.xml?v=12345',
-    'https://fastgpt.cn/sitemap-shards/fastgpt.cn/sitemap-content-000.xml?v=12345',
-    'https://fastgpt.cn/sitemap-shards/fastgpt.cn/sitemap-industry-000.xml?v=12345'
-  ]);
+  const entries = await loadSitemap((url) => xmlByUrl[url], 'https://fastgpt.cn');
   assert.deepEqual(entries, {
     'https://fastgpt.cn/industry': null,
-    'https://fastgpt.cn/guide/a': '2026-11-20',
-    'https://fastgpt.cn/industry/mfg-d002-c012-f002': '2026-10-14'
+    'https://fastgpt.cn/guide/a': '2026-11-20'
   });
 });
 
-test('selectSubmitUrls supports --since and --urls and rejects foreign hosts', () => {
-  const entries = {
-    'https://fastgpt.cn/': null,
-    'https://fastgpt.cn/guide/new': '2026-11-18',
-    'https://fastgpt.cn/industry/mfg-d002-c012-f002': '2026-10-14',
-    'https://fastgpt.cn/guide/old': '2026-09-01'
-  };
-
-  assert.deepEqual(
-    selectSubmitUrls({ since: '2026-10-14', entries, host: 'fastgpt.cn' }).urls,
-    [
-      'https://fastgpt.cn/guide/new',
-      'https://fastgpt.cn/industry/mfg-d002-c012-f002'
-    ]
-  );
-  assert.deepEqual(
-    selectSubmitUrls({
-      urls: 'https://fastgpt.cn/industry/mfg-d002-c012-f002,https://fastgpt.cn/guide/new',
-      host: 'fastgpt.cn'
-    }).urls,
-    [
-      'https://fastgpt.cn/guide/new',
-      'https://fastgpt.cn/industry/mfg-d002-c012-f002'
-    ]
-  );
-  assert.throws(
-    () => selectSubmitUrls({ urls: 'https://fastgpt.io/guide/new', host: 'fastgpt.cn' }),
-    /Invalid or out-of-scope/
-  );
-});
-
-test('postIndexNow submits expected payload, retries 429/500, and stops on 403', async () => {
+test('postIndexNow supports dry-run, retries 429 to 202, and stops on 403', async () => {
   const requests = [];
-  let behavior = 'retry-then-202';
+  let mode = 'retry';
   const fetchImpl = async (url, init) => {
     requests.push({ url, body: JSON.parse(init.body) });
-    if (behavior === 'retry-then-202') {
-      if (requests.length === 1) return new Response('rate limit', { status: 429 });
-      return new Response('', { status: 202 });
+    if (mode === 'retry') {
+      return requests.length === 1 ? new Response('limit', { status: 429 }) : new Response('', { status: 202 });
     }
     return new Response('forbidden', { status: 403 });
   };
-
-  const dry = await postIndexNow({
+  const base = {
     host: 'fastgpt.cn',
-    key: indexnowKeys.cn,
-    keyLocation: `https://fastgpt.cn/${indexnowKeys.cn}.txt`,
+    key: INDEXNOW_KEYS.cn,
+    keyLocation: `https://fastgpt.cn/${INDEXNOW_KEYS.cn}.txt`,
     urls: ['https://fastgpt.cn/price'],
-    dryRun: true,
-    fetchImpl
-  });
-  assert.equal(dry.status, 'dry-run');
+    fetchImpl,
+    retries: 2,
+    retryDelayMs: 0
+  };
+
+  assert.equal((await postIndexNow({ ...base, dryRun: true })).status, 'dry-run');
   assert.equal(requests.length, 0);
 
-  const ok = await postIndexNow({
-    host: 'fastgpt.cn',
-    key: indexnowKeys.cn,
-    keyLocation: `https://fastgpt.cn/${indexnowKeys.cn}.txt`,
-    urls: ['https://fastgpt.cn/price'],
-    fetchImpl,
-    retries: 2,
-    retryDelayMs: 0
-  });
+  const ok = await postIndexNow(base);
   assert.equal(ok.status, 'submitted');
-  assert.equal(ok.submitted, 1);
-  assert.deepEqual(ok.statuses, [202]);
+  assert.equal(ok.httpStatus, 202);
   assert.equal(requests.length, 2);
   assert.equal(requests[0].url, INDEXNOW_ENDPOINT);
-  assert.deepEqual(requests[0].body, {
-    host: 'fastgpt.cn',
-    key: indexnowKeys.cn,
-    keyLocation: `https://fastgpt.cn/${indexnowKeys.cn}.txt`,
-    urlList: ['https://fastgpt.cn/price']
-  });
+  assert.deepEqual(requests[0].body.urlList, ['https://fastgpt.cn/price']);
 
-  behavior = 'forbidden';
+  mode = 'forbidden';
   requests.length = 0;
-  const rejected = await postIndexNow({
-    host: 'fastgpt.cn',
-    key: indexnowKeys.cn,
-    keyLocation: `https://fastgpt.cn/${indexnowKeys.cn}.txt`,
-    urls: ['https://fastgpt.cn/price'],
-    fetchImpl,
-    retries: 2,
-    retryDelayMs: 0
-  });
+  const rejected = await postIndexNow(base);
   assert.equal(rejected.status, 'failed');
-  assert.equal(rejected.statuses[0], 403);
+  assert.equal(rejected.httpStatus, 403);
   assert.equal(requests.length, 1);
 });
 
-test('main handles --diff missing snapshot and --soft-fail vs strict exit codes', async () => {
-  const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'fastgpt-indexnow-main-'));
+test('main handles snapshot/diff prioritization, missing --before failure, and --urls validation', async () => {
+  const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'fastgpt-indexnow-'));
   try {
-    const missingSnapCode = await main([
-      '--diff',
-      '--variant',
-      'cn',
-      '--out-dir',
-      tempDir,
-      '--before',
-      path.join(tempDir, 'missing.json')
-    ]);
-    assert.equal(missingSnapCode, 0);
+    const requested = [];
+    const submitted = [];
+    const fetchImpl = async (url, init) => {
+      if (init.method === 'POST') {
+        submitted.push(JSON.parse(init.body).urlList);
+        return new Response('', { status: 200 });
+      }
+      requested.push(url);
+      return new Response('<urlset><url><loc>https://fastgpt.cn/</loc></url></urlset>', { status: 200 });
+    };
 
-    const strictFail = await main(
-      ['--submit', '--variant', 'cn', '--urls', 'https://fastgpt.cn/price'],
-      { fetchImpl: async () => new Response('err', { status: 500 }), retries: 1, retryDelayMs: 0 }
+    const snapFile = path.join(tempDir, 'before.json');
+    assert.equal(
+      await main(['--snapshot', '--variant', 'cn', '--out', snapFile], { fetchImpl, stamp: 42, retryDelayMs: 0 }),
+      0
     );
-    assert.equal(strictFail, 1);
+    assert.deepEqual(requested, ['https://fastgpt.cn/sitemap.xml?v=42']);
 
-    const softFail = await main(
-      ['--submit', '--variant', 'cn', '--urls', 'https://fastgpt.cn/price', '--soft-fail'],
-      { fetchImpl: async () => new Response('err', { status: 500 }), retries: 1, retryDelayMs: 0 }
+    const outDir = path.join(tempDir, 'out');
+    fs.mkdirSync(outDir);
+    fs.writeFileSync(
+      path.join(outDir, 'sitemap.xml'),
+      '<urlset><url><loc>https://fastgpt.cn/</loc></url><url><loc>https://fastgpt.cn/industry/a</loc></url><url><loc>https://fastgpt.cn/industry</loc></url></urlset>'
     );
-    assert.equal(softFail, 0);
+    assert.equal(
+      await main(['--diff', '--variant', 'cn', '--out-dir', outDir, '--before', snapFile], { fetchImpl, retryDelayMs: 0 }),
+      0
+    );
+    assert.deepEqual(submitted, [['https://fastgpt.cn/industry', 'https://fastgpt.cn/industry/a']]);
+
+    await assert.rejects(
+      main(['--diff', '--variant', 'cn', '--out-dir', outDir, '--before', path.join(tempDir, 'missing.json')]),
+      /ENOENT/
+    );
+    await assert.rejects(
+      main(['--submit', '--variant', 'cn', '--urls', 'https://fastgpt.io/price']),
+      /Invalid or out-of-scope/
+    );
   } finally {
     fs.rmSync(tempDir, { recursive: true, force: true });
   }

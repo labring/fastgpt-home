@@ -244,19 +244,20 @@ export function getTechArticle(section: string, slug: string, locale: TechPublis
   return entry ? readTechArticle(entry) : null;
 }
 
-export function getTechArticleLastModified(article: TechEntry) {
+export function getTechArticleLastModified(article: TechEntry): Date | undefined {
   if (article.dateModified) return new Date(`${article.dateModified}T00:00:00Z`);
-  const fileModified = fs.statSync(getEntryPath(article)).mtime;
-  if (article.sourceType !== '深度场景内容') return fileModified;
+  if (article.sourceType !== '深度场景内容') return undefined;
 
   const dateModified = readTechArticle(article).dateModified;
-  return dateModified ? new Date(`${dateModified}T00:00:00Z`) : fileModified;
+  return dateModified ? new Date(`${dateModified}T00:00:00Z`) : undefined;
 }
 
-export function getTechCenterLastModified(locale?: TechPublishedLocale) {
+export function getTechCenterLastModified(locale?: TechPublishedLocale): Date | undefined {
   const entries = locale ? getTechEntriesForLocale(locale) : TECH_ENTRIES;
-  if (!entries.length) return undefined;
-  return new Date(Math.max(...entries.map((entry) => getTechArticleLastModified(entry).getTime())));
+  const timestamps = entries
+    .map((entry) => getTechArticleLastModified(entry)?.getTime())
+    .filter((time): time is number => time !== undefined);
+  return timestamps.length ? new Date(Math.max(...timestamps)) : undefined;
 }
 
 export function getRelatedTechArticles(article: TechEntry, limit = 3) {

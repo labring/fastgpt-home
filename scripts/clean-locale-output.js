@@ -14,7 +14,12 @@ const {
   getUrlAliasAuthoritySummary,
   readUrlAliasAuthority
 } = require('./lib/url-alias-authority');
-const { getPublishedLocaleCodes, localeCodes, resolveSiteVariant } = require('./lib/site-variant');
+const {
+  INDEXNOW_KEYS,
+  getPublishedLocaleCodes,
+  localeCodes,
+  resolveSiteVariant
+} = require('./lib/site-variant');
 
 const rootDir = path.join(__dirname, '..');
 const outDir = path.join(rootDir, 'out');
@@ -146,8 +151,16 @@ if (variant === 'preview') {
   fs.writeFileSync(path.join(outDir, '.assetsignore'), '_worker.js\n');
 }
 
+for (const key of Object.values(INDEXNOW_KEYS)) {
+  removePath(path.join(outDir, `${key}.txt`));
+}
+const activeIndexNowKey = Object.hasOwn(INDEXNOW_KEYS, variant) ? INDEXNOW_KEYS[variant] : null;
+if (activeIndexNowKey) {
+  fs.writeFileSync(path.join(outDir, `${activeIndexNowKey}.txt`), activeIndexNowKey, 'utf8');
+}
+
 console.log(
   `[clean-locale-output] variant=${variant}; kept=${[...allowedLocales].join(
     ','
-  )}; removed=${removed}; previewHtmlPatched=${previewHtmlPatched}`
+  )}; removed=${removed}; previewHtmlPatched=${previewHtmlPatched}; indexnow=${activeIndexNowKey ? `${activeIndexNowKey}.txt` : 'disabled'}`
 );

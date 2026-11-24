@@ -9,6 +9,7 @@ const {
   parseNginxRedirectMap
 } = require('./lib/redirects');
 const {
+  INDEXNOW_KEYS,
   getCanonicalBaseUrl,
   getDefaultLocale,
   getPublishedLocaleCodes,
@@ -224,6 +225,21 @@ function verifyRobotsFile() {
   );
 }
 
+function verifyIndexNowKeyFile() {
+  for (const [owner, key] of Object.entries(INDEXNOW_KEYS)) {
+    const keyPath = path.join(outDir, `${key}.txt`);
+    if (owner === variant) {
+      assert(
+        fs.existsSync(keyPath) && fs.statSync(keyPath).isFile(),
+        `Missing IndexNow key file for ${variant}: ${key}.txt`
+      );
+      assert.equal(fs.readFileSync(keyPath, 'utf8'), key, `IndexNow key ${key}.txt mismatch`);
+    } else {
+      assert(!fs.existsSync(keyPath), `${variant} build must not expose ${key}.txt`);
+    }
+  }
+}
+
 function parseWorkerRedirects() {
   const workerPath = path.join(outDir, '_worker.js');
   assert(fs.existsSync(workerPath), 'Missing Cloudflare worker');
@@ -397,6 +413,7 @@ function verifyCompareMetadataLengths() {
 
 function main() {
   verifyRobotsFile();
+  verifyIndexNowKeyFile();
   verifyRedirects();
   verifyPublishedRoutes();
   verifyNotFoundFallback();

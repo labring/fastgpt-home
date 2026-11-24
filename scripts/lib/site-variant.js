@@ -62,6 +62,11 @@ function getProductionBaseUrls(env = process.env) {
   };
 }
 
+const INDEXNOW_KEYS = Object.freeze({
+  cn: '4f78d38cb894954ed848bc130e9ed26d',
+  io: '1f1f512c50e445439859d7e8a268f451'
+});
+
 function getCanonicalBaseUrl(variant, env = process.env) {
   const baseUrls = getProductionBaseUrls(env);
   return variant === 'cn' ? baseUrls.cn : baseUrls.io;
@@ -78,6 +83,7 @@ if (require.main === module) {
 }
 
 module.exports = {
+  INDEXNOW_KEYS,
   getCanonicalBaseUrl,
   getDefaultLocale,
   getLocaleOwner,

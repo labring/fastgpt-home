@@ -107,6 +107,10 @@ jobs:
 
       - uses: azure/setup-kubectl@v4
 
+      - name: Snapshot live CN sitemap before rollout
+        continue-on-error: true
+        run: node scripts/submit-indexnow.js --snapshot --variant cn --out "${{ runner.temp }}/indexnow-cn-before.json"
+
       - name: Deploy image and verify rollout
         env:
           KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}
@@ -126,3 +130,7 @@ jobs:
             kubectl rollout status deployment/fastgpt-home --timeout=300s
             exit 1
           fi
+
+      - name: Submit changed CN URLs to IndexNow
+        continue-on-error: true
+        run: node scripts/submit-indexnow.js --diff --variant cn --out-dir .release-artifacts/site/cn-configured/payload/out --before "${{ runner.temp }}/indexnow-cn-before.json"

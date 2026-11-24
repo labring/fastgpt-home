@@ -151,4 +151,4 @@ keywords: 制度问答与员工服务, 知识库 / 权限隔离 / 渠道接入
 
 - [FastGPT self-hosted deployment documentation](https://doc.fastgpt.io/self-host/)
 - [FastGPT documentation](https://doc.fastgpt.io/)
-- [FastGPT Chinese documentation](https://doc.fastgpt.cn/guide/getting-started)
+- [FastGPT Chinese documentation](https://doc.fastgpt.cn/)

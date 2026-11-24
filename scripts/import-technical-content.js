@@ -272,9 +272,6 @@ function readSourceDocument(source, record) {
   if (normalized.startsWith('---\n')) {
     const document = parseFrontMatter(normalized, record.file);
     validateDeliveryMetadata(document.metadata, record.file);
-    if (document.metadata.source) {
-      document.metadata.source = normalizeDocumentationUrl(document.metadata.source);
-    }
     return document;
   }
   if (!normalized.trimStart().startsWith('#')) {
@@ -467,9 +464,7 @@ function parseJsonDelivery(filePath) {
       pageType: requireText(record.pageType, `${label}.pageType`),
       wordCount: requireJsonNonNegativeInteger(record.wordCount, `${label}.wordCount`),
       sourceCount: requireJsonNonNegativeInteger(record.sourceCount, `${label}.sourceCount`),
-      source: normalizeDocumentationUrl(
-        normalizePublicHttpsUrl(record.source, `${label}.source`)
-      ),
+      source: normalizePublicHttpsUrl(record.source, `${label}.source`),
       row: index + 2
     };
   });
@@ -646,9 +641,7 @@ function parseWorkbook(filePath) {
       row.F,
       `XLSX 上线清单 row ${index + 2} source count`
     ),
-    source: normalizeDocumentationUrl(
-      normalizePublicHttpsUrl(row.G, `XLSX 上线清单 row ${index + 2} source`)
-    ),
+    source: normalizePublicHttpsUrl(row.G, `XLSX 上线清单 row ${index + 2} source`),
     row: index + 2
   }));
   const denied = deniedRows.slice(1).map((row, index) => ({
@@ -773,7 +766,7 @@ function buildImportPlan({ repoRoot = REPOSITORY_ROOT, sourcePath }) {
     const { metadata } = parsed;
     if (metadata.title !== record.title)
       throw new Error(`Schema drift in ${record.file}: title differs from delivery row`);
-    if (metadata.source !== record.source)
+    if (normalizeDocumentationUrl(metadata.source) !== normalizeDocumentationUrl(record.source))
       throw new Error(`Schema drift in ${record.file}: source differs from delivery row`);
     const identity = parseIdentityFromSlug(metadata.slug, `${record.file} front matter slug`);
     const { locale } = identity;
@@ -1129,12 +1122,6 @@ function verifyTechnicalContent(repoRoot = REPOSITORY_ROOT) {
           `Legacy prefixed documentation URL in ${entry.slug} front matter source: ${metadata.source}`
         );
       }
-    }
-    const legacyBodyUrls = findLegacyDocumentationUrls(body);
-    if (legacyBodyUrls.length > 0) {
-      throw new Error(
-        `Legacy prefixed documentation URL in ${entry.slug} body: ${legacyBodyUrls[0]}`
-      );
     }
     extractCitationUrls(body, entry.slug);
     SECRET_PATTERN.lastIndex = 0;

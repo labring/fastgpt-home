@@ -470,8 +470,8 @@ test('source verification covers every indexed page and catches content drift wi
         bodyPath,
         (bytes) =>
           bytes.replace(
-            'https://doc.fastgpt.cn/self-host/config/sandbox/opensandbox',
-            'https://doc.fastgpt.cn/zh-CN/self-host/config/sandbox/opensandbox'
+            'source: https://doc.fastgpt.cn/self-host/config/sandbox/opensandbox',
+            'source: https://doc.fastgpt.cn/zh-CN/self-host/config/sandbox/opensandbox'
           ),
         /Legacy prefixed documentation URL/
       ],

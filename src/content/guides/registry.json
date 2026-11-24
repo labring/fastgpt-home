@@ -1117,8 +1117,8 @@
       "group": "industry",
       "zh": {
         "sourceName": "soe-policy-qa-deployment.zh.md",
-        "sourceSha256": "41b5c1a58559e40e31f6f821f87b43ca7d8f4336e817c00450a1f47659935f11",
-        "bodySha256": "bc22d3de078a3b8b14ae9d2887d57b6ef41d1331ae39ea1c22a56548f9f19ae1",
+        "sourceSha256": "16cb2b27db52eeceb70b7361aeca82ea2505757ff3e2286a67df4c51bdf7e624",
+        "bodySha256": "a080919b55e5ec31535ba8aff39b89bf6a52cdff4433c0378657298750303b65",
         "h1": "国央企大模型制度问答落地部署、审查与排期规划指南",
         "metaTitle": "国央企大模型制度问答落地部署、审查与排期规划指南",
         "metaDescription": "围绕国央企制度问答场景，梳理部署架构、合规审查、权限隔离、知识更新与项目排期方法，帮助团队建立可验证、可审计、可持续运营的落地计划。",
@@ -1145,8 +1145,8 @@
       },
       "en": {
         "sourceName": "soe-policy-qa-deployment.en.md",
-        "sourceSha256": "147972cdbb4705c9eeba6a1d2d6f41a125b91be2b24ed2a79a6f207c9c2dafe7",
-        "bodySha256": "88c79d67d0871d7efbaf3860ed227dadbb52bca3a02b91dc5d7658c258eecfb1",
+        "sourceSha256": "ffd2c7d0ef6d0979cb0adb0c7d208f6e5a90b7a680a8f4ac416f67dc43dfdf8f",
+        "bodySha256": "ef0d0329f1edb7a9ebbae692075586922e2efc125c234ec20cf6946b88c62e63",
         "h1": "State-Owned Enterprise Large Model Policy Q&A Implementation: Deployment, Compliance Review, and Scheduling Guide",
         "metaTitle": "State-Owned Enterprise AI Policy Q&A Deployment Guide",
         "metaDescription": "Plan compliant state-owned enterprise AI policy Q&A deployment with architecture, reviews, permissions, updates, validation, scheduling, and controls.",

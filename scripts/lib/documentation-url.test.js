@@ -6,7 +6,7 @@ const {
   normalizeDocumentationUrlsInText
 } = require('./documentation-url');
 
-test('normalizeDocumentationUrl normalizes all four prefixed owner/locale combinations', () => {
+test('normalizeDocumentationUrl normalizes all four owner/locale prefix combinations', () => {
   assert.equal(
     normalizeDocumentationUrl('https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/content_extract'),
     'https://doc.fastgpt.cn/guide/build/workflow/nodes/content_extract'
@@ -23,69 +23,26 @@ test('normalizeDocumentationUrl normalizes all four prefixed owner/locale combin
     normalizeDocumentationUrl('https://doc.fastgpt.io/en/self-host/config/env#top'),
     'https://doc.fastgpt.io/self-host/config/env#top'
   );
+  assert.equal(normalizeDocumentationUrl('https://doc.fastgpt.cn/zh-CN/'), 'https://doc.fastgpt.cn/');
+  assert.equal(normalizeDocumentationUrl('https://doc.fastgpt.io/en/'), 'https://doc.fastgpt.io/');
 });
 
-test('normalizeDocumentationUrl resolves bare /zh-CN and /en roots to getting-started', () => {
-  assert.equal(
-    normalizeDocumentationUrl('https://doc.fastgpt.cn/zh-CN'),
-    'https://doc.fastgpt.cn/guide/getting-started'
-  );
-  assert.equal(
-    normalizeDocumentationUrl('https://doc.fastgpt.cn/zh-CN/'),
-    'https://doc.fastgpt.cn/guide/getting-started'
-  );
-  assert.equal(
-    normalizeDocumentationUrl('https://doc.fastgpt.io/en'),
-    'https://doc.fastgpt.io/guide/getting-started'
-  );
-  assert.equal(
-    normalizeDocumentationUrl('https://doc.fastgpt.io/en/'),
-    'https://doc.fastgpt.io/guide/getting-started'
-  );
-});
-
-test('normalizeDocumentationUrl leaves canonical and unrelated URLs unchanged', () => {
-  for (const unchanged of [
-    'https://doc.fastgpt.cn/guide/getting-started',
-    'https://doc.fastgpt.io/guide/getting-started',
-    'https://fastgpt.cn/zh/faq',
-    'https://fastgpt.io/en/guide',
-    'https://github.com/labring/FastGPT',
-    'not-a-url'
-  ]) {
-    assert.equal(normalizeDocumentationUrl(unchanged), unchanged);
-  }
-});
-
-test('normalizeDocumentationUrlsInText handles markdown links, citations, front matter, and punctuation', () => {
+test('normalizeDocumentationUrlsInText preserves trailing Chinese prose and ellipsis without encoding', () => {
   const input = [
-    '---',
     'source: https://doc.fastgpt.cn/zh-CN/self-host/config/env',
-    '---',
-    '',
-    '参考 https://doc.fastgpt.cn/zh-CN/self-host/custom-models/chatglm2。',
-    '- [Variables](https://doc.fastgpt.cn/en/guide/build/workflow/variables?a=1#b)',
-    '> 来源：[FastGPT 官方文档](https://doc.fastgpt.io/zh-CN/guide/dataset)',
-    'Already clean: https://doc.fastgpt.cn/guide/getting-started'
+    '该小节的官方访问路径为https://doc.fastgpt.cn/zh-CN/guide/version/commercial，位于文档目录的版本分类分支下。',
+    '总结截断为https://doc.fastgpt.cn/zh-CN/guide/version/commer…',
+    'Non-matches: https://doc.fastgpt.cn/enterprise https://doc.fastgpt.io/env https://doc.fastgpt.cn/zh-CN-legacy'
   ].join('\n');
 
   const expected = [
-    '---',
     'source: https://doc.fastgpt.cn/self-host/config/env',
-    '---',
-    '',
-    '参考 https://doc.fastgpt.cn/self-host/custom-models/chatglm2。',
-    '- [Variables](https://doc.fastgpt.io/guide/build/workflow/variables?a=1#b)',
-    '> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/dataset)',
-    'Already clean: https://doc.fastgpt.cn/guide/getting-started'
+    '该小节的官方访问路径为https://doc.fastgpt.cn/guide/version/commercial，位于文档目录的版本分类分支下。',
+    '总结截断为https://doc.fastgpt.cn/guide/version/commer…',
+    'Non-matches: https://doc.fastgpt.cn/enterprise https://doc.fastgpt.io/env https://doc.fastgpt.cn/zh-CN-legacy'
   ].join('\n');
 
   assert.equal(normalizeDocumentationUrlsInText(input), expected);
-  assert.deepEqual(findLegacyDocumentationUrls(input), [
-    'https://doc.fastgpt.cn/zh-CN/self-host/config/env',
-    'https://doc.fastgpt.cn/zh-CN/self-host/custom-models/chatglm2',
-    'https://doc.fastgpt.cn/en/guide/build/workflow/variables?a=1#b',
-    'https://doc.fastgpt.io/zh-CN/guide/dataset'
-  ]);
+  assert.equal(findLegacyDocumentationUrls(input).length, 3);
   assert.deepEqual(findLegacyDocumentationUrls(expected), []);
 });

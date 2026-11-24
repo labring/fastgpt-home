@@ -50,8 +50,6 @@ jobs:
       - run: echo "Reclaimed ${{ steps.cleanup.outputs.reclaimed-bytes }} bytes"
 
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 2
 
       - uses: actions/setup-node@v4
         with:
@@ -131,7 +129,4 @@ jobs:
 
       - name: Notify IndexNow for fastgpt.cn
         continue-on-error: true
-        env:
-          BEFORE_SHA: ${{ github.event.before }}
-        run: |
-          node scripts/submit-indexnow.js --variant cn --base-ref "${BEFORE_SHA:-HEAD~1}"
+        run: node scripts/submit-indexnow.js --variant cn

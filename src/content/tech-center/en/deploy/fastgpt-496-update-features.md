@@ -2,7 +2,7 @@
 title: FastGPT 496 Update New Feature Details
 slug: /en/deploy/fastgpt-496-update-features
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/496
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/496
 source_type: 官方文档
 ---
 
@@ -28,4 +28,4 @@ Second, the system now includes pre-built system configuration presets for four 
 | o-series            | LLM model preset               |
 | Gemini 2.5          | LLM model preset               |
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/496)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/496)

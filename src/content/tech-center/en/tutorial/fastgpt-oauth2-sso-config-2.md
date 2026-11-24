@@ -2,7 +2,7 @@
 title: Set Up FastGPT OAuth 2.0 SSO Integration
 slug: /en/tutorial/fastgpt-oauth2-sso-config-2
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/admin/sso
+source: https://doc.fastgpt.io/guide/admin/sso
 source_type: Official documentation
 ---
 
@@ -74,7 +74,7 @@ fastgpt-sso:
     - OAUTH2_CONTACT_MAP=
 ```
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/admin/sso)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/admin/sso)
 
 ## Applicability and version scope
 

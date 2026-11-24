@@ -2,7 +2,7 @@
 title: Rename MongoDB Collections for FastGPT V4 Upgrade
 slug: /en/deploy/fastgpt-mongodb-collection-rename
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/40
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/40
 source_type: 官方文档
 ---
 
@@ -29,4 +29,4 @@ Follow these exact, source-verified steps to complete the renaming:
 ## Critical Precautionary Note
 Per official upgrade documentation, when upgrading from an older FastGPT version to V4, MongoDB will automatically generate empty collections named `apps` and `outlinks`. You must manually delete these empty collections before running the rename commands listed above. No additional parameters or configuration changes are needed for this process beyond the steps and commands provided.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/40)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/40)

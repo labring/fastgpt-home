@@ -2,7 +2,7 @@
 title: 环境变量清单生成器：136 项分 15 组，按部署形态与要启用的能力筛出该配哪些
 slug: /zh/reference/env-variable-checklist
 page_type: 交互模块页
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/env
+source: https://doc.fastgpt.cn/self-host/config/env
 source_type: 官方文档
 meta_title: FastGPT 环境变量清单生成器
 meta_description: 按部署形态与要启用的能力，从 136 项环境变量里筛出实际需要设置的那些，并标出哪些没有默认值、哪些默认不启用。
@@ -125,5 +125,5 @@ interactive_data: b4-env-variable-checklist.json
 
 ## 参考资料
 
-- [FastGPT 环境变量说明](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
-- [FastGPT Docker Compose 部署](https://doc.fastgpt.cn/zh-CN/self-host/deploy/docker)
+- [FastGPT 环境变量说明](https://doc.fastgpt.cn/self-host/config/env)
+- [FastGPT Docker Compose 部署](https://doc.fastgpt.cn/self-host/deploy/docker)

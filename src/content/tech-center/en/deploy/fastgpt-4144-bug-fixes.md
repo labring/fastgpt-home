@@ -2,7 +2,7 @@
 title: List of Fixed Bugs in FastGPT 4.14.4
 slug: /en/deploy/fastgpt-4144-bug-fixes
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4144
+source: https://doc.fastgpt.io/self-host/upgrading/4-14/4144
 source_type: Official documentation
 ---
 
@@ -47,7 +47,7 @@ To confirm the resolved bugs are addressed in your 4.14.4 deployment, use these 
 9.  Use an empty string global variable in an HTTP node and confirm the node passes an empty string instead of `null`.
 10. Collapse a condition node in a workflow and confirm its connections remain intact.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4144)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-14/4144)
 
 ## Applicability and version scope
 

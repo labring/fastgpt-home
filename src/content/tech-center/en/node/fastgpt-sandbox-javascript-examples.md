@@ -2,7 +2,7 @@
 title: Execute JavaScript in FastGPT Sandbox Nodes
 slug: /en/node/fastgpt-sandbox-javascript-examples
 page_type: Workflow nodes
-source: https://doc.fastgpt.cn/en/guide/build/workflow/nodes/sandbox-v2
+source: https://doc.fastgpt.io/guide/build/workflow/nodes/sandbox-v2
 source_type: Official documentation
 ---
 
@@ -77,7 +77,7 @@ The Sandbox v2 environment provides a built-in HTTP request helper for external 
 
 All custom JavaScript functions must export a `main` function, which receives an input object containing upstream workflow variables as shown in the examples above.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/workflow/nodes/sandbox-v2)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/workflow/nodes/sandbox-v2)
 
 ## Applicability and version scope
 

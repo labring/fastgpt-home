@@ -2,7 +2,7 @@
 title: Add Custom SiliconCloud Models to FastGPT
 slug: /en/deploy/fastgpt-add-siliconcloud-models
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/model/siliconCloud
+source: https://doc.fastgpt.io/self-host/config/model/siliconCloud
 source_type: Official documentation
 ---
 
@@ -25,7 +25,7 @@ This demonstration uses a standard set of SiliconCloud models to enable a comple
 ## Configuration Validation
 After completing the manual model addition steps outlined in the linked guide, users can cross-reference their setup with the included reference screenshot (image-104.png). This visual resource confirms the correct formatting and placement of all configured SiliconCloud model entries within the FastGPT administrative interface.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/model/siliconCloud)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/model/siliconCloud)
 
 ## Applicability and version scope
 

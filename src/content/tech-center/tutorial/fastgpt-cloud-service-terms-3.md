@@ -2,7 +2,7 @@
 title: FastGPT云服务使用协议条款与合规要求说明
 slug: /zh/tutorial/fastgpt-cloud-service-terms-3
 page_type: 教程
-source: https://doc.fastgpt.cn/zh-CN/guide/version/cloud/terms
+source: https://doc.fastgpt.cn/guide/version/cloud/terms
 source_type: 官方文档
 ---
 
@@ -26,7 +26,7 @@ source_type: 官方文档
 服务及相关软件、技术、文档等的知识产权归服务方所有，未经明确许可，不得进行复制、分发、出租、反向工程等行为。用户使用服务过程中产生的数据和内容的知识产权归用户所有，服务方不会对其进行使用、复制、修改等行为。其他用户的数据和内容知识产权归原用户所有，未经许可不得使用。
 服务按现有技术和条件所能达到的水平提供，不保证完全无故障或满足所有需求。因用户自身误操作导致的数据丢失、损坏等情况，服务方不承担责任。生成式AI使用需遵守所在地相关法律法规，相关管控条例可参考中国生成式人工智能服务管理办法（征求意见稿），链接为http://www.cac.gov.cn/2023-04/11/c_1682854275475410.htm。违规使用由使用者自行承担责任，服务方对客户使用产生的问题概不负责。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/version/cloud/terms)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/version/cloud/terms)
 
 ## 适用性与版本范围
 

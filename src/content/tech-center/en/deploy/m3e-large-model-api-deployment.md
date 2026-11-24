@@ -2,7 +2,7 @@
 title: Deploy M3E Large Model API for FastGPT
 slug: /en/deploy/m3e-large-model-api-deployment
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/custom-models/m3e
+source: https://doc.fastgpt.io/self-host/custom-models/m3e
 source_type: Official documentation
 ---
 
@@ -34,7 +34,7 @@ For alternative methods of passing environment variables to the container, refer
    ```
    Replace the image name in the run command if using the mirrored image, and update the `sk-key` value if a custom security token is required.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/custom-models/m3e)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/custom-models/m3e)
 
 ## Applicability and version scope
 

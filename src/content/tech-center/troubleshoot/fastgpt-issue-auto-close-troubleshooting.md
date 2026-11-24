@@ -29,4 +29,4 @@ source_type: GitHub issue
 
 > 来源: [原始讨论：Gemini流式输出，每一块很大](https://github.com/labring/FastGPT/issues/6079)
 
-> 来源: [FastGPT 对话 OpenAPI](https://doc.fastgpt.io/en/openapi/chat)
+> 来源: [FastGPT 对话 OpenAPI](https://doc.fastgpt.io/openapi/chat)

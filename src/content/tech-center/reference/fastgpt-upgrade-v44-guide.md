@@ -2,7 +2,7 @@
 title: FastGPT从旧版本升级到V4.4的操作指南
 slug: /zh/reference/fastgpt-upgrade-v44-guide
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/44
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/44
 source_type: 官方文档小节
 ---
 
@@ -20,4 +20,4 @@ FastGPT从旧版本升级到V4.4需使用专属升级脚本完成。该升级路
 ## 注意事项
 该升级流程仅支持版本低于4.12.0的FastGPT实例；需使用官方提供的V4.4专属升级脚本，不可混用其他版本的升级脚本；升级前建议参考官方迁移备份文档完成数据备份。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/44)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/44)

@@ -2,7 +2,7 @@
 title: 介绍FastGPT部署中环境变量的配置规则与用法
 slug: /zh/glossary/fastgpt-deployment-environment-vars
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/guide/admin/sso
+source: https://doc.fastgpt.cn/guide/admin/sso
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ source_type: 官方文档
 ## 容易搞错的地方
 部分环境变量仅适配特定FastGPT版本，例如AUTH_TOKEN仅支持fastgpt-pro版本。配置FASTGPT_ENDPOINT时需确保地址可被对应服务访问，且需与FastGPT主服务处于同一网络，避免服务间通信失败。不同附属服务的环境变量参数不可混用，例如fastgpt-sso的环境变量不可直接套用至fastgpt-mcp-server服务。使用非官方推荐的镜像版本可能导致环境变量配置失效，需严格遵循官方给出的镜像版本要求。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/admin/sso)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/admin/sso)
 
 ## 适用性与版本范围
 

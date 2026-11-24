@@ -17,9 +17,9 @@ FastGPT v4.9.1 曾有按账号配置模型公有、私有及可见范围的需�
 ## 诊断步骤
 
 1. 记录版本、模型名称、账号所属团队，以及希望控制的是“模型选择列表”还是“应用使用权限”。
-2. 参照[模型配置说明](https://doc.fastgpt.cn/zh-CN/self-host/config/model/intro)，确认模型已正确接入，并用测试应用验证可正常调用。
+2. 参照[模型配置说明](https://doc.fastgpt.cn/self-host/config/model/intro)，确认模型已正确接入，并用测试应用验证可正常调用。
 3. 使用两个具有不同授权的测试账号，分别检查模型候选列表、应用编辑入口和实际调用结果，记录可见范围与访问结果。
-4. 如目标是限制某个应用的使用者，按[团队与资源权限文档](https://doc.fastgpt.cn/zh-CN/guide/workspace/team/team_roles_permissions) 配置应用协作者，再用受限账号复测。
+4. 如目标是限制某个应用的使用者，按[团队与资源权限文档](https://doc.fastgpt.cn/guide/workspace/team/team_roles_permissions) 配置应用协作者，再用受限账号复测。
 
 ## 验证结果
 

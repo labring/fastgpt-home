@@ -2,7 +2,7 @@
 title: Run Required FastGPT v4815 Post-Upgrade Migration Scripts
 slug: /en/deploy/fastgpt-v4815-migration-scripts
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4815
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/4815
 source_type: 官方文档
 ---
 
@@ -39,4 +39,4 @@ curl --location --request POST 'https://{{host}}/api/admin/init/refreshFreeUser'
 --header 'Content-Type: application/json'
 ```
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4815)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/4815)

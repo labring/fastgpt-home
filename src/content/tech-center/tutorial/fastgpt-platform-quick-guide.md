@@ -2,7 +2,7 @@
 title: 介绍FastGPT平台核心功能与快速体验方式
 slug: /zh/tutorial/fastgpt-platform-quick-guide
 page_type: 教程
-source: https://doc.fastgpt.cn/zh-CN/guide/getting-started
+source: https://doc.fastgpt.cn/guide/getting-started
 source_type: 官方文档
 ---
 
@@ -20,7 +20,7 @@ FastGPT是基于大语言模型的AI Agent应用开发平台，集成知识库�
 ### 核心功能说明
 平台集成的五大核心能力分别为知识库问答、可视化工作流、Agent编排、工具调用与技能扩展。这些能力可覆盖不同场景的AI应用开发需求，使用者可根据具体业务场景组合使用对应功能，快速搭建符合自身需求的专属AI应用。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/getting-started)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/getting-started)
 
 ## 适用性与版本范围
 

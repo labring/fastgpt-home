@@ -2,7 +2,7 @@
 title: 说明FastGPT会话历史删除与清空API的使用方法
 slug: /zh/glossary/fastgpt-chat-history-delete-api
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/openapi/chat
+source: https://doc.fastgpt.cn/openapi/chat
 source_type: 官方文档
 ---
 
@@ -27,7 +27,7 @@ curl --location --request DELETE 'http://localhost:3000/api/core/chat/history/cl
 ## 容易搞错的地方
 使用清空应用会话接口时，仅会清空通过API Key创建的会话，无法清空在线使用、分享链接等其他来源的会话。成功调用接口后，将返回`code`为200的响应，响应`data`字段为`null`。需注意区分两个接口的参数差异，删除单个会话需传入`chatId`参数，清空应用会话无需该参数。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/openapi/chat)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/openapi/chat)
 
 ## 适用性与版本范围
 

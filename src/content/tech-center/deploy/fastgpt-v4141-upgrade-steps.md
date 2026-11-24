@@ -2,7 +2,7 @@
 title: FastGPT V4.14.1版本升级操作步骤与更新说明
 slug: /zh/deploy/fastgpt-v4141-upgrade-steps
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4141
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/4141
 source_type: 官方文档
 ---
 
@@ -23,4 +23,4 @@ curl --location --request POST https://{{host}}/api/admin/initv4141 \
 
 ## 升级补充说明
 本次升级为脚本驱动的快速升级，所有变更均针对V4.14.1版本的核心功能与已知问题进行修复优化，升级过程中需确保镜像更新正确，脚本执行无误。
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4141)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-14/4141)

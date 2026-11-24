@@ -2,7 +2,7 @@
 title: FastGPT V4.16.0-beta1版本升级操作与验证指南
 slug: /zh/deploy/upgrade-v4-16-0-beta1
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/41601
+source: https://doc.fastgpt.cn/self-host/upgrading/4-16/41601
 source_type: 官方文档
 ---
 
@@ -51,7 +51,7 @@ curl -X POST 'https://你的域名/api/admin/4160/initHttpToolSchema' \
 ## 升级后怎么验证
 1. 访问https://{{host}}/health确认agent-sandbox-proxy可访问；2. 执行Agent Sandbox迁移命令后，检查返回结果中normalization.pendingCount、failedCount均为0，normalizationBlocked为false，确认迁移完成；3. 查看HTTP工具配置，确认数组参数已转换为标准JSON Schema；4. 启动Agent Sandbox，验证功能正常。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/41601)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-16/41601)
 
 ## 适用性与版本范围
 

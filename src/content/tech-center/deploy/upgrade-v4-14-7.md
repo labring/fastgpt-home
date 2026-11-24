@@ -2,7 +2,7 @@
 title: FastGPT V4.14.7版本升级操作与变更说明
 slug: /zh/deploy/upgrade-v4-14-7
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4147
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/4147
 source_type: 官方文档
 ---
 
@@ -24,7 +24,7 @@ source_type: 官方文档
 ## 升级后怎么验证
 可通过检查日志系统运行状态、测试LLM请求追踪功能、验证知识库筛选与对话日志过滤功能、确认工作流与工具调用正常、调用指定接口验证解析逻辑等方式完成升级验证，同时检查各服务启动状态是否正常。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4147)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-14/4147)
 
 ## 适用性与版本范围
 

@@ -2,7 +2,7 @@
 title: Configure and Use File Input in FastGPT Workflows
 slug: /en/tutorial/fastgpt-workflow-file-input
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/build/general/fileInput
+source: https://doc.fastgpt.io/guide/build/general/fileInput
 source_type: Official documentation
 ---
 
@@ -21,7 +21,7 @@ The simplest method for using files in workflows connects document parsing via t
 Beyond basic parsing, FastGPT Workflows support building custom document processing pipelines. This flexible setup allows users to tailor every stage of document handling, from initial file upload to final content routing. Users can extract or analyze document content, then pass the processed results to HTTP requests or other workflow nodes, enabling tailored document processing workflows. An example of this advanced pipeline setup is shown here:
 ![Document parsing](/imgs/image-7.png)
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/general/fileInput)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/general/fileInput)
 
 ## Applicability and version scope
 

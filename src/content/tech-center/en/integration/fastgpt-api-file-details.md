@@ -2,7 +2,7 @@
 title: Retrieve FastGPT File Details via API
 slug: /en/integration/fastgpt-api-file-details
 page_type: Integrations
-source: https://doc.fastgpt.cn/en/guide/dataset/third-party/api_dataset
+source: https://doc.fastgpt.io/guide/dataset/third-party/api_dataset
 source_type: Official documentation
 ---
 
@@ -56,7 +56,7 @@ A sample successful response is shown below:
 }
 ```
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/third-party/api_dataset)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/third-party/api_dataset)
 
 ## Applicability and version scope
 

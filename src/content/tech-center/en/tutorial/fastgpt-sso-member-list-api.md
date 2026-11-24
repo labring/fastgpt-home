@@ -2,7 +2,7 @@
 title: Call FastGPT SSO Member List API
 slug: /en/tutorial/fastgpt-sso-member-list-api
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/admin/sso
+source: https://doc.fastgpt.io/guide/admin/sso
 source_type: Official documentation
 ---
 
@@ -74,7 +74,7 @@ A complete sample successful response is shown below:
 }
 ```
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/admin/sso)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/admin/sso)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: FastGPT V4.14.8版本环境变量变更的升级操作指引
 slug: /zh/reference/fastgpt-v4148-env-variable-change
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4148
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/4148
 source_type: 官方文档小节
 ---
 
@@ -22,4 +22,4 @@ FastGPT V4.14.8版本更新包含环境变量变更内容，属于该版本升�
 3. 需在完成环境变量变更后再执行服务重启升级，不可跳过该配置调整步骤直接升级
 4. 不同部署方式的配置更新路径略有差异，需严格遵循对应部署方式的操作规范
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4148)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-14/4148)

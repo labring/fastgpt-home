@@ -2,7 +2,7 @@
 title: Technical Improvements for FastGPT Self-Hosted Upgrades
 slug: /en/deploy/fastgpt-self-hosted-upgrade-improvements
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4914
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/4914
 source_type: 官方文档
 ---
 
@@ -36,4 +36,4 @@ Additional improvements in this category include:
 2.  **Dangerous Character Filtering for CSV Exports**: Escapes or removes potentially harmful characters from exported CSV files to block malicious content injection attempts.
 3.  **Secure Request Headers**: Implements standardized secure HTTP response headers to mitigate common web application vulnerabilities for self-hosted FastGPT instances.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4914)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/4914)

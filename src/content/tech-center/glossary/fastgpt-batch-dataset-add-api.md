@@ -2,7 +2,7 @@
 title: FastGPT批量添加数据集数据接口返回值说明
 slug: /zh/glossary/fastgpt-batch-dataset-add-api
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/toc
+source: https://doc.fastgpt.cn/toc
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ FastGPT中用于为数据集批量添加数据的API接口，返回值包含添�
 ## 容易搞错的地方
 该接口在批量添加数据成功后，不会返回新增QA对的ID，无法直接通过该响应获取新增数据的唯一标识，若需对新增数据进行更新操作，需通过其他方式匹配定位。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/toc)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/toc)
 
 ## 适用性与版本范围
 

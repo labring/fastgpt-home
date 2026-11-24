@@ -2,7 +2,7 @@
 title: FastGPT 各服务组件与环境配置参数说明
 slug: /zh/deploy/fastgpt-service-env-config
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/env
+source: https://doc.fastgpt.cn/self-host/config/env
 source_type: 官方文档
 ---
 
@@ -20,4 +20,4 @@ FastGPT 包含多个独立部署的服务组件，覆盖核心业务与辅助功
 ### 环境配置规范与必填参数
 环境配置需遵循统一规则。App与Admin共享的布尔变量，使用`true`、`1`、`yes`或`y`表示开启，其他值均视为关闭。代码层面，`packages/service/env.ts`导出名为`serviceEnv`的配置对象，`projects/app/src/env.ts`导出名为`appEnv`的配置对象。运行期必须配置`FILE_TOKEN_KEY`、`AES256_SECRET_KEY`与`INVOKE_TOKEN_SECRET`三个密钥，建议使用随机强密钥，不得使用示例值。
 
-> 来源: [FastGPT 官方文档与源码](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
+> 来源: [FastGPT 官方文档与源码](https://doc.fastgpt.cn/self-host/config/env)

@@ -2,7 +2,7 @@
 title: Retrieve FastGPT App Overall Usage Statistics
 slug: /en/api/fastgpt-app-overall-stats-api
 page_type: API
-source: https://doc.fastgpt.cn/en/openapi/app
+source: https://doc.fastgpt.io/openapi/app
 source_type: Official documentation
 ---
 
@@ -45,7 +45,7 @@ The following table defines the fields within the `data` object:
 | totalPoints | Integer | Total number of FastGPT platform points consumed by all usage of the application. |
 Top-level response fields include `code` (HTTP status code, with 200 indicating a successful request), `statusText` (empty on successful calls), and `message` (empty on successful retrieval of statistics).
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/openapi/app)
+> Source: [FastGPT official source](https://doc.fastgpt.io/openapi/app)
 
 ## Applicability and version scope
 

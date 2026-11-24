@@ -2,7 +2,7 @@
 title: Test Custom ChatGLM2 and M3E Models on FastGPT
 slug: /en/deploy/fastgpt-chatglm2-m3e-testing
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/custom-models/chatglm2-m3e
+source: https://doc.fastgpt.io/self-host/custom-models/chatglm2-m3e
 source_type: Official documentation
 ---
 
@@ -45,7 +45,7 @@ curl --location --request POST 'https://domain/v1/chat/completions' \
 ```
 As with the embedding test, update `https://domain` to your live FastGPT domain and replace the placeholder API key with your valid key.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/custom-models/chatglm2-m3e)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/custom-models/chatglm2-m3e)
 
 ## Applicability and version scope
 

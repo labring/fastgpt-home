@@ -2,7 +2,7 @@
 title: 配置FastGPT内容审核与自动改写工作流的完整步骤
 slug: /zh/tutorial/fastgpt-content-audit-rewrite-workflow
 page_type: 教程
-source: https://doc.fastgpt.cn/zh-CN/guide/getting-started/quick-start
+source: https://doc.fastgpt.cn/guide/getting-started/quick-start
 source_type: 官方文档
 ---
 
@@ -22,7 +22,7 @@ source_type: 官方文档
 
 工作流设计需拆分各节点职责，避免单个AI节点同时承担检索规则、判断分类、改写内容、解释原因等过多任务。职责拆分后，每个节点的Prompt更短更稳定，后续可精准定位各类问题，包括知识库未召回规则、审核节点分类不准、判断器条件未匹配等场景，便于快速调整与优化工作流。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/getting-started/quick-start)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/getting-started/quick-start)
 
 ## 适用性与版本范围
 

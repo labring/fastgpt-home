@@ -2,7 +2,7 @@
 title: Configure AI Models for FastGPT Chat Nodes
 slug: /en/node/fastgpt-ai-model-config
 page_type: 工作流节点
-source: https://doc.fastgpt.cn/en/guide/build/workflow/nodes/ai_chat
+source: https://doc.fastgpt.io/guide/build/workflow/nodes/ai_chat
 source_type: 官方文档
 ---
 
@@ -26,4 +26,4 @@ Two reference screenshots are provided to assist with navigating this configurat
 For detailed descriptions of all available AI parameters, see: [AI Parameter Configuration](../../general/ai_settings.en.mdx)
 :::
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/guide/build/workflow/nodes/ai_chat)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/guide/build/workflow/nodes/ai_chat)

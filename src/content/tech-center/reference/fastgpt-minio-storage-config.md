@@ -2,7 +2,7 @@
 title: FastGPT MinIO对象存储配置参数与操作说明
 slug: /zh/reference/fastgpt-minio-storage-config
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/object-storage
+source: https://doc.fastgpt.cn/self-host/config/object-storage
 source_type: 官方文档小节
 ---
 
@@ -61,5 +61,5 @@ STORAGE_S3_MAX_RETRIES = 3
 - 兼容AWS S3协议的对象存储服务，可将STORAGE_VENDOR设为minio后接入。
 - 生产环境建议提前创建公有、私有两个存储桶。公有存储桶需配置公开读取策略，或关联自定义域名、CloudFront。需确保各环境变量的参数值与实际存储服务配置一致。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/object-storage)
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/object-storage)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/config/object-storage)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/config/object-storage)

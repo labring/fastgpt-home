@@ -2,7 +2,7 @@
 title: Recommended SeekDB Resource Specifications for FastGPT
 slug: /en/deploy/seekdb-resource-specs-fastgpt
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/deploy/docker
+source: https://doc.fastgpt.io/self-host/deploy/docker
 source_type: Official documentation
 ---
 
@@ -26,7 +26,7 @@ Each row in the table corresponds to a specific FastGPT workload scale:
 - 1M vector groups: For deployments handling up to 1 million vector groups, with baseline and upgraded resource tiers for consistent performance.
 - 5M vector groups: For high-scale deployments handling up to 5 million vector groups, with scaled minimum and recommended resources to support sustained workloads.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/deploy/docker)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/deploy/docker)
 
 ## Applicability and version scope
 

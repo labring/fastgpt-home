@@ -2,7 +2,7 @@
 title: Unified Agent and Tool Call Execution for FastGPT
 slug: /en/deploy/fastgpt-agent-loop-refactor
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/4152
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/4152
 source_type: 官方文档
 ---
 
@@ -23,4 +23,4 @@ The refactor consolidates the generation and persistence of several critical sta
 ## Enhanced Tool Scheduling
 Tool scheduling logic has been improved to balance parallel execution and ordered response handling. Safe, non-stateful tools can now run in parallel to improve throughput, while all tool responses are written back in the exact order of the original model calls to maintain data consistency. Stateful tools such as plan and ask continue to execute sequentially, preventing race conditions and preserving the integrity of stateful workflow operations.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/4152)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/4-15/4152)

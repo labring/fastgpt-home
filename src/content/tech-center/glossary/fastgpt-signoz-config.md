@@ -2,7 +2,7 @@
 title: FastGPT对接Signoz监控服务的配置步骤说明
 slug: /zh/glossary/fastgpt-signoz-config
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/signoz
+source: https://doc.fastgpt.cn/self-host/config/signoz
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ Signoz是可对接FastGPT的监控服务，支持使用官方云服务或私有�
 ## 容易搞错的地方
 易混淆公网与内网地址的使用场景，未根据部署场景选择对应地址。使用外网访问时，易忘记开启4318端口的外网地址配置。部署后需等待公网地址就绪，未就绪时复制的地址无法正常使用。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/config/signoz)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/config/signoz)
 
 ## 适用性与版本范围
 

@@ -2,7 +2,7 @@
 title: FastGPT V4.8.7版本升级操作指南与更新内容说明
 slug: /zh/deploy/upgrade-v4-8-7
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/487
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/487
 source_type: 官方文档
 ---
 
@@ -20,7 +20,7 @@ source_type: 官方文档
 ## 升级后怎么验证
 可通过以下内容验证升级效果：确认应用搜索功能可正常使用，快速检索目标应用；确认简易模式下可正常变更全局变量；确认gpt4o模型可同时调用工具和处理图片输入；确认local域名部署的环境可正常使用vision模式；确认插件可独立运行、发布并查看运行日志。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/487)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/487)
 
 ## 适用性与版本范围
 

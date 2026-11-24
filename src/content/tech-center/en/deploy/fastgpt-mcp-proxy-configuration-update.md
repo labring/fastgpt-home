@@ -2,7 +2,7 @@
 title: Update FastGPT MCP Proxy Server Configuration
 slug: /en/deploy/fastgpt-mcp-proxy-configuration-update
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/496
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/496
 source_type: 官方文档
 ---
 
@@ -33,4 +33,4 @@ For FastGPT Pro Edition, configure the MCP proxy server URL through the admin pa
 ## Configuration Validation
 To confirm the update was successful, verify the configuration for your edition. For Community Edition, check that the `config.json` file contains the correct `mcpServerProxyEndpoint` field with no trailing slash in the URL. For Pro Edition, confirm the `MCP Proxy Server URL` field in the admin panel matches the intended public access URL, and that the setting is retained after saving.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/496)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/496)

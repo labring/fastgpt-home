@@ -2,7 +2,7 @@
 title: FastGPT管理员后台SSO与外部成员同步功能的配置方法
 slug: /zh/reference/fastgpt-sso-external-member-sync
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/admin/sso
+source: https://doc.fastgpt.cn/guide/admin/sso
 source_type: 官方文档小节
 ---
 
@@ -19,4 +19,4 @@ source_type: 官方文档小节
 1. 无需使用SSO或外部成员同步功能，或仅使用快速登录的用户，可跳过本章节
 2. 本功能仅面向需要接入自有成员系统或主流办公IM的用户
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/admin/sso)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/admin/sso)

@@ -2,7 +2,7 @@
 title: Set Up FastGPT GPT-Compatible Chat API
 slug: /en/api/fastgpt-gpt-compatible-chat-api
 page_type: API
-source: https://doc.fastgpt.cn/en/openapi/chat
+source: https://doc.fastgpt.io/openapi/chat
 source_type: Official documentation
 ---
 
@@ -29,7 +29,7 @@ The following parameters and their behaviors are defined for the FastGPT v1 chat
 ## Token Usage Tracking Notes
 Unlike the official GPT API, the FastGPT v1 chat API does not return pre-calculated token consumption values in standard responses. To retrieve the data required for token calculation, you must explicitly enable the `detail=true` parameter. Once enabled, the response will include extended metadata that can be used to manually compute total token usage for the request.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/openapi/chat)
+> Source: [FastGPT official source](https://doc.fastgpt.io/openapi/chat)
 
 ## Applicability and version scope
 

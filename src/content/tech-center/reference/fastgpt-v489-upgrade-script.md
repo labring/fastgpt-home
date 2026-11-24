@@ -2,7 +2,7 @@
 title: FastGPT V4.8.9版本升级脚本的具体使用操作指南
 slug: /zh/reference/fastgpt-v489-upgrade-script
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/489
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/489
 source_type: 官方文档小节
 ---
 
@@ -22,4 +22,4 @@ FastGPT V4.8.9版本升级需通过专属升级脚本完成。该升级脚本适
 2. 升级过程中请勿中断脚本执行，避免出现部署异常。
 3. 执行脚本前需确认服务器权限与网络配置正常。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/489)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/489)

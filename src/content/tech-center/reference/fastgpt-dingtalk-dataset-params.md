@@ -2,7 +2,7 @@
 title: 获取FastGPT对接钉钉知识库所需的三个配置参数
 slug: /zh/reference/fastgpt-dingtalk-dataset-params
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/dingtalk_dataset
+source: https://doc.fastgpt.cn/guide/dataset/third-party/dingtalk_dataset
 source_type: 官方文档小节
 ---
 
@@ -23,4 +23,4 @@ source_type: 官方文档小节
 3. 建议使用专门的钉钉成员作为FastGPT同步账号，并授予目标知识库只读权限。
 4. 该成员无权限访问的钉钉知识库，不会出现在FastGPT的添加文件列表中。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/dingtalk_dataset)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/dataset/third-party/dingtalk_dataset)

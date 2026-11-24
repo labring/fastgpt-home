@@ -2,7 +2,7 @@
 title: 配置FastGPT免登录链接的身份验证接口与响应规则
 slug: /zh/reference/fastgpt-no-login-link-auth
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/build/publish/link
+source: https://doc.fastgpt.cn/guide/build/publish/link
 source_type: 官方文档小节
 ---
 
@@ -32,4 +32,4 @@ source_type: 官方文档小节
 3. uid是用户唯一凭证，用于拉取和保存对话记录，需保证唯一性。
 4. 校验请求会在分享链接初始化、开始对话、对话结束三个节点触发。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/publish/link)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/publish/link)

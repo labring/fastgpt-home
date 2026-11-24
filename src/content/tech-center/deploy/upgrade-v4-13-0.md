@@ -2,7 +2,7 @@
 title: FastGPT V4.13.0版本升级操作与变更说明
 slug: /zh/deploy/upgrade-v4-13-0
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-13/4130
+source: https://doc.fastgpt.cn/self-host/upgrading/4-13/4130
 source_type: 官方文档
 ---
 
@@ -55,7 +55,7 @@ S3_PLUGIN_BUCKET=fastgpt-plugin # 系统插件热安装文件的桶，私有读�
 
 检查FastGPT服务启动日志无异常；进入系统后台确认S3、MongoDB、Redis连接正常；测试创建HTTP工具集节点功能正常；测试团队管理员分配模型权限功能正常；测试知识库文件解析并发配置功能正常；测试代码运行节点的AI辅助生成功能正常；检查系统工具的author名字显示正常；发起对话确认知识库引用鉴权、对话记录节点详情存储正常；测试上传系统工具安装文件功能正常。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-13/4130)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-13/4130)
 
 ## 适用性与版本范围
 

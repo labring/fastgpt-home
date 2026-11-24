@@ -2,7 +2,7 @@
 title: Adjust Share Link Chat Reporting Endpoint for Billing Changes
 slug: /en/deploy/share-link-chat-reporting-endpoint-update
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/469
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/469
 source_type: 官方文档
 ---
 
@@ -30,4 +30,4 @@ Follow these sequential steps to update your existing share link chat reporting 
 3.  Delete all code segments that reference, parse, or transmit the `inputToken` and `outputToken` fields, as these fields are no longer generated or returned by the endpoint.
 4.  Adjust any internal analytics or tracking logic that previously used split input and output token metrics to use the combined `token` field, if your deployment requires aggregated token count data.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/469)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/469)

@@ -2,7 +2,7 @@
 title: FastGPT手动模式HTTP工具数组参数数据迁移操作指南
 slug: /zh/reference/fastgpt-manual-http-tool-schema-migration
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/41601
+source: https://doc.fastgpt.cn/self-host/upgrading/4-16/41601
 source_type: 官方文档小节
 ---
 
@@ -30,4 +30,4 @@ source_type: 官方文档小节
 2. 迁移按批次执行，可安全重试，多次执行不会产生重复操作。
 3. 正式迁移完成后，可再次执行dry-run命令，若返回结果中`total.changedDocumentCount`为0，则代表所有待处理数据已完成迁移。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/41601)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-16/41601)

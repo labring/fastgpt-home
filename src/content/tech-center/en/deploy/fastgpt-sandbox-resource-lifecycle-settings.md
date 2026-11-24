@@ -2,7 +2,7 @@
 title: Configure FastGPT Sandbox Resource and Lifecycle Settings
 slug: /en/deploy/fastgpt-sandbox-resource-lifecycle-settings
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/sandbox/opensandbox
+source: https://doc.fastgpt.io/self-host/config/sandbox/opensandbox
 source_type: Official documentation
 ---
 
@@ -25,7 +25,7 @@ For self-hosted FastGPT deployments, controlled sandbox resource allocation and 
 ## Automated Lifecycle Management
 The sandbox lifecycle follows a two-stage automated cleanup process. First, any running sandbox that remains inactive for the duration specified by `AGENT_SANDBOX_SUSPEND_MINUTES` is suspended to halt its resource consumption while preserving its state. After a sandbox has been suspended and remains inactive for the number of days defined in `AGENT_SANDBOX_ARCHIVE_INACTIVE_DAYS`, the system archives the sandbox permanently to reclaim storage and cluster resources. The WebSocket configuration parameters control the maximum allowable sizes for individual messages and frames passed between the FastGPT platform and connected sandboxes, preventing oversized data transfers from disrupting sandbox communications.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/sandbox/opensandbox)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/sandbox/opensandbox)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: FastGPT V4.14.10版本环境变量变更适配操作指南
 slug: /zh/reference/fastgpt-v41410-env-vars-update
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41410
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/41410
 source_type: 官方文档小节
 ---
 
@@ -22,4 +22,4 @@ FastGPT V4.14.10版本存在环境变量配置变更。升级或首次部署至�
 3. 操作前建议备份当前的环境变量配置文件，若出现服务异常可快速恢复原有配置。
 4. 若使用官方提供的升级脚本完成升级，需提前确认脚本适配当前部署环境后再执行。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41410)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-14/41410)

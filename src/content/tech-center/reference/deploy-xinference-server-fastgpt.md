@@ -2,7 +2,7 @@
 title: 在Linux或Windows服务器部署Xinference以支持FastGPT自定义模型调用
 slug: /zh/reference/deploy-xinference-server-fastgpt
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/custom-models/xinference
+source: https://doc.fastgpt.cn/self-host/custom-models/xinference
 source_type: 官方文档小节
 ---
 
@@ -37,4 +37,4 @@ source_type: 官方文档小节
 4.  直接部署需准备3.9以上Python环境，建议用conda创建3.11版本环境。
 5.  Docker部署需提前安装Docker环境。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/xinference)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/custom-models/xinference)

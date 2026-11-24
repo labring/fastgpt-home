@@ -2,7 +2,7 @@
 title: 说明FastGPT文档解析节点的功能与使用规则
 slug: /zh/glossary/fastgpt-document-parse-node
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/guide/build/general/fileInput
+source: https://doc.fastgpt.cn/guide/build/general/fileInput
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ source_type: 官方文档
 ## 容易搞错的地方
 文档解析节点仅解析当前工作流接收的文件，不会解析历史记录中的文件。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/general/fileInput)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/general/fileInput)
 
 ## 适用性与版本范围
 

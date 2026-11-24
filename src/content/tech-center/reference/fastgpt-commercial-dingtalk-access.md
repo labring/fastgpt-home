@@ -2,7 +2,7 @@
 title: FastGPT商业版4.8.16+版本接入钉钉机器人的操作方法
 slug: /zh/reference/fastgpt-commercial-dingtalk-access
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/build/publish/dingtalk
+source: https://doc.fastgpt.cn/guide/build/publish/dingtalk
 source_type: 官方文档小节
 ---
 
@@ -21,4 +21,4 @@ FastGPT商业版4.8.16及以上版本支持直接接入钉钉机器人，无需�
 2. 接入全程无需额外开发或调用第三方API，直接通过FastGPT内置配置完成。
 3. 必须通过官方指定的「应用构建」→「应用发布」路径进入配置页面，否则无法找到对应入口。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/publish/dingtalk)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/publish/dingtalk)

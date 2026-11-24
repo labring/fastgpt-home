@@ -2,7 +2,7 @@
 title: Handle Document and Multimodal File Inputs in FastGPT
 slug: /en/tutorial/fastgpt-file-input-processing
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/build/general/fileInput
+source: https://doc.fastgpt.io/guide/build/general/fileInput
 source_type: Official documentation
 ---
 
@@ -24,7 +24,7 @@ To activate support for media file inputs, complete these required configuration
 3. Enable the multimodal recognition feature to allow the platform to route media files to the appropriate processing pipeline.
 Without this setting enabled, FastGPT will not process media file uploads via the multimodal recognition path.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/general/fileInput)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/general/fileInput)
 
 ## Applicability and version scope
 

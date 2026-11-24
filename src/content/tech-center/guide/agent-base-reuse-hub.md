@@ -6,7 +6,7 @@ source: https://fastgpt.cn/api/fastgpt-chat-api-guide
 source_type: 深度场景内容
 meta_title: Agent 底座复用的核对入口
 meta_description: 从一个场景扩到多个部门时，FastGPT 的可复用项与需重做项分别落在哪里：工作流、插件工具、知识库、变量、发布渠道与版本六条入口逐项核对并给出判定。
-delivery_metadata: {"source_front_matter":{"slug":"agent-base-reuse-hub","meta_title":"Agent 底座复用的核对入口","meta_description":"从一个场景扩到多个部门时，FastGPT 的可复用项与需重做项分别落在哪里：工作流、插件工具、知识库、变量、发布渠道与版本六条入口逐项核对并给出判定。","language":"zh","content_type":"aggregation","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"agent-base-reuse-hub","keywords":"Agent复用,工作流,插件工具,知识库,发布渠道","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"Agent 从一个场景扩到多部门时哪些能复用","需求依据":"客户 2026-11-07 购买诉求第 5 条：可复用的 Agent 底座能降低重复开发。","事实来源":"FastGPT 产品知识库·内容收集清单；官方更新说明 4.16.0 至 4.17.3","内链":"https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173","排期":"W18 聚合导航第 7 篇","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（来源版本，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核发布与变量入口。"]}
+delivery_metadata: {"source_front_matter":{"slug":"agent-base-reuse-hub","meta_title":"Agent 底座复用的核对入口","meta_description":"从一个场景扩到多个部门时，FastGPT 的可复用项与需重做项分别落在哪里：工作流、插件工具、知识库、变量、发布渠道与版本六条入口逐项核对并给出判定。","language":"zh","content_type":"aggregation","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"agent-base-reuse-hub","keywords":"Agent复用,工作流,插件工具,知识库,发布渠道","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"Agent 从一个场景扩到多部门时哪些能复用","需求依据":"客户 2026-11-07 购买诉求第 5 条：可复用的 Agent 底座能降低重复开发。","事实来源":"FastGPT 产品知识库·内容收集清单；官方更新说明 4.16.0 至 4.17.3","内链":"https://doc.fastgpt.cn/self-host/upgrading/4-17/4173","排期":"W18 聚合导航第 7 篇","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（来源版本，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核发布与变量入口。"]}
 keywords: Agent复用,工作流,插件工具,知识库,发布渠道
 schema_type: Article
 date_modified: 2026-11-16
@@ -26,7 +26,7 @@ date_modified: 2026-11-16
 
 ## 入口二：插件与工具
 
-入口：[FastGPT MCP说明](https://doc.fastgpt.cn/zh-CN/guide/build/tools/mcp_tools)。
+入口：[FastGPT MCP说明](https://doc.fastgpt.cn/guide/build/tools/mcp_tools)。
 
 位置在插件管理与工具配置。插件把第三方能力注册成可复用的工具，MCP 则连接已有的工具服务。核对动作是给每个工具标注维护方与变更频率：维护方在平台内、变更少的适合做公共工具；维护方在外部、变动频繁的适合走 MCP 接入。
 
@@ -34,7 +34,7 @@ date_modified: 2026-11-16
 
 ## 入口三：知识库与文件权限
 
-入口：[FastGPT 权限说明](https://doc.fastgpt.cn/zh-CN/guide/dataset/collection_permission)。
+入口：[FastGPT 权限说明](https://doc.fastgpt.cn/guide/dataset/collection_permission)。
 
 位置在知识库结构与文件权限设置。可复用的是结构与检索配置，需重做的是语料本身。核对动作是区分三类资料：全公司通用的制度、部门专属的业务资料、项目级的临时文件，分别落在不同知识库。
 
@@ -42,7 +42,7 @@ date_modified: 2026-11-16
 
 ## 入口四：变量与参数
 
-入口：[FastGPT 更新说明](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173)。
+入口：[FastGPT 更新说明](https://doc.fastgpt.cn/self-host/upgrading/4-17/4173)。
 
 位置在应用变量与节点参数。可复用的是变量名与取值规则，需重做的是各部门的取值清单。核对动作是把变量分成环境类（地址、凭据）、业务类（部门、产品线）、展示类（称谓、口径）三组，环境类与业务类分开管理。
 
@@ -58,7 +58,7 @@ date_modified: 2026-11-16
 
 ## 入口六：版本与回滚
 
-入口：[FastGPT 更新说明](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173)。
+入口：[FastGPT 更新说明](https://doc.fastgpt.cn/self-host/upgrading/4-17/4173)。
 
 位置在版本记录。复用不只是复制功能，还包括复制“出问题怎么退”。核对动作是给每个场景定一条回滚路径：应用回滚到哪个版本、知识库回滚到哪次导入、模型回滚到哪个引用。
 
@@ -71,5 +71,5 @@ date_modified: 2026-11-16
 | 主题 | 版本 | 来源 |
 | --- | --- | --- |
 | 模型与渠道支持、插件机制、应用发布 | 当期商业方案 | [FastGPT 商务咨询：授权、部署与支持范围](https://fastgpt.cn/contact) |
-| 工具节点参数生成、沙盒不混部 | v4.16.0 | [self-host/upgrading/4-16/4160](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/4160) |
-| 动态选项、MCP 配额、发布快照 | v4.17.1 / v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173) |
+| 工具节点参数生成、沙盒不混部 | v4.16.0 | [self-host/upgrading/4-16/4160](https://doc.fastgpt.cn/self-host/upgrading/4-16/4160) |
+| 动态选项、MCP 配额、发布快照 | v4.17.1 / v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/self-host/upgrading/4-17/4173) |

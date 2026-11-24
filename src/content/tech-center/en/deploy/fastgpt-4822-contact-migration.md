@@ -2,7 +2,7 @@
 title: Run FastGPT 4822 Contact Data Migration
 slug: /en/deploy/fastgpt-4822-contact-migration
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4822
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/4822
 source_type: 官方文档
 ---
 
@@ -33,4 +33,4 @@ Follow these structured steps to run the migration script without errors:
 4. Edit the provided curl command template, replacing `{{rootkey}}` with your recorded rootkey and `{{host}}` with your verified FastGPT domain.
 5. Execute the modified command in the terminal. The script will automatically complete the contact data migration without requiring additional user input once initiated.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4822)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/4822)

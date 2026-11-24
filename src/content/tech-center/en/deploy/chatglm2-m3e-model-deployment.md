@@ -2,7 +2,7 @@
 title: Deploy ChatGLM2-M3E Custom Model Image for FastGPT
 slug: /en/deploy/chatglm2-m3e-model-deployment
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/custom-models/chatglm2-m3e
+source: https://doc.fastgpt.io/self-host/custom-models/chatglm2-m3e
 source_type: Official documentation
 ---
 
@@ -30,7 +30,7 @@ docker run -d \
 ```
 If using the China mainland mirrored image, replace the final image argument with `registry.cn-hangzhou.aliyuncs.com/fastgpt_docker/chatglm2-m3e:latest`. Omit the `-e` flag entirely to use the default security token, though using a custom token is recommended for secure deployments. After starting the container, confirm it is running with `docker ps` and validate connectivity to the API endpoint on port 6006 to ensure successful deployment.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/custom-models/chatglm2-m3e)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/custom-models/chatglm2-m3e)
 
 ## Applicability and version scope
 

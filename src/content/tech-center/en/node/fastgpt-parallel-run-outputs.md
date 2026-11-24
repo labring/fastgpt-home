@@ -2,7 +2,7 @@
 title: Understand FastGPT Parallel Run Node Outputs
 slug: /en/node/fastgpt-parallel-run-outputs
 page_type: Workflow nodes
-source: https://doc.fastgpt.cn/en/guide/build/workflow/nodes/parallel_run
+source: https://doc.fastgpt.io/guide/build/workflow/nodes/parallel_run
 source_type: Official documentation
 ---
 
@@ -25,7 +25,7 @@ Each output field serves a distinct workflow purpose:
 2. **Full Results**: Use this output when you need complete visibility into every task’s outcome, including failures. Since the array length matches the number of input tasks, you can map each result entry back to its original input task for auditing or error reporting.
 3. **Status Field**: The top-level status string enables conditional branching. For example, route workflows to different sub-processes based on whether all tasks succeeded, some failed, or all failed, using the predefined `success`, `partial_success`, and `failed` values.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/workflow/nodes/parallel_run)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/workflow/nodes/parallel_run)
 
 ## Applicability and version scope
 

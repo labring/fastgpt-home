@@ -2,7 +2,7 @@
 title: 说明FastGPT并行运行节点的输出参数与使用规则
 slug: /zh/glossary/fastgpt-parallel-run-output-2
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/parallel_run
+source: https://doc.fastgpt.cn/guide/build/workflow/nodes/parallel_run
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ FastGPT并行运行节点的输出为结构化对象，包含多任务并行执�
 ## 容易搞错的地方
 部分用户会误以为成功结果的排列顺序是任务执行完成的先后顺序，实际成功结果严格按照原始输入任务的顺序排列。部分场景下会混淆成功结果与完整结果的适用范围，完整结果包含所有输入任务的执行详情，包括失败任务，而成功结果仅保留成功任务的输出。此外，完成状态的取值仅支持官方给定的三个选项，不能随意自定义。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/parallel_run)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/workflow/nodes/parallel_run)
 
 ## 适用性与版本范围
 

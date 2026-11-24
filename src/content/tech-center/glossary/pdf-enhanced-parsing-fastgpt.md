@@ -2,7 +2,7 @@
 title: 介绍FastGPT中PDF增强解析的功能与配置使用方法
 slug: /zh/glossary/pdf-enhanced-parsing-fastgpt
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/self-host/custom-models/marker
+source: https://doc.fastgpt.cn/self-host/custom-models/marker
 source_type: 官方文档
 ---
 
@@ -22,8 +22,8 @@ PDF增强解析是FastGPT中针对PDF文件的自定义增强解析功能，依�
 ## 容易搞错的地方
 未将LOG_LEVEL设置为info或debug时，无法查看解析相关的日志，无法确认解析是否正常完成。该功能需在指定位置勾选启用，包括知识库上传PDF时的选项，以及应用的文件上传配置中的选项，不可在未勾选的场景下生效。部分用户可能误将该功能用于非PDF文件的解析，导致无法触发对应的解析流程。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/marker)
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/mineru)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/custom-models/marker)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/custom-models/mineru)
 
 ## 适用性与版本范围
 

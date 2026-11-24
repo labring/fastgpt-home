@@ -7,7 +7,7 @@ is_part_of: FastGPT 技术中心
 meta_description: 针对企业技术负责人与运维负责人，讲解如何构建固定评测集量化RAG回答质量变化，覆盖上线前样本搭建、上线后回归验证及判分规则，实现可追溯、可对比的质量管控。
 delivery_source_type: 开源仓库文档与社区线程
 source_type: 深度场景内容
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/env
+source: https://doc.fastgpt.cn/self-host/config/env
 meta_title: 企业RAG回答质量评测集构建：上线前样本、上线后回归与判分口径｜FastGPT 技术中心
 schema_type: TechArticle
 date_published: 2026-09-28
@@ -64,8 +64,8 @@ delivery_note: 判据取自开源仓库文档与社区线程，核验日 2026-09
 
 ## 参考资料
 
-- [FastGPT 环境变量](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
-- [FastGPT 升级说明](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/upgrade-instruction)
+- [FastGPT 环境变量](https://doc.fastgpt.cn/self-host/config/env)
+- [FastGPT 升级说明](https://doc.fastgpt.cn/self-host/upgrading/upgrade-instruction)
 
 ## 需要进一步确认时
 

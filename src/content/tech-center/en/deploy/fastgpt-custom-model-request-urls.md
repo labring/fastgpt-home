@@ -2,7 +2,7 @@
 title: Set Up FastGPT Custom Model Request URLs
 slug: /en/deploy/fastgpt-custom-model-request-urls
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/model/intro
+source: https://doc.fastgpt.io/self-host/config/model/intro
 source_type: Official documentation
 ---
 
@@ -29,7 +29,7 @@ Most supported model types follow the official OpenAI API format for their respe
 4. Input your custom request key, which will populate the Authorization header for all requests to this endpoint.
 5. Validate the configuration to confirm the URL and key are correctly formatted, then save the settings to enable direct routing to your custom endpoint.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/model/intro)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/model/intro)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: FastGPT v4.15版本官方修复项的技术速查
 slug: /zh/reference/fastgpt-v415-fix-quick-reference
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41502
+source: https://doc.fastgpt.cn/self-host/upgrading/4-15/41502
 source_type: 官方文档小节
 ---
 
@@ -23,4 +23,4 @@ source_type: 官方文档小节
 ## 注意事项
 所有修复项仅在升级至FastGPT v4.15版本后生效；需结合自身业务使用的场景逐一验证，避免遗漏；接口类修复需确认调用的v1/completions接口的返回参数符合预期。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41502)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-15/41502)

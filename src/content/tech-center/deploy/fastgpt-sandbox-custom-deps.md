@@ -2,7 +2,7 @@
 title: 配置FastGPT Agent沙箱的自定义软件依赖源
 slug: /zh/deploy/fastgpt-sandbox-custom-deps
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/sandbox/sealosdevbox
+source: https://doc.fastgpt.cn/self-host/config/sandbox/sealosdevbox
 source_type: 官方文档
 ---
 
@@ -21,7 +21,7 @@ AGENT_SANDBOX_APT_MIRROR=https://mirrors.tuna.tsinghua.edu.cn/debian
 ### 配置生效与恢复规则
 对于root权限的Agent沙箱，系统会根据发行版生成并覆盖标准的Ubuntu或Debian的.sources系统文件，在覆盖原有文件前，会自动创建带有.copy后缀的备份文件。如果后续删除对应的环境变量，系统会尝试恢复配置：带有.copy备份的文件将被还原至初始状态，没有备份的文件则不会执行任何恢复操作。初始化阶段不会自动执行apt-get update命令。如果运行环境为arm64架构，需确保配置的镜像源提供对应架构的软件包，否则可能无法正常安装依赖。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/config/sandbox/sealosdevbox)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/config/sandbox/sealosdevbox)
 
 ## 适用性与版本范围
 

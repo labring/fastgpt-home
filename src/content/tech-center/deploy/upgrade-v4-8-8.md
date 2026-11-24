@@ -2,7 +2,7 @@
 title: FastGPT V4.8.8版本升级操作与更新内容说明
 slug: /zh/deploy/upgrade-v4-8-8
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/488
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/488
 source_type: 官方文档
 ---
 
@@ -27,7 +27,7 @@ curl --location --request POST 'https://{{host}}/api/admin/initv488' \
 ## 升级后怎么验证
 验证知识库权限继承功能是否正常生效；确认新增的DuckDuckGo、飞书webhook系统插件可正常加载与使用；检查提示词及工作流Textarea输入框是否支持输入/唤起变量选择功能；验证修复的各类问题，如并行执行节点运行时间记录、嵌套节点运行详情展示等是否恢复正常。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/488)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/488)
 
 ## 适用性与版本范围
 

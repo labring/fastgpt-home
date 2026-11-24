@@ -7,7 +7,7 @@ is_part_of: FastGPT Tech Center
 meta_description: Choose redundancy for FastGPT services, databases, storage, and model access based on recovery objectives and tested failover procedures.
 delivery_source_type: Open-source repository docs and community threads
 source_type: 深度场景内容
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/env
+source: https://doc.fastgpt.cn/self-host/config/env
 meta_title: High Availability and Disaster Recovery: What Must Be Redundant, What Can Wait | FastGPT Technical Center
 schema_type: TechArticle
 date_published: 2026-09-28
@@ -85,8 +85,8 @@ If your resources are limited and you cannot afford the resource costs of redund
 - [FastGPT v4.17.0 MCP publishing documentation](https://github.com/labring/FastGPT/blob/v4.17.0/document/content/guide/build/publish/mcp_server.mdx)
 - [FastGPT v4.17.0 release and dependency requirements](https://github.com/labring/FastGPT/releases/tag/v4.17.0)
 
-- [FastGPT environment variables](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
-- [FastGPT Docker Compose deployment](https://doc.fastgpt.cn/zh-CN/self-host/deploy/docker)
+- [FastGPT environment variables](https://doc.fastgpt.cn/self-host/config/env)
+- [FastGPT Docker Compose deployment](https://doc.fastgpt.cn/self-host/deploy/docker)
 
 ## Next steps
 

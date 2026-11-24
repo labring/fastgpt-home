@@ -2,7 +2,7 @@
 title: FastGPT V4.5.2版本升级说明与更新内容
 slug: /zh/deploy/fastgpt-v452-upgrade-notes
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/452
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/452
 source_type: 官方文档
 ---
 
@@ -21,4 +21,4 @@ FastGPT V4.5.2 本次更新包含两项核心改动：一是新增模块插件�
 4.  启动更新后的部署服务；
 5.  访问系统后台，验证模块插件功能与知识库引用提示功能是否正常生效。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/452)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/452)

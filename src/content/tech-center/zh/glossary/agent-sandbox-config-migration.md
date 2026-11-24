@@ -2,7 +2,7 @@
 title: FastGPT Agent沙箱的配置、镜像源设置及迁移流程说明
 slug: /zh/glossary/agent-sandbox-config-migration
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/sandbox/opensandbox
+source: https://doc.fastgpt.cn/self-host/config/sandbox/opensandbox
 source_type: 官方文档
 ---
 
@@ -25,9 +25,9 @@ Agent沙箱是FastGPT中运行Agent任务的隔离运行环境，支持配置依
 4. 正式迁移失败时需查看`failedCount`和`failures`字段，前置清洗失败需查看`normalization.failures`。
 5. `skippedCount > 0`不代表迁移失败，但未完成所有遗留记录的迁移。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/config/sandbox/opensandbox)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/config/sandbox/opensandbox)
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/4160)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-16/4160)
 
 ## 适用性与版本范围
 

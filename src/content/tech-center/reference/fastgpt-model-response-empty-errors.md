@@ -2,7 +2,7 @@
 title: 解决FastGPT使用中模型响应为空与模型报错问题
 slug: /zh/reference/fastgpt-model-response-empty-errors
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/troubleshooting/model-errors
+source: https://doc.fastgpt.cn/self-host/troubleshooting/model-errors
 source_type: 官方文档小节
 ---
 
@@ -36,4 +36,4 @@ curl --location --request POST 'https://api.openai.com/v1/chat/completions' \
 ## 注意事项
 需排查以下常见问题：国内模型命中风控；仅保留messages和必要参数测试，删除其他无关参数；检查参数是否符合模型要求，如temperature不支持0或两位小数、max_tokens超出限制、上下文超长；确认模型部署是否兼容stream模式。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/troubleshooting/model-errors)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/troubleshooting/model-errors)

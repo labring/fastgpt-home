@@ -31,4 +31,4 @@ source_type: GitHub issue
 
 > 来源: [原讨论中的补充回复](https://github.com/labring/FastGPT/issues/4159#issuecomment-2724299071)
 
-> 来源: [FastGPT 工具调用与终止](https://doc.fastgpt.io/en/guide/build/workflow/nodes/tool)
+> 来源: [FastGPT 工具调用与终止](https://doc.fastgpt.io/guide/build/workflow/nodes/tool)

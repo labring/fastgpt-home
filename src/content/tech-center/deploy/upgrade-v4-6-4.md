@@ -2,7 +2,7 @@
 title: FastGPT V4.6.4版本升级操作与功能变更说明
 slug: /zh/deploy/upgrade-v4-6-4
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/464
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/464
 source_type: 官方文档
 ---
 
@@ -38,7 +38,7 @@ curl --location --request POST 'https://{{host}}/api/admin/initv464' \
 ## 升级后怎么验证
 确认初始化请求执行成功，可通过数据库检查PG数据库相关表的createTime字段、Mongo数据库chat集合的feedback字段已完成初始化。测试分享链接功能，确认身份验证逻辑正常，图片上传鉴权无异常。测试知识库搜索功能，确认搜索结果按MaxToken计算的topk逻辑生效。测试apikey鉴权，确认apikey优先级高于cookie鉴权。检查Dataset Intro可正常更新，md代码块渲染无异常，root权限操作正常。确认Mongo连接池运行正常，无未释放问题。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/464)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/464)
 
 ## 适用性与版本范围
 

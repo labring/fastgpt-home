@@ -2,7 +2,7 @@
 title: Publish FastGPT Community System Tool Plugins
 slug: /en/model/fastgpt-community-plugin-publishing
 page_type: Model guides
-source: https://doc.fastgpt.cn/en/plugin/system-tool-development
+source: https://doc.fastgpt.io/plugin/system-tool-development
 source_type: Official documentation
 ---
 
@@ -40,7 +40,7 @@ After your standalone plugin repository is live on GitHub, return to your local 
 ### Submit Pull Request
 Once your changes to the `fastgpt-community-plugins` repository are pushed to your fork, open a pull request targeting the main branch of the upstream `labring/fastgpt-community-plugins` repository. Maintainers will review your submission to confirm alignment with community plugin guidelines before merging your contribution.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/plugin/system-tool-development)
+> Source: [FastGPT official source](https://doc.fastgpt.io/plugin/system-tool-development)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: FastGPT中ChatGLM2自定义模型的部署配置与启动方法
 slug: /zh/glossary/chatglm2-deployment-fastgpt
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/self-host/custom-models/chatglm2
+source: https://doc.fastgpt.cn/self-host/custom-models/chatglm2
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ ChatGLM2部署是FastGPT中通过源码方式配置并启动ChatGLM2自定义大
 ## 容易搞错的地方
 误将verify_token的作用视为模型本身的验证，该配置仅用于接口层的防盗用。启动命令中--model_name后的数字需与前期配置的模型参数匹配，不可随意填写。启动后需等待模型完全加载，未加载完成时无法正常使用接口。遇到报错时需先通过GPT排查问题，不可直接跳过排查步骤。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/chatglm2)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/custom-models/chatglm2)
 
 ## 适用性与版本范围
 

@@ -2,7 +2,7 @@
 title: Add Models to Existing FastGPT Provider Configurations
 slug: /en/model/fastgpt-add-models-existing-providers
 page_type: Model guides
-source: https://doc.fastgpt.cn/en/plugin/model-presets
+source: https://doc.fastgpt.io/plugin/model-presets
 source_type: Official documentation
 ---
 
@@ -100,7 +100,7 @@ When FastGPT builds the static model list, several default values are automatica
 - The `name` field defaults to the `model` field value if no explicit value is provided
 - Standard LLM capability switches are added, including dataset processing, classification, extraction, tool calling, and evaluation
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/plugin/model-presets)
+> Source: [FastGPT official source](https://doc.fastgpt.io/plugin/model-presets)
 
 ## Applicability and version scope
 

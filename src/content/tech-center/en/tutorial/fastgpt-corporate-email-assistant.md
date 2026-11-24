@@ -2,7 +2,7 @@
 title: Deploy a Corporate Email Writing Assistant with FastGPT
 slug: /en/tutorial/fastgpt-corporate-email-assistant
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/getting-started/quick-start
+source: https://doc.fastgpt.io/guide/getting-started/quick-start
 source_type: Official documentation
 ---
 
@@ -54,7 +54,7 @@ I will help you generate a professional and appropriate email.
 ```
 Preview the opening message in the right-hand Debug Preview panel. Validate the assistant’s output by entering email requirements in the debug field to confirm it generates structured, tonally appropriate emails matching the defined rules.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/getting-started/quick-start)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/getting-started/quick-start)
 
 ## Applicability and version scope
 

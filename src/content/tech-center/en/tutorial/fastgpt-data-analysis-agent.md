@@ -2,7 +2,7 @@
 title: Reduce Barriers to Business Data Analysis Workflows
 slug: /en/tutorial/fastgpt-data-analysis-agent
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/getting-started/quick-start
+source: https://doc.fastgpt.io/guide/getting-started/quick-start
 source_type: Official documentation
 ---
 
@@ -26,7 +26,7 @@ FastGPT Agent V2 — Intelligent Data Analysis Agent is engineered to streamline
 ## Operational Risk Controls
 This Agent mitigates common data analysis risks by executing all analysis scripts in an isolated virtual machine environment. This eliminates exposure to local system contamination, conflicting software dependencies, and improper permission usage that can occur with traditional local script execution.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/getting-started/quick-start)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/getting-started/quick-start)
 
 ## Applicability and version scope
 

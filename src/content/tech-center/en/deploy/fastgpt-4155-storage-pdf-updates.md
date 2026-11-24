@@ -2,7 +2,7 @@
 title: FastGPT 4.15.5 New Storage and Parsing Features
 slug: /en/deploy/fastgpt-4155-storage-pdf-updates
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/4155
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/4155
 source_type: 官方文档
 ---
 
@@ -26,4 +26,4 @@ The release introduces the SoMark PDF enhanced parsing provider as a new option 
 
 Full configuration steps and parameter requirements for the SoMark provider are documented in the official environment variable configuration guide.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/4155)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/4-15/4155)

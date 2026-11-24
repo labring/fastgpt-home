@@ -2,7 +2,7 @@
 title: Test FastGPT Enhanced PDF Parsing with Marker
 slug: /en/deploy/fastgpt-marker-pdf-test
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/custom-models/marker
+source: https://doc.fastgpt.io/self-host/custom-models/marker
 source_type: Official documentation
 ---
 
@@ -27,7 +27,7 @@ After the parsing process completes, the processed PDF content will include embe
 ## Configure Application Upload Settings
 The `Enhanced PDF Parsing` toggle is also available in the file upload configuration panel for FastGPT applications. A referenced screenshot shows the location of this setting within the application build interface, allowing users to enable enhanced parsing for files uploaded directly into chat-based FastGPT applications.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/custom-models/marker)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/custom-models/marker)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: FastGPT V4.6.7版本升级说明与操作指南
 slug: /zh/deploy/upgrade-v4-6-7
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/467
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/467
 source_type: 官方文档
 ---
 
@@ -37,7 +37,7 @@ curl --location --request POST 'https://{{host}}/api/admin/initv467' \
 4. 在输入框输入`{`符号，确认弹出可用变量提示。
 5. 切换团队后退出登录，再次登录确认优先加载该团队页面。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/467)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/467)
 
 ## 适用性与版本范围
 

@@ -16,10 +16,10 @@ source_type: GitHub issue
 
 ## 诊断步骤
 
-1. 若空白出现在文档页面，打开当前[工具调用与终止文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/tool)，记录旧链接、响应状态和页面截图，确认新页面内容可读。
+1. 若空白出现在文档页面，打开当前[工具调用与终止文档](https://doc.fastgpt.cn/guide/build/workflow/nodes/tool)，记录旧链接、响应状态和页面截图，确认新页面内容可读。
 2. 若空白出现在工作流，检查工具节点连接及模块或插件的“介绍”。官方文档说明，工具介绍与参数介绍参与模型的调用决策。
 3. 仅保留一个工具和一组最小参数，检查保存后重新打开时介绍是否保留，再运行一次测试并查看工具参数、响应和节点运行详情。
-4. 若问题表现为模型调用失败，按[官方模型问题排查](https://doc.fastgpt.cn/zh-CN/self-host/troubleshooting/model-errors) 验证模型服务的工具调用响应，并记录脱敏错误信息。
+4. 若问题表现为模型调用失败，按[官方模型问题排查](https://doc.fastgpt.cn/self-host/troubleshooting/model-errors) 验证模型服务的工具调用响应，并记录脱敏错误信息。
 
 ## 验证结果
 

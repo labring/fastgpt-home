@@ -2,7 +2,7 @@
 title: FastGPT V4.14.27版本升级变更与操作指引
 slug: /zh/deploy/upgrade-v4-14-27
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41427
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/41427
 source_type: 官方文档
 ---
 
@@ -25,7 +25,7 @@ source_type: 官方文档
 ## 升级后怎么验证
 验证服务正常启动，检查升级脚本执行日志无异常，确认图片迁移记录的资源类型为`dataset_image`，确认S3 lifecycle清理流程可正常执行。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41427)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-14/41427)
 
 ## 适用性与版本范围
 

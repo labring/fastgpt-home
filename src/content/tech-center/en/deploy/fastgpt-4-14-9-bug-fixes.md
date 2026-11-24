@@ -2,7 +2,7 @@
 title: Resolved Issues in FastGPT 4.14.9 Upgrade
 slug: /en/deploy/fastgpt-4-14-9-bug-fixes
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4149
+source: https://doc.fastgpt.io/self-host/upgrading/4-14/4149
 source_type: Official documentation
 ---
 
@@ -38,7 +38,7 @@ This section addresses deployment and login-related stability issues:
 - Fixed an async session issue in the login endpoint that produced repetitive, unwanted error logs in server outputs.
 - Corrected a failure to apply custom fields defined in subscription plans, ensuring correct plan configuration application.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4149)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-14/4149)
 
 ## Applicability and version scope
 

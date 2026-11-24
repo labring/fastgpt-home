@@ -2,7 +2,7 @@
 title: FastGPT V4.15.0-beta1版本升级操作与变化说明
 slug: /zh/deploy/upgrade-v4-15-0-beta1
 page_type: 版本解读
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41501
+source: https://doc.fastgpt.cn/self-host/upgrading/4-15/41501
 source_type: 官方文档
 ---
 
@@ -20,4 +20,4 @@ source_type: 官方文档
 ## 升级后怎么验证
 可通过以下方式验证升级效果：检查循环节点功能是否可用，确认旧的批量执行已被弃用；测试全局变量输入框输入object类型数据是否正常；测试工具调用模式下开启虚拟机功能时，上传的文件是否正确注入虚拟机；测试第三方知识库接入钉钉知识库的功能（注意beta版存在富文本获取异常问题）；验证知识库源文件预览和下载时文本类型响应包含charset；测试Agent v2模式下模型响应报错时step是否不再重复执行；检查环境变量配置是否生效，如文件解析并发线程数等。
 
-> 来源: [FastGPT 官方文档与源码](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41501)
+> 来源: [FastGPT 官方文档与源码](https://doc.fastgpt.cn/self-host/upgrading/4-15/41501)

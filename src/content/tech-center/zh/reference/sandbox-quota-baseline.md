@@ -35,6 +35,6 @@ CPU 与内存的超卖倍率默认为 1，取值不低于 1；该设置限 Kuber
 
 | Source | Version | Document |
 | --- | --- | --- |
-| FastGPT | v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173) |
-| FastGPT | v4.16.0 | [self-host/upgrading/4-16/4160](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/4160) |
-| FastGPT | 环境变量 | [Agent 沙盒配置](https://doc.fastgpt.io/zh-CN/self-host/config/env) |
+| FastGPT | v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/self-host/upgrading/4-17/4173) |
+| FastGPT | v4.16.0 | [self-host/upgrading/4-16/4160](https://doc.fastgpt.cn/self-host/upgrading/4-16/4160) |
+| FastGPT | 环境变量 | [Agent 沙盒配置](https://doc.fastgpt.cn/self-host/config/env) |

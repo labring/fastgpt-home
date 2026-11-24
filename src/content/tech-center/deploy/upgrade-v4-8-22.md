@@ -2,7 +2,7 @@
 title: FastGPT V4.8.22版本升级操作与功能说明
 slug: /zh/deploy/upgrade-v4-8-22
 page_type: 版本解读
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4822
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4822
 source_type: 官方文档
 ---
 
@@ -31,4 +31,4 @@ curl --location --request POST 'https://{{host}}/api/admin/initv4822' \
 ## 升级后怎么验证
 可通过以下方式验证升级效果：一是配置模型后，检查是否正常显示未配置提示；二是测试对话节点，确认`<think>`标签内容被解析为思考链；三是调用对话API，验证无论是否传递chatId均能保存对话日志；四是测试内容提取节点，确认字段描述过长时自动换行且输出名为key；五是验证团队管理、对话日志导出、向量检索去重等功能是否正常运行。
 
-> 来源: [FastGPT 官方文档与源码](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4822)
+> 来源: [FastGPT 官方文档与源码](https://doc.fastgpt.cn/self-host/upgrading/outdated/4822)

@@ -3,7 +3,7 @@ title: Knowledge Base Permissions: Team Roles, Dataset Collaborators or Collecti
 slug: /en/guide/dataset-permission-granularity
 page_type: Decision matrix
 source_type: FastGPT v4.17.2 documentation and community threads
-source: https://doc.fastgpt.cn/en/guide/dataset/collection_permission
+source: https://doc.fastgpt.io/guide/dataset/collection_permission
 source_note: "Criteria taken from the FastGPT v4.17.2 documentation and community threads, verified 2026-10-21."
 check_day: 2026-10-21
 article_section: Selection & Evaluation
@@ -80,9 +80,9 @@ If your business workflows have low requirements for permission control accuracy
 
 ## References
 
-- [Collection permissions](https://doc.fastgpt.cn/en/guide/dataset/collection_permission)
-- [Commercial edition feature comparison](https://doc.fastgpt.cn/en/guide/version/commercial)
-- [Team roles and permissions](https://doc.fastgpt.cn/en/guide/workspace/team/team_roles_permissions)
+- [Collection permissions](https://doc.fastgpt.io/guide/dataset/collection_permission)
+- [Commercial edition feature comparison](https://doc.fastgpt.io/guide/version/commercial)
+- [Team roles and permissions](https://doc.fastgpt.io/guide/workspace/team/team_roles_permissions)
 
 ## Next steps
 

@@ -2,7 +2,7 @@
 title: FastGPT v4.14.19版本升级事项解读与操作指引
 slug: /zh/deploy/upgrade-v4-14-19
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41419
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/41419
 source_type: 官方文档
 ---
 
@@ -22,7 +22,7 @@ source_type: 官方文档
 ## 升级后怎么验证
 升级完成后，可通过以下方式验证功能是否正常：第一，测试表单输入文件类型的场景，确认请求体大小符合预期，无异常报错；第二，生成分享链接，确认可正确展示虚拟机文件入口；第三，使用低版本内核的浏览器访问系统，确认可正常加载并使用各项功能。通过以上验证，可确认升级后的系统功能符合预期。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41419)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-14/41419)
 
 ## 适用性与版本范围
 

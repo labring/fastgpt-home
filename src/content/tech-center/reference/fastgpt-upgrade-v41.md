@@ -2,7 +2,7 @@
 title: FastGPT从旧版本升级到V4.1的操作步骤说明
 slug: /zh/reference/fastgpt-upgrade-v41
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/41
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/41
 source_type: 官方文档小节
 ---
 
@@ -21,4 +21,4 @@ FastGPT从旧版本升级到V4.1时，包含环境变量变更、升级脚本执
 2. 未完成存储初始化可能导致对话数据加载异常或无法正常使用
 3. 需严格遵循官方提供的升级脚本与环境变量配置执行，避免配置错误
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/41)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/41)

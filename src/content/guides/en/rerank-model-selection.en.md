@@ -61,7 +61,7 @@ Start with question types that show a clear improvement, then expand to other ap
 
 ## References
 
-- [FastGPT model configuration](https://doc.fastgpt.cn/zh-CN/self-host/config/model/intro)
-- [FastGPT retrieval principles](https://doc.fastgpt.cn/zh-CN/guide/dataset/dataset_engine)
+- [FastGPT model configuration](https://doc.fastgpt.cn/self-host/config/model/intro)
+- [FastGPT retrieval principles](https://doc.fastgpt.cn/guide/dataset/dataset_engine)
 - [FastGPT rerank fallback implementation](https://github.com/labring/FastGPT/blob/2bab5c1e06c46362f40a454d49d963e8bf0c62bc/packages/service/core/dataset/search/defaultRecall/rerank.ts)
 - [BAAI BGE Reranker v2 M3 model card](https://huggingface.co/BAAI/bge-reranker-v2-m3)

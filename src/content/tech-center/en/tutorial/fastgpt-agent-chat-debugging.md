@@ -2,7 +2,7 @@
 title: General Debugging for FastGPT Agent Chat Previews
 slug: /en/tutorial/fastgpt-agent-chat-debugging
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/build/agentv2/debug
+source: https://doc.fastgpt.io/guide/build/agentv2/debug
 source_type: Official documentation
 ---
 
@@ -29,7 +29,7 @@ Each generated AI chat bubble includes a bottom action bar with auxiliary debugg
 ## Plan Card for Complex Task Troubleshooting
 When the Agent initiates planning for a complex workflow, the chat interface streams a visual Plan Card. The card uses color-coded steps and animated status indicators to show progress for each task phase: In Progress, Completed, Pending, or Blocked. If a step is marked Blocked, the card displays the root cause of the stall. This tool helps developers optimize system prompts or troubleshoot misconfigured agent tools. A reference visual for the Plan Card is available at `/imgs/agent_plan_card.png`.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/agentv2/debug)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/agentv2/debug)
 
 ## Applicability and version scope
 

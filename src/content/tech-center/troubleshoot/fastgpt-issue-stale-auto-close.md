@@ -29,4 +29,4 @@ source_type: GitHub issue
 
 > 来源: [原始讨论：有没有agent模块的规划啊？](https://github.com/labring/FastGPT/issues/3821)
 
-> 来源: [FastGPT Agent V2 配置](https://doc.fastgpt.io/en/guide/build/agentv2/settings)
+> 来源: [FastGPT Agent V2 配置](https://doc.fastgpt.io/guide/build/agentv2/settings)

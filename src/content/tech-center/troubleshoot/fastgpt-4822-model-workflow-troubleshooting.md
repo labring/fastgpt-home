@@ -29,7 +29,7 @@ source_type: GitHub issue
 
 > 来源: [原始讨论：一直显示 检测到没有可用的索引模型](https://github.com/labring/FastGPT/issues/3849)
 
-> 来源: [FastGPT 模型配置](https://doc.fastgpt.io/en/self-host/config/model/intro)
+> 来源: [FastGPT 模型配置](https://doc.fastgpt.io/self-host/config/model/intro)
 
 > 来源: [原讨论中的补充回复](https://github.com/labring/FastGPT/issues/3849#issuecomment-2678511409)
 

@@ -2,7 +2,7 @@
 title: Configure FastGPT Object Storage Access Modes
 slug: /en/deploy/fastgpt-object-storage-access-modes
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/object-storage
+source: https://doc.fastgpt.io/self-host/config/object-storage
 source_type: Official documentation
 ---
 
@@ -22,7 +22,7 @@ The `STORAGE_DOWNLOAD_URL_MODE` environment variable controls download traffic r
 ## Self-Hosted Storage Configuration Requirements
 When running a self-hosted MinIO instance and using the `short-redirect` access mode, you must configure the `STORAGE_EXTERNAL_ENDPOINT` environment variable. This variable provides the public-facing endpoint needed to generate valid redirect URLs, enabling direct client access to stored files without FastGPT proxying file traffic. No additional mandatory configuration is needed for `short-proxy` mode with self-hosted MinIO, or for any mode with other supported object storage providers beyond standard initial setup.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/object-storage)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/object-storage)
 
 ## Applicability and version scope
 

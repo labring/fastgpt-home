@@ -2,7 +2,7 @@
 title: 配置并测试FastGPT的Marker PDF增强解析功能使用效果
 slug: /zh/deploy/fastgpt-marker-pdf-enhanced-parse
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/custom-models/marker
+source: https://doc.fastgpt.cn/self-host/custom-models/marker
 source_type: 官方文档
 ---
 
@@ -26,8 +26,8 @@ Marker是FastGPT的自定义PDF增强解析功能，可实现PDF文件的增强�
 ## 效果验证说明
 完成配置流程后，通过Marker解析的PDF文件将携带图片链接，完整保留原始文档的图片关联信息。该解析流程的耗时记录为1316ms，符合常规PDF处理的时间表现。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/marker)
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/getting-started)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/custom-models/marker)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/getting-started)
 
 ## 适用性与版本范围
 

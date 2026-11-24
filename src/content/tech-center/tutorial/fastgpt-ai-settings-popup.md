@@ -2,7 +2,7 @@
 title: 介绍FastGPT中AI配置弹窗的打开路径与基础配置规则
 slug: /zh/tutorial/fastgpt-ai-settings-popup
 page_type: 教程
-source: https://doc.fastgpt.cn/zh-CN/guide/build/general/ai_settings
+source: https://doc.fastgpt.cn/guide/build/general/ai_settings
 source_type: 官方文档
 ---
 
@@ -20,7 +20,7 @@ FastGPT的AI配置弹窗可通过两类场景的入口打开。在应用编辑�
 | ------------------ | ------------------ | -------------- |
 | ![](/imgs/image-51.png) | ![](/imgs/image-52.png) | ![](/imgs/image-53.png) |
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/general/ai_settings)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/general/ai_settings)
 
 ## 适用性与版本范围
 

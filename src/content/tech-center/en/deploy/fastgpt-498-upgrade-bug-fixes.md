@@ -2,7 +2,7 @@
 title: Resolved FastGPT 498 Upgrade Bug Fixes
 slug: /en/deploy/fastgpt-498-upgrade-bug-fixes
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/498
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/498
 source_type: 官方文档
 ---
 
@@ -34,4 +34,4 @@ To confirm the 498 upgrade was deployed successfully, complete the following val
 6. Deploy a nested workflow containing interactive nodes within a tool call, confirm the workflow executes without abnormal behavior.
 7. Click all internal documentation links within the application, confirm all URLs resolve to valid endpoints.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/498)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/498)

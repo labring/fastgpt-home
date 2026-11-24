@@ -267,8 +267,8 @@ function buildRedirects(rootDir, env = process.env) {
 
   addRedirect(cnRedirects, '/pricing', `${cnUrl}/price`);
   addRedirect(ioRedirects, '/pricing', `${ioUrl}/price`);
-  addRedirect(cnRedirects, '/docs', 'https://doc.fastgpt.cn/docs/introduction');
-  addRedirect(ioRedirects, '/docs', 'https://doc.fastgpt.io/docs/introduction');
+  addRedirect(cnRedirects, '/docs', 'https://doc.fastgpt.cn/guide/getting-started');
+  addRedirect(ioRedirects, '/docs', 'https://doc.fastgpt.io/guide/getting-started');
   addRedirect(cnRedirects, '/docs/:path*', 'https://doc.fastgpt.cn/docs/:path*');
   addRedirect(ioRedirects, '/docs/:path*', 'https://doc.fastgpt.io/docs/:path*');
 

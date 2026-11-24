@@ -2,7 +2,7 @@
 title: Describe FastGPT Agent Virtual Machine Features
 slug: /en/tutorial/fastgpt-agent-vm-overview
 page_type: 教程/部署
-source: https://doc.fastgpt.cn/en/guide/build/agentv2/vm
+source: https://doc.fastgpt.io/guide/build/agentv2/vm
 source_type: 官方文档
 ---
 
@@ -26,4 +26,4 @@ This step-by-step workflow covers enabling and configuring the FastGPT Agent VM 
 4. (Optional) Customize the runtime environment: Use the provided SKILL package binding tool to attach required runtime libraries or extensions.
 5. (Optional) Configure automatic initialization: Enter valid Shell commands in the Startup Scripts configuration field. These commands will run automatically once the VM is fully initialized, before the AI agent’s workflow executes for the session.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/guide/build/agentv2/vm)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/guide/build/agentv2/vm)

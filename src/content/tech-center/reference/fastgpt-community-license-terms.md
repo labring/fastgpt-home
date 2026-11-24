@@ -2,7 +2,7 @@
 title: FastGPT社区版开源协议的使用要求与限制说明
 slug: /zh/reference/fastgpt-community-license-terms
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/version/opensource/license
+source: https://doc.fastgpt.cn/guide/version/opensource/license
 source_type: 官方文档小节
 ---
 
@@ -22,4 +22,4 @@ FastGPT社区版基于Apache License 2.0开源，支持常规商业化使用，�
 3. 除上述附加条件外，所有权利和限制均遵循Apache License 2.0完整协议。
 4. 可参考Apache License 2.0完整版本获取更多使用细节。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/version/opensource/license)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/version/opensource/license)

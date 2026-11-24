@@ -2,7 +2,7 @@
 title: FastGPT V4.12.0版本升级操作与功能说明
 slug: /zh/deploy/upgrade-v4-12-0
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-12/4120
+source: https://doc.fastgpt.cn/self-host/upgrading/4-12/4120
 source_type: 官方文档
 ---
 
@@ -25,7 +25,7 @@ source_type: 官方文档
 ## 升级后怎么验证
 可检查镜像版本是否为v4.12.0，fastgpt-plugin镜像版本是否为v0.1.9。验证新增功能是否可用：包括商业版应用日志数据看板、简易对话页、团队应用快速切换功能；检查系统工具是否可返回citeLinks响应值以展示引用链接；验证对话日志导出功能是否仅导出选中表头且无表头无法导出问题；确认工作流、成员同步等修复的问题已解决。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-12/4120)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-12/4120)
 
 ## 适用性与版本范围
 

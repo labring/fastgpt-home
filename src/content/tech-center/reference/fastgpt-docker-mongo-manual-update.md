@@ -2,7 +2,7 @@
 title: 完成Docker部署FastGPT的Mongo数据库手动更新
 slug: /zh/reference/fastgpt-docker-mongo-manual-update
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/468
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/468
 source_type: 官方文档小节
 ---
 
@@ -68,4 +68,4 @@ docker-compose up -d
 3. 端口27017需确保未被其他服务占用，避免启动冲突。
 4. 生成的mongodb.key权限需保持为400，属主为999:999，否则MongoDB无法正常启动。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/468)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/468)

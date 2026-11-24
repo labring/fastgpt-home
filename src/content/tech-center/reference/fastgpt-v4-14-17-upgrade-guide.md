@@ -2,7 +2,7 @@
 title: FastGPT V4.14.17版本升级操作速查指南
 slug: /zh/reference/fastgpt-v4-14-17-upgrade-guide
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41417
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/41417
 source_type: 官方文档小节
 ---
 
@@ -24,4 +24,4 @@ source_type: 官方文档小节
 3. 升级前需备份现有业务数据与配置文件，避免数据丢失。
 4. 涉及环境变量变更的前置版本，需严格按照对应版本的要求更新配置。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41417)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-14/41417)

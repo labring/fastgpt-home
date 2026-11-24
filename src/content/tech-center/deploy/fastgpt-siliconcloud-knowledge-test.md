@@ -2,7 +2,7 @@
 title: 配置siliconCloud模型后测试FastGPT知识库导入与问答
 slug: /zh/deploy/fastgpt-siliconcloud-knowledge-test
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/model/siliconCloud
+source: https://doc.fastgpt.cn/self-host/config/model/siliconCloud
 source_type: 官方文档
 ---
 
@@ -18,7 +18,7 @@ source_type: 官方文档
 ## 对话结果与引用详情查看
 对话完成后，点击对话界面底部的引用区域，可查看引用详情。同时可查看具体的检索得分与重排得分，用于评估知识库检索的匹配效果。配套截图展示了引用详情界面与得分展示界面，可直观查看检索与重排的具体数据。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/config/model/siliconCloud)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/config/model/siliconCloud)
 
 ## 适用性与版本范围
 

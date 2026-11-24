@@ -7,7 +7,7 @@ is_part_of: FastGPT Tech Center
 meta_description: Choose boundaries for FastGPT teams, knowledge bases, apps, and credentials, with access tests and costs of moving to isolated deployments.
 delivery_source_type: Open-source repository docs and community threads
 source_type: 深度场景内容
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/env
+source: https://doc.fastgpt.cn/self-host/config/env
 meta_title: Isolating Teams and Business Lines: Knowledge Bases, Apps and Credentials | FastGPT Technical Center
 schema_type: TechArticle
 date_published: 2026-09-28
@@ -86,8 +86,8 @@ Note that delaying this decision does not mean ignoring security risks. You must
 - [FastGPT v4.17.0 remote MCP tool configuration](https://github.com/labring/FastGPT/blob/v4.17.0/document/content/guide/build/tools/mcp_tools.mdx)
 - [FastGPT v4.17.0 MCP app publishing](https://github.com/labring/FastGPT/blob/v4.17.0/document/content/guide/build/publish/mcp_server.mdx)
 
-- [FastGPT environment variables](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
-- [FastGPT Docker Compose deployment](https://doc.fastgpt.cn/zh-CN/self-host/deploy/docker)
+- [FastGPT environment variables](https://doc.fastgpt.cn/self-host/config/env)
+- [FastGPT Docker Compose deployment](https://doc.fastgpt.cn/self-host/deploy/docker)
 
 ## Next steps
 

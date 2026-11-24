@@ -2,7 +2,7 @@
 title: 说明FastGPT中fastgpt-plugin的定义与部署配置
 slug: /zh/glossary/fastgpt-plugin-deployment-config
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4100
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4100
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ fastgpt-plugin是FastGPT部署环境中配套的插件服务容器，用于承�
 ## 容易搞错的地方
 需确保fastgpt-plugin的AUTH_TOKEN与fastgpt容器的PLUGIN_TOKEN值保持一致；MINIO_CUSTOM_ENDPOINT的地址需保证FastGPT用户可正常访问；镜像tag需严格指定为v4.10.0-fix，避免使用错误版本。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4100)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/4100)
 
 ## 适用性与版本范围
 

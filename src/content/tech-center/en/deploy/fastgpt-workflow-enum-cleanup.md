@@ -2,7 +2,7 @@
 title: Clean Up Legacy FastGPT Workflow Enum Data
 slug: /en/deploy/fastgpt-workflow-enum-cleanup
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41507
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/41507
 source_type: Official documentation
 ---
 
@@ -58,7 +58,7 @@ The script follows five core operational rules to minimize system impact:
 ## Response Statistics
 The API response includes segmented statistics for `apps`, `appVersions`, and a total summary. Metrics include the number of scanned documents, fixable documents, Zod validation error count, successful and failed write counts, enum expression occurrence statistics, change samples, and error samples.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41507)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-15/41507)
 
 ## Applicability and version scope
 

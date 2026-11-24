@@ -2,7 +2,7 @@
 title: 使用FastGPT OpenAPI删除指定知识库的操作说明
 slug: /zh/api/delete-fastgpt-dataset-api
 page_type: API
-source: https://doc.fastgpt.cn/zh-CN/openapi/dataset
+source: https://doc.fastgpt.cn/openapi/dataset
 source_type: 官方文档
 ---
 
@@ -35,7 +35,7 @@ curl --location --request DELETE 'http://localhost:3000/api/core/dataset/delete?
 ```
 响应字段说明如下：`code`字段为200时表示删除操作执行成功；`statusText`与`message`字段为空，表示本次操作无额外状态补充说明；`data`字段为null，表示本次删除操作无返回业务数据。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/openapi/dataset)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/openapi/dataset)
 
 ## 适用性与版本范围
 

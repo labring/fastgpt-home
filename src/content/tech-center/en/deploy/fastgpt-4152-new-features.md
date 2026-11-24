@@ -2,7 +2,7 @@
 title: Key FastGPT 4.15.2 New Feature Details
 slug: /en/deploy/fastgpt-4152-new-features
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/4152
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/4152
 source_type: Official documentation
 ---
 
@@ -26,7 +26,7 @@ The Custom Tool Parameters node has been expanded with flexible configuration op
 
 This update provides granular control over tool input validation, allowing developers to align parameter structures exactly with their integration requirements.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/4152)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-15/4152)
 
 ## Applicability and version scope
 

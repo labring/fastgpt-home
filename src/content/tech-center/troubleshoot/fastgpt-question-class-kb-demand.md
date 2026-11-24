@@ -29,6 +29,6 @@ source_type: GitHub issue
 
 > 来源: [原始讨论：问题分类加入知识库搜索选项](https://github.com/labring/FastGPT/issues/2021)
 
-> 来源: [FastGPT 问题分类节点](https://doc.fastgpt.io/en/guide/build/workflow/nodes/question_classify)
+> 来源: [FastGPT 问题分类节点](https://doc.fastgpt.io/guide/build/workflow/nodes/question_classify)
 
-> 来源: [FastGPT 知识库 OpenAPI](https://doc.fastgpt.io/en/openapi/dataset)
+> 来源: [FastGPT 知识库 OpenAPI](https://doc.fastgpt.io/openapi/dataset)

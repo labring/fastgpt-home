@@ -2,7 +2,7 @@
 title: Run the FastGPT v467 Initialization API
 slug: /en/deploy/fastgpt-v467-initialization-api
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/467
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/467
 source_type: 官方文档
 ---
 
@@ -31,4 +31,4 @@ curl --location --request POST 'https://{{host}}/api/admin/initv467' \
 ```
 This POST request does not require a request body. The `--location` flag ensures that any valid HTTP redirects returned by the API endpoint are automatically followed, while the included headers authenticate the request and specify the correct content type for the API call.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/467)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/467)

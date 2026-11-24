@@ -2,7 +2,7 @@
 title: Run FastGPT Commercial Edition Initialization Steps
 slug: /en/deploy/fastgpt-commercial-edition-init-steps
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/489
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/489
 source_type: 官方文档
 ---
 
@@ -34,4 +34,4 @@ curl --location --request POST 'https://{{host}}/api/admin/init/489' \
 ```
 Upon successful execution, the FastGPT instance will complete initialization of multi-tenancy notification methods. As specified in the official documentation, this step is intended solely for internal administrative use and requires no additional end-user interaction following completion.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/489)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/489)

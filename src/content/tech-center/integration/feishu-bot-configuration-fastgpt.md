@@ -2,7 +2,7 @@
 title: 获取并配置飞书机器人接入FastGPT所需的凭证参数
 slug: /zh/integration/feishu-bot-configuration-fastgpt
 page_type: 集成
-source: https://doc.fastgpt.cn/zh-CN/guide/build/publish/feishu
+source: https://doc.fastgpt.cn/guide/build/publish/feishu
 source_type: 官方文档
 ---
 
@@ -23,7 +23,7 @@ source_type: 官方文档
 
 配置过程中需严格遵循协议类型对应的Encrypt Key配置建议，确保飞书服务器与FastGPT之间的通信链路安全可靠，避免出现通信校验失败的问题。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/publish/feishu)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/publish/feishu)
 
 ## 适用性与版本范围
 

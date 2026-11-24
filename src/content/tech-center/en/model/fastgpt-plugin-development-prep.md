@@ -2,7 +2,7 @@
 title: Collect Required Data Before FastGPT Plugin Development
 slug: /en/model/fastgpt-plugin-development-prep
 page_type: Model guides
-source: https://doc.fastgpt.cn/en/plugin/system-tool-development
+source: https://doc.fastgpt.io/plugin/system-tool-development
 source_type: Official documentation
 ---
 
@@ -32,7 +32,7 @@ The following table lists all required details to collect before coding:
 ## Critical Validation Rules
 Any missing information that impacts plugin ID, authentication method, billing, or listing security must be confirmed prior to coding. For all other non-critical missing details, teams may use reasonable default values, with all assumptions clearly recorded in submission notes for review. Additionally, two built-in helper functions are available for common plugin workflows: `ctx.invoke.uploadFile()` for handling file uploads, and `ctx.streamResponse()` for displaying real-time intermediate progress to end users. All plugins must include test cases covering four core scenarios: successful execution, invalid parameter inputs, authentication failure, and upstream service failure.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/plugin/system-tool-development)
+> Source: [FastGPT official source](https://doc.fastgpt.io/plugin/system-tool-development)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: Configure and Adopt FastGPT 491 New Features
 slug: /en/deploy/fastgpt-491-new-features
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/491
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/491
 source_type: 官方文档
 ---
 
@@ -27,4 +27,4 @@ Below is a reference table of the new configurable parameters:
 | Rerank Weight | User-configurable weight applied to outputs from the selected rerank model |
 | Updated Search Weight Calculation | Replaces the triple-component formula with a two-component formula: `search weight + rerank weight`
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/491)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/491)

@@ -12,14 +12,14 @@ source_type: GitHub issue
 
 ## 原因与适用范围
 
-[Issue #655](https://github.com/labring/FastGPT/issues/655) 记录了检索无结果时结束对话的需求。当前[知识库搜索节点文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/dataset_search) 明确说明引用输出为数组，长度为零时输出链路仍会执行。以下步骤适用于具有知识库搜索、判断器和指定回复节点的工作流。
+[Issue #655](https://github.com/labring/FastGPT/issues/655) 记录了检索无结果时结束对话的需求。当前[知识库搜索节点文档](https://doc.fastgpt.cn/guide/build/workflow/nodes/dataset_search) 明确说明引用输出为数组，长度为零时输出链路仍会执行。以下步骤适用于具有知识库搜索、判断器和指定回复节点的工作流。
 
 ## 配置步骤
 
-1. 在知识库搜索后连接“判断器”，选择该搜索节点的“引用内容”，判断数组长度是否等于 `0`。官方[判断器文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/tfswitch) 给出了这一条件的示例。
+1. 在知识库搜索后连接“判断器”，选择该搜索节点的“引用内容”，判断数组长度是否等于 `0`。官方[判断器文档](https://doc.fastgpt.cn/guide/build/workflow/nodes/tfswitch) 给出了这一条件的示例。
 2. 将空结果的 IF 分支接到“指定回复”，填写适合业务的提示，例如“知识库中暂未找到相关资料，请补充问题或联系人工”，并让该分支在此结束。
 3. 将有结果的 ELSE 分支接到 AI 对话，传入知识库引用；检查连线，确保空结果分支只执行预期的兜底回复。
-4. 若流程位于工具调用内部，可按[工具调用终止文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/tool) 在对应工具流程末尾使用终止节点，结束本次工具调用及后续 AI 总结。
+4. 若流程位于工具调用内部，可按[工具调用终止文档](https://doc.fastgpt.cn/guide/build/workflow/nodes/tool) 在对应工具流程末尾使用终止节点，结束本次工具调用及后续 AI 总结。
 
 ## 验证结果
 

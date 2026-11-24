@@ -2,7 +2,7 @@
 title: 为FastGPT部署并接入bge-rerank重排模型的配置方法
 slug: /zh/deploy/fastgpt-bge-rerank-setup
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/custom-models/bge-rerank
+source: https://doc.fastgpt.cn/self-host/custom-models/bge-rerank
 source_type: 官方文档
 ---
 
@@ -64,4 +64,4 @@ services:
 - 模型ID：填写对应模型名，如`bge-reranker-base`
 - 请求地址：`{{host}}/v1/rerank`，其中`{{host}}`替换为部署服务的域名或IP:Port
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/bge-rerank)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/custom-models/bge-rerank)

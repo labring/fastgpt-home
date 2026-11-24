@@ -29,4 +29,4 @@ source_type: GitHub issue
 
 > 来源: [原始讨论：非流式返回数据格式咨询](https://github.com/labring/FastGPT/issues/4877)
 
-> 来源: [FastGPT 对话 OpenAPI](https://doc.fastgpt.io/en/openapi/chat)
+> 来源: [FastGPT 对话 OpenAPI](https://doc.fastgpt.io/openapi/chat)

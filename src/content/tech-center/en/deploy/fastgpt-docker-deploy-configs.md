@@ -2,7 +2,7 @@
 title: Acquire FastGPT Docker Deployment Configuration Files
 slug: /en/deploy/fastgpt-docker-deploy-configs
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/deploy/docker
+source: https://doc.fastgpt.io/self-host/deploy/docker
 source_type: Official documentation
 ---
 
@@ -60,7 +60,7 @@ For pinned deployments to specific `docker-compose.yml` versions, follow this st
    ```
 The script will copy the source compose file to `docker-compose.yml`, generate required credentials, and configure S3/MCP addresses as needed.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/deploy/docker)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/deploy/docker)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: FastGPT 第三方模型接入与渠道配置管理操作使用说明
 slug: /zh/deploy/fastgpt-model-channel-config
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/model/intro
+source: https://doc.fastgpt.cn/self-host/config/model/intro
 source_type: 官方文档
 ---
 
@@ -24,4 +24,4 @@ curl --location --request POST {{host}}/api/channels/import/oneapi \
 ```
 其中 `{{host}}` 替换为 AI Proxy 地址，`{{admin_key}}` 替换为 ADMIN_KEY 值，`dsn` 为 OneAPI 的 MySQL 连接串，迁移后建议手动检查配置。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/model/intro)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/config/model/intro)

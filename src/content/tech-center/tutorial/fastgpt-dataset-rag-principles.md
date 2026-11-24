@@ -2,7 +2,7 @@
 title: 介绍FastGPT知识库中检索增强生成的原理与配置方法
 slug: /zh/tutorial/fastgpt-dataset-rag-principles
 page_type: 教程
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/rag
+source: https://doc.fastgpt.cn/guide/dataset/rag
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ source_type: 官方文档
 ## 适用场景说明
 该架构可应用于智能问答、信息检索与推理、领域特定内容生成等场景。在智能问答场景中，可结合外部知识库提供准确的事实性回答。在信息检索与推理场景中，可通过检索获取相关信息并生成连贯的推理结果。在领域特定内容生成场景中，可引入领域专属知识，提升生成内容的专业性与准确性。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/dataset/rag)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/dataset/rag)
 
 ## 安全护栏
 

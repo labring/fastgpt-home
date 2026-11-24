@@ -2,7 +2,7 @@
 title: Configure FastGPT Commercial Share Link Authentication
 slug: /en/integration/fastgpt-commercial-share-link-auth
 page_type: Integrations
-source: https://doc.fastgpt.cn/en/guide/build/publish/link
+source: https://doc.fastgpt.io/guide/build/publish/link
 source_type: Official documentation
 ---
 
@@ -26,7 +26,7 @@ Share link authentication is exclusively available for the FastGPT commercial ed
 # Implementation Overview
 To implement share link authentication, teams must connect to the two provided API endpoints to enable secure embedding of the FastGPT chat interface into external systems. No additional custom development beyond interacting with these endpoints is required. All authenticated share link sessions will follow the predefined record limits and time window, ensuring consistent behavior across all integrated environments.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/publish/link)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/publish/link)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: FastGPT 4.16 Sandbox and Runtime Enhancements
 slug: /en/deploy/fastgpt-416-sandbox-runtime-improvements
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-16/41601
+source: https://doc.fastgpt.io/self-host/upgrading/4-16/41601
 source_type: 官方文档
 ---
 
@@ -22,4 +22,4 @@ OpenSandbox now retains persistent volumes after stopping, allowing these volume
 ## Cross-Component & Usability Improvements
 Apps and Skills now share runtime image upgrade status, and the Skill editor continuously polls for real-time upgrade results, removing the need for manual refreshes to check progress. Additional fixes include automatic parent directory creation for Sandbox file writes, which prevents failures when writing to nested file paths. The release also includes improved compatibility handling for legacy Workflow data and tool parameters, reducing migration friction, alongside an updated Agent Ask UI.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/4-16/41601)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/4-16/41601)

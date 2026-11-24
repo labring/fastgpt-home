@@ -2,7 +2,7 @@
 title: 详细说明FastGPT知识库检索的完整流程与配置方法
 slug: /zh/glossary/fastgpt-dataset-search
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/dataset_engine
+source: https://doc.fastgpt.cn/guide/dataset/dataset_engine
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ FastGPT知识库检索是不依赖单一向量库匹配，整合问题优化、�
 ## 容易搞错的地方
 容易误以为知识库检索仅通过向量库返回结果，实际包含多阶段的完整处理流程。容易忽略输入图片时会触发额外的图片检索逻辑，无法获得对应匹配结果。容易混淆RRF合并与Rerank的作用，RRF用于整合多路召回的候选结果，Rerank用于对整合后的结果进行二次排序以提升相关性。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/dataset/dataset_engine)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/dataset/dataset_engine)
 
 ## 适用性与版本范围
 

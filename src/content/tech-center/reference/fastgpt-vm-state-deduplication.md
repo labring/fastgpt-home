@@ -2,7 +2,7 @@
 title: FastGPT虚拟机生命周期状态去重机制说明
 slug: /zh/reference/fastgpt-vm-state-deduplication
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/build/agentv2/vm
+source: https://doc.fastgpt.cn/guide/build/agentv2/vm
 source_type: 官方文档小节
 ---
 
@@ -19,4 +19,4 @@ FastGPT通过状态去重机制避免虚拟机热启动时重复执行脚本，�
 ## 注意事项
 去重状态随虚拟机实例的生命周期管理。当虚拟机重建（点击“重开对话”或闲置被系统回收）时，会分配全新的运行环境，所有脚本将在首次冷启动时重新执行。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/agentv2/vm)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/agentv2/vm)

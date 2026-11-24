@@ -2,7 +2,7 @@
 title: FastGPT V4.9.9版本升级操作与更新说明
 slug: /zh/deploy/fastgpt-v499-upgrade-guide
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/499
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/499
 source_type: 官方文档
 ---
 
@@ -29,4 +29,4 @@ source_type: 官方文档
 - 修复来源引用展示时ID传递错误，导致提示无权操作对应文件的问题。
 - 修复回答标注环节的前端数据报错问题。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/499)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/499)

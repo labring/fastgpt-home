@@ -2,7 +2,7 @@
 title: FastGPT V4.9.11版本升级内容与操作指引
 slug: /zh/deploy/upgrade-v4-9-11
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4911
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4911
 source_type: 官方文档
 ---
 
@@ -29,7 +29,7 @@ curl --location --request POST 'https://{{host}}/api/admin/initv4911' \
 ## 升级后怎么验证
 验证商业版图片知识库功能可正常使用；验证工作流节点搜索功能正常运行；确认工作流子流程可选择“保持最新版本”选项；查看审计操作日志是否新增对应记录；导入文档时确认无需等待解析完成即可完成导入；验证知识库模板导入选项可用；检查原文缓存存储功能正常；验证工作流中全局系统工具版本管理、工具调用上下文、备份导入、自定义PDF解析、非流请求CITE标记替换、Python沙盒、curl导入插件等功能均恢复正常。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4911)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/4911)
 
 ## 适用性与版本范围
 

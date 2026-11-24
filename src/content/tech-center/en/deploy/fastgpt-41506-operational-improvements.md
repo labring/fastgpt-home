@@ -2,7 +2,7 @@
 title: Key Operational Improvements in FastGPT 4.15.06
 slug: /en/deploy/fastgpt-41506-operational-improvements
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41506
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/41506
 source_type: Official documentation
 ---
 
@@ -23,7 +23,7 @@ The Agent Sandbox now includes support for custom npm and PyPI mirror configurat
 | npm             | `.npmrc`                 |
 | PyPI            | `pip.conf`               |
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41506)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-15/41506)
 
 ## Applicability and version scope
 

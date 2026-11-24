@@ -2,7 +2,7 @@
 title: Update Chat Message User Feedback via API
 slug: /en/api/fastgpt-update-chat-feedback
 page_type: API
-source: https://doc.fastgpt.cn/en/openapi/chat
+source: https://doc.fastgpt.io/openapi/chat
 source_type: Official documentation
 ---
 
@@ -66,7 +66,7 @@ A successful request returns a standard JSON response with a 200 HTTP status cod
 ```
 Non-200 status codes indicate request errors, though specific error message formats are not defined in this endpoint's documentation.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/openapi/chat)
+> Source: [FastGPT official source](https://doc.fastgpt.io/openapi/chat)
 
 ## Applicability and version scope
 

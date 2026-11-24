@@ -2,7 +2,7 @@
 title: FastGPT自定义PDF解析服务部署与接入指南
 slug: /zh/glossary/fastgpt-custom-pdf-parser
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/self-host/custom-models/marker
+source: https://doc.fastgpt.cn/self-host/custom-models/marker
 source_type: 官方文档
 ---
 
@@ -34,8 +34,8 @@ docker run --gpus all -itd -p 7231:8001 --name mode_pdf_minerU crpi-h3snc261q1do
 ## 容易搞错的地方
 两种服务的端口映射与容器命名存在差异，需注意区分：Marker容器内端口为7232，需映射至宿主机7231，MinerU容器内端口为8001，映射至宿主机7231时需注意端口冲突；容器名称需严格按照配置，Marker容器名为model_pdf_v2，MinerU容器名为mode_pdf_minerU。部署时必须添加`--gpus all`参数，否则无法启用GPU加速；MinerU采用pipeline模式，内部会根据GPU数量自动创建并行进程，无需手动配置进程数参数。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/marker)
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/mineru)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/custom-models/marker)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/custom-models/mineru)
 
 ## 适用性与版本范围
 

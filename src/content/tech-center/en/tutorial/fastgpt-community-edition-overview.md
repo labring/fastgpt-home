@@ -2,7 +2,7 @@
 title: FastGPT Community Edition Core Technical Overview
 slug: /en/tutorial/fastgpt-community-edition-overview
 page_type: 教程/部署
-source: https://doc.fastgpt.cn/en/guide/version/opensource/intro
+source: https://doc.fastgpt.io/guide/version/opensource/intro
 source_type: 官方文档
 ---
 
@@ -24,4 +24,4 @@ The following table lists all official, supported resources for FastGPT Communit
 
 Users can access the GitHub repository to view the full source code, submit feedback, or engage with the community of contributors. The Docker Deployment Guide provides infrastructure-specific setup instructions for self-hosting the community edition, while the Local Development Setup Guide outlines steps for building and testing the platform on a local machine.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/guide/version/opensource/intro)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/guide/version/opensource/intro)

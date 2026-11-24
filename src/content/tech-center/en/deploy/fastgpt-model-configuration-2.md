@@ -2,7 +2,7 @@
 title: Configure Required Models for FastGPT Deployment
 slug: /en/deploy/fastgpt-model-configuration-2
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/deploy/docker
+source: https://doc.fastgpt.io/self-host/deploy/docker
 source_type: Official documentation
 ---
 
@@ -21,7 +21,7 @@ For full step-by-step configuration guidance, reference the official tutorial do
 ### Troubleshooting Known Issues
 A documented edge case occurs immediately after first accessing the FastGPT system: the active browser tab may become unresponsive, blocking further setup progress. This issue does not indicate a critical deployment failure, and can be resolved with a simple corrective action: close the unresponsive browser tab entirely, then open a new browser tab and navigate back to your FastGPT instance’s public URL to resume the model configuration workflow. No additional system changes are required to resolve this behavior.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/deploy/docker)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/deploy/docker)
 
 ## Applicability and version scope
 

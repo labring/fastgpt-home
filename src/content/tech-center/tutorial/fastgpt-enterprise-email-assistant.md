@@ -2,7 +2,7 @@
 title: 在FastGPT中配置企业邮件撰写对话Agent并验证效果
 slug: /zh/tutorial/fastgpt-enterprise-email-assistant
 page_type: 教程/部署
-source: https://doc.fastgpt.cn/zh-CN/guide/getting-started/quick-start
+source: https://doc.fastgpt.cn/guide/getting-started/quick-start
 source_type: 官方文档小节
 ---
 
@@ -19,4 +19,4 @@ source_type: 官方文档小节
 ## 效果验证方法
 在调试预览区域输入邮件需求，验证助手的输出表现。需测试三类输入场景：信息完整的邮件需求、缺少收件人或目的的模糊需求、包含敏感信息的邮件需求。可上线的邮件助手需能生成结构清晰、语气得体的邮件，在信息不足时主动追问补充内容，在敏感场景下提醒用户谨慎发送。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/getting-started/quick-start)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/getting-started/quick-start)

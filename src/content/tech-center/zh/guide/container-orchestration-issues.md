@@ -202,8 +202,8 @@ publication_batch: Week08
 
 ## 参考资料
 
-- [FastGPT Docker Compose 部署](https://doc.fastgpt.cn/zh-CN/self-host/deploy/docker)
-- [FastGPT 环境变量](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
+- [FastGPT Docker Compose 部署](https://doc.fastgpt.cn/self-host/deploy/docker)
+- [FastGPT 环境变量](https://doc.fastgpt.cn/self-host/config/env)
 
 ## 问题仍未定位时
 

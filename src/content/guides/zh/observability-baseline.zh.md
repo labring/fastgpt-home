@@ -60,8 +60,8 @@ publication_batch: Week08
 
 ## 参考资料
 
-- [FastGPT 环境变量](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
-- [FastGPT 升级说明](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/upgrade-instruction)
+- [FastGPT 环境变量](https://doc.fastgpt.cn/self-host/config/env)
+- [FastGPT 升级说明](https://doc.fastgpt.cn/self-host/upgrading/upgrade-instruction)
 
 ## 需要进一步确认时
 

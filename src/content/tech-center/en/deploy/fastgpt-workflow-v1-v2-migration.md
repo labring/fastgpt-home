@@ -2,7 +2,7 @@
 title: Migrate FastGPT Workflow V1 to V2 Data During Upgrade
 slug: /en/deploy/fastgpt-workflow-v1-v2-migration
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41507
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/41507
 source_type: Official documentation
 ---
 
@@ -42,7 +42,7 @@ The migration script follows these defined operational rules:
 5. Uses `flowType` as a fallback for missing `node.name` values, and uses `input.key` as a fallback for missing `input.label` values.
 6. Validates `nodes`, `edges`, and `chatConfig` against `PublishAppBodySchema` before writing any changes. Records that fail validation are not written to the database and are included in the endpoint's response.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41507)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-15/41507)
 
 ## Applicability and version scope
 

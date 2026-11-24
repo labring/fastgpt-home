@@ -2,7 +2,7 @@
 title: 详细介绍FastGPT工具节点的运行条件与调用逻辑
 slug: /zh/node/fastgpt-tool-call-logic
 page_type: 工作流节点
-source: https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/tool
+source: https://doc.fastgpt.cn/guide/build/workflow/nodes/tool
 source_type: 官方文档
 ---
 
@@ -24,7 +24,7 @@ source_type: 官方文档
 | 是否必须 | 标记每个参数是否为调用该工具的必填项 |
 配置时需根据工具实际情况填写对应内容，无参数工具无需配置参数项，有参数工具需完整填写参数介绍与是否必须的标记内容。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/tool)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/workflow/nodes/tool)
 
 ## 适用性与版本范围
 

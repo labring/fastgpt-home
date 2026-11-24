@@ -2,7 +2,7 @@
 title: FastGPT OpenAPI知识库数据结构与索引参数说明
 slug: /zh/reference/fastgpt-dataset-data-structure
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/openapi/dataset
+source: https://doc.fastgpt.cn/openapi/dataset
 source_type: 官方文档小节
 ---
 
@@ -39,4 +39,4 @@ source_type: 官方文档小节
 3.  变更数据时传入dataId，可实现差量更新，无需全量覆盖。
 4.  a、fullTextToken、chunkIndex为非必填字段，可按需传入。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/openapi/dataset)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/openapi/dataset)

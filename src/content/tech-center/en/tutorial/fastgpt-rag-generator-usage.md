@@ -2,7 +2,7 @@
 title: Configure and Use FastGPT RAG Generators
 slug: /en/tutorial/fastgpt-rag-generator-usage
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/dataset/rag
+source: https://doc.fastgpt.io/guide/dataset/rag
 source_type: Official documentation
 ---
 
@@ -30,7 +30,7 @@ All generator deployments require the following core input parameters:
 | `user_query` | Yes | The raw input query submitted by the end user, which guides the generator’s response framing |
 | `retrieved_context` | Yes | The segmented document data returned by the FastGPT retriever, used as grounded contextual knowledge for the generation process |
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/rag)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/rag)
 
 ## Applicability and version scope
 

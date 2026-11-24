@@ -2,7 +2,7 @@
 title: FastGPT V4.12.2自部署版本升级操作与更新说明
 slug: /zh/deploy/fastgpt-v4122-upgrade-guide
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-12/4122
+source: https://doc.fastgpt.cn/self-host/upgrading/4-12/4122
 source_type: 官方文档
 ---
 
@@ -30,4 +30,4 @@ V4.12.2版本发布于2025年8月26日，针对自部署场景的升级需更新
 ### 工具更新
 修复Doc2x工具的响应值异常问题。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-12/4122)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-12/4122)

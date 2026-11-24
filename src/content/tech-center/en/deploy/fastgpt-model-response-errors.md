@@ -2,7 +2,7 @@
 title: Resolve FastGPT Empty Model Response Errors
 slug: /en/deploy/fastgpt-model-response-errors
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/troubleshooting/model-errors
+source: https://doc.fastgpt.io/self-host/troubleshooting/model-errors
 source_type: Official documentation
 ---
 
@@ -27,7 +27,7 @@ Two consistent underlying issues trigger this empty response error:
 1.  **Domestic Model Risk Control**: Deployed domestic large language models may block requests due to active content moderation rules, access restrictions, or quota limits.
 2.  **Unsupported Request Parameters**: OneAPI may reject requests containing non-standard or unrecognized parameters. Simplify the test request by retaining only the mandatory `messages` field and required core model parameters, removing all non-essential fields to isolate parameter-related failures.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/troubleshooting/model-errors)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/troubleshooting/model-errors)
 
 ## Applicability and version scope
 

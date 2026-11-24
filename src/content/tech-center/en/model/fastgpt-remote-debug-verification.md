@@ -2,7 +2,7 @@
 title: Verify Remote Plugin Debugging in FastGPT
 slug: /en/model/fastgpt-remote-debug-verification
 page_type: Model guides
-source: https://doc.fastgpt.cn/en/plugin/system-tool-development
+source: https://doc.fastgpt.io/plugin/system-tool-development
 source_type: Official documentation
 ---
 
@@ -21,7 +21,7 @@ Follow these required steps to validate the remote plugin:
 ## Access Boundary Clarification
 The binding of the `source` debug plugin to your signed-in account prevents unintended access by other workspace members. This binding is automatically applied based on your current login session, so no additional configuration is needed to restrict access to the debug tool.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/plugin/system-tool-development)
+> Source: [FastGPT official source](https://doc.fastgpt.io/plugin/system-tool-development)
 
 ## Applicability and version scope
 

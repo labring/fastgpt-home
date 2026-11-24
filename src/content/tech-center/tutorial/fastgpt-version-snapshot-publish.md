@@ -2,7 +2,7 @@
 title: FastGPT应用版本快照保存与正式发布操作说明
 slug: /zh/tutorial/fastgpt-version-snapshot-publish
 page_type: 教程
-source: https://doc.fastgpt.cn/zh-CN/guide/build/skill/version
+source: https://doc.fastgpt.cn/guide/build/skill/version
 source_type: 官方文档
 ---
 
@@ -18,7 +18,7 @@ source_type: 官方文档
 ## 发布过程的注意事项
 > 发布时，系统会自动应用项目根目录下 `.gitignore` 文件的忽略规则。如不存在该文件，系统会自动创建包含 `node_modules`、`.venv`、`dist` 等默认忽略项的文件。只有未被忽略的文件才会被打包发布，请确保打包文件总体积未超限，否则可能导致发布失败。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/skill/version)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/skill/version)
 
 ## 适用性与版本范围
 

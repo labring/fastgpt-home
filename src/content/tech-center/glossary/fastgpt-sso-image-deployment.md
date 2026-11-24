@@ -2,7 +2,7 @@
 title: 说明FastGPT SSO服务镜像的部署配置方法
 slug: /zh/glossary/fastgpt-sso-image-deployment
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/guide/admin/sso
+source: https://doc.fastgpt.cn/guide/admin/sso
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ FastGPT SSO服务镜像是用于部署FastGPT单点登录服务的官方镜像�
 ## 容易搞错的地方
 部分配置人员会忽略不同身份提供商需要配置不同的专属环境变量，导致部署后无法正常对接。AUTH_TOKEN仅在FastGPT Pro版本中生效，非Pro版本无需配置该参数。部署时需确保SSO服务与主FastGPT服务处于同一网络，否则两个服务之间无法正常通信，影响单点登录功能的正常使用。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/admin/sso)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/admin/sso)
 
 ## 适用性与版本范围
 

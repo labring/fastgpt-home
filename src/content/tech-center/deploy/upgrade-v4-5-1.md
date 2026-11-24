@@ -2,7 +2,7 @@
 title: FastGPT V4.5.1版本升级操作与功能说明
 slug: /zh/deploy/upgrade-v4-5-1
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/451
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/451
 source_type: 官方文档
 ---
 
@@ -27,7 +27,7 @@ curl --location --request POST 'https://{{host}}/api/admin/initv451' \
 ## 升级后怎么验证
 检查知识库文件夹管理功能是否正常启用。测试openai4.x sdk兼容的智谱、阿里接口调用是否正常。确认部分模块触发完成事件的功能恢复正常。查看系统日志，确认数据库字段重命名、Mongo APP表知识库相关字段初始化、PG和Mongo的内容初始化（每个文件创建Mongo集合并赋值给PG）操作完成。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/451)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/451)
 
 ## 适用性与版本范围
 

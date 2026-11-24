@@ -2,7 +2,7 @@
 title: FastGPT工作流工具调用节点的配置与使用说明
 slug: /zh/node/fastgpt-tool-call-node-config
 page_type: 工作流节点
-source: https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/tool
+source: https://doc.fastgpt.cn/guide/build/workflow/nodes/tool
 source_type: 官方文档
 ---
 
@@ -20,4 +20,4 @@ source_type: 官方文档
 工具调用节点默认会将工具运行结果返回给大语言模型，由模型对结果进行总结输出。若无需此步骤，可将工具调用节点接入工具流程的末尾，直接终止AI总结环节。
 使用工具调用节点时，会自动生成两个附加节点：工具调用终止节点和自定义工具变量节点。工具调用终止节点可接在任意工具之后，当工作流执行到该节点时，会强制结束本次工具调用，不再调用其他工具，也不会触发大语言模型针对工具结果的回答。自定义工具变量节点可扩展工具的变量输入，为未被视作工具参数的节点添加参数描述，让工具调用关联对应节点及后续工作流。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/tool)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/workflow/nodes/tool)

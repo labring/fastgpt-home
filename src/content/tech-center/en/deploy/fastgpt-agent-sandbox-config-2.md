@@ -2,7 +2,7 @@
 title: Configure FastGPT Agent Sandbox Environment Variables
 slug: /en/deploy/fastgpt-agent-sandbox-config-2
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/env
+source: https://doc.fastgpt.io/self-host/config/env
 source_type: Official documentation
 ---
 
@@ -32,7 +32,7 @@ Below is the official list of supported environment variables for agent sandbox 
 ## Validation and Deployment
 After updating these environment variables, you must restart your FastGPT deployment to apply the new configuration. Incomplete or incorrect variable setup will prevent the agent sandbox from initializing properly, so always verify that all required provider-specific variables are configured before restarting the service.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/env)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/env)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: Requirements for Publishing FastGPT Official Plugins
 slug: /en/model/fastgpt-official-plugin-publishing-requirements
 page_type: Model guides
-source: https://doc.fastgpt.cn/en/plugin/system-tool-development
+source: https://doc.fastgpt.io/plugin/system-tool-development
 source_type: Official documentation
 ---
 
@@ -31,7 +31,7 @@ Prior to submission, plugins must complete two core validation phases:
 1.  Manual deployment testing: Install the packaged `.pkg` file in an isolated test environment to confirm no installation errors or runtime startup failures.
 2.  End-to-end functional testing: Verify all intended plugin behaviors, including proper handling of external API requests, correct loading and storage of secret configurations, graceful failure responses for invalid inputs or disrupted external services, and consistent performance during concurrent plugin invocations.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/plugin/system-tool-development)
+> Source: [FastGPT official source](https://doc.fastgpt.io/plugin/system-tool-development)
 
 ## Applicability and version scope
 

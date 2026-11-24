@@ -2,7 +2,7 @@
 title: Set Up M3E Embedding Models in FastGPT
 slug: /en/deploy/m3e-embedding-model-fastgpt-setup
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/custom-models/m3e
+source: https://doc.fastgpt.io/self-host/custom-models/m3e
 source_type: Official documentation
 ---
 
@@ -21,7 +21,7 @@ Follow these ordered steps to deploy M3E embedding models in your FastGPT enviro
 ## Post-Binding Validation
 After binding the dataset to your app, confirm that the similarity threshold is calibrated correctly. Re-run test searches to ensure relevant results are returned at the configured threshold, as improper threshold settings can lead to overly broad or overly narrow search results. No additional configuration steps are required beyond this tuning, as all core functionality is handled automatically once the dataset and app are properly linked.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/custom-models/m3e)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/custom-models/m3e)
 
 ## Applicability and version scope
 

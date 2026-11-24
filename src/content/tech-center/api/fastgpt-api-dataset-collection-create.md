@@ -2,7 +2,7 @@
 title: 通过API创建FastGPT数据集集合并分割文件内容
 slug: /zh/api/fastgpt-api-dataset-collection-create
 page_type: API与文档
-source: https://doc.fastgpt.cn/zh-CN/openapi/dataset
+source: https://doc.fastgpt.cn/openapi/dataset
 source_type: 官方文档小节
 ---
 
@@ -16,4 +16,4 @@ source_type: 官方文档小节
 ### 接口响应说明
 接口调用成功时，会返回code为200的响应结果。响应数据中的`data`字段包含`collectionId`，即新创建的集合ID，同时`results`字段下会返回`insertLen`，表示成功插入的文本分片数量。若请求存在参数错误或格式问题，会返回对应错误码及提示信息。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/openapi/dataset)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/openapi/dataset)

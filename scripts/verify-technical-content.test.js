@@ -155,6 +155,11 @@ test('representative delivery normalizes the canonical path and body', () => {
   );
   assert.equal(openSandbox.identity.canonicalPath, '/reference/fastgpt-opensandbox-env-config');
   assert.equal(
+    openSandbox.projection.source,
+    'https://doc.fastgpt.cn/self-host/config/sandbox/opensandbox'
+  );
+  assert.doesNotMatch(openSandbox.normalizedDocument, /doc\.fastgpt\.(?:cn|io)\/(?:zh-CN|en)(?:\/|$)/);
+  assert.equal(
     plan.pages.filter((page) =>
       page.identity.canonicalPath.endsWith('fastgpt-opensandbox-env-config')
     ).length,
@@ -451,6 +456,24 @@ test('source verification covers every indexed page and catches content drift wi
         registryPath,
         (bytes) => JSON.stringify([...JSON.parse(bytes), JSON.parse(bytes)[0]]),
         /identity collision/
+      ],
+      [
+        registryPath,
+        (bytes) => {
+          const entries = JSON.parse(bytes);
+          entries[0].source = 'https://doc.fastgpt.cn/zh-CN/self-host/config/sandbox/opensandbox';
+          return JSON.stringify(entries, null, 2);
+        },
+        /Legacy prefixed documentation URL/
+      ],
+      [
+        bodyPath,
+        (bytes) =>
+          bytes.replace(
+            'https://doc.fastgpt.cn/self-host/config/sandbox/opensandbox',
+            'https://doc.fastgpt.cn/zh-CN/self-host/config/sandbox/opensandbox'
+          ),
+        /Legacy prefixed documentation URL/
       ],
       [searchPath, () => '[]\n', /search projection/]
     ]) {

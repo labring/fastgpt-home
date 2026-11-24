@@ -2,7 +2,7 @@
 title: Create Dataset-Backed Civil Code Q&A Assistant
 slug: /en/tutorial/dataset-backed-civil-code-qa-assistant
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/getting-started/quick-start
+source: https://doc.fastgpt.io/guide/getting-started/quick-start
 source_type: Official documentation
 ---
 
@@ -22,7 +22,7 @@ This workflow follows the official FastGPT quick start guidelines for dataset-ba
 ## Critical Control Benefits
 Think of the Dataset as a dedicated reference room configured for the AI. The base model possesses broad general knowledge, but has no inherent access to internal company policies, product specifications, internal workflows, or specific regulatory versions like the official Civil Code. The Dataset converts these static materials into searchable, retrievable content, allowing the AI to look up precise, up-to-date information before organizing its final answer. For legal, policy, customer service, and after-sales scenarios, this approach delivers far greater operational control than relying solely on the model’s inherent memory, ensuring all outputs align with official reference materials.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/getting-started/quick-start)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/getting-started/quick-start)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: Verify Successful SigNoz Monitoring Setup for FastGPT
 slug: /en/deploy/fastgpt-signoz-setup-verification
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/signoz
+source: https://doc.fastgpt.io/self-host/config/signoz
 source_type: Official documentation
 ---
 
@@ -21,7 +21,7 @@ A reference screenshot of the account creation flow is provided here: ![alt text
 ## Validate Successful Configuration
 Once logged into the SigNoz dashboard, confirm the setup is successful by checking the COMPLETED steps panel on the right-hand side of the main interface. A properly configured deployment will show both the `logs` and `traces` steps as fully lit, confirming that monitoring data is being properly collected and routed. Two additional reference screenshots demonstrate the validated completed steps view: ![alt text](../../../public/imgs/image-117.png) and ![alt text](../../../public/imgs/image-118.png).
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/signoz)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/signoz)
 
 ## Applicability and version scope
 

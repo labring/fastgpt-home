@@ -2,7 +2,7 @@
 title: FastGPT Dataset Vector Storage Architecture Overview
 slug: /en/tutorial/fastgpt-dataset-vector-storage-2
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/dataset/dataset_engine
+source: https://doc.fastgpt.io/guide/dataset/dataset_engine
 source_type: Official documentation
 ---
 
@@ -28,7 +28,7 @@ PostgreSQL maintains a dedicated `vector` field to store embedding vectors. A st
 
 An accompanying architecture diagram illustrates the end-to-end data flow between these two storage systems during vector search operations.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/dataset_engine)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/dataset_engine)
 
 ## Applicability and version scope
 

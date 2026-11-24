@@ -2,7 +2,7 @@
 title: FastGPT V4.6.9版本升级内容与操作验证指南
 slug: /zh/deploy/upgrade-v4-6-9
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/469
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/469
 source_type: 官方文档
 ---
 
@@ -34,7 +34,7 @@ curl --location --request POST 'https://{{host}}/api/admin/initv469' \
 3.  验证新增功能：启用知识库的“增强处理”训练模式，确认HTTP模块变量提示正常、OpenAI单接口导入可用，全局变量可通过分享链接Query或API参数传入，内容提取模块存在默认值，问题补全模块支持英文类型与独立复用。
 4.  验证优化与修复项：确认计量功能运行正常，Token过滤历史记录保持偶数条，分享链接正确展示应用名和头像，标注功能可用，qa生成线程计数无误，问题分类连线显示正常。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/469)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/469)
 
 ## 适用性与版本范围
 

@@ -9,7 +9,7 @@ meta_description: 为企业技术负责人与采购方提供本地卷支撑的Mi
 keywords: FastGPT,文件存储,本地卷,对象存储,S3
 delivery_source_type: 开源仓库文档与社区线程
 source_type: 深度场景内容
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/env
+source: https://doc.fastgpt.cn/self-host/config/env
 schema_type: TechArticle
 date_published: 2026-09-28
 date_modified: 2026-09-28
@@ -64,8 +64,8 @@ delivery_note: 判据取自开源仓库文档与社区线程，核验日 2026-09
 - [FastGPT v4.14.4 legacy upload migration](https://github.com/labring/FastGPT/blob/v4.17.0/document/content/self-host/upgrading/4-14/4144.mdx)
 - [Docker volume persistence](https://docs.docker.com/engine/storage/volumes/)
 
-- [FastGPT 环境变量](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
-- [FastGPT Docker Compose 部署](https://doc.fastgpt.cn/zh-CN/self-host/deploy/docker)
+- [FastGPT 环境变量](https://doc.fastgpt.cn/self-host/config/env)
+- [FastGPT Docker Compose 部署](https://doc.fastgpt.cn/self-host/deploy/docker)
 
 ## 需要进一步确认时
 

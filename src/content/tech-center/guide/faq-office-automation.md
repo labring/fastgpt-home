@@ -170,8 +170,8 @@ date_modified: 2026-10-14
 
 ## 参考资料
 
-- [工作流介绍](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/intro)
-- [快速开始](https://doc.fastgpt.cn/zh-CN/guide/getting-started/quick-start)
+- [工作流介绍](https://doc.fastgpt.cn/guide/build/workflow/intro)
+- [快速开始](https://doc.fastgpt.cn/guide/getting-started/quick-start)
 
 ## 需要进一步确认时
 

@@ -2,7 +2,7 @@
 title: Deployment Architecture: Images and Trade-offs on x86 and ARM Servers
 slug: /en/guide/cpu-arch-and-image-selection
 page_type: Decision matrix
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/env
+source: https://doc.fastgpt.cn/self-host/config/env
 source_type: Open-source repository docs and community threads
 article_section: Selection & Evaluation
 is_part_of: FastGPT Tech Center
@@ -52,8 +52,8 @@ You can delay this decision when your deployment environment’s CPU architectur
 
 ## References
 
-- [FastGPT environment variables](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
-- [FastGPT Docker Compose deployment](https://doc.fastgpt.cn/zh-CN/self-host/deploy/docker)
+- [FastGPT environment variables](https://doc.fastgpt.cn/self-host/config/env)
+- [FastGPT Docker Compose deployment](https://doc.fastgpt.cn/self-host/deploy/docker)
 
 ## Next steps
 

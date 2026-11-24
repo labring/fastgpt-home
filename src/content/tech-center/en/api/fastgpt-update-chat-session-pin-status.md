@@ -2,7 +2,7 @@
 title: Update FastGPT Chat Session Pin Status
 slug: /en/api/fastgpt-update-chat-session-pin-status
 page_type: API与文档
-source: https://doc.fastgpt.cn/en/openapi/chat
+source: https://doc.fastgpt.io/openapi/chat
 source_type: 官方文档
 ---
 
@@ -49,4 +49,4 @@ A successful request returns a 200 OK HTTP status code with the following JSON r
 
 The successful response includes empty `statusText` and `message` fields, and the `data` field is always null.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/openapi/chat)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/openapi/chat)

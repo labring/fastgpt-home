@@ -2,7 +2,7 @@
 title: FastGPT 配置与开发参考：部署与环境配置（67 篇清单）
 slug: /zh/guide/ref-deploy-and-env
 page_type: 问题清单聚合页
-source: https://doc.fastgpt.cn/zh-CN/self-host/deploy/docker
+source: https://doc.fastgpt.cn/self-host/deploy/docker
 source_type: 站内已发布文档的程序化归类
 check_day: 2026-10-19
 article_section: 配置与开发参考
@@ -116,8 +116,8 @@ date_modified: 2026-10-26
 
 ## 参考资料
 
-- [Docker Compose 部署](https://doc.fastgpt.cn/zh-CN/self-host/deploy/docker)
-- [环境变量](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
+- [Docker Compose 部署](https://doc.fastgpt.cn/self-host/deploy/docker)
+- [环境变量](https://doc.fastgpt.cn/self-host/config/env)
 
 ## 需要进一步确认时
 

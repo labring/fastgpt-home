@@ -2,7 +2,7 @@
 title: Fix Non-Native Model Question Classification Issues
 slug: /en/deploy/fastgpt-non-native-model-classification-fix
 page_type: 部署场景
-source: https://doc.fastgpt.cn/en/self-host/troubleshooting/faq
+source: https://doc.fastgpt.io/self-host/troubleshooting/faq
 source_type: 官方文档
 ---
 
@@ -22,4 +22,4 @@ After applying these settings, the FastGPT system will automatically revert to t
 ## Custom Prompt Optimization
 If the model operates without error logs but still fails to deliver consistent question classification or content extraction results, the default built-in prompt may not be compatible with the specific model's response format. In this scenario, users can adjust the `customCQPrompt` field to implement a custom prompt tailored to the target model's capabilities. No additional core model configuration changes are required beyond this prompt modification to align the processing workflow with the model's native output patterns.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/troubleshooting/faq)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/troubleshooting/faq)

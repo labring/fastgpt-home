@@ -2,7 +2,7 @@
 title: 说明FastGPT第三方文档库Server类型的配置参数与步骤
 slug: /zh/glossary/third-party-dataset-server-type
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/third_dataset
+source: https://doc.fastgpt.cn/guide/dataset/third-party/third_dataset
 source_type: 官方文档
 ---
 
@@ -27,7 +27,7 @@ export type YuqueServer = {
 2.  误将token字段设为必填项，实际部分第三方文档库无需token即可完成鉴权流程。
 3.  未在指定的`apiDataset.d.ts`文件中添加Server类型，导致第三方文档库配置无法被系统识别。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/third_dataset)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/dataset/third-party/third_dataset)
 
 ## 适用性与版本范围
 

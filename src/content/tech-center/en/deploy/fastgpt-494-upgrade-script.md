@@ -2,7 +2,7 @@
 title: Run the FastGPT 4.9.4 Upgrade Script
 slug: /en/deploy/fastgpt-494-upgrade-script
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/494
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/494
 source_type: 官方文档
 ---
 
@@ -29,4 +29,4 @@ Each component of this command is required: the `--location` flag automatically 
 ## Script Functional Impact
 When executed without errors, this script performs one targeted upgrade task: it updates the site sync scheduler for your FastGPT 4.9.4 deployment. This adjustment aligns your site’s synchronization processes with the latest version’s requirements, resolving potential scheduling inconsistencies or synchronization failures associated with prior configurations. No additional changes to your deployment’s core functionality, stored data, or secondary settings are made by this script.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/494)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/494)

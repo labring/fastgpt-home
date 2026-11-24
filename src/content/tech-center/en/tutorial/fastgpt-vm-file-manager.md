@@ -2,7 +2,7 @@
 title: Manage Virtual Machine Container Files for Debugging
 slug: /en/tutorial/fastgpt-vm-file-manager
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/build/agentv2/vm
+source: https://doc.fastgpt.io/guide/build/agentv2/vm
 source_type: Official documentation
 ---
 
@@ -32,7 +32,7 @@ The following table displays the key visual components of the VM File Manager in
 | :---------------------------------: | :--------------------------------: |
 | ![Virtual Machine File Bubble](/imgs/agent_vm_file_bubble.png) | ![Virtual Machine File Manager](/imgs/agent_vm_file_manager.png) |
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/agentv2/vm)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/agentv2/vm)
 
 ## Applicability and version scope
 

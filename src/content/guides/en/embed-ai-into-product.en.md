@@ -105,7 +105,7 @@ E --> F[Launch and Monitoring]
 
 ## References
 
-- [FastGPT OpenAPI chat documentation](https://doc.fastgpt.io/en/openapi/chat)
-- [FastGPT API publishing guide](https://doc.fastgpt.io/en/guide/build/publish/openapi)
-- [FastGPT MCP Server documentation](https://doc.fastgpt.io/en/guide/build/publish/mcp_server)
-- [FastGPT getting started guide](https://doc.fastgpt.io/en/guide/getting-started)
+- [FastGPT OpenAPI chat documentation](https://doc.fastgpt.io/openapi/chat)
+- [FastGPT API publishing guide](https://doc.fastgpt.io/guide/build/publish/openapi)
+- [FastGPT MCP Server documentation](https://doc.fastgpt.io/guide/build/publish/mcp_server)
+- [FastGPT getting started guide](https://doc.fastgpt.io/guide/getting-started)

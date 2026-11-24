@@ -2,7 +2,7 @@
 title: FastGPT v4.8.4 Release Feature and Fix Updates
 slug: /en/deploy/fastgpt-v484-release-notes
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/484
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/484
 source_type: 官方文档
 ---
 
@@ -31,4 +31,4 @@ A comprehensive set of bug fixes and minor UI adjustments are included in this r
 | Bug Fix              | Incorrect nodeId when copying complex nodes via Ctrl+C/V                                |
 | UI Adjustment        | Global theme updated for the official component library                                  |
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/484)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/484)

@@ -2,7 +2,7 @@
 title: Resolves Coreferences to Improve Query Accuracy
 slug: /en/node/coreference-resolution-node-function
 page_type: Workflow nodes
-source: https://doc.fastgpt.cn/en/guide/build/workflow/nodes/coreferenceResolution
+source: https://doc.fastgpt.io/guide/build/workflow/nodes/coreferenceResolution
 source_type: Official documentation
 ---
 
@@ -21,7 +21,7 @@ This node operates as a dedicated step within FastGPT’s workflow builder, with
 3.  Generate a refined, fully unambiguous search query that incorporates all relevant context from prior conversation turns
 4.  Pass the refined query to downstream workflow nodes, such as dataset search components, for execution
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/workflow/nodes/coreferenceResolution)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/workflow/nodes/coreferenceResolution)
 
 ## Applicability and version scope
 

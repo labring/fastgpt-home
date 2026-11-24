@@ -2,7 +2,7 @@
 title: New Features for FastGPT 4.14.11 Self-Hosted Deployments
 slug: /en/deploy/fastgpt-41411-new-features
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-14/41411
+source: https://doc.fastgpt.io/self-host/upgrading/4-14/41411
 source_type: Official documentation
 ---
 
@@ -29,7 +29,7 @@ The update standardizes storage and file handling across FastGPT deployments:
 - **Unified S3 File Uploads**: The workflow standardizes S3 file uploads, adding support for proxying S3 upload and access traffic through FastGPT. This reduces common pre-signed URL configuration issues by centralizing all S3 interaction logic within the FastGPT instance.
 - **File Preview & Download Optimization**: Direct preview is now available for select sandbox file types, and large file download performance has been optimized to minimize latency and timeout errors for end users.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-14/41411)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-14/41411)
 
 ## Applicability and version scope
 

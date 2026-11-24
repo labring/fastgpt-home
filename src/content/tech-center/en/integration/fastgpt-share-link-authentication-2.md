@@ -2,7 +2,7 @@
 title: Set Up FastGPT Share Link Authentication
 slug: /en/integration/fastgpt-share-link-authentication-2
 page_type: Integrations
-source: https://doc.fastgpt.cn/en/guide/build/publish/link
+source: https://doc.fastgpt.io/guide/build/publish/link
 source_type: Official documentation
 ---
 
@@ -25,7 +25,7 @@ Beyond integrating with existing user systems, this authentication framework sup
 - Pre-chat Verification Endpoint: Call this endpoint before loading the authenticated share link to validate the user’s available balance for chat interactions.
 - Result Reporting Endpoint: Call this endpoint after a completed chat interaction to deduct the user’s allocated balance per configured usage rules.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/publish/link)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/publish/link)
 
 ## Applicability and version scope
 

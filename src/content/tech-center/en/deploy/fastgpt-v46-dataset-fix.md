@@ -2,7 +2,7 @@
 title: Fix V4.6 Dataset Import Display Failure
 slug: /en/deploy/fastgpt-v46-dataset-fix
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/46
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/46
 source_type: 官方文档
 ---
 
@@ -29,4 +29,4 @@ To apply the dataset import fix safely and correctly, follow these structured st
     ```
 3.  Wait for the terminal output to confirm a successful API response. A successful execution restores the missing database field, resolving the dataset display failure for file imports. No additional service restarts or post-processing steps are required after a successful fix run.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/46)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/46)

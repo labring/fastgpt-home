@@ -2,7 +2,7 @@
 title: Adjust FastGPT Environment Variables for 4.15.04 Upgrade
 slug: /en/deploy/fastgpt-upgrade-environment-variables
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41504
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/41504
 source_type: 官方文档
 ---
 
@@ -28,4 +28,4 @@ Follow these steps to apply the required environment variable changes:
 4. Modify the `MONGODB_URI` environment variable for fastgpt-plugin to use a unique MongoDB database name, ensuring it does not share a name with the database used by the core fastgpt service. Use the provided example connection string format as a reference for structuring the updated URI.
 5. Restart both the fastgpt and fastgpt-plugin services to apply the new environment variables and activate the changes.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41504)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/4-15/41504)

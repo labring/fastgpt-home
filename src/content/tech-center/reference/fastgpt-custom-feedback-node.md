@@ -2,7 +2,7 @@
 title: 介绍FastGPT工作流节点中自定义反馈模块的使用方法
 slug: /zh/reference/fastgpt-custom-feedback-node
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/custom_feedback
+source: https://doc.fastgpt.cn/guide/build/workflow/nodes/custom_feedback
 source_type: 官方文档小节
 ---
 
@@ -20,4 +20,4 @@ source_type: 官方文档小节
 2. 请勿在生产环境过度依赖该模块，需留意官方后续的版本更新说明；
 3. 目前官方未公开该模块的详细报错文本与参数说明，使用过程中需参考官方后续更新内容。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/custom_feedback)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/workflow/nodes/custom_feedback)

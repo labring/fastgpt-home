@@ -2,7 +2,7 @@
 title: Perform FastGPT Builds for Local Development
 slug: /en/deploy/fastgpt-local-builds
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/dev
+source: https://doc.fastgpt.io/self-host/dev
 source_type: Official documentation
 ---
 
@@ -29,7 +29,7 @@ The `--build-arg proxy=taobao` flag enables use of Taobao's public package mirro
 ## Manual Build Alternative
 If Docker is not available on your host system, you can perform a manual build by executing all run-stage commands directly from the `./projects/app/Dockerfile`. This approach requires manually replicating every step defined in the Dockerfile's run stages, including dependency installation, environment configuration, and application compilation. This method is explicitly not recommended, as it carries a high risk of configuration errors and inconsistent build outcomes.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/dev)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/dev)
 
 ## Applicability and version scope
 

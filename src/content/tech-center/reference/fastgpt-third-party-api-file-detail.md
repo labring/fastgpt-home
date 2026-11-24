@@ -2,7 +2,7 @@
 title: 使用FastGPT第三方API获取指定文件的详情信息
 slug: /zh/reference/fastgpt-third-party-api-file-detail
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/api_dataset
+source: https://doc.fastgpt.cn/guide/dataset/third-party/api_dataset
 source_type: 官方文档小节
 ---
 
@@ -45,4 +45,4 @@ source_type: 官方文档小节
 5. 响应中的时间字段均为ISO 8601格式的字符串。
 6. 响应中success字段为true时表示请求成功，message字段为空表示无错误信息。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/api_dataset)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/dataset/third-party/api_dataset)

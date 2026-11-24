@@ -2,7 +2,7 @@
 title: FastGPT中base64解码工具与部署配置说明
 slug: /zh/glossary/fastgpt-base64-decode-config
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4147
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/4147
 source_type: 官方文档
 ---
 
@@ -15,7 +15,7 @@ base64Decode属于需更新的系统工具之一，可前往插件市场更新�
 ## 容易搞错的地方
 一是误将通用base64工具与FastGPT内置的base64Decode工具混淆，未通过官方渠道更新或安装该系统工具。二是在docker-compose配置中使用openssl rand -base64命令时，出现格式错误，会触发报错文本为ERROR: Invalid interpolation format for "entrypoint" option in service "mongo"的服务启动失败问题，需检查命令的格式与配置语法。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4147)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-14/4147)
 
 ## 适用性与版本范围
 

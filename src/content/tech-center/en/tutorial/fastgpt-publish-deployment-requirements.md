@@ -2,7 +2,7 @@
 title: Understand the Critical FastGPT Publish Requirements
 slug: /en/tutorial/fastgpt-publish-deployment-requirements
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/build/skill/version
+source: https://doc.fastgpt.io/guide/build/skill/version
 source_type: Official documentation
 ---
 
@@ -26,7 +26,7 @@ To apply your edited configurations to active workflows or agents that serve end
 3.  Select the **Publish** button within the editor interface to deploy a formal production version.
 4.  All linked active workflows and agents will immediately begin using the updated configuration after successful publication.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/skill/version)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/skill/version)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: FastGPT 4912 Update Bug Fix Resolutions
 slug: /en/deploy/fastgpt-4912-bug-fixes
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4912
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/4912
 source_type: 官方文档
 ---
 
@@ -35,4 +35,4 @@ After deploying the FastGPT 4912 update, follow these steps to confirm all fixes
 5.  Edit a Dataset document containing uploaded images, confirm the TTL field is cleared automatically on save, and verify images do not expire prematurely.
 6.  Create an MCP tool with integer type configuration data, store the tool, then retrieve it to confirm the integer data is properly escaped and unmodified.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4912)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/4912)

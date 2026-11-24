@@ -2,7 +2,7 @@
 title: FastGPT V4.8.10版本环境变量变更与升级操作指南
 slug: /zh/reference/fastgpt-v4810-env-upgrade
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4810
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4810
 source_type: 官方文档小节
 ---
 
@@ -22,4 +22,4 @@ FastGPT V4.8.10版本更新包含环境变量变更与配套升级脚本。该�
 2.  需使用与V4.8.10版本完全匹配的升级脚本，避免出现脚本不兼容导致升级失败。
 3.  环境变量的修改需严格遵循官方变更说明，错误的配置会导致服务启动异常或功能异常。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4810)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/4810)

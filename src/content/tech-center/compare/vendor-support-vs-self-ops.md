@@ -2,11 +2,11 @@
 title: 原厂支持与自主运维：四层责任怎么分
 slug: /zh/compare/vendor-support-vs-self-ops
 page_type: matrix
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173
+source: https://doc.fastgpt.cn/self-host/upgrading/4-17/4173
 source_type: 深度场景内容
 meta_title: 原厂支持与自主运维怎么分
 meta_description: 把私有部署的运行责任拆成环境、平台、应用与业务四层，比较原厂支持与自主运维在各层的覆盖范围、交付物与遗留风险，并给出分层的责任划分与巡检做法。
-delivery_metadata: {"source_front_matter":{"slug":"vendor-support-vs-self-ops","meta_title":"原厂支持与自主运维怎么分","meta_description":"把私有部署的运行责任拆成环境、平台、应用与业务四层，比较原厂支持与自主运维在各层的覆盖范围、交付物与遗留风险，并给出分层的责任划分与巡检做法。","language":"zh","content_type":"matrix","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"vendor-support-vs-self-ops","keywords":"原厂支持,自主运维,责任分层,交付物,遗留风险","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"哪些运维该买原厂支持、哪些自己做","需求依据":"客户 2026-11-07 购买诉求第 3 条：落地过程要有人跟。","事实来源":"FastGPT 产品知识库·内容收集清单（支持档位与范围）；官方更新说明 4.17.3","内链":"https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173","排期":"W18 决策矩阵第 6 篇","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（来源版本，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核支持档位与升级说明。"]}
+delivery_metadata: {"source_front_matter":{"slug":"vendor-support-vs-self-ops","meta_title":"原厂支持与自主运维怎么分","meta_description":"把私有部署的运行责任拆成环境、平台、应用与业务四层，比较原厂支持与自主运维在各层的覆盖范围、交付物与遗留风险，并给出分层的责任划分与巡检做法。","language":"zh","content_type":"matrix","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"vendor-support-vs-self-ops","keywords":"原厂支持,自主运维,责任分层,交付物,遗留风险","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"哪些运维该买原厂支持、哪些自己做","需求依据":"客户 2026-11-07 购买诉求第 3 条：落地过程要有人跟。","事实来源":"FastGPT 产品知识库·内容收集清单（支持档位与范围）；官方更新说明 4.17.3","内链":"https://doc.fastgpt.cn/self-host/upgrading/4-17/4173","排期":"W18 决策矩阵第 6 篇","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（来源版本，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核支持档位与升级说明。"]}
 keywords: 原厂支持,自主运维,责任分层,交付物,遗留风险
 schema_type: Article
 date_modified: 2026-11-16
@@ -18,7 +18,7 @@ date_modified: 2026-11-16
 
 ## 四层的边界
 
-对照材料：[FastGPT 官方说明](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173)。
+对照材料：[FastGPT 官方说明](https://doc.fastgpt.cn/self-host/upgrading/4-17/4173)。
 
 环境层包括服务器、网络、数据库、向量库与模型服务，通常由客户 IT 负责。平台层是 FastGPT 应用与专业版、插件、代码沙盒等镜像的组合与升级，原厂提供升级说明与协助。应用层是知识库结构、工作流、提示词、发布渠道与权限，由客户的业务与实施团队维护。业务层是使用方的提问质量与流程配合，由业务方负责。
 
@@ -74,5 +74,5 @@ date_modified: 2026-11-16
 | 主题 | 版本 | 来源 |
 | --- | --- | --- |
 | 支持档位、付费档位包含项、部署协助范围 | 当期商业方案 | [FastGPT 商务咨询：授权、部署与支持范围](https://fastgpt.cn/contact) |
-| 镜像组合、三项回填任务 | v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173) |
-| 沙盒不混版 | v4.16.0 | [self-host/upgrading/4-16/4160](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/4160) |
+| 镜像组合、三项回填任务 | v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/self-host/upgrading/4-17/4173) |
+| 沙盒不混版 | v4.16.0 | [self-host/upgrading/4-16/4160](https://doc.fastgpt.cn/self-host/upgrading/4-16/4160) |

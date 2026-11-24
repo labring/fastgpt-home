@@ -2,7 +2,7 @@
 title: FastGPT中mode模式的配置与使用说明
 slug: /zh/glossary/fastgpt-mode-configuration
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/self-host/custom-models/mineru
+source: https://doc.fastgpt.cn/self-host/custom-models/mineru
 source_type: 官方文档
 ---
 
@@ -24,7 +24,7 @@ mode是FastGPT中用于配置模型运行逻辑或输出格式的参数选项，
 2. 需准确填写部署后的MinerU服务URL至FastGPT配置文件，若URL填写错误，将无法接入PDF解析服务。
 3. JSON模式需在对应AI对话节点手动开启开关，未开启该开关时，无法启用JSON格式的输出。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/mineru)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/custom-models/mineru)
 
 ## 适用性与版本范围
 

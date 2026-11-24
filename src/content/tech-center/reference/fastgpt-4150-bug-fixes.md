@@ -2,7 +2,7 @@
 title: FastGPT 4.15.0版本修复的多项功能异常问题
 slug: /zh/reference/fastgpt-4150-bug-fixes
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41500
+source: https://doc.fastgpt.cn/self-host/upgrading/4-15/41500
 source_type: 官方文档小节
 ---
 
@@ -33,4 +33,4 @@ source_type: 官方文档小节
 ## 注意事项
 所有修复项均为该版本原生修复，无需额外自定义配置。部分接口字段存在调整，需确认业务代码是否依赖原被变更的字段。修复范围覆盖Agent、知识库、工作流、模型配置等多个模块。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41500)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-15/41500)

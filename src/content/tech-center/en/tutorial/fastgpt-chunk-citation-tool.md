@@ -2,7 +2,7 @@
 title: Enable Precise Citation and Traceable Dataset Reading
 slug: /en/tutorial/fastgpt-chunk-citation-tool
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/chat/quoteList
+source: https://doc.fastgpt.io/guide/chat/quoteList
 source_type: Official documentation
 ---
 
@@ -27,7 +27,7 @@ When the FastGPT assistant cites dataset content in its chat response, users can
 - Verified traceability of all AI-generated response source material
 - Improved readability of dataset content relative to standard citation displays
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/chat/quoteList)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/chat/quoteList)
 
 ## Applicability and version scope
 

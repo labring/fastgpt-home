@@ -2,7 +2,7 @@
 title: FastGPT 4.15.7 List of Resolved Bug Fixes
 slug: /en/deploy/fastgpt-4-15-7-bug-fixes
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/4157
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/4157
 source_type: 官方文档
 ---
 
@@ -29,4 +29,4 @@ For self-hosted instances with existing portal quick app configurations, follow 
 4. If the total exceeds 3, remove excess quick app entries to comply with the 3-app limit.
 5. Save updated configurations and restart the FastGPT portal service to apply the validation changes.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/4157)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/4-15/4157)

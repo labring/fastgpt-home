@@ -2,7 +2,7 @@
 title: 说明FastGPT中vector向量检索与存储的配置与使用
 slug: /zh/glossary/fastgpt-vector-storage-retrieval
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/dataset_engine
+source: https://doc.fastgpt.cn/guide/dataset/dataset_engine
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ FastGPT采用PostgreSQL的PG Vector插件作为向量检索器，索引为HNSW�
 ## 容易搞错的地方
 一是混淆PostgreSQL与MongoDB的分工，PostgreSQL仅用于向量检索，MongoDB存储非向量类的其他数据。二是误以为一组数据仅能对应一个向量，实际indexes字段为数组，支持一组数据关联多个向量。三是忽略升级脚本的timeout提示，该提示不影响脚本正常增量执行，只要数据库未崩溃即可继续运行。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/dataset/dataset_engine)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/dataset/dataset_engine)
 
 ## 适用性与版本范围
 

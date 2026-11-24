@@ -2,7 +2,7 @@
 title: Configure FastGPT Shared Service URLs and Integrations
 slug: /en/deploy/fastgpt-shared-service-url-config
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/env
+source: https://doc.fastgpt.io/self-host/config/env
 source_type: Official documentation
 ---
 
@@ -34,7 +34,7 @@ The following table lists all shared service and integration environment variabl
 ### Applying Configuration Changes
 To implement these variables, add them to your deployment’s environment configuration file (such as `.env.local`) or pass them as runtime arguments for containerized deployments. For example, to route AI model requests through a custom AI Proxy service, set `AIPROXY_API_ENDPOINT=https://your-proxy-service.example.com` and `AIPROXY_API_TOKEN=your-proxy-auth-token`. If you self-host the Lark platform, update `FEISHU_BASE_URL` to match your private domain. All authentication tokens for external services must exactly match the corresponding service’s configured secrets to prevent connection failures.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/env)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/env)
 
 ## Applicability and version scope
 

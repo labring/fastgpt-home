@@ -2,7 +2,7 @@
 title: FastGPT V4.9.13版本升级操作参考指南
 slug: /zh/reference/fastgpt-v4913-upgrade-guide
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4913
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4913
 source_type: 官方文档小节
 ---
 
@@ -21,4 +21,4 @@ FastGPT V4.9.13版本升级适用于版本低于4.12.0的FastGPT实例。需按�
 2. 部分旧版本升级可能伴随环境变量变更，需提前确认新版本的配置要求
 3. 升级前建议完成数据迁移与备份操作，避免数据丢失
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4913)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/4913)

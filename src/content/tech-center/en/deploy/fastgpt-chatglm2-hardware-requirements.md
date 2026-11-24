@@ -2,7 +2,7 @@
 title: Determine Hardware Requirements for ChatGLM2 on FastGPT
 slug: /en/deploy/fastgpt-chatglm2-hardware-requirements
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/custom-models/chatglm2
+source: https://doc.fastgpt.io/self-host/custom-models/chatglm2
 source_type: Official documentation
 ---
 
@@ -25,7 +25,7 @@ All configuration profiles share a minimum 16GB system RAM requirement and 25GB 
 ## Startup Command Reference
 The provided startup command `python openai_api.py` requires a single integer argument that defines the model's quantization bit depth. This argument directly maps to the quantization type in the configuration table: passing 16 enables FP16 precision, 8 enables int8 quantization, and 4 enables int4 quantization. Omitting this parameter may cause improper model loading, so the specified integer must be included for successful deployment.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/custom-models/chatglm2)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/custom-models/chatglm2)
 
 ## Applicability and version scope
 

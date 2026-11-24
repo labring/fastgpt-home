@@ -11,6 +11,7 @@ const path = require('node:path');
 const { availableParallelism } = require('node:os');
 const { Worker, isMainThread, parentPort, workerData } = require('node:worker_threads');
 const { resolveSiteVariant, getDefaultLocale } = require('./lib/site-variant');
+const { findLegacyDocumentationUrls } = require('./lib/documentation-url');
 
 function loadTypeScript() {
   try {
@@ -1822,13 +1823,20 @@ function inspectMarkdown(relativePath, source) {
   const fencedCode = markdownFencedCodeMask(body);
   const isFencedCodeOffset = (offset) => offset !== undefined && fencedCode[offset] === 1;
 
-  for (let index = 0; index < lines.length; index += 1) {
+  for (let index = 0, offset = 0; index < lines.length; offset += lines[index].length + 1, index += 1) {
     const line = lines[index];
     const lineNumber = bodyStartLine + index;
     if (EDITORIAL_PREAMBLE.test(line.trim())) {
       findings.push(
         finding('D-01 editorial-metadata', 'markdown-body', relativePath, lineNumber, line.trim())
       );
+    }
+    if (!isFencedCodeOffset(offset)) {
+      for (const legacyUrl of findLegacyDocumentationUrls(line)) {
+        findings.push(
+          finding('D-08 canonical-doc-url', 'markdown-body', relativePath, lineNumber, legacyUrl)
+        );
+      }
     }
   }
 
@@ -1982,6 +1990,11 @@ function inspectStructuredCopy(relativePath, source) {
       continue;
     }
     if (typeof value === 'string') {
+      for (const legacyUrl of findLegacyDocumentationUrls(value)) {
+        findings.push(
+          finding('D-08 canonical-doc-url', 'structured-copy', relativePath, valueLine || line, legacyUrl)
+        );
+      }
       const plainValue = normalizedCitationText(value);
       if (hasEditorialLabel(plainValue) || EDITORIAL_PREAMBLE.test(plainValue)) {
         findings.push(

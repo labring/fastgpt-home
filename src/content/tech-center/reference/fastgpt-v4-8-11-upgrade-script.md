@@ -2,7 +2,7 @@
 title: 自部署环境下FastGPT V4.8.11版本升级脚本的具体使用说明
 slug: /zh/reference/fastgpt-v4-8-11-upgrade-script
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4811
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4811
 source_type: 官方文档小节
 ---
 
@@ -22,4 +22,4 @@ FastGPT V4.8.11版本升级需使用官方配套的升级脚本完成。该升�
 2. 请勿修改官方提供的升级脚本的原始内容
 3. 升级前需完成当前FastGPT系统的数据备份，避免升级过程中出现数据丢失问题
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4811)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/4811)

@@ -2,7 +2,7 @@
 title: FastGPT循环运行节点的参数配置与输出说明
 slug: /zh/tutorial/fastgpt-loop-run-node-params-output
 page_type: 教程
-source: https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/loop_run
+source: https://doc.fastgpt.cn/guide/build/workflow/nodes/loop_run
 source_type: 官方文档
 ---
 
@@ -19,8 +19,8 @@ source_type: 官方文档
 ## 输出规则
 循环运行节点的输出结果遵循明确的逻辑。当节点正常完成所有迭代流程后，将输出最后一轮迭代中绑定的变量值。若循环执行过程中出现异常并触发中断时，将输出预先配置的错误信息。自定义输出需通过节点输出区域完成配置，输入变量名并绑定内部节点的变量引用，可实现灵活的结果提取与输出配置，适配多种业务场景，满足不同的结果输出需求。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/loop_run)
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/loop_run)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/workflow/nodes/loop_run)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/workflow/nodes/loop_run)
 
 ## 适用性与版本范围
 

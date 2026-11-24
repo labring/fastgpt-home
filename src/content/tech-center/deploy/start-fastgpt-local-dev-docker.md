@@ -2,7 +2,7 @@
 title: 使用Docker启动FastGPT本地开发环境的操作指引
 slug: /zh/deploy/start-fastgpt-local-dev-docker
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/dev
+source: https://doc.fastgpt.cn/self-host/dev
 source_type: 官方文档
 ---
 
@@ -22,7 +22,7 @@ docker compose up -d
 ```
 > **警告**：1. 如果无法获取官方镜像，可以使用国内镜像版本的配置文件，执行命令`docker compose -f docker-compose.cn.yml up -d`。2. 连接Mongo数据库时，需在连接地址中增加`directConnection=true`参数，方可正常连接副本集数据库。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/dev)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/dev)
 
 ## 适用性与版本范围
 

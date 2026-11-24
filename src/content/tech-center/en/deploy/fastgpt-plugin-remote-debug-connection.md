@@ -2,7 +2,7 @@
 title: Set Up Local FastGPT Plugin Remote Connections
 slug: /en/deploy/fastgpt-plugin-remote-debug-connection
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/remote-debug-suite
+source: https://doc.fastgpt.io/self-host/config/remote-debug-suite
 source_type: Official documentation
 ---
 
@@ -27,7 +27,7 @@ debug:tmbId:{tmbId}
 ```
 This debug source is tied to the FastGPT instance used to generate the initial connection URL, ensuring the local plugin is only accessible within the correct workspace context within FastGPT.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/remote-debug-suite)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/remote-debug-suite)
 
 ## Applicability and version scope
 

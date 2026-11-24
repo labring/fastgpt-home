@@ -2,7 +2,7 @@
 title: Eliminate Duplicate Storage Via API File Library
 slug: /en/integration/fastgpt-api-file-library-3
 page_type: Integrations
-source: https://doc.fastgpt.cn/en/guide/dataset/third-party/api_dataset
+source: https://doc.fastgpt.io/guide/dataset/third-party/api_dataset
 source_type: Official documentation
 ---
 
@@ -23,7 +23,7 @@ Follow these steps to set up and use the API File Library:
 5. Save the configuration to finalize the connection between FastGPT and your document library.
 6. After successful connection, browse the full catalog of available files from your connected library directly within the FastGPT UI, and selectively import individual or groups of files into your FastGPT dataset without creating duplicate stored copies.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/third-party/api_dataset)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/third-party/api_dataset)
 
 ## Applicability and version scope
 

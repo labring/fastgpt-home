@@ -2,7 +2,7 @@
 title: FastGPT Agent Loop and Workflow Bug Fixes
 slug: /en/deploy/fastgpt-agent-loop-fixes
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/4152
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/4152
 source_type: Official documentation
 ---
 
@@ -36,7 +36,7 @@ The following parameters and identifiers are modified or stabilized in this rele
 | `toolCallId`            | Unique identifier for in-place updates of tool call execution results    |
 | `workflowDispatchDeep`  | Tracks current workflow nesting depth to ensure correct execution state |
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/4152)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-15/4152)
 
 ## Applicability and version scope
 

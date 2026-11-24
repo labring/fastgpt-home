@@ -2,7 +2,7 @@
 title: FastGPT V4.8.15版本更新内容技术速查
 slug: /zh/reference/fastgpt-v4-8-15-release-notes
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4815
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4815
 source_type: 官方文档小节
 ---
 
@@ -41,4 +41,4 @@ source_type: 官方文档小节
 3. 未赋值字符串变量替换后为undefined，不保留原id串
 4. 工作流编辑记录不再使用本地存储，异常离开时自动保存
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4815)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/4815)

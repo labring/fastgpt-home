@@ -2,7 +2,7 @@
 title: Resolve FastGPT Invalid File Format Errors
 slug: /en/tutorial/fastgpt-dataset-invalid-file-format
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/dataset/template
+source: https://doc.fastgpt.io/guide/dataset/template
 source_type: Official documentation
 ---
 
@@ -31,7 +31,7 @@ All uploaded dataset files must pass the following validation checks to avoid th
 ## Safe Batch Import Best Practices
 After confirming the test file imports successfully, proceed to batch imports of larger datasets. Batch imports minimize the impact of formatting errors by allowing teams to isolate issues across smaller file groups. All files in a batch must adhere to the validation rules outlined above to avoid widespread import failures.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/template)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/template)
 
 ## Applicability and version scope
 

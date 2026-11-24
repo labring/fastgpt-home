@@ -2,7 +2,7 @@
 title: FastGPT Version 4821 Full Release Notes
 slug: /en/deploy/fastgpt-v4821-release-notes
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4821
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/4821
 source_type: 官方文档
 ---
 
@@ -45,4 +45,4 @@ This update addresses the following stability and functionality issues:
 - Corrected incorrect display of multiple audio and video file attachments
 - Fixed share link authentication error that caused infinite redirect loops
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4821)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/4821)

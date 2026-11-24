@@ -2,7 +2,7 @@
 title: Key Code Improvements for FastGPT 4.16.2
 slug: /en/deploy/fastgpt-code-improvements-4162
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-16/4162
+source: https://doc.fastgpt.io/self-host/upgrading/4-16/4162
 source_type: 官方文档
 ---
 
@@ -26,4 +26,4 @@ This update standardizes file parsing inputs on `FileSource` and defers content 
 2.  **Untrusted External URLs**: Declare only the parser’s base resource reservation when added to the queue. During download, FastGPT enforces configured business file-size limits and a permanent per-task memory limit, then dynamically increases soft resource reservations to match the actual downloaded byte count. Exhausting available capacity blocks subsequent queued tasks but does not interrupt active downloads.
 3.  The wait queue has no hard task-count or aggregate estimated-resource limit, with a fixed 30-minute queue timeout. Any failures, timeouts, or Worker exits will abort unfinished downloads and immediately release all reserved resources to avoid resource leaks.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/4-16/4162)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/4-16/4162)

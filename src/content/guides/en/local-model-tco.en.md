@@ -63,7 +63,7 @@ Assign owners for model upgrades, image updates, storage growth, credential rota
 
 ## References
 
-- [FastGPT model configuration](https://doc.fastgpt.cn/zh-CN/self-host/config/model/intro)
+- [FastGPT model configuration](https://doc.fastgpt.cn/self-host/config/model/intro)
 - [Ollama OpenAI compatibility](https://docs.ollama.com/api/openai-compatibility)
 - [Ollama context length](https://docs.ollama.com/context-length)
 - [Ollama Modelfile parameters](https://docs.ollama.com/modelfile)

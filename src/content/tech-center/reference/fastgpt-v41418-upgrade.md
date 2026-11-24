@@ -2,7 +2,7 @@
 title: FastGPT V4.14.18版本升级操作参考说明
 slug: /zh/reference/fastgpt-v41418-upgrade
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41418
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/41418
 source_type: 官方文档小节
 ---
 
@@ -22,4 +22,4 @@ source_type: 官方文档小节
 2. 涉及环境变量变更的版本升级前，需确认对应配置项的调整要求；
 3. 升级前需完成数据备份，避免升级过程中出现数据丢失。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41418)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-14/41418)

@@ -2,7 +2,7 @@
 title: Integrate HTTP Services in FastGPT Workflows
 slug: /en/node/fastgpt-http-service-integration
 page_type: Workflow nodes
-source: https://doc.fastgpt.cn/en/guide/build/workflow/nodes/http
+source: https://doc.fastgpt.io/guide/build/workflow/nodes/http
 source_type: Official documentation
 ---
 
@@ -63,7 +63,7 @@ The handler supports four CRUD operations, each calling a corresponding backend 
 ### Standardized Response Format
 All requests return a JSON object with a top-level `response` field. Successful requests return operation-specific data from the called backend function. Failed requests—including invalid actions, malformed `appointment` JSON, or runtime errors—return `{ response: 'Error' }`.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/workflow/nodes/http)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/workflow/nodes/http)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: Build Secure FastGPT RAG-Powered Q&A Systems
 slug: /en/tutorial/fastgpt-rag-workflow-deployment
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/dataset/rag
+source: https://doc.fastgpt.io/guide/dataset/rag
 source_type: Official documentation
 ---
 
@@ -25,7 +25,7 @@ The standard enterprise FastGPT RAG Q&A pipeline follows this fixed sequential p
 ### Security and Compliance Framework
 The integrated pipeline uses Azure AD for centralized identity and access management, ensuring that only permitted users can access sensitive data and system functions. All processing workflows adhere to built-in enterprise security and compliance controls for secure data handling.
 
-> [FastGPT public documentation](https://doc.fastgpt.cn/en/guide/dataset/rag)
+> [FastGPT public documentation](https://doc.fastgpt.io/guide/dataset/rag)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: FastGPT Agent V2智能数据分析Agent的业务价值与配置说明
 slug: /zh/tutorial/fastgpt-agent-v2-data-analysis
 page_type: 教程
-source: https://doc.fastgpt.cn/zh-CN/guide/getting-started/quick-start
+source: https://doc.fastgpt.cn/guide/getting-started/quick-start
 source_type: 官方文档
 ---
 
@@ -27,7 +27,7 @@ FastGPT Agent V2智能数据分析Agent具备多项实用特性，可优化数�
 ### 安全与场景适配
 该Agent通过虚拟机执行分析脚本，规避本地环境污染、依赖冲突和权限误用风险，同时覆盖销售复盘、运营周报、活动归因、产品指标诊断等多种业务场景，可将数据分析转化为标准化的日常工作流。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/getting-started/quick-start)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/getting-started/quick-start)
 
 ## 适用性与版本范围
 

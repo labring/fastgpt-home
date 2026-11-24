@@ -2,7 +2,7 @@
 title: FastGPT v4.6.3 Feature Updates and Fixes
 slug: /en/deploy/fastgpt-v463-feature-updates
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/463
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/463
 source_type: 官方文档
 ---
 
@@ -33,4 +33,4 @@ The following critical operational bugs are resolved in this release:
 |---------------------|-------------------|
 | Image compression failure errors that cause file reading to hang | Fixed in v4.6.3 |
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/463)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/463)

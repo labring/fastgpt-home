@@ -2,7 +2,7 @@
 title: Define FastGPT Dataset Import File Structure
 slug: /en/tutorial/fastgpt-dataset-import-file-structure
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/dataset/template
+source: https://doc.fastgpt.io/guide/dataset/template
 source_type: Official documentation
 ---
 
@@ -34,7 +34,7 @@ Two valid row examples demonstrate proper usage:
 1. A standard question-and-answer entry: `q="How to configure API access", a="Follow the steps in the admin panel", index="api_001", metadata={"source":"admin_guide"}`
 2. A standalone content entry with empty answer field: `q="Official FastGPT release notes v2.4", a="", index="rel_024", metadata={"category":"release_updates"}`
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/template)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/template)
 
 ## Applicability and version scope
 

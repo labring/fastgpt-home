@@ -2,7 +2,7 @@
 title: Configure FastGPT 4.14.11 Upgrade Environment Variables
 slug: /en/deploy/fastgpt-upgrade-env-vars
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-14/41411
+source: https://doc.fastgpt.io/self-host/upgrading/4-14/41411
 source_type: Official documentation
 ---
 
@@ -27,7 +27,7 @@ This section covers the optional environment variables introduced or modified fo
 4. Save the updated `.env` file to apply your local configuration changes.
 5. Restart all FastGPT backend and frontend services to propagate the new environment variable values across your deployment.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-14/41411)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-14/41411)
 
 ## Applicability and version scope
 

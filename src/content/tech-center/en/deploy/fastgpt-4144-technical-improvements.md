@@ -2,7 +2,7 @@
 title: FastGPT 4.14.4 Key Technical Improvements for Self-Hosted Deployments
 slug: /en/deploy/fastgpt-4144-technical-improvements
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4144
+source: https://doc.fastgpt.io/self-host/upgrading/4-14/4144
 source_type: Official documentation
 ---
 
@@ -27,7 +27,7 @@ This release includes targeted improvements to LLM query handling and response f
 ## User Notification System Updates
 User-facing notifications now support both Chinese and English languages, with revised, more consistent template formatting across all supported locales, ensuring clearer communication for all users regardless of language preference.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4144)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-14/4144)
 
 ## Applicability and version scope
 

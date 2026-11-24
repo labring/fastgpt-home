@@ -2,7 +2,7 @@
 title: 说明在FastGPT中自定义接入第三方知识库的方法
 slug: /zh/reference/fastgpt-third-party-knowledgebase-access
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/third_dataset
+source: https://doc.fastgpt.cn/guide/dataset/third-party/third_dataset
 source_type: 官方文档小节
 ---
 
@@ -18,4 +18,4 @@ source_type: 官方文档小节
 ## 注意事项
 仅可接入FastGPT未内置的第三方文档库，目前FastGPT已内置飞书、语雀两类文档库。需严格遵循本节提供的开发内容完成对接，请勿尝试接入已内置的文档库，避免出现对接异常。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/third_dataset)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/dataset/third-party/third_dataset)

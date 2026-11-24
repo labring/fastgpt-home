@@ -2,7 +2,7 @@
 title: Initialize FastGPT dataset.files collection via API
 slug: /en/deploy/fastgpt-dataset-initialization-api
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/441
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/441
 source_type: 官方文档
 ---
 
@@ -29,4 +29,4 @@ curl --location --request POST 'https://{{host}}/api/admin/initv441' \
 --header 'Content-Type: application/json'
 ```
 Before executing the command, confirm that your terminal has network access to your FastGPT instance’s public or internal endpoint. Replace `{{host}}` with your instance’s base URL (e.g., `https://fastgpt.yourcompany.com` or `http://192.168.0.5:3000` for local deployments). Replace `{{rootkey}}` with the exact value retrieved from your FastGPT environment variables. No additional request body data is needed for this endpoint. Once the command is processed, the FastGPT backend will complete the initialization of the `dataset.files` collection.
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/441)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/441)

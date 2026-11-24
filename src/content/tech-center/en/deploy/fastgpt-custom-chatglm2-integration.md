@@ -2,7 +2,7 @@
 title: Connect Private ChatGLM2 to FastGPT
 slug: /en/deploy/fastgpt-custom-chatglm2-integration
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/custom-models/chatglm2
+source: https://doc.fastgpt.io/self-host/custom-models/chatglm2
 source_type: Official documentation
 ---
 
@@ -25,7 +25,7 @@ The following sequence outlines the core steps to connect a self-hosted ChatGLM2
 4.  Configure the model’s input and output formatting to match the specifications required by FastGPT’s workflow engine
 5.  Execute a test connection to verify that FastGPT can successfully send requests to and receive responses from the ChatGLM2 instance
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/custom-models/chatglm2)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/custom-models/chatglm2)
 
 ## Applicability and version scope
 

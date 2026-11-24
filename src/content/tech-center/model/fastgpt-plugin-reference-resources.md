@@ -2,7 +2,7 @@
 title: FastGPT插件开发与使用的官方参考资源汇总说明
 slug: /zh/model/fastgpt-plugin-reference-resources
 page_type: 模型指南
-source: https://doc.fastgpt.cn/zh-CN/plugin/intro
+source: https://doc.fastgpt.cn/plugin/intro
 source_type: 官方文档
 ---
 
@@ -22,7 +22,7 @@ source_type: 官方文档
 ## 资源使用与获取步骤
 使用上述参考资源时，可根据实际需求选择对应内容。如需在线查阅，直接访问对应链接即可。如需本地保存完整资源，可通过GitHub仓库的克隆或下载ZIP包功能获取全部文件。开发插件时，可优先查阅系统插件开发指南与架构文档，快速掌握开发所需的核心要点；如需参考插件的基础实现，可访问FastGPT Plugin源码仓库获取相关源码文件。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/plugin/intro)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/plugin/intro)
 
 ## 适用性与版本范围
 

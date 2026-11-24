@@ -33,4 +33,4 @@ source_type: GitHub issue
 
 > 来源: [原讨论中的补充回复](https://github.com/labring/FastGPT/issues/4043#issuecomment-2710562173)
 
-> 来源: [FastGPT 的 Ollama 接入](https://doc.fastgpt.io/en/self-host/custom-models/ollama)
+> 来源: [FastGPT 的 Ollama 接入](https://doc.fastgpt.io/self-host/custom-models/ollama)

@@ -7,7 +7,7 @@ is_part_of: FastGPT Tech Center
 meta_description: Compare model routing and fallback options for FastGPT, including latency, cost, context limits, failure handling, and migration checks.
 delivery_source_type: Open-source repository docs and community threads
 source_type: 深度场景内容
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/env
+source: https://doc.fastgpt.cn/self-host/config/env
 meta_title: Routing and Fallback Across Models: What to Split On, What to Fall Back To | FastGPT Technical Center
 schema_type: TechArticle
 date_published: 2026-09-28
@@ -72,8 +72,8 @@ For single-model, low-traffic testing, start with simple channel configuration a
 - [AI Proxy endpoint and token configuration](https://github.com/labring/FastGPT/blob/v4.17.0/document/content/self-host/config/env.mdx)
 - [FastGPT v4.16.2 Worker changes and Milvus migration scope](https://github.com/labring/FastGPT/releases/tag/v4.16.2)
 
-- [FastGPT environment variables](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
-- [FastGPT Docker Compose deployment](https://doc.fastgpt.cn/zh-CN/self-host/deploy/docker)
+- [FastGPT environment variables](https://doc.fastgpt.cn/self-host/config/env)
+- [FastGPT Docker Compose deployment](https://doc.fastgpt.cn/self-host/deploy/docker)
 
 ## Next steps
 

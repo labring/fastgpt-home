@@ -2,7 +2,7 @@
 title: Set Up Conditional Loop AI Copy Refinement Workflows
 slug: /en/node/conditional-loop-copy-refinement-workflow
 page_type: Workflow nodes
-source: https://doc.fastgpt.cn/en/guide/build/workflow/nodes/loop_run
+source: https://doc.fastgpt.io/guide/build/workflow/nodes/loop_run
 source_type: Official documentation
 ---
 
@@ -29,7 +29,7 @@ Post-execution, full granular details of each iteration are accessible in the "C
 1.  **First Iteration**: The loop runs `Loop Start` → *Copy Refinement* → *Evaluation* → `Condition`. If the generated score fails to meet requirements, no break trigger occurs, and the system automatically starts a new iteration with the refined draft from the first round.
 2.  **Second Iteration**: The sub-workflow runs again using the updated draft. If the score meets the predefined threshold, the workflow routes to `Assigned Reply`, triggers the `Loop Break` node, and the loop terminates safely.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/workflow/nodes/loop_run)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/workflow/nodes/loop_run)
 
 ## Applicability and version scope
 

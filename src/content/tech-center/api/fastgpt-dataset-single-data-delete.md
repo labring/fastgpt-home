@@ -2,7 +2,7 @@
 title: FastGPT数据集单条数据删除API的使用说明
 slug: /zh/api/fastgpt-dataset-single-data-delete
 page_type: API
-source: https://doc.fastgpt.cn/zh-CN/openapi/dataset
+source: https://doc.fastgpt.cn/openapi/dataset
 source_type: 官方文档
 ---
 
@@ -31,7 +31,7 @@ curl --location --request DELETE 'http://localhost:3000/api/core/dataset/data/de
 ```
 响应中`code`字段值为200时，表示删除操作成功，`data`字段返回固定字符串`success`，其余字段默认返回空字符串。若请求参数缺失或无效，将返回对应错误码与错误信息，具体内容需根据实际调用环境确定。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/openapi/dataset)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/openapi/dataset)
 
 ## 适用性与版本范围
 

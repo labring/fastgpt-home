@@ -2,7 +2,7 @@
 title: Configure and Call Individual FastGPT MCP Tools
 slug: /en/integration/fastgpt-mcp-individual-tool-calls
 page_type: Integrations
-source: https://doc.fastgpt.cn/en/guide/build/tools/mcp_tools
+source: https://doc.fastgpt.io/guide/build/tools/mcp_tools
 source_type: Official documentation
 ---
 
@@ -27,7 +27,7 @@ For engineers implementing individual MCP tool calls, this standardized process 
 
 This workflow ensures that developers can quickly integrate individual tools into custom FastGPT assistants, with minimal overhead for tool selection and execution logic. Technical decision makers can leverage this functionality to build targeted assistants for specific data retrieval tasks, without requiring full multi-tool orchestration for every use case.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/tools/mcp_tools)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/tools/mcp_tools)
 
 ## Applicability and version scope
 

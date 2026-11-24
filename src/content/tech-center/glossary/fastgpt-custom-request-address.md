@@ -2,7 +2,7 @@
 title: 介绍FastGPT自定义请求地址的配置与使用规范
 slug: /zh/glossary/fastgpt-custom-request-address
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/model/intro
+source: https://doc.fastgpt.cn/self-host/config/model/intro
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ source_type: 官方文档
 ## 容易搞错的地方
 配置时需填写完整请求地址，不可仅填写主机地址。不同模型类型的请求路径不可混用。Rerank模型的接口格式与多数模型不同，需遵循指定的重排序模型格式。若出现类似`Bad Gateway: Invalid response object from API: '{"code":500,"message":"Post \"http://xxx\": dial tcp xxx: connect: connection refused"}'`的报错，需检查自定义请求地址的连通性。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/config/model/intro)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/config/model/intro)
 
 ## 适用性与版本范围
 

@@ -2,7 +2,7 @@
 title: Define and Use FastGPT AI Agent Skills
 slug: /en/tutorial/fastgpt-ai-agent-skills
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/build/skill/intro
+source: https://doc.fastgpt.io/guide/build/skill/intro
 source_type: Official documentation
 ---
 
@@ -26,7 +26,7 @@ A common use case for FastGPT AI Agent Skills involves automating spreadsheet an
 3. Invoke the Skill: During a new chat session, upload the target file and select the saved Skill to execute
 4. Access results: Wait for the FastGPT agent to complete the background workflow and deliver the formatted output
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/skill/intro)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/skill/intro)
 
 ## Applicability and version scope
 

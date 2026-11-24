@@ -2,7 +2,7 @@
 title: FastGPT v4.9.14版本升级内容与操作解读指南
 slug: /zh/deploy/upgrade-v4-9-14
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4914
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4914
 source_type: 官方文档
 ---
 
@@ -22,7 +22,7 @@ source_type: 官方文档
 ## 升级后怎么验证
 可通过以下方式验证升级效果：确认FastGPT及商业版镜像版本为v4.9.14；测试知识库导入功能，配置自动将文件名加入系统索引并确认生效；访问Admin端查看审计日志是否正常生成；测试图片知识库上传与检索，确认图片描述可被语言模型理解；测试修改密码功能，确认其他登录端被强制失效；测试CSV导出与JSON导入，确认无报错且危险字符串被过滤；确认对话日志点赞点踩统计功能正常运行；检查输入框体验与Cite引用展示是否符合优化后的效果。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4914)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/4914)
 
 ## 适用性与版本范围
 

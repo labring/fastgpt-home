@@ -2,7 +2,7 @@
 title: 正确获取并配置FastGPT对接AIProxy协议所需的channelId参数
 slug: /zh/model/fastgpt-aiproxy-channelid-setup
 page_type: 模型指南
-source: https://doc.fastgpt.cn/zh-CN/plugin/model-presets
+source: https://doc.fastgpt.cn/plugin/model-presets
 source_type: 官方文档
 ---
 
@@ -31,7 +31,7 @@ rg -n "ChannelType.*=" core/model/chtype.go
 ## 完整列表的获取方式
 由于AIProxy会持续更新支持的协议类型，所有协议与channelId的完整对应关系，需以AIProxy主分支`core/model/chtype.go`文件的最新内容为准。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/plugin/model-presets)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/plugin/model-presets)
 
 ## 适用性与版本范围
 

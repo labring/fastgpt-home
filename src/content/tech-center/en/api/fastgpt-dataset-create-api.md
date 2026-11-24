@@ -2,7 +2,7 @@
 title: Create FastGPT Datasets via OpenAPI
 slug: /en/api/fastgpt-dataset-create-api
 page_type: API
-source: https://doc.fastgpt.cn/en/openapi/dataset
+source: https://doc.fastgpt.io/openapi/dataset
 source_type: Official documentation
 ---
 
@@ -52,7 +52,7 @@ A successful API response returns a 200 status code, with the following JSON str
 ```
 The `data` field contains the unique alphanumeric ID of the newly created dataset or folder, which can be used for subsequent API operations.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/openapi/dataset)
+> Source: [FastGPT official source](https://doc.fastgpt.io/openapi/dataset)
 
 ## Applicability and version scope
 

@@ -3,7 +3,7 @@ title: FastGPT: Connecting Apps to WeCom, WeChat Official Accounts, Lark, and Di
 slug: /en/guide/im-bot-channel-integration
 page_type: Deep-dive guide
 source_type: Official documentation (v4.17.2) and community threads
-source: https://doc.fastgpt.io/en/guide/build/publish/wecom
+source: https://doc.fastgpt.io/guide/build/publish/wecom
 source_note: "Criteria taken from the FastGPT documentation (v4.17.2) and release notes, verified 2026-10-13."
 check_day: 2026-10-13
 article_section: Selection & Evaluation
@@ -137,11 +137,11 @@ This integration approach will not work in these scenarios:
 
 ## References
 
-- [WeCom bot integration](https://doc.fastgpt.io/en/guide/build/publish/wecom)
-- [Feishu bot integration](https://doc.fastgpt.io/en/guide/build/publish/feishu)
-- [DingTalk bot integration](https://doc.fastgpt.io/en/guide/build/publish/dingtalk)
-- [WeChat Official Account integration](https://doc.fastgpt.io/en/guide/build/publish/official_account)
-- [Custom domain](https://doc.fastgpt.io/en/guide/workspace/customDomain)
+- [WeCom bot integration](https://doc.fastgpt.io/guide/build/publish/wecom)
+- [Feishu bot integration](https://doc.fastgpt.io/guide/build/publish/feishu)
+- [DingTalk bot integration](https://doc.fastgpt.io/guide/build/publish/dingtalk)
+- [WeChat Official Account integration](https://doc.fastgpt.io/guide/build/publish/official_account)
+- [Custom domain](https://doc.fastgpt.io/guide/workspace/customDomain)
 
 ## Next steps
 

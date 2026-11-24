@@ -2,7 +2,7 @@
 title: 介绍FastGPT的基础能力与官方体验入口
 slug: /zh/reference/fastgpt-quick-overview-access
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/getting-started
+source: https://doc.fastgpt.cn/guide/getting-started
 source_type: 官方文档小节
 ---
 
@@ -18,4 +18,4 @@ FastGPT是基于大语言模型的AI Agent应用开发平台，集知识库问�
 ## 注意事项
 仅可通过官方提供的两个体验地址访问平台，请勿使用非官方链接。平台的功能展示以实际页面为准，不同区域的版本细节可能存在差异。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/getting-started)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/getting-started)

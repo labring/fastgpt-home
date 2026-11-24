@@ -2,7 +2,7 @@
 title: Understand FastGPT Workflow Core Execution Rules
 slug: /en/node/fastgpt-workflow-execution-rules
 page_type: Workflow nodes
-source: https://doc.fastgpt.cn/en/guide/build/workflow/intro
+source: https://doc.fastgpt.io/guide/build/workflow/intro
 source_type: Official documentation
 ---
 
@@ -32,7 +32,7 @@ A standard execution walkthrough for the sample workflow proceeds as:
 2.  The [Dataset search] node detects its single predecessor line is `active`, executes its configured logic, then updates its successor line to `active` and resets its predecessor line to `waiting`.
 3.  The [AI Chat] node detects its predecessor line is `active` and executes, at which point the workflow concludes.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/workflow/intro)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/workflow/intro)
 
 ## Applicability and version scope
 

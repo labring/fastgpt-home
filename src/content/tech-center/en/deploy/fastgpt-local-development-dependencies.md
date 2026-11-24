@@ -2,7 +2,7 @@
 title: Set Up FastGPT Local Development Dependencies
 slug: /en/deploy/fastgpt-local-development-dependencies
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/dev
+source: https://doc.fastgpt.io/self-host/dev
 source_type: Official documentation
 ---
 
@@ -27,7 +27,7 @@ Two key configuration notes are required to avoid common deployment issues when 
 > 1. If you are unable to pull official FastGPT Docker images from the default registry, use the China mirror configuration file by updating the Docker Compose command: `docker compose -f docker-compose.cn.yml up -d`
 > 2. For connections to the included MongoDB instance, append the `directConnection=true` parameter to your connection string to successfully connect to the MongoDB replica set.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/dev)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/dev)
 
 ## Applicability and version scope
 

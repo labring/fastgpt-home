@@ -2,7 +2,7 @@
 title: FastGPT 498 Upgrade New Feature Breakdown
 slug: /en/deploy/fastgpt-upgrade-new-features
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/498
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/498
 source_type: 官方文档
 ---
 
@@ -28,4 +28,4 @@ The following table lists all key configurable parameters introduced or modified
 | Admin panel feature visibility | Third-party dataset visibility | Toggle (Visible/Hidden) | Control whether imported third-party dataset tools are visible to users |
 | User account settings | Password expiration | Configurable duration | Set the validity window for user passwords, triggering a forced password reset post-expiry |
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/498)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/498)

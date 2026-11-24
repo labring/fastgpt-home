@@ -2,7 +2,7 @@
 title: FastGPT V4.6.3版本升级操作与变更说明
 slug: /zh/deploy/upgrade-v4-6-3
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/463
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/463
 source_type: 官方文档
 ---
 
@@ -26,7 +26,7 @@ curl --location --request POST 'https://{{host}}/api/admin/initv463' \
 ## 升级后怎么验证
 可通过以下方式验证升级效果：测试URL读取内容功能是否正常；测试图片上传压缩流程，确认无报错且流程顺畅；商业版用户可测试web站点同步功能是否可用；确认集合元数据记录已正常生成。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/463)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/463)
 
 ## 适用性与版本范围
 

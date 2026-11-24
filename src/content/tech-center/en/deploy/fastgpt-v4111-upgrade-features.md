@@ -2,7 +2,7 @@
 title: FastGPT v4.11.1 New Feature Details
 slug: /en/deploy/fastgpt-v4111-upgrade-features
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4111
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/4111
 source_type: 官方文档
 ---
 
@@ -26,4 +26,4 @@ The chat log dashboard now supports custom field display, allowing administrator
 ## Model & Documentation Updates
 The platform now includes official configuration support for the GLM 4.5 series of large language models, with setup parameters aligned to the model's official API specifications. Additionally, the official FastGPT documentation has been migrated to a new framework, improving navigation, search functionality, and organization of self-hosted deployment guides and technical reference materials.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4111)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/4111)

@@ -2,7 +2,7 @@
 title: FastGPT AgentV2虚拟机脚本执行限制与容错机制说明
 slug: /zh/reference/fastgpt-agentv2-vm-execution-rules
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/build/agentv2/vm
+source: https://doc.fastgpt.cn/guide/build/agentv2/vm
 source_type: 官方文档小节
 ---
 
@@ -21,4 +21,4 @@ FastGPT AgentV2虚拟机启动脚本运行受系统规则约束，包含字符�
 2.  脚本执行报错、超时终止或状态文件读写异常时，不会阻断主对话流程，但可能因缺少特定依赖导致后续代码运行抛出异常。
 3.  排查脚本问题可通过调试预览的日志或虚拟机文件管理器查看相关信息。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/agentv2/vm)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/agentv2/vm)

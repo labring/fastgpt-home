@@ -2,7 +2,7 @@
 title: FastGPT V4.8.12版本升级操作与功能变更说明
 slug: /zh/deploy/upgrade-v4-8-12
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4812
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4812
 source_type: 官方文档
 ---
 
@@ -36,7 +36,7 @@ curl --location --request POST 'https://{{host}}/api/admin/resetMilvus' \
 ## 升级后怎么验证
 可通过访问FastGPT域名查看系统版本是否为V4.8.12。验证FE_DOMAIN环境变量配置后，上传的文件/图片链接可补全为完整地址。测试新建应用、配置全局变量、使用插件节点、循环节点、Docx文件读取等功能是否无报错。使用Milvus的用户可再次检查dataset_datas表的indexes.dataId无精度丢失问题。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4812)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/4812)
 
 ## 适用性与版本范围
 

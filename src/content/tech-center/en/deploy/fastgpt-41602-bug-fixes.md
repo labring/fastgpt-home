@@ -2,7 +2,7 @@
 title: Bug Fixes for FastGPT 4.16.02 Self-Hosted
 slug: /en/deploy/fastgpt-41602-bug-fixes
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-16/41602
+source: https://doc.fastgpt.io/self-host/upgrading/4-16/41602
 source_type: 官方文档
 ---
 
@@ -31,4 +31,4 @@ Two key fixes target file handling and cloud storage operations. First, file var
 ## Sensitive Data Security Fix
 A critical security update adds missing sensitive data filtering for system default models. Previously, sensitive details including model API keys, request URLs, and internal configuration data were exposed in system initialization responses; this fix ensures such data is properly filtered and not returned in these responses, enhancing the security of self-hosted FastGPT deployments.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/4-16/41602)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/4-16/41602)

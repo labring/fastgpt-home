@@ -2,7 +2,7 @@
 title: Integrate Non-Standard SSO Systems With FastGPT
 slug: /en/tutorial/fastgpt-nonstandard-sso-integration
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/admin/sso
+source: https://doc.fastgpt.io/guide/admin/sso
 source_type: Official documentation
 ---
 
@@ -23,7 +23,7 @@ For teams without internal SSO engineering resources, the FastGPT team can deliv
 1. Gather and submit three mandatory resources for your non-standard SSO system: official SSO operational documentation, member and organization data retrieval documentation, and a publicly accessible external test address for validation.
 2. The FastGPT team will implement the integration by adding a dedicated authentication provider and corresponding environment variables within the fastgpt-sso-service codebase, then write custom integration logic tailored to your system’s specifications.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/admin/sso)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/admin/sso)
 
 ## Applicability and version scope
 

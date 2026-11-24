@@ -2,7 +2,7 @@
 title: FastGPT账号登录相关问题的排查与使用说明
 slug: /zh/glossary/fastgpt-account-login-guide
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/guide/version/cloud/faq
+source: https://doc.fastgpt.cn/guide/version/cloud/faq
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ FastGPT的账号登录是指访问FastGPT平台的身份验证流程，包含两
 ## 容易搞错的地方
 两套版本的账号无法互通，不能跨版本使用同一账号登录。国际版的手机号注册功能仅在2024年9月前可用，之后不再支持。部署时若未正确配置ROOT_KEY等密钥类环境变量，会触发指定的登录报错。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/version/cloud/faq)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/version/cloud/faq)
 
 ## 适用性与版本范围
 

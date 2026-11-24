@@ -2,7 +2,7 @@
 title: FastGPT V4.9.4版本升级与环境变量变更处理指南
 slug: /zh/reference/fastgpt-v494-upgrade-guide
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/494
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/494
 source_type: 官方文档小节
 ---
 
@@ -20,4 +20,4 @@ FastGPT V4.9.4版本升级包含环境变量变更与配套升级脚本。该版
 ## 注意事项
 升级操作需适配当前版本的官方升级路径，不可直接跳过多个大版本执行升级。环境变量变更后必须重启部署服务，确保新配置正常加载。升级过程中需保持网络连接稳定，避免中断导致部署异常。本指南仅适用于FastGPT V4.9.4版本的升级场景。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/494)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/494)

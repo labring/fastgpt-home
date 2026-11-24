@@ -2,7 +2,7 @@
 title: 通过FastGPT OpenAPI调用知识库搜索测试接口
 slug: /zh/api/fastgpt-dataset-search-test
 page_type: API与文档
-source: https://doc.fastgpt.cn/zh-CN/openapi/dataset
+source: https://doc.fastgpt.cn/openapi/dataset
 source_type: 官方文档小节
 ---
 
@@ -43,4 +43,4 @@ curl --location --request POST 'http://localhost:3000/api/core/dataset/searchTes
 ## 响应结果说明
 接口成功调用后会返回状态码200，此时statusText字段为空字符串。响应数据的data数组包含所有匹配到的知识库条目，每个条目包含id、q（问题文本）、a（回答文本）、datasetId、collectionId、sourceName（来源文件名）、sourceId、score（匹配相关度分值）等字段。例如示例返回的score值为0.8050316572189331，分值越高代表该条目与测试文本的匹配相关度越强。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/openapi/dataset)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/openapi/dataset)

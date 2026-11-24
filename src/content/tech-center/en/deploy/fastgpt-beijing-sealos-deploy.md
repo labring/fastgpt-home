@@ -2,7 +2,7 @@
 title: Deploy FastGPT in Beijing Region via Sealos
 slug: /en/deploy/fastgpt-beijing-sealos-deploy
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/deploy/sealos
+source: https://doc.fastgpt.io/self-host/deploy/sealos
 source_type: Official documentation
 ---
 
@@ -27,7 +27,7 @@ For technical teams deploying FastGPT in the Beijing region, follow this structu
 The official one-click deployment button is:
 [![Deploy on Sealos](https://raw.githubusercontent.com/labring-actions/templates/main/Deploy-on-Sealos.svg)](https://bja.sealos.run/?openapp=system-template%3FtemplateName%3Dfastgpt&uid=fnWRt09fZP)
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/deploy/sealos)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/deploy/sealos)
 
 ## Applicability and version scope
 

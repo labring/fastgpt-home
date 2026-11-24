@@ -2,7 +2,7 @@
 title: FastGPT环境下MiniMax大模型API的接入配置方法
 slug: /zh/reference/fastgpt-minimax-api-access
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/model/minimax
+source: https://doc.fastgpt.cn/self-host/config/model/minimax
 source_type: 官方文档小节
 ---
 
@@ -18,4 +18,4 @@ MiniMax是一家通用人工智能科技公司，提供高性能的大语言模�
 2.  仅支持使用兼容OpenAI格式的MiniMax API进行接入，非兼容格式的API无法直接接入FastGPT平台。
 3.  配置过程需严格遵循FastGPT官方的统一配置规范，不得随意修改未明确的配置参数。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/model/minimax)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/config/model/minimax)

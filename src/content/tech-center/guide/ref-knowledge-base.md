@@ -2,7 +2,7 @@
 title: FastGPT 配置与开发参考：知识库与检索（99 篇清单）
 slug: /zh/guide/ref-knowledge-base
 page_type: 问题清单聚合页
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/rag
+source: https://doc.fastgpt.cn/guide/dataset/rag
 source_type: 站内已发布文档的程序化归类
 check_day: 2026-10-19
 article_section: 配置与开发参考
@@ -148,8 +148,8 @@ date_modified: 2026-10-26
 
 ## 参考资料
 
-- [知识库基础原理](https://doc.fastgpt.cn/zh-CN/guide/dataset/rag)
-- [知识库搜索方案和参数](https://doc.fastgpt.cn/zh-CN/guide/dataset/dataset_engine)
+- [知识库基础原理](https://doc.fastgpt.cn/guide/dataset/rag)
+- [知识库搜索方案和参数](https://doc.fastgpt.cn/guide/dataset/dataset_engine)
 
 ## 需要进一步确认时
 

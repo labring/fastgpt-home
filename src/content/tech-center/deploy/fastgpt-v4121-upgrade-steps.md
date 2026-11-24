@@ -2,7 +2,7 @@
 title: FastGPT V4.12.1版本升级操作及更新内容说明
 slug: /zh/deploy/fastgpt-v4121-upgrade-steps
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-12/4121
+source: https://doc.fastgpt.cn/self-host/upgrading/4-12/4121
 source_type: 官方文档
 ---
 
@@ -36,4 +36,4 @@ curl --location --request POST https://{{host}}/api/admin/initv4121 \
 #### 工具更新
 支持对系统工具单独配置Tool description，帮助模型更好地理解工具用途。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-12/4121)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-12/4121)

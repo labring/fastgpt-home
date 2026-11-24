@@ -2,7 +2,7 @@
 title: 将本地Qwen模型接入FastGPT的完整配置操作步骤
 slug: /zh/reference/add-local-qwen-model-fastgpt
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/custom-models/xinference
+source: https://doc.fastgpt.cn/self-host/custom-models/xinference
 source_type: 官方文档小节
 ---
 
@@ -43,4 +43,4 @@ source_type: 官方文档小节
 3. `toolChoice`优先于`functionCall`，若两者同时配置，将优先启用`toolChoice`能力。
 4. 配置文件需严格遵循JSON语法规范，避免出现语法错误导致服务启动失败。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/xinference)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/custom-models/xinference)

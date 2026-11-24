@@ -2,7 +2,7 @@
 title: Set Up and Use FastGPT API File Library
 slug: /en/integration/fastgpt-api-file-library-4
 page_type: Integrations
-source: https://doc.fastgpt.cn/en/guide/dataset/third-party/api_dataset
+source: https://doc.fastgpt.io/guide/dataset/third-party/api_dataset
 source_type: Official documentation
 ---
 
@@ -34,7 +34,7 @@ Follow these steps to configure and use the API File Library:
 5. If your service endpoints comply with FastGPT’s specification, the system will automatically fetch and display the full file list from the specified base path.
 6. Review the displayed file list, select individual files or batches of files, and initiate the import process to add them to your new FastGPT dataset.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/third-party/api_dataset)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/third-party/api_dataset)
 
 ## Applicability and version scope
 

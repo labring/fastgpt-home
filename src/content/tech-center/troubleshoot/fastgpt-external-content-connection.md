@@ -12,7 +12,7 @@ FastGPT 可通过 API 文件库接入已有文档服务。Notion 直接导入的
 
 ## 历史范围与现有入口
 
-[Issue #578](https://github.com/labring/FastGPT/issues/578) 于 2023 年 12 月提出直接导入 Notion 内容，维护者当时将其列为未来考虑项。当前[API 文件库文档](https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/api_dataset) 提供了外部文件服务的接入协议。Notion 侧的数据获取和权限映射需要由适配服务实现。
+[Issue #578](https://github.com/labring/FastGPT/issues/578) 于 2023 年 12 月提出直接导入 Notion 内容，维护者当时将其列为未来考虑项。当前[API 文件库文档](https://doc.fastgpt.cn/guide/dataset/third-party/api_dataset) 提供了外部文件服务的接入协议。Notion 侧的数据获取和权限映射需要由适配服务实现。
 
 ## 接入步骤
 

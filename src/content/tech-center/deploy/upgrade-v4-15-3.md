@@ -2,7 +2,7 @@
 title: FastGPT V4.15.3版本升级内容与操作指引
 slug: /zh/deploy/upgrade-v4-15-3
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/4153
+source: https://doc.fastgpt.cn/self-host/upgrading/4-15/4153
 source_type: 官方文档
 ---
 
@@ -20,7 +20,7 @@ source_type: 官方文档
 ## 升级后怎么验证
 首先通过对应工具查看服务镜像tag，确认fastgpt-app和fastgpt-pro的镜像tag均为v4.15.3。其次测试微信发布渠道的接口调用，模拟微信接口特殊异常场景，确认无快速轮询问题出现。最后测试v1接口在stream=false、detail=true的调用场景，查看返回结果是否包含type字段，确认兼容修复生效。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/4153)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-15/4153)
 
 ## 适用性与版本范围
 

@@ -2,7 +2,7 @@
 title: Set Up Agent V2 For Dynamic Data Analysis
 slug: /en/tutorial/fastgpt-agent-v2-data-analysis-2
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/getting-started/quick-start
+source: https://doc.fastgpt.io/guide/getting-started/quick-start
 source_type: Official documentation
 ---
 
@@ -22,7 +22,7 @@ This use case simulates daily data analysis needs for operations, product, or sa
 5. Allow the Agent to autonomously determine subsequent actions: this may include reading the file’s data structure, performing statistical calculations, posing follow-up clarification questions if required, or executing code in a virtual machine to complete the analysis
 6. Retrieve and review the generated analysis output
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/getting-started/quick-start)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/getting-started/quick-start)
 
 ## Applicability and version scope
 

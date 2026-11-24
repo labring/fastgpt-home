@@ -2,7 +2,7 @@
 title: FastGPT通过OpenAPI创建空集合或目录的操作指引
 slug: /zh/reference/fastgpt-create-collection-or-directory
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/openapi/dataset
+source: https://doc.fastgpt.cn/openapi/dataset
 source_type: 官方文档小节
 ---
 
@@ -57,4 +57,4 @@ curl --location --request POST 'http://localhost:3000/api/core/dataset/collectio
 4. metadata字段当前无实际业务作用，仅可用于存储自定义元数据。
 5. 请求失败时，会返回非200的code值，错误详情会在message字段中体现。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/openapi/dataset)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/openapi/dataset)

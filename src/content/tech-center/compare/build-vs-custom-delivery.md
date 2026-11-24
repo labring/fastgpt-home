@@ -2,11 +2,11 @@
 title: 自己搭还是买定制交付：先看需求落在哪一层
 slug: /zh/compare/build-vs-custom-delivery
 page_type: matrix
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173
+source: https://doc.fastgpt.cn/self-host/upgrading/4-17/4173
 source_type: 深度场景内容
 meta_title: 自己搭还是定制交付怎么定
 meta_description: 按需求落在配置层、集成层还是代码层，比较企业自己搭建与采购定制交付的工作量、责任归属与后续维护成本，并给出分层判断顺序、交付物定义与三个取舍信号。
-delivery_metadata: {"source_front_matter":{"slug":"build-vs-custom-delivery","meta_title":"自己搭还是定制交付怎么定","meta_description":"按需求落在配置层、集成层还是代码层，比较企业自己搭建与采购定制交付的工作量、责任归属与后续维护成本，并给出分层判断顺序、交付物定义与三个取舍信号。","language":"zh","content_type":"matrix","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"build-vs-custom-delivery","keywords":"自建,定制交付,配置层,集成层,责任归属","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"定制需求是自己搭还是买定制交付","需求依据":"客户 2026-11-07 购买诉求第 2 条：定制开发与 Agent 能力决定能否落地。","事实来源":"FastGPT 产品知识库·内容收集清单（镜像组成与定制范围）；官方更新说明 4.17.3","内链":"https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173","排期":"W18 决策矩阵第 3 篇","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（来源版本，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核定制范围与商业版边界。"]}
+delivery_metadata: {"source_front_matter":{"slug":"build-vs-custom-delivery","meta_title":"自己搭还是定制交付怎么定","meta_description":"按需求落在配置层、集成层还是代码层，比较企业自己搭建与采购定制交付的工作量、责任归属与后续维护成本，并给出分层判断顺序、交付物定义与三个取舍信号。","language":"zh","content_type":"matrix","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"build-vs-custom-delivery","keywords":"自建,定制交付,配置层,集成层,责任归属","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"定制需求是自己搭还是买定制交付","需求依据":"客户 2026-11-07 购买诉求第 2 条：定制开发与 Agent 能力决定能否落地。","事实来源":"FastGPT 产品知识库·内容收集清单（镜像组成与定制范围）；官方更新说明 4.17.3","内链":"https://doc.fastgpt.cn/self-host/upgrading/4-17/4173","排期":"W18 决策矩阵第 3 篇","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（来源版本，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核定制范围与商业版边界。"]}
 keywords: 自建,定制交付,配置层,集成层,责任归属
 schema_type: Article
 date_modified: 2026-11-16
@@ -18,7 +18,7 @@ date_modified: 2026-11-16
 
 ## 三层拆开看
 
-对照材料：[FastGPT 官方说明](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173)。
+对照材料：[FastGPT 官方说明](https://doc.fastgpt.cn/self-host/upgrading/4-17/4173)。
 
 配置层包括知识库结构、工作流编排、提示词、发布渠道与权限分配，业务与实施方在管理台完成，不涉及代码。集成层通过对外接口、插件与工具调用衔接外部系统，需要接口文档与联调。代码层的边界由授权形态决定：商业版由社区版镜像与商业版镜像组成，社区版部分可修改，商业版镜像不支持修改。
 
@@ -71,4 +71,4 @@ date_modified: 2026-11-16
 | 主题 | 版本 | 来源 |
 | --- | --- | --- |
 | 镜像组成与定制范围、接口与插件机制 | 当期商业方案 | [FastGPT 商务咨询：授权、部署与支持范围](https://fastgpt.cn/contact) |
-| 辅助生成属于商业版、产出为候选版本 | v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173) |
+| 辅助生成属于商业版、产出为候选版本 | v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/self-host/upgrading/4-17/4173) |

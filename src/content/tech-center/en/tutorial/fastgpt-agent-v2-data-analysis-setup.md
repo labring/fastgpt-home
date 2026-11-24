@@ -2,7 +2,7 @@
 title: Set Up FastGPT Intelligent Data Analysis Agent
 slug: /en/tutorial/fastgpt-agent-v2-data-analysis-setup
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/getting-started/quick-start
+source: https://doc.fastgpt.io/guide/getting-started/quick-start
 source_type: Official documentation
 ---
 
@@ -40,7 +40,7 @@ Complete these step-by-step tests:
 
 Confirm the agent follows the full required workflow: first reading the uploaded file to identify data structure and fields, presenting a formal analysis plan, executing sandboxed code as needed, sharing key findings with supporting visualizations, and delivering actionable business recommendations. If the query includes ambiguous details, verify the agent proactively requests clarification instead of proceeding with an unvalidated analysis.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/getting-started/quick-start)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/getting-started/quick-start)
 
 ## Applicability and version scope
 

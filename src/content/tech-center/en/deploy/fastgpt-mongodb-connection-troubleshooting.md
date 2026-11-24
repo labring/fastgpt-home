@@ -2,7 +2,7 @@
 title: Resolve FastGPT MongoDB Connection Timeout Errors
 slug: /en/deploy/fastgpt-mongodb-connection-troubleshooting
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/deploy/docker
+source: https://doc.fastgpt.io/self-host/deploy/docker
 source_type: Official documentation
 ---
 
@@ -25,7 +25,7 @@ Follow these exact, documented steps to resolve the error:
 3.  **Correct Connection Environment Variables**: Review all FastGPT MongoDB connection environment variables: ensure `MONGO_INITDB_ROOT_USERNAME`, `MONGO_INITDB_ROOT_PASSWORD`, `MONGO_HOST`, and `MONGO_PORT` match your MongoDB instance's actual credentials and network details. For deployments not using a shared container network, use the public IP address of the MongoDB host and append the `directConnection=true` parameter to the database connection string to bypass container network restrictions.
 4.  **Resolve Replica Set Failures**: If the MongoDB container restarts repeatedly, validate the replica set configuration. Ensure all configured replica set nodes are reachable, and that startup commands or configuration files match official FastGPT deployment requirements.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/deploy/docker)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/deploy/docker)
 
 ## Applicability and version scope
 

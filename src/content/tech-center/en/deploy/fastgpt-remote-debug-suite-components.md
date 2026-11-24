@@ -2,7 +2,7 @@
 title: FastGPT Remote Debug Suite Component Reference
 slug: /en/deploy/fastgpt-remote-debug-suite-components
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/remote-debug-suite
+source: https://doc.fastgpt.io/self-host/config/remote-debug-suite
 source_type: Official documentation
 ---
 
@@ -50,7 +50,7 @@ sequenceDiagram
 ## Required CLI Command
 The only mandatory command for initiating a local plugin debug session is `fastgpt-plugin dev --connect <connectionUrl>`, where `<connectionUrl>` is the value retrieved from the FastGPT main service after enabling a debug channel. This command automatically handles exchange of the connectionKey with the FastGPT API, retrieves required gateway credentials, and establishes a persistent WebSocket connection to the Connection Gateway. All plugin invocations routed through the Plugin Server will be forwarded to the local CLI instance for execution, with results streamed back to the core FastGPT environment.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/remote-debug-suite)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/remote-debug-suite)
 
 ## Applicability and version scope
 

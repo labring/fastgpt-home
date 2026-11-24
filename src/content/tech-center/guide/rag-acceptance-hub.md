@@ -6,7 +6,7 @@ source: https://fastgpt.cn/dataset/fastgpt-knowledgebase-rag-mechanism
 source_type: 深度场景内容
 meta_title: 知识问答验收入口与测试步骤
 meta_description: 用真实文档验证 FastGPT 知识问答的四个步骤：文档样本准备、黄金问题、检索命中与引用依据、索引状态，逐项给出测试动作、失败表现与版本边界。
-delivery_metadata: {"source_front_matter":{"slug":"rag-acceptance-hub","meta_title":"知识问答验收入口与测试步骤","meta_description":"用真实文档验证 FastGPT 知识问答的四个步骤：文档样本准备、黄金问题、检索命中与引用依据、索引状态，逐项给出测试动作、失败表现与版本边界。","language":"zh","content_type":"aggregation","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"rag-acceptance-hub","keywords":"知识问答,检索命中,引用溯源,索引状态,验收测试","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"知识问答怎么用真实文档验收检索命中与答案依据","需求依据":"客户 2026-11-07 购买诉求第 1 条（尚）：让内部资料可检索、可问答、可追溯依据。","事实来源":"FastGPT 产品知识库·内容收集清单；官方更新说明 4.16.2 至 4.17.3","内链":"https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173","排期":"W18 聚合导航第 8 篇","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（来源版本，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核索引状态定义与解析格式清单。"]}
+delivery_metadata: {"source_front_matter":{"slug":"rag-acceptance-hub","meta_title":"知识问答验收入口与测试步骤","meta_description":"用真实文档验证 FastGPT 知识问答的四个步骤：文档样本准备、黄金问题、检索命中与引用依据、索引状态，逐项给出测试动作、失败表现与版本边界。","language":"zh","content_type":"aggregation","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"rag-acceptance-hub","keywords":"知识问答,检索命中,引用溯源,索引状态,验收测试","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"知识问答怎么用真实文档验收检索命中与答案依据","需求依据":"客户 2026-11-07 购买诉求第 1 条（尚）：让内部资料可检索、可问答、可追溯依据。","事实来源":"FastGPT 产品知识库·内容收集清单；官方更新说明 4.16.2 至 4.17.3","内链":"https://doc.fastgpt.cn/self-host/upgrading/4-17/4173","排期":"W18 聚合导航第 8 篇","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（来源版本，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核索引状态定义与解析格式清单。"]}
 keywords: 知识问答,检索命中,引用溯源,索引状态,验收测试
 schema_type: Article
 date_modified: 2026-11-16
@@ -42,7 +42,7 @@ date_modified: 2026-11-16
 
 ## 第四步：核索引状态
 
-入口：[FastGPT 更新说明](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173)。
+入口：[FastGPT 更新说明](https://doc.fastgpt.cn/self-host/upgrading/4-17/4173)。
 
 位置在知识库训练进度。索引状态分三态：待索引、索引中、已索引；待索引的数据不参与召回。核对动作是在导入后先看进度，再跑问题；索引模型重建只覆盖已完成索引的数据。
 
@@ -66,6 +66,6 @@ date_modified: 2026-11-16
 
 | 主题 | 版本 | 来源 |
 | --- | --- | --- |
-| 文档解析格式扩容、内嵌图片提取 | v4.16.2 | [self-host/upgrading/4-16/4160](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/4160) |
-| 索引三态与召回范围、重建范围 | v4.17.2 | [self-host/upgrading/4-17/4172](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4172) |
-| 文件级权限逐条鉴权、导出范围 | v4.17.1 / v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173) |
+| 文档解析格式扩容、内嵌图片提取 | v4.16.2 | [self-host/upgrading/4-16/4160](https://doc.fastgpt.cn/self-host/upgrading/4-16/4160) |
+| 索引三态与召回范围、重建范围 | v4.17.2 | [self-host/upgrading/4-17/4172](https://doc.fastgpt.cn/self-host/upgrading/4-17/4172) |
+| 文件级权限逐条鉴权、导出范围 | v4.17.1 / v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/self-host/upgrading/4-17/4173) |

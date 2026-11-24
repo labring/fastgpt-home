@@ -2,7 +2,7 @@
 title: FastGPT V4.8.7版本升级操作与更新内容说明
 slug: /zh/deploy/fastgpt-v487-upgrade-guide
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/487
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/487
 source_type: 官方文档
 ---
 
@@ -19,4 +19,4 @@ FastGPT V4.8.7版本包含功能新增、体验优化与问题修复三类更新
 ## 升级适用说明
 本页面的升级指南与更新说明，仅针对FastGPT V4.8.7版本，适用于已完成前期自部署的用户，用于从兼容版本升级至V4.8.7的操作参考。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/487)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/487)

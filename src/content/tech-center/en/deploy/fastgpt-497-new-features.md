@@ -2,7 +2,7 @@
 title: FastGPT 497 Official New Feature Details
 slug: /en/deploy/fastgpt-497-new-features
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/497
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/497
 source_type: 官方文档
 ---
 
@@ -26,4 +26,4 @@ Dataset-powered responses now include inline citations appended to the end of ea
 ## Business and Operational Features
 New operational and commercial tools include support for subscription plan redemption codes, simplifying license distribution for team and enterprise deployments. Alipay has been added as a native payment method for FastGPT transactions, and short link analytics tracking is now available to monitor engagement metrics for generated shortened links.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/497)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/497)

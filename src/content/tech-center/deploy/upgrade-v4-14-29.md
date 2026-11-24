@@ -2,7 +2,7 @@
 title: FastGPT v4.14.29版本升级内容与操作验证说明
 slug: /zh/deploy/upgrade-v4-14-29
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41429
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/41429
 source_type: 官方文档
 ---
 
@@ -22,7 +22,7 @@ source_type: 官方文档
 ## 升级后怎么验证
 升级完成后，可通过以下方式验证功能正常。第一，登录微信发布渠道，执行登出操作，查看二维码状态接口返回结果，确认权限校验逻辑生效，仅微信发布渠道可执行对应操作。第二，验证微信发布渠道的相关功能可正常运行，确认适配最新sdk后无异常。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41429)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-14/41429)
 
 ## 适用性与版本范围
 

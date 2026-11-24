@@ -2,7 +2,7 @@
 title: FastGPT系统工具插件的开发与交付方法说明
 slug: /zh/model/fastgpt-system-tool-plugin-dev
 page_type: 模型指南
-source: https://doc.fastgpt.cn/zh-CN/plugin/system-tool-development
+source: https://doc.fastgpt.cn/plugin/system-tool-development
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ source_type: 官方文档
 ## 开发与运行规范
 系统工具插件需运行在FastGPT Plugin服务提供的专属运行时环境中，无法脱离该运行时独立运行。FastGPT主服务通过插件服务完成对系统工具插件的调用，实现主服务与插件功能的联动。插件代码需通过`@fastgpt-plugin/sdk-factory`来完成输入参数、输出结果、密钥配置以及执行逻辑的描述，确保插件的功能符合FastGPT Plugin服务的调用规范。开发流程需遵循先确定插件类型并完成对应声明，再通过指定SDK完成相关配置与逻辑编写，最终将开发完成的插件打包为.pkg文件交付至FastGPT Plugin服务的步骤。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/plugin/system-tool-development)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/plugin/system-tool-development)
 
 ## 安全护栏
 

@@ -50,11 +50,11 @@ publication_batch: Week08
 
 ## 参考资料
 
-- [FastGPT 4.16.2 migration instructions](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/4162)
+- [FastGPT 4.16.2 migration instructions](https://doc.fastgpt.cn/self-host/upgrading/4-16/4162)
 - [FastGPT GitHub star request configuration](https://github.com/labring/FastGPT/blob/5957d06807ff7f984c70c6425c8d0fc40eb1714d/projects/app/src/web/common/system/useSystemStore.ts)
 
-- [FastGPT 环境变量](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
-- [FastGPT Docker Compose 部署](https://doc.fastgpt.cn/zh-CN/self-host/deploy/docker)
+- [FastGPT 环境变量](https://doc.fastgpt.cn/self-host/config/env)
+- [FastGPT Docker Compose 部署](https://doc.fastgpt.cn/self-host/deploy/docker)
 
 ## 需要进一步确认时
 

@@ -2,7 +2,7 @@
 title: FastGPT V4.6.3版本升级步骤与功能说明
 slug: /zh/deploy/fastgpt-v463-upgrade-guide
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/463
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/463
 source_type: 官方文档
 ---
 
@@ -25,4 +25,4 @@ curl --location --request POST https://{{host}}/api/admin/initv463 \
 2. 多项体验优化：优化url读取内容逻辑，优化流读取文件以防止内存溢出，优化4v模型自动将url转base64以支持本地调试，调整图片压缩等级；
 3. 问题修复：修复图片压缩失败报错的问题，防止文件读取过程中出现卡死情况，提升系统运行稳定性。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/463)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/463)

@@ -2,7 +2,7 @@
 title: Update FastGPT Team Plugins and Validate Changes
 slug: /en/model/fastgpt-team-plugin-update
 page_type: Model guides
-source: https://doc.fastgpt.cn/en/plugin/team-installation
+source: https://doc.fastgpt.io/plugin/team-installation
 source_type: Official documentation
 ---
 
@@ -21,7 +21,7 @@ Use this structured process to update your team plugins:
 # Post-Update Validation and Risk Mitigation
 Plugin updates may alter critical functional aspects including input schemas, output schemas, required secret credentials, or runtime operational behavior. These changes can disrupt existing workflows or Agent integrations that depend on the plugin’s previous functionality. To prevent unexpected downtime in production environments, you must test all workflows and Agents that use the updated plugin in a dedicated test application before rolling out the update to live production systems. This validation step ensures the updated plugin operates as expected within your team’s FastGPT setup without breaking dependent processes.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/plugin/team-installation)
+> Source: [FastGPT official source](https://doc.fastgpt.io/plugin/team-installation)
 
 ## Applicability and version scope
 

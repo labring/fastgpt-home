@@ -2,7 +2,7 @@
 title: FastGPT v4812 Feature Updates and Fixes
 slug: /en/deploy/fastgpt-v4812-release-notes
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4812
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/4812
 source_type: 官方文档
 ---
 
@@ -43,4 +43,4 @@ A new environment variable is introduced to resolve file URL handling inconsiste
 - In non-stream mode, nested child apps and plugins now correctly receive child app responses
 - The data chunking strategy now splits each Markdown section independently, improving content processing precision
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4812)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/4812)

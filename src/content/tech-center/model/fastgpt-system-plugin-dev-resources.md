@@ -2,7 +2,7 @@
 title: FastGPT系统插件开发的官方可用资源与使用指南
 slug: /zh/model/fastgpt-system-plugin-dev-resources
 page_type: 模型指南
-source: https://doc.fastgpt.cn/zh-CN/plugin/system-tool-development
+source: https://doc.fastgpt.cn/plugin/system-tool-development
 source_type: 官方文档
 ---
 
@@ -19,7 +19,7 @@ FastGPT系统插件开发可依托官方提供的公开资源完成各类相关�
 ### 基础使用指引
 如需开展系统插件开发工作，可先获取FastGPT Plugin仓库的完整代码与文档资源。根据具体开发或使用需求，查阅对应指南完成后续操作：开发系统插件可参考系统插件开发指南，了解开发流程与规范；使用SDK Factory工具可查阅SDK Factory使用指南，掌握工具的具体使用方法；使用CLI工具可参考CLI使用指南，完成命令行相关操作。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/plugin/system-tool-development)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/plugin/system-tool-development)
 
 ## 适用性与版本范围
 

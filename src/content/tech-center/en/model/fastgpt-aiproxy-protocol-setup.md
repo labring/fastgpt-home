@@ -2,7 +2,7 @@
 title: Set Up FastGPT AIProxy Protocol Entries
 slug: /en/model/fastgpt-aiproxy-protocol-setup
 page_type: Model guides
-source: https://doc.fastgpt.cn/en/plugin/model-presets
+source: https://doc.fastgpt.io/plugin/model-presets
 source_type: Official documentation
 ---
 
@@ -31,7 +31,7 @@ The following standard parameters and paths apply to AIProxy protocol setup, as 
 | Model Provider Avatar | Static asset path: `provider/{Provider}/logo.svg` |
 | AIProxy Channel Avatar | Static asset path: `channel-avatar/{avatar}.svg` |
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/plugin/model-presets)
+> Source: [FastGPT official source](https://doc.fastgpt.io/plugin/model-presets)
 
 ## Applicability and version scope
 

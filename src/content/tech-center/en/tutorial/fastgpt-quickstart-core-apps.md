@@ -2,7 +2,7 @@
 title: Build FastGPT Core Application Use Cases
 slug: /en/tutorial/fastgpt-quickstart-core-apps
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/getting-started/quick-start
+source: https://doc.fastgpt.io/guide/getting-started/quick-start
 source_type: Official documentation
 ---
 
@@ -25,7 +25,7 @@ Each application targets a distinct use case, with core configurations aligned t
 3. **Workflow (Content Review and Automatic Rewriting)**: Orchestrates automated content checks and revisions. Key configurations will define formal review rules and rewriting logic, with validation focused on consistent application of review standards and accurate content modification.
 4. **Agent V2 (Intelligent Data Analysis Agent)**: Processes and analyzes structured data files. Key configurations will connect the agent to the sample Excel or CSV file, with validation focused on generating meaningful, actionable data insights.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/getting-started/quick-start)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/getting-started/quick-start)
 
 ## Applicability and version scope
 

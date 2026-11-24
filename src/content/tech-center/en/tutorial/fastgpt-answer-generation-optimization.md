@@ -2,7 +2,7 @@
 title: Improve FastGPT Answer Generation and Quality
 slug: /en/tutorial/fastgpt-answer-generation-optimization
 page_type: 教程/部署
-source: https://doc.fastgpt.cn/en/guide/dataset/rag
+source: https://doc.fastgpt.io/guide/dataset/rag
 source_type: 官方文档
 ---
 
@@ -22,4 +22,4 @@ Follow these sequential steps to deploy optimization for answer generation and q
 4.  Enable cross-component collaboration between the answer generator and context retriever, allowing the generator to automatically trigger additional context retrieval requests when detected gaps in existing retrieved data.
 5.  Activate consistency detection and semantic correction workflows to standardize terminology and enforce consistent logical structure across all generated responses.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/guide/dataset/rag)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/guide/dataset/rag)

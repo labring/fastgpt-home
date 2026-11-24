@@ -2,7 +2,7 @@
 title: FastGPT V4.14.7版本升级与环境变量变更操作指南
 slug: /zh/reference/fastgpt-upgrade-v4147
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4147
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/4147
 source_type: 官方文档小节
 ---
 
@@ -20,4 +20,4 @@ FastGPT V4.14.7是4.14.x系列的正式更新版本，本次更新包含环境�
 ## 注意事项
 本次升级仅适用于4.14.x系列的前期版本，不支持跨大版本（如4.13.x及更早版本）的直接升级。环境变量配置错误会直接导致服务启动失败，需严格遵循官方公布的变更规则进行调整。升级过程中请勿强制中断脚本运行，否则可能导致部署环境损坏。升级完成后需检查服务日志，确认无报错后再对外提供服务。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4147)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-14/4147)

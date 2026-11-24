@@ -2,7 +2,7 @@
 title: Update FastGPT V4.2 QAModel Configuration Format
 slug: /en/deploy/fastgpt-v42-qamodel-config-update
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/42
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/42
 source_type: 官方文档
 ---
 
@@ -40,4 +40,4 @@ Follow this structured workflow to update your `QAModel` configuration for the V
 3.  Replace the entire existing array with the single JSON object format shown in the official example provided.
 4.  Save the modified configuration file to finalize the update.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/42)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/42)

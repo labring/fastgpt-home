@@ -2,7 +2,7 @@
 title: 为FastGPT已有供应商新增、修改模型配置列表的操作方法
 slug: /zh/tutorial/fastgpt-add-edit-model-list
 page_type: 教程/部署
-source: https://doc.fastgpt.cn/zh-CN/plugin/model-presets
+source: https://doc.fastgpt.cn/plugin/model-presets
 source_type: 官方文档小节
 ---
 
@@ -91,4 +91,4 @@ export default models;
 ## 自动补充规则
 在生成`staticModelList`时，系统会自动补充部分配置字段：`provider`取自当前供应商配置的`provider`值；`name`未显式填写时，默认使用`model`的值。同时会为LLM模型默认配置知识库处理、分类、内容提取、工具调用和评测等能力开关。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/plugin/model-presets)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/plugin/model-presets)

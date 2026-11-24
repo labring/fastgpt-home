@@ -2,7 +2,7 @@
 title: Execute Parallel Batch Tasks With FastGPT Parallel Run Nodes
 slug: /en/node/fastgpt-parallel-run-nodes
 page_type: Workflow nodes
-source: https://doc.fastgpt.cn/en/guide/build/workflow/nodes/parallel_run
+source: https://doc.fastgpt.io/guide/build/workflow/nodes/parallel_run
 source_type: Official documentation
 ---
 
@@ -21,7 +21,7 @@ This node is optimized for three core categories of batch workloads as outlined 
 4. Connect the Parallel Run node’s aggregated output port to a downstream workflow step to process the combined results from all sub-workflow executions.
 No additional configuration parameters are required beyond linking the correct ports and attaching the appropriate sub-workflow, as the node handles concurrent execution and result aggregation natively.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/workflow/nodes/parallel_run)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/workflow/nodes/parallel_run)
 
 ## Applicability and version scope
 

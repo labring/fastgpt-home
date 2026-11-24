@@ -2,7 +2,7 @@
 title: FastGPT系统插件本地调试的操作方法与边界规则
 slug: /zh/reference/fastgpt-plugin-local-debug
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/plugin/system-tool-development
+source: https://doc.fastgpt.cn/plugin/system-tool-development
 source_type: 官方文档小节
 ---
 
@@ -40,4 +40,4 @@ pnpx @fastgpt-plugin/cli debug . --run --input-file input.json --secrets-file se
 - 本地调试无法模拟生产子进程池、真实Node.js IPC、网络环境、服务端超时和队列调度。
 - 上架官方插件前仍需在测试环境中手动安装插件并完成端到端测试。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/plugin/system-tool-development)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/plugin/system-tool-development)

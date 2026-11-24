@@ -70,4 +70,4 @@ Verified on 2026-11-09. Product version: FastGPT v4.17.3.
 | Topic | Source |
 | --- | --- |
 | Pricing fields, units, conversion rules, backfill jobs | [Release notes 4.17.3](https://github.com/labring/FastGPT/releases/tag/v4.17.3) |
-| Token statistics per application | [Release notes 4.17.1](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4171) |
+| Token statistics per application | [Release notes 4.17.1](https://doc.fastgpt.cn/self-host/upgrading/4-17/4171) |

@@ -2,7 +2,7 @@
 title: 提供FastGPT北京区一键部署的具体详细操作指引
 slug: /zh/deploy/fastgpt-beijing-oneclick-deploy
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/deploy/sealos
+source: https://doc.fastgpt.cn/self-host/deploy/sealos
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ source_type: 官方文档
 
 完成上述操作后，即可按照页面指引完成FastGPT在北京区的部署流程。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/deploy/sealos)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/deploy/sealos)
 
 ## 适用性与版本范围
 

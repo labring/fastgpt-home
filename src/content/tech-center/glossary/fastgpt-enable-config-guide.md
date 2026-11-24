@@ -2,7 +2,7 @@
 title: FastGPT Agent与日志启用配置的含义与使用说明
 slug: /zh/glossary/fastgpt-enable-config-guide
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/guide/build/agentv2/vm
+source: https://doc.fastgpt.cn/guide/build/agentv2/vm
 source_type: 官方文档
 ---
 
@@ -18,9 +18,9 @@ FastGPT的enable配置包含Agent虚拟机启用与日志功能启用两类，�
 2. 日志功能的OTLP收集器地址需完整包含`/v1/logs`路径，不可遗漏。
 3. Agent虚拟机的启动脚本需在虚拟机拉起后且AI正式开始前执行，需使用Shell命令格式。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/agentv2/vm)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/agentv2/vm)
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/config/signoz)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/config/signoz)
 
 ## 适用性与版本范围
 

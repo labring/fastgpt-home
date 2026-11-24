@@ -2,7 +2,7 @@
 title: FastGPT V4.9.1版本升级操作与更新说明
 slug: /zh/deploy/fastgpt-v491-upgrade-guide
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/491
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/491
 source_type: 官方文档
 ---
 
@@ -28,4 +28,4 @@ curl --location --request POST https://{{host}}/api/admin/initv491 \
 ### 修复问题
 修复了最大响应tokens提示显示错误、HTTP Node中字符串含换行符时解析失败、知识库问题优化未传递历史记录、错误提示翻译缺失、内容提取节点array类型schema错误、模型渠道测试未指定渠道、新增自定义模型时默认模型字段误判保存、promp模式工具调用未判空思考链导致UI错误、编辑应用信息导致头像丢失、分享链接标题被刷新丢失、计算parentPath时鉴权失败清空等问题。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/491)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/491)

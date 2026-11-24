@@ -2,7 +2,7 @@
 title: Create Empty FastGPT Dataset Collections and Folders
 slug: /en/api/fastgpt-dataset-collection-create
 page_type: API
-source: https://doc.fastgpt.cn/en/openapi/dataset
+source: https://doc.fastgpt.io/openapi/dataset
 source_type: Official documentation
 ---
 
@@ -49,7 +49,7 @@ A successful request returns a 200 OK HTTP status code with a JSON payload. The 
 }
 ```
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/openapi/dataset)
+> Source: [FastGPT official source](https://doc.fastgpt.io/openapi/dataset)
 
 ## Applicability and version scope
 

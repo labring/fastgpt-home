@@ -2,7 +2,7 @@
 title: Key FastGPT 4.14.3 Plugin Update Changes
 slug: /en/deploy/fastgpt-plugin-update-changes
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4143
+source: https://doc.fastgpt.io/self-host/upgrading/4-14/4143
 source_type: Official documentation
 ---
 
@@ -28,7 +28,7 @@ Three critical plugin-related bugs are fixed in this release:
 2. **Development Mode Static File Fix**: In development environments, refreshing the plugin cache would trigger unnecessary re-uploads of static plugin files, increasing unnecessary bandwidth usage. This fix prevents redundant static file transfers during cache refresh operations.
 3. **Image Upload Post-.pkg Fix**: Uploading a .pkg plugin package would break subsequent image uploads via plugin tooling. This issue is fully resolved, allowing normal image upload operations to continue immediately after .pkg file uploads.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4143)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-14/4143)
 
 ## Applicability and version scope
 

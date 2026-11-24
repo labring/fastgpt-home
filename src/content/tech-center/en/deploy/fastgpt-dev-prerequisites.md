@@ -2,7 +2,7 @@
 title: Install Required Dependencies for FastGPT Development
 slug: /en/deploy/fastgpt-dev-prerequisites
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/dev
+source: https://doc.fastgpt.io/self-host/dev
 source_type: Official documentation
 ---
 
@@ -29,7 +29,7 @@ For Node.js version management, use the Node Version Manager (nvm) tool to insta
 3.  Install Node.js v20.14.0 exactly, using nvm to manage your Node.js installations to ensure compliance with the required version.
 4.  Install pnpm version 9.4.0, the official recommended package manager for FastGPT’s development environment, via the official pnpm setup guide.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/dev)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/dev)
 
 ## Applicability and version scope
 

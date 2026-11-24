@@ -2,7 +2,7 @@
 title: FastGPT V4.8.9版本升级操作及更新内容说明
 slug: /zh/deploy/upgrade-v4-8-9
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/489
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/489
 source_type: 官方文档
 ---
 
@@ -26,7 +26,7 @@ curl --location --request POST 'https://{{host}}/api/admin/init/489' \
 ## 升级后怎么验证
 可通过以下方式验证升级效果：进入系统配置页面确认文件上传配置项生效；在AI对话节点或工具调用中开启图片识别，上传图片并发起对话确认图片可被识别；上传知识库文件确认上传进度可正常显示至100%；测试删除应用后聊天选择页面不会跳转至已删除的应用；检查插件动态变量的默认值可正常显示；测试知识库搜索节点的标签过滤和创建时间过滤功能；访问分享链接发起新对话确认反馈功能正常。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/489)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/489)
 
 ## 适用性与版本范围
 

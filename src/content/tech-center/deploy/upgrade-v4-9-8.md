@@ -2,7 +2,7 @@
 title: FastGPT V4.9.8版本升级内容与操作验证说明
 slug: /zh/deploy/upgrade-v4-9-8
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/498
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/498
 source_type: 官方文档
 ---
 
@@ -21,7 +21,7 @@ source_type: 官方文档
 ## 升级后怎么验证
 可通过以下方式验证升级效果：查看模型预设列表确认qwen3模型已添加；配置密码过期时间并验证过期后登录强制修改密码的逻辑；在Admin后台查看发布渠道和第三方知识库的显示隐藏配置项；测试Toolcalls并行执行功能；验证Claude工具调用、嵌套工作流等修复项的功能正常；测试大数据量下Chat log列表加载是否正常；测试网络获取视频和音频标签转换功能是否正常。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/498)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/498)
 
 ## 适用性与版本范围
 

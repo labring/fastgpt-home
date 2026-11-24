@@ -2,7 +2,7 @@
 title: Configure FastGPT Full-Text Search for Milvus BM25
 slug: /en/deploy/fastgpt-milvus-bm25-search
 page_type: 部署场景
-source: https://doc.fastgpt.cn/en/self-host/milvus-bm25
+source: https://doc.fastgpt.io/self-host/milvus-bm25
 source_type: 官方文档
 ---
 
@@ -24,4 +24,4 @@ A minimum Milvus version of 2.5.16 is mandatory to use the BM25 full-text search
 | Unified Full-Text/Vector Collection | `modeldata_v2` |
 | Disabled MongoDB Full-Text Writes | Enabled when Milvus is active |
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/milvus-bm25)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/milvus-bm25)

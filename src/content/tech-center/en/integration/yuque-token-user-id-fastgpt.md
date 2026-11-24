@@ -2,7 +2,7 @@
 title: Retrieve Yuque Token and User ID for FastGPT
 slug: /en/integration/yuque-token-user-id-fastgpt
 page_type: Integrations
-source: https://doc.fastgpt.cn/en/guide/dataset/third-party/yuque_dataset
+source: https://doc.fastgpt.io/guide/dataset/third-party/yuque_dataset
 source_type: Official documentation
 ---
 
@@ -29,7 +29,7 @@ Yuque Enterprise Edition users can retrieve their credentials using the simplifi
 
 No additional permission configuration is required for Enterprise Edition tokens, as default access settings align with FastGPT integration needs.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/third-party/yuque_dataset)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/third-party/yuque_dataset)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: FastGPT工作流的运行流程与节点执行规则说明
 slug: /zh/reference/fastgpt-workflow-execution-rules
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/build/workflow/intro
+source: https://doc.fastgpt.cn/guide/build/workflow/intro
 source_type: 官方文档小节
 ---
 
@@ -28,4 +28,4 @@ FastGPT工作流从【流程开始】节点启动，以单轮调用中所有节�
 2. 需准确区分前置线与后置线：被连接到当前节点的线为前置线，当前节点连接其他节点的线为后置线。
 3. 节点执行后必须同步更新后置线与自身前置线的状态，否则会导致工作流执行异常。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/intro)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/workflow/intro)

@@ -2,7 +2,7 @@
 title: FastGPT V4.8.6版本升级操作步骤与更新内容说明
 slug: /zh/deploy/upgrade-v4-8-6
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/486
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/486
 source_type: 官方文档
 ---
 
@@ -27,7 +27,7 @@ curl --location --request POST 'https://{{host}}/api/admin/initv486' \
 ## 升级后怎么验证
 升级完成后，可通过访问FastGPT平台检查新增功能与优化项是否正常生效。可尝试创建链接集合，确认返回正确ID；尝试导出Markdown格式的对话，确认无异常。检查团队插件目录、知识库集合目录面包屑是否正常加载，验证提示模板、API system提示等功能是否符合预期。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/486)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/486)
 
 ## 适用性与版本范围
 

@@ -2,7 +2,7 @@
 title: 配置FastGPT API文件库对接自有文档库的完整方法
 slug: /zh/integration/fastgpt-api-file-library
 page_type: 集成与发布渠道
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/api_dataset
+source: https://doc.fastgpt.cn/guide/dataset/third-party/api_dataset
 source_type: 官方文档
 ---
 
@@ -27,4 +27,4 @@ FastGPT默认支持本地文件导入，但当用户已搭建自有文档库时�
 
 最小配置示例：仅需填入`baseURL`为`https://your-custom-file-api.com`，`authorization`为`Bearer your-auth-token`，即可完成基础配置，系统将自动拉取并展示自有文档库的文件列表，支持按需选择性导入文件到FastGPT知识库。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/api_dataset)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/dataset/third-party/api_dataset)

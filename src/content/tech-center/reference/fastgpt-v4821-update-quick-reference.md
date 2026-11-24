@@ -2,7 +2,7 @@
 title: FastGPT V4.8.21版本更新内容速查
 slug: /zh/reference/fastgpt-v4821-update-quick-reference
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4820
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4820
 source_type: 官方文档小节
 ---
 
@@ -37,4 +37,4 @@ source_type: 官方文档小节
 4. Markdown音视频需使用audio、video代码块格式
 5. 修复项仅针对对应场景的已知问题，不覆盖所有同类异常
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4820)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/4820)

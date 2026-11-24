@@ -2,7 +2,7 @@
 title: 用对话接口接入应用：会话、历史记录与运行详情的获取方案
 slug: /zh/guide/chat-api-session-and-run-detail
 page_type: 深度场景内容
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/env
+source: https://doc.fastgpt.cn/self-host/config/env
 source_type: 开源仓库文档与社区线程
 article_section: 选型与评估
 is_part_of: FastGPT 技术中心
@@ -68,8 +68,8 @@ variables参数用于向对话应用传递业务变量，需严格按照目标�
 
 ## 参考资料
 
-- [FastGPT 环境变量](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
-- [FastGPT 升级说明](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/upgrade-instruction)
+- [FastGPT 环境变量](https://doc.fastgpt.cn/self-host/config/env)
+- [FastGPT 升级说明](https://doc.fastgpt.cn/self-host/upgrading/upgrade-instruction)
 
 ## 需要进一步确认时
 

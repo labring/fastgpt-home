@@ -2,7 +2,7 @@
 title: 讲解FastGPT工作流批量运行节点的配置与使用方法
 slug: /zh/reference/fastgpt-batch-run-workflow-node
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/loop
+source: https://doc.fastgpt.cn/guide/build/workflow/nodes/loop
 source_type: 官方文档小节
 ---
 
@@ -23,4 +23,4 @@ source_type: 官方文档小节
 2. 需正确关联对应的目标执行流程，否则无法正常触发批量任务。
 3. 关联的目标流程需支持多组输入数据，否则无法完成批量执行。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/loop)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/workflow/nodes/loop)

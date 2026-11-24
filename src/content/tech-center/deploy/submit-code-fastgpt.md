@@ -2,7 +2,7 @@
 title: 面向开发者向FastGPT开源仓库提交代码的详细操作流程
 slug: /zh/deploy/submit-code-fastgpt
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/dev
+source: https://doc.fastgpt.cn/self-host/dev
 source_type: 官方文档
 ---
 
@@ -20,7 +20,7 @@ source_type: 官方文档
 3.  若遇到合并冲突或无法打开拉取请求，可参考GitHub官方拉取请求教程，教程链接为https://docs.github.com/en/pull-requests/collaborating-with-pull-requests，该教程可用于学习解决合并冲突及其他相关问题。
 4.  当PR被成功合并后，提交者将被列入FastGPT开源仓库的贡献者列表，列表地址为https://github.com/labring/FastGPT/graphs/contributors。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/dev)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/dev)
 
 ## 适用性与版本范围
 

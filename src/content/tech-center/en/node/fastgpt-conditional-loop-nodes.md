@@ -2,7 +2,7 @@
 title: Set up and run conditional loops in FastGPT workflows
 slug: /en/node/fastgpt-conditional-loop-nodes
 page_type: Workflow nodes
-source: https://doc.fastgpt.cn/en/guide/build/workflow/nodes/loop_run
+source: https://doc.fastgpt.io/guide/build/workflow/nodes/loop_run
 source_type: Official documentation
 ---
 
@@ -24,7 +24,7 @@ Conditional loops execute the workflow segment contained within the Loop Start n
 # Iteration Data Injection
 During each iteration of the conditional loop, the Loop Start node automatically outputs a built-in tracking variable: `Current Loop Count`. This value is a 1-based integer, meaning the first loop cycle returns a count of 1, with each subsequent cycle incrementing the value by 1. This variable can be referenced by any node within the loop container to adjust runtime behavior per loop cycle.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/workflow/nodes/loop_run)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/workflow/nodes/loop_run)
 
 ## Applicability and version scope
 

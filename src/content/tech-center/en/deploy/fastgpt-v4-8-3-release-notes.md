@@ -2,7 +2,7 @@
 title: FastGPT V4.8.3 Release Updates and Fixes
 slug: /en/deploy/fastgpt-v4-8-3-release-notes
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/483
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/483
 source_type: 官方文档
 ---
 
@@ -25,4 +25,4 @@ To integrate Milvus with your FastGPT instance, use the official pre-configured 
 ### Resolved Operational Issue
 A critical bug affecting debug sessions has been fixed in this release: variable updates during Debug mode previously failed, interrupting workflow testing. This release fully resolves this issue, allowing reliable modification and testing of variables during debug sessions without errors.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/483)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/483)

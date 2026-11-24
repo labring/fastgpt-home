@@ -2,7 +2,7 @@
 title: Control FastGPT Single AI Response Token Limits
 slug: /en/tutorial/fastgpt-max-tokens-settings
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/build/general/ai_settings
+source: https://doc.fastgpt.io/guide/build/general/ai_settings
 source_type: Official documentation
 ---
 
@@ -22,7 +22,7 @@ Critical note: If the configured limit is set too low, the AI’s response may b
 ## Usage and Tradeoff Guidance
 The optimal Max Tokens value is tied directly to your specific use case. For requests requiring concise, brief answers, use a lower token limit to reduce unnecessary compute overhead and operational costs. For tasks that demand more extensive, unbroken output—such as generating structured project plans, long-form articles, or detailed technical explanations—use a higher token limit to allow the model to produce complete, fully realized responses. It is critical to balance output completeness with operational costs: higher token limits enable more comprehensive answers but will increase the total cost per AI interaction.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/general/ai_settings)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/general/ai_settings)
 
 ## Applicability and version scope
 

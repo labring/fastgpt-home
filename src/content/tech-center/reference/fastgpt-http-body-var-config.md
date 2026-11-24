@@ -2,7 +2,7 @@
 title: FastGPT工作流HTTP节点Body参数配置与变量引用方法
 slug: /zh/reference/fastgpt-http-body-var-config
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/http
+source: https://doc.fastgpt.cn/guide/build/workflow/nodes/http
 source_type: 官方文档小节
 ---
 
@@ -22,4 +22,4 @@ FastGPT工作流的HTTP节点Body参数仅在特定请求类型下生效。该�
 2. 字符串变量的引用必须添加双引号，遗漏会导致参数解析失败
 3. 变量名需与工作流中预先定义的变量完全匹配，否则无法完成替换。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/http)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/workflow/nodes/http)

@@ -2,7 +2,7 @@
 title: Access Your Deployed FastGPT Web Instance
 slug: /en/deploy/fastgpt-deployment-access
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/deploy/docker
+source: https://doc.fastgpt.io/self-host/deploy/docker
 source_type: Official documentation
 ---
 
@@ -28,7 +28,7 @@ This section covers critical password maintenance steps aligned with your deploy
 
 Important note: Every time the FastGPT container stack restarts, the root user’s password is automatically synchronized to match the current value of `DEFAULT_ROOT_PSW` in your `docker-compose.yml` file. This ensures consistent authentication credentials across container restarts and service updates.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/deploy/docker)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/deploy/docker)
 
 ## Applicability and version scope
 

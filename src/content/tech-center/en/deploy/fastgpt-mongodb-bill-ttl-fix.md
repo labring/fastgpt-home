@@ -2,7 +2,7 @@
 title: Fix Incorrect TTL for MongoDB Bill Collection
 slug: /en/deploy/fastgpt-mongodb-bill-ttl-fix
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/442
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/442
 source_type: 官方文档
 ---
 
@@ -32,4 +32,4 @@ Replace `{{host}}` with the full domain or IP address of your self-hosted FastGP
 ## Expected Outcome
 Upon successful execution of the request, the FastGPT backend will reinitialize the indexes on the MongoDB `Bill` collection. This action corrects the previously incorrect TTL expiration setting, ensuring that billing records are automatically cleaned up at the intended interval rather than failing to expire as configured. No explicit success response message is specified beyond the completion of the index reinitialization task.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/442)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/442)

@@ -2,7 +2,7 @@
 title: Add a New Model Provider to FastGPT
 slug: /en/model/fastgpt-add-model-provider
 page_type: Model guides
-source: https://doc.fastgpt.cn/en/plugin/model-presets
+source: https://doc.fastgpt.io/plugin/model-presets
 source_type: Official documentation
 ---
 
@@ -63,7 +63,7 @@ All supported parameters for each model entry are defined explicitly in the conf
 | reasoningEffort | boolean | Whether the model supports reasoning effort configuration, set to `false` |
 | toolChoice | boolean | Whether the model supports tool calling, set to `true` |
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/plugin/model-presets)
+> Source: [FastGPT official source](https://doc.fastgpt.io/plugin/model-presets)
 
 ## Applicability and version scope
 

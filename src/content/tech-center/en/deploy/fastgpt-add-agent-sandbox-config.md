@@ -2,7 +2,7 @@
 title: Add Agent-Sandbox Configuration for FastGPT Upgrade
 slug: /en/deploy/fastgpt-add-agent-sandbox-config
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-14/41410
+source: https://doc.fastgpt.io/self-host/upgrading/4-14/41410
 source_type: Official documentation
 ---
 
@@ -50,7 +50,7 @@ All agent sandbox environment variables must be added to the `fastgpt` service's
 | `AGENT_SANDBOX_VOLUME_MANAGER_URL` | Required if enabling volume persistence | `http://volume-manager:3000` |
 | `AGENT_SANDBOX_VOLUME_MANAGER_TOKEN` | Required if enabling volume persistence | Reference to the top-level anchor token `*x-volume-manager-auth-token` |
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-14/41410)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-14/41410)
 
 ## Applicability and version scope
 

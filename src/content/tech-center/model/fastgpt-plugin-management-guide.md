@@ -2,7 +2,7 @@
 title: FastGPT插件的安装、状态管理与系统配置操作说明
 slug: /zh/model/fastgpt-plugin-management-guide
 page_type: 模型指南
-source: https://doc.fastgpt.cn/zh-CN/plugin/intro
+source: https://doc.fastgpt.cn/plugin/intro
 source_type: 官方文档
 ---
 
@@ -25,7 +25,7 @@ FastGPT Plugin 服务负责插件包管理、运行时注册、插件调用转�
 ## 系统密钥配置
 系统级插件可以配置“系统密钥”，供系统内其他用户在调用插件时复用。密钥由插件服务托管，调用方通过插件配置引用，不直接接触明文密钥。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/plugin/intro)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/plugin/intro)
 
 ## 适用性与版本范围
 

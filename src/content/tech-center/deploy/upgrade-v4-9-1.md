@@ -2,7 +2,7 @@
 title: FastGPT V4.9.1版本升级内容与操作指引
 slug: /zh/deploy/upgrade-v4-9-1
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/491
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/491
 source_type: 官方文档
 ---
 
@@ -29,7 +29,7 @@ curl --location --request POST 'https://{{host}}/api/admin/initv491' \
 ## 升级后怎么验证
 可通过系统日志确认分词处理任务完成。可测试知识库检索、模型调用、团队成员管理、分享链接等功能，验证新增功能与修复项正常生效。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/491)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/491)
 
 ## 适用性与版本范围
 

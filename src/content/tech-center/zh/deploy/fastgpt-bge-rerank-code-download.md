@@ -2,7 +2,7 @@
 title: 为FastGPT部署提供BGE重排序模型的代码下载相关资源
 slug: /zh/deploy/fastgpt-bge-rerank-code-download
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/custom-models/bge-rerank
+source: https://doc.fastgpt.cn/self-host/custom-models/bge-rerank
 source_type: 官方文档
 ---
 
@@ -23,7 +23,7 @@ FastGPT官方提供三款BGE重排序模型的代码资源，均托管于指定�
 2.  访问对应模型的GitHub仓库地址，下载完整的代码文件至本地或部署服务器。
 3.  将下载的代码文件放置至FastGPT项目的`plugins/model/rerank-bge`目录下，完成代码的基础部署准备。该目录为FastGPT官方指定的重排序模型插件存放路径，确保代码可被系统正常识别与调用。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/bge-rerank)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/custom-models/bge-rerank)
 
 ## 适用性与版本范围
 

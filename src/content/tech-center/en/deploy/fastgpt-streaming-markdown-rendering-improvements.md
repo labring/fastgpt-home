@@ -2,7 +2,7 @@
 title: Optimize Streaming Markdown Render Performance
 slug: /en/deploy/fastgpt-streaming-markdown-rendering-improvements
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/4152
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/4152
 source_type: Official documentation
 ---
 
@@ -22,7 +22,7 @@ Two targeted fixes resolve visual flickering and unexpected layout shifts during
 1.  **Inline Formatting Completion**: Streaming tails for bold, italic, bold italic, strikethrough, nested emphasis, inline code, and block math are temporarily completed as content arrives. This prevents individual delimiter characters from altering the DOM structure of already rendered content, eliminating unexpected formatting shifts.
 2.  **Deferred Block Rendering**: Complex block-level elements including lists, task items, blockquotes, headings, code fences, tables, links, images, and citation markers are not rendered until their full structure is known. This stops control markers from flashing and prevents previously rendered content from disappearing and reappearing as additional structure data is received.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/4152)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-15/4152)
 
 ## Applicability and version scope
 

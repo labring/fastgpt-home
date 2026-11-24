@@ -2,7 +2,7 @@
 title: Moving Apps Between Environments: What Export, Templates and Copies Carry Over
 slug: /en/guide/app-migration-across-envs
 page_type: Decision matrix
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/env
+source: https://doc.fastgpt.cn/self-host/config/env
 source_type: Open-source repository docs and community threads
 article_section: Selection & Evaluation
 is_part_of: FastGPT Tech Center
@@ -61,8 +61,8 @@ You can skip dedicated migration steps if your application does not use Agent Sa
 
 ## References
 
-- [FastGPT environment variables](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
-- [FastGPT Docker Compose deployment](https://doc.fastgpt.cn/zh-CN/self-host/deploy/docker)
+- [FastGPT environment variables](https://doc.fastgpt.cn/self-host/config/env)
+- [FastGPT Docker Compose deployment](https://doc.fastgpt.cn/self-host/deploy/docker)
 
 ## Next steps
 

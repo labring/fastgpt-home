@@ -2,7 +2,7 @@
 title: Add a Model to an Existing FastGPT Provider
 slug: /en/model/add-model-existing-fastgpt-provider
 page_type: Model guides
-source: https://doc.fastgpt.cn/en/plugin/model-presets
+source: https://doc.fastgpt.io/plugin/model-presets
 source_type: Official documentation
 ---
 
@@ -27,7 +27,7 @@ This sample configuration imports a representative provider module and adds it t
 ### No Top-Level File Edits Required
 If you are only adding a single model to an existing provider that is already present in the `staticModelProviderConfigs` array, you do not need to make any modifications to the `packages/infrastructure/src/static-data/models/index.ts` file. All remaining configuration for the new model will be managed within the provider-specific subdirectory files, rather than this top-level configuration document. This streamlines the workflow by avoiding changes to core framework configuration files.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/plugin/model-presets)
+> Source: [FastGPT official source](https://doc.fastgpt.io/plugin/model-presets)
 
 ## Applicability and version scope
 

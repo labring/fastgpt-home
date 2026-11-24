@@ -2,7 +2,7 @@
 title: FastGPT中ReRank模型的配置与版本升级方法
 slug: /zh/reference/fastgpt-rerank-upgrade-config
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/47
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/47
 source_type: 官方文档小节
 ---
 
@@ -35,4 +35,4 @@ FastGPT 4.7版本对ReRank模型格式作出调整，兼容Cohere格式的API接
 3.  修改配置文件后需重启FastGPT服务，配置方可生效。
 4.  配置中的`model`字段需与所使用的重排模型名称严格对应。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/47)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/47)

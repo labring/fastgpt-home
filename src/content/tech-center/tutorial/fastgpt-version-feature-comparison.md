@@ -2,7 +2,7 @@
 title: FastGPT社区版、商业版及云服务版功能差异说明
 slug: /zh/tutorial/fastgpt-version-feature-comparison
 page_type: 教程
-source: https://doc.fastgpt.cn/zh-CN/guide/version/commercial
+source: https://doc.fastgpt.cn/guide/version/commercial
 source_type: 官方文档
 ---
 
@@ -44,7 +44,7 @@ source_type: 官方文档
 ## 版本授权说明
 各版本的商业授权规则存在差异。社区版需通过指定链接查看开源协议获取授权相关信息，商业版与云服务版提供完整商业授权。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/version/commercial)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/version/commercial)
 
 ## 适用性与版本范围
 

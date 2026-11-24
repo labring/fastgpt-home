@@ -2,7 +2,7 @@
 title: FastGPT V4.8.16与V4.8.18版本更新内容速查
 slug: /zh/reference/fastgpt-v4816-v4818-update-quickref
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4817
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4817
 source_type: 官方文档小节
 ---
 
@@ -36,4 +36,4 @@ source_type: 官方文档小节
 3. 版本升级需参考V4.8.16的配置变更说明与V4.8.18的升级脚本操作
 4. 修复后的功能需在对应场景中验证使用效果
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4817)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/4817)

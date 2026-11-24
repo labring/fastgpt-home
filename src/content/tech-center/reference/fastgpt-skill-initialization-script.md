@@ -2,7 +2,7 @@
 title: FastGPT技能初始化脚本的配置与使用方法
 slug: /zh/reference/fastgpt-skill-initialization-script
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/build/skill/initialization
+source: https://doc.fastgpt.cn/guide/build/skill/initialization
 source_type: 官方文档小节
 ---
 
@@ -21,4 +21,4 @@ FastGPT技能初始化脚本是技能运行前的前置脚本。系统会在技�
 2. 脚本仅用于技能运行前的准备工作，无法干预AI任务的执行逻辑。
 3. 脚本执行异常会导致技能无法正常启动，需确保脚本逻辑正确。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/skill/initialization)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/skill/initialization)

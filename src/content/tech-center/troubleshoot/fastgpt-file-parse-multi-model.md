@@ -29,4 +29,4 @@ source_type: GitHub issue
 
 > 来源: [原始讨论：文件的增强解析，能否支持可以选择多种处理模型](https://github.com/labring/FastGPT/issues/5560)
 
-> 来源: [FastGPT 环境变量与自定义 PDF 解析](https://doc.fastgpt.io/en/self-host/config/env)
+> 来源: [FastGPT 环境变量与自定义 PDF 解析](https://doc.fastgpt.io/self-host/config/env)

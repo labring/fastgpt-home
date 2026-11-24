@@ -2,7 +2,7 @@
 title: FastGPT中input参数的含义、使用方法与注意事项
 slug: /zh/glossary/fastgpt-input-parameter-guide
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/toc
+source: https://doc.fastgpt.cn/toc
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ input参数是FastGPT中用于承载待处理数据或交互输入内容的参�
 ## 容易搞错的地方
 在调用azure openai embeddings接口时，FastGPT默认的数组格式input参数无法适配该接口的要求。azure openai embeddings接口明确要求input仅支持string类型的数据，若直接使用FastGPT默认的数组格式input参数，会导致接口调用失败，无法正常生成嵌入向量。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/toc)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/toc)
 
 ## 适用性与版本范围
 

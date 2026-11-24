@@ -2,7 +2,7 @@
 title: Official FastGPT Self-Hosted Environment Configuration Notes
 slug: /en/deploy/fastgpt-self-hosted-env-config-notes
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/env
+source: https://doc.fastgpt.io/self-host/config/env
 source_type: Official documentation
 ---
 
@@ -30,7 +30,7 @@ Three environment secrets are required for successful runtime operation, and mus
 
 Each of these secrets must be generated using cryptographically strong random values to prevent unauthorized access to FastGPT resources.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/env)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/env)
 
 ## Applicability and version scope
 

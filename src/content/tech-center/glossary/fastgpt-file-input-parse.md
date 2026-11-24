@@ -2,7 +2,7 @@
 title: 介绍FastGPT中文件输入与文档解析节点的使用规则
 slug: /zh/glossary/fastgpt-file-input-parse
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/guide/build/general/fileInput
+source: https://doc.fastgpt.cn/guide/build/general/fileInput
 source_type: 官方文档
 ---
 
@@ -19,7 +19,7 @@ source_type: 官方文档
 ## 容易搞错的地方
 文档解析节点仅解析当前工作流接收的文件，无法处理历史记录中的文件。同时选择文档和多模态文件时，多模态文件会被忽略。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/general/fileInput)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/general/fileInput)
 
 ## 适用性与版本范围
 

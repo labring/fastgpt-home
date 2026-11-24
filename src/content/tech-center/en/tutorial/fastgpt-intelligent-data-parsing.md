@@ -2,7 +2,7 @@
 title: Process Complex Imported Data with FastGPT
 slug: /en/tutorial/fastgpt-intelligent-data-parsing
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/getting-started
+source: https://doc.fastgpt.io/guide/getting-started
 source_type: Official documentation
 ---
 
@@ -22,7 +22,7 @@ The automated parsing workflow follows a sequence aligned with core platform cap
 ## Output Alignment with AI Q&A Requirements
 The structured, format-preserving output directly supports reliable AI question-and-answer interactions. By retaining precise formatting for technical content like LaTeX formulas and tables, the system ensures AI responses reference imported knowledge accurately. Indexed visual content expands search capabilities beyond textual data, allowing users to retrieve visual assets alongside associated contextual information during Q&A sessions.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/getting-started)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/getting-started)
 
 ## Applicability and version scope
 

@@ -2,11 +2,11 @@
 title: 只读与写入：按操作后果划三档
 slug: /zh/compare/read-only-vs-write-integration
 page_type: matrix
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173
+source: https://doc.fastgpt.cn/self-host/upgrading/4-17/4173
 source_type: 深度场景内容
 meta_title: 只读接入与写入接入怎么分
 meta_description: 按操作后果把系统接入分成只读、写入与审批三档，比较各自需要的凭据、确认环节、日志要求与失败处理，并给出从只读到写入的推进顺序与接口清单写法。
-delivery_metadata: {"source_front_matter":{"slug":"read-only-vs-write-integration","meta_title":"只读接入与写入接入怎么分","meta_description":"按操作后果把系统接入分成只读、写入与审批三档，比较各自需要的凭据、确认环节、日志要求与失败处理，并给出从只读到写入的推进顺序与接口清单写法。","language":"zh","content_type":"matrix","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"read-only-vs-write-integration","keywords":"只读接入,写入接入,审批边界,幂等,失败处理","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"接业务系统时只读和写入怎么划边界","需求依据":"客户 2026-11-07 购买诉求第 2 条（高）：数据接口集成与定制开发。","事实来源":"FastGPT 产品知识库·内容收集清单；官方更新说明 4.17.3","内链":"https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173","排期":"W18 决策矩阵第 5 篇","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（来源版本，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核工具调用与配额规则。"]}
+delivery_metadata: {"source_front_matter":{"slug":"read-only-vs-write-integration","meta_title":"只读接入与写入接入怎么分","meta_description":"按操作后果把系统接入分成只读、写入与审批三档，比较各自需要的凭据、确认环节、日志要求与失败处理，并给出从只读到写入的推进顺序与接口清单写法。","language":"zh","content_type":"matrix","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"read-only-vs-write-integration","keywords":"只读接入,写入接入,审批边界,幂等,失败处理","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"接业务系统时只读和写入怎么划边界","需求依据":"客户 2026-11-07 购买诉求第 2 条（高）：数据接口集成与定制开发。","事实来源":"FastGPT 产品知识库·内容收集清单；官方更新说明 4.17.3","内链":"https://doc.fastgpt.cn/self-host/upgrading/4-17/4173","排期":"W18 决策矩阵第 5 篇","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（来源版本，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核工具调用与配额规则。"]}
 keywords: 只读接入,写入接入,审批边界,幂等,失败处理
 schema_type: Article
 date_modified: 2026-11-16
@@ -18,7 +18,7 @@ date_modified: 2026-11-16
 
 ## 三档的界限
 
-对照材料：[FastGPT 官方说明](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173)。
+对照材料：[FastGPT 官方说明](https://doc.fastgpt.cn/self-host/upgrading/4-17/4173)。
 
 只读档：查询库存、读取工单状态、拉取客户资料。出错的影响是看到旧数据或空数据，重查即可恢复。写入档：创建工单、回填处理结论、更新标签。出错会影响业务记录，需要更正或冲销。审批档：审批、驳回、撤回。出错会改变业务状态，可能触发对外承诺。
 
@@ -75,5 +75,5 @@ date_modified: 2026-11-16
 | 主题 | 版本 | 来源 |
 | --- | --- | --- |
 | 接口与插件机制、模型与渠道支持 | 当期商业方案 | [FastGPT 商务咨询：授权、部署与支持范围](https://fastgpt.cn/contact) |
-| 工具输入输出与应用调用方式 | 现行功能文档 | [选择工具与 Skill](https://doc.fastgpt.cn/zh-CN/guide/build/tools/overview) |
-| MCP 与外部渠道配额 | v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173) |
+| 工具输入输出与应用调用方式 | 现行功能文档 | [选择工具与 Skill](https://doc.fastgpt.cn/guide/build/tools/overview) |
+| MCP 与外部渠道配额 | v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/self-host/upgrading/4-17/4173) |

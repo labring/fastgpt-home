@@ -2,7 +2,7 @@
 title: 使用Docker部署适配FastGPT所需的BGE重排序模型服务
 slug: /zh/reference/docker-deploy-bge-rerank-fastgpt
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/custom-models/bge-rerank
+source: https://doc.fastgpt.cn/self-host/custom-models/bge-rerank
 source_type: 官方文档小节
 ---
 
@@ -47,4 +47,4 @@ source_type: 官方文档小节
 3. 根据服务器存储空间选择对应规格的镜像，防止磁盘空间不足。
 4. 妥善保管`ACCESS_TOKEN`，防止未授权访问服务。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/bge-rerank)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/custom-models/bge-rerank)

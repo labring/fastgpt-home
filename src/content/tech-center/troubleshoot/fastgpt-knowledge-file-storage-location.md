@@ -29,6 +29,6 @@ source_type: GitHub issue
 
 > 来源: [原始讨论：硅基流动模型配置知识库测试](https://github.com/labring/FastGPT/issues/4785)
 
-> 来源: [FastGPT 对象存储配置](https://doc.fastgpt.io/en/self-host/config/object-storage)
+> 来源: [FastGPT 对象存储配置](https://doc.fastgpt.io/self-host/config/object-storage)
 
 > 来源: [原讨论中的补充回复](https://github.com/labring/FastGPT/issues/4785#issuecomment-2878847298)

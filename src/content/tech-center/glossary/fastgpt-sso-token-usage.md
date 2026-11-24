@@ -2,7 +2,7 @@
 title: FastGPT中SSO与飞书接入的Token配置说明
 slug: /zh/glossary/fastgpt-sso-token-usage
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/guide/admin/sso
+source: https://doc.fastgpt.cn/guide/admin/sso
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ FastGPT中的Token是用于身份鉴权、通信校验与加密的密钥类配�
 ## 容易搞错的地方
 使用Http协议通信时，需配置Encrypt Key保障通信安全，使用Https协议则无需配置该参数。部分用户会误配置Verification Token，实际上该参数可直接忽略。SSO服务的AUTH_TOKEN需与fastgpt-pro的鉴权配置保持一致，否则会导致鉴权失败。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/admin/sso)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/admin/sso)
 
 ## 适用性与版本范围
 

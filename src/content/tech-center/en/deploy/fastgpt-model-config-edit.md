@@ -2,7 +2,7 @@
 title: Edit FastGPT Self-Hosted Model Configuration Settings
 slug: /en/deploy/fastgpt-model-config-edit
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/model/intro
+source: https://doc.fastgpt.io/self-host/config/model/intro
 source_type: Official documentation
 ---
 
@@ -23,7 +23,7 @@ This first image displays the main model management list, where each listed mode
 # Model Configuration Variations
 A core characteristic of FastGPT’s model configuration system is that each model type has distinct configuration options. This means that the fields, input requirements, and available settings within the configuration modal will differ depending on the specific model being edited. Administrators must review the exact fields presented for their selected model before making any changes, as the available options are not uniform across all model entries. Any changes saved to the configuration modal will update the model’s operational parameters within the FastGPT instance, and will apply immediately after confirmation.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/model/intro)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/model/intro)
 
 ## Applicability and version scope
 

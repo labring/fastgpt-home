@@ -2,7 +2,7 @@
 title: FastGPT V4.6.5版本配置变更的升级处理指引
 slug: /zh/reference/fastgpt-v465-config-change
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/465
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/465
 source_type: 官方文档小节
 ---
 
@@ -21,4 +21,4 @@ FastGPT V4.6.5版本存在配置变更，属于低于4.12.0的升级分支范畴
 2. 未完成配置调整可能引发系统启动异常
 3. 需参考官方对应版本的配置文档完成修改
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/465)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/465)

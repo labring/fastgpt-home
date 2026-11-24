@@ -31,4 +31,4 @@ source_type: GitHub issue
 
 > 来源: [FastGPT 用户选择节点选项定义](https://github.com/labring/FastGPT/blob/main/packages/global/core/workflow/template/system/interactive/userSelect.ts)
 
-> 来源: [FastGPT 用户选择节点](https://doc.fastgpt.io/en/guide/build/workflow/nodes/user-selection)
+> 来源: [FastGPT 用户选择节点](https://doc.fastgpt.io/guide/build/workflow/nodes/user-selection)

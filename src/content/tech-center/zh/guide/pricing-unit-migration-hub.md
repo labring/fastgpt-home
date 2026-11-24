@@ -39,4 +39,4 @@ keywords: ""
 
 | Source | Version | Document |
 | --- | --- | --- |
-| FastGPT | v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173) |
+| FastGPT | v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/self-host/upgrading/4-17/4173) |

@@ -6,7 +6,7 @@ source: https://fastgpt.cn/faq/private-deployment-edition-selection
 source_type: 深度场景内容
 meta_title: 授权与长期成本核对入口
 meta_description: 把 FastGPT 私有部署的授权与长期成本拆成授权四维度、更新与维保、运行四科目与季度对账四条入口，逐项给出核对动作、失败表现与合同边界。
-delivery_metadata: {"source_front_matter":{"slug":"license-cost-review-hub","meta_title":"授权与长期成本核对入口","meta_description":"把 FastGPT 私有部署的授权与长期成本拆成授权四维度、更新与维保、运行四科目与季度对账四条入口，逐项给出核对动作、失败表现与合同边界。","language":"zh","content_type":"aggregation","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"license-cost-review-hub","keywords":"授权核对,更新与维保,运行成本,季度对账","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"私有部署授权与长期成本从哪几个入口核","需求依据":"客户 2026-11-07 购买诉求第 4 条：授权年限、费用包含范围与后续升级是采购关注点。","事实来源":"FastGPT 产品知识库（授权与数据条款、计费结构）；官方更新说明 4.17.3","内链":"https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173","排期":"W18 聚合导航第 6 篇","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（来源版本，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核授权表述与计价单位。"]}
+delivery_metadata: {"source_front_matter":{"slug":"license-cost-review-hub","meta_title":"授权与长期成本核对入口","meta_description":"把 FastGPT 私有部署的授权与长期成本拆成授权四维度、更新与维保、运行四科目与季度对账四条入口，逐项给出核对动作、失败表现与合同边界。","language":"zh","content_type":"aggregation","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"license-cost-review-hub","keywords":"授权核对,更新与维保,运行成本,季度对账","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"私有部署授权与长期成本从哪几个入口核","需求依据":"客户 2026-11-07 购买诉求第 4 条：授权年限、费用包含范围与后续升级是采购关注点。","事实来源":"FastGPT 产品知识库（授权与数据条款、计费结构）；官方更新说明 4.17.3","内链":"https://doc.fastgpt.cn/self-host/upgrading/4-17/4173","排期":"W18 聚合导航第 6 篇","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（来源版本，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核授权表述与计价单位。"]}
 keywords: 授权核对,更新与维保,运行成本,季度对账
 schema_type: Article
 date_modified: 2026-11-16
@@ -44,7 +44,7 @@ date_modified: 2026-11-16
 
 ## 入口四：季度对账
 
-入口：[FastGPT 更新说明](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173)。
+入口：[FastGPT 更新说明](https://doc.fastgpt.cn/self-host/upgrading/4-17/4173)。
 
 位置在季度复盘材料。四项内容：授权范围与实际使用是否一致、更新是否在维保期内、模型调用费用与用量是否匹配、支持通道是否仍有效。
 
@@ -61,5 +61,5 @@ date_modified: 2026-11-16
 | 主题 | 版本 | 来源 |
 | --- | --- | --- |
 | 授权与数据条款、档位差异、费用包含范围 | 当期方案与合同 | [FastGPT 商务咨询：授权、部署与支持范围](https://fastgpt.cn/contact) |
-| 计价单位、专属模型、配额 | v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173) |
-| 镜像组合与不混部 | v4.16.0 | [self-host/upgrading/4-16/4160](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/4160) |
+| 计价单位、专属模型、配额 | v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/self-host/upgrading/4-17/4173) |
+| 镜像组合与不混部 | v4.16.0 | [self-host/upgrading/4-16/4160](https://doc.fastgpt.cn/self-host/upgrading/4-16/4160) |

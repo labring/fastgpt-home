@@ -2,7 +2,7 @@
 title: FastGPT V4.14.8版本升级的配置与操作说明
 slug: /zh/deploy/fastgpt-v4148-upgrade-configuration
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4148
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/4148
 source_type: 官方文档
 ---
 
@@ -21,4 +21,4 @@ source_type: 官方文档
 4.  将sandbox镜像的tag更新为v4.14.8；
 5.  完成所有镜像更新后，重启相关服务以加载新的配置。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4148)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-14/4148)

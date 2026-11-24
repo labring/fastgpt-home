@@ -2,7 +2,7 @@
 title: Configure FastGPT Application Voice Input Settings
 slug: /en/tutorial/fastgpt-voice-input-configuration
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/build/general/voiceInput
+source: https://doc.fastgpt.io/guide/build/general/voiceInput
 source_type: Official documentation
 ---
 
@@ -25,7 +25,7 @@ Follow these concrete steps to access the voice input configuration dialog using
 3. Click the settings button located on the right side of the Voice Input component.
 4. Verify that the voice input configuration dialog has loaded successfully.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/general/voiceInput)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/general/voiceInput)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: FastGPT V4.14.5版本环境变量变更及升级操作说明
 slug: /zh/reference/fastgpt-v4-14-5-upgrade-guide
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4145
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/4145
 source_type: 官方文档小节
 ---
 
@@ -24,4 +24,4 @@ FastGPT V4.14.5版本存在专属的环境变量变更，同时官方提供了�
 3. 运行升级脚本前，建议备份原有数据库配置与业务数据，防止升级过程中出现数据丢失或配置损坏。
 4. 若升级过程中出现报错，需优先检查环境变量配置是否符合本次变更要求，再排查其他执行问题。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4145)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-14/4145)

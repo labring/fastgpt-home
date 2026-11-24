@@ -2,7 +2,7 @@
 title: FastGPT 4.16.2 List of Resolved Bug Fixes
 slug: /en/deploy/fastgpt-4162-bug-fixes
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-16/4162
+source: https://doc.fastgpt.io/self-host/upgrading/4-16/4162
 source_type: 官方文档
 ---
 
@@ -40,4 +40,4 @@ This section covers fixes for dataset handling, workflow tools, and application 
 - Fixed fuzzy file extension matching that incorrectly displayed DOC icons for Markdown files with DOCX-related text, added new document format icon mappings, and added a dedicated EPUB icon
 - Resolved chat configuration validation failures for historical App Variables with empty or null `valueType`; FastGPT now derives `valueType` from the Variable input type during load and save, falls back to `any` for unmapable or invalid types, and runs Zod validation prior to saving. No additional cleanup script is required for existing datasets or applications.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/4-16/4162)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/4-16/4162)

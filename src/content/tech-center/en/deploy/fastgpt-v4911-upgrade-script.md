@@ -2,7 +2,7 @@
 title: Run the Official FastGPT v4911 Upgrade Script
 slug: /en/deploy/fastgpt-v4911-upgrade-script
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4911
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/4911
 source_type: 官方文档
 ---
 
@@ -28,4 +28,4 @@ The `--location` flag included in the command automatically follows any HTTP red
 **Script Functional Capabilities**
 The upgrade script performs one core migration function: migrating third-party Dataset API configurations. This task updates existing third-party dataset integrations to align with the v4911 version of FastGPT, streamlining the upgrade process for Pro edition users by removing the need for manual reconfiguration of these integrations.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4911)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/4911)

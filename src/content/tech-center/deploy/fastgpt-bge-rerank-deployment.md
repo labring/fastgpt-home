@@ -2,7 +2,7 @@
 title: 在FastGPT中部署并接入bge-rerank重排模型的具体配置方法
 slug: /zh/deploy/fastgpt-bge-rerank-deployment
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/custom-models/bge-rerank
+source: https://doc.fastgpt.cn/self-host/custom-models/bge-rerank
 source_type: 官方文档
 ---
 
@@ -60,4 +60,4 @@ bge-rerank是一款可接入FastGPT的重排模型，用于优化检索结果的
    - 403报错：原因是FastGPT自定义请求的Token与部署时设置的`ACCESS_TOKEN`不一致，需核对两者值是否匹配。
    - `Bus error (core dumped)`：需在Docker配置中添加`shm_size: 2gb`增加容器共享内存。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/bge-rerank)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/custom-models/bge-rerank)

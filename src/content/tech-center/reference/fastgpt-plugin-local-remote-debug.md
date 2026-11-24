@@ -2,7 +2,7 @@
 title: 启动FastGPT插件本地远程调试会话的具体操作步骤
 slug: /zh/reference/fastgpt-plugin-local-remote-debug
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/plugin/system-tool-development
+source: https://doc.fastgpt.cn/plugin/system-tool-development
 source_type: 官方文档小节
 ---
 
@@ -23,4 +23,4 @@ source_type: 官方文档小节
 3. 按c键更新配置仅在TUI交互模式下生效。
 4. connection key需为fpg_dbg_开头的有效格式。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/plugin/system-tool-development)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/plugin/system-tool-development)

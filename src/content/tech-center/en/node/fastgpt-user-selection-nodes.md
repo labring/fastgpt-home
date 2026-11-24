@@ -2,7 +2,7 @@
 title: Implement Interactive User Selection in FastGPT Workflows
 slug: /en/node/fastgpt-user-selection-nodes
 page_type: Workflow nodes
-source: https://doc.fastgpt.cn/en/guide/build/workflow/nodes/user-selection
+source: https://doc.fastgpt.io/guide/build/workflow/nodes/user-selection
 source_type: Official documentation
 ---
 
@@ -21,7 +21,7 @@ This step-by-step process outlines how the node operates after user input:
 3. The workflow resumes execution by running the branch corresponding to the user’s chosen option, such as the preconfigured "Yes" branch demonstrated in the example.
 The included reference images illustrate both the hidden chat input during the interactive phase and the successful execution of the matching workflow branch following a user’s selection.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/workflow/nodes/user-selection)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/workflow/nodes/user-selection)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: Configure Multiple Selectors for FastGPT Web Sync
 slug: /en/tutorial/fastgpt-multiple-selectors-config
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/dataset/websync
+source: https://doc.fastgpt.io/guide/dataset/websync
 source_type: Official documentation
 ---
 
@@ -25,7 +25,7 @@ Follow these steps to implement multiple selectors for your FastGPT web sync set
 4.  Access the web sync configuration interface for your FastGPT dataset, locate the dedicated selector input field, and paste the combined multiple selector string.
 5.  Save your updated configuration and run a test sync to verify that content is correctly extracted from all defined target elements.
 
-> [FastGPT public documentation](https://doc.fastgpt.cn/en/guide/dataset/websync)
+> [FastGPT public documentation](https://doc.fastgpt.io/guide/dataset/websync)
 
 ## Applicability and version scope
 

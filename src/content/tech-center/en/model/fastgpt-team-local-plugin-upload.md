@@ -2,7 +2,7 @@
 title: Upload Local Plugin Packages for FastGPT Teams
 slug: /en/model/fastgpt-team-local-plugin-upload
 page_type: Model guides
-source: https://doc.fastgpt.cn/en/plugin/team-installation
+source: https://doc.fastgpt.io/plugin/team-installation
 source_type: Official documentation
 ---
 
@@ -23,7 +23,7 @@ Follow this validated process to upload and preview local plugin packages:
 ## Preview vs. Final Installation
 The initial upload and parsing phase only generates an installation preview. No plugins are installed or activated for the team workspace until the final confirmation step is completed. This two-stage process ensures that all plugin metadata and parsed results are validated before being made available to all team members with access to the workspace.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/plugin/team-installation)
+> Source: [FastGPT official source](https://doc.fastgpt.io/plugin/team-installation)
 
 ## Applicability and version scope
 

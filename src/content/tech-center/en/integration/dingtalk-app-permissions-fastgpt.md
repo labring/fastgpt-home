@@ -2,7 +2,7 @@
 title: Configure DingTalk App Permissions for FastGPT Dataset
 slug: /en/integration/dingtalk-app-permissions-fastgpt
 page_type: Integrations
-source: https://doc.fastgpt.cn/en/guide/dataset/third-party/dingtalk_dataset
+source: https://doc.fastgpt.io/guide/dataset/third-party/dingtalk_dataset
 source_type: Official documentation
 ---
 
@@ -32,7 +32,7 @@ Follow these steps to enable the required permissions:
 ## Troubleshooting Permission Issues
 If you encounter an error that includes the exact string `requiredScopes`, enable the permissions explicitly listed in that error notification to resolve the permission mismatch.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/third-party/dingtalk_dataset)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/third-party/dingtalk_dataset)
 
 ## Applicability and version scope
 

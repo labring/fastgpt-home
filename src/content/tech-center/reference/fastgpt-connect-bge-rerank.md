@@ -2,7 +2,7 @@
 title: FastGPT接入bge-rerank重排模型的配置操作指南
 slug: /zh/reference/fastgpt-connect-bge-rerank
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/custom-models/bge-rerank
+source: https://doc.fastgpt.cn/self-host/custom-models/bge-rerank
 source_type: 官方文档小节
 ---
 
@@ -22,4 +22,4 @@ source_type: 官方文档小节
 2. 若配置后出现异常，可参考模型问题排查的相关内容进行处理
 3. 该配置仅支持在FastGPT自部署环境下完成
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/bge-rerank)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/custom-models/bge-rerank)

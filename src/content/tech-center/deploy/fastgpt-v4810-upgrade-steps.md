@@ -2,7 +2,7 @@
 title: FastGPT V4.8.10版本升级步骤与配置变更说明
 slug: /zh/deploy/fastgpt-v4810-upgrade-steps
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4810
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4810
 source_type: 官方文档
 ---
 
@@ -25,4 +25,4 @@ curl --location --request POST https://{{host}}/api/admin/initv4810 \
 --header Content-Type: application/json
 ```
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4810)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/4810)

@@ -2,7 +2,7 @@
 title: Migrate and Clean Up Legacy Skill Debug Chat Data
 slug: /en/deploy/fastgpt-upgrade-legacy-skill-debug-cleanup
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41506
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/41506
 source_type: Official documentation
 ---
 
@@ -46,7 +46,7 @@ The migration follows a fixed set of rules to ensure data integrity:
 
 Important notes: This endpoint does not backfill `sourceType` for existing App Chat records, and scans the full `skills` collection. Partial Skill list scans are not supported, as this could incorrectly mark unscanned Skill sandboxes as App sandboxes.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41506)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-15/41506)
 
 ## Applicability and version scope
 

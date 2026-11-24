@@ -29,4 +29,4 @@ source_type: GitHub issue
 
 > 来源: [原始讨论：我自制一款代码解释器沙箱api，感兴趣的可以来研究一下](https://github.com/labring/FastGPT/issues/2396)
 
-> 来源: [FastGPT 代码运行](https://doc.fastgpt.io/en/guide/build/workflow/nodes/sandbox-v2)
+> 来源: [FastGPT 代码运行](https://doc.fastgpt.io/guide/build/workflow/nodes/sandbox-v2)

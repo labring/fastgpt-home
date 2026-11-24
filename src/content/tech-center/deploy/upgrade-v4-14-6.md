@@ -2,7 +2,7 @@
 title: FastGPT V4.14.6版本升级操作与功能说明
 slug: /zh/deploy/upgrade-v4-14-6
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4146
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/4146
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ source_type: 官方文档
 2. 更新系统插件：前往插件市场更新以下工具：base64Decode（base64解码转化）、dallle3（dall-e 3图片生成）、docDiff（文档差异对比）、drawing（BI图表）、gptImage（gpt图片生成）、markdownTransform（Markdown转换文件）、mineru（Mineru PDF解析）、minimax（minimax对话）、openrouterMultiModal（openrouter多模态）、stability（stability图片生成）；若已完成4.14.6升级可跳过此步骤。
 ## 升级后怎么验证
 可通过以下方式验证升级效果：检查各镜像版本是否与更新要求一致；确认插件市场支持批量更新插件功能；测试工作流的触摸板移动、节点粘贴功能是否正常；确认模型头像路径正确显示；测试系统工具密钥配置后子工具能否正常读取；检查日期选择器显示是否正常；验证企微相关插件、qwen-flash模型是否可正常加载使用；确认订阅套餐的文件上传数量和大小配置可正常生效。
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4146)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-14/4146)
 
 ## 适用性与版本范围
 

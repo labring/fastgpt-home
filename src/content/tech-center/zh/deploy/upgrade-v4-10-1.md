@@ -2,7 +2,7 @@
 title: FastGPT V4.10.1 版本升级内容说明与操作指南
 slug: /zh/deploy/upgrade-v4-10-1
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4101
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4101
 source_type: 官方文档
 ---
 
@@ -27,7 +27,7 @@ curl --location --request POST 'https://{{host}}/api/admin/initv4101' \
 ## 升级后怎么验证
 可通过以下方式验证升级效果：一是检查系统工具是否支持流输出，搜索类型系统工具是否正常显示；二是查看定时任务报错是否已记录到对话日志；三是检查知识库tag区域是否可正常滚动到底；四是测试API知识库通过API导入文件时，自定义API解析参数是否生效；五是确认新增的Flux官方绘图工具、JinaAI工具集、阿里百炼Flux和通义万相绘图是否可正常使用。商业版用户可验证第三方知识库定时同步是否支持全量同步整个目录。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4101)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/4101)
 
 ## 适用性与版本范围
 

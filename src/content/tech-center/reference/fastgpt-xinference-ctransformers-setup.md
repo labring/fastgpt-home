@@ -2,7 +2,7 @@
 title: 为FastGPT在个人设备部署Xinference并使用CTransformers作为推理后端
 slug: /zh/reference/fastgpt-xinference-ctransformers-setup
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/custom-models/xinference
+source: https://doc.fastgpt.cn/self-host/custom-models/xinference
 source_type: 官方文档小节
 ---
 
@@ -28,4 +28,4 @@ source_type: 官方文档小节
 2. 模型量化通过降低权重精度减少资源占用，GGML支持多种量化策略，不同策略在效率和性能间存在不同权衡。
 3. 部署需确保硬盘有足够存储、RAM足够加载量化后的模型，仅支持Mac、个人电脑类消费级硬件。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/xinference)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/custom-models/xinference)

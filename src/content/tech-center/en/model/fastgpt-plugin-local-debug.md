@@ -2,7 +2,7 @@
 title: Start local FastGPT plugin remote debugging
 slug: /en/model/fastgpt-plugin-local-debug
 page_type: Model guides
-source: https://doc.fastgpt.cn/en/plugin/system-tool-development
+source: https://doc.fastgpt.io/plugin/system-tool-development
 source_type: Official documentation
 ---
 
@@ -37,7 +37,7 @@ FASTGPT_PLUGIN_DEBUG_CONNECT_URL=https://fastgpt.example.com/api/plugin/debug-ch
 ```
 After a successful connection, the CLI saves the connection details to your local user configuration. Subsequent runs of `fastgpt-plugin dev` will automatically reuse the stored configuration, eliminating the need to re-enter connection details for future sessions.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/plugin/system-tool-development)
+> Source: [FastGPT official source](https://doc.fastgpt.io/plugin/system-tool-development)
 
 ## Applicability and version scope
 

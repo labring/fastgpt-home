@@ -2,7 +2,7 @@
 title: FastGPT 4.14.7 Bug Fix Resolutions
 slug: /en/deploy/fastgpt-4147-bug-fixes
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4147
+source: https://doc.fastgpt.io/self-host/upgrading/4-14/4147
 source_type: Official documentation
 ---
 
@@ -45,7 +45,7 @@ Follow these steps to confirm all fixes are active in your 4.14.7 deployment:
    - Expose an Agent via MCP and confirm file links are correctly passed to connected tools
 4. Validate mobile fix: Access a FastGPT share link on an iPhone running Safari, complete the first-time visit flow, and confirm no network requests include an empty `uid` parameter.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4147)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-14/4147)
 
 ## Applicability and version scope
 

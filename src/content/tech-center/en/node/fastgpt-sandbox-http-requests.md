@@ -2,7 +2,7 @@
 title: Make External HTTP Requests in FastGPT Sandbox
 slug: /en/node/fastgpt-sandbox-http-requests
 page_type: Workflow nodes
-source: https://doc.fastgpt.cn/en/guide/build/workflow/nodes/sandbox-v2
+source: https://doc.fastgpt.io/guide/build/workflow/nodes/sandbox-v2
 source_type: Official documentation
 ---
 
@@ -56,7 +56,7 @@ The `httpRequest` function has strict operational constraints to ensure secure a
 - Only `http` and `https` network protocols are supported
 - Internal private IP addresses are automatically blocked, including ranges: 127.0.0.0/8, 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16, and additional private IP subnets.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/workflow/nodes/sandbox-v2)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/workflow/nodes/sandbox-v2)
 
 ## Applicability and version scope
 

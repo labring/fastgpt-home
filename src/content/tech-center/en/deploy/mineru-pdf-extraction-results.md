@@ -2,7 +2,7 @@
 title: Extract Accurate PDF Content with MinerU
 slug: /en/deploy/mineru-pdf-extraction-results
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/custom-models/mineru
+source: https://doc.fastgpt.io/self-host/custom-models/mineru
 source_type: Official documentation
 ---
 
@@ -24,7 +24,7 @@ The top row contains chunked extraction results, while the bottom row shows the 
 ## License Compliance Requirements
 MinerU, the underlying extraction tool used in this integration, is licensed under the GPL-3.0 open-source license. Any user deploying FastGPT with MinerU must fully comply with the terms of this license to avoid legal violations, including adhering to source code disclosure and attribution requirements for redistributed or modified versions of the tool.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/custom-models/mineru)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/custom-models/mineru)
 
 ## Applicability and version scope
 

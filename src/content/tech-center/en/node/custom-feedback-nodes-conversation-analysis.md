@@ -2,7 +2,7 @@
 title: Implement Custom Feedback Nodes for Conversation Data Analysis
 slug: /en/node/custom-feedback-nodes-conversation-analysis
 page_type: Workflow nodes
-source: https://doc.fastgpt.cn/en/guide/build/workflow/nodes/custom_feedback
+source: https://doc.fastgpt.io/guide/build/workflow/nodes/custom_feedback
 source_type: Official documentation
 ---
 
@@ -27,7 +27,7 @@ The Custom Feedback node requires a single mandatory configuration parameter, as
 ## Admin Panel Analysis Integration
 Once feedback tags are added via the Custom Feedback node, team members can use the admin panel’s built-in filtering and search tools to locate conversations with specific tags. This allows teams to quickly identify and review conversations that meet predefined quality, compliance, or support criteria, streamlining the analysis process.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/workflow/nodes/custom_feedback)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/workflow/nodes/custom_feedback)
 
 ## Applicability and version scope
 

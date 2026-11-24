@@ -2,7 +2,7 @@
 title: FastGPT V4.8.19版本升级内容与操作指引
 slug: /zh/deploy/upgrade-v4-8-19
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4819
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4819
 source_type: 官方文档
 ---
 
@@ -27,7 +27,7 @@ curl --location --request POST 'https://{{host}}/api/admin/initv4819' \
 ## 升级后怎么验证
 可通过以下操作验证升级完成且功能正常：访问FastGPT平台，测试工作流知识库检索是否支持按知识库权限过滤，查看飞书、语雀知识库是否可正常查看原文，测试流程等待插件是否可按配置时长暂停后继续执行，配置飞书机器人时确认可设置私有化飞书地址，检查成员列表分页加载功能是否正常，确认对话页面加载时可配置独立页面模式，验证成员头像已完成迁移，检查语雀文件库导入、工作流编排、API上传文件等功能是否可正常使用，确认模型提供商logo可正常显示。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4819)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/4819)
 
 ## 适用性与版本范围
 

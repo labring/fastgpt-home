@@ -2,7 +2,7 @@
 title: 配置FastGPT三方应用变量替换的相关参数
 slug: /zh/tutorial/fastgpt-third-app-variable-config
 page_type: 教程
-source: https://doc.fastgpt.cn/zh-CN/guide/build/publish/openapi
+source: https://doc.fastgpt.cn/guide/build/publish/openapi
 source_type: 官方文档
 ---
 
@@ -20,7 +20,7 @@ source_type: 官方文档
 ![](/imgs/chatgptnext.png)
 ![](/imgs/chatgptweb.png)
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/publish/openapi)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/publish/openapi)
 
 ## 适用性与版本范围
 

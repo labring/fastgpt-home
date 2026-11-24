@@ -2,7 +2,7 @@
 title: 配置对话Agent V2的提示词、虚拟机及技能专项配置项
 slug: /zh/tutorial/fastgpt-agentv2-special-config
 page_type: 教程/部署
-source: https://doc.fastgpt.cn/zh-CN/guide/build/agentv2/settings
+source: https://doc.fastgpt.cn/guide/build/agentv2/settings
 source_type: 官方文档
 ---
 
@@ -26,4 +26,4 @@ source_type: 官方文档
 4. 如需扩展功能，从已发布的技能插件包列表中选择对应插件；
 5. 完成所有配置后保存即可生效。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/agentv2/settings)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/agentv2/settings)

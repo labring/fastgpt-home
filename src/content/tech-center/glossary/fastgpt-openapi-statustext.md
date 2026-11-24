@@ -2,7 +2,7 @@
 title: 解释FastGPT OpenAPI会话管理接口中statusText字段的含义与用法
 slug: /zh/glossary/fastgpt-openapi-statustext
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/openapi/chat
+source: https://doc.fastgpt.cn/openapi/chat
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ statusText是FastGPT OpenAPI会话管理类接口返回的响应字段，用于�
 ## 容易搞错的地方
 部分使用者可能误以为该字段会携带详细的执行结果文本，但在当前文档给出的两个成功响应示例中，该字段值均为空字符串。同时需注意，该字段仅适用于会话管理类接口，未在其他类型的API文档片段中出现，不可直接套用至非会话管理类的接口场景。此外，删除单个会话接口需同时传入chatId与appId参数，清空应用会话接口仅需传入appId参数，两者的参数要求存在差异，需注意区分。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/openapi/chat)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/openapi/chat)
 
 ## 适用性与版本范围
 

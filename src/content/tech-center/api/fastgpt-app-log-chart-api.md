@@ -2,7 +2,7 @@
 title: 使用API获取FastGPT应用日志图表数据的调用指南
 slug: /zh/api/fastgpt-app-log-chart-api
 page_type: API与文档
-source: https://doc.fastgpt.cn/zh-CN/openapi/app
+source: https://doc.fastgpt.cn/openapi/app
 source_type: 官方文档小节
 ---
 
@@ -41,4 +41,4 @@ source_type: 官方文档小节
 2.  `chatData`：对话维度统计数据，每个元素包含`timestamp`与`summary`对象。`summary`包含对话次数`chatItemCount`、会话次数`chatCount`、错误对话次数`errorCount`、总积分消耗`points`。
 3.  `appData`：应用维度统计数据，每个元素包含`timestamp`与`summary`对象。`summary`包含好评反馈数`goodFeedBackCount`、差评反馈数`badFeedBackCount`、对话次数`chatCount`、总响应时间`totalResponseTime`。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/openapi/app)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/openapi/app)

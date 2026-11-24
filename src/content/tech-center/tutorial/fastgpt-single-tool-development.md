@@ -2,7 +2,7 @@
 title: 实现FastGPT单系统工具的开发配置与规范说明
 slug: /zh/tutorial/fastgpt-single-tool-development
 page_type: 教程/部署
-source: https://doc.fastgpt.cn/zh-CN/plugin/system-tool-development
+source: https://doc.fastgpt.cn/plugin/system-tool-development
 source_type: 官方文档小节
 ---
 
@@ -29,4 +29,4 @@ import z from 'zod';
 # 开发核心规则
 需严格遵循以下规则：pluginId、子工具id、输入字段名、输出字段名发布后需保持稳定；manifest的名称、描述与版本说明需使用包含`en`和`zh-CN`的多语言格式；输入、输出与密钥均需通过zod schema描述；输入字段需补充`InputSchemaMetaType`元数据，输出字段需补充`OutputSchemaMetaType`元数据；密钥字段需补充`SecretSchemaMetaType`元数据，敏感字段设置`isSecret: true`；handler的返回值必须匹配配置的outputSchema；调用外部API产生的错误需转换为可定位的错误信息，且不得泄露密钥、令牌与完整敏感响应；调用宿主文件上传能力时，需使用`ctx.invoke.uploadFile()`，并优先处理返回的错误信息；展示进度时需使用`ctx.streamResponse()`。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/plugin/system-tool-development)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/plugin/system-tool-development)

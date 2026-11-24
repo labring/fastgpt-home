@@ -2,7 +2,7 @@
 title: Verify FastGPT MCP Identity Proxy Configuration
 slug: /en/integration/fastgpt-mcp-identity-proxy-verification
 page_type: Integrations
-source: https://doc.fastgpt.cn/en/guide/build/publish/mcp_server
+source: https://doc.fastgpt.io/guide/build/publish/mcp_server
 source_type: Official documentation
 ---
 
@@ -26,7 +26,7 @@ If the tool list loads correctly but a tool call returns an authorization error,
 4. Check that the team member remains active in the team that originally published the MCP Server.
 5. Validate that the team member has been granted read permission for the FastGPT application associated with the tool being called.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/publish/mcp_server)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/publish/mcp_server)
 
 ## Applicability and version scope
 

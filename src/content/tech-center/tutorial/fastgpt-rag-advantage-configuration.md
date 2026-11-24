@@ -2,7 +2,7 @@
 title: FastGPT的RAG功能优势与配置操作说明
 slug: /zh/tutorial/fastgpt-rag-advantage-configuration
 page_type: 教程
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/rag
+source: https://doc.fastgpt.cn/guide/dataset/rag
 source_type: 官方文档
 ---
 
@@ -26,7 +26,7 @@ RAG具有良好的跨领域适应性，可根据不同领域的知识库进行�
 ## 典型应用场景
 可应用于医疗问答、法律意见生成、金融分析报告生成等知识密集型场景，满足不同领域的实时信息获取与准确生成需求。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/dataset/rag)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/dataset/rag)
 
 ## 适用性与版本范围
 

@@ -2,7 +2,7 @@
 title: FastGPT V4.8.21版本升级相关操作速查参考
 slug: /zh/reference/fastgpt-v4821-upgrade-quickref
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4821
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4821
 source_type: 官方文档小节
 ---
 
@@ -23,4 +23,4 @@ FastGPT V4.8.21是FastGPT的常规升级版本，本次升级无专属环境变�
 2. 升级前需确认当前部署环境符合FastGPT的基础运行要求
 3. 升级后若出现异常，可参考官方文档的故障排查部分解决问题
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4821)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/4821)

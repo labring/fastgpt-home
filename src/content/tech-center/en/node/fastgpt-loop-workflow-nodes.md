@@ -2,7 +2,7 @@
 title: Use FastGPT Loop Nodes for Batch Workflow Processing
 slug: /en/node/fastgpt-loop-workflow-nodes
 page_type: Workflow nodes
-source: https://doc.fastgpt.cn/en/guide/build/workflow/nodes/loop
+source: https://doc.fastgpt.io/guide/build/workflow/nodes/loop
 source_type: Official documentation
 ---
 
@@ -24,7 +24,7 @@ The Loop node integrates natively with four core FastGPT workflow node types to 
 4.  Connect any combination of supported workflow nodes (AI Chat, HTTP Request, Content Extraction, Conditional) to the Loop node’s iteration output port to process individual array elements.
 5.  Save and activate the workflow; the Loop node will automatically iterate through the input array, maintain execution context for each iteration, and trigger the connected downstream nodes for each element in the original input order.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/workflow/nodes/loop)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/workflow/nodes/loop)
 
 ## Applicability and version scope
 

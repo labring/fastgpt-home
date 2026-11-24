@@ -2,7 +2,7 @@
 title: FastGPT中RAG模型的核心机制与应用场景说明
 slug: /zh/reference/fastgpt-rag-principles-scenarios
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/rag
+source: https://doc.fastgpt.cn/guide/dataset/rag
 source_type: 官方文档小节
 ---
 
@@ -21,4 +21,4 @@ RAG模型结合生成与检索模型的优势，可解决纯生成模型的事�
 2. 不适用于无外部事实支撑的纯创意生成场景
 3. 无法单独完成无上下文连贯要求的简单检索类任务
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/dataset/rag)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/dataset/rag)

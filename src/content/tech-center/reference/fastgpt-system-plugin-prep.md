@@ -2,7 +2,7 @@
 title: FastGPT系统插件开发前需明确的核心准备事项
 slug: /zh/reference/fastgpt-system-plugin-prep
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/plugin/system-tool-development
+source: https://doc.fastgpt.cn/plugin/system-tool-development
 source_type: 官方文档小节
 ---
 
@@ -25,4 +25,4 @@ FastGPT系统插件开发前，需先明确指定的核心配置信息。提前�
 2. 非核心配置可先使用合理默认值推进开发，需在提交说明中记录所采用的假设内容。
 3. 测试样例需至少覆盖成功路径、参数错误、鉴权失败、上游失败四类场景。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/plugin/system-tool-development)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/plugin/system-tool-development)

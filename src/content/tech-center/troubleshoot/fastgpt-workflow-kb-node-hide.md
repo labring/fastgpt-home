@@ -29,4 +29,4 @@ source_type: GitHub issue
 
 > 来源: [原始讨论：工作流应用中显示引用能不能只关闭部分呀](https://github.com/labring/FastGPT/issues/5495)
 
-> 来源: [FastGPT 知识库分块阅读器](https://doc.fastgpt.io/en/guide/chat/quoteList)
+> 来源: [FastGPT 知识库分块阅读器](https://doc.fastgpt.io/guide/chat/quoteList)

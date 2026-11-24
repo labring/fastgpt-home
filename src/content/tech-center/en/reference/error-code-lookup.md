@@ -124,4 +124,4 @@ The 122 codes on this page come from v4.16.2. Errors added inside a module durin
 ## References
 
 - [FastGPT open-source repository](https://github.com/labring/FastGPT)
-- [FastGPT deployment and configuration](https://doc.fastgpt.io/docs/introduction/development)
+- [FastGPT deployment and configuration](https://doc.fastgpt.io/self-host)

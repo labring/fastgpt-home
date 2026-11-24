@@ -170,8 +170,8 @@ date_modified: 2026-10-14
 
 ## 参考资料
 
-- [Agent 配置](https://doc.fastgpt.cn/zh-CN/guide/build/agentv2/settings)
-- [问题排查方法](https://doc.fastgpt.cn/zh-CN/self-host/troubleshooting/methods)
+- [Agent 配置](https://doc.fastgpt.cn/guide/build/agentv2/settings)
+- [问题排查方法](https://doc.fastgpt.cn/self-host/troubleshooting/methods)
 
 ## 需要进一步确认时
 

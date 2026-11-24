@@ -2,7 +2,7 @@
 title: 在FastGPT中配置Ollama接入本地大模型的操作步骤
 slug: /zh/reference/fastgpt-ollama-local-model-access
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/custom-models/ollama
+source: https://doc.fastgpt.cn/self-host/custom-models/ollama
 source_type: 官方文档小节
 ---
 
@@ -21,4 +21,4 @@ FastGPT支持通过Ollama接入本地部署的大模型。Ollama是一款专注�
 3. 仅支持Ollama部署的本地大模型接入FastGPT，不支持其他部署方式的本地模型。
 4. 若遇到接入异常问题，可参考FastGPT官方文档的模型问题排查流程进行定位解决。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/ollama)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/custom-models/ollama)

@@ -29,4 +29,4 @@ source_type: GitHub issue
 
 > 来源: [原始讨论：4.8.9上传图片或文件 多轮对话只认识第一次的附件内容](https://github.com/labring/FastGPT/issues/2350)
 
-> 来源: [FastGPT 文件输入与 4.8.13 行为说明](https://doc.fastgpt.io/en/guide/build/general/fileInput)
+> 来源: [FastGPT 文件输入与 4.8.13 行为说明](https://doc.fastgpt.io/guide/build/general/fileInput)

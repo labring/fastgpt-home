@@ -2,7 +2,7 @@
 title: FastGPT V4.9.14版本升级操作速查指南
 slug: /zh/reference/fastgpt-v4914-upgrade-guide
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4914
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4914
 source_type: 官方文档小节
 ---
 
@@ -23,4 +23,4 @@ source_type: 官方文档小节
 3. 自定义配置需对照升级说明逐一核对，避免配置错误；
 4. 升级过程中请勿中断服务，以免引发系统异常。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4914)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/4914)

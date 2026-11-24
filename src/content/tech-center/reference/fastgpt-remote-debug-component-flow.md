@@ -2,7 +2,7 @@
 title: FastGPT远程调试链路的组件组成及标准调用流程说明
 slug: /zh/reference/fastgpt-remote-debug-component-flow
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/remote-debug-suite
+source: https://doc.fastgpt.cn/self-host/config/remote-debug-suite
 source_type: 官方文档小节
 ---
 
@@ -25,4 +25,4 @@ source_type: 官方文档小节
 3. 各环节传递的connectionKey、connectionUrl等参数需准确无误，避免连接失败。
 4. WebSocket长连接需保持稳定，否则会中断调试链路。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/remote-debug-suite)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/config/remote-debug-suite)

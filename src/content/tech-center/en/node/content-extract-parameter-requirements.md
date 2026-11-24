@@ -2,7 +2,7 @@
 title: Define Parameters Extraction Requirements for Content Extract Nodes
 slug: /en/node/content-extract-parameter-requirements
 page_type: Workflow nodes
-source: https://doc.fastgpt.cn/en/guide/build/workflow/nodes/content_extract
+source: https://doc.fastgpt.io/guide/build/workflow/nodes/content_extract
 source_type: Official documentation
 ---
 
@@ -28,7 +28,7 @@ Three official reference prompts are provided for common extraction use cases:
 5. Test the node using a sample input text or conversation to verify the extracted output aligns with the prompt’s requirements.
 6. Save the finalized configuration once testing confirms correct performance.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/workflow/nodes/content_extract)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/workflow/nodes/content_extract)
 
 ## Applicability and version scope
 

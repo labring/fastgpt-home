@@ -2,7 +2,7 @@
 title: 使用FastGPT并行执行节点实现文本数组并行翻译
 slug: /zh/reference/fastgpt-parallel-translate-text-array
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/parallel_run
+source: https://doc.fastgpt.cn/guide/build/workflow/nodes/parallel_run
 source_type: 官方文档小节
 ---
 
@@ -37,4 +37,4 @@ return { textArray: texts };
 4. 任一翻译任务失败会自动重试，重试仍失败的项会在「完整结果」中标记为失败
 5. 并行节点会在所有任务完成后一次性输出「成功结果」「完整结果」「完成状态」
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/parallel_run)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/workflow/nodes/parallel_run)

@@ -2,7 +2,7 @@
 title: Create and Configure FastGPT MCP Toolkits
 slug: /en/integration/fastgpt-mcp-toolkit-creation
 page_type: Integrations
-source: https://doc.fastgpt.cn/en/guide/build/tools/mcp_tools
+source: https://doc.fastgpt.io/guide/build/tools/mcp_tools
 source_type: Official documentation
 ---
 
@@ -22,7 +22,7 @@ This workflow follows the exact official steps for creating an MCP toolkit in Fa
 ## Key Configuration Notes
 The only required input for MCP toolkit setup is a valid, fully formatted MCP server URL. Invalid URLs will prevent the parse step from succeeding, resulting in no tools being listed in the dialog. Users must replace any placeholder values (such as the `xxx` API key in the Amap example URL) with their own unique credentials from the MCP server provider. Once created, the MCP toolkit will be available for use in FastGPT application workflows alongside native and other integrated tools.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/tools/mcp_tools)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/tools/mcp_tools)
 
 ## Applicability and version scope
 

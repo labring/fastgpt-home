@@ -2,7 +2,7 @@
 title: FastGPT 权限项对照表（v4.17.2）
 slug: /zh/reference/permission-items-reference
 page_type: 基准数据页
-source: https://doc.fastgpt.cn/zh-CN/guide/workspace/team/team_roles_permissions
+source: https://doc.fastgpt.cn/guide/workspace/team/team_roles_permissions
 source_type: 官方文档与开源仓库源码（v4.17.2）
 description: FastGPT v4.17.2 官方权限文档列出的 13 项资源权限，逐项对照源码里的权限键与权限位，并列出源码中有、文档表未列的权限项。
 language: zh
@@ -71,6 +71,6 @@ date_modified: 2026-10-26
 
 ## 参考资料
 
-- [团队 & 成员组 & 权限](https://doc.fastgpt.cn/zh-CN/guide/workspace/team/team_roles_permissions)
-- [知识库文件级权限](https://doc.fastgpt.cn/zh-CN/guide/dataset/collection_permission)
+- [团队 & 成员组 & 权限](https://doc.fastgpt.cn/guide/workspace/team/team_roles_permissions)
+- [知识库文件级权限](https://doc.fastgpt.cn/guide/dataset/collection_permission)
 - [permission 目录（v4.17.2）](https://github.com/labring/FastGPT/tree/v4.17.2/packages/global/support/permission)

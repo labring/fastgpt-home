@@ -2,7 +2,7 @@
 title: FastGPT 4.15.0-beta5版本镜像更新与配置操作指南
 slug: /zh/reference/fastgpt-beta5-mirror-update-guide
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41505
+source: https://doc.fastgpt.cn/self-host/upgrading/4-15/41505
 source_type: 官方文档小节
 ---
 
@@ -44,4 +44,4 @@ source_type: 官方文档小节
 3. 仅当上游sandbox endpoint返回localhost/127.0.0.1且proxy容器无法访问时，才需配置AGENT_SANDBOX_PROXY_REWRITE_HOST。
 4. 国内与海外部署需使用对应镜像源，不可混用。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41505)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-15/41505)

@@ -2,7 +2,7 @@
 title: FastGPT 4.15.1 New Feature Details for Self-Hosted Deployments
 slug: /en/deploy/fastgpt-4151-new-features
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/4151
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/4151
 source_type: Official documentation
 ---
 
@@ -24,7 +24,7 @@ A new environment variable is available for self-hosted FastGPT deployments:
 ### Plugin & System Tool Filtering
 The Plugin Marketplace now supports filtering plugins by official or community source origins, allowing users to narrow listings to preferred plugin types. Additionally, the system tool list includes filtering options for tool status and custom tags, streamlining discovery of relevant system tools for deployment and management.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/4151)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-15/4151)
 
 ## Applicability and version scope
 

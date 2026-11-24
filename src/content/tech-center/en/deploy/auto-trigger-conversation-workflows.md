@@ -2,7 +2,7 @@
 title: Set Up Auto-Trigger Conversation Workflows for Proactive Guidance
 slug: /en/deploy/auto-trigger-conversation-workflows
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4814
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/4814
 source_type: 官方文档
 ---
 
@@ -25,4 +25,4 @@ These screenshots display the core workflow for enabling and customizing the aut
 ## Key Behavioral Specifications
 Per the feature definition, the auto-trigger workflow will execute exactly one time per individual conversation load event. It will not re-trigger during the same active chat session, preventing repeated redundant prompts for users. The trigger activates prior to any user-submitted messages, ensuring proactive guidance is delivered as soon as the conversation loads, aligning with the intended CRM use case.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4814)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/4814)

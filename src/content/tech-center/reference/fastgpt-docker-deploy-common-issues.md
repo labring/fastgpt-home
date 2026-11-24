@@ -2,7 +2,7 @@
 title: FastGPT Docker部署场景下常见问题的排查与解决指南
 slug: /zh/reference/fastgpt-docker-deploy-common-issues
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/deploy/docker
+source: https://doc.fastgpt.cn/self-host/deploy/docker
 source_type: 官方文档小节
 ---
 
@@ -25,4 +25,4 @@ source_type: 官方文档小节
 3. 需确保Mongo、向量数据库等依赖服务正常运行
 4. 登录提示Network Error时，优先检查网络连接与配置文件正确性
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/deploy/docker)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/deploy/docker)

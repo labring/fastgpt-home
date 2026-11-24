@@ -2,7 +2,7 @@
 title: FastGPT插件系统的安装、管理与开发配置说明
 slug: /zh/tutorial/fastgpt-plugin-install-config
 page_type: 教程/部署
-source: https://doc.fastgpt.cn/zh-CN/plugin/intro
+source: https://doc.fastgpt.cn/plugin/intro
 source_type: 官方文档
 ---
 
@@ -17,4 +17,4 @@ FastGPT插件系统适用于v1.0.0及以上版本，原系统插件存在迭代�
 ## 插件包协议说明
 新版插件采用统一.pkg文件交付，构建产物通常包含dist/index.js、dist/manifest.json、图标文件，可选包含README.md和assets/**目录。插件包内包含插件元信息、输入输出schema、密钥schema和图标资源，可供FastGPT页面、工作流和Agent调用使用。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/plugin/intro)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/plugin/intro)

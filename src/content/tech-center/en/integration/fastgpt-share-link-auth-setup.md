@@ -2,7 +2,7 @@
 title: Set Up FastGPT Share Link Authentication
 slug: /en/integration/fastgpt-share-link-auth-setup
 page_type: Integrations
-source: https://doc.fastgpt.cn/en/guide/build/publish/link
+source: https://doc.fastgpt.io/guide/build/publish/link
 source_type: Official documentation
 ---
 
@@ -76,7 +76,7 @@ The success response matches the init endpoint format. Valid failure responses i
 ## 5. Optional Usage Reporting Endpoint
 Add a POST endpoint at `{{host}}/shareAuth/finish` to receive detailed usage data after each completed chat interaction. This endpoint has no required response format. The request body includes the `token` field and a `responseData` array with breakdowns of AI resource consumption. Key fields to reference include `totalPoints` (total AI points consumed) and `tokens` (total token consumption).
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/publish/link)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/publish/link)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: FastGPT 4.12.3 Bug Fixes for Self-Hosted Instances
 slug: /en/deploy/fastgpt-4-12-3-bug-fixes
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-12/4123
+source: https://doc.fastgpt.io/self-host/upgrading/4-12/4123
 source_type: Official documentation
 ---
 
@@ -29,7 +29,7 @@ To confirm the fixes are active on your self-hosted instance, follow these targe
 4. Edit a workflow variable update block using the array selector, confirm the selector loads and applies array variables as expected.
 5. Run an app evaluation test, review the captured output logs to confirm all response texts are recorded, not just the first entry.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-12/4123)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-12/4123)
 
 ## Applicability and version scope
 

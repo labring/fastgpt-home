@@ -2,7 +2,7 @@
 title: Manage FastGPT Plugin Installations and Statuses
 slug: /en/model/fastgpt-plugin-installation-management
 page_type: Model guides
-source: https://doc.fastgpt.cn/en/plugin/intro
+source: https://doc.fastgpt.io/plugin/intro
 source_type: Official documentation
 ---
 
@@ -28,7 +28,7 @@ Plugin statuses include three predefined states:
 
 System administrators can also configure system-level secrets for plugin invocation. These secrets are hosted securely by the plugin service, and all authorized system users can reuse them during plugin calls. Callers reference these secrets exclusively through the plugin’s configuration interface, and never gain direct access to the plaintext secret values.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/plugin/intro)
+> Source: [FastGPT official source](https://doc.fastgpt.io/plugin/intro)
 
 ## Applicability and version scope
 

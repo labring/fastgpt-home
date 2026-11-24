@@ -2,7 +2,7 @@
 title: FastGPT V4.16.0-beta2版本升级操作与变更说明
 slug: /zh/deploy/upgrade-v4-16-0-beta2
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/41602
+source: https://doc.fastgpt.cn/self-host/upgrading/4-16/41602
 source_type: 官方文档
 ---
 
@@ -36,8 +36,8 @@ source_type: 官方文档
 ## 升级后怎么验证
 再次执行dry-run命令，此时返回结果中`wouldUpdate`应为0。检查系统模型配置是否正常加载，验证工作流配置、开场白预设、发布渠道页面、工具市场、门户快捷应用、PDF解析、文件上传等功能是否正常运行，确认审计日志已转存至S3冷归档，验证前端number输入组件在Agent生成与手动输入切换、版本切换场景下可正常使用。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/41602)
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/4160)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-16/41602)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-16/4160)
 
 ## 适用性与版本范围
 

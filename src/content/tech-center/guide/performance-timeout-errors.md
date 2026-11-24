@@ -2,7 +2,7 @@
 title: FastGPT性能与超时报错清单：按症状分组
 slug: /zh/guide/performance-timeout-errors
 page_type: 问题清单聚合页
-source: https://doc.fastgpt.cn/zh-CN/self-host/deploy/docker
+source: https://doc.fastgpt.cn/self-host/deploy/docker
 source_type: 站内已发布文档的程序化归类
 check_day: 2026-09-28
 article_section: 报错与排障
@@ -78,8 +78,8 @@ date_modified: 2026-10-15
 
 ## 参考资料
 
-- [FastGPT Docker Compose 部署](https://doc.fastgpt.cn/zh-CN/self-host/deploy/docker)
-- [FastGPT 环境变量](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
+- [FastGPT Docker Compose 部署](https://doc.fastgpt.cn/self-host/deploy/docker)
+- [FastGPT 环境变量](https://doc.fastgpt.cn/self-host/config/env)
 
 ## 问题仍未定位时
 

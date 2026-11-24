@@ -2,7 +2,7 @@
 title: FastGPT V4.6.5版本升级配置变更与功能详细说明
 slug: /zh/deploy/upgrade-v4-6-5
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/465
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/465
 source_type: 官方文档
 ---
 
@@ -28,7 +28,7 @@ source_type: 官方文档
 5. 在高级编排中测试连接线交互是否正常。
 6. 创建内容提取节点，确认可选择模型并设置字段枚举。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/465)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/465)
 
 ## 适用性与版本范围
 

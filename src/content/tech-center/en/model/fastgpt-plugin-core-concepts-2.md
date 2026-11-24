@@ -2,7 +2,7 @@
 title: Learn FastGPT Plugin Core Technical Concepts
 slug: /en/model/fastgpt-plugin-core-concepts-2
 page_type: Model guides
-source: https://doc.fastgpt.cn/en/plugin/intro
+source: https://doc.fastgpt.io/plugin/intro
 source_type: Official documentation
 ---
 
@@ -31,7 +31,7 @@ Plugins are categorized by their intended use case within the FastGPT ecosystem:
 ## Runtime and Pod Architecture
 The FastGPT plugin runtime provides the backend execution layer for all plugin code. The default runtime environment is `local-pool`, which manages a pool of isolated child processes called Pods. Each Pod represents a single running instance of a plugin service, and a single plugin service can deploy multiple Pods to support varying levels of concurrent plugin invocation demand.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/plugin/intro)
+> Source: [FastGPT official source](https://doc.fastgpt.io/plugin/intro)
 
 ## Applicability and version scope
 

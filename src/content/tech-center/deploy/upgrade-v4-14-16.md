@@ -2,7 +2,7 @@
 title: FastGPT V4.14.16版本升级内容与操作说明
 slug: /zh/deploy/upgrade-v4-14-16
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41416
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/41416
 source_type: 官方文档
 ---
 
@@ -27,7 +27,7 @@ source_type: 官方文档
 4. 查看工作流节点弹窗高度适配，底部节点可正常显示；
 5. 确认评估列表仅可查看自己创建的评估内容。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41416)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-14/41416)
 
 ## 适用性与版本范围
 

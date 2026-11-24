@@ -2,7 +2,7 @@
 title: Update FastGPT Environment Variables for 4.14.9
 slug: /en/deploy/fastgpt-environment-variable-updates
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4149
+source: https://doc.fastgpt.io/self-host/upgrading/4-14/4149
 source_type: Official documentation
 ---
 
@@ -44,7 +44,7 @@ An example of adding this toggle to your environment file is:
 CHECK_INTERNAL_IP=true
 ```
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4149)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-14/4149)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: FastGPT V4.15.0版本升级配置与验证说明
 slug: /zh/deploy/upgrade-v4-15-0
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41500
+source: https://doc.fastgpt.cn/self-host/upgrading/4-15/41500
 source_type: 官方文档
 ---
 
@@ -20,7 +20,7 @@ source_type: 官方文档
 ## 升级后怎么验证
 查看服务启动日志，确认无环境变量缺失或格式错误的报错信息。调用插件服务接口，确认返回结果正常。测试文件上传解析、工作流循环与并行节点运行功能，确认可正常执行。若配置SYNC_INDEX=true，可检查数据库索引是否自动完成同步。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41500)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-15/41500)
 
 ## 适用性与版本范围
 

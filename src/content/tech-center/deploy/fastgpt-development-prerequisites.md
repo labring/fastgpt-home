@@ -2,7 +2,7 @@
 title: 介绍FastGPT开发构建所需的前置环境配置要求
 slug: /zh/deploy/fastgpt-development-prerequisites
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/dev
+source: https://doc.fastgpt.cn/self-host/dev
 source_type: 官方文档
 ---
 
@@ -26,7 +26,7 @@ source_type: 官方文档
 ## 推荐开发环境
 为确保开发过程的稳定性，建议使用Linux、MacOS或Windows WSL这类*nix环境进行FastGPT的开发工作。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/dev)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/dev)
 
 ## 适用性与版本范围
 

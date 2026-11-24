@@ -2,7 +2,7 @@
 title: FastGPT V4.14.21版本升级操作与变更说明
 slug: /zh/deploy/fastgpt-41421-upgrade-notes
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41421
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/41421
 source_type: 官方文档
 ---
 
@@ -20,4 +20,4 @@ source_type: 官方文档
 2. 找到fastgpt-pro（FastGPT商业版服务）的镜像配置项，将其镜像tag修改为v4.14.21；
 3. 重新加载部署配置并重启相关服务，即可完成本次版本升级。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41421)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-14/41421)

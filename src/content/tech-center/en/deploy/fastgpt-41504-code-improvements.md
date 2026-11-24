@@ -2,7 +2,7 @@
 title: FastGPT 4.15.04 Key Code Improvement Changes
 slug: /en/deploy/fastgpt-41504-code-improvements
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41504
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/41504
 source_type: Official documentation
 ---
 
@@ -29,7 +29,7 @@ All application API endpoints have been fully rewritten using Zod schemas for st
 ## Image Processing Memory Optimization
 The platform’s image processing pipeline has been updated to process images immediately in dedicated worker threads, rather than retaining base64-encoded image data in main memory during processing. This change removes the memory overhead of storing uncompressed base64 image data throughout the workflow, lowering overall system memory usage and improving stability during high-volume image operations.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41504)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-15/41504)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: Install and Manage FastGPT System Plugins
 slug: /en/deploy/fastgpt-system-plugin-installation
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/deploy/docker
+source: https://doc.fastgpt.io/self-host/deploy/docker
 source_type: Official documentation
 ---
 
@@ -29,7 +29,7 @@ The FastGPT plugin management interface includes built-in controls to organize a
 - Assigning and managing custom tags to group related plugins
 A corresponding screenshot of the plugin management interface is referenced in the official FastGPT documentation.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/deploy/docker)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/deploy/docker)
 
 ## Applicability and version scope
 

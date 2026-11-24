@@ -2,7 +2,7 @@
 title: 在FastGPT中通过Ollama接入本地大模型的完整配置流程
 slug: /zh/deploy/fastgpt-ollama-local-model-config
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/custom-models/ollama
+source: https://doc.fastgpt.cn/self-host/custom-models/ollama
 source_type: 官方文档
 ---
 
@@ -20,4 +20,4 @@ Ollama是开源的AI大模型部署工具，专注于简化大语言模型的下
 
 需注意的边界与易错点：同一个模型无法多次添加，系统会保留最后一次设置的别名；若AI Proxy接入失败，需检查Ollama是否监听0.0.0.0或容器网络是否一致。若使用OneAPI接入，需先拉取intel/oneapi-hpckit镜像并在FastGPT容器的网络中运行，具体配置需参考官方完整流程。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/ollama)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/custom-models/ollama)

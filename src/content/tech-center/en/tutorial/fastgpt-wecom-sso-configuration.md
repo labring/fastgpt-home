@@ -2,7 +2,7 @@
 title: Configure WeCom Single Sign-On for FastGPT
 slug: /en/tutorial/fastgpt-wecom-sso-configuration
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/admin/sso
+source: https://doc.fastgpt.io/guide/admin/sso
 source_type: Official documentation
 ---
 
@@ -72,7 +72,7 @@ The following table lists all required environment variables for the WeCom SSO s
 | WECOM_APP_SECRET | Secret key for the FastGPT internal WeCom app | N/A (user-defined) |
 | WECOM_SYNC_SECRET | Secret key for the WeCom Contact Sync Assistant | N/A (user-defined) |
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/admin/sso)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/admin/sso)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: Update FastGPT LLM and Vector Model Configurations
 slug: /en/deploy/fastgpt-model-config-updates
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4816
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/4816
 source_type: 官方文档
 ---
 
@@ -51,4 +51,4 @@ After editing your `config.json` or admin model configurations, complete these v
 2. Verify the modified JSON file has no syntax errors, such as trailing commas or mismatched brackets
 3. Restart your FastGPT services to apply the new configuration changes
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4816)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/4816)

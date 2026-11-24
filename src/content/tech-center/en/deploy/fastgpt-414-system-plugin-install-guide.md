@@ -2,7 +2,7 @@
 title: Manually Install FastGPT 4.14+ System Plugins
 slug: /en/deploy/fastgpt-414-system-plugin-install-guide
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4140
+source: https://doc.fastgpt.io/self-host/upgrading/4-14/4140
 source_type: 官方文档
 ---
 
@@ -32,4 +32,4 @@ There are two supported methods for installing system plugins:
 
 After successful installation, you can perform additional management tasks including sorting tool listings, setting default plugin installations, and managing plugin tags to organize available extensions.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4140)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/4-14/4140)

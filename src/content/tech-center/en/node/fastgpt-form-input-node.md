@@ -2,7 +2,7 @@
 title: Collect User Input with FastGPT Form Input Nodes
 slug: /en/node/fastgpt-form-input-node
 page_type: Workflow nodes
-source: https://doc.fastgpt.cn/en/guide/build/workflow/nodes/form_input
+source: https://doc.fastgpt.io/guide/build/workflow/nodes/form_input
 source_type: Official documentation
 ---
 
@@ -21,7 +21,7 @@ The Form Input node is a user interaction node within FastGPT workflow builders.
 # Key Operational Details
 When the Form Input node is active, no further workflow execution occurs until the user submits their form data. The saved workflow state ensures that after submission, the workflow resumes exactly where it paused, with the collected form data available to downstream nodes. The submitted form data is passed unmodified to connected nodes, allowing downstream components to utilize the user-provided values directly.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/workflow/nodes/form_input)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/workflow/nodes/form_input)
 
 ## Applicability and version scope
 

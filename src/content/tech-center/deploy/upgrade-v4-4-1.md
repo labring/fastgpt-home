@@ -2,7 +2,7 @@
 title: FastGPT V4.4.1版本升级初始化操作与验证说明
 slug: /zh/deploy/upgrade-v4-4-1
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/441
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/441
 source_type: 官方文档
 ---
 
@@ -26,7 +26,7 @@ curl --location --request POST 'https://{{host}}/api/admin/initv441' \
 ## 升级后怎么验证
 执行初始化请求后，可通过查看Mongo数据库的dataset.files集合，确认所有数据已被设置为可用状态，完成本次升级初始化操作的验证。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/441)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/441)
 
 ## 适用性与版本范围
 

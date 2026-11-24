@@ -2,7 +2,7 @@
 title: FastGPT Self-Hosted Upgrade 496 Feature Improvements
 slug: /en/deploy/fastgpt-upgrade-496-feature-improvements
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/496
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/496
 source_type: 官方文档
 ---
 
@@ -24,4 +24,4 @@ For the breadcrumb component configuration, use the following parameter:
 |----------------|-------------|---------------------------|
 | last_step_clickable | Enables or disables interactivity for the final breadcrumb trail item | 496 |
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/496)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/496)

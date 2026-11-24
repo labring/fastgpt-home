@@ -2,7 +2,7 @@
 title: Configure FastGPT Dataset and File Upload Settings
 slug: /en/tutorial/fastgpt-dataset-file-upload-settings
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/build/agentv2/settings
+source: https://doc.fastgpt.io/guide/build/agentv2/settings
 source_type: Official documentation
 ---
 
@@ -31,7 +31,7 @@ Follow this workflow to apply dataset and file upload settings for your Agent V2
    c. Verify that the selected file types align with the multimodal capabilities of the agent’s configured LLM, as unsupported file types will not be processed
 5. Save all changes to finalize the configuration updates.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/agentv2/settings)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/agentv2/settings)
 
 ## Applicability and version scope
 

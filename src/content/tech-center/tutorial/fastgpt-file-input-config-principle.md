@@ -2,7 +2,7 @@
 title: FastGPT文件输入功能的配置方法与工作原理解读
 slug: /zh/tutorial/fastgpt-file-input-config-principle
 page_type: 教程/部署
-source: https://doc.fastgpt.cn/zh-CN/guide/build/general/fileInput
+source: https://doc.fastgpt.cn/guide/build/general/fileInput
 source_type: 官方文档
 ---
 
@@ -23,4 +23,4 @@ source_type: 官方文档
 在AI节点（AI对话/工具调用）中，可直接传入Array string类型的文件URL列表，系统会自动解析并将内容拼接进system提示词，提示词模板为：`将 FilesContent /FilesContent 中的内容作为本次对话的参考: FilesContent {{quote}} /FilesContent`。
 自4.8.13版本起，该功能有多项更新：简易模式不再由模型决策是否解析文件；工具调用与AI对话可直接选择文档引用，无需挂载文档解析节点；插件与子工作流不再自动传递上传文件，需手动指定输入变量。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/general/fileInput)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/general/fileInput)

@@ -2,7 +2,7 @@
 title: Properly Upgrade FastGPT Across Multiple Versions
 slug: /en/deploy/fastgpt-cross-version-upgrade
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/upgrade-instruction
+source: https://doc.fastgpt.io/self-host/upgrading/upgrade-instruction
 source_type: 官方文档
 ---
 
@@ -25,4 +25,4 @@ Using the sample scenario of upgrading from version 4.4.7 to version 4.6, follow
 ## Preferred Upgrade Best Practice
 The official documentation explicitly recommends upgrading one version at a time to maintain stability during cross-version FastGPT upgrades. This incremental approach ensures that all database schema changes, configuration adjustments, and code updates are applied in sequence, reducing the likelihood of failed upgrades or application errors.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/upgrade-instruction)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/upgrade-instruction)

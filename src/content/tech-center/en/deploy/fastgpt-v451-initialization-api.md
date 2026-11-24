@@ -2,7 +2,7 @@
 title: Run FastGPT v451 Initialization API
 slug: /en/deploy/fastgpt-v451-initialization-api
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/451
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/451
 source_type: 官方文档
 ---
 
@@ -35,4 +35,4 @@ The initialization endpoint performs three targeted updates to your database env
 ## Performance and Troubleshooting
 This initialization endpoint may run slowly due to the scale of database migrations and content setup required. If the HTTP request times out before the process completes, do not stop your FastGPT service or re-run the endpoint immediately. Instead, review your FastGPT service logs to verify whether the initialization process finished successfully, as the timeout only affects the client-side request tracking, not the backend execution.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/451)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/451)

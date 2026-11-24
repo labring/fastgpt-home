@@ -2,7 +2,7 @@
 title: Confirm Prerequisites for FastGPT Team Plugin Installation
 slug: /en/model/fastgpt-team-plugin-install-prereqs
 page_type: Model guides
-source: https://doc.fastgpt.cn/en/plugin/team-installation
+source: https://doc.fastgpt.io/plugin/team-installation
 source_type: Official documentation
 ---
 
@@ -29,7 +29,7 @@ There are two distinct sets of network and file requirements based on the plugin
 
 For detailed guidance on developing and packaging FastGPT plugins, refer to the [System Tool Development Guide](./system-tool-development.en.mdx).
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/plugin/team-installation)
+> Source: [FastGPT official source](https://doc.fastgpt.io/plugin/team-installation)
 
 ## Applicability and version scope
 

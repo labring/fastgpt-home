@@ -2,7 +2,7 @@
 title: FastGPT部署时修改环境变量的配置要求与操作步骤
 slug: /zh/reference/fastgpt-deploy-env-config
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/deploy/docker
+source: https://doc.fastgpt.cn/self-host/deploy/docker
 source_type: 官方文档小节
 ---
 
@@ -27,5 +27,5 @@ source_type: 官方文档小节
 3.  `AGENT_SANDBOX_PREVIEW_PROXY_URL`仅需在4.16及以上版本中配置。
 4.  仅Zilliz版本需要参考官方文档获取账号和密钥，其他版本无需此操作。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/deploy/docker)
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/deploy/docker)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host)

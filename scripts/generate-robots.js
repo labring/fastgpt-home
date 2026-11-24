@@ -22,6 +22,20 @@ const docUrl = isCn ? 'https://doc.fastgpt.cn' : 'https://doc.fastgpt.io';
 const cloudUrl = isCn ? 'https://cloud.fastgpt.cn' : 'https://cloud.fastgpt.io';
 const primaryLlmUrl = isCn ? `${cnUrl}/llms.txt` : `${ioUrl}/llms.txt`;
 
+const aiCrawlers = [
+  'OAI-SearchBot',
+  'GPTBot',
+  'ChatGPT-User',
+  'PerplexityBot',
+  'ClaudeBot',
+  'Google-Extended',
+  'Applebot-Extended',
+  'Amazonbot'
+];
+const aiCrawlerRules =
+  variant === 'preview'
+    ? ''
+    : `\n${aiCrawlers.map((crawler) => `User-agent: ${crawler}\nAllow: /`).join('\n\n')}\n`;
 const sitemap = variant === 'preview' ? '' : `\nSitemap: ${baseUrl}/sitemap.xml`;
 const content = `# robots.txt for FastGPT - ${baseUrl}
 #
@@ -34,6 +48,7 @@ const content = `# robots.txt for FastGPT - ${baseUrl}
 # - International website: ${ioUrl}
 # - Cloud Service: ${cloudUrl}
 # - Documentation: ${docUrl}
+# - Documentation LLM Context: ${docUrl}/llms.txt
 # - Pricing:       ${baseUrl}/price
 # - FAQ:           ${baseUrl}/faq
 # - GitHub:        https://github.com/labring/FastGPT
@@ -42,7 +57,7 @@ const content = `# robots.txt for FastGPT - ${baseUrl}
 
 User-agent: *
 Allow: /
-${sitemap}
+${aiCrawlerRules}${sitemap}
 `;
 
 const outputPath = path.join(__dirname, '../public/robots.txt');

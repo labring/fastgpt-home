@@ -29,4 +29,4 @@ source_type: GitHub issue
 
 > 来源: [原始讨论：能不能增加paddle-vl的增强解析支持](https://github.com/labring/FastGPT/issues/5789)
 
-> 来源: [FastGPT 环境变量与自定义 PDF 解析](https://doc.fastgpt.io/en/self-host/config/env)
+> 来源: [FastGPT 环境变量与自定义 PDF 解析](https://doc.fastgpt.io/self-host/config/env)

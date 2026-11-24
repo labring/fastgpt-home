@@ -2,7 +2,7 @@
 title: FastGPT循环节点使用注意事项与避坑说明
 slug: /zh/tutorial/fastgpt-loop-node-pitfalls
 page_type: 教程
-source: https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/loop_run
+source: https://doc.fastgpt.cn/guide/build/workflow/nodes/loop_run
 source_type: 官方文档
 ---
 
@@ -21,8 +21,8 @@ source_type: 官方文档
 ## 死循环防范机制
 条件循环必须在子流程的某个分支能最终触发【循环终止】节点，否则可能导致无限运行。系统设定了最大循环次数，默认值为100次，达到上限后会自动报错并安全停止，遵循预设的异常处理规则。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/loop_run)
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/loop_run)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/workflow/nodes/loop_run)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/workflow/nodes/loop_run)
 
 ## 适用性与版本范围
 

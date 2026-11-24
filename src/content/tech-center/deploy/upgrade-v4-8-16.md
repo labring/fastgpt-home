@@ -2,7 +2,7 @@
 title: FastGPT V4.8.16版本升级操作与变更说明
 slug: /zh/deploy/upgrade-v4-8-16
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4816
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4816
 source_type: 官方文档
 ---
 
@@ -47,7 +47,7 @@ source_type: 官方文档
 ## 升级后怎么验证
 确认所有镜像版本为v4.8.16，检查模型配置包含provider字段并可正常调用。测试新增功能正常运行，包括SearXNG搜索、猜你想问配置、钉钉企微webhook插件、商业版同步与SSO登录、知识库导入等。验证工作流功能、默认语言切换、数组选择器兼容、图片URL读取等修复项正常生效。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4816)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/4816)
 
 ## 适用性与版本范围
 

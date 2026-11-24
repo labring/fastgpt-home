@@ -2,7 +2,7 @@
 title: FastGPT自部署版本升级操作与配置说明
 slug: /zh/deploy/fastgpt-self-host-upgrade
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/upgrade-intruction
+source: https://doc.fastgpt.cn/self-host/upgrading/upgrade-intruction
 source_type: 官方文档
 ---
 
@@ -21,4 +21,4 @@ FastGPT的镜像分为主镜像、Plugin镜像、代码沙箱镜像、MCP SSE se
 ## 升级脚本与注意事项
 镜像更新完成后，仅当版本说明中标注包含升级脚本时，需要执行初始化脚本，大部分场景需发送POST请求完成操作。执行脚本前需注意：{{host}}为服务器域名或IP，Sealos中可在对应页面获取域名；ROOT_KEY可从docker-compose.yml的environment字段中获取，Sealos环境可从左侧环境变量列表查看。跨版本升级前必须先进行数据备份，建议逐一版本升级，例如从4.4.7升级至4.6时，需依次修改镜像至4.5、4.5.1、4.6并分别执行升级脚本。数据表大幅变更且无法通过默认值设置或复杂度较高时，会通过升级脚本更新字段，严格遵循步骤不会导致旧数据丢失，但数据量较大时初始化期间服务可能暂时无法使用。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/upgrade-intruction)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/upgrade-intruction)

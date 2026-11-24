@@ -2,7 +2,7 @@
 title: FastGPT V4.14.10版本升级操作与验证指南
 slug: /zh/deploy/upgrade-v4-14-10
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41410
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/41410
 source_type: 官方文档
 ---
 
@@ -77,7 +77,7 @@ source_type: 官方文档
 5. 重新导入系统工具pkg后，确认工具头像恢复显示
 6. 验证子工作流全局变量默认值生效、rerank模型正常显示等修复项是否解决
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41410)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-14/41410)
 
 ## 适用性与版本范围
 

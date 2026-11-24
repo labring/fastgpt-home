@@ -2,7 +2,7 @@
 title: FastGPT自部署时常用服务及配置的环境变量说明
 slug: /zh/reference/fastgpt-self-deploy-env-vars
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/env
+source: https://doc.fastgpt.cn/self-host/config/env
 source_type: 官方文档小节
 ---
 
@@ -21,4 +21,4 @@ source_type: 官方文档小节
 -  仅projects/app或pro/admin独有的环境变量，需查阅单独归类的说明。
 -  所有配置说明仅适用于FastGPT自部署场景。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/config/env)

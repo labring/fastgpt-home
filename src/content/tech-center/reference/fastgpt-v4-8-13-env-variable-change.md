@@ -2,7 +2,7 @@
 title: FastGPT V4.8.13版本环境变量变更的适配操作说明
 slug: /zh/reference/fastgpt-v4-8-13-env-variable-change
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4813
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4813
 source_type: 官方文档小节
 ---
 
@@ -21,4 +21,4 @@ FastGPT V4.8.13版本存在环境变量配置变更，需调整部署配置以�
 2. 未按要求调整环境变量可能导致服务启动异常
 3. 需确保配置修改后重新加载服务配置
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4813)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/4813)

@@ -2,7 +2,7 @@
 title: 介绍FastGPT MCP服务器的配置与调用方法
 slug: /zh/glossary/fastgpt-mcp-server-usage
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/guide/build/publish/mcp_server
+source: https://doc.fastgpt.cn/guide/build/publish/mcp_server
 source_type: 官方文档
 ---
 
@@ -36,8 +36,8 @@ FastGPT MCP服务器是支持MCP协议的应用调用接口，可被兼容客户
 4.  若同时使用两种身份请求头，必须指向同一团队成员，否则将导致验证失败。
 5.  `x-fastgpt-auth-proxy-username`推荐使用成员登录邮箱作为参数值，使用非邮箱格式可能不符合推荐配置。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/publish/mcp_server)
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/publish/mcp_server)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/publish/mcp_server)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/publish/mcp_server)
 
 ## 适用性与版本范围
 

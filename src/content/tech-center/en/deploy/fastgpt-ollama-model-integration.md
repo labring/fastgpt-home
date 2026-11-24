@@ -2,7 +2,7 @@
 title: Add and Use Ollama Models in FastGPT
 slug: /en/deploy/fastgpt-ollama-model-integration
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/custom-models/ollama
+source: https://doc.fastgpt.io/self-host/custom-models/ollama
 source_type: Official documentation
 ---
 
@@ -26,7 +26,7 @@ Once the model is successfully registered, you can deploy it within FastGPT appl
 3. Select the Ollama model you registered earlier; the displayed name will be the custom alias you assigned during setup.
 An accompanying screenshot demonstrates selecting the configured model within the studio application builder. After selection, the application will use the registered Ollama model for all chat and generation workflows associated with that app.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/custom-models/ollama)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/custom-models/ollama)
 
 ## Applicability and version scope
 

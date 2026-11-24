@@ -3,7 +3,7 @@ title: 企业知识库拆分与检索范围选型决策矩阵
 slug: /zh/guide/kb-scope-and-split-selection
 page_type: 决策矩阵页
 source_type: 官方文档（v4.17.2）与社区线程
-source: https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/dataset_search
+source: https://doc.fastgpt.cn/guide/build/workflow/nodes/dataset_search
 source_note: "判据取自 FastGPT v4.17.2 官方文档与社区线程，核验日 2026-10-13。"
 check_day: 2026-10-13
 article_section: 选型与评估
@@ -47,9 +47,9 @@ date_modified: 2026-10-14
 
 ## 参考资料
 
-- [集合标签](https://doc.fastgpt.cn/zh-CN/guide/dataset/collection_tags)
-- [知识库搜索节点](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/dataset_search)
-- [知识库搜索引用合并](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/knowledge_base_search_merge)
+- [集合标签](https://doc.fastgpt.cn/guide/dataset/collection_tags)
+- [知识库搜索节点](https://doc.fastgpt.cn/guide/build/workflow/nodes/dataset_search)
+- [知识库搜索引用合并](https://doc.fastgpt.cn/guide/build/workflow/nodes/knowledge_base_search_merge)
 
 ## 需要进一步确认时
 

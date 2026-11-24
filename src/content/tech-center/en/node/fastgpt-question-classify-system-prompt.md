@@ -2,7 +2,7 @@
 title: Configure FastGPT Question Classification System Prompt
 slug: /en/node/fastgpt-question-classify-system-prompt
 page_type: Workflow nodes
-source: https://doc.fastgpt.cn/en/guide/build/workflow/nodes/question_classify
+source: https://doc.fastgpt.io/guide/build/workflow/nodes/question_classify
 source_type: Official documentation
 ---
 
@@ -29,7 +29,7 @@ The following table summarizes key details about the System Prompt parameter:
 3. Input the completed System Prompt into the node’s configuration settings.
 4. Validate the configuration by running test queries against the node to confirm accurate classification of sample inputs.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/workflow/nodes/question_classify)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/workflow/nodes/question_classify)
 
 ## Applicability and version scope
 

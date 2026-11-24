@@ -2,7 +2,7 @@
 title: FastGPT V4.14.20版本升级内容与操作验证说明
 slug: /zh/deploy/upgrade-v4-14-20
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41420
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/41420
 source_type: 官方文档
 ---
 
@@ -23,7 +23,7 @@ source_type: 官方文档
 ## 升级后怎么验证
 可通过运行工作流验证其数据类型适配正常，同时配置模型参数确认可正常覆盖 defaultConfig，以此确认本次升级已生效。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41420)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-14/41420)
 
 ## 适用性与版本范围
 

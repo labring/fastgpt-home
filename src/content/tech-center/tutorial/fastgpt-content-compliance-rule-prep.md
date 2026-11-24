@@ -2,7 +2,7 @@
 title: 配置FastGPT内容审核合规规则库的准备方法
 slug: /zh/tutorial/fastgpt-content-compliance-rule-prep
 page_type: 教程
-source: https://doc.fastgpt.cn/zh-CN/guide/getting-started/quick-start
+source: https://doc.fastgpt.cn/guide/getting-started/quick-start
 source_type: 官方文档
 ---
 
@@ -38,7 +38,7 @@ source_type: 官方文档
 
 规则库无需在初始阶段过于复杂，优先完成基础分类即可快速验证功能效果，后续可根据实际业务场景逐步扩展规则范围，适配不同的内容审核需求。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/getting-started/quick-start)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/getting-started/quick-start)
 
 ## 适用性与版本范围
 

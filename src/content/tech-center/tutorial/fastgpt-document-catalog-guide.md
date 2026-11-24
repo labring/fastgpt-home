@@ -2,7 +2,7 @@
 title: FastGPT官方文档目录的结构化导航与内容查询指南
 slug: /zh/tutorial/fastgpt-document-catalog-guide
 page_type: 教程/部署
-source: https://doc.fastgpt.cn/zh-CN/toc
+source: https://doc.fastgpt.cn/toc
 source_type: 官方文档小节
 ---
 
@@ -17,4 +17,4 @@ FastGPT官方文档目录按照功能模块划分为入门、应用构建、对�
 
 目录中还包含了完整的版本升级文档，覆盖了从旧版本到4.16的各版本升级路径，例如4.14版本的升级文档包含`/self-host/upgrading/4-14/4140`至`/self-host/upgrading/4-14/4149`等多个子页面，同时提供了故障排查专区，涵盖常见问题、排查方法、S3存储问题、模型错误等内容，帮助用户快速解决部署和使用过程中遇到的问题。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/toc)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/toc)

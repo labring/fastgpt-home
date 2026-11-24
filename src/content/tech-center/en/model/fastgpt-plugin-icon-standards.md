@@ -2,7 +2,7 @@
 title: Define FastGPT Plugin Icon File Standards
 slug: /en/model/fastgpt-plugin-icon-standards
 page_type: Model guides
-source: https://doc.fastgpt.cn/en/plugin/system-tool-development
+source: https://doc.fastgpt.io/plugin/system-tool-development
 source_type: Official documentation
 ---
 
@@ -27,7 +27,7 @@ The `<childId>` placeholder in the child icon filename must exactly match the `i
 ## Post-Build Validation
 After completing the plugin build process, confirm that the correct icon configuration was applied by checking the `icon` field in the generated `dist/manifest.json` file. This field will reflect the detected main plugin icon, and will include references to custom child icons if they were included in the plugin root directory.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/plugin/system-tool-development)
+> Source: [FastGPT official source](https://doc.fastgpt.io/plugin/system-tool-development)
 
 ## Applicability and version scope
 

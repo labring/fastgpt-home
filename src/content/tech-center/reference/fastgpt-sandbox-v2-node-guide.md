@@ -2,7 +2,7 @@
 title: FastGPT 4.14.8及以上版本代码运行节点使用速查
 slug: /zh/reference/fastgpt-sandbox-v2-node-guide
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/sandbox-v2
+source: https://doc.fastgpt.cn/guide/build/workflow/nodes/sandbox-v2
 source_type: 官方文档小节
 ---
 
@@ -19,4 +19,4 @@ source_type: 官方文档小节
 ## 注意事项
 仅支持FastGPT 4.14.8及以上版本使用该节点。使用前需核对平台版本，避免出现兼容性问题。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/sandbox-v2)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/workflow/nodes/sandbox-v2)

@@ -2,7 +2,7 @@
 title: Set Up FastGPT Integration With SiliconCloud
 slug: /en/deploy/fastgpt-siliconcloud-integration
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/model/siliconCloud
+source: https://doc.fastgpt.io/self-host/config/model/siliconCloud
 source_type: Official documentation
 ---
 
@@ -25,7 +25,7 @@ Follow this structured workflow to maximize the value of SiliconCloud with FastG
 3. Use the results from SiliconCloud-based testing to finalize requirements for full self-hosted hardware procurement.
 4. Transition from SiliconCloud to the self-hosted model and FastGPT environment once dedicated hardware is available, building on the validation completed during the initial testing phase.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/model/siliconCloud)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/model/siliconCloud)
 
 ## Applicability and version scope
 

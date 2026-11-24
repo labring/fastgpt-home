@@ -2,7 +2,7 @@
 title: FastGPT V4.5.2版本升级内容与操作验证指南
 slug: /zh/deploy/upgrade-v4-5-2
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/452
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/452
 source_type: 官方文档
 ---
 
@@ -20,7 +20,7 @@ source_type: 官方文档
 ## 升级后怎么验证
 可通过两项操作验证本版本升级是否成功。第一，进入系统的模块配置页面，测试模块插件的组装与复用功能，确认插件可正常加载并组合为可用的功能模块，验证新增功能是否生效。第二，查看知识库的引用提示，确认优化后的提示逻辑正常展示，提示的形式与内容符合预期效果，验证优化功能是否正常运行。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/452)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/452)
 
 ## 适用性与版本范围
 

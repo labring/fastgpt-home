@@ -2,7 +2,7 @@
 title: FastGPT 4912 Technical Upgrade Feature Details
 slug: /en/deploy/fastgpt-4912-new-features
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4912
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/4912
 source_type: 官方文档
 ---
 
@@ -31,4 +31,4 @@ Several core workflow and model-related improvements are included:
 ## Centralized Admin Dashboard Analytics
 A new admin dashboard with built-in data analytics is now available, providing platform administrators with a centralized view of usage metrics, model performance trends, and workflow execution data. This removes the need for third-party logging and monitoring tools for basic platform oversight.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4912)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/4912)

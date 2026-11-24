@@ -2,7 +2,7 @@
 title: FastGPT V4.15.0-beta3版本升级与环境变量配置说明
 slug: /zh/deploy/fastgpt-beta3-upgrade-config
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41503
+source: https://doc.fastgpt.cn/self-host/upgrading/4-15/41503
 source_type: 官方文档
 ---
 
@@ -41,4 +41,4 @@ source_type: 官方文档
     ```
 4.  重启服务完成版本升级与配置生效。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41503)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-15/41503)

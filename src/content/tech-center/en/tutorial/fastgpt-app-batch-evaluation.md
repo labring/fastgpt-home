@@ -2,7 +2,7 @@
 title: Perform Quantitative FastGPT App Performance Evaluation
 slug: /en/tutorial/fastgpt-app-batch-evaluation
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/build/evaluation
+source: https://doc.fastgpt.io/guide/build/evaluation
 source_type: Official documentation
 ---
 
@@ -24,7 +24,7 @@ The FastGPT batch evaluation tool supports three core evaluation metrics for mea
 ## Batch Evaluation Usage
 To utilize the batch evaluation feature, you must provide multiple QA pairs. The system will automatically score your application's responses, generating quantitative performance metrics for your FastGPT application. No additional configuration steps are required beyond submitting valid QA pairs for this beta feature.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/evaluation)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/evaluation)
 
 ## Applicability and version scope
 

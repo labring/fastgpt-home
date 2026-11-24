@@ -2,7 +2,7 @@
 title: Document FastGPT user chat file storage structure
 slug: /en/tutorial/fastgpt-user-chat-file-storage
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/build/general/fileInput
+source: https://doc.fastgpt.io/guide/build/general/fileInput
 source_type: Official documentation
 ---
 
@@ -27,7 +27,7 @@ The core type for user chat message values is `UserChatItemValueItemType`, with 
 ## File Storage Behavior
 Uploaded files referenced in FastGPT user chat history are stored exclusively as publicly accessible URLs. FastGPT does not save raw file bytes or parsed document content extracted from uploaded files directly within the chat record. This design keeps chat history lightweight, as file data is referenced rather than duplicated across chat sessions. When a user uploads a file, the system generates a unique URL alongside optional metadata such as the original filename and file key, which are then stored in the chat item’s `file` object.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/general/fileInput)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/general/fileInput)
 
 ## Applicability and version scope
 

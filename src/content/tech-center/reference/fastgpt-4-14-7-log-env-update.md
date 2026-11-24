@@ -2,7 +2,7 @@
 title: FastGPT 4.14.7版本日志系统环境变量更新指南
 slug: /zh/reference/fastgpt-4-14-7-log-env-update
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4147
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/4147
 source_type: 官方文档小节
 ---
 
@@ -27,4 +27,4 @@ FastGPT 4.14.7版本更新了日志系统，包含日志打印、采集与分析
 3. 必须完全移除旧版日志相关环境变量，避免配置冲突。
 4. 各环境变量的默认值与配置需严格按照原文设置，如需调整需遵循日志等级相关规则。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4147)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-14/4147)

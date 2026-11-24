@@ -2,7 +2,7 @@
 title: FastGPT Agent沙箱环境变量的配置与使用说明
 slug: /zh/deploy/fastgpt-agent-sandbox-config
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/env
+source: https://doc.fastgpt.cn/self-host/config/env
 source_type: 官方文档小节
 ---
 
@@ -20,4 +20,4 @@ Agent沙箱用于隔离FastGPT中Agent的运行环境，支持sealosdevbox、ope
 ## 可选配置参数
 可根据需求调整以下环境变量：AGENT_SANDBOX_STORAGE_SIZE_GI用于设置沙箱存储容量，默认值为1Gi；AGENT_SANDBOX_SUSPEND_MINUTES设置未活跃沙箱的自动暂停时长，默认60分钟；AGENT_SANDBOX_ARCHIVE_INACTIVE_DAYS设置已暂停沙箱的自动归档天数，默认7天。还可配置AGENT_SANDBOX_NPM_REGISTRY指定沙箱内npm等包管理器的源，以及AGENT_SANDBOX_PYPI_INDEX_URL指定pip等工具的PyPI源。另外，可通过AGENT_SANDBOX_FREE_TIP控制是否展示前端免费提示，默认不展示；AGENT_SANDBOX_MAX_EDIT_DEBUG限制编辑/调试沙箱的数量，默认值为100。对于opensandbox部署，可通过AGENT_SANDBOX_OPENSANDBOX_USE_SERVER_PROXY设置是否通过服务端代理访问，默认值为true，还可通过AGENT_SANDBOX_OPENSANDBOX_VOLUME_NAME_PREFIX设置持久卷前缀，默认值为fastgpt-session，升级时需沿用旧值。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/config/env)

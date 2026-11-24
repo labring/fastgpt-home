@@ -2,7 +2,7 @@
 title: Remove Legacy Worker Concurrency Settings for FastGPT 4.16.2
 slug: /en/deploy/fastgpt-4162-remove-worker-concurrency-settings
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-16/4162
+source: https://doc.fastgpt.io/self-host/upgrading/4-16/4162
 source_type: 官方文档
 ---
 
@@ -25,4 +25,4 @@ Follow these steps to remove deprecated worker settings:
 3. Delete each matching variable and its assigned value from the file.
 4. Save the modified configuration file, then restart your FastGPT services to apply the changes.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/4-16/4162)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/4-16/4162)

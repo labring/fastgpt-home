@@ -31,4 +31,4 @@ source_type: GitHub issue
 
 > 来源: [原讨论中的补充回复](https://github.com/labring/FastGPT/issues/767#issuecomment-1906364866)
 
-> 来源: [FastGPT 模型配置](https://doc.fastgpt.io/en/self-host/config/model/intro)
+> 来源: [FastGPT 模型配置](https://doc.fastgpt.io/self-host/config/model/intro)

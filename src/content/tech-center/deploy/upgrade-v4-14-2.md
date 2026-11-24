@@ -2,7 +2,7 @@
 title: FastGPT V4.14.2版本升级内容与操作指南
 slug: /zh/deploy/upgrade-v4-14-2
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4142
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/4142
 source_type: 官方文档
 ---
 
@@ -23,7 +23,7 @@ source_type: 官方文档
 ## 升级后怎么验证
 可通过以下方式验证升级效果：确认模板市场UI更新且缓存时长符合预期，Agent编辑页可快速创建知识库；测试简易应用模板转化、多连续用户选择的工具调用、门户团队应用展示、MCP应用全局变量配置等功能是否正常；检查插件相关的头像显示、工具运行、静态文件上传等功能是否恢复正常。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4142)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-14/4142)
 
 ## 适用性与版本范围
 

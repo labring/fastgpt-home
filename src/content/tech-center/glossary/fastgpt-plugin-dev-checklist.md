@@ -2,7 +2,7 @@
 title: FastGPT系统插件的创建方法与提交前验证要求
 slug: /zh/glossary/fastgpt-plugin-dev-checklist
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/plugin/system-tool-development
+source: https://doc.fastgpt.cn/plugin/system-tool-development
 source_type: 官方文档
 ---
 
@@ -60,8 +60,8 @@ pnpx @fastgpt-plugin/cli create my-tool-suite --type tool-suite --cwd packages/t
 5. 未处理外部API的异常场景，如超时、鉴权失败等。
 6. 未运行`pnpm run test`或构建打包脚本就提交插件。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/plugin/system-tool-development)
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/plugin/system-tool-development)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/plugin/system-tool-development)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/plugin/system-tool-development)
 
 ## 适用性与版本范围
 

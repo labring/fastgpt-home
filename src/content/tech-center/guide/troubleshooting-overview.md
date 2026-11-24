@@ -2,7 +2,7 @@
 title: FastGPT 报错与排障问题全景：按出错环节分流
 slug: /zh/guide/troubleshooting-overview
 page_type: 问题全景聚合页
-source: https://doc.fastgpt.cn/zh-CN/self-host/deploy/docker
+source: https://doc.fastgpt.cn/self-host/deploy/docker
 source_type: 站内已发布文档的程序化归类
 check_day: 2026-09-28
 article_section: 报错与排障
@@ -69,10 +69,10 @@ date_modified: 2026-10-15
 
 ## 参考资料
 
-- [FastGPT Docker Compose 部署](https://doc.fastgpt.cn/zh-CN/self-host/deploy/docker)
-- [FastGPT 环境变量](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
-- [FastGPT 升级说明](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/upgrade-instruction)
-- [FastGPT 本地开发](https://doc.fastgpt.cn/zh-CN/self-host/dev)
+- [FastGPT Docker Compose 部署](https://doc.fastgpt.cn/self-host/deploy/docker)
+- [FastGPT 环境变量](https://doc.fastgpt.cn/self-host/config/env)
+- [FastGPT 升级说明](https://doc.fastgpt.cn/self-host/upgrading/upgrade-instruction)
+- [FastGPT 本地开发](https://doc.fastgpt.cn/self-host/dev)
 
 ## 问题仍未定位时
 

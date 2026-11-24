@@ -2,7 +2,7 @@
 title: 介绍FastGPT社区版的适用对象与包含的核心功能
 slug: /zh/reference/fastgpt-community-edition-intro
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/version/opensource/intro
+source: https://doc.fastgpt.cn/guide/version/opensource/intro
 source_type: 官方文档小节
 ---
 
@@ -19,4 +19,4 @@ FastGPT社区版是FastGPT的免费版本，适合个人开发者或小型交付
 ## 注意事项
 使用FastGPT社区版必须遵守FastGPT开源协议的相关要求，社区版仅适用于个人开发者或小型交付团队，如需商业相关服务支持，可参考FastGPT商业版的相关说明。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/version/opensource/intro)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/version/opensource/intro)

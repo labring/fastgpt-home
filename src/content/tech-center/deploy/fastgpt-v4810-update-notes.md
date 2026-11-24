@@ -2,7 +2,7 @@
 title: FastGPT V4.8.10版本更新功能与修复优化说明
 slug: /zh/deploy/fastgpt-v4810-update-notes
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4810
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4810
 source_type: 官方文档小节
 ---
 
@@ -18,4 +18,4 @@ source_type: 官方文档小节
 ## 部署升级步骤
 1. 备份当前项目的MongoDB数据库与所有配置文件；2. 拉取对应版本的FastGPT代码，更新.env.template文件内MongoDB相关的注释说明；3. 执行对应版本的升级脚本（如V4.8.9或V4.8.11升级脚本）；4. 重启服务后验证核心功能，例如检查工作流运行时间统计、全局变量持久化、Milvus知识库导出等修复项。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4810)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/4810)

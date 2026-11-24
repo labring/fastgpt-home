@@ -2,7 +2,7 @@
 title: Configure FastGPT content review and rewrite workflows
 slug: /en/tutorial/fastgpt-content-review-rewrite-workflow
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/getting-started/quick-start
+source: https://doc.fastgpt.io/guide/getting-started/quick-start
 source_type: Official documentation
 ---
 
@@ -28,7 +28,7 @@ With separated node responsibilities, you can quickly isolate and resolve workfl
 - If the AI classification node produces incorrect results, audit the context provided to the model and the classification prompt logic.
 - If content fails to route to the intended branch, check the conditional branching node’s condition mappings to ensure they align with the three standard classification outputs.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/getting-started/quick-start)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/getting-started/quick-start)
 
 ## Applicability and version scope
 

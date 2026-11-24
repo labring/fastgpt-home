@@ -2,7 +2,7 @@
 title: FastGPT v4.15.0 Self-Hosted New Feature Updates
 slug: /en/deploy/fastgpt-v4-15-0-new-features-2
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41501
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/41501
 source_type: Official documentation
 ---
 
@@ -27,7 +27,7 @@ To prevent excessive resource contention during resource-intensive tasks, three 
 | Text chunking                  | Adjustable via environment variables  |
 Administrators can tune pool sizes via environment variables to align with their infrastructure's available resources. Additionally, model reasoning configuration has been added, providing a dedicated setup layer for fine-tuning model inference parameters to match specific workload requirements.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41501)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-15/41501)
 
 ## Applicability and version scope
 

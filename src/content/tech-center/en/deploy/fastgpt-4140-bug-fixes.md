@@ -2,7 +2,7 @@
 title: Resolved Bugs for FastGPT 4.14.0 Upgrade
 slug: /en/deploy/fastgpt-4140-bug-fixes
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4140
+source: https://doc.fastgpt.io/self-host/upgrading/4-14/4140
 source_type: Official documentation
 ---
 
@@ -39,7 +39,7 @@ Workflow and user interface issues were addressed to improve operational reliabi
 | Redo Operation History      | Restores edit history snapshot functionality post-Redo                              |
 | HTTP Custom Input           | Prevents loss of custom input configurations                                        |
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4140)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-14/4140)
 
 ## Applicability and version scope
 

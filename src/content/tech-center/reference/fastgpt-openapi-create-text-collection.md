@@ -2,7 +2,7 @@
 title: 使用FastGPT OpenAPI创建纯文本知识库集合
 slug: /zh/reference/fastgpt-openapi-create-text-collection
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/openapi/dataset
+source: https://doc.fastgpt.cn/openapi/dataset
 source_type: 官方文档小节
 ---
 
@@ -32,4 +32,4 @@ source_type: 官方文档小节
 - 成功响应的`code`为200，返回数据包含新集合的`collectionId`与插入文本的分段数量`insertLen`。
 - `metadata`字段当前无实际作用，可传入空对象。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/openapi/dataset)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/openapi/dataset)

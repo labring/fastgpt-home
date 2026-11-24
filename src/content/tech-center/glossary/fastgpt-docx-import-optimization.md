@@ -2,7 +2,7 @@
 title: FastGPT中docx文件导入功能的问题与优化说明
 slug: /zh/glossary/fastgpt-docx-import-optimization
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/465
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/465
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ FastGPT的docx文件导入功能，用于将docx格式文件解析并导入知�
 ## 容易搞错的地方
 在4.6.2版本中，导入包含背景图的docx文件时，会出现解析过程无报错但持续转圈无法完成的异常。仅在删除docx文件内的背景图后，导入流程才可正常完成。该异常问题在4.6.5版本中已通过优化docx读取逻辑得到修复。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/465)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/465)
 
 ## 适用性与版本范围
 

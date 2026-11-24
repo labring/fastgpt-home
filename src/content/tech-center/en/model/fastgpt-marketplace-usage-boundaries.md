@@ -2,7 +2,7 @@
 title: FastGPT Marketplace Distribution and Usage Boundaries
 slug: /en/model/fastgpt-marketplace-usage-boundaries
 page_type: Model guides
-source: https://doc.fastgpt.cn/en/plugin/intro
+source: https://doc.fastgpt.io/plugin/intro
 source_type: Official documentation
 ---
 
@@ -35,7 +35,7 @@ Three distinct workflows align with the Marketplace’s core boundaries, coverin
 2. Upload the third-party custom plugin file to the FastGPT platform.
 3. Manage the uploaded plugin as a system-wide tool, controlling access for all authorized platform users.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/plugin/intro)
+> Source: [FastGPT official source](https://doc.fastgpt.io/plugin/intro)
 
 ## Applicability and version scope
 

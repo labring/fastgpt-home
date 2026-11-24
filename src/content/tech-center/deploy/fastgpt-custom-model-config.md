@@ -2,7 +2,7 @@
 title: FastGPT自定义模型添加与配置参数说明
 slug: /zh/deploy/fastgpt-custom-model-config
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/model/intro
+source: https://doc.fastgpt.cn/self-host/config/model/intro
 source_type: 官方文档
 ---
 
@@ -23,7 +23,7 @@ FastGPT的自定义模型分为语言模型、索引模型、重排模型、语�
 - 语音合成模型：配置项包含是否启用、是否为自定义模型、模型类型、模型提供商、模型标识、模型别名、音色列表、积分定价。
 - 语音识别模型：配置项包含是否启用、是否为自定义模型、模型提供商、模型标识、模型别名、积分定价、模型类型。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/config/model/intro)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/config/model/intro)
 
 ## 适用性与版本范围
 

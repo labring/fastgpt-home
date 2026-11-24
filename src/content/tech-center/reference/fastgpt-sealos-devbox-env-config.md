@@ -2,7 +2,7 @@
 title: 配置FastGPT使用Sealos Devbox作为Agent沙盒的相关环境变量
 slug: /zh/reference/fastgpt-sealos-devbox-env-config
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/sandbox/sealosdevbox
+source: https://doc.fastgpt.cn/self-host/config/sandbox/sealosdevbox
 source_type: 官方文档小节
 ---
 
@@ -29,4 +29,4 @@ source_type: 官方文档小节
 3. AGENT_SANDBOX_SEALOS_TOKEN需替换为客服提供的实际访问密钥。
 4. 沙盒镜像需使用文档指定的镜像地址。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/sandbox/sealosdevbox)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/config/sandbox/sealosdevbox)

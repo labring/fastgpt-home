@@ -2,7 +2,7 @@
 title: FastGPT 4910 Version Feature Improvement Breakdown
 slug: /en/deploy/fastgpt-4910-upgrade-improvements
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4910
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/4910
 source_type: 官方文档
 ---
 
@@ -31,4 +31,4 @@ User interface and mobile interaction quality have been improved across the plat
 | Mobile Voice Input           | Accurately detects physical phones (not just small screens)                     |
 | Context Truncation Algorithm | Preserves at least one Human message during truncation                          |
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4910)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/4910)

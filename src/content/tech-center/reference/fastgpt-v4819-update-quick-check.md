@@ -2,7 +2,7 @@
 title: FastGPT V4.8.19版本更新内容技术速查
 slug: /zh/reference/fastgpt-v4819-update-quick-check
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4818
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4818
 source_type: 官方文档小节
 ---
 
@@ -28,4 +28,4 @@ source_type: 官方文档小节
 4. 修复了HTML文件上传base64图片无法自动转链接、插件计费错误两类问题。
 5. 本次更新新增头像图片唯一存储功能，避免存储累积。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4818)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/4818)

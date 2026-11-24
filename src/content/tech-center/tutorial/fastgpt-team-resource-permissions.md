@@ -2,7 +2,7 @@
 title: FastGPT团队及应用知识库资源权限管理说明
 slug: /zh/tutorial/fastgpt-team-resource-permissions
 page_type: 教程
-source: https://doc.fastgpt.cn/zh-CN/guide/workspace/team/team_roles_permissions
+source: https://doc.fastgpt.cn/guide/workspace/team/team_roles_permissions
 source_type: 官方文档
 ---
 
@@ -26,7 +26,7 @@ source_type: 官方文档
 |  | 可编辑 | 修改知识库的内容 |
 |  | 可管理 | 添加或删除协作者 |
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/workspace/team/team_roles_permissions)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/workspace/team/team_roles_permissions)
 
 ## 适用性与版本范围
 

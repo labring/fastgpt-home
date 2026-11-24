@@ -2,7 +2,7 @@
 title: FastGPT通过本地文件调用API创建知识库文件集合
 slug: /zh/reference/fastgpt-local-file-dataset-collection-create
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/openapi/dataset
+source: https://doc.fastgpt.cn/openapi/dataset
 source_type: 官方文档小节
 ---
 
@@ -44,4 +44,4 @@ source_type: 官方文档小节
 3.  支持的文件格式包括：pdf、docx、md、txt、html、csv
 4.  `data`字段必须为JSON序列化后的字符串，不可直接传入原生JSON对象
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/openapi/dataset)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/openapi/dataset)

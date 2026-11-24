@@ -2,7 +2,7 @@
 title: Resolved FastGPT 492 Update Bug Fixes
 slug: /en/deploy/fastgpt-492-bug-fixes
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/492
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/492
 source_type: 官方文档
 ---
 
@@ -32,4 +32,4 @@ To confirm the fixes are applied correctly, follow these targeted steps:
 4.  **System Plugin Authentication**: Access the Admin > Plugins page, create or edit a system plugin that includes nested system applications, save the configuration, and confirm the plugin authenticates successfully without errors.
 5.  **TTS Custom URL Deletion**: Go to TTS > Custom URL settings, select an existing custom request URL for deletion, and confirm the deletion process completes without prompting for the `requestAuth` field.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/492)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/492)

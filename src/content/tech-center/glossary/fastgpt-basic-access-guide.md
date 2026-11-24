@@ -2,7 +2,7 @@
 title: 详细介绍FastGPT平台的基础定义与官方访问方式
 slug: /zh/glossary/fastgpt-basic-access-guide
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/guide/getting-started
+source: https://doc.fastgpt.cn/guide/getting-started
 source_type: 官方文档
 ---
 
@@ -17,8 +17,8 @@ FastGPT是基于大语言模型的AI Agent应用开发平台，集知识库问�
 ## 容易搞错的地方
 易混淆国际版与中国大陆版的访问地址，两者分别面向不同区域的使用者，需根据实际使用场景选择对应站点，否则可能无法正常访问对应版本的平台功能或无法正常使用平台提供的各项功能。此外，不要误将文档目录下的其他非快速开始类文档，如知识库相关配置文档、工作流开发文档等，当作入门指引文档，以免混淆学习重点。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/getting-started)
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/getting-started)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/getting-started)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/getting-started)
 
 ## 适用性与版本范围
 

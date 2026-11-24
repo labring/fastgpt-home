@@ -2,7 +2,7 @@
 title: Install and Deploy Xinference for FastGPT Custom Models
 slug: /en/deploy/xinference-installation-fastgpt
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/custom-models/xinference
+source: https://doc.fastgpt.io/self-host/custom-models/xinference
 source_type: Official documentation
 ---
 
@@ -40,7 +40,7 @@ Follow these steps for a direct installation without Docker:
     ```
 The service runs locally on port 9997 by default. The `-H 0.0.0.0` parameter allows non-local clients to access the service using the host machine's IP address.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/custom-models/xinference)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/custom-models/xinference)
 
 ## Applicability and version scope
 

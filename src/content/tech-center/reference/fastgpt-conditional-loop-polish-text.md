@@ -2,7 +2,7 @@
 title: 使用FastGPT条件循环实现AI文案润色至达标输出
 slug: /zh/reference/fastgpt-conditional-loop-polish-text
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/loop_run
+source: https://doc.fastgpt.cn/guide/build/workflow/nodes/loop_run
 source_type: 官方文档小节
 ---
 
@@ -27,4 +27,4 @@ source_type: 官方文档小节
 - 可在调试面板的"完整响应"中查看详细执行轨迹，确认循环运行流程。
 - 需确保final_text变量正确引用优化节点的回复内容，否则下游节点无法获取正确的最终文案。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/loop_run)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/workflow/nodes/loop_run)

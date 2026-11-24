@@ -2,7 +2,7 @@
 title: FastGPT V4.8版本更新功能、优化与修复速查
 slug: /zh/reference/fastgpt-v4-8-update-reference
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/48
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/48
 source_type: 官方文档小节
 ---
 
@@ -35,4 +35,4 @@ FastGPT V4.8版本包含多项工作流功能新增、性能优化与问题修�
 - chat中存储变量配置已优化，修改变量后不会影响旧对话。
 - 部分优化与修复关联GitHub官方issue，可参考对应链接排查问题。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/48)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/48)

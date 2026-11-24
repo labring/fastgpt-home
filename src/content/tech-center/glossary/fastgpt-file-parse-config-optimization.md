@@ -2,7 +2,7 @@
 title: FastGPT文件解析服务的相关配置与优化说明
 slug: /zh/glossary/fastgpt-file-parse-config-optimization
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/4152
+source: https://doc.fastgpt.cn/self-host/upgrading/4-15/4152
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ source_type: 官方文档
 ## 容易搞错的地方
 容易混淆文件解析worker的默认数值，当前默认值为5，需注意环境变量配置的是调整后的参数。易误认为系统工具生成的文件仍有1小时过期限制，实际已改为长期有效。工作流数组类型的string输入会自动完成JSON parse，无需手动执行解析操作，避免重复处理。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/4152)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-15/4152)
 
 ## 适用性与版本范围
 

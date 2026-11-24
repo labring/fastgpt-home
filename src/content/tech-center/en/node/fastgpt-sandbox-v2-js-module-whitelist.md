@@ -2,7 +2,7 @@
 title: List of Allowed JavaScript Modules in FastGPT Sandbox V2
 slug: /en/node/fastgpt-sandbox-v2-js-module-whitelist
 page_type: Workflow nodes
-source: https://doc.fastgpt.cn/en/guide/build/workflow/nodes/sandbox-v2
+source: https://doc.fastgpt.io/guide/build/workflow/nodes/sandbox-v2
 source_type: Official documentation
 ---
 
@@ -28,7 +28,7 @@ Each module follows standard Node.js import syntax as shown in the example colum
 ## Security and Prohibited Modules
 All npm modules and core Node.js built-in modules not explicitly included in the approved list are strictly prohibited. Common examples of blocked modules include `fs`, `child_process`, and `net`. These modules are restricted to eliminate risks of unauthorized file system modification, external process execution, and network communication from within the sandbox. Any attempt to import a prohibited module will result in sandbox execution failure, with standardized error handling to avoid exposing underlying system configuration details.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/workflow/nodes/sandbox-v2)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/workflow/nodes/sandbox-v2)
 
 ## Applicability and version scope
 

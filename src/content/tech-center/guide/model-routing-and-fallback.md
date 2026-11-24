@@ -9,7 +9,7 @@ meta_description: 本指南面向企业技术负责人与采购方，基于FastG
 keywords: 多模型路由,模型降级,FastGPT部署,AI应用运维
 delivery_source_type: 开源仓库文档与社区线程
 source_type: 深度场景内容
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/env
+source: https://doc.fastgpt.cn/self-host/config/env
 schema_type: TechArticle
 date_published: 2026-09-28
 date_modified: 2026-09-28
@@ -68,8 +68,8 @@ delivery_note: 判据取自开源仓库文档与社区线程，核验日 2026-09
 - [AI Proxy endpoint and token configuration](https://github.com/labring/FastGPT/blob/v4.17.0/document/content/self-host/config/env.mdx)
 - [FastGPT v4.16.2 Worker changes and Milvus migration scope](https://github.com/labring/FastGPT/releases/tag/v4.16.2)
 
-- [FastGPT 环境变量](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
-- [FastGPT Docker Compose 部署](https://doc.fastgpt.cn/zh-CN/self-host/deploy/docker)
+- [FastGPT 环境变量](https://doc.fastgpt.cn/self-host/config/env)
+- [FastGPT Docker Compose 部署](https://doc.fastgpt.cn/self-host/deploy/docker)
 
 ## 需要进一步确认时
 

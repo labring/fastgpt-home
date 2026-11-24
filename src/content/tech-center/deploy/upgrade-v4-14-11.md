@@ -2,7 +2,7 @@
 title: FastGPT 4.14.11版本升级内容与操作指南
 slug: /zh/deploy/upgrade-v4-14-11
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41411
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/41411
 source_type: 官方文档
 ---
 
@@ -28,7 +28,7 @@ WORKFLOW_PARALLEL_MAX_CONCURRENCY=10 # 最大并发数的上限值，不能超�
 ## 升级后怎么验证
 检查各服务镜像版本是否更新为指定tag。测试对话流功能，确认响应恢复正常。测试工作流并行节点、变量更新节点功能，确认配置与运行正常。测试知识库上传、S3文件上传功能，确认流程无误。检查接口权限校验、计费功能是否符合预期，确认工作流相关节点配置显示正常。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41411)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-14/41411)
 
 ## 适用性与版本范围
 

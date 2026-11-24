@@ -2,7 +2,7 @@
 title: Sealos环境下FastGPT 4.10.0版本更新操作指南
 slug: /zh/reference/fastgpt-sealos-4100-upgrade
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4100
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4100
 source_type: 官方文档小节
 ---
 
@@ -33,4 +33,4 @@ source_type: 官方文档小节
 3. 需确保AUTH_TOKEN与PLUGIN_TOKEN的取值完全一致，否则会导致服务鉴权失败。
 4. 镜像tag必须使用v4.10.0-fix，不可替换为其他版本标识。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4100)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/4100)

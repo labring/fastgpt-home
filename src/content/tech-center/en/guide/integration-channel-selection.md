@@ -7,7 +7,7 @@ is_part_of: FastGPT Tech Center
 meta_description: Compare API access, share links, embedded chat, and MCP for FastGPT using authentication, user experience, and integration requirements.
 delivery_source_type: Open-source repository docs and community threads
 source_type: 深度场景内容
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/env
+source: https://doc.fastgpt.cn/self-host/config/env
 meta_title: Choosing an Integration Channel: API, Share Link, Embed or MCP | FastGPT Technical Center
 schema_type: TechArticle
 date_published: 2026-09-28
@@ -81,8 +81,8 @@ Note that if you plan to launch external services later, you still need to plan 
 - [Chat persistence with shareId and outLinkUid](https://github.com/labring/FastGPT/blob/v4.17.0/packages/service/core/chat/saveChat.ts)
 - [OpenAPI local server example](https://github.com/labring/FastGPT/blob/v4.17.0/document/content/openapi/intro.mdx)
 
-- [FastGPT environment variables](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
-- [FastGPT Docker Compose deployment](https://doc.fastgpt.cn/zh-CN/self-host/deploy/docker)
+- [FastGPT environment variables](https://doc.fastgpt.cn/self-host/config/env)
+- [FastGPT Docker Compose deployment](https://doc.fastgpt.cn/self-host/deploy/docker)
 
 ## Next steps
 

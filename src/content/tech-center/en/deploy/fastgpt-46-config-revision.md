@@ -2,7 +2,7 @@
 title: Update FastGPT 4.6 and Revise Configuration Files
 slug: /en/deploy/fastgpt-46-config-revision
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/46
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/46
 source_type: 官方文档
 ---
 
@@ -25,4 +25,4 @@ Follow these structured steps to complete your deployment update:
 3.  For commercial edition deployments, access the latest Lark documentation to complete your configuration updates, as the commercial configuration file has been revised.
 4.  Deploy your FastGPT containers using the approved updated images matching your deployment type.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/46)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/46)

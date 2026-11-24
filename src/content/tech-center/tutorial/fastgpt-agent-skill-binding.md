@@ -2,7 +2,7 @@
 title: 说明在FastGPT智能体应用中绑定技能的完整操作流程
 slug: /zh/tutorial/fastgpt-agent-skill-binding
 page_type: 教程
-source: https://doc.fastgpt.cn/zh-CN/guide/build/skill/integration
+source: https://doc.fastgpt.cn/guide/build/skill/integration
 source_type: 官方文档
 ---
 
@@ -15,7 +15,7 @@ source_type: 官方文档
 
 技能代码需要在安全隔离的环境中运行。关联技能时，系统会自动开启虚拟机。已关联技能的状态下，无法关闭虚拟机。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/skill/integration)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/skill/integration)
 
 ## 适用性与版本范围
 

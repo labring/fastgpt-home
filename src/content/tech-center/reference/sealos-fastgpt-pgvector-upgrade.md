@@ -2,7 +2,7 @@
 title: 在Sealos部署的FastGPT中完成PgVector数据库升级的具体步骤
 slug: /zh/reference/sealos-fastgpt-pgvector-upgrade
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/45
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/45
 source_type: 官方文档小节
 ---
 
@@ -39,4 +39,4 @@ CREATE INDEX CONCURRENTLY vector_index ON modeldata USING hnsw ( vector vector_i
 3.  验证索引构建完成时，需在`\d modeldata`的输出中看到`vector_index hnsw (vector vector_ip_ops) WITH (m='16', ef_construction='64')`，且无INVALID标识。
 4.  升级成功后，通过`\dx`命令可确认PgVector插件版本为0.5.0，旧版本为0.4.1。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/45)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/45)

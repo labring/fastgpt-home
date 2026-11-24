@@ -2,7 +2,7 @@
 title: Configure and Evaluate FastGPT RAG Workflows
 slug: /en/tutorial/fastgpt-rag-workflow-evaluation
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/dataset/rag
+source: https://doc.fastgpt.io/guide/dataset/rag
 source_type: Official documentation
 ---
 
@@ -25,7 +25,7 @@ FastGPT RAG can be calibrated for specialized use cases such as legal document p
 
 The benchmark is built on the LegalBench dataset, which includes 6,858 query-answer pairs tied to exact locations within original legal documents. It covers multiple legal document types including contracts and privacy policies, ensuring coverage across diverse legal scenarios. LegalBench-RAG prioritizes precise retrieval of small, contextually relevant text passages rather than broad, irrelevant fragments. Key challenges for legal RAG implementations include reliance of generation quality on accurate retrieval (with incorrect retrieval leading to flawed outputs) and the complexity of legal document length and specialized terminology. Quality control for the benchmark uses multiple rounds of manual verification when mapping annotation categories and document IDs to specific text fragments to ensure high textual precision.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/rag)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/rag)
 
 ## Applicability and version scope
 

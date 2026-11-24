@@ -2,11 +2,11 @@
 title: 私有部署与云服务版：按数据与运维两条线选
 slug: /zh/compare/self-hosted-vs-cloud-service
 page_type: matrix
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173
+source: https://doc.fastgpt.cn/self-host/upgrading/4-17/4173
 source_type: 深度场景内容
 meta_title: 私有部署与云服务版怎么选
 meta_description: 比较 FastGPT 私有部署版与云服务版在数据位置、模型范围、运维责任、扩展方式与长期成本上的差别，给出按数据敏感度与运维能力选择的分支判定。
-delivery_metadata: {"source_front_matter":{"slug":"self-hosted-vs-cloud-service","meta_title":"私有部署与云服务版怎么选","meta_description":"比较 FastGPT 私有部署版与云服务版在数据位置、模型范围、运维责任、扩展方式与长期成本上的差别，给出按数据敏感度与运维能力选择的分支判定。","language":"zh","content_type":"matrix","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"self-hosted-vs-cloud-service","keywords":"私有部署,云服务版,选型,数据位置,运维责任","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"私有部署版和云服务版该选哪个","需求依据":"客户 2026-11-07 购买诉求第 1 条：私有化是准入门槛，需要与云服务形态对比。","事实来源":"FastGPT 产品知识库·内容收集清单（两条商业产品线）；官方更新说明 4.17.3","内链":"https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173","排期":"W18 决策矩阵第 1 篇","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（来源版本，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核两条产品线的计费与版本表述。"]}
+delivery_metadata: {"source_front_matter":{"slug":"self-hosted-vs-cloud-service","meta_title":"私有部署与云服务版怎么选","meta_description":"比较 FastGPT 私有部署版与云服务版在数据位置、模型范围、运维责任、扩展方式与长期成本上的差别，给出按数据敏感度与运维能力选择的分支判定。","language":"zh","content_type":"matrix","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"self-hosted-vs-cloud-service","keywords":"私有部署,云服务版,选型,数据位置,运维责任","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"私有部署版和云服务版该选哪个","需求依据":"客户 2026-11-07 购买诉求第 1 条：私有化是准入门槛，需要与云服务形态对比。","事实来源":"FastGPT 产品知识库·内容收集清单（两条商业产品线）；官方更新说明 4.17.3","内链":"https://doc.fastgpt.cn/self-host/upgrading/4-17/4173","排期":"W18 决策矩阵第 1 篇","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（来源版本，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核两条产品线的计费与版本表述。"]}
 keywords: 私有部署,云服务版,选型,数据位置,运维责任
 schema_type: Article
 date_modified: 2026-11-16
@@ -18,7 +18,7 @@ date_modified: 2026-11-16
 
 ## 两条产品线的分工
 
-对照材料：[FastGPT 官方说明](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173)。
+对照材料：[FastGPT 官方说明](https://doc.fastgpt.cn/self-host/upgrading/4-17/4173)。
 
 商业产品分两条线。云服务版分国际版与国内版，国际版可调用海外模型，国内版仅支持国内模型，实际可用模型以对应站点当期清单为准；这一条线不需要客户准备服务器，订阅费、模型调用量与资源消耗按当期规则计费。私有部署版以单台服务器 License 为基础授权，分标准版、专业版、旗舰版，租户上限分别是一百、一千与不限，专业版起支持单点登录与 OA 集成。
 
@@ -72,4 +72,4 @@ date_modified: 2026-11-16
 | --- | --- | --- |
 | 两条产品线、版本差异、模型范围与计费结构 | 当期商业方案 | [FastGPT 商务咨询：授权、部署与支持范围](https://fastgpt.cn/contact) |
 | 授权与数据条款 | 合同约定 | [FastGPT 商务咨询：授权、部署与支持范围](https://fastgpt.cn/contact) |
-| 镜像与升级约束 | v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173) |
+| 镜像与升级约束 | v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/self-host/upgrading/4-17/4173) |

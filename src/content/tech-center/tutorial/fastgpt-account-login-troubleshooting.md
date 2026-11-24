@@ -2,7 +2,7 @@
 title: FastGPT中国大陆版与国际版账号登录问题排查说明
 slug: /zh/tutorial/fastgpt-account-login-troubleshooting
 page_type: 教程
-source: https://doc.fastgpt.cn/zh-CN/guide/version/cloud/faq
+source: https://doc.fastgpt.cn/guide/version/cloud/faq
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ FastGPT分为中国大陆版与国际版两个独立部署的版本，两个版�
 
 用户在选择FastGPT版本时，需根据自身的使用场景确定对应的平台。由于两个版本的账号体系相互独立，无法实现账号互通，因此无法通过同一账号在两个版本间通用。若需使用中国大陆版，需访问指定的官方地址并选择对应的登录方式；若需使用国际版，同样需访问对应官方地址并选择匹配的登录方式完成操作。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/version/cloud/faq)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/version/cloud/faq)
 
 ## 适用性与版本范围
 

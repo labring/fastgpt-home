@@ -2,7 +2,7 @@
 title: Configure and Use FastGPT MCP Toolkit Calls
 slug: /en/integration/fastgpt-mcp-toolkit-calls
 page_type: Integrations
-source: https://doc.fastgpt.cn/en/guide/build/tools/mcp_tools
+source: https://doc.fastgpt.io/guide/build/tools/mcp_tools
 source_type: Official documentation
 ---
 
@@ -24,7 +24,7 @@ The first image shows the standalone MCP Toolkit node, while the second displays
 ## AI Execution and Response Flow
 Once the nodes are properly configured, the integrated AI will autonomously manage the full tool usage lifecycle. First, the AI evaluates the user’s input to identify the most appropriate tool within the attached MCP Toolkit. Next, the AI executes the selected tool, retrieves the necessary operational data, and generates a final response based on the tool’s execution results. No additional manual tool configuration is required beyond the initial node setup.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/tools/mcp_tools)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/tools/mcp_tools)
 
 ## Applicability and version scope
 

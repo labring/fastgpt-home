@@ -2,7 +2,7 @@
 title: Key FastGPT V4.6.8 Release Feature Updates
 slug: /en/deploy/fastgpt-v468-release-feature-updates
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/468
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/468
 source_type: 官方文档
 ---
 
@@ -29,4 +29,4 @@ This release addresses two user-reported functional bugs:
 1.  Voice input file upload failure, which prevented users from submitting audio files for processing
 2.  Non-functional chat box regeneration, which blocked users from regenerating previous chat responses
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/468)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/468)

@@ -2,7 +2,7 @@
 title: 使用FastGPT OpenAPI获取对话列表的操作方法
 slug: /zh/reference/fastgpt-get-chat-list-api
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/openapi/chat
+source: https://doc.fastgpt.cn/openapi/chat
 source_type: 官方文档小节
 ---
 
@@ -46,4 +46,4 @@ curl --location --request POST 'http://localhost:3000/api/core/chat/record/getPa
 4. 成功响应的`code`为200，`data.list`包含对话记录列表，`data.total`为总记录数
 5. `loadCustomFeedbacks`为可选参数，未指定时按接口默认逻辑处理
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/openapi/chat)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/openapi/chat)

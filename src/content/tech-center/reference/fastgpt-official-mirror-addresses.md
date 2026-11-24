@@ -2,7 +2,7 @@
 title: 查询FastGPT各组件及部署源的官方标准镜像地址
 slug: /zh/reference/fastgpt-official-mirror-addresses
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/upgrade-intruction
+source: https://doc.fastgpt.cn/self-host/upgrading/upgrade-intruction
 source_type: 官方文档小节
 ---
 
@@ -32,4 +32,4 @@ FastGPT的官方镜像分为Git版和阿里云镜像源两类，覆盖主程序�
 3. 官方文档中“MCP SSE setver”为原文拼写，使用时需保持一致。
 4. 阿里云商业版镜像地址包含前缀`ghcr:`，请勿遗漏或修改。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/upgrade-intruction)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/upgrade-intruction)

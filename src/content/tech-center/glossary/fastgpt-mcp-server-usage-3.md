@@ -2,7 +2,7 @@
 title: 介绍FastGPT MCP Server的定义与使用流程
 slug: /zh/glossary/fastgpt-mcp-server-usage-3
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/guide/build/publish/mcp_server
+source: https://doc.fastgpt.cn/guide/build/publish/mcp_server
 source_type: 官方文档
 ---
 
@@ -20,7 +20,7 @@ FastGPT MCP Server是依托Anthropic发布的MCP协议，该协议用于统一AI
 3. 部署方式决定兼容协议，普通部署支持Streamable HTTP协议，私有化部署可通过独立服务兼容SSE协议；
 4. 需注意区分MCP协议的Client与Server角色，FastGPT MCP Server属于提供外部调用能力的Server端。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/publish/mcp_server)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/publish/mcp_server)
 
 ## 适用性与版本范围
 

@@ -2,7 +2,7 @@
 title: FastGPT中LLM请求追踪记录的团队隔离变更说明
 slug: /zh/glossary/fastgpt-llm-request-records-team-isolation
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41506
+source: https://doc.fastgpt.cn/self-host/upgrading/4-15/41506
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ LLM请求追踪记录（llm_request_records）是FastGPT中用于临时存储LLM
 ## 容易搞错的地方
 升级前写入的旧追踪记录未包含teamId字段，升级后无法再通过requestId查询，页面会按追踪记录已过期处理。该记录自带TTL，仅用于临时排查模型调用详情。如需排查历史问题，需在升级前导出相关日志或保留原始请求信息。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41506)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-15/41506)
 
 ## 适用性与版本范围
 

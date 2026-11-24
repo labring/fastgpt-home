@@ -2,7 +2,7 @@
 title: Execute FastGPT 4.8.8 Dataset Permission Initialization
 slug: /en/deploy/fastgpt-488-dataset-initialization
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/488
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/488
 source_type: 官方文档
 ---
 
@@ -32,4 +32,4 @@ curl --location --request POST 'https://{{host}}/api/admin/initv488' \
 ## Expected Outcome
 Upon successful execution, the command will initialize the inherited permission structures for all FastGPT datasets linked to your deployment. No additional user input is required during the initialization process.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/488)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/488)

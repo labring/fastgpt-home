@@ -2,7 +2,7 @@
 title: 使用FastGPT商业版API创建外部文件库集合的方法
 slug: /zh/reference/fastgpt-create-external-file-collection
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/openapi/dataset
+source: https://doc.fastgpt.cn/openapi/dataset
 source_type: 官方文档小节
 ---
 
@@ -49,4 +49,4 @@ curl --location --request POST 'http://localhost:3000/api/proApi/core/dataset/co
 4. `filename`需携带正确的文件后缀，否则可能出现解析异常。
 5. 日期参数`createTime`需符合ISO字符串规范，例如`2024-05-01T00:00:00.000Z`。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/openapi/dataset)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/openapi/dataset)

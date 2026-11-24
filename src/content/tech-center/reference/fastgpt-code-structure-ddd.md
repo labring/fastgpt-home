@@ -2,7 +2,7 @@
 title: FastGPT代码结构与DDD领域划分规则说明
 slug: /zh/reference/fastgpt-code-structure-ddd
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/dev
+source: https://doc.fastgpt.cn/self-host/dev
 source_type: 官方文档小节
 ---
 
@@ -26,4 +26,4 @@ FastGPT 采用DDD思想划分代码模块，核心分为core、support、common�
 3. 顶层采用monorepo规范，请勿直接修改非业务目录的配置文件。
 4. 主项目代码位于projects/app目录下，请勿随意修改通用子包代码。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/dev)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/dev)

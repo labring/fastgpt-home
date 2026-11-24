@@ -2,7 +2,7 @@
 title: FastGPT自部署环境接入Marker PDF文档解析的方法
 slug: /zh/reference/fastgpt-marker-pdf-integration
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/custom-models/marker
+source: https://doc.fastgpt.cn/self-host/custom-models/marker
 source_type: 官方文档小节
 ---
 
@@ -19,4 +19,4 @@ Marker是FastGPT支持的PDF文档解析工具，可实现图片提取与布局�
 ## 注意事项
 该功能仅支持FastGPT自部署场景，需遵循官方文档的配置说明完成接入。若解析出现异常，可参考官方文档的模型问题排查章节处理。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/marker)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/custom-models/marker)

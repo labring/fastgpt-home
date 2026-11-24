@@ -2,7 +2,7 @@
 title: Configure FastGPT SealosDevBox Sandbox Proxy Parameters
 slug: /en/deploy/fastgpt-sealosdevbox-sandbox-proxy-config
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/sandbox/sealosdevbox
+source: https://doc.fastgpt.io/self-host/config/sandbox/sealosdevbox
 source_type: Official documentation
 ---
 
@@ -26,7 +26,7 @@ Follow these steps to properly configure the SealosDevBox sandbox proxy for your
 3.  Configure fastgpt-pro variables: For each fastgpt-pro instance, only define the `AGENT_SANDBOX_PREVIEW_PROXY_URL` variable, using the same proxy endpoint URL as configured for fastgpt-app deployments.
 4.  Validate configuration: Confirm all environment variables are correctly applied by running environment inspection commands such as `printenv` for local or single-node deployments, or using Kubernetes `kubectl get secrets` and `kubectl describe configmap` commands for containerized orchestrated deployments. Verify that no mandatory variables are missing or misconfigured to avoid sandbox connectivity failures.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/sandbox/sealosdevbox)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/sandbox/sealosdevbox)
 
 ## Applicability and version scope
 

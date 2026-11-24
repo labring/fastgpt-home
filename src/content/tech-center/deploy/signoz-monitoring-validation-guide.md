@@ -2,7 +2,7 @@
 title: 验证Signoz监控配置是否生效的操作指南
 slug: /zh/deploy/signoz-monitoring-validation-guide
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/signoz
+source: https://doc.fastgpt.cn/self-host/config/signoz
 source_type: 官方文档
 ---
 
@@ -23,7 +23,7 @@ source_type: 官方文档
 ![alt text](../../../public/imgs/image-117.png)
 ![alt text](../../../public/imgs/image-118.png)
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/config/signoz)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/config/signoz)
 
 ## 适用性与版本范围
 

@@ -2,7 +2,7 @@
 title: Set Up Lark Single Sign-On for FastGPT
 slug: /en/tutorial/fastgpt-lark-sso-configuration
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/admin/sso
+source: https://doc.fastgpt.io/guide/admin/sso
 source_type: Official documentation
 ---
 
@@ -77,7 +77,7 @@ fastgpt-sso:
     - FEISHU_APP_SECRET=xxx
 ```
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/admin/sso)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/admin/sso)
 
 ## Applicability and version scope
 

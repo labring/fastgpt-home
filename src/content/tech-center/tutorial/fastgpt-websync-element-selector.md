@@ -2,7 +2,7 @@
 title: 讲解FastGPT网页同步功能的元素选择器使用方法
 slug: /zh/tutorial/fastgpt-websync-element-selector
 page_type: 教程
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/websync
+source: https://doc.fastgpt.cn/guide/dataset/websync
 source_type: 官方文档
 ---
 
@@ -16,7 +16,7 @@ source_type: 官方文档
 ## 类选择器配置示例
 除属性选择器外，类和ID选择器也是常见的选择器类型。当目标元素带有class属性时，类名以空格分隔，可任选其中一个类名生成选择器，示例为`.docs-content`，相关配置可参考配套的webSync9.webp图示。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/dataset/websync)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/dataset/websync)
 
 ## 适用性与版本范围
 

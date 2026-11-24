@@ -2,7 +2,7 @@
 title: When the Knowledge Base Has the Answer but Search Misses It: A Layer-by-Layer Diagnosis
 slug: /en/guide/kb-retrieval-miss-diagnosis
 page_type: Deep-dive guide
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/env
+source: https://doc.fastgpt.cn/self-host/config/env
 source_type: Open-source repository docs and community threads
 article_section: Selection & Evaluation
 is_part_of: FastGPT Tech Center
@@ -80,8 +80,8 @@ If your system has unresolved known bugs—like abnormal sorting scores when sea
 
 ## References
 
-- [FastGPT environment variables](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
-- [FastGPT upgrade notes](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/upgrade-instruction)
+- [FastGPT environment variables](https://doc.fastgpt.cn/self-host/config/env)
+- [FastGPT upgrade notes](https://doc.fastgpt.cn/self-host/upgrading/upgrade-instruction)
 
 ## Next steps
 

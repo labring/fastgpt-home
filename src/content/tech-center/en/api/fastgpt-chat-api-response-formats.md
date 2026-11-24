@@ -2,7 +2,7 @@
 title: Understand FastGPT Chat API Response Formats
 slug: /en/api/fastgpt-chat-api-response-formats
 page_type: API
-source: https://doc.fastgpt.cn/en/openapi/chat
+source: https://doc.fastgpt.io/openapi/chat
 source_type: Official documentation
 ---
 
@@ -28,7 +28,7 @@ For streamed full-detail responses, each SSE transmission includes a defined `ev
 ## Sample Response Snippets
 All response formats use exact, standardized structures pulled from the API. A standard non-stream low-detail response includes a top-level `usage` object with token count metrics and a `choices` array with the final assistant message. Streamed low-detail responses use line-delimited `data:` prefixed payloads, with each chunk containing a partial content string in `choices[].delta.content`.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/openapi/chat)
+> Source: [FastGPT official source](https://doc.fastgpt.io/openapi/chat)
 
 ## Applicability and version scope
 

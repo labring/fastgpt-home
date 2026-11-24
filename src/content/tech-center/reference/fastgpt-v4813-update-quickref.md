@@ -2,7 +2,7 @@
 title: FastGPT V4.8.13版本更新内容的技术速查
 slug: /zh/reference/fastgpt-v4813-update-quickref
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4812
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4812
 source_type: 官方文档小节
 ---
 
@@ -44,4 +44,4 @@ source_type: 官方文档小节
 3. 升级该版本前可参考V4.8.11版本的升级脚本进行准备
 4. 新建APP出现空指针报错时，可排查是否为该版本修复的异常场景
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4812)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/4812)

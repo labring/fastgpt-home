@@ -2,7 +2,7 @@
 title: 配置MinerU以优化FastGPT的PDF文件解析效果
 slug: /zh/deploy/fastgpt-mineru-pdf-parse
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/custom-models/mineru
+source: https://doc.fastgpt.cn/self-host/custom-models/mineru
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ PDF是相对复杂的文件格式。FastGPT内置的PDF解析器依赖pdfjs库�
 ## 配置步骤
 社区版与商业版FastGPT用户的配置方式存在差异。社区版用户需在config.json文件中添加systemEnv.customPdfParse配置，即可使用MinerU解析PDF文件。商业版用户无需修改配置文件，直接在Admin后台根据表单指引填写相关内容即可完成配置。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/mineru)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/custom-models/mineru)
 
 ## 适用性与版本范围
 

@@ -2,7 +2,7 @@
 title: Optimize FastGPT Dataset Vector Search Accuracy
 slug: /en/tutorial/fastgpt-dataset-vector-search-optimization
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/dataset/dataset_engine
+source: https://doc.fastgpt.io/guide/dataset/dataset_engine
 source_type: Official documentation
 ---
 
@@ -29,7 +29,7 @@ The following table maps concrete tuning actions to configurable FastGPT dataset
 | Query Preprocessing               | Standardize query formatting, expand domain-specific abbreviations, and align with indexed terminology |
 | Vector Model Configuration        | Fine-tune base vector models on domain-specific training data matching your operational use case |
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/dataset_engine)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/dataset_engine)
 
 ## Applicability and version scope
 

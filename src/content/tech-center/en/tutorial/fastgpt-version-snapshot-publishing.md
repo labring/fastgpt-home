@@ -2,7 +2,7 @@
 title: Save and Publish FastGPT Version Snapshots
 slug: /en/tutorial/fastgpt-version-snapshot-publishing
 page_type: 教程/部署
-source: https://doc.fastgpt.cn/en/guide/build/skill/version
+source: https://doc.fastgpt.io/guide/build/skill/version
 source_type: 官方文档
 ---
 
@@ -20,4 +20,4 @@ Follow these structured steps to create and publish a version snapshot:
 ## Publishing Ignore Rules and Size Constraints
 During the publishing workflow, the system automatically applies ignore rules defined in the `.gitignore` file stored at the project root directory. If no `.gitignore` file exists, the system will generate a default file that excludes common non-essential directories including `node_modules`, `.venv`, and `dist`. Only files not excluded by these ignore rules will be included in the packaged version snapshot. Users must ensure the total combined size of these unignored files does not exceed the platform’s specified limit; exceeding this limit will result in a failed publishing attempt.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/guide/build/skill/version)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/guide/build/skill/version)

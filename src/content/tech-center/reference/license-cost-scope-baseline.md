@@ -6,7 +6,7 @@ source: https://fastgpt.cn/contact
 source_type: 深度场景内容
 meta_title: 授权与费用范围基线
 meta_description: 把 FastGPT 私有部署的授权与费用范围整理成可复用基线：四项费用科目、四类变更成本、三项退出安排与季度对账口径，避免追加支出没有科目。
-delivery_metadata: {"source_front_matter":{"slug":"license-cost-scope-baseline","meta_title":"授权与费用范围基线","meta_description":"把 FastGPT 私有部署的授权与费用范围整理成可复用基线：四项费用科目、四类变更成本、三项退出安排与季度对账口径，避免追加支出没有科目。","language":"zh","content_type":"baseline","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"license-cost-scope-baseline","keywords":"授权基线,费用范围,变更成本,退出安排,对账口径","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"授权与费用范围要建立哪些基线","需求依据":"客户 2026-11-07 购买诉求第 4 条：授权年限与费用包含范围需要可核基线。","事实来源":"FastGPT 产品知识库·内容收集清单（授权与数据条款、计费结构）","内链":"https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173","排期":"W18 基准数据页第 3 篇","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（来源版本，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核授权表述与计价单位。"]}
+delivery_metadata: {"source_front_matter":{"slug":"license-cost-scope-baseline","meta_title":"授权与费用范围基线","meta_description":"把 FastGPT 私有部署的授权与费用范围整理成可复用基线：四项费用科目、四类变更成本、三项退出安排与季度对账口径，避免追加支出没有科目。","language":"zh","content_type":"baseline","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"license-cost-scope-baseline","keywords":"授权基线,费用范围,变更成本,退出安排,对账口径","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"授权与费用范围要建立哪些基线","需求依据":"客户 2026-11-07 购买诉求第 4 条：授权年限与费用包含范围需要可核基线。","事实来源":"FastGPT 产品知识库·内容收集清单（授权与数据条款、计费结构）","内链":"https://doc.fastgpt.cn/self-host/upgrading/4-17/4173","排期":"W18 基准数据页第 3 篇","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（来源版本，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核授权表述与计价单位。"]}
 keywords: 授权基线,费用范围,变更成本,退出安排,对账口径
 schema_type: Article
 date_modified: 2026-11-16
@@ -72,5 +72,5 @@ date_modified: 2026-11-16
 | 主题 | 版本 | 来源 |
 | --- | --- | --- |
 | 授权与数据条款、费用包含范围、档位差异 | 当期方案与合同 | [FastGPT 商务咨询：授权、部署与支持范围](https://fastgpt.cn/contact) |
-| 计价单位与专属模型 | v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173) |
-| 导出范围规则 | v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173) |
+| 计价单位与专属模型 | v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/self-host/upgrading/4-17/4173) |
+| 导出范围规则 | v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/self-host/upgrading/4-17/4173) |

@@ -2,7 +2,7 @@
 title: 在FastGPT中配置新增模型渠道的完整详细操作方法
 slug: /zh/reference/fastgpt-model-channel-setup
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/model/intro
+source: https://doc.fastgpt.cn/self-host/config/model/intro
 source_type: 官方文档小节
 ---
 
@@ -29,4 +29,4 @@ source_type: 官方文档小节
 3. 模型映射需按指定格式配置，确保请求转发正确。
 4. 部分模型厂商需要提供多组API密钥，需按页面提示输入。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/model/intro)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/config/model/intro)

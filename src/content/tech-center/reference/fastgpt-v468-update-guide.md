@@ -2,7 +2,7 @@
 title: FastGPT V4.6.8版本更新内容与使用说明
 slug: /zh/reference/fastgpt-v468-update-guide
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/468
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/468
 source_type: 官方文档小节
 ---
 
@@ -24,4 +24,4 @@ source_type: 官方文档小节
 3.  内容补全功能仅可在知识库搜索模块中使用，无法单独调用。
 4.  流响应的优化效果可能因具体使用场景存在差异。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/468)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/468)

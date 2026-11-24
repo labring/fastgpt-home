@@ -2,7 +2,7 @@
 title: FastGPT 4.14.0 Technical New Feature Updates
 slug: /en/deploy/fastgpt-4140-new-features
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4140
+source: https://doc.fastgpt.io/self-host/upgrading/4-14/4140
 source_type: Official documentation
 ---
 
@@ -26,7 +26,7 @@ This release adds three new supported types for global variables: time point, ti
 ### Password-Protected Plugin Inputs
 Plugin input forms now support password-type input fields, which obscure entered text during data entry.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4140)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-14/4140)
 
 ## Applicability and version scope
 

@@ -29,6 +29,6 @@ source_type: GitHub issue
 
 > 来源: [原始讨论：希望增加知识库对接dify的接口](https://github.com/labring/FastGPT/issues/4361)
 
-> 来源: [FastGPT 知识库 OpenAPI](https://doc.fastgpt.io/en/openapi/dataset)
+> 来源: [FastGPT 知识库 OpenAPI](https://doc.fastgpt.io/openapi/dataset)
 
 > 来源: [原讨论中的补充回复](https://github.com/labring/FastGPT/issues/4361#issuecomment-2764550669)

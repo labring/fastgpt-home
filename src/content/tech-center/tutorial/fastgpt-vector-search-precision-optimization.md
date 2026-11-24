@@ -2,7 +2,7 @@
 title: 提升FastGPT向量搜索精度的配置与优化方法
 slug: /zh/tutorial/fastgpt-vector-search-precision-optimization
 page_type: 教程
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/dataset_engine
+source: https://doc.fastgpt.cn/guide/dataset/dataset_engine
 source_type: 官方文档
 ---
 
@@ -19,7 +19,7 @@ source_type: 官方文档
 3. 检索词预处理：对用户输入的检索词进行处理，修正模糊或缺失的表述，提升检索匹配精度。
 4. 向量模型适配：基于业务领域的专属数据，对通用向量模型进行微调，适配专业场景的检索需求。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/dataset/dataset_engine)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/dataset/dataset_engine)
 
 ## 适用性与版本范围
 

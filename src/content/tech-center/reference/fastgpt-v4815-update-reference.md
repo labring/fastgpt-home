@@ -2,7 +2,7 @@
 title: FastGPT V4.8.15版本官方更新内容速查
 slug: /zh/reference/fastgpt-v4815-update-reference
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4814
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4814
 source_type: 官方文档小节
 ---
 
@@ -44,4 +44,4 @@ source_type: 官方文档小节
 - 知识库训练最大重试次数限制为新增配置项
 - API无法使用base64图片的问题已完成修复
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4814)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/4814)

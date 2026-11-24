@@ -2,7 +2,7 @@
 title: Clear Stale Invalid Data for FastGPT Self-Hosted Instances
 slug: /en/deploy/fastgpt-stale-data-cleanup
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/471
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/471
 source_type: 官方文档
 ---
 
@@ -32,4 +32,4 @@ This command sends an authenticated POST request to the FastGPT admin cleanup en
 ## Cleanup Process Details
 Upon successful execution of the authenticated request, the FastGPT instance will initiate the background stale data cleanup routine. This routine scans and removes all identified invalid assets, including orphaned files, unused images, unassociated Dataset collections, and stale vector embeddings. No explicit user-facing output is specified for this script, but the cleanup will complete automatically once triggered.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/471)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/471)

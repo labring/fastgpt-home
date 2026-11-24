@@ -2,7 +2,7 @@
 title: FastGPT接入企业微信机器人的配置方法说明
 slug: /zh/reference/fastgpt-wecom-bot-integration-guide
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/build/publish/wecom
+source: https://doc.fastgpt.cn/guide/build/publish/wecom
 source_type: 官方文档小节
 ---
 
@@ -22,4 +22,4 @@ source_type: 官方文档小节
 3. 云服务版未完成自定义域名配置时，无法完成企微智能机器人接入。
 4. 低于4.12.4的商业版、低于4.14.4的云服务版，均无法支持该接入方式。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/publish/wecom)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/publish/wecom)

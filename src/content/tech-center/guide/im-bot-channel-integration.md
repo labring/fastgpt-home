@@ -3,7 +3,7 @@ title: FastGPT企业级多渠道机器人接入：版本、配置与运维边界
 slug: /zh/guide/im-bot-channel-integration
 page_type: 深度场景内容
 source_type: 官方文档（v4.17.2）与社区反馈
-source: https://doc.fastgpt.cn/zh-CN/guide/build/publish/wecom
+source: https://doc.fastgpt.cn/guide/build/publish/wecom
 source_note: "判据取自 FastGPT 官方文档（v4.17.2）与更新说明，核验日 2026-10-13。"
 check_day: 2026-10-13
 article_section: 选型与评估
@@ -69,11 +69,11 @@ date_modified: 2026-10-14
 
 ## 参考资料
 
-- [接入企微机器人教程](https://doc.fastgpt.cn/zh-CN/guide/build/publish/wecom)
-- [接入飞书机器人教程](https://doc.fastgpt.cn/zh-CN/guide/build/publish/feishu)
-- [接入钉钉机器人教程](https://doc.fastgpt.cn/zh-CN/guide/build/publish/dingtalk)
-- [接入微信公众号教程](https://doc.fastgpt.cn/zh-CN/guide/build/publish/official_account)
-- [配置自定义域名](https://doc.fastgpt.cn/zh-CN/guide/workspace/customDomain)
+- [接入企微机器人教程](https://doc.fastgpt.cn/guide/build/publish/wecom)
+- [接入飞书机器人教程](https://doc.fastgpt.cn/guide/build/publish/feishu)
+- [接入钉钉机器人教程](https://doc.fastgpt.cn/guide/build/publish/dingtalk)
+- [接入微信公众号教程](https://doc.fastgpt.cn/guide/build/publish/official_account)
+- [配置自定义域名](https://doc.fastgpt.cn/guide/workspace/customDomain)
 
 ## 需要进一步确认时
 

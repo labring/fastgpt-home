@@ -161,8 +161,8 @@ date_modified: 2026-10-14
 
 ## 参考资料
 
-- [云服务隐私政策](https://doc.fastgpt.cn/zh-CN/guide/version/cloud/privacy)
-- [团队角色与权限](https://doc.fastgpt.cn/zh-CN/guide/workspace/team/team_roles_permissions)
+- [云服务隐私政策](https://doc.fastgpt.cn/guide/version/cloud/privacy)
+- [团队角色与权限](https://doc.fastgpt.cn/guide/workspace/team/team_roles_permissions)
 
 ## 需要进一步确认时
 

@@ -2,7 +2,7 @@
 title: 检查FastGPT中各类模型可用性的具体步骤
 slug: /zh/deploy/fastgpt-model-availability-check
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/troubleshooting/model-errors
+source: https://doc.fastgpt.cn/self-host/troubleshooting/model-errors
 source_type: 官方文档小节
 ---
 
@@ -75,4 +75,4 @@ curl https://api.openai.com/v1/audio/transcriptions \
 
 完成CURL测试后，如果接口返回正常响应，则可以排除模型本身的问题，转而检查FastGPT的模型配置。如果CURL测试失败，则需要排查上游模型的运行状态、网络连通性或认证配置是否正确。最后在FastGPT平台内使用对应模型发起测试，验证平台调用链路是否正常。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/troubleshooting/model-errors)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/troubleshooting/model-errors)

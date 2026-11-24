@@ -2,7 +2,7 @@
 title: FastGPT V4.15.1版本环境变量变更与升级操作说明
 slug: /zh/reference/fastgpt-v4151-upgrade-guide
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/4151
+source: https://doc.fastgpt.cn/self-host/upgrading/4-15/4151
 source_type: 官方文档小节
 ---
 
@@ -19,4 +19,4 @@ FastGPT V4.15.1版本属于4.15.x升级分支，存在环境变量变更，需�
 ## 注意事项
 仅支持在FastGPT 4.15.x系列版本基础上升级。需严格遵循官方给出的环境变量变更规则调整配置。需使用官方提供的专属升级脚本进行升级操作。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/4151)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-15/4151)

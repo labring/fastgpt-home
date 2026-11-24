@@ -2,7 +2,7 @@
 title: 为FastGPT沙盒配置npm、Python及apt的自定义依赖源
 slug: /zh/deploy/fastgpt-sandbox-custom-dependency-sources
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/sandbox/opensandbox
+source: https://doc.fastgpt.cn/self-host/config/sandbox/opensandbox
 source_type: 官方文档
 ---
 
@@ -31,7 +31,7 @@ AGENT_SANDBOX_APT_MIRROR=https://mirrors.tuna.tsinghua.edu.cn/ubuntu
 ## 配置生效机制
 配置后，FastGPT会读取沙盒的`/etc/os-release`，根据Ubuntu版本和codename生成并覆盖`/etc/apt/sources.list.d/ubuntu.sources`，写入主仓库、updates、backports和security。修改配置前，已有sources文件会备份为`.copy`；删除环境变量后，有备份的文件会恢复，没有备份的文件保持不变。初始化阶段不会执行`apt-get update`。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/config/sandbox/opensandbox)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/config/sandbox/opensandbox)
 
 ## 适用性与版本范围
 

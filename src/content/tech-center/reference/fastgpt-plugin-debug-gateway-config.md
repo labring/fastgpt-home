@@ -2,7 +2,7 @@
 title: 配置FastGPT Plugin Server的远程调试网关环境变量
 slug: /zh/reference/fastgpt-plugin-debug-gateway-config
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/remote-debug-suite
+source: https://doc.fastgpt.cn/self-host/config/remote-debug-suite
 source_type: 官方文档小节
 ---
 
@@ -26,4 +26,4 @@ source_type: 官方文档小节
 2. CONNECTION_GATEWAY_PUBLIC_URL必须能从开发者本地访问。
 3. CONNECTION_GATEWAY_AUTH_TOKEN和JWT_SECRET均需使用至少32位的随机字符，且JWT_SECRET需与Connection Gateway的配置完全匹配。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/remote-debug-suite)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/config/remote-debug-suite)

@@ -2,7 +2,7 @@
 title: FastGPT V4.12.4自部署版本升级操作指南
 slug: /zh/deploy/fastgpt-v4124-upgrade-steps
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-12/4124
+source: https://doc.fastgpt.cn/self-host/upgrading/4-12/4124
 source_type: 官方文档
 ---
 
@@ -26,4 +26,4 @@ curl --location --request POST https://{{host}}/api/admin/initv4124 \
 - 修复问题：修复HTTP工具空指针导致无法编辑的问题；修复Python代码运行时入参无法为布尔值的问题。
 - 插件更新：`fastgpt-plugin`插件有版本更新。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-12/4124)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-12/4124)

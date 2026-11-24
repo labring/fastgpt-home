@@ -2,7 +2,7 @@
 title: FastGPT V4.8版本升级内容、注意事项与操作指南
 slug: /zh/deploy/upgrade-v4-8
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/48
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/48
 source_type: 官方文档
 ---
 
@@ -16,7 +16,7 @@ FastGPT workflow V2上线，支持更简洁的工作流模式。重构工作流�
 完成FastGPT V4.8版本更新。商业版用户进入管理端 -> 项目配置 -> 登录配置 -> 邮箱登录配置，修改邮箱服务SMTP地址。旧版工作流将弹出重置弹窗提示，按提示重建插件和应用，删除preview版本的if else节点并重建。保存或新建工作流时，将自动使用新版工作流。
 ## 升级后怎么验证
 新建或保存工作流，确认弹窗提示正常，工作流为新版。测试新增的判断器、变量更新节点、定时执行应用等功能，确认运行正常。测试邮件验证码功能，确认自定义SMTP地址配置生效。测试分享链接、API调用工作流，确认无异常。测试工具调用、HTTP节点等优化修复的功能，确认无报错。
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/48)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/48)
 
 ## 适用性与版本范围
 

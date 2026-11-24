@@ -80,4 +80,4 @@ Verified on 2026-11-09. Product version: FastGPT v4.17.3.
 | Topic | Source |
 | --- | --- |
 | Folder inheritance, navigation-only parent folders, management versus edit permission | [Release notes 4.17.3](https://github.com/labring/FastGPT/releases/tag/v4.17.3) |
-| File-level permissions and publish snapshots | [Release notes 4.17.1](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4171) |
+| File-level permissions and publish snapshots | [Release notes 4.17.1](https://doc.fastgpt.cn/self-host/upgrading/4-17/4171) |

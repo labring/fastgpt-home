@@ -2,7 +2,7 @@
 title: FastGPT 4.16.01 Official Bug Fixes
 slug: /en/deploy/fastgpt-41601-bug-fixes
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-16/41601
+source: https://doc.fastgpt.io/self-host/upgrading/4-16/41601
 source_type: 官方文档
 ---
 
@@ -45,4 +45,4 @@ This section resolves frontend rendering errors and tool display inconsistencies
 
 All fixes are included in the official FastGPT 4.16.01 self-hosted upgrade package. No additional custom configuration changes are required to implement these fixes, though administrators may wish to validate sandbox and S3 storage integrations post-upgrade to confirm full resolution of reported issues.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/4-16/41601)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/4-16/41601)

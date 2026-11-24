@@ -2,7 +2,7 @@
 title: FastGPT使用Ollama的主机安装与监听配置方法
 slug: /zh/reference/fastgpt-ollama-host-install-config
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/custom-models/ollama
+source: https://doc.fastgpt.cn/self-host/custom-models/ollama
 source_type: 官方文档小节
 ---
 
@@ -25,4 +25,4 @@ source_type: 官方文档小节
 ## 注意事项
 仅使用主机安装Ollama时，必须配置监听0.0.0.0才能被FastGPT正常访问。不同操作系统的配置方式存在差异，需严格按照对应系统的步骤操作。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/ollama)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/custom-models/ollama)

@@ -170,8 +170,8 @@ date_modified: 2026-10-14
 
 ## 参考资料
 
-- [模型配置说明](https://doc.fastgpt.cn/zh-CN/self-host/config/model/intro)
-- [知识库基础原理](https://doc.fastgpt.cn/zh-CN/guide/dataset/rag)
+- [模型配置说明](https://doc.fastgpt.cn/self-host/config/model/intro)
+- [知识库基础原理](https://doc.fastgpt.cn/guide/dataset/rag)
 
 ## 需要进一步确认时
 

@@ -2,7 +2,7 @@
 title: FastGPT V4.8.15与V4.8.17版本更新内容速查
 slug: /zh/reference/fastgpt-v4815-v4817-updates
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4816
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4816
 source_type: 官方文档小节
 ---
 
@@ -36,4 +36,4 @@ source_type: 官方文档小节
 3. 数组选择器兼容修复仅针对4.8.13以前的旧数据
 4. 配置NEXT_PUBLIC_BASE_URL时，需确认图片URL读取问题已完成修复
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4816)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/4816)

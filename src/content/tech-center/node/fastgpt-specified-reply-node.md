@@ -2,7 +2,7 @@
 title: 配置FastGPT指定回复模块实现固定或变量化内容输出
 slug: /zh/node/fastgpt-specified-reply-node
 page_type: 工作流节点
-source: https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/reply
+source: https://doc.fastgpt.cn/guide/build/workflow/nodes/reply
 source_type: 官方文档
 ---
 
@@ -19,4 +19,4 @@ source_type: 官方文档
 ## 功能边界说明
 该模块仅负责输出预设或变量化的回复内容，不具备其他内容处理能力，仅适用于需要固定或动态返回指定内容的特殊场景，比如用户触发特定流程节点后的固定提示、流程中断时的友好提示等。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/reply)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/workflow/nodes/reply)

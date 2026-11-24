@@ -2,7 +2,7 @@
 title: Configure FastGPT Document Parsing Workflow Settings
 slug: /en/tutorial/fastgpt-document-parsing-settings
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/build/general/fileInput
+source: https://doc.fastgpt.io/guide/build/general/fileInput
 source_type: Official documentation
 ---
 
@@ -33,7 +33,7 @@ To align with the 4.8.13 updates:
 2. For workflows using plugins or sub-workflows, discontinue reliance on automatic file passing, and instead manually map uploaded file URLs to the appropriate input variables for the called component.
 3. Validate existing workflows post-migration to confirm consistent document parsing and file passing behavior.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/general/fileInput)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/general/fileInput)
 
 ## Applicability and version scope
 

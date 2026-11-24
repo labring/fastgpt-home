@@ -2,7 +2,7 @@
 title: FastGPT对话接口API的调用方法与参数配置说明
 slug: /zh/api/fastgpt-chat-api-guide
 page_type: API与文档
-source: https://doc.fastgpt.cn/zh-CN/openapi/chat
+source: https://doc.fastgpt.cn/openapi/chat
 source_type: 官方文档
 ---
 
@@ -31,4 +31,4 @@ curl --location --request POST http://localhost:3000/api/v1/chat/completions \
 3.  `detail=true, stream=false`：返回完整的模块响应数据，`responseData`数组包含各模块的执行结果，如检索模块、AI聊天模块的价格、tokens等信息。
 4.  `detail=true, stream=true`：通过event字段区分不同类型的流式数据，包含模块状态和完整响应结果。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/openapi/chat)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/openapi/chat)

@@ -2,7 +2,7 @@
 title: 详细讲解FastGPT中local-pool运行时与Pod插件进程的使用规则
 slug: /zh/glossary/fastgpt-local-pool-pod-guide
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/plugin/intro
+source: https://doc.fastgpt.cn/plugin/intro
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ local-pool是FastGPT当前默认的插件运行时，负责执行插件代码；
 ## 容易搞错的地方
 部分用户可能混淆运行时与Pod的层级关系，运行时是整体执行插件代码的后端实现，Pod是运行时中的单个插件子进程。部分开发者可能沿用旧版插件开发流程，需注意新版开发工具与旧版的差异。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/plugin/intro)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/plugin/intro)
 
 ## 适用性与版本范围
 

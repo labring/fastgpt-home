@@ -2,7 +2,7 @@
 title: Skip Classification for Follow-Up Chat Messages
 slug: /en/tutorial/fastgpt-skip-classification-followups
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/build/faq
+source: https://doc.fastgpt.io/guide/build/faq
 source_type: Official documentation
 ---
 
@@ -26,7 +26,7 @@ When the active workflow runs:
 - For the first user message (history count equals 0), the conditional check routes the query through the Question Classification node, which sorts the request to the appropriate dataset branch.
 - For all subsequent messages (history count greater than 0), the conditional check skips classification, passing the full existing chat history as context directly to the selected Dataset and AI Chat nodes. This ensures follow-up interactions retain full conversation context without redundant classification processing.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/faq)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/faq)
 
 ## Applicability and version scope
 

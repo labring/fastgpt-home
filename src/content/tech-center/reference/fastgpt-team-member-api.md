@@ -2,7 +2,7 @@
 title: FastGPT获取团队成员列表的标准接口使用说明
 slug: /zh/reference/fastgpt-team-member-api
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/admin/sso
+source: https://doc.fastgpt.cn/guide/admin/sso
 source_type: 官方文档小节
 ---
 
@@ -29,4 +29,4 @@ curl -X GET "https://example.com/user/list" \
 2. `orgs`字段为成员所属组织ID数组，若成员无所属组织，需传入空数组`[]`。
 3. 部分字段为可选：`memberName`为成员显示名，`avatar`为成员头像地址，`contact`可填写邮箱或手机号码，`message`仅在请求失败时返回报错信息。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/admin/sso)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/admin/sso)

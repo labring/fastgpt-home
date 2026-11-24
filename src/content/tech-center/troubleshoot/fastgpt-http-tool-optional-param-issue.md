@@ -29,4 +29,4 @@ source_type: GitHub issue
 
 > 来源: [原始讨论：HTTP请求工具无法设置可选参数](https://github.com/labring/FastGPT/issues/4113)
 
-> 来源: [FastGPT 工具调用与终止](https://doc.fastgpt.io/en/guide/build/workflow/nodes/tool)
+> 来源: [FastGPT 工具调用与终止](https://doc.fastgpt.io/guide/build/workflow/nodes/tool)

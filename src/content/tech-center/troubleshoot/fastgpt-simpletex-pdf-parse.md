@@ -29,4 +29,4 @@ source_type: GitHub issue
 
 > 来源: [原始讨论：simpltex pdf，图片解析 插件](https://github.com/labring/FastGPT/issues/3862)
 
-> 来源: [FastGPT 环境变量与自定义 PDF 解析](https://doc.fastgpt.io/en/self-host/config/env)
+> 来源: [FastGPT 环境变量与自定义 PDF 解析](https://doc.fastgpt.io/self-host/config/env)

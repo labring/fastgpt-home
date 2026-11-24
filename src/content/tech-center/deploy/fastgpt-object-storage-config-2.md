@@ -2,7 +2,7 @@
 title: 配置FastGPT自部署的各厂商对象存储连接与访问参数
 slug: /zh/deploy/fastgpt-object-storage-config-2
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/object-storage
+source: https://doc.fastgpt.cn/self-host/config/object-storage
 source_type: 官方文档
 ---
 
@@ -31,4 +31,4 @@ STORAGE_S3_MAX_RETRIES = 3
 ```
 如果使用Sealos的对象存储服务，只需将STORAGE_VENDOR填写为minio即可。若需使用AWS S3，只需修改STORAGE_VENDOR为aws-s3，并调整STORAGE_S3_ENDPOINT为对应区域的S3地址即可。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/object-storage)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/config/object-storage)

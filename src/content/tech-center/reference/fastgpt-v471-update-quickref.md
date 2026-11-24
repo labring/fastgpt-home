@@ -2,7 +2,7 @@
 title: FastGPT V4.7.1版本更新内容速查
 slug: /zh/reference/fastgpt-v471-update-quickref
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/471
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/471
 source_type: 官方文档小节
 ---
 
@@ -27,4 +27,4 @@ source_type: 官方文档小节
 3. 分享页面加载缓慢问题由SSR时数据库未触发连接导致，本次更新修复该问题。
 4. 后台配置系统通知功能仅商业版支持。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/471)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/471)

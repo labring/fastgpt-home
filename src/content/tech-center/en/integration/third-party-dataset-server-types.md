@@ -2,7 +2,7 @@
 title: Add Third-Party Document Library Server Types
 slug: /en/integration/third-party-dataset-server-types
 page_type: Integrations
-source: https://doc.fastgpt.cn/en/guide/dataset/third-party/third_dataset
+source: https://doc.fastgpt.io/guide/dataset/third-party/third_dataset
 source_type: Official documentation
 ---
 
@@ -35,7 +35,7 @@ Below is a breakdown of each supported field:
 ## Validate Implementation
 After defining your custom server type, you can reference the provided example visual aid at `/imgs/thirddataset-1.png` to confirm your code aligns with FastGPT's expected third-party dataset system structure. This image illustrates the standard implementation pattern for custom external document library integrations.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/third-party/third_dataset)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/third-party/third_dataset)
 
 ## Applicability and version scope
 

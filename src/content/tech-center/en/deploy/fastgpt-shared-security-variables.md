@@ -2,7 +2,7 @@
 title: Configure FastGPT Shared App Security Variables
 slug: /en/deploy/fastgpt-shared-security-variables
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/env
+source: https://doc.fastgpt.io/self-host/config/env
 source_type: Official documentation
 ---
 
@@ -38,7 +38,7 @@ This section outlines key usage notes for the documented variables:
 
 To apply these variables, add them to your deployment configuration. For Docker Compose deployments, include the variables in the `environment` block of the FastGPT service. For Kubernetes deployments, define the variables in a ConfigMap or Secret, then mount them as environment variables in the FastGPT pod specification.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/env)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/env)
 
 ## Applicability and version scope
 

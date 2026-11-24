@@ -2,7 +2,7 @@
 title: Configure Feishu Bot Callback Events and Permissions
 slug: /en/integration/feishu-bot-callback-permissions
 page_type: 集成与发布渠道
-source: https://doc.fastgpt.cn/en/guide/build/publish/feishu
+source: https://doc.fastgpt.io/guide/build/publish/feishu
 source_type: 官方文档
 ---
 
@@ -30,4 +30,4 @@ It is not recommended to enable the two legacy version permissions referenced in
 ## Post-Setup Validation
 Once all events and permissions are configured, the Feishu bot will automatically forward matching messages to your FastGPT instance. Private messages sent directly to the bot will be forwarded if the private chat permission is enabled, and group chat messages that @mention the bot will be forwarded if the group mention permission is enabled.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/guide/build/publish/feishu)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/guide/build/publish/feishu)

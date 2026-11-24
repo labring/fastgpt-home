@@ -2,7 +2,7 @@
 title: FastGPT从旧版本升级到V4.4.2的操作步骤说明
 slug: /zh/deploy/fastgpt-v442-upgrade
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/442
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/442
 source_type: 官方文档
 ---
 
@@ -25,4 +25,4 @@ curl --location --request POST https://{{host}}/api/admin/initv442 \
 
 该请求的作用是初始化Mongo的Bill表索引，修复此前过期时间设置有误的问题，执行完成后即完成V4.4.2版本升级的相关数据库配置工作。执行该请求前，请确保FastGPT服务处于正常运行状态，且能够正常访问该API接口。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/442)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/442)

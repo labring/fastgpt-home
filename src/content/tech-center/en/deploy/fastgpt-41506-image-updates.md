@@ -2,7 +2,7 @@
 title: Update FastGPT 4.15.0-beta6 Container Images
 slug: /en/deploy/fastgpt-41506-image-updates
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41506
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/41506
 source_type: Official documentation
 ---
 
@@ -31,7 +31,7 @@ Follow these concrete steps to apply the image updates to your FastGPT deploymen
 4. Fetch the new container images using the appropriate command for your deployment tooling: for Docker Compose, run `docker compose pull`; for other orchestration tools, use their native image pull commands.
 5. Restart the updated services to activate the new image versions. For Docker Compose deployments, run `docker compose up -d` to restart containers in detached mode. For standalone containers, stop and restart each updated container individually.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41506)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-15/41506)
 
 ## Applicability and version scope
 

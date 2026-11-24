@@ -2,7 +2,7 @@
 title: FastGPT V4.4.6版本升级操作速查参考
 slug: /zh/reference/fastgpt-v446-upgrade-reference
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/446
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/446
 source_type: 官方文档小节
 ---
 
@@ -24,4 +24,4 @@ source_type: 官方文档小节
 3. 升级过程中若遇到标注有环境变量变更的版本节点，需提前核对并更新参数
 4. 升级完成后需验证服务运行状态，确认功能正常后恢复业务访问
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/446)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/446)

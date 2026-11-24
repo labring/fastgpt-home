@@ -2,7 +2,7 @@
 title: Select the Right FastGPT Application Types
 slug: /en/tutorial/fastgpt-app-type-selection
 page_type: 教程/部署
-source: https://doc.fastgpt.cn/en/guide/getting-started/quick-start
+source: https://doc.fastgpt.io/guide/getting-started/quick-start
 source_type: 官方文档
 ---
 
@@ -28,4 +28,4 @@ When selecting an app type, evaluate based on task complexity using the followin
 
 In real-world projects, these capabilities can be combined to build more robust applications. For example, a customer service assistant can use a Dataset to answer product-related questions and then query order details via tool calling. A content review workflow can use a Dataset to enforce content policies while using Workflow to standardize the review path. For data analysis, teams can first use Agent V2 for exploratory task planning, then solidify stable, repeatable analysis steps into a Workflow for ongoing use.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/guide/getting-started/quick-start)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/guide/getting-started/quick-start)

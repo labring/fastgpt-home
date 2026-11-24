@@ -2,7 +2,7 @@
 title: Configure FastGPT Question Classification Category Parameters
 slug: /en/node/fastgpt-question-classification-parameters
 page_type: Workflow nodes
-source: https://doc.fastgpt.cn/en/guide/build/workflow/nodes/question_classify
+source: https://doc.fastgpt.io/guide/build/workflow/nodes/question_classify
 source_type: Official documentation
 ---
 
@@ -32,7 +32,7 @@ The official function composition schema for question classification is defined 
    - Add `type` to the `required` array to ensure the function always returns a valid classification.
 4. Integrate the completed function into the question classification node of your FastGPT workflow. The system will generate random test return values during setup, which do not affect the core classification logic and can be safely ignored.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/workflow/nodes/question_classify)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/workflow/nodes/question_classify)
 
 ## Applicability and version scope
 

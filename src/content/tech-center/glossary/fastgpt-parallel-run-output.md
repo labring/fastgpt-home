@@ -2,7 +2,7 @@
 title: 说明FastGPT并行运行节点的输出参数与使用方法
 slug: /zh/glossary/fastgpt-parallel-run-output
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/parallel_run
+source: https://doc.fastgpt.cn/guide/build/workflow/nodes/parallel_run
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ source_type: 官方文档
 ## 容易搞错的地方
 完整结果会保留所有输入任务的对应条目，即使任务执行失败也不会过滤，与输入数组严格一一对应；成功结果仅保留成功任务的输出，失败任务的内容不会被包含在内；完成状态的取值必须为指定的三个字符串，不可自定义或修改。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/parallel_run)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/workflow/nodes/parallel_run)
 
 ## 适用性与版本范围
 

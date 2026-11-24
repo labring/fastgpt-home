@@ -2,7 +2,7 @@
 title: RAGFlow、MaxKB 迁移到 FastGPT：并行验证与切换验收
 slug: /zh/compare/migrate-fastgpt-ragflow-maxkb
 page_type: 对比与迁移
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/dataset_engine
+source: https://doc.fastgpt.cn/guide/dataset/dataset_engine
 source_type: 官方文档
 ---
 
@@ -63,5 +63,5 @@ MaxKB 可从原文件和 Excel/ZIP 导出整理文档与分段。源版本决定
 > 来源: [RAGFlow HTTP API](https://ragflow.io/docs/http_api_reference)
 > 来源: [RAGFlow 数据源增量与删除同步](https://ragflow.io/docs/add_data_source/add_to_knowledge_base_and_sync)
 > 来源: [MaxKB 文档操作与导出](https://maxkb.cn/docs/v2/user_manual/dataset/doclist.html)
-> 来源: [FastGPT 检索原理](https://doc.fastgpt.cn/zh-CN/guide/dataset/dataset_engine)
-> 来源: [FastGPT API 文件库](https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/api_dataset)
+> 来源: [FastGPT 检索原理](https://doc.fastgpt.cn/guide/dataset/dataset_engine)
+> 来源: [FastGPT API 文件库](https://doc.fastgpt.cn/guide/dataset/third-party/api_dataset)

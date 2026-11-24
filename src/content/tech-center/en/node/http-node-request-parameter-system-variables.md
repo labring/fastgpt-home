@@ -2,7 +2,7 @@
 title: Use System Variables in HTTP Node Request Parameters
 slug: /en/node/http-node-request-parameter-system-variables
 page_type: Workflow nodes
-source: https://doc.fastgpt.cn/en/guide/build/workflow/nodes/http
+source: https://doc.fastgpt.io/guide/build/workflow/nodes/http
 source_type: Official documentation
 ---
 
@@ -26,7 +26,7 @@ The following system variables are available for use in HTTP node request parame
 ## Accessing and Using Variables
 To view the full list of supported system variables, hover over the question mark icon positioned adjacent to the Request Parameters configuration field. This in-app tooltip displays all valid parameters and their intended use cases, allowing direct reference without external documentation.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/workflow/nodes/http)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/workflow/nodes/http)
 
 ## Applicability and version scope
 

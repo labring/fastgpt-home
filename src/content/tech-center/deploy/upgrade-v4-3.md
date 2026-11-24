@@ -2,7 +2,7 @@
 title: FastGPT V4.3版本升级操作与验证说明
 slug: /zh/deploy/upgrade-v4-3
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/43
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/43
 source_type: 官方文档
 ---
 
@@ -27,7 +27,7 @@ curl --location --request POST 'https://{{host}}/api/admin/initv43' \
 ## 升级后怎么验证
 首先确认FILE_TOKEN_KEY环境变量已正确配置。其次登录PG数据库，查看modeldata表是否存在file_id列。最后可尝试生成文件预览链接，确认链接可正常访问且有效期为30分钟。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/43)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/43)
 
 ## 适用性与版本范围
 

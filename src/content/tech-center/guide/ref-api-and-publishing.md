@@ -2,7 +2,7 @@
 title: FastGPT 配置与开发参考：API 与对外发布（110 篇清单）
 slug: /zh/guide/ref-api-and-publishing
 page_type: 问题清单聚合页
-source: https://doc.fastgpt.cn/zh-CN/openapi/intro
+source: https://doc.fastgpt.cn/openapi/intro
 source_type: 站内已发布文档的程序化归类
 check_day: 2026-10-19
 article_section: 配置与开发参考
@@ -159,8 +159,8 @@ date_modified: 2026-10-26
 
 ## 参考资料
 
-- [OpenAPI 介绍](https://doc.fastgpt.cn/zh-CN/openapi/intro)
-- [免登录链接](https://doc.fastgpt.cn/zh-CN/guide/build/publish/link)
+- [OpenAPI 介绍](https://doc.fastgpt.cn/openapi/intro)
+- [免登录链接](https://doc.fastgpt.cn/guide/build/publish/link)
 
 ## 需要进一步确认时
 

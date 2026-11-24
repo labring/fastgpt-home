@@ -2,7 +2,7 @@
 title: Configure FastGPT Parallel Run Deployment Parameters
 slug: /en/node/fastgpt-parallel-run-settings
 page_type: Workflow nodes
-source: https://doc.fastgpt.cn/en/guide/build/workflow/nodes/parallel_run
+source: https://doc.fastgpt.io/guide/build/workflow/nodes/parallel_run
 source_type: Official documentation
 ---
 
@@ -29,7 +29,7 @@ To apply custom values for these environment variables:
 # Critical Constraint Notes
 The two environment variables have a required dependency: the maximum concurrency limit cannot be larger than the maximum input array length. Violating this constraint will result in unexpected behavior during Parallel Run or Batch Processing node execution, as the platform will enforce the lower of the two configured values automatically, or reject invalid configuration loads during startup.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/workflow/nodes/parallel_run)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/workflow/nodes/parallel_run)
 
 ## Applicability and version scope
 

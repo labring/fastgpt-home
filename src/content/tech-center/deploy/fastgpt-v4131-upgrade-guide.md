@@ -2,7 +2,7 @@
 title: FastGPT V4.13.1版本升级操作与更新内容说明
 slug: /zh/deploy/fastgpt-v4131-upgrade-guide
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-13/4131
+source: https://doc.fastgpt.cn/self-host/upgrading/4-13/4131
 source_type: 官方文档
 ---
 
@@ -21,4 +21,4 @@ source_type: 官方文档
 ## 配置补充说明
 本次更新新增的可配置项可帮助用户规避内存溢出风险，即通过配置调整最大请求体大小以及内部网络请求的最大响应大小。同时新增的四款模型预设可直接用于模型配置，无需手动填写额外的接口参数。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-13/4131)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-13/4131)

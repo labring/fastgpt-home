@@ -2,7 +2,7 @@
 title: Run FastGPT 4.14.0 System Tool Migration
 slug: /en/deploy/fastgpt-4140-system-tool-migration
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4140
+source: https://doc.fastgpt.io/self-host/upgrading/4-14/4140
 source_type: Official documentation
 ---
 
@@ -28,7 +28,7 @@ Before executing the command, substitute both `{{rootkey}}` and `{{host}}` with 
 ## Expected Outcome and Validation
 Upon successful execution, the script will complete the transfer of custom system tool data to the new 4.14.0 data tables, and return a standard API confirmation response. If the command fails, first verify that your `rootkey` matches the value stored in your FastGPT environment variables, confirm that your FastGPT domain is reachable from the active terminal session, and ensure that the FastGPT service is running prior to reattempting the command.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4140)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-14/4140)
 
 ## Applicability and version scope
 

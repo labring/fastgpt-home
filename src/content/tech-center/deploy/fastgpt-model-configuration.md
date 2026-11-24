@@ -2,7 +2,7 @@
 title: FastGPT多类型AI模型的配置流程与使用注意事项
 slug: /zh/deploy/fastgpt-model-configuration
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/model/intro
+source: https://doc.fastgpt.cn/self-host/config/model/intro
 source_type: 官方文档
 ---
 
@@ -26,4 +26,4 @@ curl --location --request POST {{host}}/api/channels/import/oneapi \
 ```
 脚本仅做简单映射，迁移后需手动检查配置。易错点包括：新增模型时若模型 ID 与内置重复，会修改内置模型而非新增。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/model/intro)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/config/model/intro)

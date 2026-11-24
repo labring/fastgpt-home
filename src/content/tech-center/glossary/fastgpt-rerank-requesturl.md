@@ -2,7 +2,7 @@
 title: FastGPT模型配置中requestUrl参数的含义与配置方法
 slug: /zh/glossary/fastgpt-rerank-requesturl
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/model/intro
+source: https://doc.fastgpt.cn/self-host/config/model/intro
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ requestUrl是FastGPT重排模型配置中的自定义请求地址参数，用于
 ## 容易搞错的地方
 未正确配置该参数时，会导致模型测试时出现cannot read properties of undefined（reading ‘requestUrl’）的报错。该参数仅适用于重排类型的自定义模型，其他类型模型暂不支持该参数。需确保填写的请求地址格式符合接口调用规范，否则会影响模型正常调用。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/config/model/intro)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/config/model/intro)
 
 ## 适用性与版本范围
 

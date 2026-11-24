@@ -2,7 +2,7 @@
 title: FastGPT知识库引用分块阅读器的功能与使用说明
 slug: /zh/reference/fastgpt-quote-block-reader-guide
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/chat/quoteList
+source: https://doc.fastgpt.cn/guide/chat/quoteList
 source_type: 官方文档小节
 ---
 
@@ -19,4 +19,4 @@ FastGPT 4.9.1版本推出知识库引用分块阅读器功能。该功能可让�
 2. 仅在AI引用企业知识库内容的对话场景中可使用该功能。
 3. 该功能的核心价值是提升引用内容的可解释性，帮助用户更好地验证和理解AI引用的知识库内容。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/chat/quoteList)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/chat/quoteList)

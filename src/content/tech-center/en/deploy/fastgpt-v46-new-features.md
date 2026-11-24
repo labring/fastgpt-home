@@ -2,7 +2,7 @@
 title: Detailed Breakdown of FastGPT V4.6 New Features
 slug: /en/deploy/fastgpt-v46-new-features
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/46
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/46
 source_type: 官方文档
 ---
 
@@ -27,4 +27,4 @@ To set up custom text preprocessing for a dataset, follow these steps:
 ## Improved User Experience Workflows
 The dataset export workflow has been updated to use streaming downloads instead of a static loading spinner. This change provides real-time progress visibility during export, eliminates delayed download initiation for large datasets, and reduces user perceived wait time by providing immediate feedback on export status.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/46)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/46)

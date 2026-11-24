@@ -7,7 +7,7 @@ is_part_of: FastGPT Tech Center
 meta_description: Define FastGPT conversation-log retention, access, export, and cleanup based on deployment capabilities and your audit requirements.
 delivery_source_type: Open-source repository docs and community threads
 source_type: 深度场景内容
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/env
+source: https://doc.fastgpt.cn/self-host/config/env
 meta_title: Conversation Logs: Retention Scope, Access Boundaries and Cleanup | FastGPT Technical Center
 schema_type: TechArticle
 date_published: 2026-09-28
@@ -97,8 +97,8 @@ Check that the selected testing retention period is sufficient for troubleshooti
 - [LLM request record TTL schema](https://github.com/labring/FastGPT/blob/v4.17.0/packages/service/core/ai/record/schema.ts)
 - [Persistent chat schema](https://github.com/labring/FastGPT/blob/v4.17.0/packages/service/core/chat/chatSchema.ts)
 
-- [FastGPT environment variables](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
-- [FastGPT Docker Compose deployment](https://doc.fastgpt.cn/zh-CN/self-host/deploy/docker)
+- [FastGPT environment variables](https://doc.fastgpt.cn/self-host/config/env)
+- [FastGPT Docker Compose deployment](https://doc.fastgpt.cn/self-host/deploy/docker)
 
 ## Next steps
 

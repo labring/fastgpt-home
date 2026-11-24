@@ -2,7 +2,7 @@
 title: Migrate Manual HTTP Tool Data for FastGPT 4.16.0
 slug: /en/deploy/fastgpt-4160-http-tool-migration
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-16/4160
+source: https://doc.fastgpt.io/self-host/upgrading/4-16/4160
 source_type: 官方文档
 ---
 
@@ -33,4 +33,4 @@ curl -X POST 'https://your-domain/api/admin/4160/initHttpToolSchema' \
 ```
 Once the migration script finishes executing, run another dry run to confirm that `total.changedDocumentCount` returns `0`. This confirms all eligible manual HTTP tool data has been successfully migrated, and no further action is required for your deployment.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/4-16/4160)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/4-16/4160)

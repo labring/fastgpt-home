@@ -2,7 +2,7 @@
 title: 通过OneAPI将Ollama接入FastGPT部署环境的具体操作方法
 slug: /zh/reference/oneapi-connect-ollama-fastgpt
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/custom-models/ollama
+source: https://doc.fastgpt.cn/self-host/custom-models/ollama
 source_type: 官方文档小节
 ---
 
@@ -26,4 +26,4 @@ source_type: 官方文档小节
 3. OneAPI容器需运行在FastGPT的同一网络中，否则无法正常通信
 4. 渠道测试未通过时，需检查模型名称、代理地址是否配置正确
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/ollama)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/custom-models/ollama)

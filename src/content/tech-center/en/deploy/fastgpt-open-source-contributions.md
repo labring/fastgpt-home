@@ -2,7 +2,7 @@
 title: Contribute to FastGPT Open Source Repository
 slug: /en/deploy/fastgpt-open-source-contributions
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/dev
+source: https://doc.fastgpt.io/self-host/dev
 source_type: Official documentation
 ---
 
@@ -23,7 +23,7 @@ If you encounter merge conflicts during the PR review process, refer to GitHubâ€
 ## Post-Merge Contributor Recognition
 Once your pull request is successfully merged into the official FastGPT main branch, your GitHub account will be added to the official FastGPT contributors table. This table is publicly accessible at https://github.com/labring/FastGPT/graphs/contributors, and serves as a permanent public record of all community contributions to the project.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/dev)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/dev)
 
 ## Applicability and version scope
 

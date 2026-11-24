@@ -2,7 +2,7 @@
 title: 说明FastGPT团队邀请链接的创建步骤与使用规则
 slug: /zh/glossary/fastgpt-team-invitation-link-2
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/guide/workspace/team/invitation_link
+source: https://doc.fastgpt.cn/guide/workspace/team/invitation_link
 source_type: 官方文档
 ---
 
@@ -24,7 +24,7 @@ FastGPT团队邀请链接是FastGPT管理员用于邀请他人加入团队的专
 - 仅管理员可创建团队邀请链接，普通团队成员无此操作权限。
 - 受邀人忽略邀请后，再次访问该链接仍可选择加入团队。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/workspace/team/invitation_link)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/workspace/team/invitation_link)
 
 ## 适用性与版本范围
 

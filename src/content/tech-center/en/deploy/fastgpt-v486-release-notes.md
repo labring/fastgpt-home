@@ -2,7 +2,7 @@
 title: FastGPT v4.8.6 Feature and Fix Updates
 slug: /en/deploy/fastgpt-v486-release-notes
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/486
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/486
 source_type: 官方文档
 ---
 
@@ -37,4 +37,4 @@ A full list of addressed bugs is provided in the table below:
 | Prompt template closing tag error | Fixed malformed closing tags in saved prompt template configurations |
 | Generic documentation descriptions | Corrected outdated or incorrect wording across project documentation pages |
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/486)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/486)

@@ -2,7 +2,7 @@
 title: FastGPT中string类型参数的定义与使用方法
 slug: /zh/glossary/fastgpt-string-type-usage
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/guide/build/general/fileInput
+source: https://doc.fastgpt.cn/guide/build/general/fileInput
 source_type: 官方文档
 ---
 
@@ -26,7 +26,7 @@ ${content}
 ## 容易搞错的地方
 文档解析节点只会解析本轮工作流接收的文件，无法解析历史记录的文件；仅识别文档类型的URL，多模态文件会被直接忽略；循环运行节点的自定义输出仅输出最后一轮迭代或中断时的值，无法输出中间轮次的结果。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/general/fileInput)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/general/fileInput)
 
 ## 适用性与版本范围
 

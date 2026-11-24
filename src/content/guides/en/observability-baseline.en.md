@@ -80,8 +80,8 @@ This baseline approach will not work if:
 
 ## References
 
-- [FastGPT environment variables](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
-- [FastGPT upgrade notes](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/upgrade-instruction)
+- [FastGPT environment variables](https://doc.fastgpt.cn/self-host/config/env)
+- [FastGPT upgrade notes](https://doc.fastgpt.cn/self-host/upgrading/upgrade-instruction)
 
 ## Next steps
 

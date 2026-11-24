@@ -2,7 +2,7 @@
 title: Build, Validate, and Package FastGPT Plugins
 slug: /en/model/fastgpt-plugin-build-check-pack
 page_type: Model guides
-source: https://doc.fastgpt.cn/en/plugin/system-tool-development
+source: https://doc.fastgpt.io/plugin/system-tool-development
 source_type: Official documentation
 ---
 
@@ -46,7 +46,7 @@ Optional supported artifacts include:
 ## Packaging Output
 The final `pack` command generates a single `.pkg` file. This file is the exclusive format used for uploading, installing, and listing plugins within the FastGPT platform.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/plugin/system-tool-development)
+> Source: [FastGPT official source](https://doc.fastgpt.io/plugin/system-tool-development)
 
 ## Applicability and version scope
 

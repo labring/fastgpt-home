@@ -2,7 +2,7 @@
 title: Update FastGPT App and Pro Sandbox Environment Variables
 slug: /en/deploy/fastgpt-app-pro-sandbox-env-updates
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-16/41601
+source: https://doc.fastgpt.io/self-host/upgrading/4-16/41601
 source_type: 官方文档
 ---
 
@@ -41,4 +41,4 @@ Several optional environment variables are available to fine-tune Agent Sandbox 
 ## Preview Protocol Changes
 FastGPT, `fastgpt-agent-sandbox-proxy`, and `fastgpt-agent-sandbox` preview protocols have been updated in this release. When enabling Agent Sandbox, only use container images released with this version. Mixing old and new versions of these components is not supported.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/4-16/41601)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/4-16/41601)

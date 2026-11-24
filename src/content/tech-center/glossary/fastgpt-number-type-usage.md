@@ -2,7 +2,7 @@
 title: FastGPT中number类型字段的定义、用法及异常处理
 slug: /zh/glossary/fastgpt-number-type-usage
 page_type: 术语速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/4160
+source: https://doc.fastgpt.cn/self-host/upgrading/4-16/4160
 source_type: 官方文档
 ---
 
@@ -17,4 +17,4 @@ FastGPT中的number是4.16版本起引入的严格数值数据类型，用于系
 ## 容易搞错的地方
 旧版本保存的数字字符串、字符串形式价格梯度或缺失字段会导致初始化校验失败，需通过清洗脚本处理，不可直接跳过。正式清洗会立即刷新系统模型缓存，即使无数据更新也会重构运行时缓存，需确认执行时机。无法通过当前完整模型Schema的记录不会被写入，相关信息会返回在`invalidSamples`中，需提前检查该字段。前端number输入组件在Agent生成和手动输入之间切换后，可能异常变为普通文本框，需留意使用场景。
 
-> 来源: [FastGPT 官方文档与源码](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/4160)
+> 来源: [FastGPT 官方文档与源码](https://doc.fastgpt.cn/self-host/upgrading/4-16/4160)

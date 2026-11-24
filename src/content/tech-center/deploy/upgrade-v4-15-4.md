@@ -2,7 +2,7 @@
 title: FastGPT V4.15.4版本升级操作与验证说明
 slug: /zh/deploy/upgrade-v4-15-4
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/4154
+source: https://doc.fastgpt.cn/self-host/upgrading/4-15/4154
 source_type: 官方文档
 ---
 
@@ -23,7 +23,7 @@ source_type: 官方文档
 ## 升级后怎么验证
 查看服务启动日志，确认索引同步操作正常完成，无报错信息。访问客户端配置的FE_DOMAIN地址，确认可正常登录与使用系统。测试工作流、聊天功能、向量模型切换、MinIO批量删除、企业认证、Agent V2等功能，确认修复的问题均已解决，部署脚本.yaml可正常运行。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/4154)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-15/4154)
 
 ## 适用性与版本范围
 

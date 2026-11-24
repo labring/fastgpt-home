@@ -2,7 +2,7 @@
 title: Enable Real-Time Citation Annotation For FastGPT
 slug: /en/tutorial/fastgpt-real-time-citation-annotation
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/chat/quoteList
+source: https://doc.fastgpt.io/guide/chat/quoteList
 source_type: Official documentation
 ---
 
@@ -21,7 +21,7 @@ This feature enables a seamless knowledge refinement cycle ideal for team collab
 4. Submit the modified citation content; the system will process the update without interrupting the current conversation.
 5. Confirm the successful application of the change by verifying the modified content displays the "Updated" label.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/chat/quoteList)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/chat/quoteList)
 
 ## Applicability and version scope
 

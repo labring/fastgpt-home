@@ -2,7 +2,7 @@
 title: FastGPT Dataset API Data Structure Reference
 slug: /en/api/fastgpt-dataset-api-data-structure
 page_type: API
-source: https://doc.fastgpt.cn/en/openapi/dataset
+source: https://doc.fastgpt.io/openapi/dataset
 source_type: Official documentation
 ---
 
@@ -36,7 +36,7 @@ Each dataset data entry can include up to 5 custom vector indexes. The following
 
 Per the official specification, if the `type` field is not provided for an index, it defaults to `custom`. A default index will also be created based on the `q` and `a` fields of the parent data entry unless a default index is explicitly included in the `indexes` array, in which case no additional default index is generated.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/openapi/dataset)
+> Source: [FastGPT official source](https://doc.fastgpt.io/openapi/dataset)
 
 ## Applicability and version scope
 

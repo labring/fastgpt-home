@@ -2,7 +2,7 @@
 title: FastGPT第三方API数据集获取文件树的操作方法
 slug: /zh/reference/fastgpt-third-party-api-file-tree
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/api_dataset
+source: https://doc.fastgpt.cn/guide/dataset/third-party/api_dataset
 source_type: 官方文档小节
 ---
 
@@ -28,4 +28,4 @@ source_type: 官方文档小节
 3. `searchKey`为空字符串时，接口返回全量目录内容，不进行检索过滤。
 4. 响应的`data`数组元素包含`id`、`parentId`、`type`、`name`、`updateTime`、`createTime`和`hasChild`共7个字段。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/api_dataset)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/dataset/third-party/api_dataset)

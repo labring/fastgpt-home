@@ -3,7 +3,7 @@ title: Connecting a Bot to Chat Apps: WeCom, Feishu, DingTalk, Official Accounts
 slug: /en/guide/im-bot-channel-selection
 page_type: Decision matrix
 source_type: FastGPT v4.17.2 documentation and community threads
-source: https://doc.fastgpt.cn/en/guide/build/publish/wecom
+source: https://doc.fastgpt.io/guide/build/publish/wecom
 source_note: "Criteria taken from the FastGPT v4.17.2 documentation and community threads, verified 2026-10-13."
 check_day: 2026-10-13
 article_section: Selection & Evaluation
@@ -76,12 +76,12 @@ Finally, if your enterprise plans to use a temporary AI solution, such as only s
 
 ## References
 
-- [Publishing to WeCom](https://doc.fastgpt.cn/en/guide/build/publish/wecom)
-- [Publishing to Feishu](https://doc.fastgpt.cn/en/guide/build/publish/feishu)
-- [Publishing to DingTalk](https://doc.fastgpt.cn/en/guide/build/publish/dingtalk)
-- [Commercial edition feature comparison](https://doc.fastgpt.cn/en/guide/version/commercial)
-- [Publishing to a WeChat Official Account](https://doc.fastgpt.cn/en/guide/build/publish/official_account)
-- [Publishing to a personal WeChat account](https://doc.fastgpt.cn/en/guide/build/publish/wechat)
+- [Publishing to WeCom](https://doc.fastgpt.io/guide/build/publish/wecom)
+- [Publishing to Feishu](https://doc.fastgpt.io/guide/build/publish/feishu)
+- [Publishing to DingTalk](https://doc.fastgpt.io/guide/build/publish/dingtalk)
+- [Commercial edition feature comparison](https://doc.fastgpt.io/guide/version/commercial)
+- [Publishing to a WeChat Official Account](https://doc.fastgpt.io/guide/build/publish/official_account)
+- [Publishing to a personal WeChat account](https://doc.fastgpt.io/guide/build/publish/wechat)
 
 ## Next steps
 

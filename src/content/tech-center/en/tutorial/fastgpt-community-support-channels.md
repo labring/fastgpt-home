@@ -2,7 +2,7 @@
 title: Access FastGPT Community Support Channels
 slug: /en/tutorial/fastgpt-community-support-channels
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/getting-started
+source: https://doc.fastgpt.io/guide/getting-started
 source_type: Official documentation
 ---
 
@@ -28,7 +28,7 @@ For formal bug reports, issue tracking, or feature requests, use the official Fa
 2.  Complete the required on-page form with clear, specific details related to your submission
 3.  Submit the form to send your feedback to the FastGPT community and contributing developers.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/getting-started)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/getting-started)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: Resolved Bugs in FastGPT 4.15.5 Release
 slug: /en/deploy/fastgpt-4-15-5-bug-fixes
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/4155
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/4155
 source_type: 官方文档
 ---
 
@@ -34,4 +34,4 @@ To confirm all fixes are applied correctly in a self-hosted FastGPT 4.15.5 insta
     - Update the avatar URL for a user or assistant account in FastGPT.
     - Inspect the rendered avatar element in the frontend interface to confirm the URL does not contain duplicate encoding segments.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/4155)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/4-15/4155)

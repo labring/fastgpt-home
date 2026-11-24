@@ -2,7 +2,7 @@
 title: Build FastGPT Content Compliance Review Workflow
 slug: /en/tutorial/fastgpt-content-review-workflow
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/getting-started/quick-start
+source: https://doc.fastgpt.io/guide/getting-started/quick-start
 source_type: Official documentation
 ---
 
@@ -45,7 +45,7 @@ Supports single text review or batch submission (multiple items separated by lin
 ## Testing and Output Tuning
 Run the Content Review Node individually via the top-right "Run" button, testing with three content types: a standard event announcement, marketing copy with absolute language, and clearly prohibited text. Verify classifications match expected results, and adjust the rule base wording or review prompt if classifications are unstable. To hide intermediate node output for end users, click the settings button on the right side of the Content Review Node and adjust basic display settings.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/getting-started/quick-start)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/getting-started/quick-start)
 
 ## Applicability and version scope
 

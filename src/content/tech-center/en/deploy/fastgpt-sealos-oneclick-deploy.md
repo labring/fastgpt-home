@@ -2,7 +2,7 @@
 title: Complete One-Click FastGPT Deployment on Sealos
 slug: /en/deploy/fastgpt-sealos-oneclick-deploy
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/deploy/sealos
+source: https://doc.fastgpt.io/self-host/deploy/sealos
 source_type: Official documentation
 ---
 
@@ -20,7 +20,7 @@ When deploying FastGPT via one-click on Sealos, all required database components
 After opening the FastGPT deployment management page via the details button, locate the external access address link and click it to launch the FastGPT service interface.
 To adjust deployment parameters or bind a custom domain name, click the **Change** button in the top-right corner of the deployment management page, then follow the in-product instructions provided by Sealos for configuration updates. A third reference screenshot demonstrates the location of the Change button.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/deploy/sealos)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/deploy/sealos)
 
 ## Applicability and version scope
 

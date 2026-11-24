@@ -2,7 +2,7 @@
 title: 知识库处理模型选型：文本理解、索引与图片理解模型分工决策
 slug: /zh/guide/kb-processing-model-selection
 page_type: 决策矩阵页
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/env
+source: https://doc.fastgpt.cn/self-host/config/env
 source_type: 开源仓库文档与社区线程
 article_section: 选型与评估
 is_part_of: FastGPT 技术中心
@@ -53,8 +53,8 @@ date_modified: 2026-10-15
 
 ## 参考资料
 
-- [FastGPT 环境变量](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
-- [FastGPT Docker Compose 部署](https://doc.fastgpt.cn/zh-CN/self-host/deploy/docker)
+- [FastGPT 环境变量](https://doc.fastgpt.cn/self-host/config/env)
+- [FastGPT Docker Compose 部署](https://doc.fastgpt.cn/self-host/deploy/docker)
 
 ## 需要进一步确认时
 

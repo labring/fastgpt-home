@@ -2,7 +2,7 @@
 title: 测试FastGPT所使用模型的工具调用支持能力
 slug: /zh/deploy/test-fastgpt-model-tool-call-support
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/troubleshooting/model-errors
+source: https://doc.fastgpt.cn/self-host/troubleshooting/model-errors
 source_type: 官方文档小节
 ---
 
@@ -126,4 +126,4 @@ curl --location --request POST 'https://oneapi.xxxx/v1/chat/completions' \
 ### 结果验证
 第一轮请求成功返回`tool_calls`参数，说明模型与oneapi已具备工具调用的基础支持能力。第二轮请求完成后，将收到模型基于工具返回结果生成的自然语言回答，即可验证完整的工具调用流程正常运行。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/troubleshooting/model-errors)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/troubleshooting/model-errors)

@@ -2,7 +2,7 @@
 title: FastGPT V4.9.4版本升级内容与操作指南
 slug: /zh/deploy/upgrade-v4-9-4
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/494
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/494
 source_type: 官方文档
 ---
 
@@ -30,7 +30,7 @@ curl --location --request POST 'https://{{host}}/api/admin/initv494' \
 ## 升级后怎么验证
 可通过以下方式验证升级效果：检查集合数据训练状态展示功能是否正常；测试SMTP发送邮件插件是否可用；确认AI对话/工具调用返回结果包含finish_reason字段；验证移动端语音输入交互是否调整完成；确认搜索应用/知识库时可点击目录进入下一层；测试重新训练时参数是否正常初始化；检查多app场景下package/service请求是否一致。同时可确认Redis缓存与站点同步配置生效。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/494)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/494)
 
 ## 适用性与版本范围
 

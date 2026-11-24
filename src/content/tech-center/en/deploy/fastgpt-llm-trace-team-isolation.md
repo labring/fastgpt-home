@@ -2,7 +2,7 @@
 title: Prevent Unauthorized LLM Request Trace Access
 slug: /en/deploy/fastgpt-llm-trace-team-isolation
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41506
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/41506
 source_type: 官方文档
 ---
 
@@ -17,4 +17,4 @@ FastGPT uses the `SYNC_INDEX` environment variable to control automatic database
 ## Legacy Trace Record Risk Mitigation
 Any trace records written to `llm_request_records` before this upgrade do not contain a `teamId` field. Following the upgrade, these legacy records can no longer be queried using only the `requestId` parameter, and the FastGPT user interface will mark them as expired. These legacy records include a built-in time-to-live (TTL) and are intended solely for temporary debugging purposes. If you need to investigate historical LLM API calls prior to the upgrade, export relevant logs or retain original request details before completing the deployment upgrade.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41506)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/4-15/41506)

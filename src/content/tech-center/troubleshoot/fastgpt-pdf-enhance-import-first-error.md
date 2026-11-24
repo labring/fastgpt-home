@@ -29,4 +29,4 @@ source_type: GitHub issue
 
 > 来源: [原始讨论：pdf导入知识库，启用PDF增强后第一次报错，只有第二次运行才可以成功](https://github.com/labring/FastGPT/issues/4795)
 
-> 来源: [FastGPT 环境变量与自定义 PDF 解析](https://doc.fastgpt.io/en/self-host/config/env)
+> 来源: [FastGPT 环境变量与自定义 PDF 解析](https://doc.fastgpt.io/self-host/config/env)

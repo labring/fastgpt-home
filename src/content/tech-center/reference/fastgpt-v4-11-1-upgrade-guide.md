@@ -2,7 +2,7 @@
 title: FastGPT从低于4.12.0升级至V4.11.1操作速查
 slug: /zh/reference/fastgpt-v4-11-1-upgrade-guide
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4111
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4111
 source_type: 官方文档小节
 ---
 
@@ -23,4 +23,4 @@ source_type: 官方文档小节
 3. 仅支持从低于4.12.0的版本升级至V4.11.1，跨大版本升级需按中间版本的要求分步操作
 4. 部署过程中需确保服务器环境符合FastGPT V4.11.1的运行要求
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4111)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/4111)

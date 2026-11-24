@@ -2,7 +2,7 @@
 title: Create FastGPT System Plugin Toolkits for Developers
 slug: /en/model/fastgpt-system-toolkit-development
 page_type: Model guides
-source: https://doc.fastgpt.cn/en/plugin/system-tool-development
+source: https://doc.fastgpt.io/plugin/system-tool-development
 source_type: Official documentation
 ---
 
@@ -28,7 +28,7 @@ Follow this workflow to build a functional toolkit using the provided sample cod
 3. **Build Individual Tools**: Use `createToolHandler()` for each tool. The sample search tool has an ID of `search`, accepts a `query` input, and returns an array of text items under the `items` key. The summary tool has an ID of `summary`, accepts a `content` input, and returns a truncated 100-character summary under the `summary` key. Both tools reference the shared secret schema and include multi-language display names and descriptions.
 4. **Bundle and Export**: Call `defineToolSet()` with the global manifest (including `pluginId: 'text-tools'`, version `1.0.0`, and multi-language names/descriptions), the child tool array, and the shared secret schema. Export the final toolkit for integration with FastGPT.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/plugin/system-tool-development)
+> Source: [FastGPT official source](https://doc.fastgpt.io/plugin/system-tool-development)
 
 ## Applicability and version scope
 

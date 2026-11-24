@@ -6,7 +6,7 @@ source: https://fastgpt.cn/contact
 source_type: 深度场景内容
 meta_title: 永久使用与持续更新如何规划
 meta_description: 围绕 FastGPT 私有部署的永久使用与持续更新，说明无到期时间 License、更新服务、维保安排和运行费用的区别，结合场景扩展给出采购清单与长期预算的规划方法。
-delivery_metadata: {"source_front_matter":{"slug":"perpetual-license-update-and-maintenance-review","meta_title":"永久使用与持续更新如何规划","meta_description":"围绕 FastGPT 私有部署的永久使用与持续更新，说明无到期时间 License、更新服务、维保安排和运行费用的区别，结合场景扩展给出采购清单与长期预算的规划方法。","language":"zh","content_type":"deep","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"perpetual-license-update-and-maintenance-review","keywords":"私有部署授权,更新包,维保边界,长期成本,采购比价,对账","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"FastGPT 私有部署授权怎么核对更新、维保与长期使用成本","需求依据":"客户 2026-11-07 购买诉求第 4 条：买断与持续更新的组合是采购关注点。","事实来源":"FastGPT 产品知识库·内容收集清单（授权与数据条款、计费结构）；官方更新说明 4.17.3","内链":"https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173","排期":"W18 深度内容第 4 篇；具体商务条款待客户书面确认后定稿","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["事实来源：见上表所列官方文档与版本说明。核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（官方更新说明口径，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核授权条款表述与计价单位。"]}
+delivery_metadata: {"source_front_matter":{"slug":"perpetual-license-update-and-maintenance-review","meta_title":"永久使用与持续更新如何规划","meta_description":"围绕 FastGPT 私有部署的永久使用与持续更新，说明无到期时间 License、更新服务、维保安排和运行费用的区别，结合场景扩展给出采购清单与长期预算的规划方法。","language":"zh","content_type":"deep","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"perpetual-license-update-and-maintenance-review","keywords":"私有部署授权,更新包,维保边界,长期成本,采购比价,对账","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"FastGPT 私有部署授权怎么核对更新、维保与长期使用成本","需求依据":"客户 2026-11-07 购买诉求第 4 条：买断与持续更新的组合是采购关注点。","事实来源":"FastGPT 产品知识库·内容收集清单（授权与数据条款、计费结构）；官方更新说明 4.17.3","内链":"https://doc.fastgpt.cn/self-host/upgrading/4-17/4173","排期":"W18 深度内容第 4 篇；具体商务条款待客户书面确认后定稿","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["事实来源：见上表所列官方文档与版本说明。核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（官方更新说明口径，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核授权条款表述与计价单位。"]}
 keywords: 私有部署授权,更新包,维保边界,长期成本,采购比价,对账
 schema_type: Article
 date_modified: 2026-11-16
@@ -131,7 +131,7 @@ FastGPT v4.17.1 更新说明列出商业版 License 对永久、无到期时间�
 | 主题 | 版本 | 来源 |
 | --- | --- | --- |
 | 三种付费形态、档位差异、授权与数据条款、费用包含范围 | 当期商业方案与合同 | [FastGPT 商务咨询：授权、部署与支持范围](https://fastgpt.cn/contact) |
-| 计价单位与 pricing 结构、专属模型、MCP 配额 | v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173) |
-| 镜像组合与不混部约束 | v4.17.3 / v4.16.0 | [self-host/upgrading/4-16/4160](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/4160) |
-| 永久 License 支持 | v4.17.1 | [FastGPT v4.17.1 升级说明](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4171) |
+| 计价单位与 pricing 结构、专属模型、MCP 配额 | v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/self-host/upgrading/4-17/4173) |
+| 镜像组合与不混部约束 | v4.17.3 / v4.16.0 | [self-host/upgrading/4-16/4160](https://doc.fastgpt.cn/self-host/upgrading/4-16/4160) |
+| 永久 License 支持 | v4.17.1 | [FastGPT v4.17.1 升级说明](https://doc.fastgpt.cn/self-host/upgrading/4-17/4171) |
 | 社区版许可边界 | 官方仓库许可 | [github.com/labring/FastGPT](https://github.com/labring/FastGPT) |

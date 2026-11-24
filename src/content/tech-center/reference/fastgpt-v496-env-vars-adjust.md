@@ -2,7 +2,7 @@
 title: FastGPT V4.9.6版本环境变量变更的适配操作指南
 slug: /zh/reference/fastgpt-v496-env-vars-adjust
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/496
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/496
 source_type: 官方文档小节
 ---
 
@@ -20,4 +20,4 @@ FastGPT V4.9.6版本存在环境变量配置变更，自部署用户需完成对
 1. 该变更仅适用于从低于4.12.0版本升级至V4.9.6的场景，其他版本升级无需执行此操作。
 2. 需严格遵循官方指引调整配置，避免因变量配置错误引发服务启动失败或运行异常。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/496)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/496)

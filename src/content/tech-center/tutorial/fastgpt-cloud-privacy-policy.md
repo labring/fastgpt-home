@@ -2,7 +2,7 @@
 title: FastGPT云服务隐私政策条款与用户操作指引
 slug: /zh/tutorial/fastgpt-cloud-privacy-policy
 page_type: 教程/部署
-source: https://doc.fastgpt.cn/zh-CN/guide/version/cloud/privacy
+source: https://doc.fastgpt.cn/guide/version/cloud/privacy
 source_type: 官方文档小节
 ---
 
@@ -22,4 +22,4 @@ FastGPT云服务不会向任何第三方披露用户的个人信息，除非用�
 ## 政策更新与联系渠道
 隐私政策若有变更，将在服务页面发布修改后的版本，用户继续使用服务即视为同意变更后的政策。用户可定期查阅隐私政策，了解信息保护措施。若对隐私政策有疑问、建议或投诉，可发送邮件至archer@fastgpt.io，服务将尽快回复并解决相关问题。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/version/cloud/privacy)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/version/cloud/privacy)

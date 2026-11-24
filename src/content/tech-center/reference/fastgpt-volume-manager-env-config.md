@@ -2,7 +2,7 @@
 title: FastGPT Volume Manager环境变量配置参数说明
 slug: /zh/reference/fastgpt-volume-manager-env-config
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/env
+source: https://doc.fastgpt.cn/self-host/config/env
 source_type: 官方文档小节
 ---
 
@@ -33,4 +33,4 @@ FastGPT Volume Manager的环境变量由projects/volume-manager/src/env.ts加载
 4. 日志等级仅支持debug、info、none三种选项，配置其他值会触发校验失败。
 5. 所有环境变量需符合projects/volume-manager/src/env.ts的校验规则，否则服务无法正常启动。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/config/env)

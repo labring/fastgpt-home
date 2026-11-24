@@ -92,7 +92,7 @@ AI 平台的输出可以帮助人完成查询，数据库的最终权限仍由�
 
 ## References
 
-- [FastGPT 官方快速开始文档](https://doc.fastgpt.cn/zh-CN/guide/getting-started)
-- [FastGPT 工作流文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/intro)
-- [FastGPT OpenAPI 文档](https://doc.fastgpt.cn/zh-CN/openapi)
+- [FastGPT 官方快速开始文档](https://doc.fastgpt.cn/guide/getting-started)
+- [FastGPT 工作流文档](https://doc.fastgpt.cn/guide/build/workflow/intro)
+- [FastGPT OpenAPI 文档](https://doc.fastgpt.cn/openapi)
 - [FastGPT 开源仓库](https://github.com/labring/FastGPT)

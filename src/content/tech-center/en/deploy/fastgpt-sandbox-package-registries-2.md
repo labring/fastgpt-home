@@ -2,7 +2,7 @@
 title: Configure Custom Package Registries for FastGPT Sandboxes
 slug: /en/deploy/fastgpt-sandbox-package-registries-2
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/sandbox/sealosdevbox
+source: https://doc.fastgpt.io/self-host/config/sandbox/sealosdevbox
 source_type: Official documentation
 ---
 
@@ -27,7 +27,7 @@ The following environment variables control package registry behavior for FastGP
 # APT Mirror Behavior for Root Agent Sandboxes
 When the `AGENT_SANDBOX_APT_MIRROR` variable is enabled for a root Agent sandbox, FastGPT automatically generates and overwrites the standard Ubuntu or Debian `.sources` file for the detected host distribution. A `.copy` backup of the original file is created before any overwriting occurs to prevent data loss. If the environment variable is later removed from the configuration, FastGPT restores any files with a `.copy` backup; files without an existing backup are left unchanged. Importantly, sandbox initialization does not automatically run `apt-get update` after applying the new mirror configuration. For arm64 runtime images, you must use a mirror URL that provides packages compatible with the arm64 architecture to avoid installation failures.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/sandbox/sealosdevbox)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/sandbox/sealosdevbox)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: Explain FastGPT Dataset Result Ranking and Fusion
 slug: /en/tutorial/fastgpt-dataset-ranking-fusion
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/dataset/dataset_engine
+source: https://doc.fastgpt.io/guide/dataset/dataset_engine
 source_type: Official documentation
 ---
 
@@ -28,7 +28,7 @@ Unlike single-path search systems, FastGPT’s final ranked cited content does n
 ## Cross-Modal Image Fusion
 For dataset collections that include visual assets, FastGPT integrates image search results into the overall ranking and fusion pipeline. Image search generates results using either image description embeddings or raw image vector embeddings, then fuses these image-derived results with the text-side recall results to create a complete, cross-modal candidate set for final ranking.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/dataset_engine)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/dataset_engine)
 
 ## Applicability and version scope
 

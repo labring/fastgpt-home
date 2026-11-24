@@ -2,7 +2,7 @@
 title: FastGPT 工作流工具调用与终止节点的使用方法
 slug: /zh/reference/fastgpt-tool-call-terminate
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/tool
+source: https://doc.fastgpt.cn/guide/build/workflow/nodes/tool
 source_type: 官方文档小节
 ---
 
@@ -20,4 +20,4 @@ source_type: 官方文档小节
 ## 注意事项
 该节点仅可在FastGPT工作流环境中使用，无法直接在对话界面单独运行。节点的配置需符合工作流的整体流转逻辑，避免出现执行中断或异常的情况。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/tool)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/workflow/nodes/tool)

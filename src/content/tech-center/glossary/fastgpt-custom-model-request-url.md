@@ -2,7 +2,7 @@
 title: FastGPT自定义模型请求地址的配置与使用说明
 slug: /zh/glossary/fastgpt-custom-model-request-url
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/model/intro
+source: https://doc.fastgpt.cn/self-host/config/model/intro
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ source_type: 官方文档
 ## 容易搞错的地方
 调用Embeddings接口时，FastGPT的input参数采用数组格式，若适配Azure OpenAI embeddings这类仅支持string类型input的接口，会出现调用不兼容的问题。需严格按照对应模型类型的格式填写请求地址，不可省略路径部分。ReRank接口不可混用OpenAI格式，需遵循指定的Cohere格式。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/config/model/intro)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/config/model/intro)
 
 ## 适用性与版本范围
 

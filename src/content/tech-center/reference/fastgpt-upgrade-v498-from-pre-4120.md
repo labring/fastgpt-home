@@ -2,7 +2,7 @@
 title: FastGPT 从低于4.12.0版本升级至V4.9.8的操作指南
 slug: /zh/reference/fastgpt-upgrade-v498-from-pre-4120
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/498
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/498
 source_type: 官方文档小节
 ---
 
@@ -23,4 +23,4 @@ source_type: 官方文档小节
 3. 请勿跨大版本区间直接升级，需按官方发布的版本升级流程逐步操作。
 4. 若升级后出现异常问题，可参考官方通用问题排查文档进行故障排查。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/498)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/498)

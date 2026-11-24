@@ -2,7 +2,7 @@
 title: Configure and run FastGPT RAG generation phase
 slug: /en/tutorial/fastgpt-rag-generation-phase
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/dataset/rag
+source: https://doc.fastgpt.io/guide/dataset/rag
 source_type: Official documentation
 ---
 
@@ -20,7 +20,7 @@ FastGPT’s generation phase natively supports two industry-standard generative 
 3.  Submit the formatted prompt to the configured generative model (either BART or GPT) via the model’s approved execution interface.
 4.  Capture the model’s raw generated output, perform minimal post-processing to remove extraneous formatting artifacts, and return the polished, coherent response to the requesting system or end user.
 
-> [FastGPT public documentation](https://doc.fastgpt.cn/en/guide/dataset/rag)
+> [FastGPT public documentation](https://doc.fastgpt.io/guide/dataset/rag)
 
 ## Applicability and version scope
 

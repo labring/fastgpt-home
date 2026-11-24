@@ -2,7 +2,7 @@
 title: Detailed Technical Improvements for FastGPT 4.15.5 Upgrade
 slug: /en/deploy/fastgpt-4155-upgrade-improvements
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/4155
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/4155
 source_type: 官方文档
 ---
 
@@ -26,4 +26,4 @@ Two storage adapters have been updated to align with FastGPT’s internal interf
 
 These compliance updates ensure that all cloud storage operations adhere to FastGPT’s standardized `IStorage` contract and shared error handling framework, reducing deployment-specific edge case failures across supported storage backends.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/4155)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/4-15/4155)

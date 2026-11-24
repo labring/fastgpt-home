@@ -2,7 +2,7 @@
 title: FastGPT V4.8.2版本环境变量变更适配操作指南
 slug: /zh/reference/fastgpt-v4-8-2-env-changes
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/482
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/482
 source_type: 官方文档小节
 ---
 
@@ -22,4 +22,4 @@ FastGPT V4.8.2版本存在专属的环境变量配置变更。升级或部署该
 2. 未完成环境变量适配直接启动服务，可能导致系统无法正常运行。
 3. 需严格按照官方提供的变更清单调整参数，避免配置错误。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/482)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/482)

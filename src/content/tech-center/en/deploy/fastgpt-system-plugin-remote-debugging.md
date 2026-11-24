@@ -2,7 +2,7 @@
 title: Set Up FastGPT System Plugin Remote Debugging
 slug: /en/deploy/fastgpt-system-plugin-remote-debugging
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/remote-debug-suite
+source: https://doc.fastgpt.io/self-host/config/remote-debug-suite
 source_type: Official documentation
 ---
 
@@ -25,7 +25,7 @@ The standard Docker Compose deployment package for FastGPT includes only the cor
 4.  Manually configure and launch all required supporting infrastructure: Plugin Server, Connection Gateway, Redis, reverse proxy, TLS encryption, and secret rotation tools.
 5.  Establish a temporary secure connection between your local system plugin and the FastGPT test environment using the suite’s configured network endpoints.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/remote-debug-suite)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/remote-debug-suite)
 
 ## Applicability and version scope
 

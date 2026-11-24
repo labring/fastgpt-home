@@ -2,7 +2,7 @@
 title: FastGPT V4.15.0-beta2版本升级详情与操作指引
 slug: /zh/deploy/upgrade-v4-15-0-beta2
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41502
+source: https://doc.fastgpt.cn/self-host/upgrading/4-15/41502
 source_type: 官方文档
 ---
 
@@ -20,7 +20,7 @@ source_type: 官方文档
 ## 升级后怎么验证
 检查各服务镜像版本是否为v4.15.0-beta2（fastgpt-app、fastgpt-pro）与v0.2.0（Opensandbox相关组件）。发起新对话，验证Skill编辑与Agent功能正常运行。测试知识库搜索多模态embedding模型与图搜图功能，确认返回结果符合预期。调用/v1/chat/completions、/v2/chat/completions或chatTest接口，使用重复dataId发起请求，确认返回业务错误。测试工作流超长节点名显示、表单输入文件回填、会话恢复等功能，验证应用切换时记住最近会话的功能正常。检查环境变量中已移除AGENT_SANDBOX_VOLUME_MANAGER_MOUNT_PATH配置项。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41502)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-15/41502)
 
 ## 适用性与版本范围
 

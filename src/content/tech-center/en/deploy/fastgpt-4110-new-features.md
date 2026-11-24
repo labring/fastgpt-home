@@ -2,7 +2,7 @@
 title: Key New Features of FastGPT 4.11.0
 slug: /en/deploy/fastgpt-4110-new-features
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4110
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/4110
 source_type: 官方文档
 ---
 
@@ -25,4 +25,4 @@ Additionally, model invocation logs now include two critical new data fields: ti
 ## Commercial Edition Feature Additions
 The commercial edition of FastGPT 4.11.0 introduces the App Evaluation (Beta) feature. This tool supports supervised scoring of deployed applications, allowing teams to conduct structured, standardized evaluations of app performance through configurable scoring workflows. This feature helps teams refine and optimize their FastGPT applications with data-driven feedback.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4110)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/4110)

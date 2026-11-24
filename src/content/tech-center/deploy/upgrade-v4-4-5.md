@@ -2,7 +2,7 @@
 title: FastGPT V4.4.5版本升级操作及功能说明
 slug: /zh/deploy/upgrade-v4-4-5
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/445
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/445
 source_type: 官方文档
 ---
 
@@ -21,7 +21,7 @@ curl --location --request POST 'https://{{host}}/api/admin/initv445' \
 ```
 ## 升级后怎么验证
 可通过以下方式验证升级结果。第一，确认variable模块已合并到用户引导模块。第二，检查功能页面，确认存在下一步指引选项、商业版的分享链接限制及hook身份校验功能、API Key管理功能。第三，确认全局变量与开场白已合并为同一配置模块。
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/445)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/445)
 
 ## 适用性与版本范围
 

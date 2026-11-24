@@ -2,7 +2,7 @@
 title: FastGPT 4.15.0 Environment Variable Upgrade Changes
 slug: /en/deploy/fastgpt-4150-env-upgrade-changes
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41500
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/41500
 source_type: Official documentation
 ---
 
@@ -64,7 +64,7 @@ The open-source edition no longer uses the `config.json` configuration file. All
 - `QA_MAX_PROCESS` (default 10): Maximum Q&A split queue concurrency
 - `VLM_MAX_PROCESS` (default 10): Maximum vision-language model processing queue concurrency
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41500)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-15/41500)
 
 ## Applicability and version scope
 

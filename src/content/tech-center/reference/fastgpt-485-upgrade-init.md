@@ -2,7 +2,7 @@
 title: FastGPT 4.8.5版本升级后的系统初始化操作步骤
 slug: /zh/reference/fastgpt-485-upgrade-init
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/485
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/485
 source_type: 官方文档小节
 ---
 
@@ -33,4 +33,4 @@ FastGPT 4.8.5版本升级后，需通过终端发起指定HTTP请求完成系统
 2.  需在终端环境执行该HTTP请求，确保网络可访问FastGPT域名。
 3.  普通版操作不会删除插件表，商业版操作仅重置知识库权限系统。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/485)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/485)

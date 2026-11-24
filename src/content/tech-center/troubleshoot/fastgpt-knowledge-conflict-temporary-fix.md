@@ -33,4 +33,4 @@ source_type: GitHub issue
 
 > 来源: [原讨论中的补充回复](https://github.com/labring/FastGPT/issues/1491#issuecomment-2112379254)
 
-> 来源: [FastGPT 商业版集合标签与过滤](https://doc.fastgpt.io/en/guide/dataset/collection_tags)
+> 来源: [FastGPT 商业版集合标签与过滤](https://doc.fastgpt.io/guide/dataset/collection_tags)

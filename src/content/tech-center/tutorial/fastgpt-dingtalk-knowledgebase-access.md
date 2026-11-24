@@ -2,7 +2,7 @@
 title: FastGPT接入钉钉知识库的配置与使用说明
 slug: /zh/tutorial/fastgpt-dingtalk-knowledgebase-access
 page_type: 教程
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/dingtalk_dataset
+source: https://doc.fastgpt.cn/guide/dataset/third-party/dingtalk_dataset
 source_type: 官方文档
 ---
 
@@ -23,8 +23,8 @@ FastGPT支持通过钉钉企业内部应用接入钉钉知识库，可将钉钉�
 ## 使用限制说明
 当前仅支持导入钉钉在线文档的文本内容，无法导入PDF、Word、Excel、PPT等二进制文件。导入前需确认待导入文件的类型符合要求，避免导入失败。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/dingtalk_dataset)
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/dingtalk_dataset)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/dataset/third-party/dingtalk_dataset)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/dataset/third-party/dingtalk_dataset)
 
 ## 适用性与版本范围
 

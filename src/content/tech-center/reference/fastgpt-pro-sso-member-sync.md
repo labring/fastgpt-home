@@ -2,7 +2,7 @@
 title: 配置FastGPT商业版的单点登录及成员同步功能
 slug: /zh/reference/fastgpt-pro-sso-member-sync
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/admin/sso
+source: https://doc.fastgpt.cn/guide/admin/sso
 source_type: 官方文档小节
 ---
 
@@ -25,4 +25,4 @@ source_type: 官方文档小节
 3. 成员同步功能的前置配置需参考团队模式说明文档完成。
 4. 环境变量的参数值需使用双引号包裹，确保格式正确。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/admin/sso)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/admin/sso)

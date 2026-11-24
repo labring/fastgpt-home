@@ -2,7 +2,7 @@
 title: FastGPT知识库检索完整流程与配置说明
 slug: /zh/tutorial/fastgpt-dataset-search-process
 page_type: 教程
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/dataset_engine
+source: https://doc.fastgpt.cn/guide/dataset/dataset_engine
 source_type: 官方文档
 ---
 
@@ -26,7 +26,7 @@ source_type: 官方文档
 ## 检索流程链路
 完整的检索流程可通过配套图示直观展示，从输入内容开始，依次经过问题优化、多渠道召回、结果合并、重排与过滤环节，最终输出可供模型调用的引用内容，帮助使用者清晰理解整个检索的执行顺序与逻辑。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/dataset/dataset_engine)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/dataset/dataset_engine)
 
 ## 适用性与版本范围
 

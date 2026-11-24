@@ -2,7 +2,7 @@
 title: FastGPT工作流V1升级至V2的迁移操作指南
 slug: /zh/reference/fastgpt-workflow-v1-v2-migration
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41507
+source: https://doc.fastgpt.cn/self-host/upgrading/4-15/41507
 source_type: 官方文档小节
 ---
 
@@ -38,4 +38,4 @@ curl -X POST 'https://你的域名/api/admin/dataClean/v1WorkflowToV2' \
 - 未知节点类型会兜底为`emptyNode`，非法`valueType`会转为`any`；缺失`node.name`时用`flowType`兜底，缺失`input.label`时用`input.key`兜底。
 - 写库前会使用`PublishAppBodySchema`校验数据，校验失败的文档不会写入，并会记录到接口返回结果中。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41507)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-15/41507)

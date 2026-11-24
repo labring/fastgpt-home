@@ -2,7 +2,7 @@
 title: FastGPT中timeout术语的具体含义与操作说明
 slug: /zh/glossary/fastgpt-timeout-usage
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/remote-debug-suite
+source: https://doc.fastgpt.cn/self-host/config/remote-debug-suite
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ timeout在FastGPT相关场景中，指请求或执行过程的最大允许持续
 ## 容易搞错的地方
 第一，不应将Gateway internal HTTP API相关的`/internal/*`、`/metrics`和Gateway HTTP端口暴露到公网，避免因非法访问引发超时相关异常。第二，升级脚本执行时出现的timeout提示，不应误认为升级失败，官方说明数据库未崩溃时会持续执行增量更新，可直接忽略该提示。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/config/remote-debug-suite)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/config/remote-debug-suite)
 
 ## 适用性与版本范围
 

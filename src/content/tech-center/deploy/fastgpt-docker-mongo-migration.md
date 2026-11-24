@@ -2,7 +2,7 @@
 title: FastGPT基于Docker的MongoDB数据迁移备份恢复操作
 slug: /zh/deploy/fastgpt-docker-mongo-migration
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/migration/docker_mongo
+source: https://doc.fastgpt.cn/self-host/migration/docker_mongo
 source_type: 官方文档小节
 ---
 
@@ -36,4 +36,4 @@ tar -xvzf fastgptbackup-2024-05-03.tar.gz -C /fastgpt/mongobackup/data
 docker cp /fastgpt/mongobackup/data mongo:/tmp/backup
 ```
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/migration/docker_mongo)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/migration/docker_mongo)

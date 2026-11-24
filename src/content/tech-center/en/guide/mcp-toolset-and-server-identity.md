@@ -3,7 +3,7 @@ title: Decision Guide for Bidirectional MCP Integration with FastGPT v4.17.2
 slug: /en/guide/mcp-toolset-and-server-identity
 page_type: Deep-dive guide
 source_type: Official documentation (v4.17.2) and community threads
-source: https://doc.fastgpt.io/en/guide/build/tools/mcp_tools
+source: https://doc.fastgpt.io/guide/build/tools/mcp_tools
 source_note: "Criteria taken from the FastGPT documentation (v4.17.2) and release notes, verified 2026-10-13."
 check_day: 2026-10-13
 article_section: Selection & Evaluation
@@ -92,10 +92,10 @@ Configuration steps:
 
 ## References
 
-- [MCP tool sets](https://doc.fastgpt.io/en/guide/build/tools/mcp_tools)
-- [Publishing an MCP server](https://doc.fastgpt.io/en/guide/build/publish/mcp_server)
-- [Tool call node](https://doc.fastgpt.io/en/guide/build/workflow/nodes/tool)
-- [Environment variables](https://doc.fastgpt.io/en/self-host/config/env)
+- [MCP tool sets](https://doc.fastgpt.io/guide/build/tools/mcp_tools)
+- [Publishing an MCP server](https://doc.fastgpt.io/guide/build/publish/mcp_server)
+- [Tool call node](https://doc.fastgpt.io/guide/build/workflow/nodes/tool)
+- [Environment variables](https://doc.fastgpt.io/self-host/config/env)
 
 ## Next steps
 

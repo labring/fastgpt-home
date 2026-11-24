@@ -2,7 +2,7 @@
 title: Retrieve FastGPT Chat Session Basic Info
 slug: /en/api/fastgpt-chat-session-basic-info
 page_type: API
-source: https://doc.fastgpt.cn/en/openapi/chat
+source: https://doc.fastgpt.io/openapi/chat
 source_type: Official documentation
 ---
 
@@ -40,7 +40,7 @@ A successful request returns a 200 HTTP status code with a JSON response body. T
 
 A complete sample response matching this schema is available in the official FastGPT documentation.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/openapi/chat)
+> Source: [FastGPT official source](https://doc.fastgpt.io/openapi/chat)
 
 ## Applicability and version scope
 

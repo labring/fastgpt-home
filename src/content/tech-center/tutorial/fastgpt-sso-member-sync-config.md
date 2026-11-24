@@ -2,7 +2,7 @@
 title: 配置FastGPT的SSO外部成员同步与单点登录功能
 slug: /zh/tutorial/fastgpt-sso-member-sync-config
 page_type: 教程/部署
-source: https://doc.fastgpt.cn/zh-CN/guide/admin/sso
+source: https://doc.fastgpt.cn/guide/admin/sso
 source_type: 官方文档
 ---
 
@@ -31,4 +31,4 @@ fastgpt-sso:
 ## 配置易错点说明
 不同提供商的配置存在专属要求，例如飞书需要在开发者后台配置权限、重定向URL，且需开启全员可见的数据范围；钉钉仅支持SSO登录，不支持成员同步。配置过程中需注意重定向URL需与FastGPT公开访问域名完全匹配，鉴权TOKEN需在SSO-service与FastGPT-pro中保持一致，否则会出现接口调用失败的报错。同时，若使用私有化部署的第三方服务，需替换对应接口地址为私有化地址。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/admin/sso)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/admin/sso)

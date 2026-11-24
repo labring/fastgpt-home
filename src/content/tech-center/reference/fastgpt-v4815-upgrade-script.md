@@ -2,7 +2,7 @@
 title: FastGPT自部署V4.8.15版本升级脚本使用说明
 slug: /zh/reference/fastgpt-v4815-upgrade-script
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4815
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4815
 source_type: 官方文档小节
 ---
 
@@ -21,4 +21,4 @@ FastGPT V4.8.15版本升级需使用官方专属升级脚本完成。该版本�
 2. 升级需在当前版本符合<4.12.0的区间内进行，否则无法执行。
 3. 需严格遵循官方指定的升级步骤完成操作。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4815)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/4815)

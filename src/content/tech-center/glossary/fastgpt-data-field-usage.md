@@ -2,7 +2,7 @@
 title: FastGPT中并行运行节点与文件读取接口的data字段说明
 slug: /zh/glossary/fastgpt-data-field-usage
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/parallel_run
+source: https://doc.fastgpt.cn/guide/build/workflow/nodes/parallel_run
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ data字段是FastGPT中用于承载业务返回结果的标准数据载体，应
 ## 容易搞错的地方
 一是混淆并行运行节点的成功结果与完整结果的结构，成功结果直接为任务输出数组，无success、message、data层级，无需额外提取data字段。二是误以为文件读取接口的data字段包含更多业务数据，实际仅包含url字段，无其他额外内容。三是忽略并行运行节点的完成状态字段，该字段可用于分支判断，包含success、partial_success、failed三种状态。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/parallel_run)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/workflow/nodes/parallel_run)
 
 ## 适用性与版本范围
 

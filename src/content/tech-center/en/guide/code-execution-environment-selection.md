@@ -3,7 +3,7 @@ title: Where Custom Code Runs: the Code Node or the Agent VM, and Which Sandbox 
 slug: /en/guide/code-execution-environment-selection
 page_type: Decision matrix
 source_type: FastGPT v4.17.2 documentation and community threads
-source: https://doc.fastgpt.cn/en/guide/build/workflow/nodes/sandbox-v2
+source: https://doc.fastgpt.io/guide/build/workflow/nodes/sandbox-v2
 source_note: "Criteria taken from the FastGPT v4.17.2 documentation and community threads, verified 2026-10-13."
 check_day: 2026-10-13
 article_section: Selection & Evaluation
@@ -63,10 +63,10 @@ You can postpone this decision when workflows only need to call built-in tools t
 
 ## References
 
-- [Code run node](https://doc.fastgpt.cn/en/guide/build/workflow/nodes/sandbox-v2)
-- [Agent virtual machine](https://doc.fastgpt.cn/en/guide/build/agentv2/vm)
-- [OpenSandbox configuration](https://doc.fastgpt.cn/en/self-host/config/sandbox/opensandbox)
-- [Sealos Devbox sandbox configuration](https://doc.fastgpt.cn/en/self-host/config/sandbox/sealosdevbox)
+- [Code run node](https://doc.fastgpt.io/guide/build/workflow/nodes/sandbox-v2)
+- [Agent virtual machine](https://doc.fastgpt.io/guide/build/agentv2/vm)
+- [OpenSandbox configuration](https://doc.fastgpt.io/self-host/config/sandbox/opensandbox)
+- [Sealos Devbox sandbox configuration](https://doc.fastgpt.io/self-host/config/sandbox/sealosdevbox)
 
 ## Next steps
 

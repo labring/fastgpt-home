@@ -2,7 +2,7 @@
 title: Run Initialization for FastGPT After Image Upgrade
 slug: /en/deploy/fastgpt-post-upgrade-initialization
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/47
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/47
 source_type: 官方文档
 ---
 
@@ -28,4 +28,4 @@ curl --location --request POST 'https://{{host}}/api/admin/initv47' \
 --header 'Content-Type: application/json'
 ```
 When executed correctly, the script will complete the initialization of parentId values for all existing plugins, aligning the plugin data structure with the requirements of the upgraded FastGPT image.
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/47)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/47)

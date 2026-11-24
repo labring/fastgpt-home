@@ -2,7 +2,7 @@
 title: Explain FastGPT Workflow Node Core Components
 slug: /en/node/fastgpt-workflow-node-components
 page_type: Workflow nodes
-source: https://doc.fastgpt.cn/en/guide/build/workflow/intro
+source: https://doc.fastgpt.io/guide/build/workflow/intro
 source_type: Official documentation
 ---
 
@@ -23,7 +23,7 @@ Every FastGPT workflow node includes three mandatory core structural components,
 # Node Execution and Linking
 When nodes are connected via their trigger points, execution order is determined by the configured connection conditions. Linked nodes will run in a sequential sequence, with each node processing data only after the preceding connected node has completed its assigned task. The visual layout of connected nodes on the workflow canvas directly reflects the execution order, with directional arrows indicating the direction of data flow between nodes.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/workflow/intro)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/workflow/intro)
 
 ## Applicability and version scope
 

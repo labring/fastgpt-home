@@ -2,7 +2,7 @@
 title: FastGPT API接口鉴权与基础配置使用说明
 slug: /zh/api/fastgpt-api-basic-config
 page_type: API与文档
-source: https://doc.fastgpt.cn/zh-CN/openapi/intro
+source: https://doc.fastgpt.cn/openapi/intro
 source_type: 官方文档
 ---
 
@@ -24,4 +24,4 @@ headers: {
 ```
 你可以按照此配置完成基础的接口调用准备，在实际调用时，只需在配置好的baseUrl后拼接对应接口的具体路径，即可发起鉴权后的请求。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/openapi/intro)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/openapi/intro)

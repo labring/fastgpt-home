@@ -2,7 +2,7 @@
 title: Understand and Optimize FastGPT Vector Dataset Search
 slug: /en/tutorial/fastgpt-vector-dataset-search
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/dataset/dataset_engine
+source: https://doc.fastgpt.io/guide/dataset/dataset_engine
 source_type: Official documentation
 ---
 
@@ -21,7 +21,7 @@ The following are key configurable parameters for FastGPT vector dataset retriev
 | top-k | Defines the number of most similar vector results to pass to the LLM for processing | A higher k value increases the volume of context provided to the LLM but raises computational latency |
 | retriever precision | Tunable setting that adjusts the balance between search speed and result accuracy | Lower precision prioritizes faster search times, while higher precision prioritizes more relevant retrieval results |
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/dataset_engine)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/dataset_engine)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: Optimize Ultra-Long Document Quote List Performance
 slug: /en/tutorial/fastgpt-ultra-long-document-quote-performance
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/chat/quoteList
+source: https://doc.fastgpt.io/guide/chat/quoteList
 source_type: Official documentation
 ---
 
@@ -22,7 +22,7 @@ FastGPT implements a targeted loading pipeline to minimize unnecessary memory us
 # User Experience Consistency
 The optimization pipeline ensures consistent smooth performance across all user interactions with quote lists. Whether a user jumps directly to a specific cited document section or scrolls through the full list of available citations, the system maintains responsive behavior. This eliminates performance bottlenecks that typically arise with large document datasets, allowing FastGPT to efficiently handle enterprise-scale volumes of professional content without degraded usability.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/chat/quoteList)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/chat/quoteList)
 
 ## Applicability and version scope
 

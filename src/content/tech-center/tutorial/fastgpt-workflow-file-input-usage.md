@@ -2,7 +2,7 @@
 title: FastGPT工作流中文件输入功能的配置与实际使用操作方法
 slug: /zh/tutorial/fastgpt-workflow-file-input-usage
 page_type: 教程
-source: https://doc.fastgpt.cn/zh-CN/guide/build/general/fileInput
+source: https://doc.fastgpt.cn/guide/build/general/fileInput
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ source_type: 官方文档
 ## 操作辅助说明
 所有与文件输入功能相关的操作步骤，均配有官方示意图辅助理解，可通过对应文档位置获取相关配图，帮助快速完成配置与流程搭建。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/general/fileInput)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/general/fileInput)
 
 ## 适用性与版本范围
 

@@ -52,6 +52,7 @@ jobs:
 
       - uses: actions/checkout@v4
         with:
+          fetch-depth: 2
           persist-credentials: false
 
       - uses: actions/setup-node@v4
@@ -131,3 +132,10 @@ jobs:
           include-hidden-files: true
           retention-days: 90
           if-no-files-found: ignore
+
+      - name: Notify IndexNow for fastgpt.io
+        continue-on-error: true
+        env:
+          BEFORE_SHA: ${{ github.event.before }}
+        run: |
+          node scripts/submit-indexnow.js --variant io --base-ref "${BEFORE_SHA:-HEAD~1}"

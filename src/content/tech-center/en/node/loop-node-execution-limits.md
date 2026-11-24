@@ -2,7 +2,7 @@
 title: Adjust FastGPT Loop Node Execution Limits
 slug: /en/node/loop-node-execution-limits
 page_type: 工作流节点
-source: https://doc.fastgpt.cn/en/guide/build/workflow/nodes/loop_run
+source: https://doc.fastgpt.io/guide/build/workflow/nodes/loop_run
 source_type: 官方文档
 ---
 
@@ -27,4 +27,4 @@ To update the loop execution limit for your self-hosted FastGPT deployment:
 ## Configuration Impact
 When applied, the `WORKFLOW_MAX_LOOP_TIMES` value enforces two critical constraints: it caps the maximum number of iterations for conditional loop nodes, and it limits the maximum length of input arrays processed by both Loop and Parallel Run nodes. Any workflow operation that exceeds the configured limit will terminate automatically to prevent excessive resource consumption on your host infrastructure.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/guide/build/workflow/nodes/loop_run)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/guide/build/workflow/nodes/loop_run)

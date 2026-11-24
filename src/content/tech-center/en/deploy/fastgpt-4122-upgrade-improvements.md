@@ -2,7 +2,7 @@
 title: Technical Improvement Details for FastGPT 4.12.2
 slug: /en/deploy/fastgpt-4122-upgrade-improvements
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-12/4122
+source: https://doc.fastgpt.io/self-host/upgrading/4-12/4122
 source_type: Official documentation
 ---
 
@@ -22,7 +22,7 @@ This change eliminates unnecessary automatic normalization computations for vect
 ## LLM and Plugin SDK Refinements
 Two key updates were made to LLM and plugin infrastructure. First, model provider configuration was moved entirely into the plugin SDK, centralizing provider-specific settings and simplifying cross-provider maintenance. Second, LLM call functions were encapsulated to standardize and simplify LLM requests and tool call integrations. This encapsulation reduces redundant code across the codebase, making it easier to implement and maintain LLM-powered workflow steps and tool interactions.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-12/4122)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-12/4122)
 
 ## Applicability and version scope
 

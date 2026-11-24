@@ -2,7 +2,7 @@
 title: 介绍FastGPT中embedding的功能与配置方法
 slug: /zh/glossary/fastgpt-embedding-usage
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/coreferenceResolution
+source: https://doc.fastgpt.cn/guide/build/workflow/nodes/coreferenceResolution
 source_type: 官方文档
 ---
 
@@ -17,8 +17,8 @@ Embedding是FastGPT中用于将文本转换为向量，以支持知识库相似�
 ## 容易搞错的地方
 容易搞错的地方包括：仅根据搜索结果、第三方博客或聚合站判断embedding模型是否存在；误将不具备对应能力的模型归类为embedding类型；随意删除开放目录中的本地占位或用户自定义的embedding模型。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/coreferenceResolution)
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/plugin/model-presets)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/workflow/nodes/coreferenceResolution)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/plugin/model-presets)
 
 ## 适用性与版本范围
 

@@ -60,6 +60,6 @@ For each model type, cover success, invalid credentials, rate limiting or overlo
 
 ## References
 
-- [FastGPT model configuration and OneAPI migration](https://doc.fastgpt.cn/zh-CN/self-host/config/model/intro)
+- [FastGPT model configuration and OneAPI migration](https://doc.fastgpt.cn/self-host/config/model/intro)
 - [AIProxy official repository](https://github.com/labring/aiproxy)
 - [FastGPT embedding request implementation](https://github.com/labring/FastGPT/blob/2bab5c1e06c46362f40a454d49d963e8bf0c62bc/packages/service/core/ai/embedding/index.ts)

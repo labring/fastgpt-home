@@ -2,7 +2,7 @@
 title: Configure FastGPT Docker Environment Variables
 slug: /en/deploy/fastgpt-docker-env-variables
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/deploy/docker
+source: https://doc.fastgpt.io/self-host/deploy/docker
 source_type: Official documentation
 ---
 
@@ -26,7 +26,7 @@ FastGPT’s Zilliz version requires additional credential setup beyond the base 
 4.  If deploying the Zilliz version of FastGPT, add the required credentials as specified in the linked documentation section.
 5.  Save your configuration changes, or proceed through the interactive install script prompts to input the required addresses when prompted.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/deploy/docker)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/deploy/docker)
 
 ## Applicability and version scope
 

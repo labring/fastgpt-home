@@ -2,7 +2,7 @@
 title: New Features for FastGPT Self-Host Upgrades
 slug: /en/deploy/fastgpt-upgrade-new-features-2
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/499
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/499
 source_type: 官方文档
 ---
 
@@ -25,4 +25,4 @@ For deployments using WeChat Official Account integrations, this update adds exp
 ## API Dataset BasePath Selection Support
 The API Dataset feature now includes support for BasePath selection when integrating with third-party APIs. To leverage this new capability, users must configure an additional required API endpoint, as fully outlined in the official API Dataset Introduction documentation. The linked reference details the required setup steps for the additional endpoint: [API Dataset Introduction](../../../guide/dataset/third-party/api_dataset.en.mdx#4-get-file-details). This update expands the range of configurable options for connecting external data sources via API datasets, allowing more precise control over API request paths.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/499)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/499)

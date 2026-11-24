@@ -2,7 +2,7 @@
 title: FastGPT V4.8.2版本升级操作与更新内容说明
 slug: /zh/deploy/upgrade-v4-8-2
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/482
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/482
 source_type: 官方文档
 ---
 
@@ -29,7 +29,7 @@ V4.8.2版本包含四项更新与修复。其一，新增js代码运行节点，
 ## 升级后怎么验证
 升级完成后可通过以下方式验证配置与功能正常。其一，进入工作流编辑界面，确认js代码运行节点已新增，且节点支持完整的type提醒。其二，配置内容提取节点，确认可选择数据类型。其三，测试站点同步功能，确认可正常运行。其四，创建定时任务，确认可正常输入任务内容。其五，检查sandbox容器的运行状态，确认环境变量SANDBOX_URL配置正确。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/482)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/482)
 
 ## 适用性与版本范围
 

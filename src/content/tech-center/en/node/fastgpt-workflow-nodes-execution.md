@@ -2,7 +2,7 @@
 title: Understand FastGPT Workflow Nodes and Execution
 slug: /en/node/fastgpt-workflow-nodes-execution
 page_type: Workflow nodes
-source: https://doc.fastgpt.cn/en/guide/build/workflow/intro
+source: https://doc.fastgpt.io/guide/build/workflow/intro
 source_type: Official documentation
 ---
 
@@ -26,7 +26,7 @@ The simplest fully functional FastGPT workflow consists of exactly two nodes: th
 2.  The AI Chat node begins execution, requiring the two mandatory parameters listed in the prior section. The User Question parameter automatically pulls the stored user input from the Workflow Start node.
 3.  The AI Chat node invokes the FastGPT conversation API using the configured chat history and retrieved user question to generate a structured AI response, which becomes the final output of the workflow.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/workflow/intro)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/workflow/intro)
 
 ## Applicability and version scope
 

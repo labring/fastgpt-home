@@ -2,7 +2,7 @@
 title: Resolve FastGPT Custom Domain DNS Failures
 slug: /en/tutorial/fastgpt-custom-domain-dns-failure
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/workspace/customDomain
+source: https://doc.fastgpt.io/guide/workspace/customDomain
 source_type: Official documentation
 ---
 
@@ -25,7 +25,7 @@ After initiating the edit flow, follow the on-screen prompts to complete the re-
 ## Reconfigure Custom Domains or DNS Providers
 If you need to update your existing custom domain or switch to a different DNS provider, direct modification of the existing configuration is not supported. Instead, you must first fully delete the existing custom domain configuration from the "Custom Domain" management page. Once the old configuration is removed, follow the standard FastGPT custom domain setup workflow to configure the new domain or migrate to the new DNS provider setup.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/workspace/customDomain)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/workspace/customDomain)
 
 ## Applicability and version scope
 

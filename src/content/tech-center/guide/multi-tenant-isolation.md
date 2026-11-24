@@ -9,7 +9,7 @@ meta_description: 面向企业技术负责人与采购方，系统梳理多团�
 keywords: 多团队隔离,知识库权限,应用边界,凭据管理,企业协作
 delivery_source_type: 开源仓库文档与社区线程
 source_type: 深度场景内容
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/env
+source: https://doc.fastgpt.cn/self-host/config/env
 schema_type: TechArticle
 date_published: 2026-09-28
 date_modified: 2026-09-28
@@ -62,8 +62,8 @@ delivery_note: 判据取自开源仓库文档与社区线程，核验日 2026-09
 - [FastGPT v4.17.0 remote MCP tool configuration](https://github.com/labring/FastGPT/blob/v4.17.0/document/content/guide/build/tools/mcp_tools.mdx)
 - [FastGPT v4.17.0 MCP app publishing](https://github.com/labring/FastGPT/blob/v4.17.0/document/content/guide/build/publish/mcp_server.mdx)
 
-- [FastGPT 环境变量](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
-- [FastGPT Docker Compose 部署](https://doc.fastgpt.cn/zh-CN/self-host/deploy/docker)
+- [FastGPT 环境变量](https://doc.fastgpt.cn/self-host/config/env)
+- [FastGPT Docker Compose 部署](https://doc.fastgpt.cn/self-host/deploy/docker)
 
 ## 需要进一步确认时
 

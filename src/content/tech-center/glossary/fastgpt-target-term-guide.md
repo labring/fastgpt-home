@@ -2,7 +2,7 @@
 title: 讲解FastGPT部署与安全场景中的target术语含义与用法
 slug: /zh/glossary/fastgpt-target-term-guide
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/self-host/deploy/sealos
+source: https://doc.fastgpt.cn/self-host/deploy/sealos
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ target在FastGPT相关场景中有两种明确含义，一是用于控制链接�
 ## 容易搞错的地方
 易混淆两种场景下的target含义，一种是控制链接打开行为的HTML属性，另一种是示例中的服务器占位符。前者用于配置链接的打开方式，后者用于示例中的服务器地址指代，二者使用场景与作用完全不同，不可混用。同时需注意，漏洞示例中的target仅为占位符，实际使用时需替换为真实的服务器地址。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/deploy/sealos)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/deploy/sealos)
 
 ## 适用性与版本范围
 

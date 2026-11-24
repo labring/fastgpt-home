@@ -2,7 +2,7 @@
 title: 配置SigNoz为FastGPT实现全面服务监控与运维相关支持
 slug: /zh/deploy/fastgpt-signoz-monitoring
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/signoz
+source: https://doc.fastgpt.cn/self-host/config/signoz
 source_type: 官方文档
 ---
 
@@ -27,7 +27,7 @@ SigNoz是开源的应用性能监控（APM）和可观测性平台，为FastGPT�
 4.  开启错误捕获与日志聚合功能，实现系统异常的自动记录与应用日志的集中管理
 5.  基于指标阈值配置实时告警规则，完成告警策略的设置
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/config/signoz)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/config/signoz)
 
 ## 适用性与版本范围
 

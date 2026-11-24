@@ -2,7 +2,7 @@
 title: FastGPT团队协作者权限管理的配置与使用方法
 slug: /zh/tutorial/fastgpt-team-collaborator-permissions
 page_type: 教程
-source: https://doc.fastgpt.cn/zh-CN/guide/workspace/team/team_roles_permissions
+source: https://doc.fastgpt.cn/guide/workspace/team/team_roles_permissions
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ source_type: 官方文档
 
 所有权限配置操作均需依托已添加的协作者完成，未被添加至团队协作者列表的主体，无法被纳入权限管理范围。不同的权限管理场景对应不同的操作入口，需根据实际的管理需求选择对应的操作路径，完成权限的配置与调整。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/workspace/team/team_roles_permissions)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/workspace/team/team_roles_permissions)
 
 ## 适用性与版本范围
 

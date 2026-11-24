@@ -2,7 +2,7 @@
 title: Configure FastGPT Admin Team Operational Modes
 slug: /en/tutorial/fastgpt-admin-team-mode-configuration
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/admin/teamMode
+source: https://doc.fastgpt.io/guide/admin/teamMode
 source_type: Official documentation
 ---
 
@@ -25,7 +25,7 @@ Each mode enforces distinct rules for team creation and user onboarding:
 - **Multi-team Mode**: As the default mode, this setup creates a unique default team for every user who registers via SMS/email, is added directly by an admin, or authenticates via SSO. No users are automatically added to the root team, and multiple independent teams can be managed on the platform.
 - **Sync Mode**: This mode disables all local user registration and manual admin team creation workflows. No teams are created via SMS/email registration or admin direct addition. The only way users are added to the platform is through SSO sync, which routes all authenticated users to the root team.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/admin/teamMode)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/admin/teamMode)
 
 ## Applicability and version scope
 

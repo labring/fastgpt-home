@@ -2,7 +2,7 @@
 title: Add and Configure Custom FastGPT Models
 slug: /en/deploy/fastgpt-custom-model-configuration
 page_type: 部署场景
-source: https://doc.fastgpt.cn/en/self-host/config/model/intro
+source: https://doc.fastgpt.io/self-host/config/model/intro
 source_type: 官方文档
 ---
 
@@ -34,4 +34,4 @@ For automated or bulk configuration, edit the model configuration files directly
 - **Text-to-Speech Models**: Require `type` set to `"tts"`, a `voices` array of voice options with `label` and `value` fields, and `charsPointsPrice`.
 - **Speech-to-Text Models**: Use the core base schema with no additional type-specific required fields.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/config/model/intro)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/config/model/intro)

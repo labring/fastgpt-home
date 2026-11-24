@@ -2,7 +2,7 @@
 title: 获取FastGPT指定知识库集合列表的API调用方法
 slug: /zh/api/get-fastgpt-dataset-collection-list
 page_type: API与文档
-source: https://doc.fastgpt.cn/zh-CN/openapi/dataset
+source: https://doc.fastgpt.cn/openapi/dataset
 source_type: 官方文档小节
 ---
 
@@ -33,4 +33,4 @@ curl --location --request POST 'http://localhost:3000/api/core/dataset/collectio
 {"code":200,"statusText":"","message":"","data":{"list":[{"_id":"6593e137231a2be9c5603ba9","parentId":null,"tmbId":"65422be6aa44b7da77729ec9","type":"virtual","name":"手动录入","updateTime":"2099-01-01T00:00:00.000Z","dataAmount":3,"trainingAmount":0,"externalFileId":"1111","tags":["11","测试的"],"forbid":false,"trainingType":"chunk","permission":{"value":4294967295,"isOwner":true,"hasManagePer":true,"hasWritePer":true,"hasReadPer":true}},{"_id":"65abd0ad9d1448617cba6031","parentId":null,"tmbId":"65422be6aa44b7da77729ec9","type":"link","name":"快速上手 | FastGPT","rawLink":"https://doc.fastgpt.io/guide/getting-started/quick-start","updateTime":"2024-01-20T13:54:53.031Z","dataAmount":3,"trainingAmount":0,"externalFileId":"222","tags":["测试的"],"forbid":false,"trainingType":"chunk","permission":{"value":4294967295,"isOwner":true,"hasManagePer":true,"hasWritePer":true,"hasReadPer":true}}],"total":93}}}
 ```
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/openapi/dataset)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/openapi/dataset)

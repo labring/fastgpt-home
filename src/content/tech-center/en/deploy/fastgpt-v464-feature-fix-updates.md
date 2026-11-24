@@ -2,7 +2,7 @@
 title: FastGPT V4.6.4 Feature and Fix Updates
 slug: /en/deploy/fastgpt-v464-feature-fix-updates
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/464
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/464
 source_type: 官方文档
 ---
 
@@ -36,4 +36,4 @@ This release resolves several critical bugs and improves underlying infrastructu
 - Addressed root permission configuration issues that impacted system stability.
 - The project Dockerfile has been optimized to improve deployment speed and reduce overall image size.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/464)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/464)

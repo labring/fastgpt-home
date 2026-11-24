@@ -2,7 +2,7 @@
 title: FastGPT权限系统的存储结构与设计规则速查
 slug: /zh/reference/fastgpt-permission-storage-design
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/workspace/team/team_roles_permissions
+source: https://doc.fastgpt.cn/guide/workspace/team/team_roles_permissions
 source_type: 官方文档小节
 ---
 
@@ -25,4 +25,4 @@ Schema定义文件路径为`packages/service/support/permission/schema.ts`。
 ## 注意事项
 权限主体仅可选择tmbId、groupId、orgId其中之一，不可同时配置多个。resourceId字段在resourceType为team时必须设为null。权限位仅支持0和1的数值配置，Owner权限有特殊全1标记。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/workspace/team/team_roles_permissions)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/workspace/team/team_roles_permissions)

@@ -2,7 +2,7 @@
 title: Local Debugging for FastGPT System Plugins
 slug: /en/model/fastgpt-system-plugin-local-debug
 page_type: Model guides
-source: https://doc.fastgpt.cn/en/plugin/system-tool-development
+source: https://doc.fastgpt.io/plugin/system-tool-development
 source_type: Official documentation
 ---
 
@@ -50,7 +50,7 @@ Local debugging has defined limitations and intended use cases:
 - The local debug environment does not simulate production-grade child-process pools, real Node.js IPC, network environments, server timeouts, or queue scheduling.
 - Before deploying official plugins, complete end-to-end testing by manually installing the plugin in a dedicated test environment.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/plugin/system-tool-development)
+> Source: [FastGPT official source](https://doc.fastgpt.io/plugin/system-tool-development)
 
 ## Applicability and version scope
 

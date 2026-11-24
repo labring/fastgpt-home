@@ -2,7 +2,7 @@
 title: FastGPT V4.4.6版本升级内容与操作说明
 slug: /zh/deploy/upgrade-v4-4-6
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/446
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/446
 source_type: 官方文档
 ---
 
@@ -20,7 +20,7 @@ source_type: 官方文档
 ## 升级后怎么验证
 进入高级编排页面，确认页面中存在应用调用模块，并可正常配置调用其他FastGPT应用。配置外部连接后，确认系统自动触发必要连接校验流程，可正常显示校验结果。在免登录场景下执行操作，点击下一步按钮，确认指引流程可正常执行，身份识别无异常。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/446)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/446)
 
 ## 适用性与版本范围
 

@@ -2,7 +2,7 @@
 title: FastGPT 4.14.7 Self-Hosted Platform Improvements
 slug: /en/deploy/fastgpt-4147-self-hosted-improvements
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4147
+source: https://doc.fastgpt.io/self-host/upgrading/4-14/4147
 source_type: Official documentation
 ---
 
@@ -31,7 +31,7 @@ This section covers targeted improvements to workflow and API functionality, wit
 | Workflow AI Model Setup        | Added memory selection support for workflow AI models when operating in chat log mode |
 | API File Link Processing       | When calling workflows via API with file links, save file type directly from input instead of inferring from URL, ensuring 100% accurate file type detection |
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4147)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-14/4147)
 
 ## Applicability and version scope
 

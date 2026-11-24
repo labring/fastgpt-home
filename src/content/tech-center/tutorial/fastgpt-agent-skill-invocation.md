@@ -2,7 +2,7 @@
 title: FastGPT智能体调用技能的配置与操作说明
 slug: /zh/tutorial/fastgpt-agent-skill-invocation
 page_type: 教程
-source: https://doc.fastgpt.cn/zh-CN/guide/build/skill/integration
+source: https://doc.fastgpt.cn/guide/build/skill/integration
 source_type: 官方文档
 ---
 
@@ -20,7 +20,7 @@ source_type: 官方文档
 3. 在弹出的侧边栏中，即可直接查看虚拟机内当前最新的所有文件内容和代码状态。
 配套的操作示例截图路径为`/imgs/agent_chat_vm_files.png`，可用于对照界面入口位置。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/skill/integration)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/skill/integration)
 
 ## 适用性与版本范围
 

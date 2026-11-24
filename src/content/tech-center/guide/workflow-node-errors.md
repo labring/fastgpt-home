@@ -116,8 +116,8 @@ stage_members_heading: 已发布的文档清单（60 篇）
 
 ## 参考资料
 
-- [FastGPT 本地开发](https://doc.fastgpt.cn/zh-CN/self-host/dev)
-- [FastGPT 环境变量](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
+- [FastGPT 本地开发](https://doc.fastgpt.cn/self-host/dev)
+- [FastGPT 环境变量](https://doc.fastgpt.cn/self-host/config/env)
 
 ## 问题仍未定位时
 

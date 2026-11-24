@@ -2,7 +2,7 @@
 title: Configure FastGPT content extraction target fields
 slug: /en/node/fastgpt-content-extract-target-fields
 page_type: Workflow nodes
-source: https://doc.fastgpt.cn/en/guide/build/workflow/nodes/content_extract
+source: https://doc.fastgpt.io/guide/build/workflow/nodes/content_extract
 source_type: Official documentation
 ---
 
@@ -30,7 +30,7 @@ Follow these official steps to set up target fields for a content extraction nod
 6. Toggle the Required switch to set whether the model must attempt extraction for this field.
 7. Repeat steps 3–6 for all required target fields, then save the node’s configuration to apply changes.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/workflow/nodes/content_extract)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/workflow/nodes/content_extract)
 
 ## Applicability and version scope
 

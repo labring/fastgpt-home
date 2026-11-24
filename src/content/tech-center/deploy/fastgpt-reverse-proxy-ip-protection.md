@@ -2,7 +2,7 @@
 title: 解决FastGPT反向代理场景下的客户端IP伪造防护问题
 slug: /zh/deploy/fastgpt-reverse-proxy-ip-protection
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/troubleshooting/attention
+source: https://doc.fastgpt.cn/self-host/troubleshooting/attention
 source_type: 官方文档小节
 ---
 
@@ -71,4 +71,4 @@ curl -H 'X-Forwarded-For: 6.6.6.6' -H 'X-Real-IP: 6.6.6.6' https://fastgpt.examp
 # 端口暴露限制
 需要通过防火墙或安全组只允许反向代理访问 FastGPT 服务端口，避免用户绕过 Nginx 直连 FastGPT。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/troubleshooting/attention)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/troubleshooting/attention)

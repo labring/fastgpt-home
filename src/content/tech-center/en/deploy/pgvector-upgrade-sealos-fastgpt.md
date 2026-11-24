@@ -2,7 +2,7 @@
 title: Upgrade Pgvector for Sealos FastGPT Deployments
 slug: /en/deploy/pgvector-upgrade-sealos-fastgpt
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/45
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/45
 source_type: 官方文档
 ---
 
@@ -44,4 +44,4 @@ To confirm the upgrade completed successfully:
 1. First, verify the pgvector version by running `\dx` in the terminal; the output should list the vector extension as version 0.5.0.
 2. If you closed the terminal during index creation, reconnect using One-Click Connect and run `\d modeldata`. Confirm the `vector_index` appears with the exact specified parameters and has no INVALID suffix.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/45)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/45)

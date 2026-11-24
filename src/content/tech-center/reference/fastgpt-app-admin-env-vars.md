@@ -2,7 +2,7 @@
 title: FastGPT App与Admin共享变量配置参数速查
 slug: /zh/reference/fastgpt-app-admin-env-vars
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/env
+source: https://doc.fastgpt.cn/self-host/config/env
 source_type: 官方文档小节
 ---
 
@@ -42,4 +42,4 @@ source_type: 官方文档小节
 3. 若用户套餐存在额外限制，聊天QPM以套餐限制为准；
 4. 配置时需注意各参数的单位，如UPLOAD_FILE_MAX_SIZE单位为MB，PARSE_FILE_TIMEOUT_SECONDS单位为秒。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/config/env)

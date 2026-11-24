@@ -2,7 +2,7 @@
 title: 说明FastGPT Agent V2虚拟机的定义与使用方法
 slug: /zh/glossary/fastgpt-agent-v2-vm-usage
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/guide/build/agentv2/vm
+source: https://doc.fastgpt.cn/guide/build/agentv2/vm
 source_type: 官方文档
 ---
 
@@ -21,7 +21,7 @@ FastGPT Agent V2虚拟机是为每个对话会话动态预置并绑定的专用�
 ## 容易搞错的地方
 发布关联的SKILL包时，若未关注`.gitignore`的忽略规则，可能导致需要的文件被忽略，或打包总体积超限导致发布失败。启动脚本仅在虚拟机拉起后且AI正式开始前自动执行，不会在其他阶段运行。不同对话会话的虚拟机拥有独立的运行环境与文件空间，不会共享资源。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/agentv2/vm)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/agentv2/vm)
 
 ## 适用性与版本范围
 

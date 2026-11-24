@@ -2,7 +2,7 @@
 title: 使用Agent工具开发FastGPT官方插件的完整操作流程
 slug: /zh/reference/fastgpt-plugin-agent-development
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/plugin/system-tool-development
+source: https://doc.fastgpt.cn/plugin/system-tool-development
 source_type: 官方文档小节
 ---
 
@@ -26,4 +26,4 @@ source_type: 官方文档小节
 3. 若需求信息不完整，最多提出3个关键问题，不得额外索要更多信息。
 4. 无法验证的项目需明确说明原因，不得臆造验证结果。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/plugin/system-tool-development)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/plugin/system-tool-development)

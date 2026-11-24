@@ -2,7 +2,7 @@
 title: FastGPT商业版各部署方式的收费与服务说明
 slug: /zh/reference/fastgpt-commercial-pricing-deployment
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/version/commercial
+source: https://doc.fastgpt.cn/guide/version/commercial
 source_type: 官方文档小节
 ---
 
@@ -32,4 +32,4 @@ FastGPT商业版按部署方式分为三类收费模式，配套通用服务与�
 4. 单机版适合中小团队对内提供服务，需自行维护数据库备份等工作。
 5. 高可用版适合对外提供在线服务，包含可视化监控、多副本、负载均衡、数据库自动备份等生产环境基础设施。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/version/commercial)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/version/commercial)

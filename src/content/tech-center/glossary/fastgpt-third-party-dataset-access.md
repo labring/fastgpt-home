@@ -2,7 +2,7 @@
 title: 说明FastGPT第三方知识库接入的配置与操作步骤
 slug: /zh/glossary/fastgpt-third-party-dataset-access
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/dingtalk_dataset
+source: https://doc.fastgpt.cn/guide/dataset/third-party/dingtalk_dataset
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ FastGPT中用于接入外部第三方知识库的配置参数与数据导入操�
 ## 容易搞错的地方
 仅支持在线文档文本格式，无法导入PDF、Word、Excel、PPT等二进制文件，导入非支持格式的文件会失败。不同用户类型在获取Token时的操作存在差异，个人版用户需额外为Token增加权限，企业版用户无需此步骤。参数填写错误会导致接入失败，需确保获取的App Key、App Secret、User ID或Token、User ID参数准确无误。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/dingtalk_dataset)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/dataset/third-party/dingtalk_dataset)
 
 ## 适用性与版本范围
 

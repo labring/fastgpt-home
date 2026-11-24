@@ -2,7 +2,7 @@
 title: Configure Agent Sandbox Environment Variables for FastGPT 4.16.1 Upgrade
 slug: /en/deploy/fastgpt-agent-sandbox-env-config
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-16/4161
+source: https://doc.fastgpt.io/self-host/upgrading/4-16/4161
 source_type: 官方文档
 ---
 
@@ -39,4 +39,4 @@ The `AGENT_SANDBOX_APT_MIRROR` variable lets you specify a regional or local apt
 ## Additional Configuration Resources
 For complete documentation covering global and mainland China container registry image lists, root vs non-root image selection, and custom package registry settings, consult the official [OpenSandbox Configuration](../../config/sandbox/opensandbox) guide.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/4-16/4161)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/4-16/4161)

@@ -2,7 +2,7 @@
 title: FastGPT V4.8.22版本更新内容速查
 slug: /zh/reference/fastgpt-v4822-update-quickref
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4821
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4821
 source_type: 官方文档小节
 ---
 
@@ -29,4 +29,4 @@ source_type: 官方文档小节
 3.  o1、o3模型测试时，若字段映射未生效会触发报错，需确认配置正确性。
 4.  未配置TTS voice时，系统会触发空指针保护，需提前完成对应资源配置。
 5.  未登录用户的数据获取范围已缩减，需注意系统隐私性相关变化。
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4821)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/4821)

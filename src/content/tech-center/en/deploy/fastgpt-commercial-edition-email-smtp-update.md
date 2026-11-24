@@ -2,7 +2,7 @@
 title: Update FastGPT Commercial Edition Email SMTP Settings
 slug: /en/deploy/fastgpt-commercial-edition-email-smtp-update
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/48
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/48
 source_type: 官方文档
 ---
 
@@ -30,4 +30,4 @@ For users relying on predefined email service aliases, the following official SM
 | Gmail                  | smtp.gmail.com      |
 Users who utilize a service not listed in this table may now enter their custom SMTP server address directly in the designated field, rather than being restricted to the preconfigured aliases.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/48)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/48)

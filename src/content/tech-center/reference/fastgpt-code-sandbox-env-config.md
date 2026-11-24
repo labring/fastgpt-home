@@ -2,7 +2,7 @@
 title: FastGPT Code Sandbox 自建部署环境变量配置速查
 slug: /zh/reference/fastgpt-code-sandbox-env-config
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/env
+source: https://doc.fastgpt.cn/self-host/config/env
 source_type: 官方文档小节
 ---
 
@@ -31,4 +31,4 @@ FastGPT Code Sandbox 的环境变量用于配置沙箱服务的运行参数，�
 4. development模式下内网IP检查会放宽，生产环境建议使用非development模式。
 5. 单次代码执行的网络请求、输出等均有大小限制，需符合配置要求。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/config/env)

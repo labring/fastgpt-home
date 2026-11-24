@@ -2,7 +2,7 @@
 title: Official FastGPT v4.15.0 New Feature Reference
 slug: /en/deploy/fastgpt-v4-15-0-new-features
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41500
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/41500
 source_type: Official documentation
 ---
 
@@ -24,7 +24,7 @@ Several infrastructure and configuration updates reduce resource strain and add 
 ## UI, Multimodal and Workflow Improvements
 The update includes targeted improvements to user interfaces, multimodal support, and workflow tools. The chatbox UI has been reworked with quick scroll-to-bottom functionality, LLM-generated chat titles, and smoother streaming output. Share links and portal pages now support language switching, eliminating forced browser-based language detection. Dataset search now supports native multimodal embedding models, image-to-image search, and permission filtering in Agent mode. Multimodal models now accept audio and video input. Quick-reply output syntax is added, and workflow template exports now include template names and descriptions. Global variable inputs support object-type data, and in tool call mode with the VM feature enabled, user-uploaded chat files are injected directly into the VM. Other updates include unified API key management with explicit app context in requests, separated DevAPI and System OpenAPI documentation, DingTalk Dataset integration for third-party datasets, and added model reasoning configuration.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41500)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-15/41500)
 
 ## Applicability and version scope
 

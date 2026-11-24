@@ -29,4 +29,4 @@ source_type: GitHub issue
 
 > 来源: [原始讨论：Can the answer be associated with the specific source (location) of the document when asking questions in the knowledge base?](https://github.com/labring/FastGPT/issues/359)
 
-> 来源: [FastGPT 知识库分块阅读器](https://doc.fastgpt.io/en/guide/chat/quoteList)
+> 来源: [FastGPT 知识库分块阅读器](https://doc.fastgpt.io/guide/chat/quoteList)

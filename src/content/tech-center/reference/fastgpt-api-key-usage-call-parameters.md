@@ -2,7 +2,7 @@
 title: 说明FastGPT应用API访问的APIKey配置与调用参数使用方法
 slug: /zh/reference/fastgpt-api-key-usage-call-parameters
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/build/publish/openapi
+source: https://doc.fastgpt.cn/guide/build/publish/openapi
 source_type: 官方文档小节
 ---
 
@@ -21,4 +21,4 @@ FastGPT API访问的调用凭证为团队成员的APIKey。调用目标应用的
 2. 仅当第三方应用仅支持OpenAI SDK风格的密钥时，可使用apiKey-appId兼容格式。
 3. 完整的接口说明可查看OpenAPI介绍。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/publish/openapi)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/publish/openapi)

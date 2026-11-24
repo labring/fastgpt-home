@@ -2,7 +2,7 @@
 title: FastGPT数据集RAG检索模块的优化策略与落地方法
 slug: /zh/dataset/fastgpt-rag-retrieval-optimization
 page_type: 知识库与切分
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/rag
+source: https://doc.fastgpt.cn/guide/dataset/rag
 source_type: 官方文档小节
 ---
 
@@ -17,4 +17,4 @@ source_type: 官方文档小节
 ## 优化后的效果与适配场景
 完成上述配置后，可获得对应的优化效果。混合检索策略可实现关键词匹配与语义理解的优势互补，提升检索精度，适用于多意图查询或复杂长文本检索场景。缓存与分布式计算结合可显著减少检索计算压力，提高系统响应速度，适配高并发、实时性要求高的应用场景。去重和排序优化可减少重复信息干扰，让生成内容更简洁直接，提升用户获取信息的效率。动态调整检索策略可让模型灵活适配不同任务需求，确保检索精准性与上下文适配性，提升多场景下的用户体验。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/dataset/rag)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/dataset/rag)

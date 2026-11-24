@@ -2,7 +2,7 @@
 title: Manage FastGPT Plugins via .pkg Protocol
 slug: /en/model/fastgpt-pkg-plugin-protocol
 page_type: Model guides
-source: https://doc.fastgpt.cn/en/plugin/intro
+source: https://doc.fastgpt.io/plugin/intro
 source_type: Official documentation
 ---
 
@@ -25,7 +25,7 @@ All valid FastGPT plugin packages must include specific core files, with optiona
 ## .pkg File Core Lifecycle & Capabilities
 The `.pkg` file format acts as the single standard for all plugin lifecycle operations. These operations include uploading plugins to FastGPT, installing deployed packages, listing available installed plugins, and managing version history for plugins. Additionally, each `.pkg` package bundles critical metadata and assets for seamless integration with FastGPT’s core features: plugin metadata, input/output schemas, secret schemas, and icon assets are all included in the build output to support use in FastGPT pages, workflows, and agent configurations.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/plugin/intro)
+> Source: [FastGPT official source](https://doc.fastgpt.io/plugin/intro)
 
 ## Applicability and version scope
 

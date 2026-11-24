@@ -2,7 +2,7 @@
 title: FastGPT 494 New Feature Details
 slug: /en/deploy/fastgpt-494-new-features
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/494
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/494
 source_type: 官方文档
 ---
 
@@ -34,4 +34,4 @@ This release includes targeted improvements to chat interactions and mobile usab
 - **Enhanced Chat Response Data**: AI chat and tool call responses now include the model's `finish_reason` field. This field provides explicit details about why a model output was interrupted, allowing teams to debug and track unexpected chat terminations more effectively.
 - **Mobile Voice Input UI Adjustments**: Refines the user interface for mobile voice input functionality, optimizing layout and touch targets for improved usability on smartphone and tablet devices.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/494)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/494)

@@ -2,7 +2,7 @@
 title: FastGPT批量运行节点的配置与批量任务处理方法
 slug: /zh/node/fastgpt-batch-run-node-usage
 page_type: 工作流节点
-source: https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/loop
+source: https://doc.fastgpt.cn/guide/build/workflow/nodes/loop
 source_type: 官方文档
 ---
 
@@ -19,4 +19,4 @@ source_type: 官方文档
 ## 注意事项与使用边界
 使用该节点需注意以下要点：首先，仅支持数组类型的输入数据，非数组类型的输入数据无法触发循环逻辑；其次，循环体内部的节点需与业务需求匹配，若未正确配置循环体结束节点的输出变量，将无法收集到有效的结果数组；另外，并行处理为可选的性能优化项，仅在需要提升批量处理效率时开启，避免不必要的资源占用。该节点不适用于单任务处理场景，若仅需处理单个数据，无需使用批量运行节点。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/loop)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/workflow/nodes/loop)

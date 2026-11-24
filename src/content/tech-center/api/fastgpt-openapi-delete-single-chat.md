@@ -2,7 +2,7 @@
 title: 通过FastGPT OpenAPI删除单个会话的详细操作指南
 slug: /zh/api/fastgpt-openapi-delete-single-chat
 page_type: API
-source: https://doc.fastgpt.cn/zh-CN/openapi/chat
+source: https://doc.fastgpt.cn/openapi/chat
 source_type: 官方文档
 ---
 
@@ -33,7 +33,7 @@ curl --location --request DELETE 'http://localhost:3000/api/core/chat/history/de
 ```
 该响应中，code字段取值为200，代表接口调用成功；statusText与message字段均为空字符串，未附带额外的提示内容；data字段为null，无具体的业务返回数据。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/openapi/chat)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/openapi/chat)
 
 ## 适用性与版本范围
 

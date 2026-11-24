@@ -2,7 +2,7 @@
 title: FastGPT V4.9.10版本升级的操作指引
 slug: /zh/reference/fastgpt-v4910-upgrade-guide
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4910
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4910
 source_type: 官方文档小节
 ---
 
@@ -24,4 +24,4 @@ FastGPT V4.9.10版本属于<4.12.0的升级分类，需遵循对应版本升级�
 - 建议在业务低峰时段执行升级，减少对用户使用的影响
 - 若升级后出现异常问题，可参考FastGPT官方文档的故障排查、通用问题排查模块进行定位解决
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4910)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/4910)

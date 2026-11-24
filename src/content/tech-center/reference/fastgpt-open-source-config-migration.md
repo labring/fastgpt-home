@@ -2,7 +2,7 @@
 title: FastGPT开源版config.json配置迁移为环境变量的操作指南
 slug: /zh/reference/fastgpt-open-source-config-migration
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41507
+source: https://doc.fastgpt.cn/self-host/upgrading/4-15/41507
 source_type: 官方文档小节
 ---
 
@@ -36,4 +36,4 @@ FastGPT 4.15版本开源版已移除config.json配置文件，所有原配置项
 4.  向量检索类参数仅对指定数据库生效，其他数据库无需配置此类变量。
 5.  知识库并发处理参数默认值均为10，可根据服务器实际资源进行调整。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41507)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-15/41507)

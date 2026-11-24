@@ -77,10 +77,10 @@ meta_description: 按部署环节查找 FastGPT 排障资料，10 个问题清�
 
 ## 参考资料
 
-- [FastGPT Docker Compose 部署](https://doc.fastgpt.cn/zh-CN/self-host/deploy/docker)
-- [FastGPT 环境变量](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
-- [FastGPT 升级说明](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/upgrade-instruction)
-- [FastGPT 本地开发](https://doc.fastgpt.cn/zh-CN/self-host/dev)
+- [FastGPT Docker Compose 部署](https://doc.fastgpt.cn/self-host/deploy/docker)
+- [FastGPT 环境变量](https://doc.fastgpt.cn/self-host/config/env)
+- [FastGPT 升级说明](https://doc.fastgpt.cn/self-host/upgrading/upgrade-instruction)
+- [FastGPT 本地开发](https://doc.fastgpt.cn/self-host/dev)
 
 ## 问题仍未定位时
 

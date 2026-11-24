@@ -2,7 +2,7 @@
 title: FastGPT V4.8.20版本升级操作与变更说明
 slug: /zh/deploy/upgrade-v4-8-20
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4820
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4820
 source_type: 官方文档
 ---
 
@@ -27,7 +27,7 @@ curl --location --request POST 'https://{{host}}/api/admin/initv4820' \
 ## 升级后怎么验证
 访问FastGPT平台，检查模型配置页面是否可正常加载可视化配置项。发起模型测试请求，验证模型是否正常响应，DeepSeek resoner模型可检查是否输出思考过程。检查成员列表、工作流运行是否正常，图片链接是否可正常加载。导出使用记录，验证导出功能是否正常。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4820)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/4820)
 
 ## 适用性与版本范围
 

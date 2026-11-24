@@ -2,7 +2,7 @@
 title: FastGPT中检索增强生成RAG的使用说明
 slug: /zh/glossary/fastgpt-rag-usage-guide
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/rag
+source: https://doc.fastgpt.cn/guide/dataset/rag
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ source_type: 官方文档
 ## 容易搞错的地方
 容易混淆检索模型与生成模型的作用边界，检索模型仅负责从外部知识库中快速获取相关信息，无法直接生成连贯完整的自然语言回答。也容易误以为RAG无需依赖外部知识库即可提供准确的事实信息，其核心优势依赖外部知识库的检索支撑。部分使用者还可能忽略RAG对模糊查询或跨域问题的适配逻辑，需结合具体的检索与生成配置优化效果。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/dataset/rag)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/dataset/rag)
 
 ## 适用性与版本范围
 

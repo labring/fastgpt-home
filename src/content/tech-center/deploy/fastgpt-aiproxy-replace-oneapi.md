@@ -2,7 +2,7 @@
 title: FastGPT使用AI Proxy替换OneAPI的配置与迁移指南
 slug: /zh/deploy/fastgpt-aiproxy-replace-oneapi
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/490
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/490
 source_type: 官方文档小节
 ---
 
@@ -72,4 +72,4 @@ healthcheck:
 5.  验证服务状态：登录FastGPT的root账号，进入账号-模型提供商页面，若出现模型渠道和调用日志选项，且原有OneAPI渠道已同步，则迁移完成。
 6.  删除旧OneAPI服务：执行`docker-compose down`停止服务，删除yml文件中的OneAPI及其MySQL依赖配置，再执行`docker-compose up -d`重启服务。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/490)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/490)

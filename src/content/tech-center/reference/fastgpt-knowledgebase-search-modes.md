@@ -2,7 +2,7 @@
 title: FastGPT知识库搜索模式的选型与使用说明
 slug: /zh/reference/fastgpt-knowledgebase-search-modes
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/dataset_engine
+source: https://doc.fastgpt.cn/guide/dataset/dataset_engine
 source_type: 官方文档小节
 ---
 
@@ -23,4 +23,4 @@ FastGPT提供语义检索、全文检索、混合检索三种知识库搜索模�
 2. 重排模型与问题完整度相关，建议先优化问题再执行搜索与重排流程。
 3. 混合检索后的初始结果范围较大，无法直接使用原相似度过滤，需依赖重排得分筛选结果。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/dataset/dataset_engine)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/dataset/dataset_engine)

@@ -2,11 +2,11 @@
 title: 关键词检索与向量检索：按查询类型配比
 slug: /zh/compare/keyword-vs-vector-retrieval
 page_type: matrix
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173
+source: https://doc.fastgpt.cn/self-host/upgrading/4-17/4173
 source_type: 深度场景内容
 meta_title: 关键词检索与向量检索怎么配
 meta_description: 按编号术语、口语提问和跨语言查询的特点，比较关键词检索与向量检索的适用条件，结合切分、同义词和重排说明调参方法，并给出问题集与检索记录的核对方式。
-delivery_metadata: {"source_front_matter":{"slug":"keyword-vs-vector-retrieval","meta_title":"关键词检索与向量检索怎么配","meta_description":"按编号术语、口语提问和跨语言查询的特点，比较关键词检索与向量检索的适用条件，结合切分、同义词和重排说明调参方法，并给出问题集与检索记录的核对方式。","language":"zh","content_type":"matrix","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"keyword-vs-vector-retrieval","keywords":"关键词检索,向量检索,同义词,重排,调参顺序","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"关键词检索和向量检索该怎么配","需求依据":"客户 2026-11-07 购买诉求第 1 条（尚）：关注检索命中与回答依据。","事实来源":"官方更新说明 4.16.2 与 4.17.3；FastGPT 产品知识库（检索库支持）","内链":"https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173","排期":"W18 决策矩阵第 10 篇","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（来源版本，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核检索能力与配置项。"]}
+delivery_metadata: {"source_front_matter":{"slug":"keyword-vs-vector-retrieval","meta_title":"关键词检索与向量检索怎么配","meta_description":"按编号术语、口语提问和跨语言查询的特点，比较关键词检索与向量检索的适用条件，结合切分、同义词和重排说明调参方法，并给出问题集与检索记录的核对方式。","language":"zh","content_type":"matrix","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"keyword-vs-vector-retrieval","keywords":"关键词检索,向量检索,同义词,重排,调参顺序","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"关键词检索和向量检索该怎么配","需求依据":"客户 2026-11-07 购买诉求第 1 条（尚）：关注检索命中与回答依据。","事实来源":"官方更新说明 4.16.2 与 4.17.3；FastGPT 产品知识库（检索库支持）","内链":"https://doc.fastgpt.cn/self-host/upgrading/4-17/4173","排期":"W18 决策矩阵第 10 篇","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（来源版本，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核检索能力与配置项。"]}
 keywords: 关键词检索,向量检索,同义词,重排,调参顺序
 schema_type: Article
 date_modified: 2026-11-16
@@ -18,7 +18,7 @@ date_modified: 2026-11-16
 
 ## 两类检索的差异
 
-对照材料：[FastGPT 官方说明](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173)。
+对照材料：[FastGPT 官方说明](https://doc.fastgpt.cn/self-host/upgrading/4-17/4173)。
 
 关键词检索依赖词面命中，查询词与文档词一致时命中稳定，遇到同义表达、口语化提问、跨语言表述时容易漏。向量检索依赖语义相似，能处理同义与改写，但对编号、型号、专有名词这类需要精确匹配的查询不够稳。
 
@@ -74,6 +74,6 @@ date_modified: 2026-11-16
 
 | 主题 | 版本 | 来源 |
 | --- | --- | --- |
-| Milvus 全文检索、文档解析格式 | v4.16.2 | [self-host/upgrading/4-16/4160](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/4160) |
-| 同义词映射、重排模型替换、检索并发 | v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173) |
+| Milvus 全文检索、文档解析格式 | v4.16.2 | [self-host/upgrading/4-16/4160](https://doc.fastgpt.cn/self-host/upgrading/4-16/4160) |
+| 同义词映射、重排模型替换、检索并发 | v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/self-host/upgrading/4-17/4173) |
 | 检索库支持范围 | 当期方案 | [FastGPT 商务咨询：授权、部署与支持范围](https://fastgpt.cn/contact) |

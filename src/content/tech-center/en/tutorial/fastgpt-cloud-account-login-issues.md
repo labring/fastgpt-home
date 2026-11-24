@@ -2,7 +2,7 @@
 title: Resolve FastGPT Cloud Account and Login Issues
 slug: /en/tutorial/fastgpt-cloud-account-login-issues
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/version/cloud/faq
+source: https://doc.fastgpt.io/guide/version/cloud/faq
 source_type: Official documentation
 ---
 
@@ -26,7 +26,7 @@ If you have previously used FastGPT but cannot log in with your expected credent
    - If you originally used the mainland China deployment (https://fastgpt.cn), access https://fastgpt.io
 3. Complete the login flow using the credentials linked to your original FastGPT account on the alternate instance.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/version/cloud/faq)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/version/cloud/faq)
 
 ## Applicability and version scope
 

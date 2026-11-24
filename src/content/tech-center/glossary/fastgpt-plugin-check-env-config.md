@@ -2,7 +2,7 @@
 title: FastGPT插件开发check验证与部署环境变量配置指南
 slug: /zh/glossary/fastgpt-plugin-check-env-config
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/plugin/system-tool-development
+source: https://doc.fastgpt.cn/plugin/system-tool-development
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ FastGPT插件开发check验证与部署环境变量配置是系统开发与部�
 ## 容易搞错的地方
 插件开发时易遗漏manifest字段完整性、工具集children.id重复、未正确配置secretSchema的isSecret属性，未处理外部API的异常场景，未通过pnpm run test或build/check/pass命令。部署时易忽略WORKFLOW_PARALLEL_MAX_CONCURRENCY与WORKFLOW_MAX_LOOP_TIMES的数值约束，错误修改环境变量未遵循默认值规则。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/plugin/system-tool-development)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/plugin/system-tool-development)
 
 ## 适用性与版本范围
 

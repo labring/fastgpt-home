@@ -2,7 +2,7 @@
 title: Resolve Failed FastGPT Mongo Replica Set Auto-Initialization
 slug: /en/deploy/fastgpt-mongo-replica-set-fix
 page_type: 部署场景
-source: https://doc.fastgpt.cn/en/self-host/deploy/docker
+source: https://doc.fastgpt.io/self-host/deploy/docker
 source_type: 官方文档
 ---
 
@@ -70,4 +70,4 @@ rs.status()
 ## Post-Deployment Validation
 After running the `rs.status()` command, confirm the output displays the `rs0` replica set with a healthy primary node. This confirms the manual replica set setup is complete and ready for FastGPT deployment.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/deploy/docker)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/deploy/docker)

@@ -29,4 +29,4 @@ source_type: GitHub issue
 
 > 来源: [原始讨论：请问怎么在聊天框中上传文件，比如Excel](https://github.com/labring/FastGPT/issues/2265)
 
-> 来源: [FastGPT 文件输入与 4.8.13 行为说明](https://doc.fastgpt.io/en/guide/build/general/fileInput)
+> 来源: [FastGPT 文件输入与 4.8.13 行为说明](https://doc.fastgpt.io/guide/build/general/fileInput)

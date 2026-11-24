@@ -2,7 +2,7 @@
 title: Enable and Map FastGPT AI Models
 slug: /en/deploy/fastgpt-enable-model-mapping
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/model/intro
+source: https://doc.fastgpt.io/self-host/config/model/intro
 source_type: Official documentation
 ---
 
@@ -25,7 +25,7 @@ When configuring model channels, understanding the Model ID mapping is essential
 | ------------------------ | -------------------------- |
 | ![alt text](../../../../public/imgs/image-92.png) | ![alt text](../../../../public/imgs/image-124.png) |
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/model/intro)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/model/intro)
 
 ## Applicability and version scope
 

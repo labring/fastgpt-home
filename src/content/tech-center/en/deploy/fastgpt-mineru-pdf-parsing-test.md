@@ -2,7 +2,7 @@
 title: Validate Mineru Enhanced PDF Parsing Workflows
 slug: /en/deploy/fastgpt-mineru-pdf-parsing-test
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/custom-models/mineru
+source: https://doc.fastgpt.io/self-host/custom-models/mineru
 source_type: Official documentation
 ---
 
@@ -30,7 +30,7 @@ You can also validate the enhanced PDF parsing workflow within individual FastGP
 3. Use the included UI screenshot `mineru2.png` to confirm the correct placement of the toggle in the application's upload workflow.
 This workflow allows you to verify that parsing works as expected when using the application's file handling flow, separate from the dataset management interface.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/custom-models/mineru)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/custom-models/mineru)
 
 ## Applicability and version scope
 

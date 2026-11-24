@@ -2,7 +2,7 @@
 title: Build a Corporate Email Writing Assistant with FastGPT
 slug: /en/tutorial/fastgpt-corporate-email-writing-assistant
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/getting-started/quick-start
+source: https://doc.fastgpt.io/guide/getting-started/quick-start
 source_type: Official documentation
 ---
 
@@ -32,7 +32,7 @@ Follow these sequential steps to deploy the assistant:
 4. Integrate with existing office workflow tools to automate post-generation actions like notifications, approvals, or cross-platform alerts.
 5. Validate the assistant with sample email requests to confirm output alignment with standards and risk reduction goals.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/getting-started/quick-start)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/getting-started/quick-start)
 
 ## Applicability and version scope
 

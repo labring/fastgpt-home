@@ -2,7 +2,7 @@
 title: FastGPT对话反馈功能的迁移与使用说明
 slug: /zh/glossary/fastgpt-chat-feedback-guide
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4144
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/4144
 source_type: 官方文档
 ---
 
@@ -21,7 +21,7 @@ FastGPT中的feedback（对话反馈）指对话场景下的用户反馈相关�
 3. 迁移脚本中的`{{host}}`需替换为实际部署的FastGPT域名，`{{rootkey}}`需替换为环境变量中配置的rootkey值，参数替换错误会导致请求失败。
 4. 迁移请求无需携带请求体，错误添加请求体可能导致请求异常。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4144)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-14/4144)
 
 ## 适用性与版本范围
 

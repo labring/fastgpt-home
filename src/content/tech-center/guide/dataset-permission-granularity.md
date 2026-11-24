@@ -3,7 +3,7 @@ title: 知识库权限粒度选型：团队角色、协作者与集合权限决�
 slug: /zh/guide/dataset-permission-granularity
 page_type: 决策矩阵页
 source_type: 官方文档（v4.17.2）与社区线程
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/collection_permission
+source: https://doc.fastgpt.cn/guide/dataset/collection_permission
 source_note: "判据取自 FastGPT v4.17.2 官方文档与社区线程，核验日 2026-10-21。"
 check_day: 2026-10-21
 article_section: 选型与评估
@@ -58,9 +58,9 @@ date_modified: 2026-10-21
 
 ## 参考资料
 
-- [知识库文件级权限](https://doc.fastgpt.cn/zh-CN/guide/dataset/collection_permission)
-- [商业版功能差异](https://doc.fastgpt.cn/zh-CN/guide/version/commercial)
-- [团队角色与权限](https://doc.fastgpt.cn/zh-CN/guide/workspace/team/team_roles_permissions)
+- [知识库文件级权限](https://doc.fastgpt.cn/guide/dataset/collection_permission)
+- [商业版功能差异](https://doc.fastgpt.cn/guide/version/commercial)
+- [团队角色与权限](https://doc.fastgpt.cn/guide/workspace/team/team_roles_permissions)
 
 ## 需要进一步确认时
 

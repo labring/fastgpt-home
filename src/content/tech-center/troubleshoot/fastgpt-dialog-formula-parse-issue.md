@@ -29,4 +29,4 @@ source_type: GitHub issue
 
 > 来源: [原始讨论：对话界面返回的内容里如包含公式不能正确显示](https://github.com/labring/FastGPT/issues/3854)
 
-> 来源: [FastGPT 应用构建常见问题](https://doc.fastgpt.io/en/guide/build/faq)
+> 来源: [FastGPT 应用构建常见问题](https://doc.fastgpt.io/guide/build/faq)

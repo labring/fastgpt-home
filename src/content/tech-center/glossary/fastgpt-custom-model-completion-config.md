@@ -2,7 +2,7 @@
 title: 配置FastGPT自定义模型的completion请求参数与路径
 slug: /zh/glossary/fastgpt-custom-model-completion-config
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/model/intro
+source: https://doc.fastgpt.cn/self-host/config/model/intro
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ completion是FastGPT中用于配置大语言模型对话请求参数与路径的
 ## 容易搞错的地方
 易出现请求路径不匹配导致的调用错误，例如当接入的模型要求请求路径为api/chat时，默认生成的chat/completion路径会触发报错。fieldMap仅用于映射请求参数名称，无法修改请求路径，修改路径需通过专属接入配置完成。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/config/model/intro)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/config/model/intro)
 
 ## 适用性与版本范围
 

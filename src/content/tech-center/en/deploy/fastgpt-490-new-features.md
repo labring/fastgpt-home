@@ -2,7 +2,7 @@
 title: FastGPT 490 Upgrade New Feature Details
 slug: /en/deploy/fastgpt-490-new-features
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/490
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/490
 source_type: 官方文档
 ---
 
@@ -25,4 +25,4 @@ The platform’s PG Vector database extension has been upgraded to version 0.8.0
 ## New Large Language Model Configuration Support
 Native configuration support for the qwen-qwq series of large language models has been added to the platform. Users can now select and deploy these models as part of their FastGPT instance’s LLM stack, with no custom configuration files required for initial setup of these model options.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/490)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/490)

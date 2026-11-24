@@ -2,7 +2,7 @@
 title: FastGPT中share类型外链与URL参数的使用说明
 slug: /zh/glossary/fastgpt-share-url-params
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4145
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/4145
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ Share指FastGPT中用于分享对话的外链（OutLink）类型，可携带自�
 ## 容易搞错的地方
 执行升级脚本时，需正确替换`{{rootkey}}`和`{{host}}`两个占位符，错误替换会导致脚本执行失败。share外链的URL参数需遵循标准查询字符串格式，自定义参数名称需与高级编排中配置的变量名完全一致，否则无法正常提取参数。share类型OutLink的字段配置仅能通过指定的升级脚本完成，无法直接在前端界面修改。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4145)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-14/4145)
 
 ## 适用性与版本范围
 

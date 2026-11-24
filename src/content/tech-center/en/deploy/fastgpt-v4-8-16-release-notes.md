@@ -2,7 +2,7 @@
 title: FastGPT v4.8.16 Feature and Fix Updates
 slug: /en/deploy/fastgpt-v4-8-16-release-notes
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4816
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/4816
 source_type: 官方文档
 ---
 
@@ -30,4 +30,4 @@ All critical bugs addressed in this release are summarized in the table below:
 | Template marketplace template errors | Resolved issues with select template marketplace templates |
 | Incorrect image file URL when `NEXT_PUBLIC_BASE_URL` is set | Corrected image URL generation for configured base URL |
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4816)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/4816)

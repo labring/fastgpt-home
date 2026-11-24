@@ -2,7 +2,7 @@
 title: FastGPT V4.8.18版本升级步骤与更新内容说明
 slug: /zh/deploy/fastgpt-v4818-upgrade
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4818
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4818
 source_type: 官方文档
 ---
 
@@ -41,4 +41,4 @@ curl --location --request POST https://{{host}}/api/admin/initv4818 \
 1.  修复HTML文件上传时，base64格式图片无法自动转换为图片链接的问题
 2.  修复插件计费错误的问题
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4818)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/4818)

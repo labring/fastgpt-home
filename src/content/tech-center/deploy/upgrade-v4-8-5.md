@@ -2,7 +2,7 @@
 title: FastGPT V4.8.5版本升级操作及更新详情说明
 slug: /zh/deploy/upgrade-v4-8-5
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/485
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/485
 source_type: 官方文档
 ---
 
@@ -34,7 +34,7 @@ curl --location --request POST 'https://{{host}}/api/admin/init/485' \
 ## 升级后怎么验证
 升级完成后可通过以下内容确认生效：应用工作台已合并插件数据，可正常创建应用副本与应用模板；工作流新节点自动生成序号名；定时任务可正常关闭；输入引导使用特殊字符无正则报错；文件包含特殊字符%时页面无崩溃；自定义输入选择知识库引用时页面无崩溃；Markdown图片可在移动端完成放大缩放操作。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/485)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/485)
 
 ## 适用性与版本范围
 

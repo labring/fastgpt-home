@@ -2,7 +2,7 @@
 title: Optimize Multi-Turn RAG in FastGPT Deployments
 slug: /en/tutorial/fastgpt-multi-turn-rag-deployments
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/dataset/rag
+source: https://doc.fastgpt.io/guide/dataset/rag
 source_type: Official documentation
 ---
 
@@ -21,7 +21,7 @@ RAG models effectively support multi-turn interactions in conversational systems
 ## Key Advantages of Multi-Turn RAG
 Multi-turn RAG delivers targeted improvements over single-turn RAG deployments. By retaining prior query and response pairs as context for each subsequent turn, the system progressively refines its retrieval and generation strategies. This results in answers that grow increasingly relevant across successive chat interactions. Additionally, multi-turn RAG enhances adaptability in complex conversational scenarios that require cross-turn knowledge integration and sequential reasoning, enabling more robust support for multi-step user queries.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/rag)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/rag)
 
 ## Applicability and version scope
 

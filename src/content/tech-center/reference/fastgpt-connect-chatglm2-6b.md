@@ -2,7 +2,7 @@
 title: FastGPT接入ChatGLM2-6B私有化模型的操作指南
 slug: /zh/reference/fastgpt-connect-chatglm2-6b
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/custom-models/chatglm2
+source: https://doc.fastgpt.cn/self-host/custom-models/chatglm2
 source_type: 官方文档小节
 ---
 
@@ -23,4 +23,4 @@ FastGPT支持接入私有化部署的ChatGLM2-6B模型。该接入方式属于�
 3. 配置过程需严格遵循FastGPT的模型配置规范完成，避免出现配置错误
 4. 需确保私有化部署的ChatGLM2-6B模型服务正常运行，否则无法正常调用
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/chatglm2)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/custom-models/chatglm2)

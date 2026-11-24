@@ -2,7 +2,7 @@
 title: 调用FastGPT自定义词库接口获取匹配问题的方法
 slug: /zh/reference/fastgpt-wordbank-match-api
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/build/general/chat_input_guide
+source: https://doc.fastgpt.cn/guide/build/general/chat_input_guide
 source_type: 官方文档小节
 ---
 
@@ -36,4 +36,4 @@ FastGPT自定义词库接口用于获取与搜索关键词匹配的自定义问�
 3. 接口成功响应时，`data`数组最多包含5个匹配问题。
 4. 仅支持GET请求方式。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/general/chat_input_guide)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/general/chat_input_guide)

@@ -2,7 +2,7 @@
 title: 详细介绍FastGPT SSO服务的docker-compose具体部署配置方法
 slug: /zh/glossary/fastgpt-sso-docker-deploy
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/guide/admin/sso
+source: https://doc.fastgpt.cn/guide/admin/sso
 source_type: 官方文档
 ---
 
@@ -20,7 +20,7 @@ FastGPT SSO服务部署，指通过docker-compose快速部署FastGPT单点登录
 2. 遗漏AUTH_TOKEN变量，导致FastGPT Pro版本无法正常调用SSO服务。
 3. 未根据对应提供商配置专属环境变量，导致SSO对接失败。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/admin/sso)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/admin/sso)
 
 ## 适用性与版本范围
 

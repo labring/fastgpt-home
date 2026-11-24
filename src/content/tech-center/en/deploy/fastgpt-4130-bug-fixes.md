@@ -2,7 +2,7 @@
 title: Resolved Bugs for FastGPT 4.13.0 Upgrade
 slug: /en/deploy/fastgpt-4130-bug-fixes
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-13/4130
+source: https://doc.fastgpt.io/self-host/upgrading/4-13/4130
 source_type: Official documentation
 ---
 
@@ -30,7 +30,7 @@ This section covers remaining resolved bugs across voice reply, dataset handling
 4. The Dataset Collection page now auto-refreshes automatically during data processing, providing real-time updates on processing status
 5. PPTX file parsing order was corrected, restoring the proper sequence of slide content during document ingestion and processing
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-13/4130)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-13/4130)
 
 ## Applicability and version scope
 

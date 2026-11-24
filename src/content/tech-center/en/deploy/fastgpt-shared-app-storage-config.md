@@ -2,7 +2,7 @@
 title: Configure FastGPT Shared App Databases, Cache, and Vector Stores
 slug: /en/deploy/fastgpt-shared-app-storage-config
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/env
+source: https://doc.fastgpt.io/self-host/config/env
 source_type: Official documentation
 ---
 
@@ -35,7 +35,7 @@ A subset of these variables manages temporary tracking of active and completed s
 ## Vector Store and Secondary Database Configuration
 This section details variables for connecting to supported vector databases and a dedicated MongoDB instance for logging. The `VECTOR_VQ_LEVEL` sets the vector quantization level, with supported ranges dependent on the selected vector store. All vector store connection variables default to empty, so they must be explicitly configured when using a dedicated vector database. The `MONGODB_LOG_URI` can reuse the main MongoDB connection string if a separate log database is not deployed.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/env)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/env)
 
 ## Applicability and version scope
 

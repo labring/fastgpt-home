@@ -23,4 +23,4 @@ FastGPT 知识库支持导出数据，可用 Excel 打开 CSV 后审核问答。
 
 ## 验证结果
 
-抽查含中文、逗号和多行文本的记录，确认 `q`、`a` 对应正确。需要回导时，按[官方模板导入规范](https://doc.fastgpt.cn/zh-CN/guide/dataset/template) 单独准备文件，并先用测试知识库验证。
+抽查含中文、逗号和多行文本的记录，确认 `q`、`a` 对应正确。需要回导时，按[官方模板导入规范](https://doc.fastgpt.cn/guide/dataset/template) 单独准备文件，并先用测试知识库验证。

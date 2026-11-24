@@ -2,7 +2,7 @@
 title: FastGPT V4.6.8版本升级操作与功能说明
 slug: /zh/deploy/upgrade-v4-6-8
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/468
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/468
 source_type: 官方文档
 ---
 
@@ -82,7 +82,7 @@ curl --location --request POST 'https://{{host}}/api/init/v468' \
 ## 升级后怎么验证
 1. 验证MongoDB副本集状态：进入MongoDB容器，执行`rs.status()`命令，查看返回结果中ok字段值为1，代表副本集初始化成功。2. 功能验证：访问系统，测试知识库搜索、Http模块调用、语音文件上传、对话框重新生成功能是否正常。3. 商业版用户验证：检查计费系统是否完成初始化，内部使用的免费存储配额是否正常调整。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/468)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/468)
 
 ## 适用性与版本范围
 

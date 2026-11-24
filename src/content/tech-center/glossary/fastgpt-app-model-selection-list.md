@@ -2,7 +2,7 @@
 title: FastGPT应用设置模型选择列表为空问题处理
 slug: /zh/glossary/fastgpt-app-model-selection-list
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/toc
+source: https://doc.fastgpt.cn/toc
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ source_type: 官方文档
 ## 容易搞错的地方
 该列表仅存在于应用设置的配置场景中，与工作流编排中的user-selection节点功能不同，二者属于不同的功能模块，不可混用。部分用户可能将应用设置的模型选择列表与其他场景的模型选择功能混淆，导致配置错误。升级4.6.7版本后出现列表为空时，官方未提供具体恢复步骤，需等待官方后续更新。
 
-> [FastGPT 文档目录](https://doc.fastgpt.cn/zh-CN/toc), [FastGPT GitHub issue 790](https://github.com/labring/FastGPT/issues/790)
+> [FastGPT 文档目录](https://doc.fastgpt.cn/toc), [FastGPT GitHub issue 790](https://github.com/labring/FastGPT/issues/790)
 
 ## 适用性与版本范围
 

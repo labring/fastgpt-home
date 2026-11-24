@@ -2,7 +2,7 @@
 title: Update FastGPT Container Image Tags for v4.15.0
 slug: /en/deploy/fastgpt-v4-15-0-image-updates
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41500
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/41500
 source_type: Official documentation
 ---
 
@@ -45,7 +45,7 @@ docker pull fastgpt/fastgpt-agent-sandbox:v0.2.0
 
 After pulling the updated images, restart your FastGPT deployment services to apply the new container versions. No additional configuration changes are required beyond updating the image tags in your deployment manifest, such as a `docker-compose.yml` or Kubernetes deployment file.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41500)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-15/41500)
 
 ## Applicability and version scope
 

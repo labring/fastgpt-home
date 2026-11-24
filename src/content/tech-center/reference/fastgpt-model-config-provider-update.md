@@ -2,7 +2,7 @@
 title: FastGPT 配置文件中模型配置新增provider字段的更新指南
 slug: /zh/reference/fastgpt-model-config-provider-update
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4816
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4816
 source_type: 官方文档小节
 ---
 
@@ -47,4 +47,4 @@ source_type: 官方文档小节
 2. 旧版config.json配置说明已不再维护，请勿继续使用
 3. 必须使用官方最新的模型配置方案进行配置，不可沿用旧版格式
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4816)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/4816)

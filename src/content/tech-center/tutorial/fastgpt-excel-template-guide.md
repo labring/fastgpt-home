@@ -2,7 +2,7 @@
 title: 介绍FastGPT知识库导入的Excel模板使用规范与数据结构
 slug: /zh/tutorial/fastgpt-excel-template-guide
 page_type: 教程
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/template
+source: https://doc.fastgpt.cn/guide/dataset/template
 source_type: 官方文档
 ---
 
@@ -23,7 +23,7 @@ FastGPT知识库导入的Excel模板与CSV模板采用完全一致的表头与�
 2.  文档仅可包含一个工作表，不可存在合并单元格。
 3.  文档第一行必须为模板预设的标准表头，不可擅自修改或删除任何表头字段。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/dataset/template)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/dataset/template)
 
 ## 适用性与版本范围
 

@@ -2,7 +2,7 @@
 title: Update AGENT_ENGINE Environment Variables for FastGPT 4.15.2
 slug: /en/deploy/fastgpt-agent-engine-update
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/4152
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/4152
 source_type: Official documentation
 ---
 
@@ -28,7 +28,7 @@ Follow these concrete steps to update your `AGENT_ENGINE` configuration:
 3.  No action is required if you have not previously set the `AGENT_ENGINE` variable, as the default value has been updated to `fastAgent`.
 4.  Restart your FastGPT service to apply the revised environment variables, ensuring the validation check passes and the application starts successfully.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/4152)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-15/4152)
 
 ## Applicability and version scope
 

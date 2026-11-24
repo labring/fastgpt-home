@@ -2,7 +2,7 @@
 title: FastGPT V4.10.1版本升级操作与变更说明
 slug: /zh/deploy/fastgpt-v4101-upgrade-steps
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4101
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4101
 source_type: 官方文档
 ---
 
@@ -41,4 +41,4 @@ source_type: 官方文档
 - 新增阿里百炼Flux和通义万相绘图工具
 - 纠正硅基流动画图工具的输出值类型
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4101)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/4101)

@@ -2,7 +2,7 @@
 title: 详细说明FastGPT中模型预设的定义与使用方法
 slug: /zh/glossary/fastgpt-model-preset-config
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/plugin/model-presets
+source: https://doc.fastgpt.cn/plugin/model-presets
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ source_type: 官方文档
 ## 容易搞错的地方
 一是混淆全局注册文件与单个供应商预设文件，全局注册逻辑在`index.ts`，单个供应商的模型预设列表配置在`provider/{Provider}/index.ts`；二是混淆`model.ts`维护的两类配置，`ModelProviderMap`与`aiproxyChannels`均在该文件中维护，需注意各自的配置场景；三是误将`channel-avatar/`目录用于存放非AIProxy渠道的头像，该目录仅用于AIProxy渠道头像存储。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/plugin/model-presets)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/plugin/model-presets)
 
 ## 适用性与版本范围
 

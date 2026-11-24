@@ -2,7 +2,7 @@
 title: FastGPT新增自定义模型供应商目录的配置方法
 slug: /zh/reference/add-custom-model-provider-directory
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/plugin/model-presets
+source: https://doc.fastgpt.cn/plugin/model-presets
 source_type: 官方文档小节
 ---
 
@@ -45,4 +45,4 @@ export default models;
 3.  修改配置文件或资源后，需重启FastGPT插件服务才能加载新的配置。
 4.  配置的字段名需严格遵循示例格式，不可随意新增未定义的参数。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/plugin/model-presets)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/plugin/model-presets)

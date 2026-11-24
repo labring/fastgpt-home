@@ -62,7 +62,7 @@ Assign an owner, deadline, and repeatable check to each failure. Once critical p
 
 ## References
 
-- [FastGPT Docker Compose deployment](https://doc.fastgpt.cn/zh-CN/self-host/deploy/docker)
-- [FastGPT environment variables](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
-- [FastGPT upgrade instructions](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/upgrade-instruction)
+- [FastGPT Docker Compose deployment](https://doc.fastgpt.cn/self-host/deploy/docker)
+- [FastGPT environment variables](https://doc.fastgpt.cn/self-host/config/env)
+- [FastGPT upgrade instructions](https://doc.fastgpt.cn/self-host/upgrading/upgrade-instruction)
 - [Docker seccomp security profiles](https://docs.docker.com/engine/security/seccomp/)

@@ -2,7 +2,7 @@
 title: Add FastGPT 4.15 Environment Configuration Variables
 slug: /en/deploy/fastgpt-415-environment-variables
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41501
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/41501
 source_type: Official documentation
 ---
 
@@ -47,7 +47,7 @@ The following table breaks down each variable for quick lookup:
 3. Save the modified `.env` files.
 4. Restart the `fastgpt-app` and `fastgpt-pro` services to apply the new configuration settings.
 
-> [FastGPT 4.15.01 upgrade notes](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41501)
+> [FastGPT 4.15.01 upgrade notes](https://doc.fastgpt.io/self-host/upgrading/4-15/41501)
 
 ## Applicability and version scope
 

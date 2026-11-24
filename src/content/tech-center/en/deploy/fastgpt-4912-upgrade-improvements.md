@@ -2,7 +2,7 @@
 title: FastGPT 4912 Upgrade Functional Improvements
 slug: /en/deploy/fastgpt-4912-upgrade-improvements
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4912
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/4912
 source_type: 官方文档
 ---
 
@@ -36,4 +36,4 @@ Frontend updates enhance user experience and visibility:
 1. Updated input box styling and revised voice input UI optimize usability across both desktop and mobile devices, aligning form factors for consistent interaction.
 2. Additional subscription plan usage information is now displayed, providing users with clearer visibility into their current resource consumption against their selected plan limits.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4912)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/4912)

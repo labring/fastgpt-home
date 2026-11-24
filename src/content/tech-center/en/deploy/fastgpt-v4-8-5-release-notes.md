@@ -2,7 +2,7 @@
 title: FastGPT v4.8.5 Release Feature and Fix Details
 slug: /en/deploy/fastgpt-v4-8-5-release-notes
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/485
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/485
 source_type: 官方文档
 ---
 
@@ -37,4 +37,4 @@ Multiple high-priority issues are addressed in this release:
 3. Upload more than 100 files to a single folder, verify the folder loads fully without errors to confirm the folder file limit improvement.
 4. Test the markdown image pinch-to-zoom feature on a mobile device by opening a chat with embedded markdown images.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/485)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/485)

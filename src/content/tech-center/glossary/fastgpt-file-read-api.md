@@ -2,7 +2,7 @@
 title: 说明FastGPT获取文件阅读链接API的参数与使用步骤
 slug: /zh/glossary/fastgpt-file-read-api
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/api_dataset
+source: https://doc.fastgpt.cn/guide/dataset/third-party/api_dataset
 source_type: 官方文档
 ---
 
@@ -32,7 +32,7 @@ curl --location --request GET '{{baseURL}}/v1/file/read?id=xx' \
 ## 容易搞错的地方
 未正确传入文件id参数，将无法获取有效的阅读链接。误用POST等其他请求方法发起请求，将无法得到正常响应。未正确配置Authorization请求头，将导致请求被拒绝。请勿将Gateway internal HTTP API暴露到公网，避免引发安全问题。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/api_dataset)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/dataset/third-party/api_dataset)
 
 ## 适用性与版本范围
 

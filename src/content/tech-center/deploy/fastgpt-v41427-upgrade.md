@@ -2,7 +2,7 @@
 title: FastGPT V4.14.27版本升级操作及变更说明
 slug: /zh/deploy/fastgpt-v41427-upgrade
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41427
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/41427
 source_type: 官方文档
 ---
 
@@ -20,4 +20,4 @@ V4.14.27版本主要针对历史升级脚本的异常问题进行修复，解决
 ## 版本补充说明
 本版本属于V4.14.x系列的迭代更新，仅针对升级脚本的异常问题进行修复，未新增额外功能或变更核心配置项，现有部署用户可根据自身实际使用情况选择是否进行升级。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41427)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-14/41427)

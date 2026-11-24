@@ -2,7 +2,7 @@
 title: FastGPT对接钉钉知识库的配置流程与使用注意事项
 slug: /zh/integration/fastgpt-dingtalk-knowledgebase-config
 page_type: 集成与发布渠道
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/dingtalk_dataset
+source: https://doc.fastgpt.cn/guide/dataset/third-party/dingtalk_dataset
 source_type: 官方文档
 ---
 
@@ -24,4 +24,4 @@ FastGPT支持通过钉钉企业内部应用接入钉钉知识库，仅支持导�
 ### 易错点与注意事项
 需注意正确获取User ID，避免误用手机号、姓名或unionId；配置的操作账号必须拥有目标知识库的访问权限，否则无法在FastGPT的添加文件列表中看到对应知识库。此外，App Secret需妥善保管，不可随意分享。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/dingtalk_dataset)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/dataset/third-party/dingtalk_dataset)

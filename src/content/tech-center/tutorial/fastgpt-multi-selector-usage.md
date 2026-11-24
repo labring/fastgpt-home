@@ -2,7 +2,7 @@
 title: 配置FastGPT多选择器实现多目标元素选取
 slug: /zh/tutorial/fastgpt-multi-selector-usage
 page_type: 教程
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/websync
+source: https://doc.fastgpt.cn/guide/dataset/websync
 source_type: 官方文档
 ---
 
@@ -16,7 +16,7 @@ source_type: 官方文档
 
 多选择器的配置方式可用于同时抓取文档标题与代码块等不同类型的页面元素，满足网页同步抓取的多样化需求。在实际配置中，只需按照单组选择器编写、多组选择器组合的流程操作，即可完成多元素抓取的选择配置。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/dataset/websync)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/dataset/websync)
 
 ## 适用性与版本范围
 

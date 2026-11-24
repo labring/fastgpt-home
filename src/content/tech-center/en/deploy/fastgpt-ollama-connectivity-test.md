@@ -2,7 +2,7 @@
 title: Validate Ollama Connectivity for FastGPT Deployments
 slug: /en/deploy/fastgpt-ollama-connectivity-test
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/custom-models/ollama
+source: https://doc.fastgpt.io/self-host/custom-models/ollama
 source_type: Official documentation
 ---
 
@@ -31,7 +31,7 @@ Follow these exact commands to test communication:
 # Interpret Test Outcomes
 A successful test will return the default Ollama service welcome page content, confirming bidirectional network communication between the FastGPT container and Ollama is functional. If the command returns a `connection refused` error, timeout, or unrecognized host message, verify that the Ollama service is running on the target machine, that firewall rules allow traffic on port 11434, and that the correct network address is used. No additional pre-integration steps are required if the test returns valid Ollama service output.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/custom-models/ollama)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/custom-models/ollama)
 
 ## Applicability and version scope
 

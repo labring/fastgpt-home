@@ -2,7 +2,7 @@
 title: Clean Up Legacy FastGPT System Model Configs
 slug: /en/deploy/fastgpt-legacy-model-config-cleanup
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-16/4160
+source: https://doc.fastgpt.io/self-host/upgrading/4-16/4160
 source_type: 官方文档
 ---
 
@@ -42,4 +42,4 @@ For missing required fields, the system applies predefined default values:
 
 After running the cleanup, updated data is written consistently, and the system model cache is reloaded immediately—even if no database records were modified. A subsequent dry run will report `wouldUpdate` as 0 if all configurations are valid. Any records that still fail the full schema validation will not be updated, and will appear in the `invalidSamples` response field.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/4-16/4160)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/4-16/4160)

@@ -2,7 +2,7 @@
 title: Retrieve FastGPT SSO Login Redirect URL
 slug: /en/tutorial/fastgpt-sso-redirect-url-retrieval
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/admin/sso
+source: https://doc.fastgpt.io/guide/admin/sso
 source_type: Official documentation
 ---
 
@@ -50,7 +50,7 @@ A failed request returns a `200 OK` HTTP status code (consistent with FastGPT AP
 }
 ```
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/admin/sso)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/admin/sso)
 
 ## Applicability and version scope
 

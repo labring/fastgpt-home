@@ -80,7 +80,7 @@ These outcomes depend on each institution's data quality, scenario boundaries, d
 
 ## References
 
-- [FastGPT getting started documentation](https://doc.fastgpt.io/en/guide/getting-started)
-- [FastGPT workflow documentation](https://doc.fastgpt.io/en/guide/build/workflow/intro)
-- [FastGPT OpenAPI documentation](https://doc.fastgpt.io/en/openapi)
+- [FastGPT getting started documentation](https://doc.fastgpt.io/guide/getting-started)
+- [FastGPT workflow documentation](https://doc.fastgpt.io/guide/build/workflow/intro)
+- [FastGPT OpenAPI documentation](https://doc.fastgpt.io/openapi)
 - [FastGPT open-source repository](https://github.com/labring/FastGPT)

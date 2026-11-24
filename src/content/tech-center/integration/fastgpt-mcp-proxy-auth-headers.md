@@ -2,7 +2,7 @@
 title: 配置FastGPT MCP服务器的身份代理请求头参数与方法
 slug: /zh/integration/fastgpt-mcp-proxy-auth-headers
 page_type: 集成
-source: https://doc.fastgpt.cn/zh-CN/guide/build/publish/mcp_server
+source: https://doc.fastgpt.cn/guide/build/publish/mcp_server
 source_type: 官方文档
 ---
 
@@ -37,8 +37,8 @@ source_type: 官方文档
 ```
 SSE地址使用相同的请求头配置。SSE服务会在建立连接时保存代理身份，修改请求头后需断开并重新连接；Streamable HTTP会逐次读取请求头。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/publish/mcp_server)
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/publish/mcp_server)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/publish/mcp_server)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/publish/mcp_server)
 
 ## 适用性与版本范围
 

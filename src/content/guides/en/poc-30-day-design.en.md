@@ -122,5 +122,5 @@ An independent validation keeps samples, environment, metrics, and review reprod
 ## References
 
 - [FastGPT official product documentation](https://doc.fastgpt.io/)
-- [FastGPT getting started guide](https://doc.fastgpt.io/en/guide/getting-started)
-- [FastGPT Chinese getting started guide](https://doc.fastgpt.io/zh-CN/guide/getting-started)
+- [FastGPT getting started guide](https://doc.fastgpt.io/guide/getting-started)
+- [FastGPT Chinese getting started guide](https://doc.fastgpt.cn/guide/getting-started)

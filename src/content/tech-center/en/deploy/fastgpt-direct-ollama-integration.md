@@ -2,7 +2,7 @@
 title: Set Up Direct Ollama Integration With FastGPT
 slug: /en/deploy/fastgpt-direct-ollama-integration
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/custom-models/ollama
+source: https://doc.fastgpt.io/self-host/custom-models/ollama
 source_type: Official documentation
 ---
 
@@ -22,7 +22,7 @@ A reference setup screenshot is available at `![](../../../public/imgs/Ollama-di
 ## Post-Configuration Model Setup
 After saving your updated `docker-compose.yml` file and restarting FastGPT, proceed to add your Ollama models. All model configuration steps match the workflow used for OneAPI integrations: you will input your Ollama model identifier and complete the standard FastGPT model setup flow. For full step-by-step instructions on model addition and usage, refer to the linked section `#5-model-addition-and-usage`.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/custom-models/ollama)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/custom-models/ollama)
 
 ## Applicability and version scope
 

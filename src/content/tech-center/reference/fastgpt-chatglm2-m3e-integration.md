@@ -2,7 +2,7 @@
 title: 为FastGPT配置接入ChatGLM2与m3e-large私有化模型的详细操作步骤
 slug: /zh/reference/fastgpt-chatglm2-m3e-integration
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/custom-models/chatglm2-m3e
+source: https://doc.fastgpt.cn/self-host/custom-models/chatglm2-m3e
 source_type: 官方文档小节
 ---
 
@@ -20,4 +20,4 @@ source_type: 官方文档小节
 ## 注意事项
 需确保已完成ChatGLM2-6B与M3E模型的本地部署准备，否则无法完成接入流程。配置过程需严格遵循FastGPT官方的模型接入规范，不可随意跳过前置步骤。仅支持ChatGLM2与m3e-large的组合接入，其他模型组合无法通过该流程完成配置。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/chatglm2-m3e)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/custom-models/chatglm2-m3e)

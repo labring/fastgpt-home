@@ -2,7 +2,7 @@
 title: 配置飞书单点登录对接FastGPT的详细操作步骤与参数说明
 slug: /zh/tutorial/feishu-sso-fastgpt-config
 page_type: 教程/部署
-source: https://doc.fastgpt.cn/zh-CN/guide/admin/sso
+source: https://doc.fastgpt.cn/guide/admin/sso
 source_type: 官方文档小节
 ---
 
@@ -59,4 +59,4 @@ environment :
 ```
 其中，`AUTH_TOKEN`需替换为自定义的认证令牌，`FEISHU_APP_ID`和`FEISHU_APP_SECRET`替换为前文获取的应用凭证，若使用私有化部署的飞书，需将相关接口地址替换为私有化部署的对应地址。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/admin/sso)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/admin/sso)

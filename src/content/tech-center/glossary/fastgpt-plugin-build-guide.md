@@ -2,7 +2,7 @@
 title: FastGPT系统插件构建流程相关具体使用规范说明
 slug: /zh/glossary/fastgpt-plugin-build-guide
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/plugin/system-tool-development
+source: https://doc.fastgpt.cn/plugin/system-tool-development
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ FastGPT插件构建是将插件代码打包为统一.pkg格式，包含元信息
 ## 容易搞错的地方
 易误用旧版开发工具，当前不再以`config.ts`、`versionList`和`bun run build:pkg`作为主要开发方式，需改用`@fastgpt-plugin/cli`和`@fastgpt-plugin/sdk-factory`。误以为插件为内置部署，实际FastGPT与插件采用外置扩展的微服务架构。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/plugin/system-tool-development)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/plugin/system-tool-development)
 
 ## 适用性与版本范围
 

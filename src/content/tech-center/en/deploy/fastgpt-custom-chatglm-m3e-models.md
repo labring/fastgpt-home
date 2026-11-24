@@ -2,7 +2,7 @@
 title: Deploy and Use Custom ChatGLM2 and M3E Models on FastGPT
 slug: /en/deploy/fastgpt-custom-chatglm-m3e-models
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/custom-models/chatglm2-m3e
+source: https://doc.fastgpt.io/self-host/custom-models/chatglm2-m3e
 source_type: Official documentation
 ---
 
@@ -26,7 +26,7 @@ Configuring the ChatGLM2 chat model requires only a single straightforward step:
 ## Binding Restriction Details
 To ensure consistent performance across all linked Dataset resources, FastGPT enforces a strict embedding model matching rule for application bindings. An application cannot bind multiple Datasets that use different embedding models, and any Dataset configured with a non-M3E embedding model cannot be bound to an application set up for M3E, and vice versa. This restriction prevents incompatible embedding calculations from breaking application search and response workflows.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/custom-models/chatglm2-m3e)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/custom-models/chatglm2-m3e)
 
 ## Applicability and version scope
 

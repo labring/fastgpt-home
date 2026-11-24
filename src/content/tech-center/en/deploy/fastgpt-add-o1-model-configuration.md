@@ -2,7 +2,7 @@
 title: Add OpenAI o1 Models to FastGPT Configuration
 slug: /en/deploy/fastgpt-add-o1-model-configuration
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4811
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/4811
 source_type: 官方文档
 ---
 
@@ -91,4 +91,4 @@ Insert the following JSON snippet into your existing FastGPT model configuration
 }
 ```
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4811)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/4811)

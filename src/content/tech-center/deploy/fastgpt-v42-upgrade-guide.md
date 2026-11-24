@@ -2,7 +2,7 @@
 title: FastGPT从旧版本升级到V4.2的配置修改指南
 slug: /zh/deploy/fastgpt-v42-upgrade-guide
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/42
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/42
 source_type: 官方文档小节
 ---
 
@@ -27,4 +27,4 @@ FastGPT V4.2版本的升级操作属于轻量化配置调整，对99.9%的用户
 ## 调整逻辑说明
 本次格式调整的核心目的是统一模型调用的配置逻辑，无需用户额外选择模型，仅保留一套适配性最优的配置用于执行相关任务。这一调整可以简化后续的模型管理流程，避免因多模型配置带来的潜在问题，同时确保任务执行的稳定性和一致性。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/42)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/42)

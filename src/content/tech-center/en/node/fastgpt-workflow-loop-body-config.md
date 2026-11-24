@@ -2,7 +2,7 @@
 title: Configure FastGPT Workflow Loop Body Parameters
 slug: /en/node/fastgpt-workflow-loop-body-config
 page_type: Workflow nodes
-source: https://doc.fastgpt.cn/en/guide/build/workflow/nodes/loop
+source: https://doc.fastgpt.io/guide/build/workflow/nodes/loop
 source_type: Official documentation
 ---
 
@@ -28,7 +28,7 @@ Proper configuration of the Loop Body End node is required to capture and aggreg
 3. Verify that the selected variable is marked as the collected result for the active loop iteration.
 4. Understand that all results from individual loop iterations will be compiled into a single new array, which acts as the final output of the entire loop node workflow step.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/workflow/nodes/loop)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/workflow/nodes/loop)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: 介绍FastGPT Plugin的定义、使用规则与常见误区
 slug: /zh/glossary/fastgpt-plugin-overview
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/plugin/intro
+source: https://doc.fastgpt.cn/plugin/intro
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ FastGPT Plugin v1.0.0 对插件项目进行了系统性重构，形成统一的�
 ## 容易搞错的地方
 容易混淆FastGPT Plugin仓库与各插件源码仓库的职责，前者不承载具体插件源码，仅提供开发相关的基础设施能力。另外，旧版系统插件需伴随主服务一起发版，新版插件可独立迭代，无需依赖主服务发版。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/plugin/intro)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/plugin/intro)
 
 ## 适用性与版本范围
 

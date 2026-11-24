@@ -2,7 +2,7 @@
 title: Explain FastGPT File and Data Storage Relationships
 slug: /en/deploy/fastgpt-file-data-storage-relationships
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/design/dataset
+source: https://doc.fastgpt.io/self-host/design/dataset
 source_type: Official documentation
 ---
 
@@ -21,7 +21,7 @@ To support backward compatibility, manual data input workflows, and annotated da
 ## Immutable `file_id` Assignment
 The `file_id` field follows a strict write-once policy. It is only written to a PostgreSQL dataset row during the initial data insertion process. Once the `file_id` value is set, it cannot be modified or altered for the existing dataset record. This constraint ensures consistent reference between dataset entries and their associated stored files, maintaining data integrity across the dataset.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/design/dataset)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/design/dataset)
 
 ## Applicability and version scope
 

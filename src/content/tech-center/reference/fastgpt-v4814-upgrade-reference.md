@@ -2,7 +2,7 @@
 title: FastGPT V4.8.14版本升级操作速查说明
 slug: /zh/reference/fastgpt-v4814-upgrade-reference
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4814
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4814
 source_type: 官方文档小节
 ---
 
@@ -24,4 +24,4 @@ FastGPT V4.8.14是FastGPT自部署的旧版本之一，归类在<4.12.0的升级
 3. 若当前部署的版本带有环境变量变更或升级脚本标注，需参考对应版本的专属说明执行操作，不可直接套用V4.8.14的流程；
 4. 升级过程中需确保服务器网络稳定，避免中断导致部署文件损坏或配置异常。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4814)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/4814)

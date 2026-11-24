@@ -2,7 +2,7 @@
 title: Execute FastGPT 4.8.6 Application Permission Initialization
 slug: /en/deploy/fastgpt-486-app-permission-init
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/486
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/486
 source_type: 官方文档
 ---
 
@@ -29,4 +29,4 @@ curl --location --request POST 'https://{{host}}/api/admin/initv486' \
 ```
 This command sends a validated HTTPS POST request to the `/api/admin/initv486` endpoint on your FastGPT instance. The `--location` flag ensures that any necessary HTTP redirects are automatically followed to reach the correct endpoint. The two custom headers provide authentication via the rootkey and specify the request content type as JSON, which is required for the endpoint to process the request correctly. Upon successful execution, the endpoint will initialize and configure inherited permissions across all FastGPT applications in your deployment.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/486)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/486)

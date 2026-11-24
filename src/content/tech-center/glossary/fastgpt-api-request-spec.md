@@ -2,7 +2,7 @@
 title: 解释FastGPT第三方数据集与会话管理API请求使用规范
 slug: /zh/glossary/fastgpt-api-request-spec
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/api_dataset
+source: https://doc.fastgpt.cn/guide/dataset/third-party/api_dataset
 source_type: 官方文档
 ---
 
@@ -33,7 +33,7 @@ curl --location --request DELETE 'http://localhost:3000/api/core/chat/history/de
 3. Authorization请求头格式错误，未添加Bearer前缀与空格；
 4. 未替换示例中的占位符，如{{baseURL}}、{{authorization}}、[chatId]等参数，导致请求失败。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/api_dataset)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/dataset/third-party/api_dataset)
 
 ## 适用性与版本范围
 

@@ -2,7 +2,7 @@
 title: FastGPT Agent虚拟机功能的启用与使用说明
 slug: /zh/tutorial/fastgpt-agent-vm-guide
 page_type: 教程
-source: https://doc.fastgpt.cn/zh-CN/guide/build/agentv2/vm
+source: https://doc.fastgpt.cn/guide/build/agentv2/vm
 source_type: 官方文档
 ---
 
@@ -20,7 +20,7 @@ source_type: 官方文档
 ## 功能使用说明
 启用虚拟机后，Agent可直接调用代码执行器运行指定脚本，在`/workspace`目录下进行文件读写操作，或通过配置的启动脚本完成环境初始化。所有运行操作均依托专属沙箱容器执行。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/agentv2/vm)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/agentv2/vm)
 
 ## 适用性与版本范围
 

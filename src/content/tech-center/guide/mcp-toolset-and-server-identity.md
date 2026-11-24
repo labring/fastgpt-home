@@ -3,7 +3,7 @@ title: FastGPT MCP 双方向实践：工具集接入与服务发布决策指南
 slug: /zh/guide/mcp-toolset-and-server-identity
 page_type: 深度场景内容
 source_type: 官方文档（v4.17.2）与社区反馈
-source: https://doc.fastgpt.cn/zh-CN/guide/build/tools/mcp_tools
+source: https://doc.fastgpt.cn/guide/build/tools/mcp_tools
 source_note: "判据取自 FastGPT 官方文档（v4.17.2）与更新说明，核验日 2026-10-13。"
 check_day: 2026-10-13
 article_section: 选型与评估
@@ -58,10 +58,10 @@ date_modified: 2026-10-14
 
 ## 参考资料
 
-- [MCP 工具集](https://doc.fastgpt.cn/zh-CN/guide/build/tools/mcp_tools)
-- [MCP 发布](https://doc.fastgpt.cn/zh-CN/guide/build/publish/mcp_server)
-- [工具调用节点](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/tool)
-- [环境变量](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
+- [MCP 工具集](https://doc.fastgpt.cn/guide/build/tools/mcp_tools)
+- [MCP 发布](https://doc.fastgpt.cn/guide/build/publish/mcp_server)
+- [工具调用节点](https://doc.fastgpt.cn/guide/build/workflow/nodes/tool)
+- [环境变量](https://doc.fastgpt.cn/self-host/config/env)
 
 ## 需要进一步确认时
 

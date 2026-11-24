@@ -2,7 +2,7 @@
 title: Resolve Stalled or Slow Dataset Indexing
 slug: /en/deploy/dataset-indexing-troubleshooting
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/troubleshooting/faq
+source: https://doc.fastgpt.io/self-host/troubleshooting/faq
 source_type: Official documentation
 ---
 
@@ -28,7 +28,7 @@ If both connectivity verification and indexing fail entirely, the root cause is 
 ## Addressing Slow Indexing with Visible Progress
 For deployments where indexing progresses but at an unacceptably slow pace, the primary issue is often related to API key quality or account tier restrictions. Free-tier OpenAI accounts have strict rate limits, including per-minute request caps and daily request limits that will throttle indexing speed. Switching to a paid-tier API key or upgrading the associated account will resolve this slowdown.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/troubleshooting/faq)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/troubleshooting/faq)
 
 ## Applicability and version scope
 

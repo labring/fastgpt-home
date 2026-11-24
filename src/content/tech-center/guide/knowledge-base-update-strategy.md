@@ -9,7 +9,7 @@ meta_description: 面向企业技术负责人与采购方的知识库更新决�
 keywords: 知识库更新,增量同步,全量重建,定时同步,决策矩阵
 delivery_source_type: 开源仓库文档与社区线程
 source_type: 深度场景内容
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/env
+source: https://doc.fastgpt.cn/self-host/config/env
 schema_type: TechArticle
 date_published: 2026-09-28
 date_modified: 2026-09-28
@@ -56,8 +56,8 @@ delivery_note: 判据取自开源仓库文档与社区线程，核验日 2026-09
 - [Changed collection replacement behavior](https://github.com/labring/FastGPT/blob/v4.17.0/packages/service/core/dataset/collection/utils.ts)
 - [FastGPT v4.16.2 parsing Worker configuration changes](https://github.com/labring/FastGPT/releases/tag/v4.16.2)
 
-- [FastGPT 环境变量](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
-- [FastGPT Docker Compose 部署](https://doc.fastgpt.cn/zh-CN/self-host/deploy/docker)
+- [FastGPT 环境变量](https://doc.fastgpt.cn/self-host/config/env)
+- [FastGPT Docker Compose 部署](https://doc.fastgpt.cn/self-host/deploy/docker)
 
 ## 需要进一步确认时
 

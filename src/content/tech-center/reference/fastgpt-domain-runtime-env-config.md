@@ -2,7 +2,7 @@
 title: FastGPT部署的域名与运行时环境变量配置说明
 slug: /zh/reference/fastgpt-domain-runtime-env-config
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/env
+source: https://doc.fastgpt.cn/self-host/config/env
 source_type: 官方文档小节
 ---
 
@@ -32,4 +32,4 @@ source_type: 官方文档小节
 5. NODE_OPTIONS仅用于生产镜像构建阶段，请勿随意修改运行时的该参数。
 6. 生产镜像默认关闭Next.js Telemetry，如需开启需调整NEXT_TELEMETRY_DISABLED变量值。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/config/env)

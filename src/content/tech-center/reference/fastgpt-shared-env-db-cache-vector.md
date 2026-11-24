@@ -2,7 +2,7 @@
 title: 这一页提供FastGPT App/Admin共享变量与数据库缓存向量库配置参考
 slug: /zh/reference/fastgpt-shared-env-db-cache-vector
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/env
+source: https://doc.fastgpt.cn/self-host/config/env
 source_type: 官方文档小节
 ---
 
@@ -40,4 +40,4 @@ source_type: 官方文档小节
 3. STREAM_RESUME相关参数需根据服务器实际内存资源调整，避免Redis内存溢出。
 4. VECTOR_VQ_LEVEL需匹配所使用向量库的支持范围，不可随意修改超出范围的值。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/config/env)

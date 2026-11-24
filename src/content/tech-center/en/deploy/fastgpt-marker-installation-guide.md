@@ -2,7 +2,7 @@
 title: Install Marker for FastGPT Custom PDF Parsing
 slug: /en/deploy/fastgpt-marker-installation-guide
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/custom-models/marker
+source: https://doc.fastgpt.io/self-host/custom-models/marker
 source_type: Official documentation
 ---
 
@@ -26,7 +26,7 @@ The command enables GPU acceleration with `--gpus all`, maps host port 7231 to t
 ## Compatibility Notes
 The bundled API included in the deployed Marker container is pre-configured to work seamlessly with FastGPT’s custom parsing service. No additional API adaptation is required to connect the running Marker instance to your self-hosted FastGPT environment. For integration, configure your FastGPT custom parsing service to target the host IP and port 7231 for PDF processing workflows.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/custom-models/marker)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/custom-models/marker)
 
 ## Applicability and version scope
 

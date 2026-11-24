@@ -7,7 +7,7 @@ is_part_of: FastGPT Tech Center
 meta_description: Plan FastGPT app releases with version records, regression samples, staged traffic, and tested rollback boundaries for each deployment.
 delivery_source_type: Open-source repository docs and community threads
 source_type: 深度场景内容
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/env
+source: https://doc.fastgpt.cn/self-host/config/env
 meta_title: Releasing and Regression-Testing an App: Versions, Canary and Rollback | FastGPT Technical Center
 schema_type: TechArticle
 date_published: 2026-09-28
@@ -85,8 +85,8 @@ Additionally, you should delay upgrade operations during business peak periods t
 - [FastGPT v4.16.2 commercial ACL and existing Milvus migration](https://github.com/labring/FastGPT/releases/tag/v4.16.2)
 - [FastGPT v4.17.0 automatic migrations and earlier upgrade prerequisites](https://github.com/labring/FastGPT/releases/tag/v4.17.0)
 
-- [FastGPT environment variables](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
-- [FastGPT Docker Compose deployment](https://doc.fastgpt.cn/zh-CN/self-host/deploy/docker)
+- [FastGPT environment variables](https://doc.fastgpt.cn/self-host/config/env)
+- [FastGPT Docker Compose deployment](https://doc.fastgpt.cn/self-host/deploy/docker)
 
 ## Next steps
 

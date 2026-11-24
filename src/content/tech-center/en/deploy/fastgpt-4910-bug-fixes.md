@@ -2,7 +2,7 @@
 title: FastGPT 4910 Targeted Bug Fix Details
 slug: /en/deploy/fastgpt-4910-bug-fixes
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4910
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/4910
 source_type: 官方文档
 ---
 
@@ -37,4 +37,4 @@ To confirm each fix is active after upgrading to FastGPT 4910, run these targete
 ## Critical Fix Context
 Several fixes address commonly reported configuration and workflow pain points: the `indexSize` parameter now correctly applies configured values, eliminating the prior issue where custom index settings failed to take effect. The stream response fix resolves cases where incorrect `finish_reason` values were captured during streaming sessions, while the tool call mode fix ensures reasoning output is no longer lost during workflow execution.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4910)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/4910)

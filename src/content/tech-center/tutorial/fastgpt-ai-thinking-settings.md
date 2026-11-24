@@ -2,7 +2,7 @@
 title: 配置FastGPT的AI思考强度参数与多模型平台适配
 slug: /zh/tutorial/fastgpt-ai-thinking-settings
 page_type: 教程/部署
-source: https://doc.fastgpt.cn/zh-CN/guide/build/general/ai_settings
+source: https://doc.fastgpt.cn/guide/build/general/ai_settings
 source_type: 官方文档小节
 ---
 
@@ -21,4 +21,4 @@ source_type: 官方文档小节
 4. 若配置后出现报错，可将档位改回默认选项重试。
 需要注意，qwen3-*系列模型的非流式请求会被强制关闭思考，qwq-*系列模型的请求会被强制改为流式返回。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/general/ai_settings)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/general/ai_settings)

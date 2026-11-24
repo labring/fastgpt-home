@@ -2,7 +2,7 @@
 title: FastGPT 4.15.0 Platform Technical Improvements
 slug: /en/deploy/fastgpt-4-15-0-technical-improvements
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41500
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/41500
 source_type: Official documentation
 ---
 
@@ -22,7 +22,7 @@ Several adjustable parameters are available to tailor platform behavior:
 
 Additionally, plugin execution entries can now be fetched from object storage and cached in a local directory to improve performance. Other runtime improvements include optimized OTEL log collection format, streamlined stream-resume pause and abnormal interruption recovery to reduce stuck chat states, automatic switching of HTML output to preview mode after generation, a toggle to hide reasoning content in the UI while preserving it for LLM requests, optimized `chat2messages` adaptation to avoid standalone reason output, and automatic filling of empty tool responses with `none` to prevent model errors. Improved error prompts for insufficient balance are now shown to non-admin users and visitors, Skill-related modals, editing interactions, and list API performance have been enhanced, and LLM request traces now use team-isolated queries to prevent cross-team exposure of sensitive data via request IDs.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41500)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-15/41500)
 
 ## Applicability and version scope
 

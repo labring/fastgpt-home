@@ -2,7 +2,7 @@
 title: Implement FastGPT Third-Party Dataset Unified APIs
 slug: /en/integration/fastgpt-third-party-dataset-unified-api
 page_type: Integrations
-source: https://doc.fastgpt.cn/en/guide/dataset/third-party/third_dataset
+source: https://doc.fastgpt.io/guide/dataset/third-party/third_dataset
 source_type: Official documentation
 ---
 
@@ -24,7 +24,7 @@ All custom third-party integrations must implement four core standardized endpoi
 ### Implementation Guidelines
 To build a valid third-party dataset extension, developers must fully implement all four listed endpoints in alignment with the official API specification. The reference sample code for the Yuque dataset integration demonstrates how to map third-party library API responses to the FastGPT standard format. Each implemented endpoint must accept standard request parameters and return structured responses as defined in the official API file library documentation. No unsupported deviations from the specification are permitted for core integration functionality.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/third-party/third_dataset)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/third-party/third_dataset)
 
 ## Applicability and version scope
 

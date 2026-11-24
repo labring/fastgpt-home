@@ -2,7 +2,7 @@
 title: 指导使用Xinference为FastGPT部署Qwen-14B模型
 slug: /zh/deploy/fastgpt-xinference-qwen-deployment
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/custom-models/xinference
+source: https://doc.fastgpt.cn/self-host/custom-models/xinference
 source_type: 官方文档
 ---
 
@@ -18,7 +18,7 @@ source_type: 官方文档
 
 首次启动Qwen模型时，Xinference会从HuggingFace下载模型参数，耗时约数分钟。下载的模型文件会被本地缓存，后续启动无需重复下载。Xinference支持从modelscope等其他模型站点下载模型文件。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/xinference)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/custom-models/xinference)
 
 ## 适用性与版本范围
 

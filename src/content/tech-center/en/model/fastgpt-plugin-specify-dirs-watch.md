@@ -2,7 +2,7 @@
 title: Configure Plugin Paths and Live Reload for Remote Debugging
 slug: /en/model/fastgpt-plugin-specify-dirs-watch
 page_type: Model guides
-source: https://doc.fastgpt.cn/en/plugin/system-tool-development
+source: https://doc.fastgpt.io/plugin/system-tool-development
 source_type: Official documentation
 ---
 
@@ -31,7 +31,7 @@ By default, the CLI will automatically reconnect to the remote debug session if 
 fastgpt-plugin dev ./plugins/my-custom-plugin --watch --no-reconnect
 ```
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/plugin/system-tool-development)
+> Source: [FastGPT official source](https://doc.fastgpt.io/plugin/system-tool-development)
 
 ## Applicability and version scope
 

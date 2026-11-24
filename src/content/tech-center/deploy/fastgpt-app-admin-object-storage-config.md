@@ -2,7 +2,7 @@
 title: 配置FastGPT应用与管理端共享的对象存储环境变量
 slug: /zh/deploy/fastgpt-app-admin-object-storage-config
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/env
+source: https://doc.fastgpt.cn/self-host/config/env
 source_type: 官方文档小节
 ---
 
@@ -22,4 +22,4 @@ source_type: 官方文档小节
 ## 高级配置补充
 部分扩展参数可根据需求配置：STORAGE_S3_CDN_ENDPOINT为临时下载地址使用的CDN地址，配置时需同时配置STORAGE_EXTERNAL_ENDPOINT；STORAGE_S3_MAX_RETRIES为S3客户端的最大重试次数，默认值为3；STORAGE_PUBLIC_ACCESS_EXTRA_SUB_PATH为公开文件访问路径的额外子路径，默认值为空。针对不同存储类型，还可配置专属参数，例如配置协议、加速域名、CNAME、内网访问等相关参数。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/config/env)

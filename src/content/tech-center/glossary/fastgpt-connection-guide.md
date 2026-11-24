@@ -2,7 +2,7 @@
 title: FastGPT中connection术语的定义与使用说明
 slug: /zh/glossary/fastgpt-connection-guide
 page_type: 术语速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/494
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/494
 source_type: 官方文档
 ---
 
@@ -17,4 +17,4 @@ source_type: 官方文档
 ## 容易搞错的地方
 易混淆connection的两种场景含义，即Redis内网连接地址与网络连接超时状态；配置REDIS_URL环境变量时，需确保使用正确的connection地址作为参数；拉取镜像时，仅配置DNS无法解决连接超时问题。
 
-> 来源: [FastGPT 官方文档与源码](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/494)
+> 来源: [FastGPT 官方文档与源码](https://doc.fastgpt.cn/self-host/upgrading/outdated/494)

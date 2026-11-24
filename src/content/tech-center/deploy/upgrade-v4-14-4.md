@@ -2,7 +2,7 @@
 title: FastGPT V4.14.4版本升级操作与变更说明
 slug: /zh/deploy/upgrade-v4-14-4
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4144
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/4144
 source_type: 官方文档
 ---
 
@@ -30,7 +30,7 @@ curl --location --request POST 'https://{{host}}/api/admin/initv4144' \
 ## 升级后怎么验证
 检查各镜像版本是否正确为v4.14.4（FastGPT与商业版）、v0.3.4（fastgpt-plugin）。查看系统日志，确认打印出"Migration feedback completed!"。测试新增功能与优化项，包括工具调用流输出、对话日志展示IP归属地与应用版本名、工作流工具文件输入手动填写等功能正常。确认知识库与应用删除时需输入名称校验、分享链接uid长度符合限制等优化项生效。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4144)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-14/4144)
 
 ## 适用性与版本范围
 

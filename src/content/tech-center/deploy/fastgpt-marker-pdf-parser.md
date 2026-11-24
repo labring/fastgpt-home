@@ -2,7 +2,7 @@
 title: FastGPT中Marker自定义模型的PDF解析效果与使用规范
 slug: /zh/deploy/fastgpt-marker-pdf-parser
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/custom-models/marker
+source: https://doc.fastgpt.cn/self-host/custom-models/marker
 source_type: 官方文档
 ---
 
@@ -20,7 +20,7 @@ source_type: 官方文档
 ## 使用合规说明
 Marker工具采用GPL-3.0 license协议，使用该工具及相关解析内容时，需严格遵守该协议的各项条款，确保所有使用行为均符合协议规定，避免违规使用带来的风险。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/marker)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/custom-models/marker)
 
 ## 适用性与版本范围
 

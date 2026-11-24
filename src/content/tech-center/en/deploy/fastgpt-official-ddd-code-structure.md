@@ -2,7 +2,7 @@
 title: FastGPT’s Official DDD-Aligned Code Structure Breakdown
 slug: /en/deploy/fastgpt-official-ddd-code-structure
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/dev
+source: https://doc.fastgpt.io/self-host/dev
 source_type: Official documentation
 ---
 
@@ -40,7 +40,7 @@ The `packages/` directory contains four key subpackages:
 
 Available automation scripts include `pnpm initIcon` to convert SVG icons into code assets, and `pnpm previewIcon` to preview custom icon implementations, both run via the `scripts/icon` tooling.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/dev)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/dev)
 
 ## Applicability and version scope
 

@@ -7,6 +7,11 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const zlib = require('node:zlib');
+const {
+  findLegacyDocumentationUrls,
+  normalizeDocumentationUrl,
+  normalizeDocumentationUrlsInText
+} = require('./lib/documentation-url');
 
 const REPOSITORY_ROOT = path.resolve(__dirname, '..');
 const TECHNICAL_CONTENT_POLICY = require('../src/lib/technical-content-policy.json');
@@ -267,6 +272,9 @@ function readSourceDocument(source, record) {
   if (normalized.startsWith('---\n')) {
     const document = parseFrontMatter(normalized, record.file);
     validateDeliveryMetadata(document.metadata, record.file);
+    if (document.metadata.source) {
+      document.metadata.source = normalizeDocumentationUrl(document.metadata.source);
+    }
     return document;
   }
   if (!normalized.trimStart().startsWith('#')) {
@@ -380,12 +388,17 @@ function buildNormalizedTechnicalPage({ metadata, identity, body, wordCount, sou
   if (identity.canonicalPath.startsWith('/guide/')) {
     requireText(metadata.date_modified, `${label}.date_modified`);
   }
-  normalizePublicHttpsUrl(metadata.source, `${label} source`);
-  const citations = normalizeCitations(body.replace(SECRET_PATTERN, 'YOUR_API_KEY'));
+  const normalizedMetadata = {
+    ...metadata,
+    source: normalizeDocumentationUrl(normalizePublicHttpsUrl(metadata.source, `${label} source`))
+  };
+  const citations = normalizeCitations(
+    normalizeDocumentationUrlsInText(body.replace(SECRET_PATTERN, 'YOUR_API_KEY'))
+  );
   const lineEndings = normalizeStructuralEscapedLineEndings(citations);
   validateBodyIntegrity(lineEndings, { wordCount, sourceCount }, label);
   const normalized = normalizeDocument(
-    metadata,
+    normalizedMetadata,
     identity.locale,
     identity.canonicalPath,
     lineEndings
@@ -400,15 +413,15 @@ function buildNormalizedTechnicalPage({ metadata, identity, body, wordCount, sou
     body: normalized.body,
     document: normalized.document,
     projection: {
-      title: metadata.title,
+      title: normalizedMetadata.title,
       slug: `/${identity.locale}${identity.canonicalPath}`,
       category,
       categoryLabel,
-      ...(metadata.source ? { source: metadata.source } : {}),
-      sourceType: normalizeSourceType(metadata.source_type, `${label} source_type`),
-      summary: deriveSummary(metadata.title, normalized.body),
+      ...(normalizedMetadata.source ? { source: normalizedMetadata.source } : {}),
+      sourceType: normalizeSourceType(normalizedMetadata.source_type, `${label} source_type`),
+      summary: deriveSummary(normalizedMetadata.title, normalized.body),
       minutes: Math.max(1, Math.ceil(normalized.body.length / 500)),
-      ...(metadata.date_modified ? { dateModified: metadata.date_modified } : {})
+      ...(normalizedMetadata.date_modified ? { dateModified: normalizedMetadata.date_modified } : {})
     }
   };
 }
@@ -454,7 +467,9 @@ function parseJsonDelivery(filePath) {
       pageType: requireText(record.pageType, `${label}.pageType`),
       wordCount: requireJsonNonNegativeInteger(record.wordCount, `${label}.wordCount`),
       sourceCount: requireJsonNonNegativeInteger(record.sourceCount, `${label}.sourceCount`),
-      source: normalizePublicHttpsUrl(record.source, `${label}.source`),
+      source: normalizeDocumentationUrl(
+        normalizePublicHttpsUrl(record.source, `${label}.source`)
+      ),
       row: index + 2
     };
   });
@@ -631,7 +646,9 @@ function parseWorkbook(filePath) {
       row.F,
       `XLSX 上线清单 row ${index + 2} source count`
     ),
-    source: normalizePublicHttpsUrl(row.G, `XLSX 上线清单 row ${index + 2} source`),
+    source: normalizeDocumentationUrl(
+      normalizePublicHttpsUrl(row.G, `XLSX 上线清单 row ${index + 2} source`)
+    ),
     row: index + 2
   }));
   const denied = deniedRows.slice(1).map((row, index) => ({
@@ -1001,6 +1018,14 @@ function validateProjection(projection, label) {
     throw new Error(`Schema drift in ${label}.minutes: expected at least 1`);
   if (projection.source !== undefined) {
     normalizePublicHttpsUrl(projection.source, `${label}.source`);
+    if (findLegacyDocumentationUrls(projection.source).length > 0) {
+      throw new Error(
+        `Legacy prefixed documentation URL in ${label}.source: ${projection.source}`
+      );
+    }
+  }
+  if (findLegacyDocumentationUrls(projection.summary).length > 0) {
+    throw new Error(`Legacy prefixed documentation URL in ${label}.summary`);
   }
 }
 
@@ -1097,10 +1122,23 @@ function verifyTechnicalContent(repoRoot = REPOSITORY_ROOT) {
       throw new Error(`Technical content modification date drift for ${entry.slug}`);
     }
     documents.set(entry.slug, { metadata, body });
-    if (metadata.source) normalizePublicHttpsUrl(metadata.source, `${entry.slug} source`);
+    if (metadata.source) {
+      normalizePublicHttpsUrl(metadata.source, `${entry.slug} source`);
+      if (findLegacyDocumentationUrls(metadata.source).length > 0) {
+        throw new Error(
+          `Legacy prefixed documentation URL in ${entry.slug} front matter source: ${metadata.source}`
+        );
+      }
+    }
+    const legacyBodyUrls = findLegacyDocumentationUrls(body);
+    if (legacyBodyUrls.length > 0) {
+      throw new Error(
+        `Legacy prefixed documentation URL in ${entry.slug} body: ${legacyBodyUrls[0]}`
+      );
+    }
     extractCitationUrls(body, entry.slug);
     SECRET_PATTERN.lastIndex = 0;
-    // Public default in https://doc.fastgpt.cn/zh-CN/self-host/custom-models/chatglm2.
+    // Public default in https://doc.fastgpt.cn/self-host/custom-models/chatglm2.
     const text = body.replaceAll('sk-aaabbbcccdddeeefffggghhhiiijjjkkk', 'YOUR_API_KEY');
     if (SECRET_PATTERN.test(text))
       throw new Error(`Technical content body contains a secret-shaped value for ${entry.slug}`);

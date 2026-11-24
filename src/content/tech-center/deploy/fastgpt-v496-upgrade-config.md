@@ -2,7 +2,7 @@
 title: FastGPT V4.9.6版本升级与环境变量变更配置指南
 slug: /zh/deploy/fastgpt-v496-upgrade-config
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/496
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/496
 source_type: 官方文档
 ---
 
@@ -48,4 +48,4 @@ source_type: 官方文档
 ## 配置注意事项
 配置过程中需注意以下细节：社区版的`mcpServerProxyEndpoint`地址末尾不能携带斜杠，否则可能导致服务连接异常；所有镜像的tag版本需保持一致，避免出现兼容性问题；Sealos部署时需确保fastgpt-mcp-server应用可以正常访问FastGPT服务的地址。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/496)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/496)

@@ -78,4 +78,4 @@ Verified on 2026-11-09. Product version: FastGPT v4.17.3.
 | Topic | Source |
 | --- | --- |
 | Assisted workflow generation, variables, loops, publish requirements | [Release notes 4.17.3](https://github.com/labring/FastGPT/releases/tag/v4.17.3) |
-| Node tool calls and generated parameters | [Release notes 4.16.0](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/4160) |
+| Node tool calls and generated parameters | [Release notes 4.16.0](https://doc.fastgpt.cn/self-host/upgrading/4-16/4160) |

@@ -2,7 +2,7 @@
 title: Configure Redis for FastGPT Self-Hosted Upgrades
 slug: /en/deploy/fastgpt-redis-upgrade-configuration
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/494
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/494
 source_type: 官方文档
 ---
 
@@ -29,4 +29,4 @@ For Sealos-hosted FastGPT deployments, follow this structured workflow:
 5. Assign the copied internal connection URL as the value for the `REDIS_URL` environment variable for each service.
 Annotated supporting screenshots are available to illustrate each step of this workflow.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/494)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/494)

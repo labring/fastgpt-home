@@ -2,7 +2,7 @@
 title: FastGPT 配置与开发参考：Agent、技能与插件（106 篇清单）
 slug: /zh/guide/ref-agent-skill-plugin
 page_type: 问题清单聚合页
-source: https://doc.fastgpt.cn/zh-CN/guide/build/skill/intro
+source: https://doc.fastgpt.cn/guide/build/skill/intro
 source_type: 站内已发布文档的程序化归类
 check_day: 2026-10-19
 article_section: 配置与开发参考
@@ -155,8 +155,8 @@ date_modified: 2026-10-26
 
 ## 参考资料
 
-- [技能基础介绍](https://doc.fastgpt.cn/zh-CN/guide/build/skill/intro)
-- [插件系统说明](https://doc.fastgpt.cn/zh-CN/plugin/intro)
+- [技能基础介绍](https://doc.fastgpt.cn/guide/build/skill/intro)
+- [插件系统说明](https://doc.fastgpt.cn/plugin/intro)
 
 ## 需要进一步确认时
 

@@ -2,7 +2,7 @@
 title: Resolve Single-Vector Content Length Semantic Tradeoffs
 slug: /en/tutorial/fastgpt-multi-vector-mapping
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/dataset/dataset_engine
+source: https://doc.fastgpt.io/guide/dataset/dataset_engine
 source_type: Official documentation
 ---
 
@@ -23,7 +23,7 @@ Additionally, this architecture supports iterative improvement of data chunk acc
 4. Execute semantic search queries; the system will automatically recall the full data entry if any of its associated vectors matches the query criteria.
 5. Use annotation feedback from search interactions to adjust vector mappings and refine retrieval accuracy over subsequent iterations.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/dataset_engine)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/dataset_engine)
 
 ## Applicability and version scope
 

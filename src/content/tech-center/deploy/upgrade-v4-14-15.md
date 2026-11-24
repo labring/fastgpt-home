@@ -2,7 +2,7 @@
 title: FastGPT V4.14.15版本升级操作与变更说明
 slug: /zh/deploy/upgrade-v4-14-15
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41415
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/41415
 source_type: 官方文档
 ---
 
@@ -21,7 +21,7 @@ source_type: 官方文档
 ## 升级后怎么验证
 升级完成后，可通过访问FastGPT平台界面确认服务正常启动，验证系统工具与系统组件的调用功能无异常。若出现服务无法启动或功能异常的情况，可查看服务运行日志排查具体报错信息。
 
-> [FastGPT 4.14.15 升级说明](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41415)
+> [FastGPT 4.14.15 升级说明](https://doc.fastgpt.cn/self-host/upgrading/4-14/41415)
 
 ## 适用性与版本范围
 

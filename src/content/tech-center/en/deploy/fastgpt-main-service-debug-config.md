@@ -2,7 +2,7 @@
 title: Configure FastGPT Main Service for Remote Debugging
 slug: /en/deploy/fastgpt-main-service-debug-config
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/remote-debug-suite
+source: https://doc.fastgpt.io/self-host/config/remote-debug-suite
 source_type: Official documentation
 ---
 
@@ -32,7 +32,7 @@ Follow these steps to apply the correct configuration:
 ## Debug Link Behavior
 The `NEXT_PUBLIC_BASE_URL` variable directly controls the domain and path included in generated remote debug connection links. If this value is misconfigured, the resulting debug links will be unresolvable for external or browser-based users. For public access scenarios, this value must exactly match the public URL end users use to navigate to your FastGPT deployment.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/remote-debug-suite)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/remote-debug-suite)
 
 ## Applicability and version scope
 

@@ -29,6 +29,6 @@ source_type: GitHub issue
 
 > 来源: [原始讨论：关于知识库更新相关问题](https://github.com/labring/FastGPT/issues/4626)
 
-> 来源: [FastGPT 知识库 OpenAPI](https://doc.fastgpt.io/en/openapi/dataset)
+> 来源: [FastGPT 知识库 OpenAPI](https://doc.fastgpt.io/openapi/dataset)
 
-> 来源: [FastGPT 工具调用与终止](https://doc.fastgpt.io/en/guide/build/workflow/nodes/tool)
+> 来源: [FastGPT 工具调用与终止](https://doc.fastgpt.io/guide/build/workflow/nodes/tool)

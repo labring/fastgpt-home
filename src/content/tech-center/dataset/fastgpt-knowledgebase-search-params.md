@@ -2,7 +2,7 @@
 title: FastGPT知识库搜索方案与参数配置使用说明
 slug: /zh/dataset/fastgpt-knowledgebase-search-params
 page_type: 知识库与切分
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/dataset_engine
+source: https://doc.fastgpt.cn/guide/dataset/dataset_engine
 source_type: 官方文档
 ---
 
@@ -20,4 +20,4 @@ FastGPT采用RAG的Embedding向量方案构建知识库，将文本、图片等�
 3. 在知识库搜索配置中选择合适的检索类型（语义/全文/混合），设置合理的topk值与相似度阈值；
 4. 上传图片数据时，系统将自动生成对应索引（需匹配已配置的模型能力）。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/dataset/dataset_engine)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/dataset/dataset_engine)

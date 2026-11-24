@@ -2,7 +2,7 @@
 title: 通过API清空FastGPT应用指定会话历史的操作指南
 slug: /zh/api/clear-fastgpt-app-session-history
 page_type: API
-source: https://doc.fastgpt.cn/zh-CN/openapi/chat
+source: https://doc.fastgpt.cn/openapi/chat
 source_type: 官方文档
 ---
 
@@ -32,7 +32,7 @@ curl --location --request DELETE 'http://localhost:3000/api/core/chat/history/cl
 ```
 该响应中`code`字段为200表示请求成功，`statusText`与`message`字段为空字符串，`data`字段为null，不返回额外的业务数据。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/openapi/chat)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/openapi/chat)
 
 ## 适用性与版本范围
 

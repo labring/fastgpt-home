@@ -2,7 +2,7 @@
 title: Install FastGPT Plugins via the Marketplace
 slug: /en/model/fastgpt-plugin-marketplace-install
 page_type: Model guides
-source: https://doc.fastgpt.cn/en/plugin/team-installation
+source: https://doc.fastgpt.io/plugin/team-installation
 source_type: Official documentation
 ---
 
@@ -22,7 +22,7 @@ Follow these ordered steps to install a plugin from the Marketplace:
 ## Post-Installation Configuration and Usage
 Once installation is complete, the plugin will appear in your team’s tool list. You can select the plugin when building workflows or configuring AI Agents. Before using the plugin, you must configure any required secrets or runtime parameters as specified by the plugin’s requirements.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/plugin/team-installation)
+> Source: [FastGPT official source](https://doc.fastgpt.io/plugin/team-installation)
 
 ## Applicability and version scope
 

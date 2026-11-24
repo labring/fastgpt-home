@@ -2,7 +2,7 @@
 title: FastGPT 4910 Version New Feature Enhancements
 slug: /en/deploy/fastgpt-4910-new-features
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4910
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/4910
 source_type: 官方文档
 ---
 
@@ -26,4 +26,4 @@ The workflow editor has been updated to enforce single-direction input and outpu
 ## Expanded Platform and Model Support
 The Community Edition now includes native support for importing datasets from Lark and Yuque, expanding the range of compatible data sources for self-hosted FastGPT deployments. Additionally, the release adds official presets for the latest available Gemini and Claude model versions, eliminating the need for manual prompt configuration to align with current model capabilities.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4910)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/4910)

@@ -2,7 +2,7 @@
 title: Understand the FastGPT Sandbox Security Restrictions
 slug: /en/node/fastgpt-sandbox-security-restrictions
 page_type: 工作流节点
-source: https://doc.fastgpt.cn/en/guide/build/workflow/nodes/sandbox-v2
+source: https://doc.fastgpt.io/guide/build/workflow/nodes/sandbox-v2
 source_type: 官方文档
 ---
 
@@ -24,4 +24,4 @@ The following table outlines all core security controls and their specific, docu
 ## Automatic Enforcement Workflow
 Each security control activates in a standardized sequence during every sandbox execution. First, the allowed module list is validated to block any unauthorized imports before code loading begins. Next, all outbound network requests are scanned and filtered to block access to internal IP ranges, eliminating SSRF attack vectors. Filesystem read and write operations are intercepted at the container boundary and rejected entirely. If execution exceeds the 60-second default timeout threshold, the sandbox process is immediately terminated to prevent resource exhaustion. Finally, the isolated sandbox process is fully destroyed after execution completes to remove all temporary execution data and ensure no residual state remains.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/guide/build/workflow/nodes/sandbox-v2)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/guide/build/workflow/nodes/sandbox-v2)

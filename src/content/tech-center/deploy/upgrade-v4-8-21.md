@@ -2,7 +2,7 @@
 title: FastGPT V4.8.21版本升级内容与操作步骤说明
 slug: /zh/deploy/upgrade-v4-8-21
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4821
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4821
 source_type: 官方文档
 ---
 
@@ -21,7 +21,7 @@ source_type: 官方文档
 ## 升级后怎么验证
 可通过以下场景验证升级效果：检查插件模块是否展示弃用/已删除插件提示；确认对话日志支持按来源分类、标题检索与导出；全局变量可通过拖拽调整排序顺序；配置LLM模型时可设置top_p、response_format、json_schema参数；向量模型配置页出现归一化配置选项；AI对话节点支持输出思考过程结果供其他节点引用；嵌入式聊天窗口可适配不同位置；未配置模型时弹出优化后的错误提示；测试非Stream模式思考输出正常；未配置TTS voice时无空指针异常；Markdown链接解析采用严格匹配规则；未登录用户数据获取范围缩小；切换简易模式至非视觉模型时图片识别正常关闭；测试o1、o3模型无字段映射报错；公众号对话无空指针异常；多音频/视频文件展示正常；分享链接鉴权报错后不会无限循环。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4821)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/4821)
 
 ## 适用性与版本范围
 

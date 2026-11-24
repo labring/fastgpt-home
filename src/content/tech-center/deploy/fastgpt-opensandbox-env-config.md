@@ -2,7 +2,7 @@
 title: 配置fastgpt-app与fastgpt-pro共用OpenSandbox服务环境变量
 slug: /zh/deploy/fastgpt-opensandbox-env-config
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/sandbox/opensandbox
+source: https://doc.fastgpt.cn/self-host/config/sandbox/opensandbox
 source_type: 官方文档小节
 ---
 
@@ -35,4 +35,4 @@ AGENT_SANDBOX_STORAGE_SIZE_GI: 1
 ### 额外注意事项
 预览代理需部署在与FastGPT主站不同的origin，即协议、域名或端口至少一项不同。Sandbox中可能包含用户生成的脚本，若预览地址与主站同源，脚本可能访问主站凭证或接口。预览链接为短期只读bearer capability，获得链接的用户可在有效期内修改URL路径读取同一Sandbox Workspace中的其他文件，请勿将链接分享给无权访问该Workspace的用户。从旧版Volume Manager升级时，需将原`VM_VOLUME_NAME_PREFIX`的值配置到`AGENT_SANDBOX_OPENSANDBOX_VOLUME_NAME_PREFIX`，避免历史持久卷无法按原名称清理。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/sandbox/opensandbox)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/config/sandbox/opensandbox)

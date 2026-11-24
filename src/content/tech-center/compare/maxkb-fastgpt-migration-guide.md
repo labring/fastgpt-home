@@ -54,5 +54,5 @@ MaxKB 官方文档提供 Excel/ZIP 文档导出与批量导出。原文档下载
 
 > 来源: [MaxKB 文档操作、导出与原文替换](https://maxkb.cn/docs/v2/user_manual/dataset/doclist.html)
 > 来源: [MaxKB v1 到 v2 迁移工具与原文件边界](https://maxkb.cn/docs/v2/installation/migrate.html)
-> 来源: [FastGPT 知识库 API](https://doc.fastgpt.cn/zh-CN/openapi/dataset)
-> 来源: [FastGPT 团队与资源权限](https://doc.fastgpt.cn/zh-CN/guide/workspace/team/team_roles_permissions)
+> 来源: [FastGPT 知识库 API](https://doc.fastgpt.cn/openapi/dataset)
+> 来源: [FastGPT 团队与资源权限](https://doc.fastgpt.cn/guide/workspace/team/team_roles_permissions)

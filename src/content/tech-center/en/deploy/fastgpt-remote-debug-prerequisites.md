@@ -2,7 +2,7 @@
 title: Meet FastGPT Remote Debug Suite Prerequisites
 slug: /en/deploy/fastgpt-remote-debug-prerequisites
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/remote-debug-suite
+source: https://doc.fastgpt.io/self-host/config/remote-debug-suite
 source_type: Official documentation
 ---
 
@@ -23,7 +23,7 @@ The Redis instance configured for use by the Gateway must support the Redis Stre
 6.  Check Redis Stream support: Connect to the Gateway’s Redis instance via redis-cli, run the command `XADD test_stream * field test` to confirm Redis Streams are supported by the instance.
 7.  Validate secret requirements: Inspect all production secrets used for the remote debug suite, confirming each secret is at least 32 characters long and does not use example values, default settings, or weak passwords.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/remote-debug-suite)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/remote-debug-suite)
 
 ## Applicability and version scope
 

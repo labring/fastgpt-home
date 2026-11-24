@@ -2,7 +2,7 @@
 title: FastGPT V4.4.5 New Feature Update Details
 slug: /en/deploy/fastgpt-v4-4-5-new-features
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/445
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/445
 source_type: 官方文档
 ---
 
@@ -26,4 +26,4 @@ Second, API key management has been significantly improved. The following new fi
 ## Workflow Configuration Consolidation
 Prior to V4.4.5, global variables and opening message settings required separate, distinct configuration nodes within chatbot workflow flows. This update combines these two elements into a single unified workflow node. This consolidation simplifies the setup process for new chatbots, reduces configuration clutter, and allows users to adjust both global variable values and opening prompt text in a single centralized location.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/445)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/445)

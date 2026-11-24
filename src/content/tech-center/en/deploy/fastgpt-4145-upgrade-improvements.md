@@ -2,7 +2,7 @@
 title: FastGPT 4.14.5 Stability and Performance Improvements
 slug: /en/deploy/fastgpt-4145-upgrade-improvements
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4145
+source: https://doc.fastgpt.io/self-host/upgrading/4-14/4145
 source_type: Official documentation
 ---
 
@@ -25,7 +25,7 @@ This section covers improvements to large language model handling, API limits, a
 | File Parsing API | Increased maximum request size limit to 10MB, supporting larger file uploads for parsing |
 | MCP SDK | Updated to the latest available version of the MCP SDK, incorporating latest bug fixes and feature improvements |
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4145)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-14/4145)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: Set Up FastGPT Lark Dataset Import
 slug: /en/integration/fastgpt-lark-dataset-import
 page_type: Integrations
-source: https://doc.fastgpt.cn/en/guide/dataset/third-party/lark_dataset
+source: https://doc.fastgpt.io/guide/dataset/third-party/lark_dataset
 source_type: Official documentation
 ---
 
@@ -26,7 +26,7 @@ Reference screenshots of the credential configuration interface (image-39) and f
 ### Beta Status and Limitations
 This Lark dataset import feature is currently in beta, and some user interactions may still require refinement. Per official Lark API restrictions, the integration cannot access all document content: only files stored in shared space directories are supported for import. Personal spaces and wiki content are not compatible with this workflow, and only cloud document types can be ingested via this integration.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/third-party/lark_dataset)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/third-party/lark_dataset)
 
 ## Applicability and version scope
 

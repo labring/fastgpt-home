@@ -2,7 +2,7 @@
 title: FastGPT中step术语的含义与使用方法
 slug: /zh/glossary/fastgpt-step-usage
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/4152
+source: https://doc.fastgpt.cn/self-host/upgrading/4-15/4152
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ CI流程场景下，可通过hashtag固定step版本，优化CI流程并规避�
 ## 容易搞错的地方
 CI流程中未固定step版本，可能引发供应链投毒攻击风险。在4.6.8版本的高级编排中，多个串行AI对话模块的中间step输出默认会显示在聊天框，无法直接关闭，仅可保留最终模块的输出。自定义分块标识符使用单一"|"或连续"||"符号，会引发错误解析大量chunks的问题。调用上传、草稿上传及首轮媒体消息场景下，文件持久化、类型或元数据可能丢失，需注意相关场景的文件处理。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/4152)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-15/4152)
 
 ## 适用性与版本范围
 

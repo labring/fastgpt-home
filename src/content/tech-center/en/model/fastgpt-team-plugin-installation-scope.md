@@ -2,7 +2,7 @@
 title: Clarify FastGPT Team Plugin Installation Scope
 slug: /en/model/fastgpt-team-plugin-installation-scope
 page_type: 模型接入
-source: https://doc.fastgpt.cn/en/plugin/team-installation
+source: https://doc.fastgpt.io/plugin/team-installation
 source_type: 官方文档
 ---
 
@@ -23,4 +23,4 @@ The following table summarizes the core scope and lifecycle rules for FastGPT pl
 
 Team plugins support standard update and removal workflows for authorized team administrators. Unlike system plugins, team plugins do not have a deprecation state available for configuration or display, simplifying routine lifecycle management for team-specific tools.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/plugin/team-installation)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/plugin/team-installation)

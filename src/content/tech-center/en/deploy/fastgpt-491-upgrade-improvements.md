@@ -2,7 +2,7 @@
 title: Key Improvements in FastGPT 491 Self-Host Upgrade
 slug: /en/deploy/fastgpt-491-upgrade-improvements
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/491
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/491
 source_type: 官方文档
 ---
 
@@ -26,4 +26,4 @@ Three technical enhancements fall under this category, with concrete behavioral 
 | Does not support     | Any                            | No                  |
 This consistent parsing behavior ensures that `<think>` tags from supported reasoning models are always extracted, even when per-conversation reasoning is disabled. Second, model testing code has been improved to deliver more reliable validation of deployed AI models, reducing false negatives during pre-deployment checks. Third, the latest jieba dictionary has been loaded into the system, which enhances the accuracy of full-text search tokenization for FastGPT datasets, improving search relevance for indexed content.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/491)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/491)

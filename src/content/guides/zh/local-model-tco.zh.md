@@ -63,7 +63,7 @@ Ollama 的 OpenAI 兼容接口具有自身的支持范围。官方说明通过 M
 
 ## 参考资料
 
-- [FastGPT 模型配置](https://doc.fastgpt.cn/zh-CN/self-host/config/model/intro)
+- [FastGPT 模型配置](https://doc.fastgpt.cn/self-host/config/model/intro)
 - [Ollama OpenAI 兼容接口](https://docs.ollama.com/api/openai-compatibility)
 - [Ollama 上下文长度](https://docs.ollama.com/context-length)
 - [Ollama Modelfile 参数](https://docs.ollama.com/modelfile)

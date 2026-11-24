@@ -2,7 +2,7 @@
 title: FastGPT直接接入Ollama模型的配置步骤说明
 slug: /zh/glossary/fastgpt-ollama-direct-connect
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/self-host/custom-models/ollama
+source: https://doc.fastgpt.cn/self-host/custom-models/ollama
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ source_type: 官方文档
 ## 容易搞错的地方
 OPENAI_BASE_URL必须包含/v1路径，遗漏该路径会导致连接失败。KEY字段的填写需匹配Ollama的鉴权状态，默认无鉴权时可随意填入，开启鉴权需填写对应密钥，未正确配置会引发认证错误。主机部署的Ollama需使用主机IP作为地址，不可使用本地回环地址，否则容器内无法正常访问。修改docker-compose.yml时需正确注释AI Proxy相关代码，残留配置可能引发端口或服务冲突。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/ollama)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/custom-models/ollama)
 
 ## 适用性与版本范围
 

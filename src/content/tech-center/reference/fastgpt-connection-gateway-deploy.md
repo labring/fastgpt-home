@@ -2,7 +2,7 @@
 title: FastGPT Connection Gateway的部署配置与参数说明
 slug: /zh/reference/fastgpt-connection-gateway-deploy
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/remote-debug-suite
+source: https://doc.fastgpt.cn/self-host/config/remote-debug-suite
 source_type: 官方文档小节
 ---
 
@@ -38,4 +38,4 @@ services:
 1. 端口说明：3010端口对应容器内3000端口，为Gateway HTTP API，包含/health、/internal/*、/metrics路径，无需公网暴露，仅需Plugin Server内网访问；3011端口对应容器内3001端口，为Gateway WebSocket，默认路径为/connection-gateway/v1，需允许本地CLI访问，通常通过反向代理暴露为wss地址。
 2. Redis用于存储Gateway session、source owner和mailbox，需支持Stream特性，且无需公网暴露。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/remote-debug-suite)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/config/remote-debug-suite)

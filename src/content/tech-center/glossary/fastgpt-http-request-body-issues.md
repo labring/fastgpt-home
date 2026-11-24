@@ -2,7 +2,7 @@
 title: FastGPT中HTTP请求体（body）的使用与常见问题处理
 slug: /zh/glossary/fastgpt-http-request-body-issues
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4147
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/4147
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ source_type: 官方文档
 ## 容易搞错的地方
 创建HTTP工具时，未正确处理包含变量的请求体格式，导致JSON解析错误。上传大体积文件时，未意识到请求体超出系统限制会触发413 Request Entity Too Large报错，误判为其他类型的错误。使用MCP暴露Agent时，未正确配置请求体参数，导致无法传入文件链接。部分用户在配置工作流时，未注意工具名称不能以数字开头，导致调用失败。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4147)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-14/4147)
 
 ## 适用性与版本范围
 

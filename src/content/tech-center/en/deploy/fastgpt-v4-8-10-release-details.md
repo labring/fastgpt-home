@@ -2,7 +2,7 @@
 title: FastGPT v4.8.10 Release Feature and Fix Details
 slug: /en/deploy/fastgpt-v4-8-10-release-details
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4810
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/4810
 source_type: 官方文档
 ---
 
@@ -79,4 +79,4 @@ Exclusive commercial features include:
 - Updated feishu.md documentation
 - Revised baseURL documentation
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4810)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/4810)

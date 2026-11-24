@@ -2,7 +2,7 @@
 title: FastGPT沙盒v2节点的Python代码使用配置与示例
 slug: /zh/node/fastgpt-sandbox-python-examples
 page_type: 工作流节点
-source: https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/sandbox-v2
+source: https://doc.fastgpt.cn/guide/build/workflow/nodes/sandbox-v2
 source_type: 官方文档小节
 ---
 
@@ -19,4 +19,4 @@ FastGPT沙盒v2节点允许编写自定义Python代码处理业务数据，官�
 ## 标准返回格式
 不同业务场景的返回格式固定：数据统计场景返回包含`mean`、`max`、`min`、`std`的字典；日期处理场景返回包含`input`、`next_week`、`weekday`的字典；HTTP请求场景返回包含`status`、`data`的字典；JSON数据处理场景返回包含`names`、`count`的字典；正则匹配场景返回包含`emails`、`count`的字典。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/sandbox-v2)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/workflow/nodes/sandbox-v2)

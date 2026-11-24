@@ -2,7 +2,7 @@
 title: 指导FastGPT通过Ollama接入本地部署的大语言模型
 slug: /zh/deploy/fastgpt-ollama-local-model-setup
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/custom-models/ollama
+source: https://doc.fastgpt.cn/self-host/custom-models/ollama
 source_type: 官方文档
 ---
 
@@ -19,4 +19,4 @@ Ollama是简化大语言模型部署的开源工具，支持两种安装方式�
 ## 常见问题排查
 若FastGPT无法访问Ollama，需优先排查两点：一是两者是否处于同一Docker网络；二是主机安装的Ollama是否已配置监听0.0.0.0，避免仅监听localhost导致无法被容器访问。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/ollama)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/custom-models/ollama)

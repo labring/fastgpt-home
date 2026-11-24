@@ -2,11 +2,11 @@
 title: 数据分级与访问控制：四个核对入口
 slug: /zh/guide/data-classification-access-hub
 page_type: aggregation
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/collection_permission
+source: https://doc.fastgpt.cn/guide/dataset/collection_permission
 source_type: 深度场景内容
 meta_title: 数据分级与访问控制核对入口
 meta_description: 把 FastGPT 的数据分级与访问控制拆成组织架构、文件级权限、发布快照与身份集成四组入口，逐项给出配置位置、核对动作、失败表现与版本边界。
-delivery_metadata: {"source_front_matter":{"slug":"data-classification-access-hub","meta_title":"数据分级与访问控制核对入口","meta_description":"把 FastGPT 的数据分级与访问控制拆成组织架构、文件级权限、发布快照与身份集成四组入口，逐项给出配置位置、核对动作、失败表现与版本边界。","language":"zh","content_type":"aggregation","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"data-classification-access-hub","keywords":"数据分级,访问控制,文件级权限,发布快照,身份集成","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"数据分级与访问控制从哪几个入口核","需求依据":"客户 2026-11-07 购买诉求第 2 条（尚）：关注谁能看到哪些资料、能否在自己的环境中运行。","事实来源":"FastGPT 产品知识库·内容收集清单；官方更新说明 4.17.1 与 4.17.3","内链":"https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4171","排期":"W18 聚合导航第 2 篇","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（来源版本，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核权限入口路径与开关默认值。"]}
+delivery_metadata: {"source_front_matter":{"slug":"data-classification-access-hub","meta_title":"数据分级与访问控制核对入口","meta_description":"把 FastGPT 的数据分级与访问控制拆成组织架构、文件级权限、发布快照与身份集成四组入口，逐项给出配置位置、核对动作、失败表现与版本边界。","language":"zh","content_type":"aggregation","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"data-classification-access-hub","keywords":"数据分级,访问控制,文件级权限,发布快照,身份集成","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"数据分级与访问控制从哪几个入口核","需求依据":"客户 2026-11-07 购买诉求第 2 条（尚）：关注谁能看到哪些资料、能否在自己的环境中运行。","事实来源":"FastGPT 产品知识库·内容收集清单；官方更新说明 4.17.1 与 4.17.3","内链":"https://doc.fastgpt.cn/self-host/upgrading/4-17/4171","排期":"W18 聚合导航第 2 篇","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（来源版本，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核权限入口路径与开关默认值。"]}
 keywords: 数据分级,访问控制,文件级权限,发布快照,身份集成
 schema_type: Article
 date_modified: 2026-11-16
@@ -18,7 +18,7 @@ date_modified: 2026-11-16
 
 ## 入口一：组织架构与资源授权
 
-入口：[FastGPT 权限说明](https://doc.fastgpt.cn/zh-CN/guide/dataset/collection_permission)。
+入口：[FastGPT 权限说明](https://doc.fastgpt.cn/guide/dataset/collection_permission)。
 
 位置在成员管理、部门与群组设置、应用与知识库的授权页。核对动作是列出三个角色：部门管理员、项目成员、只读成员，按部门与群组分别授权，再看资源列表里各自能看到哪些应用与知识库。最小权限可以落到单个账号，这一点在做外来人员临时访问时最有用。
 
@@ -26,7 +26,7 @@ date_modified: 2026-11-16
 
 ## 入口二：文件级权限
 
-入口：[FastGPT 权限说明](https://doc.fastgpt.cn/zh-CN/guide/dataset/collection_permission)。
+入口：[FastGPT 权限说明](https://doc.fastgpt.cn/guide/dataset/collection_permission)。
 
 位置在知识库文件树与文件操作菜单。该能力按文件或文件夹单独配置协作者，支持继承与独立两种状态，可恢复继承，也支持所有权转移；开关默认关闭，开启后列表与详情按文件权限鉴权；检索以当前成员身份鉴权时过滤可读文件，预选知识库但未启用成员鉴权的路径需另验。
 
@@ -34,7 +34,7 @@ date_modified: 2026-11-16
 
 ## 入口三：发布快照与运行身份
 
-入口：[FastGPT 更新说明](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173)。
+入口：[FastGPT 更新说明](https://doc.fastgpt.cn/self-host/upgrading/4-17/4173)。
 
 位置在应用的发布记录与资源权限设置。发布版本对静态资源按发布时快照校验，对动态资源按实际运行用户校验。核对动作是发布后用一个新加入的成员访问，确认静态资源可见性与发布时一致，动态资源跟随该成员自己的权限。
 
@@ -59,5 +59,5 @@ date_modified: 2026-11-16
 | 主题 | 版本 | 来源 |
 | --- | --- | --- |
 | 组织架构分权、最小权限到单人账号、SSO 与 OA 集成 | 当期商业方案 | [FastGPT 商务咨询：授权、部署与支持范围](https://fastgpt.cn/contact) |
-| 文件级权限、发布权限快照 | v4.17.1 | [self-host/upgrading/4-17/4171](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4171) |
-| 目录导航不附带管理授权 | v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173) |
+| 文件级权限、发布权限快照 | v4.17.1 | [self-host/upgrading/4-17/4171](https://doc.fastgpt.cn/self-host/upgrading/4-17/4171) |
+| 目录导航不附带管理授权 | v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/self-host/upgrading/4-17/4173) |

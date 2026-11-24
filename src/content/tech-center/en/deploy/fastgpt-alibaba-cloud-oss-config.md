@@ -2,7 +2,7 @@
 title: Configure Alibaba Cloud OSS for FastGPT Self-Hosting
 slug: /en/deploy/fastgpt-alibaba-cloud-oss-config
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/object-storage
+source: https://doc.fastgpt.io/self-host/config/object-storage
 source_type: Official documentation
 ---
 
@@ -45,7 +45,7 @@ STORAGE_OSS_INTERNAL=false
 ## Optional Internal Network Configuration
 The `STORAGE_OSS_INTERNAL` parameter is intended for deployments hosted within Alibaba Cloud infrastructure. Enabling this flag routes all OSS traffic through Alibaba Cloud’s internal network, which eliminates public network bandwidth fees and reduces latency.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/object-storage)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/object-storage)
 
 ## Applicability and version scope
 

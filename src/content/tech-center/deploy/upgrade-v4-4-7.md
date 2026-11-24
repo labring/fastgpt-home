@@ -2,7 +2,7 @@
 title: FastGPT V4.4.7版本升级内容与操作步骤说明
 slug: /zh/deploy/upgrade-v4-4-7
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/447
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/447
 source_type: 官方文档
 ---
 
@@ -27,7 +27,7 @@ curl --location --request POST 'https://{{host}}/api/admin/initv447' \
 ## 升级后怎么验证
 查看服务运行日志，确认初始化API执行完成且无异常报错；确认数据库PG索引已完成初始化，file_id字段中的空对象已转换为manual对象。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/447)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/447)
 
 ## 适用性与版本范围
 

@@ -2,7 +2,7 @@
 title: Parallel Run Node Operational Constraints and Best Practices
 slug: /en/node/parallel-run-node-guidelines
 page_type: Workflow nodes
-source: https://doc.fastgpt.cn/en/guide/build/workflow/nodes/parallel_run
+source: https://doc.fastgpt.io/guide/build/workflow/nodes/parallel_run
 source_type: Official documentation
 ---
 
@@ -29,7 +29,7 @@ It is strongly recommended to disable the "Return AI content" toggle on all AI C
 ## Array Input Limit Configuration
 The input array for Parallel Run nodes has a default maximum of 100 items. This limit is adjustable via your deployment’s configuration settings.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/workflow/nodes/parallel_run)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/workflow/nodes/parallel_run)
 
 ## Applicability and version scope
 

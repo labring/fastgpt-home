@@ -2,7 +2,7 @@
 title: 说明FastGPT中Mongo数据库的连接配置与适配要点
 slug: /zh/glossary/fastgpt-mongo-connection-notes
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/self-host/dev
+source: https://doc.fastgpt.cn/self-host/dev
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ Mongo是FastGPT部署运行所需的核心数据库，用于支撑系统的数�
 ## 容易搞错的地方
 容易遗漏Mongo副本集连接所需的`directConnection=true`参数，导致无法正常连接数据库。在Mongo 4.x版本环境下，旧版本的对话日志接口可能出现适配异常，需升级至4.14.5及以上版本修复该问题。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/dev)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/dev)
 
 ## 适用性与版本范围
 

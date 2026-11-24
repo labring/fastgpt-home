@@ -2,7 +2,7 @@
 title: FastGPT插件核心概念与操作使用说明
 slug: /zh/model/fastgpt-plugin-core-concepts
 page_type: 模型指南
-source: https://doc.fastgpt.cn/zh-CN/plugin/intro
+source: https://doc.fastgpt.cn/plugin/intro
 source_type: 官方文档
 ---
 
@@ -29,7 +29,7 @@ FastGPT的插件体系包含多个标准化核心概念，用于实现功能模�
 4. 插件将通过默认运行时`local-pool`启动，生成对应Pod子进程。
 5. 工具类插件可被工作流和Agent调用。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/plugin/intro)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/plugin/intro)
 
 ## 适用性与版本范围
 

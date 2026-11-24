@@ -2,7 +2,7 @@
 title: Automate Array Iteration in FastGPT Workflows
 slug: /en/node/fastgpt-batch-processing-node
 page_type: Workflow nodes
-source: https://doc.fastgpt.cn/en/guide/build/workflow/nodes/loop
+source: https://doc.fastgpt.io/guide/build/workflow/nodes/loop
 source_type: Official documentation
 ---
 
@@ -21,7 +21,7 @@ Follow these structured steps to integrate the Batch Processing node into your w
 3. Connect all required downstream processing nodes to the Batch Processing node’s execution output port to define the processing workflow for each array element.
 4. Trigger the workflow; the node will iterate over each array element, pass the element to connected downstream nodes, and complete execution once all array elements have been handled.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/workflow/nodes/loop)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/workflow/nodes/loop)
 
 ## Applicability and version scope
 

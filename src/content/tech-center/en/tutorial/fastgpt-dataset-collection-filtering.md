@@ -2,7 +2,7 @@
 title: Filter Dataset Collections in FastGPT Searches
 slug: /en/tutorial/fastgpt-dataset-collection-filtering
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/dataset/collection_tags
+source: https://doc.fastgpt.io/guide/dataset/collection_tags
 source_type: Official documentation
 ---
 
@@ -43,7 +43,7 @@ There are two critical rules for proper filter configuration:
 1. Tag value formats: Tag values may be either a string representing a tag name, or `null`. The `null` value specifically matches collections that have no tags assigned.
 2. Conditional priority: If both `$and` and `$or` are included in the `tags` filter object, only the `$and` condition will be applied, and the `$or` condition will be ignored entirely.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/collection_tags)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/collection_tags)
 
 ## Applicability and version scope
 

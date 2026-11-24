@@ -2,7 +2,7 @@
 title: 讲解FastGPT自部署的SSO服务与插件调试配置
 slug: /zh/glossary/fastgpt-self-deploy-config
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/guide/admin/sso
+source: https://doc.fastgpt.cn/guide/admin/sso
 source_type: 官方文档
 ---
 
@@ -17,8 +17,8 @@ FastGPT自部署配置包含SSO服务部署与系统插件远程调试套件配�
 ## 容易搞错的地方
 系统插件远程调试套件仅用于开发、联调和验收场景，不宜作为生产插件运行时使用，不可直接用于生产环境。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/admin/sso)
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/config/remote-debug-suite)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/admin/sso)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/config/remote-debug-suite)
 
 ## 适用性与版本范围
 

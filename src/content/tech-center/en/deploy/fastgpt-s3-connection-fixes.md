@@ -2,7 +2,7 @@
 title: Fix FastGPT S3 Connection Configuration Issues
 slug: /en/deploy/fastgpt-s3-connection-fixes
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/deploy/docker
+source: https://doc.fastgpt.io/self-host/deploy/docker
 source_type: Official documentation
 ---
 
@@ -28,7 +28,7 @@ Follow these steps to set a valid `STORAGE_EXTERNAL_ENDPOINT`:
 ## Resolve 403 Signature Mismatch Errors
 The most frequent error associated with S3 connection issues in FastGPT is the 403 Forbidden error tied to signed object storage URLs. This error occurs when the endpoint used to generate signed URLs does not match the `STORAGE_EXTERNAL_ENDPOINT` value configured for FastGPT. Updating the `STORAGE_EXTERNAL_ENDPOINT` to use a valid static IP or fixed domain will resolve this mismatch. For additional troubleshooting steps, refer to the official object storage configuration guide: [Object Storage Configuration & Common Issues](../config/object-storage.en.mdx)
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/deploy/docker)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/deploy/docker)
 
 ## Applicability and version scope
 

@@ -7,7 +7,7 @@ is_part_of: FastGPT 技术中心
 meta_description: 面向企业技术与运维负责人，详解人工接管系统的核心设计要素，助力搭建可迭代的智能服务与运维自动化体系。
 delivery_source_type: 开源仓库文档与社区线程
 source_type: 深度场景内容
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/env
+source: https://doc.fastgpt.cn/self-host/config/env
 meta_title: 企业人工接管系统设计：触发条件、转接路径与结果回流｜FastGPT 技术中心
 schema_type: TechArticle
 date_published: 2026-09-28
@@ -62,8 +62,8 @@ delivery_note: 判据取自开源仓库文档与社区线程，核验日 2026-09
 
 ## 参考资料
 
-- [FastGPT 环境变量](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
-- [FastGPT 升级说明](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/upgrade-instruction)
+- [FastGPT 环境变量](https://doc.fastgpt.cn/self-host/config/env)
+- [FastGPT 升级说明](https://doc.fastgpt.cn/self-host/upgrading/upgrade-instruction)
 
 ## 需要进一步确认时
 

@@ -2,7 +2,7 @@
 title: 为FastGPT插件系统新增与维护模型预设的操作说明
 slug: /zh/tutorial/fastgpt-plugin-model-presets-2
 page_type: 教程/部署
-source: https://doc.fastgpt.cn/zh-CN/plugin/model-presets
+source: https://doc.fastgpt.cn/plugin/model-presets
 source_type: 官方文档
 ---
 
@@ -47,4 +47,4 @@ export default models;
 ## 新增全新模型供应商
 仅当需要接入全新的模型供应商时，才需新增供应商目录。需在 `packages/infrastructure/src/static-data/models/provider/` 下创建以供应商标识命名的目录，目录内需包含模型配置文件 `index.ts` 和供应商Logo文件 `logo.svg`。随后在总注册文件 `index.ts` 中引入该供应商配置，并将其加入 `staticModelProviderConfigs` 数组，完成注册。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/plugin/model-presets)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/plugin/model-presets)

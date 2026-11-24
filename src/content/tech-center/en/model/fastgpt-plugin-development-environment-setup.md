@@ -2,7 +2,7 @@
 title: Set Up FastGPT Plugin Development Environments
 slug: /en/model/fastgpt-plugin-development-environment-setup
 page_type: Model guides
-source: https://doc.fastgpt.cn/en/plugin/system-tool-development
+source: https://doc.fastgpt.io/plugin/system-tool-development
 source_type: Official documentation
 ---
 
@@ -46,7 +46,7 @@ When debugging the official `fastgpt-plugin` repository’s CLI or SDK component
    ```
 This setup ensures all SDK and CLI components are compiled locally, allowing you to test changes to the FastGPT plugin framework directly on your machine.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/plugin/system-tool-development)
+> Source: [FastGPT official source](https://doc.fastgpt.io/plugin/system-tool-development)
 
 ## Applicability and version scope
 

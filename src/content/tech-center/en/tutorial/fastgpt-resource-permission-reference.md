@@ -2,7 +2,7 @@
 title: FastGPT Resource Permission System Developer Reference
 slug: /en/tutorial/fastgpt-resource-permission-reference
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/workspace/team/team_roles_permissions
+source: https://doc.fastgpt.io/guide/workspace/team/team_roles_permissions
 source_type: Official documentation
 ---
 
@@ -65,7 +65,7 @@ export const ResourcePermissionSchema = new Schema({
 });
 ```
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/workspace/team/team_roles_permissions)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/workspace/team/team_roles_permissions)
 
 ## Applicability and version scope
 

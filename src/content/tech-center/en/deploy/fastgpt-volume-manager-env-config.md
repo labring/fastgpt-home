@@ -2,7 +2,7 @@
 title: Configure FastGPT Volume Manager Environment Variables
 slug: /en/deploy/fastgpt-volume-manager-env-config
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/env
+source: https://doc.fastgpt.io/self-host/config/env
 source_type: Official documentation
 ---
 
@@ -32,7 +32,7 @@ Certain environment variables are mandatory only for the selected `VM_RUNTIME` t
 
 Additional standard configuration notes: The `PORT` variable defines the local listening port for the Volume Manager API, with a default value of `3000`. The `VM_LOG_LEVEL` controls log verbosity, with supported values of `debug`, `info`, and `none`, and a default of `info`. The `VM_AUTH_TOKEN` is a universally required variable with no default value, as it secures all Volume Manager API endpoints.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/env)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/env)
 
 ## Applicability and version scope
 

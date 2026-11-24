@@ -2,7 +2,7 @@
 title: 获取飞书机器人凭证并配置FastGPT发布渠道参数
 slug: /zh/tutorial/fastgpt-feishu-bot-config
 page_type: 教程
-source: https://doc.fastgpt.cn/zh-CN/guide/build/publish/feishu
+source: https://doc.fastgpt.cn/guide/build/publish/feishu
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ source_type: 官方文档
 若需强化通信安全性，可配置Encrypt Key参数。进入飞书开放平台开发者后台的事件与回调模块，点击加密策略页面，获取系统生成的Encrypt Key，将其填入飞书机器人接入的配置对话框中。Encrypt Key用于加密飞书服务器与FastGPT之间的通信数据，建议使用Http协议通信时配置该参数，使用Https协议通信时无需配置。
 Verification Token为默认生成的校验凭证，原本用于校验请求来源，但FastGPT采用飞书官方推荐的更安全的校验方式，因此该配置项可直接忽略，无需进行配置操作。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/publish/feishu)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/publish/feishu)
 
 ## 适用性与版本范围
 

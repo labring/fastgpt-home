@@ -2,7 +2,7 @@
 title: FastGPT从旧版本升级到V4.4.1的操作指南
 slug: /zh/reference/fastgpt-upgrade-v441
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/441
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/441
 source_type: 官方文档小节
 ---
 
@@ -24,4 +24,4 @@ source_type: 官方文档小节
 3. 升级过程中请勿中断服务或断开网络连接，避免更新失败
 4. 升级后需检查系统配置是否适配新版本，确保功能正常
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/441)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/441)

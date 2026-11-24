@@ -2,7 +2,7 @@
 title: FastGPT V4.16.1版本升级操作与验证指南
 slug: /zh/deploy/upgrade-v4-16-1
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/4161
+source: https://doc.fastgpt.cn/self-host/upgrading/4-16/4161
 source_type: 官方文档
 ---
 
@@ -42,7 +42,7 @@ curl -X POST 'https://你的域名/api/admin/4161/initToolJsonSchemaStorage' \
 ## 升级后怎么验证
 可通过以下方式验证升级效果：检查fastgpt-app、fastgpt-pro、fastgpt-plugin服务是否正常启动；执行迁移工具的dry-run命令，确认无异常返回；测试第三方发布渠道的多模态文件上传、音频转录功能；测试沙盒安装apt依赖的功能；检查团队系统插件安装功能是否可用；验证工作流全局变量、AgentV2调用子工作流、团队邀请链接、使用记录日期选择器、知识库图片模型回退等修复功能是否正常。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/4161)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-16/4161)
 
 ## 适用性与版本范围
 

@@ -12,7 +12,7 @@ FastGPT 支持语音输入及语音转文字。ASR 历史需求在 v4.6.1 获得
 
 ## 版本与功能依据
 
-[Issue #492 的维护者答复](https://github.com/labring/FastGPT/issues/492) 明确标注 v4.6.1 已支持 Whisper。当前[语音输入文档](https://doc.fastgpt.cn/zh-CN/guide/build/general/voiceInput) 介绍了录音、自动发送和自动语音回复；旧版本的具体配置入口应以对应版本界面为准。
+[Issue #492 的维护者答复](https://github.com/labring/FastGPT/issues/492) 明确标注 v4.6.1 已支持 Whisper。当前[语音输入文档](https://doc.fastgpt.cn/guide/build/general/voiceInput) 介绍了录音、自动发送和自动语音回复；旧版本的具体配置入口应以对应版本界面为准。
 
 ## 配置与排查
 

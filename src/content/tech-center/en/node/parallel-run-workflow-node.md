@@ -2,7 +2,7 @@
 title: Optimize batch task execution with parallel runs
 slug: /en/node/parallel-run-workflow-node
 page_type: Workflow nodes
-source: https://doc.fastgpt.cn/en/guide/build/workflow/nodes/parallel_run
+source: https://doc.fastgpt.io/guide/build/workflow/nodes/parallel_run
 source_type: Official documentation
 ---
 
@@ -26,7 +26,7 @@ These parameters are adjusted directly within the parallel run node’s configur
 ## Task-Level Debug Inspection
 Following the completion of a parallel run batch, the debug panel offers isolated, per-task inspection of every executed item. Users do not need to sift through a flat, unstructured list of child node responses; instead, they can select and review the execution details of any individual task independently, accelerating troubleshooting and validation of batch processing results.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/workflow/nodes/parallel_run)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/workflow/nodes/parallel_run)
 
 ## Applicability and version scope
 

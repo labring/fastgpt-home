@@ -2,7 +2,7 @@
 title: Understand FastGPT Document Parsing Node Operation
 slug: /en/tutorial/fastgpt-document-parsing-node-2
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/build/general/fileInput
+source: https://doc.fastgpt.io/guide/build/general/fileInput
 source_type: Official documentation
 ---
 
@@ -29,7 +29,7 @@ Follow this step-by-step process to ensure correct use of the document parsing n
 2. Pass the compiled array as input to the document parsing node within the scope of the current active workflow run. Do not reference files stored in prior chat history.
 3. Retrieve the node’s output string, which contains the concatenated parsed content of all valid input files, formatted per the official template and delimiter.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/general/fileInput)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/general/fileInput)
 
 ## Applicability and version scope
 

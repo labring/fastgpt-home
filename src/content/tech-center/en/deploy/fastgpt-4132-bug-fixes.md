@@ -2,7 +2,7 @@
 title: FastGPT 4.13.2 Critical Application Bug Fixes
 slug: /en/deploy/fastgpt-4132-bug-fixes
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-13/4132
+source: https://doc.fastgpt.io/self-host/upgrading/4-13/4132
 source_type: Official documentation
 ---
 
@@ -31,7 +31,7 @@ To confirm all fixes are active after upgrading, follow this step-by-step workfl
 ## Key Deployment Notes
 No additional configuration changes are required beyond standard self-hosted upgrade procedures for FastGPT 4.13.2. All fixes resolve issues present in prior 4.13.x releases without introducing new operational overhead.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-13/4132)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-13/4132)
 
 ## Applicability and version scope
 

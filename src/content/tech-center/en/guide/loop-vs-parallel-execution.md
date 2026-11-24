@@ -3,7 +3,7 @@ title: Batch Work in Workflows: Loop Node, Batch Run or Parallel Run
 slug: /en/guide/loop-vs-parallel-execution
 page_type: Decision matrix
 source_type: FastGPT v4.17.2 documentation and community threads
-source: https://doc.fastgpt.cn/en/guide/build/workflow/nodes/parallel_run
+source: https://doc.fastgpt.io/guide/build/workflow/nodes/parallel_run
 source_note: "Criteria taken from the FastGPT v4.17.2 documentation and community threads, verified 2026-10-13."
 check_day: 2026-10-13
 article_section: Selection & Evaluation
@@ -49,9 +49,9 @@ You can delay this decision when your batch task scale is extremely small, with 
 
 ## References
 
-- [Loop node](https://doc.fastgpt.cn/en/guide/build/workflow/nodes/loop_run)
-- [Batch run node](https://doc.fastgpt.cn/en/guide/build/workflow/nodes/loop)
-- [Parallel run node](https://doc.fastgpt.cn/en/guide/build/workflow/nodes/parallel_run)
+- [Loop node](https://doc.fastgpt.io/guide/build/workflow/nodes/loop_run)
+- [Batch run node](https://doc.fastgpt.io/guide/build/workflow/nodes/loop)
+- [Parallel run node](https://doc.fastgpt.io/guide/build/workflow/nodes/parallel_run)
 
 ## Next steps
 

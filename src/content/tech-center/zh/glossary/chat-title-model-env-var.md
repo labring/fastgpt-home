@@ -2,7 +2,7 @@
 title: FastGPT中CHAT_TITLE_MODEL环境变量的配置说明
 slug: /zh/glossary/chat-title-model-env-var
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/self-host/dev
+source: https://doc.fastgpt.cn/self-host/dev
 source_type: 官方文档
 ---
 
@@ -27,9 +27,9 @@ AGENT_SANDBOX_PROXY_URL=ws://{{host}}:3006
 ## 容易搞错的地方
 需注意AGENT_SANDBOX_PROXY_URL的协议类型，通过HTTPS域名代理时必须使用wss://，不可使用ws://；AGENT_SANDBOX_PROXY_SECRET需满足32位以上的长度要求，无法使用过短的密钥。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41505)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-15/41505)
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/dev)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/dev)
 
 ## 适用性与版本范围
 

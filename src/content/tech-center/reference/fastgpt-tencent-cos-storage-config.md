@@ -2,7 +2,7 @@
 title: FastGPT腾讯云COS对象存储的配置参数与操作步骤
 slug: /zh/reference/fastgpt-tencent-cos-storage-config
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/object-storage
+source: https://doc.fastgpt.cn/self-host/config/object-storage
 source_type: 官方文档小节
 ---
 
@@ -46,4 +46,4 @@ source_type: 官方文档小节
 4.  启用`STORAGE_COS_USE_ACCELERATE`前，需确认对应存储桶已开启全球加速功能。
 5.  若自定义域名未上传SSL证书，请勿将`STORAGE_COS_PROTOCOL`设置为`https:`。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/object-storage)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/config/object-storage)

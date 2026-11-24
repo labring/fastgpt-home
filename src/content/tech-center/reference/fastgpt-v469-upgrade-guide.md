@@ -2,7 +2,7 @@
 title: FastGPT V4.6.9版本升级与环境变量变更操作指南
 slug: /zh/reference/fastgpt-v469-upgrade-guide
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/469
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/469
 source_type: 官方文档小节
 ---
 
@@ -21,4 +21,4 @@ FastGPT V4.6.9版本升级需同时完成环境变量变更配置与对应升级
 2. 该版本归类于<4.12.0的升级章节，需遵循对应章节的升级规范
 3. 仅可使用V4.6.9版本专属的升级脚本，不得混用其他版本的升级配置
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/469)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/469)

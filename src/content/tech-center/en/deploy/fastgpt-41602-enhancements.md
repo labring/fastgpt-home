@@ -2,7 +2,7 @@
 title: Detailed Technical Improvements for FastGPT 4.16.02
 slug: /en/deploy/fastgpt-41602-enhancements
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-16/41602
+source: https://doc.fastgpt.io/self-host/upgrading/4-16/41602
 source_type: 官方文档
 ---
 
@@ -23,4 +23,4 @@ FastGPT 4.16.02 enforces a new limit for portal quick apps, with a maximum of 3 
 ## PDF Processing Edge Cropping Update
 The PDF document parsing pipeline has been updated to improve content preservation. Previous versions used a fixed edge cropping method that occasionally truncated valid content located near the edges of a page. This release replaces fixed edge cropping with dynamic edge detection, which automatically analyzes each page to identify and retain all valid content, preventing accidental removal of boundary-adjacent text, images, or other elements.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/4-16/41602)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/4-16/41602)

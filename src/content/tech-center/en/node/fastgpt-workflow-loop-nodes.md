@@ -2,7 +2,7 @@
 title: Implement Repeated Sub-Workflows With Loop Nodes
 slug: /en/node/fastgpt-workflow-loop-nodes
 page_type: Workflow nodes
-source: https://doc.fastgpt.cn/en/guide/build/workflow/nodes/loop_run
+source: https://doc.fastgpt.io/guide/build/workflow/nodes/loop_run
 source_type: Official documentation
 ---
 
@@ -27,7 +27,7 @@ This configuration workflow uses only native FastGPT Loop Node parameters as def
 # Typical Deployment Scenarios
 The Loop Node is optimized for three common developer and enterprise automation scenarios: first, summarizing individual paragraph chunks from a long-form article to produce a consolidated, cohesive summary; second, iteratively refining an AI-generated draft until a specified quality threshold (e.g., score ≥80) is achieved; third, sequentially calling external APIs in batch to process multiple data entries without manual intervention.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/workflow/nodes/loop_run)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/workflow/nodes/loop_run)
 
 ## Applicability and version scope
 

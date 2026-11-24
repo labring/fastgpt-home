@@ -78,6 +78,6 @@ H --> D
 
 ## References
 
-- [FastGPT self-hosted deployment documentation](https://doc.fastgpt.io/en/self-host/)
-- [FastGPT Docker 数据库迁移文档](https://doc.fastgpt.io/en/self-host/migration/docker_db)
-- [FastGPT OpenAPI 对话文档](https://doc.fastgpt.io/en/openapi/chat)
+- [FastGPT self-hosted deployment documentation](https://doc.fastgpt.io/self-host/)
+- [FastGPT Docker 数据库迁移文档](https://doc.fastgpt.io/self-host/migration/docker_db)
+- [FastGPT OpenAPI 对话文档](https://doc.fastgpt.io/openapi/chat)

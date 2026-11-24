@@ -2,7 +2,7 @@
 title: Configure OpenSandbox for FastGPT Self-Hosted Deployments
 slug: /en/deploy/opensandbox-fastgpt-configuration
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/sandbox/opensandbox
+source: https://doc.fastgpt.io/self-host/config/sandbox/opensandbox
 source_type: Official documentation
 ---
 
@@ -22,7 +22,7 @@ OpenSandbox is a purpose-built runtime for self-hosted FastGPT Agent and Skill s
 ## Network Isolation Requirements
 As noted in the included warning, OpenSandbox does not include default network isolation controls. Administrators deploying this runtime for sensitive or restricted environments must implement custom network isolation policies to prevent unauthorized communication between sandboxes and external systems. No out-of-the-box network segmentation tools are provided, so teams must evaluate and deploy matching isolation frameworks aligned with their organizational security standards.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/sandbox/opensandbox)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/sandbox/opensandbox)
 
 ## Applicability and version scope
 

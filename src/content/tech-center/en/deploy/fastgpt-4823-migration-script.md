@@ -2,7 +2,7 @@
 title: Run FastGPT 4.8.23 Migration Script for Dataset Cleanup
 slug: /en/deploy/fastgpt-4823-migration-script
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4823
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/4823
 source_type: 官方文档
 ---
 
@@ -28,4 +28,4 @@ No additional command flags or input parameters are needed beyond the provided s
 ## Script Purpose and Expected Results
 The script operates autonomously once triggered, with no user intervention required after submission. It scans all configured FastGPT datasets to locate and clean up redundant full-text index entries, a common form of dirty data in post-upgrade deployments. No configuration options are exposed for this script; all necessary parameters are inherited from your existing FastGPT environment setup. Successful execution will resolve the targeted dataset inconsistencies without impacting active non-dirty dataset data.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4823)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/4823)

@@ -2,7 +2,7 @@
 title: 说明FastGPT V4.0版本工作流与插件的基础使用方法
 slug: /zh/reference/fastgpt-v4-workflow-intro
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/build/workflow/intro
+source: https://doc.fastgpt.cn/guide/build/workflow/intro
 source_type: 官方文档小节
 ---
 
@@ -18,4 +18,4 @@ FastGPT V4.0版本采用Flow节点编排的工作流方式构建AI应用，该�
 ## 注意事项
 该Flow节点编排工作流存在一定上手门槛，仅适合有开发背景的用户使用，无开发基础的用户可能难以快速掌握相关操作。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/intro)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/workflow/intro)

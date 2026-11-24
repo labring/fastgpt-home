@@ -2,7 +2,7 @@
 title: List of Permitted Python Modules for FastGPT Sandbox V2
 slug: /en/node/fastgpt-sandbox-v2-permitted-python-modules
 page_type: Workflow nodes
-source: https://doc.fastgpt.cn/en/guide/build/workflow/nodes/sandbox-v2
+source: https://doc.fastgpt.io/guide/build/workflow/nodes/sandbox-v2
 source_type: Official documentation
 ---
 
@@ -115,7 +115,7 @@ print(f\"Weighted mean: {weighted_mean:.2f}\")
 3. Execute the node. The sandbox will run the code successfully, as all imported modules are permitted.
 4. Attempting to import a prohibited module such as `os` will result in a security-restricted import failure.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/workflow/nodes/sandbox-v2)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/workflow/nodes/sandbox-v2)
 
 ## Applicability and version scope
 

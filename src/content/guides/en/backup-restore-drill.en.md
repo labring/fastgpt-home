@@ -101,13 +101,13 @@ This recovery process will not work in these scenarios:
 
 ## References
 
-- [FastGPT Agent Sandbox Proxy health check](https://doc.fastgpt.cn/zh-CN/self-host/config/sandbox/common)
-- [FastGPT 4.16.0 Agent Sandbox migration](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/4160)
-- [FastGPT deployment environment variables](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
-- [FastGPT 4.16.2 migration instructions](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/4162)
+- [FastGPT Agent Sandbox Proxy health check](https://doc.fastgpt.cn/self-host/config/sandbox/common)
+- [FastGPT 4.16.0 Agent Sandbox migration](https://doc.fastgpt.cn/self-host/upgrading/4-16/4160)
+- [FastGPT deployment environment variables](https://doc.fastgpt.cn/self-host/config/env)
+- [FastGPT 4.16.2 migration instructions](https://doc.fastgpt.cn/self-host/upgrading/4-16/4162)
 
-- [FastGPT environment variables](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
-- [FastGPT upgrade notes](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/upgrade-instruction)
+- [FastGPT environment variables](https://doc.fastgpt.cn/self-host/config/env)
+- [FastGPT upgrade notes](https://doc.fastgpt.cn/self-host/upgrading/upgrade-instruction)
 
 ## Next steps
 

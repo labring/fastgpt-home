@@ -2,7 +2,7 @@
 title: Manage private FastGPT business plugin publication
 slug: /en/model/fastgpt-private-plugin-publishing
 page_type: Model guides
-source: https://doc.fastgpt.cn/en/plugin/system-tool-development
+source: https://doc.fastgpt.io/plugin/system-tool-development
 source_type: Official documentation
 ---
 
@@ -21,7 +21,7 @@ Separately, organizations must maintain documented security boundaries for three
 2. Publish the finalized plugin to a private repository dedicated to internal or customer-specific plugin deployments.
 3. For deployments that do not require official FastGPT repository inclusion, follow the official system tool upload guide to integrate the plugin into your self-hosted FastGPT environment. The official guide is located at [Upload System Tool](../guide/build/tools/system-plugins/upload_system_tool.en.mdx).
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/plugin/system-tool-development)
+> Source: [FastGPT official source](https://doc.fastgpt.io/plugin/system-tool-development)
 
 ## Applicability and version scope
 

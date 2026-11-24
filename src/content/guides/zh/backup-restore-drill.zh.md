@@ -60,13 +60,13 @@ publication_batch: Week08
 
 ## 参考资料
 
-- [FastGPT Agent Sandbox Proxy health check](https://doc.fastgpt.cn/zh-CN/self-host/config/sandbox/common)
-- [FastGPT 4.16.0 Agent Sandbox migration](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/4160)
-- [FastGPT deployment environment variables](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
-- [FastGPT 4.16.2 migration instructions](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/4162)
+- [FastGPT Agent Sandbox Proxy health check](https://doc.fastgpt.cn/self-host/config/sandbox/common)
+- [FastGPT 4.16.0 Agent Sandbox migration](https://doc.fastgpt.cn/self-host/upgrading/4-16/4160)
+- [FastGPT deployment environment variables](https://doc.fastgpt.cn/self-host/config/env)
+- [FastGPT 4.16.2 migration instructions](https://doc.fastgpt.cn/self-host/upgrading/4-16/4162)
 
-- [FastGPT 环境变量](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
-- [FastGPT 升级说明](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/upgrade-instruction)
+- [FastGPT 环境变量](https://doc.fastgpt.cn/self-host/config/env)
+- [FastGPT 升级说明](https://doc.fastgpt.cn/self-host/upgrading/upgrade-instruction)
 
 ## 需要进一步确认时
 

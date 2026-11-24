@@ -2,7 +2,7 @@
 title: Integrate ChatGLM2 and M3E with FastGPT
 slug: /en/deploy/fastgpt-chatglm2-m3e-integration
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/custom-models/chatglm2-m3e
+source: https://doc.fastgpt.io/self-host/custom-models/chatglm2-m3e
 source_type: Official documentation
 ---
 
@@ -70,7 +70,7 @@ The updated partial structure of `config.json` will match the following:
 ],
 ```
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/custom-models/chatglm2-m3e)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/custom-models/chatglm2-m3e)
 
 ## Applicability and version scope
 

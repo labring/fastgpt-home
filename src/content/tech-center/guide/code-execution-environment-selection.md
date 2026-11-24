@@ -3,7 +3,7 @@ title: 代码执行环境选型：代码运行节点、Agent虚拟机及沙箱�
 slug: /zh/guide/code-execution-environment-selection
 page_type: 决策矩阵页
 source_type: 官方文档（v4.17.2）与社区线程
-source: https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/sandbox-v2
+source: https://doc.fastgpt.cn/guide/build/workflow/nodes/sandbox-v2
 source_note: "判据取自 FastGPT v4.17.2 官方文档与社区线程，核验日 2026-10-13。"
 check_day: 2026-10-13
 article_section: 选型与评估
@@ -65,10 +65,10 @@ date_modified: 2026-10-14
 
 ## 参考资料
 
-- [代码运行节点](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/sandbox-v2)
-- [Agent 虚拟机](https://doc.fastgpt.cn/zh-CN/guide/build/agentv2/vm)
-- [OpenSandbox 配置](https://doc.fastgpt.cn/zh-CN/self-host/config/sandbox/opensandbox)
-- [Sealos Devbox 沙盒配置](https://doc.fastgpt.cn/zh-CN/self-host/config/sandbox/sealosdevbox)
+- [代码运行节点](https://doc.fastgpt.cn/guide/build/workflow/nodes/sandbox-v2)
+- [Agent 虚拟机](https://doc.fastgpt.cn/guide/build/agentv2/vm)
+- [OpenSandbox 配置](https://doc.fastgpt.cn/self-host/config/sandbox/opensandbox)
+- [Sealos Devbox 沙盒配置](https://doc.fastgpt.cn/self-host/config/sandbox/sealosdevbox)
 
 ## 需要进一步确认时
 

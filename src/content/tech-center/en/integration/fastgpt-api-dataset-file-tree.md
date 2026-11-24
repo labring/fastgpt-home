@@ -2,7 +2,7 @@
 title: Retrieve FastGPT API Dataset File Trees
 slug: /en/integration/fastgpt-api-dataset-file-tree
 page_type: Integrations
-source: https://doc.fastgpt.cn/en/guide/dataset/third-party/api_dataset
+source: https://doc.fastgpt.io/guide/dataset/third-party/api_dataset
 source_type: Official documentation
 ---
 
@@ -64,7 +64,7 @@ A successful request returns a JSON object with three top-level fields:
 }
 ```
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/third-party/api_dataset)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/third-party/api_dataset)
 
 ## Applicability and version scope
 

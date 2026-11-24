@@ -2,7 +2,7 @@
 title: FastGPT 配置与开发参考：工作流与节点（88 篇清单）
 slug: /zh/guide/ref-workflow-nodes
 page_type: 问题清单聚合页
-source: https://doc.fastgpt.cn/zh-CN/guide/build/workflow/intro
+source: https://doc.fastgpt.cn/guide/build/workflow/intro
 source_type: 站内已发布文档的程序化归类
 check_day: 2026-10-19
 article_section: 配置与开发参考
@@ -137,8 +137,8 @@ date_modified: 2026-10-26
 
 ## 参考资料
 
-- [工作流介绍](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/intro)
-- [快速开始](https://doc.fastgpt.cn/zh-CN/guide/getting-started/quick-start)
+- [工作流介绍](https://doc.fastgpt.cn/guide/build/workflow/intro)
+- [快速开始](https://doc.fastgpt.cn/guide/getting-started/quick-start)
 
 ## 需要进一步确认时
 

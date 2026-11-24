@@ -2,7 +2,7 @@
 title: Delete FastGPT Dataset Collections via API
 slug: /en/api/fastgpt-dataset-collection-delete-api
 page_type: API
-source: https://doc.fastgpt.cn/en/openapi/dataset
+source: https://doc.fastgpt.io/openapi/dataset
 source_type: Official documentation
 ---
 
@@ -43,7 +43,7 @@ Upon successful deletion of the specified collections, the endpoint returns a st
 ```
 Each field in the response serves a specific purpose: `code` returns the HTTP status code for the request, with 200 indicating a successful operation. `statusText` and `message` are empty strings when no errors occur, and `data` is null as no additional data is returned after a collection deletion request.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/openapi/dataset)
+> Source: [FastGPT official source](https://doc.fastgpt.io/openapi/dataset)
 
 ## Applicability and version scope
 

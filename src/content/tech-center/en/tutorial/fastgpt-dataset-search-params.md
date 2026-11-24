@@ -2,7 +2,7 @@
 title: Set FastGPT Dataset Search Filters and Limits
 slug: /en/tutorial/fastgpt-dataset-search-params
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/dataset/dataset_engine
+source: https://doc.fastgpt.io/guide/dataset/dataset_engine
 source_type: Official documentation
 ---
 
@@ -22,7 +22,7 @@ Citation limit provides more consistent control than top-k, as it accounts for v
 
 For Minimum Relevance, it is important to note that this parameter does not govern final result ordering. When enabled alongside query rewriting, hybrid search, or image search, final search results may combine outputs from multiple retrieval pathways. As such, individual results may not align strictly with raw vector similarity scores, and only results meeting or exceeding the set threshold are included in the final result set.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/dataset_engine)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/dataset_engine)
 
 ## Applicability and version scope
 

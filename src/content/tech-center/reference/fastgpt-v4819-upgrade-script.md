@@ -2,7 +2,7 @@
 title: FastGPT V4.8.19版本升级脚本的操作使用说明
 slug: /zh/reference/fastgpt-v4819-upgrade-script
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4819
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4819
 source_type: 官方文档小节
 ---
 
@@ -22,4 +22,4 @@ FastGPT V4.8.19版本属于需要使用专属升级脚本完成升级的FastGPT�
 3. 升级过程中需确保服务器网络稳定，避免中断脚本执行。
 4. 该版本属于FastGPT历史版本中需使用升级脚本的类型。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4819)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/4819)

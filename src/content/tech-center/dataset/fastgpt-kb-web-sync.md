@@ -2,7 +2,7 @@
 title: FastGPT知识库Web站点同步功能的配置和使用方法
 slug: /zh/dataset/fastgpt-kb-web-sync
 page_type: 知识库与切分
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/websync
+source: https://doc.fastgpt.cn/guide/dataset/websync
 source_type: 官方文档
 ---
 
@@ -21,4 +21,4 @@ FastGPT的Web站点同步功能仅面向商业版用户开放，该功能通过�
 ## 应用绑定
 完成站点同步并生成知识库后，可创建应用并绑定该知识库，即可在对话中使用抓取的站点内容。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/dataset/websync)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/dataset/websync)

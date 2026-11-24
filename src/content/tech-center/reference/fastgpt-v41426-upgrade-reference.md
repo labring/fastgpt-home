@@ -2,7 +2,7 @@
 title: FastGPT V4.14.26版本升级操作与注意事项速查
 slug: /zh/reference/fastgpt-v41426-upgrade-reference
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41426
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/41426
 source_type: 官方文档小节
 ---
 
@@ -21,4 +21,4 @@ source_type: 官方文档小节
 2. 带有（环境变量变更）或（升级脚本）标记的版本，需提前检查对应环境配置项或执行配套升级脚本；
 3. 升级操作前，务必完成系统数据的备份工作。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41426)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-14/41426)

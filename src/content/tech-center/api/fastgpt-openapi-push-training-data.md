@@ -2,7 +2,7 @@
 title: 使用FastGPT OpenAPI推送训练数据至训练队列
 slug: /zh/api/fastgpt-openapi-push-training-data
 page_type: API与文档
-source: https://doc.fastgpt.cn/zh-CN/openapi/dataset
+source: https://doc.fastgpt.cn/openapi/dataset
 source_type: 官方文档小节
 ---
 
@@ -43,4 +43,4 @@ curl --location --request POST 'http://localhost:3000/api/core/dataset/data/push
 ```
 若请求参数缺失或格式错误，将返回对应错误码及提示文本。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/openapi/dataset)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/openapi/dataset)

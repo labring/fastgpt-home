@@ -2,7 +2,7 @@
 title: 配置FastGPT开源版的App额外变量与PDF增强解析服务
 slug: /zh/deploy/fastgpt-open-source-env-pdf-config
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/env
+source: https://doc.fastgpt.cn/self-host/config/env
 source_type: 官方文档小节
 ---
 
@@ -44,4 +44,4 @@ CUSTOM_PDF_PARSE_KEY = your-service-key
 
 完成所有环境变量配置后，需重启FastGPT。在知识库导入文件或应用文件上传配置中勾选“PDF增强解析”，上传的PDF才会使用已配置的增强解析服务；未勾选时仍使用FastGPT内置解析器。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/config/env)

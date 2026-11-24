@@ -2,7 +2,7 @@
 title: Create Link-Based Dataset Collections via FastGPT API
 slug: /en/api/fastgpt-create-link-collection-api
 page_type: API
-source: https://doc.fastgpt.cn/en/openapi/dataset
+source: https://doc.fastgpt.io/openapi/dataset
 source_type: Official documentation
 ---
 
@@ -62,7 +62,7 @@ A successful request returns a 200 status code with the following JSON structure
 ```
 The `collectionId` field contains the unique identifier of the newly created collection. The `results` object summarizes processing outcomes: `insertLen` counts successfully inserted content chunks, while `overToken`, `repeat`, and `error` track processing issues for the fetched content.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/openapi/dataset)
+> Source: [FastGPT official source](https://doc.fastgpt.io/openapi/dataset)
 
 ## Applicability and version scope
 

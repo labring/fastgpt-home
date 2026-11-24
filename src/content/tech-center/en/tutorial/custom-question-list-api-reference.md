@@ -2,7 +2,7 @@
 title: Retrieve matched custom chat input questions
 slug: /en/tutorial/custom-question-list-api-reference
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/build/general/chat_input_guide
+source: https://doc.fastgpt.io/guide/build/general/chat_input_guide
 source_type: Official documentation
 ---
 
@@ -39,7 +39,7 @@ Each field in the response has a defined purpose:
 - `message`: Empty string for successful execution, used to convey error details for failed calls
 - `data`: An array of string values representing matched custom chat input questions. The API returns a maximum of 5 results per request, as specified in the official guidelines.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/general/chat_input_guide)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/general/chat_input_guide)
 
 ## Applicability and version scope
 

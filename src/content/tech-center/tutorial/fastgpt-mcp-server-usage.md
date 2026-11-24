@@ -2,7 +2,7 @@
 title: FastGPT MCP Server 功能的配置与调用说明
 slug: /zh/tutorial/fastgpt-mcp-server-usage
 page_type: 教程
-source: https://doc.fastgpt.cn/zh-CN/guide/build/publish/mcp_server
+source: https://doc.fastgpt.cn/guide/build/publish/mcp_server
 source_type: 官方文档
 ---
 
@@ -21,8 +21,8 @@ FastGPT 原生支持 Streamable HTTP 协议。针对私有化部署场景，可�
 2. 开启FastGPT MCP Server功能
 3. 根据部署环境选择对应协议：公有部署使用Streamable HTTP协议；私有化部署可通过独立MCP Server服务获取兼容的SSE协议支持
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/publish/mcp_server)
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/publish/mcp_server)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/publish/mcp_server)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/publish/mcp_server)
 
 ## 适用性与版本范围
 

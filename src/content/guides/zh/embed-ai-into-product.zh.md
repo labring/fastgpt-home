@@ -101,7 +101,7 @@ E --> F[上线与监控]
 
 ## References
 
-- [FastGPT OpenAPI 对话文档](https://doc.fastgpt.io/en/openapi/chat)
-- [FastGPT API 发布指南](https://doc.fastgpt.io/en/guide/build/publish/openapi)
-- [FastGPT MCP Server 文档](https://doc.fastgpt.io/en/guide/build/publish/mcp_server)
-- [FastGPT 快速开始指南](https://doc.fastgpt.io/en/guide/getting-started)
+- [FastGPT OpenAPI 对话文档](https://doc.fastgpt.io/openapi/chat)
+- [FastGPT API 发布指南](https://doc.fastgpt.io/guide/build/publish/openapi)
+- [FastGPT MCP Server 文档](https://doc.fastgpt.io/guide/build/publish/mcp_server)
+- [FastGPT 快速开始指南](https://doc.fastgpt.io/guide/getting-started)

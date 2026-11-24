@@ -2,7 +2,7 @@
 title: FastGPT自定义模型与工具请求地址的配置说明
 slug: /zh/deploy/fastgpt-custom-request-config
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/model/intro
+source: https://doc.fastgpt.cn/self-host/config/model/intro
 source_type: 官方文档
 ---
 
@@ -23,7 +23,7 @@ source_type: 官方文档
 ### 接口格式规范
 所有LLM、Embedding、STT、TTS类接口均遵循OpenAI提供的模型格式，可参考OpenAI官方API文档完成配置。由于OpenAI未提供ReRank模型的官方标准，Rerank接口遵循Cohere格式，可通过[接口请求示例](../../troubleshooting/model-errors.mdx)查看具体请求格式。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/config/model/intro)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/config/model/intro)
 
 ## 适用性与版本范围
 

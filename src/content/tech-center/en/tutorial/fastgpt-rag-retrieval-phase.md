@@ -2,7 +2,7 @@
 title: Understand FastGPT RAG Retrieval Phase Workflows
 slug: /en/tutorial/fastgpt-rag-retrieval-phase
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/dataset/rag
+source: https://doc.fastgpt.io/guide/dataset/rag
 source_type: Official documentation
 ---
 
@@ -31,7 +31,7 @@ Each parameter directly impacts the relevance of retrieved context: semantic mat
 # Critical Retrieval Quality Notes
 Since retrieval quality directly determines the context available to the generator, suboptimal retrieval will limit the generator's ability to produce accurate, relevant responses. Avoid overreliance on keyword-only matching, as this fails to account for contextual nuance in user queries or document content. Ensuring consistent vectorization across queries and document fragments is also essential for reliable matching.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/rag)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/rag)
 
 ## Applicability and version scope
 

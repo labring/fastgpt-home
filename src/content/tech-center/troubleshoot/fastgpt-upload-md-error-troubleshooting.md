@@ -29,6 +29,6 @@ Markdown 已在文件输入文档列为文档类型，单次上传失败需要�
 
 > 来源: [原始讨论：不能上传、解析Markdown文档](https://github.com/labring/FastGPT/issues/3895)
 
-> 来源: [FastGPT 文件输入与 4.8.13 行为说明](https://doc.fastgpt.io/en/guide/build/general/fileInput)
+> 来源: [FastGPT 文件输入与 4.8.13 行为说明](https://doc.fastgpt.io/guide/build/general/fileInput)
 
 > 来源: [原讨论中的补充回复](https://github.com/labring/FastGPT/issues/3895#issuecomment-2684248766)

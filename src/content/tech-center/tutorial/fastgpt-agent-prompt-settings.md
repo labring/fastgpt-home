@@ -2,7 +2,7 @@
 title: 配置FastGPT Agent的提示词功能与关联设置
 slug: /zh/tutorial/fastgpt-agent-prompt-settings
 page_type: 教程
-source: https://doc.fastgpt.cn/zh-CN/guide/build/agentv2/settings
+source: https://doc.fastgpt.cn/guide/build/agentv2/settings
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ source_type: 官方文档
 ## 通用模型参数配置指引
 当需要配置对话大模型、回复长度、推理内容展示等通用模型参数时，需参考对应文档中的AI配置说明进行操作。该参考文档覆盖了Agent运行所需的各类通用模型相关配置项，确保Agent的输出符合预期的格式与效果。这些通用参数的调整会直接影响Agent的回答质量与交互体验，因此需根据实际使用场景进行合理配置。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/agentv2/settings)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/agentv2/settings)
 
 ## 适用性与版本范围
 

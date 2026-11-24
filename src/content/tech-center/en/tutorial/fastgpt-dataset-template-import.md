@@ -2,7 +2,7 @@
 title: Complete FastGPT Dataset Template Import Workflows
 slug: /en/tutorial/fastgpt-dataset-template-import
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/dataset/template
+source: https://doc.fastgpt.io/guide/dataset/template
 source_type: Official documentation
 ---
 
@@ -21,7 +21,7 @@ FastGPT template imports support two file formats: comma-separated values (CSV) 
 4.  Upload the validated file through the import interface, then confirm the import request. Only one file may be imported per individual import operation.
 5.  Once the import process completes, navigate to the Dataset Collection tab to review all imported dataset entries and their current indexing status, as shown in the post-import documentation image.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/template)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/template)
 
 ## Applicability and version scope
 

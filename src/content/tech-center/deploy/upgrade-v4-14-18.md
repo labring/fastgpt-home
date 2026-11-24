@@ -2,7 +2,7 @@
 title: FastGPT V4.14.18版本升级内容与操作指南
 slug: /zh/deploy/upgrade-v4-14-18
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41418
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/41418
 source_type: 官方文档
 ---
 
@@ -20,7 +20,7 @@ source_type: 官方文档
 ## 升级后怎么验证
 升级完成后可通过以下方式验证功能正常：访问FastGPT管理后台，确认管理员后台可配置关闭个人微信发布渠道；测试工作流工具、用户表单节点的文件类型过滤上传功能，确认可按照指定文件类型过滤并上传文件；在对话页频繁切换未结束的对话，确认流恢复顺序无异常，对话内容展示正常。
 
-> [FastGPT 4.14.18 升级说明](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41418)
+> [FastGPT 4.14.18 升级说明](https://doc.fastgpt.cn/self-host/upgrading/4-14/41418)
 
 ## 适用性与版本范围
 

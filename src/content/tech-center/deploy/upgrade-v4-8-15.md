@@ -2,7 +2,7 @@
 title: FastGPT V4.8.15版本升级说明与操作指南
 slug: /zh/deploy/upgrade-v4-8-15
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4815
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4815
 source_type: 官方文档
 ---
 
@@ -33,7 +33,7 @@ curl --location --request POST 'https://{{host}}/api/admin/init/refreshFreeUser'
 ## 升级后怎么验证
 确认服务容器镜像版本为fastgpt:v4.8.15-fix3与fastgpt-pro:v4.8.15；访问FastGPT后台，查看是否新增API知识库与工具箱页面；测试Markdown内容中嵌入HTML代码，确认预览模式可正常展示且脚本被拦截；发起测试请求调用API知识库相关接口，确认功能正常；检查免费用户时长计算逻辑，确认无误发通知情况。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4815)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/4815)
 
 ## 适用性与版本范围
 

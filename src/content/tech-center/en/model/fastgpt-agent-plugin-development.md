@@ -2,7 +2,7 @@
 title: Develop FastGPT Agent Plugin Standard Workflows
 slug: /en/model/fastgpt-agent-plugin-development
 page_type: Model guides
-source: https://doc.fastgpt.cn/en/plugin/system-tool-development
+source: https://doc.fastgpt.io/plugin/system-tool-development
 source_type: Official documentation
 ---
 
@@ -40,7 +40,7 @@ The structured development process follows these mandatory steps:
 ## Final Deliverables
 Upon completing development, you must submit a summary including: a full list of changed project files, results of all validation runs, documented remaining assumptions, and a list of external API behaviors that require manual human confirmation.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/plugin/system-tool-development)
+> Source: [FastGPT official source](https://doc.fastgpt.io/plugin/system-tool-development)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: FastGPT v4.8.15 Feature and Fix Release Notes
 slug: /en/deploy/fastgpt-v4815-release-notes
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4815
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/4815
 source_type: 官方文档
 ---
 
@@ -44,4 +44,4 @@ This release addresses high-priority stability and functionality issues:
 - Updated workflow edit history storage: removed local storage dependencies and added forced auto-save on abnormal application exit
 - Fixed a special variable substitution bug where strings starting with `$` failed to be replaced correctly
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4815)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/4815)

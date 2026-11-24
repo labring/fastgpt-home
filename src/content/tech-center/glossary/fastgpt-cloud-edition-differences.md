@@ -2,7 +2,7 @@
 title: 介绍FastGPT中国大陆版与国际版的账号登录规则
 slug: /zh/glossary/fastgpt-cloud-edition-differences
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/guide/getting-started
+source: https://doc.fastgpt.cn/guide/getting-started
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ FastGPT Cloud是FastGPT的云托管服务版本，分为中国大陆版与国际
 ## 容易搞错的地方
 部分用户会混淆两个版本的账号通用性与登录方式，误以为使用同一账号即可在两个版本间切换登录，实际二者账号完全不互通。如果在当前版本遇到登录失败的情况，需尝试切换至对应版本的站点重新进行操作。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/getting-started)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/getting-started)
 
 ## 适用性与版本范围
 

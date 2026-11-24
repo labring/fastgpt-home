@@ -2,7 +2,7 @@
 title: FastGPT V4.8.13版本升级操作与环境变量变更说明
 slug: /zh/deploy/fastgpt-v4813-upgrade-environment
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4813
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4813
 source_type: 官方文档
 ---
 
@@ -21,4 +21,4 @@ source_type: 官方文档
 ## 使用注意事项
 使用本版本时需注意以下边界与易错点：首先，`FE_DOMAIN`环境变量的格式要求严格，末尾不可添加斜杠，否则可能导致文件地址前缀补齐异常。其次，旧版文件上传编排的兼容期仅剩两个版本，逾期未调整将出现功能异常，尤其是嵌套应用的文件传递需手动配置，无法依赖自动传递逻辑。另外，新增的数组变量多选功能仅支持选择多个数组或对应单一数据类型，不符合格式的选择将无法正常合并；循环节点的下标值需在对应工作流节点中调用，无法直接全局使用。最后，本次修复的问题仅针对对应场景，例如Dockerfile的pnpm代理支持仅影响自建镜像编译流程，不影响已部署的容器运行。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4813)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/4813)

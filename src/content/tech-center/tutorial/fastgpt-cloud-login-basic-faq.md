@@ -2,7 +2,7 @@
 title: FastGPT云服务账号登录与基础使用常见问题解答
 slug: /zh/tutorial/fastgpt-cloud-login-basic-faq
 page_type: 教程/部署
-source: https://doc.fastgpt.cn/zh-CN/guide/version/cloud/faq
+source: https://doc.fastgpt.cn/guide/version/cloud/faq
 source_type: 官方文档
 ---
 
@@ -22,4 +22,4 @@ FastGPT云服务分为中国大陆版与国际版，两个版本的账号体系�
 2. 若首次登录失败，先切换至另一版本的访问地址重试登录操作。
 3. 若经过上述两步仍无法正常登录，可直接前往飞书社群联系管理员反馈问题，获取进一步协助。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/version/cloud/faq)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/version/cloud/faq)

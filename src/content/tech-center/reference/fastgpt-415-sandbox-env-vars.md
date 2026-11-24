@@ -2,7 +2,7 @@
 title: FastGPT 4.15版本沙箱环境变量变更配置速查
 slug: /zh/reference/fastgpt-415-sandbox-env-vars
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41503
+source: https://doc.fastgpt.cn/self-host/upgrading/4-15/41503
 source_type: 官方文档小节
 ---
 
@@ -33,4 +33,4 @@ FastGPT 4.15版本升级后，沙箱环境新增多项安全相关环境变量�
 3. SANDBOX_QUEUE_ID_CONCURRENCY为空时，不会启用queueId分组排队功能。
 4. 开启CHECK_INTERNAL_IP可降低SSRF攻击风险，请勿随意关闭该配置。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41503)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-15/41503)

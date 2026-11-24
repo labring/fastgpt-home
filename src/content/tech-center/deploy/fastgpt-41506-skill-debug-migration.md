@@ -2,7 +2,7 @@
 title: FastGPT 4.15.06 Skill Debug迁移清理指南
 slug: /zh/deploy/fastgpt-41506-skill-debug-migration
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41506
+source: https://doc.fastgpt.cn/self-host/upgrading/4-15/41506
 source_type: 官方文档小节
 ---
 
@@ -37,4 +37,4 @@ curl -X POST 'https://你的域名/api/admin/4150/init4150-beta6' \
 6.  清理旧Skill Debug chat：先用apps表去除与App _id重复的Skill ID，再删除剩余Skill ID下匹配到的旧chats、chatitems、chat_item_responses和旧格式Chat S3文件前缀。
 该接口不会回填几亿条历史App Chat的sourceType。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41506)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-15/41506)

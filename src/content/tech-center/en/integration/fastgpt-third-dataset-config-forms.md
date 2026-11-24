@@ -2,7 +2,7 @@
 title: Add Third-Party API Dataset Configuration Forms
 slug: /en/integration/fastgpt-third-dataset-config-forms
 page_type: Integrations
-source: https://doc.fastgpt.cn/en/guide/dataset/third-party/third_dataset
+source: https://doc.fastgpt.io/guide/dataset/third-party/third_dataset
 source_type: Official documentation
 ---
 
@@ -35,7 +35,7 @@ A reference table of component purposes and dependencies is listed below:
 | renderBaseUrlSelector | Displays a base URL input field for the external API | None |
 | renderDirectoryModal | Shows root directory selection modal on button click | `getFileDetail` |
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/third-party/third_dataset)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/third-party/third_dataset)
 
 ## Applicability and version scope
 

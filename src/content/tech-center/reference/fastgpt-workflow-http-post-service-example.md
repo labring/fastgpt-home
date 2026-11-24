@@ -2,7 +2,7 @@
 title: FastGPT工作流HTTP节点对接业务服务的POST请求实现
 slug: /zh/reference/fastgpt-workflow-http-post-service-example
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/http
+source: https://doc.fastgpt.cn/guide/build/workflow/nodes/http
 source_type: 官方文档小节
 ---
 
@@ -31,4 +31,4 @@ source_type: 官方文档小节
 3.  代码依赖`getRecord`/`createRecord`/`putRecord`/`removeRecord`业务函数，需提前实现对应逻辑
 4.  所有异常场景均返回固定格式的响应对象
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/http)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/workflow/nodes/http)

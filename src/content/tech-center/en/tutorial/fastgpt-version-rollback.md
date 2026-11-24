@@ -2,7 +2,7 @@
 title: Procedures for FastGPT Application Version Rollbacks
 slug: /en/tutorial/fastgpt-version-rollback
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/build/skill/version
+source: https://doc.fastgpt.io/guide/build/skill/version
 source_type: Official documentation
 ---
 
@@ -21,7 +21,7 @@ An important limitation applies to all version rollback operations: restored sna
 
 ![Version History & Rollback](/imgs/version_history_rollback.png)
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/skill/version)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/skill/version)
 
 ## Applicability and version scope
 

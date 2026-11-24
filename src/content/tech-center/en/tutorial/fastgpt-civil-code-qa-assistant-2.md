@@ -2,7 +2,7 @@
 title: Deploy a Civil Code Q&A Assistant with FastGPT
 slug: /en/tutorial/fastgpt-civil-code-qa-assistant-2
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/getting-started/quick-start
+source: https://doc.fastgpt.io/guide/getting-started/quick-start
 source_type: Official documentation
 ---
 
@@ -28,7 +28,7 @@ This technical page covers deploying a Civil Code Q&A assistant using FastGPT’
 | Dataset | Centralized knowledge storage for legal and operational materials | Ingest source documents, enable original text citation tracking |
 | Conversational Agent | Natural language Q&A interface | Link to target Dataset for retrieval-augmented generation |
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/getting-started/quick-start)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/getting-started/quick-start)
 
 ## Applicability and version scope
 

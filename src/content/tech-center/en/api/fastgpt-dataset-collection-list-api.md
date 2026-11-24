@@ -2,7 +2,7 @@
 title: Retrieve FastGPT Dataset Collection List via API
 slug: /en/api/fastgpt-dataset-collection-list-api
 page_type: API
-source: https://doc.fastgpt.cn/en/openapi/dataset
+source: https://doc.fastgpt.io/openapi/dataset
 source_type: Official documentation
 ---
 
@@ -56,7 +56,7 @@ Each collection object in the `list` array contains the following fields, as sho
 - `trainingType`: Training mode for the collection (e.g. `chunk`)
 - `permission`: Object containing access control details, including `value` (permission bitmask), `isOwner`, `hasManagePer`, `hasWritePer`, `hasReadPer`
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/openapi/dataset)
+> Source: [FastGPT official source](https://doc.fastgpt.io/openapi/dataset)
 
 ## Applicability and version scope
 

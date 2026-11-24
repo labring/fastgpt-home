@@ -2,7 +2,7 @@
 title: FastGPT V4.15.4版本MongoDB索引同步调整操作说明
 slug: /zh/reference/fastgpt-4154-mongo-index-sync
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/4154
+source: https://doc.fastgpt.cn/self-host/upgrading/4-15/4154
 source_type: 官方文档小节
 ---
 
@@ -27,4 +27,4 @@ V4.15.4版本中SYNC_INDEX环境变量已弃用，新增MONGO_DEPRECATE_INDEX环
 4. V4.15.3的索引同步会删除所有未在当时Schema中声明的索引，可能包含客户自建索引，执行步骤前需检查现有索引，或记录自建索引定义以便后续重建。
 5. `MONGO_DEPRECATE_INDEX=false`仅跳过未来版本可能声明的废弃索引清理，不影响缺失索引的创建。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/4154)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-15/4154)

@@ -2,7 +2,7 @@
 title: Adjust WeCom Login Auto Redirect Settings
 slug: /en/deploy/fastgpt-wecom-login-redirect-settings
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/4151
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/4151
 source_type: Official documentation
 ---
 
@@ -35,7 +35,7 @@ WECOM_LOGIN_AUTO_REDIRECT=true
 ## Activate Configuration Changes
 After updating the environment variables for the FastGPT main application, you must restart the main application process for the new setting to take effect. No additional configuration steps are required for other FastGPT platform components.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/4151)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-15/4151)
 
 ## Applicability and version scope
 

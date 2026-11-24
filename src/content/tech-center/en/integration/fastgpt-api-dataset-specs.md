@@ -2,7 +2,7 @@
 title: Define FastGPT Third-Party API Dataset Response Formats
 slug: /en/integration/fastgpt-api-dataset-specs
 page_type: Integrations
-source: https://doc.fastgpt.cn/en/guide/dataset/third-party/api_dataset
+source: https://doc.fastgpt.io/guide/dataset/third-party/api_dataset
 source_type: Official documentation
 ---
 
@@ -30,7 +30,7 @@ The `FileListItem` TypeScript type defines individual entries in dataset file an
 ## Implementation Best Practices
 When integrating with the FastGPT third-party dataset API, ensure client code properly parses responses against the defined TypeScript types. Handle optional fields gracefully to account for missing values in API returns, and validate all incoming data against the specified type constraints to prevent compatibility issues.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/third-party/api_dataset)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/third-party/api_dataset)
 
 ## Applicability and version scope
 

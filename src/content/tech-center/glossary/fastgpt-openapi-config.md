@@ -2,7 +2,7 @@
 title: 说明FastGPT OpenAPI调用的环境变量配置规则
 slug: /zh/glossary/fastgpt-openapi-config
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/guide/build/publish/openapi
+source: https://doc.fastgpt.cn/guide/build/publish/openapi
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ FastGPT OpenAPI调用时需配置的环境变量规则与格式要求。
 ## 容易搞错的地方
 未将OPENAI_API_BASE_URL中的默认域名localhost:3000替换为自身实际部署的域名，导致接口调用无法连接到正确的服务地址。误将apiKey与appId分开填写，未使用连字符组合成apiKey-appId的兼容格式，导致身份验证失败。部分用户会忽略推荐的appId传递方式，仅使用基础密钥格式进行配置，无法充分利用FastGPT OpenAPI的完整功能。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/publish/openapi)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/publish/openapi)
 
 ## 适用性与版本范围
 

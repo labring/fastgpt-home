@@ -2,7 +2,7 @@
 title: 使用FastGPT工作流节点处理长文本翻译的分段与质量保障问题
 slug: /zh/node/fastgpt-long-text-translation-nodes
 page_type: 工作流节点
-source: https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/loop
+source: https://doc.fastgpt.cn/guide/build/workflow/nodes/loop
 source_type: 官方文档小节
 ---
 
@@ -16,4 +16,4 @@ source_type: 官方文档小节
 
 拆分后的短文本适配LLM的token限制，避免单次输入过长导致的任务失败。统一的翻译配置保证了所有分段的翻译风格保持一致，按原顺序合并翻译后的分段即可得到完整且上下文连贯的长文本翻译结果。针对单段翻译结果进行精细化调整后，可进一步提升整体翻译的质量。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/loop)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/workflow/nodes/loop)

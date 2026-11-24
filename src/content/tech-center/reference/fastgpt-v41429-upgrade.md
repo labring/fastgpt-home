@@ -2,7 +2,7 @@
 title: FastGPT V4.14.29版本升级的操作说明
 slug: /zh/reference/fastgpt-v41429-upgrade
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41429
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/41429
 source_type: 官方文档小节
 ---
 
@@ -23,4 +23,4 @@ source_type: 官方文档小节
 3. 升级前需备份原有配置与数据，避免丢失
 4. 严格按照对应版本的标注要求执行操作，不可跳过前置步骤
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41429)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-14/41429)

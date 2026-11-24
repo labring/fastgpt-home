@@ -18,8 +18,8 @@ source_type: GitHub issue
 
 1. 记录当前知识库、向量模型和维度，保留原始文件及导出备份。模型切换行为在测试副本中观察，记录是否重新训练及原索引的变化。
 2. 为待比较的模型分别建立测试知识库，导入同一批材料，并保持切块、数据范围和测试问题一致。
-3. 分别关联对应知识库执行测试。官方[知识库搜索节点文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/dataset_search) 要求同一次关联的多个知识库使用相同向量模型。
-4. 对照[搜索参数说明](https://doc.fastgpt.cn/zh-CN/guide/dataset/dataset_engine) 固定检索模式、引用上限和重排配置，记录命中文段、回答依据、耗时与训练成本。
+3. 分别关联对应知识库执行测试。官方[知识库搜索节点文档](https://doc.fastgpt.cn/guide/build/workflow/nodes/dataset_search) 要求同一次关联的多个知识库使用相同向量模型。
+4. 对照[搜索参数说明](https://doc.fastgpt.cn/guide/dataset/dataset_engine) 固定检索模式、引用上限和重排配置，记录命中文段、回答依据、耗时与训练成本。
 
 ## 验证结果
 

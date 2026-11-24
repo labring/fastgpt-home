@@ -2,7 +2,7 @@
 title: FastGPT V4.13.1版本升级内容与操作指南
 slug: /zh/deploy/upgrade-v4-13-1
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-13/4131
+source: https://doc.fastgpt.cn/self-host/upgrading/4-13/4131
 source_type: 官方文档
 ---
 
@@ -22,7 +22,7 @@ source_type: 官方文档
 ## 升级后怎么验证
 升级后可通过以下方式验证：复制应用并修改其中一个的头像，确认另一个头像未受影响；在应用中使用包含\的Windows路径内容，确认Markdown解析正常；测试循环节点、交互节点、prompt编辑器、含.符号的表单输入、子工作流分享链接等功能，确认修复项生效；确认新增模型预设和插件工具可正常加载使用。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-13/4131)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-13/4131)
 
 ## 适用性与版本范围
 

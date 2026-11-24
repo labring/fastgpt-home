@@ -2,7 +2,7 @@
 title: 快速搭建FastGPT四类核心基础应用的操作速查指南
 slug: /zh/reference/fastgpt-four-apps-quick-guide
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/getting-started/quick-start
+source: https://doc.fastgpt.cn/guide/getting-started/quick-start
 source_type: 官方文档小节
 ---
 
@@ -26,4 +26,4 @@ source_type: 官方文档小节
 3. 不可直接复用所有参数，需根据实际业务调整对应配置。
 4. 需提前配置好可用AI模型，否则无法完成应用搭建。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/getting-started/quick-start)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/getting-started/quick-start)

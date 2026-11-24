@@ -2,7 +2,7 @@
 title: FastGPT V4.15.0-beta7版本升级与环境变量变更说明
 slug: /zh/reference/fastgpt-v4-15-beta7-upgrade
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41507
+source: https://doc.fastgpt.cn/self-host/upgrading/4-15/41507
 source_type: 官方文档小节
 ---
 
@@ -22,4 +22,4 @@ source_type: 官方文档小节
 3. 需严格按照该版本的官方指引完成环境变量调整，避免因配置错误引发系统启动异常。
 4. 该版本的升级流程包含环境变量变更与升级脚本两个核心环节，不可省略任意一项。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41507)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-15/41507)

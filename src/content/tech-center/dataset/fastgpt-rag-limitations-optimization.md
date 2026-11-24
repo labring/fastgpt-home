@@ -2,7 +2,7 @@
 title: FastGPT中RAG模型的局限性及优化方案说明
 slug: /zh/dataset/fastgpt-rag-limitations-optimization
 page_type: 知识库与切分
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/rag
+source: https://doc.fastgpt.cn/guide/dataset/rag
 source_type: 官方文档小节
 ---
 
@@ -17,4 +17,4 @@ RAG模型结合检索器与生成器实现知识密集型内容生成，但实�
 ### 整体优化方向
 RAG模型的整体性能依赖知识库准确性与检索效率，可从数据采集、内容分块、精准检索和回答生成环节优化。通过规范数据来源、优化内容管理、升级检索策略、提升回答生成准确性，可让模型更好适配复杂动态的实际应用需求。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/dataset/rag)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/dataset/rag)

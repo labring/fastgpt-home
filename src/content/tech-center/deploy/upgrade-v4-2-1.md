@@ -2,7 +2,7 @@
 title: FastGPT V4.2.1版本向量模型配置项升级说明
 slug: /zh/deploy/upgrade-v4-2-1
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/421
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/421
 source_type: 官方文档
 ---
 
@@ -35,7 +35,7 @@ source_type: 官方文档
 ## 升级后怎么验证
 打开修改后的自定义配置文件，确认VectorModels数组内的每个模型对象均包含defaultToken和maxToken字段，且数值与配置要求一致。进入系统向量模型管理页面，查看已配置的向量模型参数是否正确显示新增的两个配置项。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/421)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/421)
 
 ## 适用性与版本范围
 

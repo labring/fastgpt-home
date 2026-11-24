@@ -2,7 +2,7 @@
 title: Manage Security Risks for FastGPT Remote Debug Suite
 slug: /en/deploy/fastgpt-remote-debug-security-practices
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/remote-debug-suite
+source: https://doc.fastgpt.io/self-host/config/remote-debug-suite
 source_type: Official documentation
 ---
 
@@ -25,7 +25,7 @@ Debug source invocations exclusively use the remote debug path. If the requested
 ## Multi-Replica Gateway Deployment Safeguards
 For FastGPT Gateway deployments with multiple replicas, special routing rules are required to maintain reliable debug session management. Session deletion requests must be routed to the specific Gateway node that owns the associated WebSocket connection. If requests are sent to an incorrect replica, the Redis-stored session data will be deleted, leading to failed subsequent debug calls until the session state is fully cleaned up.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/remote-debug-suite)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/remote-debug-suite)
 
 ## Applicability and version scope
 

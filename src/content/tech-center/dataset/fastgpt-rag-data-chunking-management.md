@@ -2,7 +2,7 @@
 title: 解决FastGPT中RAG数据分块与内容管理的常见问题
 slug: /zh/dataset/fastgpt-rag-data-chunking-management
 page_type: 知识库与切分
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/rag
+source: https://doc.fastgpt.cn/guide/dataset/rag
 source_type: 官方文档小节
 ---
 
@@ -21,4 +21,4 @@ RAG模型的数据分块与内容管理是优化FastGPT检索与生成流程的�
 ### 优化效果说明
 通过上述配置，可有效避免信息断裂，让生成答案具备连贯性；减少冗余信息干扰，提升回答简洁性与计算效率；确保检索时准确定位关键内容，同时提供足够上下文支持，提升回答的精准性与相关性；针对复杂专业文本，能提升上下文完整性，让回答更具条理性与专业性，最终提升用户使用体验。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/dataset/rag)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/dataset/rag)

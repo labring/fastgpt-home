@@ -2,7 +2,7 @@
 title: FastGPT工作流节点文档解析组件的使用说明
 slug: /zh/reference/fastgpt-workflow-document-parsing-node
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/document_parsing
+source: https://doc.fastgpt.cn/guide/build/workflow/nodes/document_parsing
 source_type: 官方文档小节
 ---
 
@@ -19,4 +19,4 @@ source_type: 官方文档小节
 ## 注意事项
 使用文档解析节点的必要前提是已开启文件上传功能，未开启该功能时，无法找到或正常使用该节点。该节点仅支持在FastGPT的工作流场景中使用。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/document_parsing)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/workflow/nodes/document_parsing)

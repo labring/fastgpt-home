@@ -2,7 +2,7 @@
 title: FastGPT 4822 Upgrade New Technical Features
 slug: /en/deploy/fastgpt-4822-upgrade-features
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4822
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/4822
 source_type: 官方文档
 ---
 
@@ -25,4 +25,4 @@ This update optimizes chat log storage behavior for the FastGPT chat API. All ch
 ## New Model Provider Support
 The 4822 upgrade adds official support for the PPIO model provider, expanding the range of third-party model hosting services that can be integrated with FastGPT deployments. Users can configure and connect PPIO-hosted language models through the standard FastGPT model setup workflow, with no additional custom code required.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4822)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/4822)

@@ -72,6 +72,6 @@ During recovery, check content validity, model bindings, and incremental updates
 
 ## References
 
-- [FastGPT team and resource permissions](https://doc.fastgpt.cn/zh-CN/guide/workspace/team/team_roles_permissions)
-- [FastGPT API file knowledge bases](https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/api_dataset)
-- [FastGPT retrieval principles](https://doc.fastgpt.cn/zh-CN/guide/dataset/dataset_engine)
+- [FastGPT team and resource permissions](https://doc.fastgpt.cn/guide/workspace/team/team_roles_permissions)
+- [FastGPT API file knowledge bases](https://doc.fastgpt.cn/guide/dataset/third-party/api_dataset)
+- [FastGPT retrieval principles](https://doc.fastgpt.cn/guide/dataset/dataset_engine)

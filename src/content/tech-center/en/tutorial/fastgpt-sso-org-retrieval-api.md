@@ -2,7 +2,7 @@
 title: Retrieve FastGPT Organizational Data via SSO Interface
 slug: /en/tutorial/fastgpt-sso-org-retrieval-api
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/admin/sso
+source: https://doc.fastgpt.io/guide/admin/sso
 source_type: Official documentation
 ---
 
@@ -82,7 +82,7 @@ type OrgListResponseType = {
 }
 ```
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/admin/sso)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/admin/sso)
 
 ## Applicability and version scope
 

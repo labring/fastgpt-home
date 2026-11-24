@@ -2,7 +2,7 @@
 title: Configure FastGPT Admin-Specific Environment Variables
 slug: /en/deploy/fastgpt-admin-specific-environment-variables
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/env
+source: https://doc.fastgpt.io/self-host/config/env
 source_type: Official documentation
 ---
 
@@ -44,7 +44,7 @@ The following table lists all admin-specific environment variables, their defaul
 ## Critical Configuration Guidance
 The mandatory `PRO_TOKEN` variable is required for secure internal communication between the FastGPT frontend and the admin API layer; it must be a minimum of 32 characters and must match the token configured for the FastGPT app. For automated tasks, `SYNC_MEMBER_CRON` uses standard cron syntax to schedule automated member synchronization, and leaving this variable empty disables the task entirely. Crawl-related variables control the scope and limits of website data collection during document syncs, with `CRAWL_EXCLUDE_LIST` accepting comma-separated domain or path exclusion rules. For external integrations, variables like `INVOICE_FEISHU_WEBHOOK_URL` enables Lark notifications for invoice requests, while `WORKORDER_BASE_URL` adds work order entry points to the FastGPT frontend when configured.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/env)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/env)
 
 ## Applicability and version scope
 

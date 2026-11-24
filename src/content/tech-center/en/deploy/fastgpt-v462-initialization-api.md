@@ -2,7 +2,7 @@
 title: Execute FastGPT v462 Initialization API for Self-Hosted Deployments
 slug: /en/deploy/fastgpt-v462-initialization-api
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/462
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/462
 source_type: 官方文档
 ---
 
@@ -31,4 +31,4 @@ curl --location --request POST 'https://{{host}}/api/admin/initv462' \
 ```
 After submitting the request, the API will process the initialization of full-text indexing for your FastGPT deployment. No additional user input is required once the authenticated request is sent, as the API handles the full indexing initialization workflow as documented.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/462)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/462)

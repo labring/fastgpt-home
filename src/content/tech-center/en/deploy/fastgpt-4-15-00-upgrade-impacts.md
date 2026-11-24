@@ -2,7 +2,7 @@
 title: Critical Impacts of FastGPT 4.15.00 Upgrade
 slug: /en/deploy/fastgpt-4-15-00-upgrade-impacts
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41500
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/41500
 source_type: 官方文档
 ---
 
@@ -27,4 +27,4 @@ For self-hosted deployments where `SYNC_INDEX` is disabled, complete this mandat
 2.  Run the database index synchronization process to remove the legacy `requestId_1` unique index
 3.  Confirm the new composite `{ teamId, requestId }` index is active in the database
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41500)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/4-15/41500)

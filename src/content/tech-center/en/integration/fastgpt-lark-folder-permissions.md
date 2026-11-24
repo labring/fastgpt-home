@@ -2,7 +2,7 @@
 title: Grant Folder Permissions for FastGPT Lark Dataset
 slug: /en/integration/fastgpt-lark-folder-permissions
 page_type: Integrations
-source: https://doc.fastgpt.cn/en/guide/dataset/third-party/lark_dataset
+source: https://doc.fastgpt.io/guide/dataset/third-party/lark_dataset
 source_type: Official documentation
 ---
 
@@ -20,7 +20,7 @@ A reference screenshot showing the folder permission configuration interface is 
 # Direct Token Retrieval for Pre-Authorized Folders
 If your target Lark folder already has permissions granted to the "All Members" built-in group, you do not need to complete the two configuration steps above. In this scenario, you can proceed directly to retrieving the Folder Token to connect the Lark folder to your FastGPT knowledge base.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/third-party/lark_dataset)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/third-party/lark_dataset)
 
 ## Applicability and version scope
 

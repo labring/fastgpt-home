@@ -2,7 +2,7 @@
 title: 介绍FastGPT知识库检索流程中的Rerank重排功能与用法
 slug: /zh/glossary/fastgpt-rerank-usage
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/dataset_engine
+source: https://doc.fastgpt.cn/guide/dataset/dataset_engine
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ Rerank是FastGPT知识库检索流程中的二次排序环节，用于提升候�
 ## 容易搞错的地方
 容易将Rerank视为检索结果的唯一排序依据。FastGPT的检索结果由多路召回、RRF合并与Rerank二次排序共同决定，仅依赖Rerank排序结果的认知存在偏差。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/dataset/dataset_engine)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/dataset/dataset_engine)
 
 ## 适用性与版本范围
 

@@ -2,7 +2,7 @@
 title: FastGPT 4.14.10 Performance and Configuration Optimizations
 slug: /en/deploy/fastgpt-4-14-10-optimizations
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-14/41410
+source: https://doc.fastgpt.io/self-host/upgrading/4-14/41410
 source_type: Official documentation
 ---
 
@@ -23,7 +23,7 @@ The 4.14.10 update removes two legacy model configuration fields and unifies the
 
 Test Models assigned this flag receive a special system identifier, with strict usage restrictions: they may only be utilized in AI chat workflows, and are automatically filtered out of all other operational scenarios including dataset file processing and question classification tasks. All prior per-scenario configuration toggles have been removed from the model settings menu entirely.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-14/41410)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-14/41410)
 
 ## Applicability and version scope
 

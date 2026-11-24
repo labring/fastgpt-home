@@ -2,7 +2,7 @@
 title: 说明FastGPT支持的三种团队模式及详细配置规则
 slug: /zh/tutorial/fastgpt-team-mode-configuration-2
 page_type: 教程
-source: https://doc.fastgpt.cn/zh-CN/guide/admin/teamMode
+source: https://doc.fastgpt.cn/guide/admin/teamMode
 source_type: 官方文档
 ---
 
@@ -21,7 +21,7 @@ FastGPT支持三种团队模式，分别为多团队模式、单团队模式与�
 ## 模式操作规则说明
 多团队模式中，短信或邮箱注册流程会自动创建默认团队，管理员直接添加成员时会创建默认团队，SSO注册流程会创建默认团队，且所有流程产生的成员均不会加入Root团队。单团队模式中，短信或邮箱注册、管理员直接添加、SSO注册均不会创建默认团队，所有流程产生的成员均会加入Root团队。成员同步模式中，短信或邮箱注册、管理员直接添加、SSO注册均不会创建默认团队，仅SSO注册流程产生的成员会加入Root团队，其余接入方式无法完成成员同步或团队创建。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/admin/teamMode)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/admin/teamMode)
 
 ## 适用性与版本范围
 

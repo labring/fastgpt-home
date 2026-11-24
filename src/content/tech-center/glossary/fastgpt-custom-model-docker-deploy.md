@@ -2,7 +2,7 @@
 title: 说明FastGPT自定义模型的Docker部署与文件配置
 slug: /zh/glossary/fastgpt-custom-model-docker-deploy
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/self-host/custom-models/bge-rerank
+source: https://doc.fastgpt.cn/self-host/custom-models/bge-rerank
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ Dockerfile是FastGPT自定义模型部署场景中，用于构建可运行容器
 ## 容易搞错的地方
 常见错误包括三类。第一类为端口映射配置错误，Marker部署命令中使用`-p 7231:7232`，易混淆宿主机端口与容器端口，导致服务无法正常访问。第二类为模型目录结构不完整，若自定义重排序模型的目录遗漏app.py、Dockerfile或requirements.txt任意文件，将导致镜像构建失败。第三类为GPU资源配置缺失，未添加`--gpus all`参数启动容器，将导致无法调用GPU资源，降低模型运行效率。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/bge-rerank)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/custom-models/bge-rerank)
 
 ## 适用性与版本范围
 

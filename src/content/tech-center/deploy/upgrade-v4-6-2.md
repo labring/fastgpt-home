@@ -2,7 +2,7 @@
 title: FastGPT V4.6.2版本升级操作与功能说明
 slug: /zh/deploy/upgrade-v4-6-2
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/462
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/462
 source_type: 官方文档
 ---
 
@@ -27,7 +27,7 @@ curl --location --request POST 'https://{{host}}/api/admin/initv462' \
 ## 升级后怎么验证
 可通过以下方式验证升级效果：确认全文索引功能可正常配置与启用；检查插件来源相关的配置项是否已在系统中加载；测试PDF文件读取、docx文件读取转换为Markdown并保留图片的功能是否正常运行；验证TextSplitter函数的修复与优化效果是否符合预期。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/462)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/462)
 
 ## 适用性与版本范围
 

@@ -2,7 +2,7 @@
 title: Update FastGPT Logging Environment Variables
 slug: /en/deploy/fastgpt-logging-env-updates
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4147
+source: https://doc.fastgpt.io/self-host/upgrading/4-14/4147
 source_type: Official documentation
 ---
 
@@ -36,7 +36,7 @@ Six new environment variables replace the deprecated SigNoz-specific settings, w
 3.  Add the six new environment variables to each configuration file, using the default values provided or updating them to match your deployment’s specific logging requirements.
 4.  Restart each FastGPT service to apply the updated environment variables and activate the new logging system.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4147)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-14/4147)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: FastGPT V4.12.3版本升级步骤与更新内容说明
 slug: /zh/deploy/fastgpt-v4-12-3-upgrade-guide
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-12/4123
+source: https://doc.fastgpt.cn/self-host/upgrading/4-12/4123
 source_type: 官方文档
 ---
 
@@ -27,4 +27,4 @@ FastGPT V4.12.3发布于2025年9月8日，本次升级涉及的镜像更新范�
 ### 插件更新
 系统工具类型迁移至plugin；将模型提供商配置移动到plugin，实现热更新；将应用模板移动至plugin。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-12/4123)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-12/4123)

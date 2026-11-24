@@ -203,6 +203,6 @@ To validate application implementation effects, checks can be conducted from thr
 
 ## References
 
-- [FastGPT self-hosted deployment documentation](https://doc.fastgpt.io/en/self-host/)
+- [FastGPT self-hosted deployment documentation](https://doc.fastgpt.io/self-host/)
 - [FastGPT documentation](https://doc.fastgpt.io/)
-- [FastGPT Chinese documentation](https://doc.fastgpt.cn/zh-CN/)
+- [FastGPT Chinese documentation](https://doc.fastgpt.cn/)

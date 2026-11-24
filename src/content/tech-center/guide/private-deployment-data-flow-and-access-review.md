@@ -6,7 +6,7 @@ source: https://fastgpt.cn/price
 source_type: 深度场景内容
 meta_title: 私有化部署的数据流向与分级访问核对
 meta_description: 按 FastGPT 私有部署的授权形态、模型调用路径与权限分权方式，给出数据流向、身份集成、日志边界与验收动作的核对清单，供采购与实施双方对齐。
-delivery_metadata: {"source_front_matter":{"slug":"private-deployment-data-flow-and-access-review","meta_title":"私有化部署的数据流向与分级访问核对","meta_description":"按 FastGPT 私有部署的授权形态、模型调用路径与权限分权方式，给出数据流向、身份集成、日志边界与验收动作的核对清单，供采购与实施双方对齐。","language":"zh","content_type":"deep","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"private-deployment-data-flow-and-access-review","keywords":"私有化部署,数据流向,分级访问,身份集成,License,审计日志","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"FastGPT 私有化部署怎么核对数据不出内网、模型调用与分级访问","需求依据":"客户 2026-11-07 购买诉求第 1 条：私有化部署是选型硬指标，需要采购落地的核对方法。","事实来源":"FastGPT 产品知识库·内容收集清单；官方更新说明 4.17.1 与 4.17.3","内链":"https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4171","排期":"W18 深度内容第 1 篇；发布日期由发稿安排确认","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["事实来源：见上表所列官方文档与版本说明。核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（官方更新说明口径，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核版本号与入口路径变化。"]}
+delivery_metadata: {"source_front_matter":{"slug":"private-deployment-data-flow-and-access-review","meta_title":"私有化部署的数据流向与分级访问核对","meta_description":"按 FastGPT 私有部署的授权形态、模型调用路径与权限分权方式，给出数据流向、身份集成、日志边界与验收动作的核对清单，供采购与实施双方对齐。","language":"zh","content_type":"deep","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"private-deployment-data-flow-and-access-review","keywords":"私有化部署,数据流向,分级访问,身份集成,License,审计日志","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"FastGPT 私有化部署怎么核对数据不出内网、模型调用与分级访问","需求依据":"客户 2026-11-07 购买诉求第 1 条：私有化部署是选型硬指标，需要采购落地的核对方法。","事实来源":"FastGPT 产品知识库·内容收集清单；官方更新说明 4.17.1 与 4.17.3","内链":"https://doc.fastgpt.cn/self-host/upgrading/4-17/4171","排期":"W18 深度内容第 1 篇；发布日期由发稿安排确认","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["事实来源：见上表所列官方文档与版本说明。核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（官方更新说明口径，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核版本号与入口路径变化。"]}
 keywords: 私有化部署,数据流向,分级访问,身份集成,License,审计日志
 schema_type: Article
 date_modified: 2026-11-16
@@ -113,6 +113,6 @@ FastGPT 的私有部署可沿用企业自己的数据库、存储与模型服务
 | 主题 | 版本 | 来源 |
 | --- | --- | --- |
 | 授权形态、版本差异、模型与渠道支持、验收与支持范围 | 当期商业方案 | [FastGPT 商务咨询：授权、部署与支持范围](https://fastgpt.cn/contact) |
-| 文件级权限、发布权限快照 | v4.17.1 | [self-host/upgrading/4-17/4171](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4171) |
-| 沙盒镜像不混部、文档解析格式 | v4.16.0 / v4.16.2 | [self-host/upgrading/4-16/4160](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/4160) |
-| 镜像 tag、回填任务、向量检索并发 | v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173) |
+| 文件级权限、发布权限快照 | v4.17.1 | [self-host/upgrading/4-17/4171](https://doc.fastgpt.cn/self-host/upgrading/4-17/4171) |
+| 沙盒镜像不混部、文档解析格式 | v4.16.0 / v4.16.2 | [self-host/upgrading/4-16/4160](https://doc.fastgpt.cn/self-host/upgrading/4-16/4160) |
+| 镜像 tag、回填任务、向量检索并发 | v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/self-host/upgrading/4-17/4173) |

@@ -2,7 +2,7 @@
 title: 获取并配置FastGPT的MCP服务器调用地址
 slug: /zh/reference/fastgpt-mcp-server-usage
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/build/publish/mcp_server
+source: https://doc.fastgpt.cn/guide/build/publish/mcp_server
 source_type: 官方文档小节
 ---
 
@@ -22,4 +22,4 @@ source_type: 官方文档小节
 - 复制接入脚本时需保证内容完整，格式错误会导致客户端连接失败。
 - 必须将新建的MCP server设置为enabled状态，未启用的服务不会被客户端识别。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/publish/mcp_server)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/publish/mcp_server)

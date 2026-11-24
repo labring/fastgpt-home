@@ -2,7 +2,7 @@
 title: Execute FastGPT v464 Administrative Initialization API
 slug: /en/deploy/fastgpt-v464-init-api
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/464
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/464
 source_type: 官方文档
 ---
 
@@ -36,4 +36,4 @@ When executed successfully, the API performs two targeted database updates:
 1. Initializes the `createTime` field in PostgreSQL databases across your FastGPT deployment.
 2. Initializes the feedback field for chat records stored in MongoDB.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/464)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/464)

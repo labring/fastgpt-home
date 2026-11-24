@@ -2,7 +2,7 @@
 title: 说明FastGPT工具节点的运行条件、参数要求与调用逻辑
 slug: /zh/tutorial/fastgpt-tool-node-operation-logic
 page_type: 教程
-source: https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/tool
+source: https://doc.fastgpt.cn/guide/build/workflow/nodes/tool
 source_type: 官方文档
 ---
 
@@ -28,7 +28,7 @@ source_type: 官方文档
 在支持函数调用的模型中，可一次性调用多个工具，调用逻辑如下：
 ![](/imgs/flow-tool2.png)
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/tool)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/workflow/nodes/tool)
 
 ## 适用性与版本范围
 

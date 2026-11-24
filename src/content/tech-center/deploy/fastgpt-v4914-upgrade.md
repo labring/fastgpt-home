@@ -2,7 +2,7 @@
 title: FastGPT V4.9.14版本升级步骤与更新说明
 slug: /zh/deploy/fastgpt-v4914-upgrade
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4914
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4914
 source_type: 官方文档
 ---
 
@@ -37,4 +37,4 @@ source_type: 官方文档
 3. 确认mcp_server、Sandbox、AIProxy组件的镜像配置无需进行版本更新；
 4. 执行部署重启命令（如`docker-compose up -d`），等待服务启动完成即可完成升级。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4914)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/4914)

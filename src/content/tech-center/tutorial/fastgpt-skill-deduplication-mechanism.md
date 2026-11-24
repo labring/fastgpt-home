@@ -2,7 +2,7 @@
 title: FastGPT技能脚本智能去重机制的运行与配置说明
 slug: /zh/tutorial/fastgpt-skill-deduplication-mechanism
 page_type: 教程
-source: https://doc.fastgpt.cn/zh-CN/guide/build/skill/initialization
+source: https://doc.fastgpt.cn/guide/build/skill/initialization
 source_type: 官方文档
 ---
 
@@ -19,7 +19,7 @@ source_type: 官方文档
 ### 去重状态存储与查看
 智能去重机制的运行状态记录在虚拟机内的指定文件中，文件路径为`~/.fastgpt/agent-skill-entrypoints/state.json`。该文件会自动保存当前虚拟机中已成功运行的技能`versionId`记录，无需手动配置或干预默认的去重逻辑。当需要验证某技能版本是否已在当前虚拟机中完成初始化执行时，可直接访问该文件查看对应记录，无需额外操作即可获取所需的状态信息。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/skill/initialization)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/skill/initialization)
 
 ## 适用性与版本范围
 

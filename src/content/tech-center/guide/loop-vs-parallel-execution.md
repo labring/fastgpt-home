@@ -3,7 +3,7 @@ title: 批量任务处理方式选型：循环、批量执行与并行执行
 slug: /zh/guide/loop-vs-parallel-execution
 page_type: 决策矩阵页
 source_type: 官方文档（v4.17.2）与社区线程
-source: https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/parallel_run
+source: https://doc.fastgpt.cn/guide/build/workflow/nodes/parallel_run
 source_note: "判据取自 FastGPT v4.17.2 官方文档与社区线程，核验日 2026-10-13。"
 check_day: 2026-10-13
 article_section: 选型与评估
@@ -51,9 +51,9 @@ date_modified: 2026-10-14
 
 ## 参考资料
 
-- [循环节点](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/loop_run)
-- [批量运行](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/loop)
-- [并行执行](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/parallel_run)
+- [循环节点](https://doc.fastgpt.cn/guide/build/workflow/nodes/loop_run)
+- [批量运行](https://doc.fastgpt.cn/guide/build/workflow/nodes/loop)
+- [并行执行](https://doc.fastgpt.cn/guide/build/workflow/nodes/parallel_run)
 
 ## 需要进一步确认时
 

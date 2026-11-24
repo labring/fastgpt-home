@@ -2,7 +2,7 @@
 title: FastGPT v4.15.0 Stability and Usability Improvements
 slug: /en/deploy/fastgpt-v4-15-0-improvements
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41502
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/41502
 source_type: Official documentation
 ---
 
@@ -34,7 +34,7 @@ This section enhances dataset tooling and observability for operational teams:
 3.  Refined the Dataset data editing modal for more intuitive content management.
 4.  Improved reason hide toggle: Allows UI-side hiding of reasoning content while preserving the full reasoning payload for LLM request processing.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41502)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-15/41502)
 
 ## Applicability and version scope
 

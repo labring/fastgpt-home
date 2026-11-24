@@ -2,7 +2,7 @@
 title: FastGPT自定义域名配置的完整操作步骤
 slug: /zh/tutorial/fastgpt-custom-domain-config
 page_type: 教程
-source: https://doc.fastgpt.cn/zh-CN/guide/workspace/customDomain
+source: https://doc.fastgpt.cn/guide/workspace/customDomain
 source_type: 官方文档
 ---
 
@@ -16,7 +16,7 @@ source_type: 官方文档
 
 配置完成后，可通过预先设置的自定义域名访问FastGPT服务，同时可使用该域名调用FastGPT的API接口。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/workspace/customDomain)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/workspace/customDomain)
 
 ## 适用性与版本范围
 

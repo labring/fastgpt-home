@@ -2,7 +2,7 @@
 title: Proper Excel File Structure for FastGPT Dataset Imports
 slug: /en/tutorial/fastgpt-dataset-excel-structure
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/dataset/template
+source: https://doc.fastgpt.io/guide/dataset/template
 source_type: Official documentation
 ---
 
@@ -25,7 +25,7 @@ To avoid import failures, all Excel files used for FastGPT dataset imports must 
 - Contain no merged cells anywhere in the worksheet; merged cells disrupt automated parsing of field data.
 - Reserve the first row of the worksheet exclusively for template headers; any content in this row will be treated as field names by the platform.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/template)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/template)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: FastGPT 配置与开发参考全景：按主题找到对应清单
 slug: /zh/guide/reference-overview
 page_type: 问题全景聚合页
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/upgrade-instruction
+source: https://doc.fastgpt.cn/self-host/upgrading/upgrade-instruction
 source_type: 站内已发布文档的程序化归类
 check_day: 2026-10-19
 article_section: 配置与开发参考
@@ -124,10 +124,10 @@ date_modified: 2026-10-26
 
 ## 参考资料
 
-- [升级说明](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/upgrade-instruction)
-- [环境变量](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
-- [Docker Compose 部署](https://doc.fastgpt.cn/zh-CN/self-host/deploy/docker)
-- [模型配置说明](https://doc.fastgpt.cn/zh-CN/self-host/config/model/intro)
+- [升级说明](https://doc.fastgpt.cn/self-host/upgrading/upgrade-instruction)
+- [环境变量](https://doc.fastgpt.cn/self-host/config/env)
+- [Docker Compose 部署](https://doc.fastgpt.cn/self-host/deploy/docker)
+- [模型配置说明](https://doc.fastgpt.cn/self-host/config/model/intro)
 
 ## 需要进一步确认时
 

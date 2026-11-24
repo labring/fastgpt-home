@@ -2,7 +2,7 @@
 title: Set Up and Manage FastGPT Model Channels
 slug: /en/deploy/fastgpt-model-channel-setup
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/model/intro
+source: https://doc.fastgpt.io/self-host/config/model/intro
 source_type: Official documentation
 ---
 
@@ -29,7 +29,7 @@ First, navigate to the `Model Channels` tab (shown in screenshot `aiproxy-1`). O
 - Model mapping creates a consistent internal naming layer, eliminating the need to update internal FastGPT references when upstream model names change.
 - All API keys must be obtained directly from the respective model provider, with credentials matching the protocol and proxy URL configured for the channel.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/model/intro)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/model/intro)
 
 ## Applicability and version scope
 

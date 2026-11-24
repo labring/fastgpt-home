@@ -2,7 +2,7 @@
 title: FastGPT Milvus modeldata向量数据迁移至modeldata_v2操作指南
 slug: /zh/deploy/fastgpt-milvus-modeldata-migration
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/milvus-bm25
+source: https://doc.fastgpt.cn/self-host/milvus-bm25
 source_type: 官方文档
 ---
 
@@ -32,4 +32,4 @@ curl 'http://host/api/admin/4162/milvus?resumeMigrationId=<uuid>' \
 
 迁移支持断点续跑、失败行落库并自愈重试，完成时会实际校验 `modeldata_v2` 的目标行数，且使用幂等 `upsert` 逻辑，可安全重复执行。
 
-> 来源: [FastGPT 官方文档与源码](https://doc.fastgpt.cn/zh-CN/self-host/milvus-bm25)
+> 来源: [FastGPT 官方文档与源码](https://doc.fastgpt.cn/self-host/milvus-bm25)

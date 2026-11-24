@@ -2,7 +2,7 @@
 title: 配置FastGPT Agent Sandbox的资源占用上限与生命周期管理参数
 slug: /zh/deploy/fastgpt-sandbox-resource-lifecycle-config
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/sandbox/opensandbox
+source: https://doc.fastgpt.cn/self-host/config/sandbox/opensandbox
 source_type: 官方文档
 ---
 
@@ -25,7 +25,7 @@ source_type: 官方文档
 ## 配置应用指引
 所有配置项均以环境变量形式存在，每个变量对应一项具体的管控规则。例如，调整`AGENT_SANDBOX_CPU_COUNT`的取值可修改单个沙盒的CPU核数上限，调整`AGENT_SANDBOX_SUSPEND_MINUTES`可修改沙盒自动暂停的闲置时长阈值。默认参数配置适配通用业务场景，若部署环境的服务器资源有限，可适当调低资源类参数的取值；若业务对沙盒的持续运行有较高要求，可延长自动暂停或归档的时长阈值，优化沙盒的运行效率与资源利用率。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/config/sandbox/opensandbox)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/config/sandbox/opensandbox)
 
 ## 适用性与版本范围
 

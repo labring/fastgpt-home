@@ -2,7 +2,7 @@
 title: Update FastGPT 4.15.0 Service Images
 slug: /en/deploy/fastgpt-4-15-service-image-updates
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41505
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/41505
 source_type: Official documentation
 ---
 
@@ -55,7 +55,7 @@ The following environment variables apply to the `fastgpt-agent-sandbox-proxy` s
 | `RUST_LOG` | info,fastgpt_agent_sandbox_proxy=debug | Log level configuration |
 | `AGENT_SANDBOX_PROXY_REWRITE_HOST` | Unset | Optional override for cases where the sandbox endpoint returns a local loopback address the proxy cannot reach |
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41505)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-15/41505)
 
 ## Applicability and version scope
 

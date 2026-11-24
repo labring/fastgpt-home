@@ -2,7 +2,7 @@
 title: Set Up FastGPT Shared Environment Variables
 slug: /en/deploy/fastgpt-shared-env-variables
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/env
+source: https://doc.fastgpt.io/self-host/config/env
 source_type: Official documentation
 ---
 
@@ -34,7 +34,7 @@ If `PRO_URL` is set, `PRO_TOKEN` must be configured to match your pro/admin setu
 
 The `SYNC_INDEX` variable defaults to `true`, which automatically manages MongoDB indexes at startup; disable this only if you intend to manually maintain database indexes. Adjust `DB_MAX_LINK` based on your database server's connection capacity to optimize performance for your deployment size.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/env)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/env)
 
 ## Applicability and version scope
 

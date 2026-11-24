@@ -2,7 +2,7 @@
 title: Manually Update MongoDB for FastGPT Docker Deployments
 slug: /en/deploy/fastgpt-docker-mongo-manual-update
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/468
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/468
 source_type: 官方文档
 ---
 
@@ -81,4 +81,4 @@ The modified configuration includes the following core parameters.
 - Persistent storage: Maps local `./mongo/data` directory to retain MongoDB data across container restarts
 - Automated setup: The `entrypoint` script handles key file generation, permission configuration, replica set initialization, and startup readiness checks to eliminate manual intervention.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/468)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/468)

@@ -2,7 +2,7 @@
 title: Run Required FastGPT v46 Initialization APIs
 slug: /en/deploy/fastgpt-v46-initialization-apis
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/46
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/46
 source_type: 官方文档
 ---
 
@@ -35,4 +35,4 @@ Follow these exact steps to run the initialization APIs:
     ```
     Again, monitor service logs if you encounter timeouts, as the initialization process may still complete in the background.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/46)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/46)

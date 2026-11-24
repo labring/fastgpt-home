@@ -2,7 +2,7 @@
 title: Key Technical and UX Improvements for FastGPT 4.12.0
 slug: /en/deploy/fastgpt-4120-upgrade-improvements
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-12/4120
+source: https://doc.fastgpt.io/self-host/upgrading/4-12/4120
 source_type: Official documentation
 ---
 
@@ -30,7 +30,7 @@ The following table lists all documented changes for quick reference, organized 
 | Front-End UX              | Improved Dataset selection UX                                                     |
 | Front-End UI              | Login page UI adjustments                                                        |
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-12/4120)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-12/4120)
 
 ## Applicability and version scope
 

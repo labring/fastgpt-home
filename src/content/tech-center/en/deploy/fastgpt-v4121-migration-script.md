@@ -2,7 +2,7 @@
 title: Execute FastGPT v4.12.1 Commercial Migration Script
 slug: /en/deploy/fastgpt-v4121-migration-script
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-12/4121
+source: https://doc.fastgpt.io/self-host/upgrading/4-12/4121
 source_type: Official documentation
 ---
 
@@ -28,7 +28,7 @@ No additional command-line flags or arguments are necessary for this script. The
 ## Script Functionality
 The sole purpose of this migration script is to migrate existing historical chat logs into the new log dashboard format introduced with FastGPT 4.12.1. No other database modifications, user data alterations, or system configuration changes are performed during script execution. Upon successful completion, your historical chat data will be accessible through the updated FastGPT log dashboard interface.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-12/4121)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-12/4121)
 
 ## Applicability and version scope
 

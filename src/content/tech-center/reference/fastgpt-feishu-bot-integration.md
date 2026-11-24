@@ -2,7 +2,7 @@
 title: FastGPT商业版4.8.10及以上版本接入飞书机器人的操作方法
 slug: /zh/reference/fastgpt-feishu-bot-integration
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/build/publish/feishu
+source: https://doc.fastgpt.cn/guide/build/publish/feishu
 source_type: 官方文档小节
 ---
 
@@ -21,4 +21,4 @@ FastGPT商业版4.8.10及以上版本支持直接接入飞书机器人，无需�
 2. 接入过程无需额外调用第三方API服务，所有配置流程均在FastGPT平台内部完成。
 3. 该功能属于应用发布环节的配置内容，需在应用发布流程中进行操作。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/publish/feishu)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/publish/feishu)

@@ -2,7 +2,7 @@
 title: Configure FastGPT Publish Link Parameter Settings
 slug: /en/integration/fastgpt-publish-link-parameters
 page_type: Integrations
-source: https://doc.fastgpt.cn/en/guide/build/publish/link
+source: https://doc.fastgpt.io/guide/build/publish/link
 source_type: Official documentation
 ---
 
@@ -27,7 +27,7 @@ This reference covers parameter configuration for FastGPT published links, which
 ## Usage Guidelines
 When configuring a published link, start by setting a clear Name to distinguish multiple link records in your FastGPT workspace. For temporary shared access, define an Expiration time to automatically invalidate the link after a specified period. To prevent excessive traffic and abuse, use the QPM parameter to cap the number of requests each individual user can submit per minute. The Point limit parameter lets you set a maximum total billable usage for the link, helping align shared chat usage with operational budgets. For secure third-party system integrations, enable Identity verification to enforce external identity checks before chat access and secure chat callback workflows. Toggle Real-time running status to display active processing nodes during chat sessions for end-user transparency. The remaining parameters — View quoted chunks, View full quoted content, and Download/open original source — control end-user access to supporting chat content, with full details outlined in the core FastGPT system documentation.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/publish/link)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/publish/link)
 
 ## Applicability and version scope
 

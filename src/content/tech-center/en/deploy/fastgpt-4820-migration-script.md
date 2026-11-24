@@ -2,7 +2,7 @@
 title: Run the FastGPT 4820 Configuration Migration Script
 slug: /en/deploy/fastgpt-4820-migration-script
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4820
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/4820
 source_type: 官方文档
 ---
 
@@ -30,4 +30,4 @@ Replace the `{{host}}` and `{{rootkey}}` placeholders with your actual domain an
 ## Script Outcome
 Upon successful delivery of the request to your FastGPT server, the script will automatically load all model configurations stored in your legacy configuration file into the new standardized model configuration format. This completes the model configuration migration step of the 4820 upgrade without additional manual intervention.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4820)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/4820)

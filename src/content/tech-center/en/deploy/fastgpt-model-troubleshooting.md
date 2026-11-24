@@ -2,7 +2,7 @@
 title: Troubleshoot FastGPT Model Availability Errors
 slug: /en/deploy/fastgpt-model-troubleshooting
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/troubleshooting/model-errors
+source: https://doc.fastgpt.io/self-host/troubleshooting/model-errors
 source_type: Official documentation
 ---
 
@@ -89,7 +89,7 @@ curl https://api.openai.com/v1/audio/transcriptions \
   -F model=\"whisper-1\"
 ```
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/troubleshooting/model-errors)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/troubleshooting/model-errors)
 
 ## Applicability and version scope
 

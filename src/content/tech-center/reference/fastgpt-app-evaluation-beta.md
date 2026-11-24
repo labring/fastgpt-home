@@ -2,7 +2,7 @@
 title: 说明FastGPT应用评测（Beta）功能的支持版本与可用指标
 slug: /zh/reference/fastgpt-app-evaluation-beta
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/build/evaluation
+source: https://doc.fastgpt.cn/guide/build/evaluation
 source_type: 官方文档小节
 ---
 
@@ -20,4 +20,4 @@ FastGPT v4.11.0版本及以上支持应用评测（Beta）功能。该功能可�
 ## 注意事项
 该功能处于Beta测试阶段，仅支持回答准确性评估指标，其余两项指标将在后续版本中补充完善。使用该功能需确保FastGPT版本符合要求。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/evaluation)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/evaluation)

@@ -2,7 +2,7 @@
 title: FastGPT Agent Sandbox 镜像与环境变量配置说明
 slug: /zh/glossary/fastgpt-agent-sandbox-config-2
 page_type: 术语速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/4161
+source: https://doc.fastgpt.cn/self-host/upgrading/4-16/4161
 source_type: 官方文档
 ---
 
@@ -17,4 +17,4 @@ Agent Sandbox 是 FastGPT 私有化部署中用于运行 Agent 任务的隔离�
 ## 容易搞错的地方
 需注意仅当沙盒需要安装 apt 依赖时，才切换为 root 镜像。配置需同时覆盖 `fastgpt-app` 和 `fastgpt-pro` 两个服务，遗漏任一服务会导致配置不生效。4.16.1 版本必须使用完整的运行态镜像地址，不可省略镜像仓库路径与版本号。
 
-> 来源: [FastGPT 官方文档与源码](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/4161)
+> 来源: [FastGPT 官方文档与源码](https://doc.fastgpt.cn/self-host/upgrading/4-16/4161)

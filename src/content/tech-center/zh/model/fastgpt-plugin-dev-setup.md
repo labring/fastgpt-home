@@ -2,7 +2,7 @@
 title: FastGPT插件开发的本地环境搭建步骤说明
 slug: /zh/model/fastgpt-plugin-dev-setup
 page_type: 模型指南
-source: https://doc.fastgpt.cn/zh-CN/plugin/system-tool-development
+source: https://doc.fastgpt.cn/plugin/system-tool-development
 source_type: 官方文档
 ---
 
@@ -27,7 +27,7 @@ source_type: 官方文档
 2. 构建 SDK 工厂模块：`pnpm build:sdk-factory`
 3. 构建 CLI 工具：`pnpm build:cli`
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/plugin/system-tool-development)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/plugin/system-tool-development)
 
 ## 适用性与版本范围
 

@@ -2,7 +2,7 @@
 title: Enable Marker PDF Parsing for FastGPT
 slug: /en/deploy/fastgpt-marker-pdf-parsing
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/custom-models/marker
+source: https://doc.fastgpt.io/self-host/custom-models/marker
 source_type: Official documentation
 ---
 
@@ -23,7 +23,7 @@ Configuration steps differ between the FastGPT Community and Commercial deployme
 
 ### FastGPT Commercial Edition
 Commercial edition users do not need to manually edit configuration files. Instead, access the FastGPT Admin panel, navigate to the PDF parsing configuration section, and use the provided form to enable and adjust the `customPdfParse` option. All changes are saved and applied immediately without requiring manual service restarts.
-> [FastGPT public documentation](https://doc.fastgpt.cn/en/self-host/custom-models/marker)
+> [FastGPT public documentation](https://doc.fastgpt.io/self-host/custom-models/marker)
 
 ## Applicability and version scope
 

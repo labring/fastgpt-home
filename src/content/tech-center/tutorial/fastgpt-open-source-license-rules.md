@@ -2,7 +2,7 @@
 title: FastGPT开源协议使用规范与合规说明
 slug: /zh/tutorial/fastgpt-open-source-license-rules
 page_type: 教程
-source: https://doc.fastgpt.cn/zh-CN/guide/version/opensource/license
+source: https://doc.fastgpt.cn/guide/version/opensource/license
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ FastGPT 项目以 Apache License 2.0 为基础开源协议，同时附带两项�
 
 除上述附加条件外，FastGPT的所有其他权利与限制均遵循 Apache License 2.0 的完整条款。本产品的交互设计受外观专利保护，版权归属© 2023 Sealos。如需获取更详细的协议信息，可参考 Apache License 2.0 的官方完整版本。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/version/opensource/license)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/version/opensource/license)
 
 ## 适用性与版本范围
 

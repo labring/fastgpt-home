@@ -2,7 +2,7 @@
 title: FastGPT V4.9.13版本升级内容与操作指南
 slug: /zh/deploy/upgrade-v4-9-13
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4913
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4913
 source_type: 官方文档
 ---
 
@@ -22,7 +22,7 @@ source_type: 官方文档
 ## 升级后怎么验证
 验证对话日志的日期范围选择功能可正常使用。发起API调用，确认传入的system提示词不会重复。进行AI对话或工具调用，未选择文件链接时确认不会读取历史记录中的文件。手动更新知识库索引，确认旧索引未被错误删除且手动索引生效。测试知识库集合搜索的嵌套搜索功能是否可用。观察系统运行日志，确认套餐缓存生效，MongoDB查询次数减少。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4913)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/4913)
 
 ## 适用性与版本范围
 

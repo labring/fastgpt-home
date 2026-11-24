@@ -76,4 +76,4 @@ keywords: "目录继承,独立授权,检索鉴权,发布快照,运行身份,成�
 | 主题 | 来源 |
 | --- | --- |
 | 目录继承、父目录导航、管理权限与编辑权限 | [官方更新说明 4.17.3](https://github.com/labring/FastGPT/releases/tag/v4.17.3) |
-| 文件级权限与发布快照 | [官方更新说明 4.17.1](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4171) |
+| 文件级权限与发布快照 | [官方更新说明 4.17.1](https://doc.fastgpt.cn/self-host/upgrading/4-17/4171) |

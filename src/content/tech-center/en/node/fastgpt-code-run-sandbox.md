@@ -2,7 +2,7 @@
 title: Secure Code Execution via FastGPT Sandbox Node
 slug: /en/node/fastgpt-code-run-sandbox
 page_type: Workflow nodes
-source: https://doc.fastgpt.cn/en/guide/build/workflow/nodes/sandbox-v2
+source: https://doc.fastgpt.io/guide/build/workflow/nodes/sandbox-v2
 source_type: Official documentation
 ---
 
@@ -24,7 +24,7 @@ For self-hosted FastGPT deployments, two mandatory steps are required to enable 
 2. Set the `CODE_SANDBOX_URL` environment variable in your FastGPT deployment configuration, using the full network address of the deployed sandbox service.
 Users may also adjust the default 60-second execution timeout to align with their specific workflow performance needs, if required.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/workflow/nodes/sandbox-v2)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/workflow/nodes/sandbox-v2)
 
 ## Applicability and version scope
 

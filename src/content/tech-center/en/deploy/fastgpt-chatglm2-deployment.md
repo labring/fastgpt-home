@@ -2,7 +2,7 @@
 title: Deploy ChatGLM2 Models via FastGPT Source Code
 slug: /en/deploy/fastgpt-chatglm2-deployment
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/custom-models/chatglm2
+source: https://doc.fastgpt.io/self-host/custom-models/chatglm2
 source_type: Official documentation
 ---
 
@@ -29,7 +29,7 @@ The only required command-line parameter for the adapter script is `--model_name
 ## Startup Verification
 After executing the launch command, wait for the model to download and load into memory. If you encounter errors, try asking GPT for help. Upon successful startup, the terminal will display a connection address matching the reference screenshot provided in the official documentation. The valid base connection address for the deployed service is `http://0.0.0.0:6006`.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/custom-models/chatglm2)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/custom-models/chatglm2)
 
 ## Applicability and version scope
 

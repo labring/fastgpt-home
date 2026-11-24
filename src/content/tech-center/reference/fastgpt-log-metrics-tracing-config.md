@@ -2,7 +2,7 @@
 title: FastGPT应用与管理后台日志指标追踪环境变量配置速查
 slug: /zh/reference/fastgpt-log-metrics-tracing-config
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/env
+source: https://doc.fastgpt.cn/self-host/config/env
 source_type: 官方文档小节
 ---
 
@@ -42,4 +42,4 @@ source_type: 官方文档小节
 4. 控制台日志等级仅支持trace、debug、info、warning、error、fatal。
 5. OTEL相关上报功能需配置对应上报地址才能生效。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/config/env)

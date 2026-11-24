@@ -2,7 +2,7 @@
 title: Access and Configure FastGPT AI Settings
 slug: /en/tutorial/fastgpt-ai-settings-access
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/build/general/ai_settings
+source: https://doc.fastgpt.io/guide/build/general/ai_settings
 source_type: Official documentation
 ---
 
@@ -33,7 +33,7 @@ Three accompanying images support navigation to the AI settings:
 - `/imgs/image-52.png`: Shows the AI Chat node's model configuration panel within a workflow
 - `/imgs/image-53.png`: Displays the open full AI settings modal
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/general/ai_settings)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/general/ai_settings)
 
 ## Applicability and version scope
 

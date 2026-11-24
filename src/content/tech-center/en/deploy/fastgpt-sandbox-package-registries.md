@@ -2,7 +2,7 @@
 title: Configure Package Registries for FastGPT Sandboxes
 slug: /en/deploy/fastgpt-sandbox-package-registries
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/sandbox/opensandbox
+source: https://doc.fastgpt.io/self-host/config/sandbox/opensandbox
 source_type: Official documentation
 ---
 
@@ -30,7 +30,7 @@ FastGPT reads the `/etc/os-release` file to detect the Ubuntu version and codena
 ## Validating Mirror Paths
 To confirm correct repository paths for other Ubuntu releases, reference the official [Ubuntu mirror guide](https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/) and [Ubuntu Ports mirror guide](https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu-ports/). For third-party mirror providers, use their standard Ubuntu or Ubuntu Ports repository path matching your target architecture.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/sandbox/opensandbox)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/sandbox/opensandbox)
 
 ## Applicability and version scope
 

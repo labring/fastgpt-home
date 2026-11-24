@@ -2,7 +2,7 @@
 title: Enable FastGPT app exposure via MCP protocol
 slug: /en/integration/fastgpt-mcp-server-configuration
 page_type: Integrations
-source: https://doc.fastgpt.cn/en/guide/build/publish/mcp_server
+source: https://doc.fastgpt.io/guide/build/publish/mcp_server
 source_type: Official documentation
 ---
 
@@ -31,7 +31,7 @@ For self-hosted deployments requiring SSE transport:
 2. Configure the standalone service to target your selected FastGPT applications.
 3. Start the standalone MCP Server service to enable the SSE transport endpoint.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/publish/mcp_server)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/publish/mcp_server)
 
 ## Applicability and version scope
 

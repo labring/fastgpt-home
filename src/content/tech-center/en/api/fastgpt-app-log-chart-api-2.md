@@ -2,7 +2,7 @@
 title: Retrieve FastGPT App Chart Data via API
 slug: /en/api/fastgpt-app-log-chart-api-2
 page_type: API
-source: https://doc.fastgpt.cn/en/openapi/app
+source: https://doc.fastgpt.io/openapi/app
 source_type: Official documentation
 ---
 
@@ -65,7 +65,7 @@ curl --location --request POST 'https://cloud.fastgpt.cn/api/proApi/core/app/log
 ```
 A sample successful response matches the structure defined in the response parameters, with top-level `data` containing the three metric arrays.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/openapi/app)
+> Source: [FastGPT official source](https://doc.fastgpt.io/openapi/app)
 
 ## Applicability and version scope
 

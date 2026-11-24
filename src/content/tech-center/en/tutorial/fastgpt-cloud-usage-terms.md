@@ -2,7 +2,7 @@
 title: FastGPT Cloud Service Usage Terms Reference
 slug: /en/tutorial/fastgpt-cloud-usage-terms
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/version/cloud/terms
+source: https://doc.fastgpt.io/guide/version/cloud/terms
 source_type: Official documentation
 ---
 
@@ -29,7 +29,7 @@ Users must comply with all applicable laws and this agreement, and bear full res
 | Malicious Software Activities | Malicious executable distribution, DDoS attacks |
 Any account found generating or distributing prohibited content will be immediately banned, with no refund of remaining account balance.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/version/cloud/terms)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/version/cloud/terms)
 
 ## Applicability and version scope
 

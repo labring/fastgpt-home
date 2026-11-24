@@ -2,7 +2,7 @@
 title: Manage and Filter Dataset Collections With Tags
 slug: /en/tutorial/fastgpt-dataset-collection-tags
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/dataset/collection_tags
+source: https://doc.fastgpt.io/guide/dataset/collection_tags
 source_type: Official documentation
 ---
 
@@ -23,7 +23,7 @@ This feature is limited to FastGPT’s commercial edition, and operates exclusiv
 3. Use the integrated tag tool to assign existing tags or create new custom tags for the selected collections (as demonstrated in the first two reference screenshots).
 4. To filter collections by tag, open the Dataset search interface, activate the tag filter dropdown, and select the desired tag to narrow results to matching collections (as shown in the third reference screenshot).
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/collection_tags)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/collection_tags)
 
 ## Applicability and version scope
 

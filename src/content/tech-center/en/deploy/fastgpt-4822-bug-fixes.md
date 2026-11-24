@@ -2,7 +2,7 @@
 title: Resolved Bugs for FastGPT 4822 Upgrade
 slug: /en/deploy/fastgpt-4822-bug-fixes
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4822
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/4822
 source_type: 官方文档
 ---
 
@@ -46,4 +46,4 @@ Use this checklist to confirm all resolved bugs are fixed post-upgrade:
 9. Confirm guest language detection: Enable guest language recognition, access the guest chat window to confirm auto-detection activates.
 10. Verify chat record source saving: Complete a chat, confirm the saved record preserves original source metadata.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4822)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/4822)

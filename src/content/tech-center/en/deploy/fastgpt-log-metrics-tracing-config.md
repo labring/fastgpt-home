@@ -2,7 +2,7 @@
 title: Configure FastGPT Logging, Metrics, and Tracing
 slug: /en/deploy/fastgpt-log-metrics-tracing-config
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/env
+source: https://doc.fastgpt.io/self-host/config/env
 source_type: Official documentation
 ---
 
@@ -56,7 +56,7 @@ Empty default values mean a feature is disabled unless you explicitly provide a 
 # Key Usage Notes
 The `LOG_DEPTH` variable is a legacy setting and may be deprecated in future releases, as modern structured logging relies on built-in log level controls rather than object depth limits. Log levels follow standard severity ordering, with `trace` being the most verbose and `fatal` the most severe. The `TRACK_BATCH_UPDATE_TIME` variable balances write frequency and resource usage by controlling how often event counters are persisted to storage.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/env)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/env)
 
 ## Applicability and version scope
 

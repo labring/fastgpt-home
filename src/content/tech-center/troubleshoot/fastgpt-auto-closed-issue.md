@@ -29,6 +29,6 @@ source_type: GitHub issue
 
 > 来源: [原始讨论：是否可以将所有聊天记录导出到 json 中](https://github.com/labring/FastGPT/issues/3560)
 
-> 来源: [FastGPT 对话 OpenAPI](https://doc.fastgpt.io/en/openapi/chat)
+> 来源: [FastGPT 对话 OpenAPI](https://doc.fastgpt.io/openapi/chat)
 
 > 来源: [原讨论中的补充回复](https://github.com/labring/FastGPT/issues/3560#issuecomment-2582254213)

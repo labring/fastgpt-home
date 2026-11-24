@@ -2,7 +2,7 @@
 title: FastGPT V4.14.8.1版本升级内容与操作说明
 slug: /zh/deploy/upgrade-v4-14-8-1
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41481
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/41481
 source_type: 官方文档
 ---
 
@@ -26,7 +26,7 @@ source_type: 官方文档
 1. 调用API文件库接口，验证返回的title值在无对应内容时fallback为URL
 2. 进入工作流编排页面，验证可以正常获取agent工具的版本列表
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41481)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-14/41481)
 
 ## 适用性与版本范围
 

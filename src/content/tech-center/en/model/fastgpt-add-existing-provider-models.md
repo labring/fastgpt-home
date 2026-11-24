@@ -2,7 +2,7 @@
 title: Add Valid Models to FastGPT Provider Presets
 slug: /en/model/fastgpt-add-existing-provider-models
 page_type: 模型接入
-source: https://doc.fastgpt.cn/en/plugin/model-presets
+source: https://doc.fastgpt.io/plugin/model-presets
 source_type: 官方文档
 ---
 
@@ -30,4 +30,4 @@ Follow these official guidelines when adding or managing existing provider model
 4.  For open catalog providers including OpenRouter, Ollama, HuggingFace, and Other, retain all local placeholders and user-customizable models. Do not delete these entries.
 5.  Preserve the existing ordering style used in each provider’s preset file. Newer or more capable models are typically placed first in the list.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/plugin/model-presets)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/plugin/model-presets)

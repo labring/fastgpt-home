@@ -2,7 +2,7 @@
 title: FastGPT V4.8.9 Release Feature and Fix Summary
 slug: /en/deploy/fastgpt-v4-8-9-release-notes
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/489
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/489
 source_type: 官方文档
 ---
 
@@ -45,4 +45,4 @@ The following critical issues are resolved in this release:
 | App and Chat               | Unable to submit feedback on new conversations via shared links |
 | File Handling              | File selection cache not cleared, preventing re-selection of identical files |
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/489)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/489)

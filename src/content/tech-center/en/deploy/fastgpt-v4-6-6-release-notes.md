@@ -2,7 +2,7 @@
 title: FastGPT V4.6.6 Release Feature Fixes and Additions
 slug: /en/deploy/fastgpt-v4-6-6-release-notes
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/466
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/466
 source_type: 官方文档
 ---
 
@@ -32,4 +32,4 @@ Several quality-of-life and bug fix updates are included:
 ## UI and Strategic Updates
 The FastGPT user interface will begin rolling out a new design gradually across the platform. For details on upcoming planned changes, refer to the official FastGPT 2024 RoadMap: https://github.com/labring/FastGPT?tab=readme-ov-file#-%E5%9C%A8%E7%BA%BF%E4%BD%BF%E7%94%A8
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/466)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/466)

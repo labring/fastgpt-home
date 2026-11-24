@@ -77,27 +77,27 @@ publication_batch: Week08
 
 | 节点类型标识 | 名称 | 可作工具 | 输入 / 必填 | 输出 | 官方文档 |
 | --- | --- | --- | --- | --- | --- |
-| `chatNode` | AI 对话 | 是 | 22 / 0 | 4 | [节点文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/ai_chat) |
+| `chatNode` | AI 对话 | 是 | 22 / 0 | 4 | [节点文档](https://doc.fastgpt.cn/guide/build/workflow/nodes/ai_chat) |
 | `agent` | Agent | — | 33 / 0 | 2 | — |
-| `toolCall` | 工具调用 | 是 | 20 / 0 | 2 | [节点文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/tool) |
+| `toolCall` | 工具调用 | 是 | 20 / 0 | 2 | [节点文档](https://doc.fastgpt.cn/guide/build/workflow/nodes/tool) |
 | `stopTool` | 工具调用终止 | — | 0 / 0 | 0 | — |
-| `contentExtract` | 文本内容提取 | 是 | 5 / 1 | 3 | [节点文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/content_extract) |
-| `datasetSearchNode` | 知识库搜索 | 是 | 14 / 1 | 2 | [节点文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/dataset_search) |
+| `contentExtract` | 文本内容提取 | 是 | 5 / 1 | 3 | [节点文档](https://doc.fastgpt.cn/guide/build/workflow/nodes/content_extract) |
+| `datasetSearchNode` | 知识库搜索 | 是 | 14 / 1 | 2 | [节点文档](https://doc.fastgpt.cn/guide/build/workflow/nodes/dataset_search) |
 | `toolParams` | 自定义工具变量 | 是 | 0 / 0 | 0 | — |
-| `classifyQuestion` | 问题分类 | 是 | 5 / 0 | 1 | [节点文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/question_classify) |
+| `classifyQuestion` | 问题分类 | 是 | 5 / 0 | 1 | [节点文档](https://doc.fastgpt.cn/guide/build/workflow/nodes/question_classify) |
 
 ## 工具（10 个节点）
 
 | 节点类型标识 | 名称 | 可作工具 | 输入 / 必填 | 输出 | 官方文档 |
 | --- | --- | --- | --- | --- | --- |
-| `httpRequest468` | HTTP 请求 | 是 | 10 / 3 | 4 | [节点文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/http) |
-| `code` | 代码运行 | 是 | 5 / 2 | 5 | [节点文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/sandbox-v2) |
-| `ifElseNode` | 判断器 | 是 | 1 / 0 | 1 | [节点文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/tfswitch) |
-| `parallelRun` | 并行执行 | 是 | 7 / 3 | 3 | [节点文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/parallel_run) |
+| `httpRequest468` | HTTP 请求 | 是 | 10 / 3 | 4 | [节点文档](https://doc.fastgpt.cn/guide/build/workflow/nodes/http) |
+| `code` | 代码运行 | 是 | 5 / 2 | 5 | [节点文档](https://doc.fastgpt.cn/guide/build/workflow/nodes/sandbox-v2) |
+| `ifElseNode` | 判断器 | 是 | 1 / 0 | 1 | [节点文档](https://doc.fastgpt.cn/guide/build/workflow/nodes/tfswitch) |
+| `parallelRun` | 并行执行 | 是 | 7 / 3 | 3 | [节点文档](https://doc.fastgpt.cn/guide/build/workflow/nodes/parallel_run) |
 | `loopRunBreak` | 循环终止 | — | 0 / 0 | 0 | — |
-| `loopRun` | 循环节点 | 是 | 7 / 2 | 1 | [节点文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/loop_run) |
-| `answerNode` | 指定回复 | 是 | 1 / 1 | 0 | [节点文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/reply) |
-| `textEditor` | 文本拼接 | 是 | 1 / 1 | 1 | [节点文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/text_editor) |
+| `loopRun` | 循环节点 | 是 | 7 / 2 | 1 | [节点文档](https://doc.fastgpt.cn/guide/build/workflow/nodes/loop_run) |
+| `answerNode` | 指定回复 | 是 | 1 / 1 | 0 | [节点文档](https://doc.fastgpt.cn/guide/build/workflow/nodes/reply) |
+| `textEditor` | 文本拼接 | 是 | 1 / 1 | 1 | [节点文档](https://doc.fastgpt.cn/guide/build/workflow/nodes/text_editor) |
 | `readFiles` | 读取文件 | 是 | 1 / 1 | 3 | — |
 | `variableUpdate` | 更新变量 | 是 | 1 / 0 | 0 | — |
 
@@ -118,15 +118,15 @@ publication_batch: Week08
 
 | 节点类型标识 | 名称 | 可作工具 | 输入 / 必填 | 输出 | 官方文档 |
 | --- | --- | --- | --- | --- | --- |
-| `userSelect` | 用户选择 | 是 | 2 / 0 | 1 | [节点文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/user-selection) |
+| `userSelect` | 用户选择 | 是 | 2 / 0 | 1 | [节点文档](https://doc.fastgpt.cn/guide/build/workflow/nodes/user-selection) |
 | `formInput` | 表单输入 | 是 | 2 / 0 | 1 | — |
 
 ## 其他（6 个节点）
 
 | 节点类型标识 | 名称 | 可作工具 | 输入 / 必填 | 输出 | 官方文档 |
 | --- | --- | --- | --- | --- | --- |
-| `datasetConcatNode` | 知识库搜索引用合并 | — | 2 / 0 | 1 | [节点文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/knowledge_base_search_merge) |
-| `customFeedback` | 自定义反馈 | 是 | 1 / 1 | 0 | [节点文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/custom_feedback) |
+| `datasetConcatNode` | 知识库搜索引用合并 | — | 2 / 0 | 1 | [节点文档](https://doc.fastgpt.cn/guide/build/workflow/nodes/knowledge_base_search_merge) |
+| `customFeedback` | 自定义反馈 | 是 | 1 / 1 | 0 | [节点文档](https://doc.fastgpt.cn/guide/build/workflow/nodes/custom_feedback) |
 | `appModule` | — | — | 0 / 0 | 0 | — |
 | `pluginModule` | — | 是 | 0 / 0 | 0 | — |
 | `tool` | — | 是 | 0 / 0 | 0 | — |

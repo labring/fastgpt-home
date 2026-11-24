@@ -2,7 +2,7 @@
 title: FastGPT沙盒V2节点可直接使用的Python白名单模块速查
 slug: /zh/reference/fastgpt-sandbox-v2-python-whitelist-modules
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/sandbox-v2
+source: https://doc.fastgpt.cn/guide/build/workflow/nodes/sandbox-v2
 source_type: 官方文档小节
 ---
 
@@ -31,4 +31,4 @@ FastGPT沙盒V2节点支持直接导入指定Python标准库与第三方库，�
 ## 注意事项
 禁止使用os、sys、subprocess、socket、urllib、http、requests等涉及系统调用、网络访问、文件系统的模块。调用非白名单模块会触发代码执行报错。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/sandbox-v2)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/workflow/nodes/sandbox-v2)

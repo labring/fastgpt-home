@@ -2,7 +2,7 @@
 title: 说明FastGPT工作流中表单输入节点的功能与配置方法
 slug: /zh/node/fastgpt-workflow-form-input
 page_type: 工作流节点
-source: https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/form_input
+source: https://doc.fastgpt.cn/guide/build/workflow/nodes/form_input
 source_type: 官方文档
 ---
 
@@ -21,4 +21,4 @@ source_type: 官方文档
 ## 节点核心作用
 该节点的核心价值在于能够精准收集业务所需的用户信息，为后续工作流节点提供完整的输入数据。相较于通用的对话交互，表单输入节点可以明确指定需要收集的信息类型，避免用户提供无关内容，确保后续处理环节能够获取到必要的参数，支撑各类自定义业务逻辑的稳定执行。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/form_input)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/workflow/nodes/form_input)

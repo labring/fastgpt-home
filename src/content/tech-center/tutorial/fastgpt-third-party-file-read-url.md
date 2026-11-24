@@ -2,7 +2,7 @@
 title: 获取FastGPT第三方数据集文件的原文阅读访问链接
 slug: /zh/tutorial/fastgpt-third-party-file-read-url
 page_type: 教程
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/api_dataset
+source: https://doc.fastgpt.cn/guide/dataset/third-party/api_dataset
 source_type: 官方文档
 ---
 
@@ -34,8 +34,8 @@ curl --location --request GET '{{baseURL}}/v1/file/read?id=xx' \
 ### 使用注意事项
 发起请求前需确保已获取目标文件的正确id，且授权令牌有效。请求参数缺失或无效时，将返回对应错误提示信息。返回的访问链接仅用于原文预览，不得用于其他非官方用途。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/api_dataset)
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/api_dataset)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/dataset/third-party/api_dataset)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/dataset/third-party/api_dataset)
 
 ## 适用性与版本范围
 

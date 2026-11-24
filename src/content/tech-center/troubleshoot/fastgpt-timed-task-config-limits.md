@@ -33,4 +33,4 @@ source_type: GitHub issue
 
 > 来源: [FastGPT 应用配置数据结构](https://github.com/labring/FastGPT/blob/main/packages/global/core/app/type.ts)
 
-> 来源: [FastGPT 应用构建常见问题](https://doc.fastgpt.io/en/guide/build/faq)
+> 来源: [FastGPT 应用构建常见问题](https://doc.fastgpt.io/guide/build/faq)

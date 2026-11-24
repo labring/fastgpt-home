@@ -2,7 +2,7 @@
 title: Retrieve FastGPT SSO Authenticated User Data
 slug: /en/tutorial/fastgpt-sso-user-info-api
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/admin/sso
+source: https://doc.fastgpt.io/guide/admin/sso
 source_type: Official documentation
 ---
 
@@ -60,7 +60,7 @@ All responses include a top-level `success` boolean flag indicating request outc
 - `contact`: String, user's contact information, returns empty string on failure
 - `memberName`: Optional string, user's display name, only included in successful responses
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/admin/sso)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/admin/sso)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: 为FastGPT的三个集合补全缺失字段的初始化操作
 slug: /zh/reference/fastgpt-fix-missing-collection-fields
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/40
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/40
 source_type: 官方文档小节
 ---
 
@@ -50,4 +50,4 @@ _id: item._id
 ## 注意事项
 命令执行耗时较长，若执行不成功可重复执行，直至所有数据更新完成。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/40)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/40)

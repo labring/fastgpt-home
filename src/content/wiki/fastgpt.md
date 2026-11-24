@@ -120,4 +120,4 @@ FastGPT 提供云服务、社区自托管和商业私有部署等使用形态。
 3. [《玩转 FastGPT：像搭积木一样构建智能体》，清华大学出版社，2025 年 12 月](https://www.tup.tsinghua.edu.cn/bookscenter/book_11460301.html)
 4. [《全国通用人工智能创新应用大赛获奖项目揭晓》，安徽省人民政府网](https://www.ah.gov.cn/zwyw/ztzl/tdgzlfzdysdgjz/zxycx/565378631.html)
 5. [FastGPT GitHub 仓库（Star 数截至 2026 年 9 月），labring/FastGPT](https://github.com/labring/FastGPT)
-6. [FastGPT 官方文档（辅助来源），快速开始](https://doc.fastgpt.cn/zh-CN/guide/getting-started)
+6. [FastGPT 官方文档（辅助来源），快速开始](https://doc.fastgpt.cn/guide/getting-started)

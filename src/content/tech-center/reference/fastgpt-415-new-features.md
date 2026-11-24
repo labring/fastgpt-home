@@ -2,7 +2,7 @@
 title: FastGPT 4.15版本新增功能技术速查
 slug: /zh/reference/fastgpt-415-new-features
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41500
+source: https://doc.fastgpt.cn/self-host/upgrading/4-15/41500
 source_type: 官方文档小节
 ---
 
@@ -32,4 +32,4 @@ source_type: 官方文档小节
 6.  Chat API新增dataId重复校验，避免脏数据进入工作流合并逻辑
 7.  商业版支持本地直连FastGPT调试插件，需确认已开通商业版权限
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41500)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-15/41500)

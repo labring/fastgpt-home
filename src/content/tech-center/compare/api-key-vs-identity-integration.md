@@ -2,11 +2,11 @@
 title: 接口密钥与身份集成：按调用方与风险选路径
 slug: /zh/compare/api-key-vs-identity-integration
 page_type: matrix
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173
+source: https://doc.fastgpt.cn/self-host/upgrading/4-17/4173
 source_type: 深度场景内容
 meta_title: 接口密钥与身份集成怎么选
 meta_description: 比较接口密钥与身份集成在调用主体、权限继承、日志追溯和凭据回收方面的差异，说明人机交互、系统调用与混合链路的选择条件，并列出轮换和交接时的检查项。
-delivery_metadata: {"source_front_matter":{"slug":"api-key-vs-identity-integration","meta_title":"接口密钥与身份集成怎么选","meta_description":"比较接口密钥与身份集成在调用主体、权限继承、日志追溯和凭据回收方面的差异，说明人机交互、系统调用与混合链路的选择条件，并列出轮换和交接时的检查项。","language":"zh","content_type":"matrix","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"api-key-vs-identity-integration","keywords":"接口密钥,单点登录,身份集成,凭据回收,日志追溯","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"系统对接用接口密钥还是走单点登录","需求依据":"客户 2026-11-07 购买诉求第 3 条：接入已有系统，关注身份与接口。","事实来源":"FastGPT 产品知识库·内容收集清单；官方更新说明 4.17.3","内链":"https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173","排期":"W18 决策矩阵第 4 篇","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（来源版本，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核权限开关与凭据管理入口。"]}
+delivery_metadata: {"source_front_matter":{"slug":"api-key-vs-identity-integration","meta_title":"接口密钥与身份集成怎么选","meta_description":"比较接口密钥与身份集成在调用主体、权限继承、日志追溯和凭据回收方面的差异，说明人机交互、系统调用与混合链路的选择条件，并列出轮换和交接时的检查项。","language":"zh","content_type":"matrix","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"api-key-vs-identity-integration","keywords":"接口密钥,单点登录,身份集成,凭据回收,日志追溯","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"系统对接用接口密钥还是走单点登录","需求依据":"客户 2026-11-07 购买诉求第 3 条：接入已有系统，关注身份与接口。","事实来源":"FastGPT 产品知识库·内容收集清单；官方更新说明 4.17.3","内链":"https://doc.fastgpt.cn/self-host/upgrading/4-17/4173","排期":"W18 决策矩阵第 4 篇","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（来源版本，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核权限开关与凭据管理入口。"]}
 keywords: 接口密钥,单点登录,身份集成,凭据回收,日志追溯
 schema_type: Article
 date_modified: 2026-11-16
@@ -18,7 +18,7 @@ date_modified: 2026-11-16
 
 ## 两条路径的分工
 
-对照材料：[FastGPT 官方说明](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173)。
+对照材料：[FastGPT 官方说明](https://doc.fastgpt.cn/self-host/upgrading/4-17/4173)。
 
 接口密钥是由平台签发、可设置有效期与使用限制的调用凭据，调用方在请求头里带上它访问接口，适合系统对系统的调用。身份集成走单点登录，专业版起支持，账号由已有系统创建，登录后进入应用，授权仍由应用内的组织架构与资源授权决定。
 
@@ -75,4 +75,4 @@ date_modified: 2026-11-16
 | 主题 | 版本 | 来源 |
 | --- | --- | --- |
 | 单点登录与 OA 集成、组织架构分权 | 当期商业方案 | [FastGPT 商务咨询：授权、部署与支持范围](https://fastgpt.cn/contact) |
-| 团队默认权限开关与 API Key 创建权限 | v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173) |
+| 团队默认权限开关与 API Key 创建权限 | v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/self-host/upgrading/4-17/4173) |

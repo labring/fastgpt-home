@@ -2,7 +2,7 @@
 title: Understand FastGPT Official API Documentation Basics
 slug: /en/api/fastgpt-api-docs-overview
 page_type: API
-source: https://doc.fastgpt.cn/en/openapi/intro
+source: https://doc.fastgpt.io/openapi/intro
 source_type: Official documentation
 ---
 
@@ -23,7 +23,7 @@ To confirm the latest availability and status of FastGPT API endpoints, follow t
 3. Note any unlisted endpoints, as these represent legacy endpoints that have not been migrated to the auto-generated system.
 4. Prioritize the auto-generated documentation over the left sidebar’s manually edited descriptions, as these are no longer updated.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/openapi/intro)
+> Source: [FastGPT official source](https://doc.fastgpt.io/openapi/intro)
 
 ## Applicability and version scope
 

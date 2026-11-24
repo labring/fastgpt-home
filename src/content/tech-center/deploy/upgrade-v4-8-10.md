@@ -2,7 +2,7 @@
 title: FastGPT V4.8.10版本升级操作与功能说明
 slug: /zh/deploy/upgrade-v4-8-10
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4810
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4810
 source_type: 官方文档
 ---
 
@@ -28,7 +28,7 @@ curl --location --request POST 'https://{{host}}/api/admin/initv4810' \
 ## 升级后怎么验证
 升级完成后，可通过访问FastGPT域名测试核心功能可用性。检查工作流节点是否支持拖动自动对齐吸附、撤销重做等新增功能，确认商业版新增的飞书机器人、公众号接入等配置是否生效。同时查看系统日志是否按配置的LOG_LEVEL与STORE_LOG_LEVEL正常生成，验证初始化请求是否完成版本标记与开票记录的初始化，确保知识库、应用副本等原有功能运行正常。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4810)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/4810)
 
 ## 适用性与版本范围
 

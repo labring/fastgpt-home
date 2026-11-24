@@ -2,7 +2,7 @@
 title: Launch Xinference Models via Command Line Interface
 slug: /en/deploy/xinference-model-launch-cli
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/custom-models/xinference
+source: https://doc.fastgpt.io/self-host/custom-models/xinference
 source_type: Official documentation
 ---
 
@@ -27,7 +27,7 @@ Each flag is mandatory for this standard Qwen-14B chat model deployment, and omi
 ## Alternative Deployment Methods
 In addition to the CLI, Xinference offers two additional deployment pathways for model hosting: the Python SDK and RESTful API. These methods are designed for developers integrating model deployment into custom applications, or teams needing programmatic control over deployment workflows. For full documentation on these alternative tools, including authentication, endpoint configuration, and error handling, refer to the official Xinference documentation at [https://inference.readthedocs.io/en/latest/getting_started/index.html](https://inference.readthedocs.io/en/latest/getting_started/index.html).
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/custom-models/xinference)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/custom-models/xinference)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: Set Up FastGPT Plugin Project Skeletons
 slug: /en/model/fastgpt-plugin-skeleton-setup
 page_type: Model guides
-source: https://doc.fastgpt.cn/en/plugin/system-tool-development
+source: https://doc.fastgpt.io/plugin/system-tool-development
 source_type: Official documentation
 ---
 
@@ -42,7 +42,7 @@ The CLI creates a complete plugin directory with the following standardized file
 
 All generated files align with FastGPT’s official development standards, ensuring compatibility and ease of maintenance.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/plugin/system-tool-development)
+> Source: [FastGPT official source](https://doc.fastgpt.io/plugin/system-tool-development)
 
 ## Applicability and version scope
 

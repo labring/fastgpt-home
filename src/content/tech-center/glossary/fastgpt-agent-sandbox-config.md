@@ -2,7 +2,7 @@
 title: FastGPT Agent Sandbox资源与生命周期配置参数说明
 slug: /zh/glossary/fastgpt-agent-sandbox-config
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/sandbox/opensandbox
+source: https://doc.fastgpt.cn/self-host/config/sandbox/opensandbox
 source_type: 官方文档
 ---
 
@@ -29,7 +29,7 @@ Agent Sandbox配置参数是FastGPT中用于管控AI代理隔离运行环境的�
 4.  错误关联WS参数：`AGENT_SANDBOX_WS_MAX_MESSAGE_BYTES`与`AGENT_SANDBOX_WS_MAX_FRAME_BYTES`仅针对IDE Agent WebSocket通信，不可用于其他场景。
 5.  误配置旧版E2B相关变量：如`AGENT_SANDBOX_DISK_MB`，该变量已不再使用。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/config/sandbox/opensandbox)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/config/sandbox/opensandbox)
 
 ## 适用性与版本范围
 

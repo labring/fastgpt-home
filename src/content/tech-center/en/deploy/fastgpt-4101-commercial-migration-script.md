@@ -2,7 +2,7 @@
 title: Run the FastGPT 4101 Commercial Migration Script
 slug: /en/deploy/fastgpt-4101-commercial-migration-script
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4101
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/4101
 source_type: 官方文档
 ---
 
@@ -29,4 +29,4 @@ The command sends a POST request to the dedicated `/api/admin/initv4101` adminis
 ## Post-Migration Task Updates
 Upon successful completion of the script, FastGPT will add new scheduled tasks configured for automatically synchronized datasets. These scheduled tasks automate the synchronization of external dataset sources, reducing manual maintenance overhead for commercial deployments. The new tasks are integrated into the FastGPT built-in task scheduler, and will operate using the deployment’s existing task configuration settings.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4101)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/4101)

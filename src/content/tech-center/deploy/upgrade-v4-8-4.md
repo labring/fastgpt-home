@@ -2,7 +2,7 @@
 title: FastGPT V4.8.4版本升级操作与更新内容说明
 slug: /zh/deploy/upgrade-v4-8-4
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/484
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/484
 source_type: 官方文档
 ---
 
@@ -26,7 +26,7 @@ curl --location --request POST 'https://{{host}}/api/admin/init/484' \
 ## 升级后怎么验证
 升级完成后可通过以下方式验证功能正常：1. 确认应用权限系统已更新，可正常配置应用相关权限。2. 确认应用列表支持文件夹分类管理。3. 测试文本分割功能，处理包含连续换行、制表符的大文本，确认运行无性能异常。4. 检查系统插件运行状态，确认无数据污染问题。5. 在Debug模式下创建相同source和target的节点连线，确认显示正常。6. 测试定时初始化任务，确认执行无错误。7. 测试应用调用传参功能，确认参数传递正常。8. 复制复杂节点，确认nodeId无错误。9. 确认界面全局主题已更新。商业版用户可通过初始化请求的返回结果确认流程执行完成。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/484)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/484)
 
 ## 适用性与版本范围
 

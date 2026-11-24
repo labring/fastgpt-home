@@ -2,7 +2,7 @@
 title: FastGPT Docker环境MongoDB数据恢复与迁移操作
 slug: /zh/reference/fastgpt-docker-mongo-restore-migration
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/migration/docker_mongo
+source: https://doc.fastgpt.cn/self-host/migration/docker_mongo
 source_type: 官方文档小节
 ---
 
@@ -21,4 +21,4 @@ source_type: 官方文档小节
 2. 需先检查Mongo运行状态再登录FastGPT Web，若Mongo报错，访问Web会出现报错。
 3. 正常Mongo启动状态不会显示`mongo is restarting`，出现该提示则代表启动错误。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/migration/docker_mongo)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/migration/docker_mongo)

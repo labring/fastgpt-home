@@ -2,7 +2,7 @@
 title: FastGPT 4.15.02 New Feature Technical Details
 slug: /en/deploy/fastgpt-41502-new-features
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41502
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/41502
 source_type: Official documentation
 ---
 
@@ -27,7 +27,7 @@ The following table outlines the specific validation behavior per endpoint:
 | `chatTest` | Duplicate `dataId` in request or active session |
 If a duplicate `dataId` is detected, the API returns an immediate business error, blocking invalid data from entering workflow execution and stream-resume merge logic. This validation is enabled by default for all listed endpoints with no additional user setup required.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41502)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-15/41502)
 
 ## Applicability and version scope
 

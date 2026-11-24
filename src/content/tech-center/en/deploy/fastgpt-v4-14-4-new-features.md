@@ -2,7 +2,7 @@
 title: FastGPT v4.14.4 New Technical Feature Overview
 slug: /en/deploy/fastgpt-v4-14-4-new-features
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4144
+source: https://doc.fastgpt.io/self-host/upgrading/4-14/4144
 source_type: Official documentation
 ---
 
@@ -34,7 +34,7 @@ This release includes updates for workflow builders and multi-tenant deployments
 - Multi-tenant custom domain configuration is now supported via Sealos for hosted deployments.
 - A new subscription plan logic system has been implemented for usage-based billing and tiered access controls.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4144)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-14/4144)
 
 ## Applicability and version scope
 

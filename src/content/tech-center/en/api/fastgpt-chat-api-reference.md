@@ -2,7 +2,7 @@
 title: Set up and use FastGPT Chat API
 slug: /en/api/fastgpt-chat-api-reference
 page_type: API
-source: https://doc.fastgpt.cn/en/openapi/chat
+source: https://doc.fastgpt.io/openapi/chat
 source_type: Official documentation
 ---
 
@@ -29,7 +29,7 @@ FastGPT offers two Chat API endpoint versions: v1 and v2. Version 2 was introduc
 | `authProxy` | Team API key settings | Optional (team-only) | Enable to proxy requests through a specific team member |
 | BaseUrl | Client configuration | Optional | Append `/v1` to resolve 404 endpoint errors |
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/openapi/chat)
+> Source: [FastGPT official source](https://doc.fastgpt.io/openapi/chat)
 
 ## Applicability and version scope
 

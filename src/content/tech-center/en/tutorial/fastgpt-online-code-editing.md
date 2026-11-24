@@ -2,7 +2,7 @@
 title: Work with FastGPT Online Code Editing Workspaces
 slug: /en/tutorial/fastgpt-online-code-editing
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/build/skill/development
+source: https://doc.fastgpt.io/guide/build/skill/development
 source_type: Official documentation
 ---
 
@@ -26,7 +26,7 @@ Follow this structured process to work with code in the FastGPT workspace:
 ## Operational Guidelines
 All code changes made in the online editor are confined to the debugging environment by default, ensuring live applications remain unaffected during development. No local file system changes are made to your host machine, as all edits and processes run within the isolated backend sandbox provided by FastGPT.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/skill/development)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/skill/development)
 
 ## Applicability and version scope
 

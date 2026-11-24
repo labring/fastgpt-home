@@ -2,7 +2,7 @@
 title: FastGPT知识库CSV导入模板的使用规范与操作步骤
 slug: /zh/reference/fastgpt-csv-dataset-template
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/template
+source: https://doc.fastgpt.cn/guide/dataset/template
 source_type: 官方文档小节
 ---
 
@@ -21,4 +21,4 @@ FastGPT知识库支持使用CSV模板导入批量数据。使用官方标准的C
 2. 若单元格内容包含逗号、换行或双引号，需按照CSV规则正确转义。
 3. 请勿随意调整模板的表头字段顺序与名称。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/dataset/template)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/dataset/template)

@@ -2,7 +2,7 @@
 title: Enforce FastGPT Skill Initialization Execution Constraints
 slug: /en/tutorial/fastgpt-skill-initialization-execution-constraints
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/build/skill/initialization
+source: https://doc.fastgpt.io/guide/build/skill/initialization
 source_type: Official documentation
 ---
 
@@ -23,7 +23,7 @@ For a complete breakdown of additional parameter specifications and underlying t
 **Debug Mode Limitations & Validation Steps**
 When accessing the skill edit interface in the FastGPT platform, the virtual machine hosting the skill’s execution environment will not automatically run the `entrypoint.sh` initialization script. To validate the script’s intended behavior, confirm correct configuration, or troubleshoot unexpected issues, skill developers must manually execute the script’s commands directly through the Workspace Terminal integrated into the skill edit workspace. No automated script execution is provided during the skill editing phase.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/skill/initialization)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/skill/initialization)
 
 ## Applicability and version scope
 

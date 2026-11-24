@@ -2,7 +2,7 @@
 title: 运行FastGPT 4815版本升级后的两项初始化脚本
 slug: /zh/reference/fastgpt-4815-upgrade-scripts
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4815
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4815
 source_type: 官方文档小节
 ---
 
@@ -35,4 +35,4 @@ source_type: 官方文档小节
 3. 两个脚本需分别独立执行，不可合并运行。
 4. 请勿重复执行同一脚本，避免重复触发数据处理操作。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4815)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/4815)

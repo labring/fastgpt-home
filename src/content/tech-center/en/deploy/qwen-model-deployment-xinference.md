@@ -2,7 +2,7 @@
 title: Deploy Qwen Models Using Xinference for FastGPT
 slug: /en/deploy/qwen-model-deployment-xinference
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/custom-models/xinference
+source: https://doc.fastgpt.io/self-host/custom-models/xinference
 source_type: Official documentation
 ---
 
@@ -24,7 +24,7 @@ A screenshot of the Xinference Launch Model tab is provided to assist with this 
 On the first deployment attempt, Xinference will download model parameter files from HuggingFace, which typically takes several minutes to complete. All downloaded model files are cached locally, so subsequent deployments of the same model will not require re-downloading assets.
 In addition to HuggingFace, Xinference supports downloading model parameters from alternative sources including ModelScope. Full configuration instructions for additional model sources are available in the official Xinference documentation.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/custom-models/xinference)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/custom-models/xinference)
 
 ## Applicability and version scope
 

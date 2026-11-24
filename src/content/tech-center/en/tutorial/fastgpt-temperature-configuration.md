@@ -2,7 +2,7 @@
 title: Control FastGPT Response Stability with Temperature
 slug: /en/tutorial/fastgpt-temperature-configuration
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/build/general/ai_settings
+source: https://doc.fastgpt.io/guide/build/general/ai_settings
 source_type: Official documentation
 ---
 
@@ -31,7 +31,7 @@ A formal reference for the parameter is as follows:
 |----------------|------------------|
 | Temperature    | Controls response stability and variability; lower values increase consistency, higher values increase creative diversity |
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/general/ai_settings)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/general/ai_settings)
 
 ## Applicability and version scope
 

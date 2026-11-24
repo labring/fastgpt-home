@@ -2,11 +2,11 @@
 title: 三个版本怎么选：先看租户，再看身份，最后看开票
 slug: /zh/compare/edition-selection-tenants-sso
 page_type: matrix
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173
+source: https://doc.fastgpt.cn/self-host/upgrading/4-17/4173
 source_type: 深度场景内容
 meta_title: 标准版专业版旗舰版怎么选
 meta_description: 按租户规模、单点登录与 OA 集成、独立开票支付三项差异判断 FastGPT 私有部署该选哪一档，并给出加服务器、扩集群与后续升级的授权边界。
-delivery_metadata: {"source_front_matter":{"slug":"edition-selection-tenants-sso","meta_title":"标准版专业版旗舰版怎么选","meta_description":"按租户规模、单点登录与 OA 集成、独立开票支付三项差异判断 FastGPT 私有部署该选哪一档，并给出加服务器、扩集群与后续升级的授权边界。","language":"zh","content_type":"matrix","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"edition-selection-tenants-sso","keywords":"版本选择,租户上限,单点登录,OA集成,授权边界","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"私有部署的三个版本怎么选","需求依据":"客户 2026-11-07 购买诉求第 4 条：授权与长期使用成本需要按档位核对。","事实来源":"FastGPT 产品知识库·内容收集清单（版本差异与授权条款）","内链":"https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173","排期":"W18 决策矩阵第 2 篇","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（来源版本，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核三档差异表述。"]}
+delivery_metadata: {"source_front_matter":{"slug":"edition-selection-tenants-sso","meta_title":"标准版专业版旗舰版怎么选","meta_description":"按租户规模、单点登录与 OA 集成、独立开票支付三项差异判断 FastGPT 私有部署该选哪一档，并给出加服务器、扩集群与后续升级的授权边界。","language":"zh","content_type":"matrix","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"edition-selection-tenants-sso","keywords":"版本选择,租户上限,单点登录,OA集成,授权边界","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"私有部署的三个版本怎么选","需求依据":"客户 2026-11-07 购买诉求第 4 条：授权与长期使用成本需要按档位核对。","事实来源":"FastGPT 产品知识库·内容收集清单（版本差异与授权条款）","内链":"https://doc.fastgpt.cn/self-host/upgrading/4-17/4173","排期":"W18 决策矩阵第 2 篇","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（来源版本，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核三档差异表述。"]}
 keywords: 版本选择,租户上限,单点登录,OA集成,授权边界
 schema_type: Article
 date_modified: 2026-11-16
@@ -18,7 +18,7 @@ date_modified: 2026-11-16
 
 ## 三道门槛的顺序
 
-对照材料：[FastGPT 官方说明](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173)。
+对照材料：[FastGPT 官方说明](https://doc.fastgpt.cn/self-host/upgrading/4-17/4173)。
 
 私有部署版以单台服务器 License 为基础授权，分标准版、专业版、旗舰版三档。三档的主要差异集中在三处：租户上限、是否支持单点登录与 OA 系统集成、是否包含独立开票与支付板块。
 

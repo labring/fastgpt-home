@@ -2,7 +2,7 @@
 title: FastGPT容器restart: always自动重启参数配置速查
 slug: /zh/glossary/fastgpt-container-restart-always-config
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/guide/admin/sso
+source: https://doc.fastgpt.cn/guide/admin/sso
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ restart: always是FastGPT相关容器部署时用于配置容器自动重启的�
 ## 容易搞错的地方
 需确保docker-compose.yml的语法格式正确，环境变量的配置需严格符合对应服务的要求。例如SSO服务的AUTH_TOKEN为鉴权信息，不可随意填写；MCP server服务的FASTGPT_ENDPOINT需填写FastGPT的正确访问地址。该参数仅适用于docker-compose部署的FastGPT相关容器，不适用于其他部署方式。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/admin/sso)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/admin/sso)
 
 ## 适用性与版本范围
 

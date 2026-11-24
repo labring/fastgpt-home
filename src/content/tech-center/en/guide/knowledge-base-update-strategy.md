@@ -7,7 +7,7 @@ is_part_of: FastGPT Tech Center
 meta_description: Choose full rebuilds, incremental updates, or scheduled sync for a FastGPT knowledge base, with checks for freshness and retrieval quality.
 delivery_source_type: Open-source repository docs and community threads
 source_type: 深度场景内容
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/env
+source: https://doc.fastgpt.cn/self-host/config/env
 meta_title: Updating a Knowledge Base: Full Rebuild, Incremental Append or Scheduled Sync | FastGPT Technical Center
 schema_type: TechArticle
 date_published: 2026-09-28
@@ -75,8 +75,8 @@ Keep existing synchronization logic while its interfaces remain supported by the
 - [Changed collection replacement behavior](https://github.com/labring/FastGPT/blob/v4.17.0/packages/service/core/dataset/collection/utils.ts)
 - [FastGPT v4.16.2 parsing Worker configuration changes](https://github.com/labring/FastGPT/releases/tag/v4.16.2)
 
-- [FastGPT environment variables](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
-- [FastGPT Docker Compose deployment](https://doc.fastgpt.cn/zh-CN/self-host/deploy/docker)
+- [FastGPT environment variables](https://doc.fastgpt.cn/self-host/config/env)
+- [FastGPT Docker Compose deployment](https://doc.fastgpt.cn/self-host/deploy/docker)
 
 ## Next steps
 

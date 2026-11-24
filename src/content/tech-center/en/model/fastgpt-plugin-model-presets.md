@@ -2,7 +2,7 @@
 title: Add and Maintain FastGPT Model Presets
 slug: /en/model/fastgpt-plugin-model-presets
 page_type: Model guides
-source: https://doc.fastgpt.cn/en/plugin/model-presets
+source: https://doc.fastgpt.io/plugin/model-presets
 source_type: Official documentation
 ---
 
@@ -26,7 +26,7 @@ All valid model presets include four standardized fields, as outlined in the tab
 ## Post-Update Validation
 After updating or adding model presets in the `fastgpt-plugin` repository, validating the changes is required to ensure proper functionality. This workflow involves deploying the updated plugin repository to a FastGPT instance, navigating to the model configuration menu, and confirming that the new or updated models appear in the available selection list. If models do not appear in the selection menu, verify that the preset files follow the v1.0+ plugin system structure and that no syntax errors are present in the configuration files.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/plugin/model-presets)
+> Source: [FastGPT official source](https://doc.fastgpt.io/plugin/model-presets)
 
 ## Applicability and version scope
 

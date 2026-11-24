@@ -2,7 +2,7 @@
 title: FastGPT 491 Version Bug Fix Details
 slug: /en/deploy/fastgpt-491-bug-fixes
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/491
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/491
 source_type: 官方文档
 ---
 
@@ -43,4 +43,4 @@ After deploying the FastGPT 491 update, follow these step-by-step checks to conf
 5. Initiate a dataset query with an active conversation thread, confirm that the full conversation history is included in the dataset query rewrite request.
 6. Log in with a restricted user account, navigate to a folder with a defined parentPath, and confirm the parentPath value is retained without being cleared after authentication.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/491)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/491)

@@ -2,7 +2,7 @@
 title: Resolves Transparent Enterprise AI Citation Issues
 slug: /en/tutorial/fastgpt-dataset-chunk-reader
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/chat/quoteList
+source: https://doc.fastgpt.io/guide/chat/quoteList
 source_type: Official documentation
 ---
 
@@ -22,7 +22,7 @@ Use the following workflow to access the Dataset Chunk Reader during a FastGPT c
 4. Review the full, unmodified source document directly in the chat window.
 5. Use the built-in navigation tool to jump directly to the exact passage cited by the AI model, eliminating the need to manually search external source files.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/chat/quoteList)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/chat/quoteList)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: FastGPT V4.8.11版本新增功能优化与修复说明
 slug: /zh/deploy/fastgpt-v4-8-11-release-notes
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4811
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4811
 source_type: 官方文档小节
 ---
 
@@ -17,4 +17,4 @@ source_type: 官方文档小节
 ## 关键配置步骤
 若要使用OpenAI o1模型，需在模型配置中添加defaultConfig字段，覆盖temperature、max_tokens和stream参数。需要注意，o1模型不支持stream模式，配置时需关闭该参数。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4811)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/4811)

@@ -2,7 +2,7 @@
 title: Set Up FastGPT Plugin Remote Debugging
 slug: /en/model/fastgpt-plugin-remote-debugging
 page_type: Model guides
-source: https://doc.fastgpt.cn/en/plugin/system-tool-development
+source: https://doc.fastgpt.io/plugin/system-tool-development
 source_type: Official documentation
 ---
 
@@ -23,7 +23,7 @@ Follow these structured steps to configure remote debugging:
 # Key Operational Details
 Debug plugins are exclusively visible to the user who generated the debug link, ensuring session isolation during development. The WSS debug channel depends entirely on network access to the test environment’s Gateway endpoint; any disruption to this network access will terminate the debugging session.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/plugin/system-tool-development)
+> Source: [FastGPT official source](https://doc.fastgpt.io/plugin/system-tool-development)
 
 ## Applicability and version scope
 

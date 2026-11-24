@@ -2,7 +2,7 @@
 title: Reinstall FastGPT System Tools During Upgrade
 slug: /en/deploy/fastgpt-system-tools-reinstall
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41504
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/41504
 source_type: Official documentation
 ---
 
@@ -21,7 +21,7 @@ This streamlined workflow reinstalls all legacy system tools in a single action,
 ## Individual Plugin Installation via Marketplace
 For users who prefer to install system tools individually rather than using the bulk zip package, separate plugin downloads are available through the FastGPT plugin marketplace. Before the official stable release of this upgrade, the valid marketplace URL is `https://v2.marketplace.fastgpt.cn`. All available system tools can be browsed and installed one at a time through this platform.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41504)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-15/41504)
 
 ## Applicability and version scope
 

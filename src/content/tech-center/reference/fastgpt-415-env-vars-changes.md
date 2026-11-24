@@ -2,7 +2,7 @@
 title: FastGPT 4.15版本升级的环境变量变更配置方法
 slug: /zh/reference/fastgpt-415-env-vars-changes
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41501
+source: https://doc.fastgpt.cn/self-host/upgrading/4-15/41501
 source_type: 官方文档小节
 ---
 
@@ -29,4 +29,4 @@ FastGPT 4.15版本升级后存在环境变量变更，需按新规范调整配�
 2.  TRUSTED_PROXY_IPS仅在TRUSTED_PROXY_ENABLE开启时生效，需按要求格式填写IP或CIDR列表。
 3.  所有配置参数均为可选，可根据实际业务需求调整。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41501)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-15/41501)

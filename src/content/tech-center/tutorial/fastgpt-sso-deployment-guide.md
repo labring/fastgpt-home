@@ -2,7 +2,7 @@
 title: 部署FastGPT SSO服务并完成对应对接配置的操作指南
 slug: /zh/tutorial/fastgpt-sso-deployment-guide
 page_type: 教程
-source: https://doc.fastgpt.cn/zh-CN/guide/admin/sso
+source: https://doc.fastgpt.cn/guide/admin/sso
 source_type: 官方文档
 ---
 
@@ -67,7 +67,7 @@ FastGPT SSO服务内置多种单点登录对接选项，不同协议、功能的
 ## 对接配置说明
 根据实际对接的单点登录提供商，需补充对应的专属环境变量。具体的环境变量参数需参考对应提供商的对接文档，将所需配置项添加至environment字段中，完成服务的完整配置。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/admin/sso)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/admin/sso)
 
 ## 适用性与版本范围
 

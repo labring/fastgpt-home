@@ -2,7 +2,7 @@
 title: 为FastGPT添加OpenAI o1系列模型的详细配置操作指南
 slug: /zh/deploy/add-openai-o1-models-fastgpt
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4811
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4811
 source_type: 官方文档小节
 ---
 
@@ -67,4 +67,4 @@ source_type: 官方文档小节
 ### 配置生效与验证
 完成配置文件的修改后，需重启FastGPT的部署服务，使新配置生效。服务重启完成后，登录FastGPT平台，即可在模型选择列表中看到新增的o1-mini和o1-preview模型。可通过创建新应用或修改现有应用的模型配置，测试这两款模型的调用效果。使用该模型需确保已正确配置OpenAI的API密钥，且账户已开通对应模型的使用权限。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4811)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/4811)

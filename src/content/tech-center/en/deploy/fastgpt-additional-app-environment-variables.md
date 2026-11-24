@@ -2,7 +2,7 @@
 title: Set Up Additional FastGPT App Environment Variables
 slug: /en/deploy/fastgpt-additional-app-environment-variables
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/env
+source: https://doc.fastgpt.io/self-host/config/env
 source_type: Official documentation
 ---
 
@@ -32,7 +32,7 @@ These environment variables control front-end and app-layer behavior for self-ho
 ## Deployment and Usage Notes
 To implement these variables for your self-hosted FastGPT instance, define them in your deployment environment—typically via a `.env` file or system environment variables—before starting the FastGPT services. Several variables have specific constraints: `SSE_MCP_SERVER_PROXY_ENDPOINT` must not include a trailing slash, and `OPENAPI_KEY_MAX_COUNT` has a minimum allowed value of 1, which will be enforced by the shared validation layer. Empty default variables will fall back to built-in system behaviors: for example, omitting `SYSTEM_FAVICON` will use the platform’s default system favicon, and leaving `PASSWORD_EXPIRED_MONTH` empty disables password expiration entirely. Variables requiring URLs, such as `CHINESE_IP_REDIRECT_URL` and `SYSTEM_FAVICON`, must use fully qualified addresses to function correctly.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/env)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/env)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: Migrate User-Bound OpenAI Accounts for FastGPT v4817
 slug: /en/deploy/fastgpt-v4817-openai-account-migration
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4817
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/4817
 source_type: 官方文档
 ---
 
@@ -33,4 +33,4 @@ This command sends a properly authenticated POST request to the FastGPT administ
 ## Post-Execution Confirmation
 Once the command is executed successfully, the migration of user-bound OpenAI accounts to team-level permissions will complete automatically. No additional manual steps are required to finalize the migration, as the script handles all necessary data transfers within your FastGPT deployment.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4817)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/4817)

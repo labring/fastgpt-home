@@ -2,7 +2,7 @@
 title: FastGPT 4.15.01 Operational and Security Fixes
 slug: /en/deploy/fastgpt-4-15-01-improvements
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41501
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/41501
 source_type: Official documentation
 ---
 
@@ -30,7 +30,7 @@ Critical security updates address potential exploit vectors:
 Several stability and alerting improvements reduce operational overhead for self-hosted deployments:
 - Duplicate rate limit alert suppression: Prevented duplicate site synchronization rate-limit messages from appearing in admin logs and user notifications, cutting down on unnecessary alert noise during repeated sync operations.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41501)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-15/41501)
 
 ## Applicability and version scope
 

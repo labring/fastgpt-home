@@ -6,7 +6,7 @@ source: https://fastgpt.cn/contact
 source_type: 深度场景内容
 meta_title: 技术支持如何进入项目验收
 meta_description: 从部署联调、培训、故障处理到升级窗口，说明 FastGPT 技术支持各档位的可见差异、双方分工的边界，以及把这些内容逐条写进项目验收清单的具体做法。
-delivery_metadata: {"source_front_matter":{"slug":"vendor-support-in-project-acceptance","meta_title":"技术支持如何进入项目验收","meta_description":"从部署联调、培训、故障处理到升级窗口，说明 FastGPT 技术支持各档位的可见差异、双方分工的边界，以及把这些内容逐条写进项目验收清单的具体做法。","language":"zh","content_type":"deep","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"vendor-support-in-project-acceptance","keywords":"技术支持,部署联调,培训,故障处理,升级窗口,验收清单","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"从部署联调到培训与升级，FastGPT 技术支持怎么进项目验收","需求依据":"客户 2026-11-07 购买诉求第 3 条：落地过程要有人跟，支持属于交付保障。","事实来源":"FastGPT 产品知识库·内容收集清单（支持档位与培训条款）；官方更新说明 4.17.2 与 4.17.3","内链":"https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173","排期":"W18 深度内容第 3 篇；发布日期由发稿安排确认","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["事实来源：见上表所列官方文档与版本说明。核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（官方更新说明口径，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核支持档位表述与升级说明。"]}
+delivery_metadata: {"source_front_matter":{"slug":"vendor-support-in-project-acceptance","meta_title":"技术支持如何进入项目验收","meta_description":"从部署联调、培训、故障处理到升级窗口，说明 FastGPT 技术支持各档位的可见差异、双方分工的边界，以及把这些内容逐条写进项目验收清单的具体做法。","language":"zh","content_type":"deep","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"vendor-support-in-project-acceptance","keywords":"技术支持,部署联调,培训,故障处理,升级窗口,验收清单","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"从部署联调到培训与升级，FastGPT 技术支持怎么进项目验收","需求依据":"客户 2026-11-07 购买诉求第 3 条：落地过程要有人跟，支持属于交付保障。","事实来源":"FastGPT 产品知识库·内容收集清单（支持档位与培训条款）；官方更新说明 4.17.2 与 4.17.3","内链":"https://doc.fastgpt.cn/self-host/upgrading/4-17/4173","排期":"W18 深度内容第 3 篇；发布日期由发稿安排确认","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["事实来源：见上表所列官方文档与版本说明。核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（官方更新说明口径，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核支持档位表述与升级说明。"]}
 keywords: 技术支持,部署联调,培训,故障处理,升级窗口,验收清单
 schema_type: Article
 date_modified: 2026-11-16
@@ -120,5 +120,5 @@ v4.17.2 的升级说明另列了两项手动任务，顺序固定：先迁移旧
 | --- | --- | --- |
 | 支持档位、付费档位包含项、培训权益、首次部署协助与场景落地范围 | 当期商业方案 | [FastGPT 商务咨询：授权、部署与支持范围](https://fastgpt.cn/contact) |
 | 培训与交付支持 | 当期服务安排 | [FastGPT 商务咨询](https://fastgpt.cn/contact) |
-| 索引三态与召回范围 | v4.17.2 | [self-host/upgrading/4-17/4172](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4172) |
-| 镜像成套升级、三项回填任务、价格迁移 | v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173) |
+| 索引三态与召回范围 | v4.17.2 | [self-host/upgrading/4-17/4172](https://doc.fastgpt.cn/self-host/upgrading/4-17/4172) |
+| 镜像成套升级、三项回填任务、价格迁移 | v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/self-host/upgrading/4-17/4173) |

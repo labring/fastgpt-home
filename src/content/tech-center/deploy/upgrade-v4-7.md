@@ -2,7 +2,7 @@
 title: FastGPT V4.7版本升级操作与更新内容解读
 slug: /zh/deploy/upgrade-v4-7
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/47
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/47
 source_type: 官方文档
 ---
 
@@ -40,7 +40,7 @@ curl --location --request POST 'https://{{host}}/api/admin/initv47' \
 ## 升级后怎么验证
 可通过以下方式验证升级效果：检查插件parentId是否初始化完成；测试工具调用模块是否正常运行；测试分类和内容提取的functionCall模式是否生效；测试HTTP插件是否可正常创建；测试ReRank模型是否可正常调用，本地模型确认镜像版本正确，cohere模型确认配置参数无误；检查PG HNSW索引是否生效，搜索速度是否提升；测试Safari浏览器语音输入是否正常；测试自定义分割规则输入正则特殊字符是否不会导致前端崩溃；检查docker部署是否自动初始化副本集；测试浏览器读取文件是否自动推断编码减少乱码；测试GET请求是否可正常发起，确认http请求body不传时传入undefined的问题已修复。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/47)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/47)
 
 ## 适用性与版本范围
 

@@ -2,7 +2,7 @@
 title: FastGPT V4.14.5.1版本升级内容与操作指引
 slug: /zh/deploy/upgrade-v4-14-5-1
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41451
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/41451
 source_type: 官方文档
 ---
 
@@ -26,7 +26,7 @@ curl --location --request POST 'https://{{host}}/api/admin/initv41451' \
 ## 升级后怎么验证
 升级完成后可通过以下方式验证：1. 打开Markdown表格，确认存在导出csv的功能；2. 测试工作流触摸板移动、粘贴节点操作是否符合优化后的规则；3. 配置系统工具工具集的系统密钥，确认子工具可正常读取密钥；4. 创建密码类型、时间类型的全局变量，验证必填校验与月份选择功能正常；5. 测试手动复制弹窗，确认换行未丢失；6. 发起未传入文件上传类型变量的对话请求，确认接口无报错。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41451)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-14/41451)
 
 ## 适用性与版本范围
 

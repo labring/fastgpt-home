@@ -2,7 +2,7 @@
 title: FastGPT中source字段的定义与使用方法说明
 slug: /zh/glossary/fastgpt-source-field-usage
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/template
+source: https://doc.fastgpt.cn/guide/dataset/template
 source_type: 官方文档
 ---
 
@@ -17,9 +17,9 @@ source是FastGPT中用于知识库元数据标识与远程调试路径匹配的�
 ## 容易搞错的地方
 部分使用者会误将source作为单独列添加到导入模板中，实际source需嵌套在metadata列的JSON结构内。调试相关密钥如connectionKey属于长期调试连接密钥，仅在开启或刷新调试通道时明文返回，泄露后需立即刷新或关闭调试通道。多副本Gateway部署时，若未正确配置session删除请求的路由，会导致请求失败。CONNECTION_GATEWAY_AUTH_TOKEN仅提供给Plugin Server使用，本地CLI不需要也不应获取该密钥。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/dataset/template)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/dataset/template)
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/config/remote-debug-suite)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/config/remote-debug-suite)
 
 ## 适用性与版本范围
 

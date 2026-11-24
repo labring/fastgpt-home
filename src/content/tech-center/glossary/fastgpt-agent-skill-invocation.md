@@ -2,7 +2,7 @@
 title: 说明FastGPT智能体技能调用的配置与使用方法
 slug: /zh/glossary/fastgpt-agent-skill-invocation
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/guide/build/skill/integration
+source: https://doc.fastgpt.cn/guide/build/skill/integration
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ source_type: 官方文档
 ## 容易搞错的地方
 智能自动调用功能的触发依赖模型的智能程度，模型不足够智能时无法自动触发调用。虚拟机文件查看仅能查看当前沙盒内的最新内容，无法访问历史沙盒的文件。多技能绑定需选择不同类型的技能，避免同技能重复绑定导致冲突。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/skill/integration)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/skill/integration)
 
 ## 适用性与版本范围
 

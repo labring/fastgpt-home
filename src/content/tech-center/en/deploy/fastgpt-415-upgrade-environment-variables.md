@@ -2,7 +2,7 @@
 title: Add Mandatory Environment Variables for FastGPT 4.15 Upgrade
 slug: /en/deploy/fastgpt-415-upgrade-environment-variables
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41505
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/41505
 source_type: Official documentation
 ---
 
@@ -32,7 +32,7 @@ If you have enabled the Agent Sandbox feature, add the following two environment
 3. If you use Agent Sandbox, append the additional variables from the second section to your `fastgpt` service configuration.
 4. Restart all FastGPT services to apply the updated environment variables.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41505)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-15/41505)
 
 ## Applicability and version scope
 

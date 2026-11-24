@@ -2,7 +2,7 @@
 title: FastGPT自部署版本从低于4.12.0升级到4.9.3的操作参考
 slug: /zh/reference/fastgpt-upgrade-493
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/493
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/493
 source_type: 官方文档小节
 ---
 
@@ -23,4 +23,4 @@ source_type: 官方文档小节
 2. 不同版本的升级要求存在差异，需严格对照当前版本的官方标注操作，避免遗漏配置调整或脚本执行步骤。
 3. 升级前需确认当前版本处于<4.12.0区间，超出该范围的版本需参考对应版本的升级文档。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/493)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/493)

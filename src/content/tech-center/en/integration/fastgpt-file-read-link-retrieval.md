@@ -2,7 +2,7 @@
 title: Retrieve FastGPT File View Access Links
 slug: /en/integration/fastgpt-file-read-link-retrieval
 page_type: Integrations
-source: https://doc.fastgpt.cn/en/guide/dataset/third-party/api_dataset
+source: https://doc.fastgpt.io/guide/dataset/third-party/api_dataset
 source_type: Official documentation
 ---
 
@@ -45,7 +45,7 @@ The API returns a JSON-formatted response with standardized fields to indicate r
 | `message` | String | Provides additional context for the request outcome; an empty string is returned for successful requests |
 | `data.url` | String | Direct access link to the original file. This link will automatically open the file when accessed in a compatible web browser or media viewer. |
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/third-party/api_dataset)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/third-party/api_dataset)
 
 ## Applicability and version scope
 

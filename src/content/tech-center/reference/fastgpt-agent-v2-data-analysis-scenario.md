@@ -2,7 +2,7 @@
 title: FastGPT Agent V2智能数据分析Agent的适用场景与操作方法讲解
 slug: /zh/reference/fastgpt-agent-v2-data-analysis-scenario
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/getting-started/quick-start
+source: https://doc.fastgpt.cn/guide/getting-started/quick-start
 source_type: 官方文档小节
 ---
 
@@ -21,4 +21,4 @@ Agent V2 适用于开放式、多步骤且需动态规划的任务，数据分�
 2. 固定路径的工作流无法覆盖所有个性化数据分析需求，Agent V2可根据问题动态规划执行步骤；
 3. 无需提前规划具体执行步骤，仅需明确任务目标并提供相关文件即可。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/getting-started/quick-start)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/getting-started/quick-start)

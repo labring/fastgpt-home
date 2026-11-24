@@ -7,7 +7,7 @@ is_part_of: FastGPT Tech Center
 meta_description: Compare local-volume-backed MinIO, shared MinIO, and external S3-compatible storage for FastGPT by capacity, access, backups, and migration needs.
 delivery_source_type: Open-source repository docs and community threads
 source_type: 深度场景内容
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/env
+source: https://doc.fastgpt.cn/self-host/config/env
 meta_title: Where Files Live: Local Volumes, Object Storage and External S3 | FastGPT Technical Center
 schema_type: TechArticle
 date_published: 2026-09-28
@@ -77,8 +77,8 @@ Retaining portable objects and configuration records helps reduce the cost of la
 - [FastGPT v4.14.4 legacy upload migration](https://github.com/labring/FastGPT/blob/v4.17.0/document/content/self-host/upgrading/4-14/4144.mdx)
 - [Docker volume persistence](https://docs.docker.com/engine/storage/volumes/)
 
-- [FastGPT environment variables](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
-- [FastGPT Docker Compose deployment](https://doc.fastgpt.cn/zh-CN/self-host/deploy/docker)
+- [FastGPT environment variables](https://doc.fastgpt.cn/self-host/config/env)
+- [FastGPT Docker Compose deployment](https://doc.fastgpt.cn/self-host/deploy/docker)
 
 ## Next steps
 

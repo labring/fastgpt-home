@@ -2,7 +2,7 @@
 title: 获取语雀Token和User ID用于FastGPT第三方数据集对接
 slug: /zh/integration/yuque-token-userid-fastgpt
 page_type: 集成
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/yuque_dataset
+source: https://doc.fastgpt.cn/guide/dataset/third-party/yuque_dataset
 source_type: 官方文档
 ---
 
@@ -25,7 +25,7 @@ FastGPT支持对接语雀作为第三方数据集来源，用于导入知识库�
 | 获取 User ID | ![获取企业版User ID](/imgs/image-108.png) |
 直接按指引完成操作即可获取所需参数。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/yuque_dataset)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/dataset/third-party/yuque_dataset)
 
 ## 适用性与版本范围
 

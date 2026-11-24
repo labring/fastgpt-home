@@ -2,7 +2,7 @@
 title: FastGPT V4.16.0版本升级的操作与验证方法
 slug: /zh/deploy/upgrade-v4-16-0
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/4160
+source: https://doc.fastgpt.cn/self-host/upgrading/4-16/4160
 source_type: 官方文档
 ---
 
@@ -20,7 +20,7 @@ V4.16.0版本更新了Agent沙盒相关依赖与配置逻辑，新增AGENT_SANDB
 ## 升级后怎么验证
 访问agent-sandbox-proxy的`https://{{host}}/health`接口确认服务正常。重新执行各迁移命令的dry-run模式，确认系统模型清洗的wouldUpdate为0，HTTP工具迁移的changedDocumentCount为0，沙盒迁移处理完成。测试Agent Sandbox功能、系统模型配置加载、手动HTTP工具调用是否正常工作。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/4160)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-16/4160)
 
 ## 适用性与版本范围
 

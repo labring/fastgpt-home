@@ -2,7 +2,7 @@
 title: FastGPT插件项目的仓库结构与分层设计说明
 slug: /zh/reference/fastgpt-plugin-repo-structure
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/plugin/intro
+source: https://doc.fastgpt.cn/plugin/intro
 source_type: 官方文档小节
 ---
 
@@ -27,4 +27,4 @@ fastgpt-plugin 采用 pnpm workspace 组织 Monorepo，参考 Clean Architecture
 5. sdk目录内容仅面向外部使用者，不得在项目内部直接引用
 6. 开发系统工具或维护模型预设，可分别参考系统工具开发指南和增加模型预设相关文档
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/plugin/intro)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/plugin/intro)

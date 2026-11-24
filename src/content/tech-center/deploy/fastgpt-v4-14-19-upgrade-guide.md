@@ -2,7 +2,7 @@
 title: FastGPT V4.14.19版本升级操作与更新说明
 slug: /zh/deploy/fastgpt-v4-14-19-upgrade-guide
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41419
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/41419
 source_type: 官方文档
 ---
 
@@ -19,4 +19,4 @@ FastGPT V4.14.19属于FastGPT 4.14.x系列的维护迭代版本，主要聚焦�
 ## 版本升级适配说明
 本次V4.14.19版本未涉及环境变量变更，升级过程不会对现有系统的配置、数据与业务运行造成影响，用户可按照上述步骤安全完成版本升级。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41419)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-14/41419)

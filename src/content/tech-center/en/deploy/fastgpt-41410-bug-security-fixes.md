@@ -2,7 +2,7 @@
 title: FastGPT 4.14.10 Bug and Security Fixes
 slug: /en/deploy/fastgpt-41410-bug-security-fixes
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-14/41410
+source: https://doc.fastgpt.io/self-host/upgrading/4-14/41410
 source_type: Official documentation
 ---
 
@@ -29,7 +29,7 @@ The following table lists all resolved issues as published in the official updat
 ## Key Operational and Security Improvements
 This release addresses workflow reliability, model configuration accuracy, and system security. The workflow fixes ensure sub-workflow global variable defaults apply correctly, and catch workflow tool errors to prevent unreported execution failures. The model configuration fixes restore configured rerank model visibility in agent mode, and resolve the BGE-M3 embedding model's constant 0 output. The security patches resolve the login API vulnerability and block MCP SSRF attacks, hardening self-hosted deployments.
 
-> [FastGPT 4.14.10 upgrade notes](https://doc.fastgpt.cn/en/self-host/upgrading/4-14/41410)
+> [FastGPT 4.14.10 upgrade notes](https://doc.fastgpt.io/self-host/upgrading/4-14/41410)
 
 ## Applicability and version scope
 

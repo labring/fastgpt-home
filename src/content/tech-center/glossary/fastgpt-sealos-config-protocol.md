@@ -2,7 +2,7 @@
 title: 说明FastGPT中Sealos相关的开源协议与依赖源配置
 slug: /zh/glossary/fastgpt-sealos-config-protocol
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/guide/version/opensource/license
+source: https://doc.fastgpt.cn/guide/version/opensource/license
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ Sealos是FastGPT开源协议附加条款的对接方，同时为FastGPT Agent沙
 ## 容易搞错的地方
 一是未获得明确书面授权前，不得使用fastgpt.io源码运营与fastgpt.io服务类似的多租户SaaS服务。二是apt镜像仅在root权限的Agent沙箱中生效，非root环境无法生效。三是删除配置环境变量后，仅带有.copy备份的配置文件会恢复，无备份的配置文件不会自动恢复。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/version/opensource/license)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/version/opensource/license)
 
 ## 适用性与版本范围
 

@@ -2,7 +2,7 @@
 title: FastGPT V4.9.6版本升级内容与操作指南
 slug: /zh/deploy/upgrade-v4-9-6
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/496
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/496
 source_type: 官方文档
 ---
 
@@ -58,7 +58,7 @@ source_type: 官方文档
 
 可通过以下方式验证升级效果：检查工作台是否显示新增的二级菜单并合并工具箱；尝试创建基于MCP SSE协议的工具，验证调用流程正常；运行包含交互节点的子工作流，确认子工作流数据可正常恢复；调用completion v1接口并传入interactive参数，验证API调用无失败；配置grok3、GPT4.1等新增模型，确认系统配置可正常保存并调用。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/496)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/496)
 
 ## 适用性与版本范围
 

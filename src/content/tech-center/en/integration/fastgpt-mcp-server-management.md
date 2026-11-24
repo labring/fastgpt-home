@@ -2,7 +2,7 @@
 title: Set Up and Manage FastGPT MCP Servers
 slug: /en/integration/fastgpt-mcp-server-management
 page_type: Integrations
-source: https://doc.fastgpt.cn/en/guide/build/publish/mcp_server
+source: https://doc.fastgpt.io/guide/build/publish/mcp_server
 source_type: Official documentation
 ---
 
@@ -28,7 +28,7 @@ The following table lists the configurable fields available when creating an MCP
 | Server Name | A user-defined display name for the MCP Server, used to distinguish between multiple deployed control planes |
 | Associated Applications | A selection of existing FastGPT applications to associate with the MCP Server, enabling unified management of linked workloads |
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/publish/mcp_server)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/publish/mcp_server)
 
 ## Applicability and version scope
 

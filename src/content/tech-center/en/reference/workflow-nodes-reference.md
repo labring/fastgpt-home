@@ -71,27 +71,27 @@ Most of these are internal or placeholder nodes and do not appear in the node pa
 
 | Node type | Name | As tool | Inputs / required | Outputs | Docs |
 | --- | --- | --- | --- | --- | --- |
-| `chatNode` | AI Chat | Yes | 22 / 0 | 4 | [Node documentation](https://doc.fastgpt.io/en/guide/build/workflow/nodes/ai_chat) |
+| `chatNode` | AI Chat | Yes | 22 / 0 | 4 | [Node documentation](https://doc.fastgpt.io/guide/build/workflow/nodes/ai_chat) |
 | `agent` | Agent | — | 33 / 0 | 2 | — |
-| `classifyQuestion` | Classify | Yes | 5 / 0 | 1 | [Node documentation](https://doc.fastgpt.io/en/guide/build/workflow/nodes/question_classify) |
+| `classifyQuestion` | Classify | Yes | 5 / 0 | 1 | [Node documentation](https://doc.fastgpt.io/guide/build/workflow/nodes/question_classify) |
 | `toolParams` | Custom Tool Variable | Yes | 0 / 0 | 0 | — |
-| `datasetSearchNode` | Dataset Search | Yes | 14 / 1 | 2 | [Node documentation](https://doc.fastgpt.io/en/guide/build/workflow/nodes/dataset_search) |
+| `datasetSearchNode` | Dataset Search | Yes | 14 / 1 | 2 | [Node documentation](https://doc.fastgpt.io/guide/build/workflow/nodes/dataset_search) |
 | `stopTool` | Stop Tool calling | — | 0 / 0 | 0 | — |
-| `contentExtract` | Text Extract | Yes | 5 / 1 | 3 | [Node documentation](https://doc.fastgpt.io/en/guide/build/workflow/nodes/content_extract) |
-| `toolCall` | Tool calling | Yes | 20 / 0 | 2 | [Node documentation](https://doc.fastgpt.io/en/guide/build/workflow/nodes/tool) |
+| `contentExtract` | Text Extract | Yes | 5 / 1 | 3 | [Node documentation](https://doc.fastgpt.io/guide/build/workflow/nodes/content_extract) |
+| `toolCall` | Tool calling | Yes | 20 / 0 | 2 | [Node documentation](https://doc.fastgpt.io/guide/build/workflow/nodes/tool) |
 
 ## Tools (10 nodes)
 
 | Node type | Name | As tool | Inputs / required | Outputs | Docs |
 | --- | --- | --- | --- | --- | --- |
-| `answerNode` | Assigned Reply | Yes | 1 / 1 | 0 | [Node documentation](https://doc.fastgpt.io/en/guide/build/workflow/nodes/reply) |
-| `code` | Code run | Yes | 5 / 2 | 5 | [Node documentation](https://doc.fastgpt.io/en/guide/build/workflow/nodes/sandbox-v2) |
-| `ifElseNode` | Condition | Yes | 1 / 0 | 1 | [Node documentation](https://doc.fastgpt.io/en/guide/build/workflow/nodes/tfswitch) |
-| `httpRequest468` | HTTP | Yes | 10 / 3 | 4 | [Node documentation](https://doc.fastgpt.io/en/guide/build/workflow/nodes/http) |
-| `loopRun` | Loop Node | Yes | 7 / 2 | 1 | [Node documentation](https://doc.fastgpt.io/en/guide/build/workflow/nodes/loop_run) |
+| `answerNode` | Assigned Reply | Yes | 1 / 1 | 0 | [Node documentation](https://doc.fastgpt.io/guide/build/workflow/nodes/reply) |
+| `code` | Code run | Yes | 5 / 2 | 5 | [Node documentation](https://doc.fastgpt.io/guide/build/workflow/nodes/sandbox-v2) |
+| `ifElseNode` | Condition | Yes | 1 / 0 | 1 | [Node documentation](https://doc.fastgpt.io/guide/build/workflow/nodes/tfswitch) |
+| `httpRequest468` | HTTP | Yes | 10 / 3 | 4 | [Node documentation](https://doc.fastgpt.io/guide/build/workflow/nodes/http) |
+| `loopRun` | Loop Node | Yes | 7 / 2 | 1 | [Node documentation](https://doc.fastgpt.io/guide/build/workflow/nodes/loop_run) |
 | `loopRunBreak` | Loop break | — | 0 / 0 | 0 | — |
-| `parallelRun` | Parallel Run | Yes | 7 / 3 | 3 | [Node documentation](https://doc.fastgpt.io/en/guide/build/workflow/nodes/parallel_run) |
-| `textEditor` | Text Editor | Yes | 1 / 1 | 1 | [Node documentation](https://doc.fastgpt.io/en/guide/build/workflow/nodes/text_editor) |
+| `parallelRun` | Parallel Run | Yes | 7 / 3 | 3 | [Node documentation](https://doc.fastgpt.io/guide/build/workflow/nodes/parallel_run) |
+| `textEditor` | Text Editor | Yes | 1 / 1 | 1 | [Node documentation](https://doc.fastgpt.io/guide/build/workflow/nodes/text_editor) |
 | `readFiles` | Read files | Yes | 1 / 1 | 3 | — |
 | `variableUpdate` | Update variables | Yes | 1 / 0 | 0 | — |
 
@@ -113,14 +113,14 @@ Most of these are internal or placeholder nodes and do not appear in the node pa
 | Node type | Name | As tool | Inputs / required | Outputs | Docs |
 | --- | --- | --- | --- | --- | --- |
 | `formInput` | Form input | Yes | 2 / 0 | 1 | — |
-| `userSelect` | User Select | Yes | 2 / 0 | 1 | [Node documentation](https://doc.fastgpt.io/en/guide/build/workflow/nodes/user-selection) |
+| `userSelect` | User Select | Yes | 2 / 0 | 1 | [Node documentation](https://doc.fastgpt.io/guide/build/workflow/nodes/user-selection) |
 
 ## Other (6 nodes)
 
 | Node type | Name | As tool | Inputs / required | Outputs | Docs |
 | --- | --- | --- | --- | --- | --- |
-| `customFeedback` | Custom Feedback | Yes | 1 / 1 | 0 | [Node documentation](https://doc.fastgpt.io/en/guide/build/workflow/nodes/custom_feedback) |
-| `datasetConcatNode` | Dataset search citation merge | — | 2 / 0 | 1 | [Node documentation](https://doc.fastgpt.io/en/guide/build/workflow/nodes/knowledge_base_search_merge) |
+| `customFeedback` | Custom Feedback | Yes | 1 / 1 | 0 | [Node documentation](https://doc.fastgpt.io/guide/build/workflow/nodes/custom_feedback) |
+| `datasetConcatNode` | Dataset search citation merge | — | 2 / 0 | 1 | [Node documentation](https://doc.fastgpt.io/guide/build/workflow/nodes/knowledge_base_search_merge) |
 | `appModule` | — | — | 0 / 0 | 0 | — |
 | `pluginModule` | — | Yes | 0 / 0 | 0 | — |
 | `tool` | — | Yes | 0 / 0 | 0 | — |

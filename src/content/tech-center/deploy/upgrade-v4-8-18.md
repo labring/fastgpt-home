@@ -2,7 +2,7 @@
 title: FastGPT V4.8.18版本升级操作与更新内容说明
 slug: /zh/deploy/upgrade-v4-8-18
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4818
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4818
 source_type: 官方文档
 ---
 
@@ -22,7 +22,7 @@ curl --location --request POST 'https://{{host}}/api/admin/initv4818' \
 请求中需将{{rootkey}}替换为环境变量中的rootkey，{{host}}替换为FastGPT域名。请求执行后将迁移全文检索表，日志会打印已迁移的数据长度。
 ## 升级后怎么验证
 升级完成后可通过以下方式验证功能正常：1. 确认全文检索功能恢复正常。2. 测试通过JSON配置创建应用、通过CURL脚本创建HTTP插件功能。3. 商业版用户确认部门架构权限模式可正常配置使用。4. 上传HTML文件，验证base64图片可自动转换为图片链接。5. 上传CSV文件，验证乱码问题已解决。6. 测试分享链接生成随机用户头像功能。7. 检查插件计费逻辑正常。
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4818)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/4818)
 
 ## 适用性与版本范围
 

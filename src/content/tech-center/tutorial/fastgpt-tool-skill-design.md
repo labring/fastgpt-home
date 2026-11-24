@@ -2,7 +2,7 @@
 title: FastGPT智能体从工具到技能的核心设计原理说明
 slug: /zh/tutorial/fastgpt-tool-skill-design
 page_type: 教程
-source: https://doc.fastgpt.cn/zh-CN/guide/build/skill/intro
+source: https://doc.fastgpt.cn/guide/build/skill/intro
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ source_type: 官方文档
 ## 工具与技能的定位差异
 工具仅提供基础动作接口，仅能完成单一简单动作，无法支撑多步骤的复杂任务。技能则整合了完整的做事章法与专业逻辑，可将多个基础动作组合为完整的执行流程，完成预设的复杂任务。该模块化设计可让系统灵活调用不同技能。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/skill/intro)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/skill/intro)
 
 ## 适用性与版本范围
 

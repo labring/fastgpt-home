@@ -2,7 +2,7 @@
 title: FastGPT V4.12.4版本升级内容与操作指引
 slug: /zh/deploy/upgrade-v4-12-4
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-12/4124
+source: https://doc.fastgpt.cn/self-host/upgrading/4-12/4124
 source_type: 官方文档
 ---
 
@@ -27,7 +27,7 @@ curl --location --request POST 'https://{{host}}/api/admin/initv4124' \
 ## 升级后怎么验证
 可通过以下方式验证升级效果：确认各更新镜像的版本符合要求；商业版用户可查看是否新增企微发布渠道；测试Prompt编辑器的列表渲染功能；上传知识库文件，确认返回对应上传目录；测试删除应用的操作流程；测试HTTP工具编辑功能；测试python代码运行时传入boolean入参是否正常；查看数据页返回知识库列表是否保持分页；测试用户选择UI的展示效果。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-12/4124)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-12/4124)
 
 ## 适用性与版本范围
 

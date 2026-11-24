@@ -2,7 +2,7 @@
 title: 配置FastGPT问题分类节点的自定义调用函数参数
 slug: /zh/reference/fastgpt-question-classify-function-config
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/question_classify
+source: https://doc.fastgpt.cn/guide/build/workflow/nodes/question_classify
 source_type: 官方文档小节
 ---
 
@@ -22,4 +22,4 @@ source_type: 官方文档小节
 2. 无需关注系统生成的非枚举返回值，只需确保参数格式符合要求即可正常触发分类功能。
 3. 必须严格遵循参数结构，遗漏required字段或未正确配置枚举值会导致分类功能失效。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/question_classify)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/workflow/nodes/question_classify)

@@ -2,7 +2,7 @@
 title: Detailed Code Improvements for FastGPT 4.16.0
 slug: /en/deploy/fastgpt-4-16-0-code-improvements
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-16/4160
+source: https://doc.fastgpt.io/self-host/upgrading/4-16/4160
 source_type: 官方文档
 ---
 
@@ -22,4 +22,4 @@ The platform’s workflow orchestration and tool integration systems were optimi
 | Tool Calls | Unified form rendering for consistent user input |
 | JSON Schema Support | Extended to additional data types |
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/4-16/4160)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/4-16/4160)

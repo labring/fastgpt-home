@@ -2,7 +2,7 @@
 title: Sealos环境下FastGPT的版本升级操作说明
 slug: /zh/deploy/fastgpt-sealos-upgrade-guide
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/deploy/sealos
+source: https://doc.fastgpt.cn/self-host/deploy/sealos
 source_type: 官方文档
 ---
 
@@ -20,7 +20,7 @@ Sealos部署的FastGPT版本升级需遵循官方升级指引，所有操作需�
 6. 点击变更/重启按钮，系统将自动拉取对应版本的镜像完成更新。
 7. 若目标版本要求执行初始化脚本，则完成更新后执行对应脚本。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/deploy/sealos)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/deploy/sealos)
 
 ## 适用性与版本范围
 

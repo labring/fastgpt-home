@@ -2,7 +2,7 @@
 title: Run FastGPT 4.12.4 Commercial Migration Script
 slug: /en/deploy/fastgpt-4124-migration-script
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-12/4124
+source: https://doc.fastgpt.io/self-host/upgrading/4-12/4124
 source_type: 官方文档
 ---
 
@@ -26,4 +26,4 @@ curl --location --request POST 'https://{{host}}/api/admin/initv4124' \
 ## Script Functional Capabilities
 The migration script performs one targeted administrative update to your FastGPT deployment: it adds owner permissions to all existing resources within your instance. This action aligns resource access controls to meet the updated permission requirements for FastGPT 4.12.4, ensuring that all users and teams retain correct access levels after the upgrade completes. No additional data modifications, configuration changes, or system restarts are triggered by this script beyond the permission update.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/4-12/4124)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/4-12/4124)

@@ -2,7 +2,7 @@
 title: FastGPT自定义域名的完整配置流程与注意事项
 slug: /zh/glossary/fastgpt-custom-domain-config-setup
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/guide/workspace/customDomain
+source: https://doc.fastgpt.cn/guide/workspace/customDomain
 source_type: 官方文档
 ---
 
@@ -24,7 +24,7 @@ source_type: 官方文档
 2. DNS记录类型必须为CNAME，不可使用其他记录类型。
 3. 解析记录添加后需等待系统检测生效，未及时获取记录可执行重试操作。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/workspace/customDomain)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/workspace/customDomain)
 
 ## 适用性与版本范围
 

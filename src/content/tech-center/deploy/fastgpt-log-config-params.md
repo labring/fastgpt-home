@@ -2,7 +2,7 @@
 title: 配置FastGPT的日志打印与OTEL日志收集相关环境参数
 slug: /zh/deploy/fastgpt-log-config-params
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/signoz
+source: https://doc.fastgpt.cn/self-host/config/signoz
 source_type: 官方文档
 ---
 
@@ -24,7 +24,7 @@ LOG_OTEL_URL=http://localhost:4318/v1/logs # 你的 OTLP 收集器的地址，�
 
 ## 生效配置
 完成环境变量修改后，需重启FastGPT服务以加载新的配置参数，确保所有设置正常生效。
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/config/signoz)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/config/signoz)
 
 ## 适用性与版本范围
 

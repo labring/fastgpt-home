@@ -2,7 +2,7 @@
 title: Retrieve FastGPT Dataset Details via API
 slug: /en/api/fastgpt-dataset-detail-api
 page_type: API
-source: https://doc.fastgpt.cn/en/openapi/dataset
+source: https://doc.fastgpt.io/openapi/dataset
 source_type: Official documentation
 ---
 
@@ -88,7 +88,7 @@ The `data` object includes the following fields:
 }
 ```
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/openapi/dataset)
+> Source: [FastGPT official source](https://doc.fastgpt.io/openapi/dataset)
 
 ## Applicability and version scope
 

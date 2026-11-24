@@ -2,7 +2,7 @@
 title: Configure FastGPT Agent Sandbox Proxy Service
 slug: /en/deploy/fastgpt-agent-sandbox-proxy-config
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/sandbox/opensandbox
+source: https://doc.fastgpt.io/self-host/config/sandbox/opensandbox
 source_type: Official documentation
 ---
 
@@ -31,7 +31,7 @@ To adjust the preview port:
 2. Update your Docker Compose port mapping to map a host port to the new container port, for example `3007:1007`.
 3. Configure the `AGENT_SANDBOX_PREVIEW_PROXY_URL` environment variable to point to the host’s new preview port.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/sandbox/opensandbox)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/sandbox/opensandbox)
 
 ## Applicability and version scope
 

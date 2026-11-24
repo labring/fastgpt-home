@@ -2,7 +2,7 @@
 title: 在FastGPT中为AIProxy协议新增模型渠道的配置方法
 slug: /zh/reference/add-aiproxy-channel-fastgpt
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/plugin/model-presets
+source: https://doc.fastgpt.cn/plugin/model-presets
 source_type: 官方文档小节
 ---
 
@@ -40,4 +40,4 @@ avatar: "antling"
 2. channelId必须与`core/model/chtype.go`中的定义完全一致，否则会导致渠道无法正常识别。
 3. 头像文件名必须与`avatar`字段匹配，且不能包含扩展名。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/plugin/model-presets)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/plugin/model-presets)

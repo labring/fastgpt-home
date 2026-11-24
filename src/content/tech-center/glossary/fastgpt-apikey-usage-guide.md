@@ -2,7 +2,7 @@
 title: 介绍FastGPT中APIKey的定义与配置使用方法
 slug: /zh/glossary/fastgpt-apikey-usage-guide
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/guide/build/publish/openapi
+source: https://doc.fastgpt.cn/guide/build/publish/openapi
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ openapi接口调用场景下，需配置两个核心参数：OPENAI_API_BASE_URL
 ## 容易搞错的地方
 一是配置openapi调用时，未将OPENAI_API_BASE_URL替换为自身部署的域名，导致接口请求无法正常连通。二是当第三方应用仅支持配置密钥时，未使用apiKey-appId的兼容格式，仅传入纯APIKey导致身份验证失败。三是混淆普通APIKey与团队APIKey的使用场景，团队APIKey仅可用于团队资源相关的管理操作，不可直接用于普通对话接口调用。
 
-> [FastGPT OpenAPI 发布文档](https://doc.fastgpt.cn/zh-CN/guide/build/publish/openapi), [FastGPT 团队权限文档](https://doc.fastgpt.cn/zh-CN/guide/workspace/team/team_roles_permissions)
+> [FastGPT OpenAPI 发布文档](https://doc.fastgpt.cn/guide/build/publish/openapi), [FastGPT 团队权限文档](https://doc.fastgpt.cn/guide/workspace/team/team_roles_permissions)
 
 ## 适用性与版本范围
 

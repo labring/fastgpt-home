@@ -2,7 +2,7 @@
 title: Manage Loop Errors and User Input in FastGPT Workflows
 slug: /en/node/fastgpt-loop-error-user-interaction
 page_type: Workflow nodes
-source: https://doc.fastgpt.cn/en/guide/build/workflow/nodes/loop_run
+source: https://doc.fastgpt.io/guide/build/workflow/nodes/loop_run
 source_type: Official documentation
 ---
 
@@ -23,7 +23,7 @@ Loop nodes natively support embedding user input nodes such as "Form Input" dire
 4. Complete the requested input via the platform's native user interaction tools.
 5. The loop resumes execution immediately after input is successfully submitted.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/workflow/nodes/loop_run)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/workflow/nodes/loop_run)
 
 ## Applicability and version scope
 

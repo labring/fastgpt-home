@@ -2,7 +2,7 @@
 title: 修复FastGPT工作流枚举与结构脏数据的操作指南
 slug: /zh/deploy/fastgpt-workflow-dirty-data-clean
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41507
+source: https://doc.fastgpt.cn/self-host/upgrading/4-15/41507
 source_type: 官方文档小节
 ---
 
@@ -32,4 +32,4 @@ curl -X POST 'https://你的域名/api/admin/dataClean/initWorkflowData' \
 清洗过程按批扫描apps和app_versions中的工作流数据，降低单次读取和写入压力。对每条工作流数据执行格式化操作，统一修复历史脏字段、空值、枚举表达式和旧结构兼容问题。格式化完成后，使用PublishAppBodySchema校验nodes、edges、chatConfig字段。Zod校验失败的文档仅记录在返回结果中，不会写入数据库。非dry-run模式下，仅写入发生过格式化变更且Zod校验通过的文档，未发生变化的文档不会重复写入。
 返回结果会分别展示apps、appVersions和total的统计数据，包括扫描文档数、可修复文档数、Zod错误数量、写入成功数量、写入失败数量、枚举表达式统计、变更样本和错误样本。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41507)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-15/41507)

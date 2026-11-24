@@ -2,7 +2,7 @@
 title: Configure FastGPT Retrievers for RAG Workflows
 slug: /en/tutorial/fastgpt-retriever-rag-configuration
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/dataset/rag
+source: https://doc.fastgpt.io/guide/dataset/rag
 source_type: Official documentation
 ---
 
@@ -25,7 +25,7 @@ Follow these structured steps to set up a retriever for your FastGPT RAG pipelin
 5.  Execute a test user query to validate that the retriever returns relevant, contextually appropriate snippets from your dataset.
 6.  Save your retriever configuration to apply the settings to your active RAG workflow.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/rag)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/rag)
 
 ## Applicability and version scope
 

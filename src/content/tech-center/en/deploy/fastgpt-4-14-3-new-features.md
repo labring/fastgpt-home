@@ -2,7 +2,7 @@
 title: Detailed Overview of FastGPT 4.14.3 New Features
 slug: /en/deploy/fastgpt-4-14-3-new-features
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4143
+source: https://doc.fastgpt.io/self-host/upgrading/4-14/4143
 source_type: Official documentation
 ---
 
@@ -32,7 +32,7 @@ System plugins listed in the FastGPT Plugin Marketplace now display a visible in
 ### Workflow Execution Rate Limiting
 A new workflow execution QPM (queries per minute) rate limiting feature has been implemented, which restricts the volume of workflow queries executed per minute to help maintain stable resource usage for self-hosted deployments.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4143)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-14/4143)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: FastGPT V4.8.11版本升级操作与更新内容说明
 slug: /zh/deploy/upgrade-v4-8-11
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4811
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4811
 source_type: 官方文档
 ---
 
@@ -74,7 +74,7 @@ curl --location --request POST 'https://{{host}}/api/admin/init/4811' \
 该请求将完成团队成员组初始化。
 ## 升级后怎么验证
 检查FastGPT、商业版及Sandbox镜像tag是否正确更新为对应版本。执行商业版初始化请求，确认返回结果正常，团队成员组完成初始化。测试工作流新增功能，包括表单输入节点、循环运行节点，验证功能正常。测试OpenAI o1模型调用，确认配置生效且无异常。检查聊天记录滚动加载功能，确认可加载超过30条记录。验证工作流嵌套层级限制为20层，无异常死循环。测试调试模式下子应用调用，确认返回详细运行数据。
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4811)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/4811)
 
 ## 适用性与版本范围
 

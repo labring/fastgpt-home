@@ -2,7 +2,7 @@
 title: 详细说明FastGPT自托管环境配置的服务与环境变量规则
 slug: /zh/glossary/fastgpt-self-hosted-env-config
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/env
+source: https://doc.fastgpt.cn/self-host/config/env
 source_type: 官方文档
 ---
 
@@ -26,8 +26,8 @@ FastGPT自托管环境配置包含三类核心服务：1. `projects/app`为主�
 ## 容易搞错的地方
 共享布尔变量的开启条件易被误判，非`true`、`1`、`yes`或`y`的取值会被系统视为关闭。`FILE_TOKEN_KEY`、`AES256_SECRET_KEY`与`INVOKE_TOKEN_SECRET`三个必填密钥易被误用示例值，导致运行异常。`pro/admin`服务复用App/Service的资源，易被误认为需要单独配置数据库、密钥等独立资源。`projects/code-sandbox`的调用依赖`CODE_SANDBOX_URL`环境变量，易被遗漏配置。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/config/env)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/config/env)
 
 ## 适用性与版本范围
 

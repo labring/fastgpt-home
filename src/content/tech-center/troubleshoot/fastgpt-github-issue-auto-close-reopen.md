@@ -29,6 +29,6 @@ source_type: GitHub issue
 
 > 来源: [原始讨论：chat窗口标题有时不能正常显示为自己设定的名称](https://github.com/labring/FastGPT/issues/4397)
 
-> 来源: [FastGPT 对话 OpenAPI](https://doc.fastgpt.io/en/openapi/chat)
+> 来源: [FastGPT 对话 OpenAPI](https://doc.fastgpt.io/openapi/chat)
 
-> 来源: [FastGPT 应用构建常见问题](https://doc.fastgpt.io/en/guide/build/faq)
+> 来源: [FastGPT 应用构建常见问题](https://doc.fastgpt.io/guide/build/faq)

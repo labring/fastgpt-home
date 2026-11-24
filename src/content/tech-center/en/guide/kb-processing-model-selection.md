@@ -2,7 +2,7 @@
 title: Knowledge Base Processing Models: What Text, Index and Image Models Each Handle
 slug: /en/guide/kb-processing-model-selection
 page_type: Decision matrix
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/env
+source: https://doc.fastgpt.cn/self-host/config/env
 source_type: Open-source repository docs and community threads
 article_section: Selection & Evaluation
 is_part_of: FastGPT Tech Center
@@ -59,8 +59,8 @@ You can delay this decision if you only deploy a lightweight RAG application, yo
 
 ## References
 
-- [FastGPT environment variables](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
-- [FastGPT Docker Compose deployment](https://doc.fastgpt.cn/zh-CN/self-host/deploy/docker)
+- [FastGPT environment variables](https://doc.fastgpt.cn/self-host/config/env)
+- [FastGPT Docker Compose deployment](https://doc.fastgpt.cn/self-host/deploy/docker)
 
 ## Next steps
 

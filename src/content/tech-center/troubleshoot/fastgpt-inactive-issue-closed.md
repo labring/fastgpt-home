@@ -29,4 +29,4 @@ source_type: GitHub issue
 
 > 来源: [原始讨论：请问使用OpenAPI创建一个文件集合，这么监听是否完成向量化](https://github.com/labring/FastGPT/issues/4095)
 
-> 来源: [FastGPT 知识库 OpenAPI](https://doc.fastgpt.io/en/openapi/dataset)
+> 来源: [FastGPT 知识库 OpenAPI](https://doc.fastgpt.io/openapi/dataset)

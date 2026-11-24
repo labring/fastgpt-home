@@ -2,7 +2,7 @@
 title: FastGPT 自托管场景Admin额外环境变量配置参考
 slug: /zh/reference/fastgpt-admin-extra-env-vars
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/env
+source: https://doc.fastgpt.cn/self-host/config/env
 source_type: 官方文档小节
 ---
 
@@ -51,4 +51,4 @@ source_type: 官方文档小节
 5. 部分变量需配套配置才能实现完整功能，例如发票飞书通知需同时配置INVOICE_FEISHU_WEBHOOK_URL和INVOICE_FEISHU_WEBHOOK_CALLBACK_URL。
 6. 所有变量未配置时将使用官方给定的默认值，请勿随意修改默认值除非有明确的业务需求。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/config/env)

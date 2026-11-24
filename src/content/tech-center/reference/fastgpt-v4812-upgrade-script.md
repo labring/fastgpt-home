@@ -2,7 +2,7 @@
 title: FastGPT V4.8.12版本升级脚本的使用步骤速查
 slug: /zh/reference/fastgpt-v4812-upgrade-script
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4812
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4812
 source_type: 官方文档小节
 ---
 
@@ -21,4 +21,4 @@ FastGPT V4.8.12版本的升级需通过官方专属升级脚本完成。该版�
 3. 升级前需确认实例的所有依赖服务处于正常运行状态。
 4. 升级完成后需验证实例核心功能是否正常。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4812)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/4812)

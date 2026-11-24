@@ -2,7 +2,7 @@
 title: FastGPT启用沙盒功能的环境变量更新配置指南
 slug: /zh/reference/fastgpt-sandbox-env-update
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/41601
+source: https://doc.fastgpt.cn/self-host/upgrading/4-16/41601
 source_type: 官方文档小节
 ---
 
@@ -29,4 +29,4 @@ source_type: 官方文档小节
 2. FastGPT的预览协议已同步变更，需严格遵循本配置要求。
 3. 所有配置参数均需参考官方文档，不得自行新增未提及的环境变量。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/41601)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-16/41601)

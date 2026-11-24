@@ -7,6 +7,11 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const zlib = require('node:zlib');
+const {
+  findLegacyDocumentationUrls,
+  normalizeDocumentationUrl,
+  normalizeDocumentationUrlsInText
+} = require('./lib/documentation-url');
 
 const REPOSITORY_ROOT = path.resolve(__dirname, '..');
 const TECHNICAL_CONTENT_POLICY = require('../src/lib/technical-content-policy.json');
@@ -380,12 +385,17 @@ function buildNormalizedTechnicalPage({ metadata, identity, body, wordCount, sou
   if (identity.canonicalPath.startsWith('/guide/')) {
     requireText(metadata.date_modified, `${label}.date_modified`);
   }
-  normalizePublicHttpsUrl(metadata.source, `${label} source`);
-  const citations = normalizeCitations(body.replace(SECRET_PATTERN, 'YOUR_API_KEY'));
+  const normalizedMetadata = {
+    ...metadata,
+    source: normalizeDocumentationUrl(normalizePublicHttpsUrl(metadata.source, `${label} source`))
+  };
+  const citations = normalizeCitations(
+    normalizeDocumentationUrlsInText(body.replace(SECRET_PATTERN, 'YOUR_API_KEY'))
+  );
   const lineEndings = normalizeStructuralEscapedLineEndings(citations);
   validateBodyIntegrity(lineEndings, { wordCount, sourceCount }, label);
   const normalized = normalizeDocument(
-    metadata,
+    normalizedMetadata,
     identity.locale,
     identity.canonicalPath,
     lineEndings
@@ -400,15 +410,15 @@ function buildNormalizedTechnicalPage({ metadata, identity, body, wordCount, sou
     body: normalized.body,
     document: normalized.document,
     projection: {
-      title: metadata.title,
+      title: normalizedMetadata.title,
       slug: `/${identity.locale}${identity.canonicalPath}`,
       category,
       categoryLabel,
-      ...(metadata.source ? { source: metadata.source } : {}),
-      sourceType: normalizeSourceType(metadata.source_type, `${label} source_type`),
-      summary: deriveSummary(metadata.title, normalized.body),
+      ...(normalizedMetadata.source ? { source: normalizedMetadata.source } : {}),
+      sourceType: normalizeSourceType(normalizedMetadata.source_type, `${label} source_type`),
+      summary: deriveSummary(normalizedMetadata.title, normalized.body),
       minutes: Math.max(1, Math.ceil(normalized.body.length / 500)),
-      ...(metadata.date_modified ? { dateModified: metadata.date_modified } : {})
+      ...(normalizedMetadata.date_modified ? { dateModified: normalizedMetadata.date_modified } : {})
     }
   };
 }
@@ -756,7 +766,7 @@ function buildImportPlan({ repoRoot = REPOSITORY_ROOT, sourcePath }) {
     const { metadata } = parsed;
     if (metadata.title !== record.title)
       throw new Error(`Schema drift in ${record.file}: title differs from delivery row`);
-    if (metadata.source !== record.source)
+    if (normalizeDocumentationUrl(metadata.source) !== normalizeDocumentationUrl(record.source))
       throw new Error(`Schema drift in ${record.file}: source differs from delivery row`);
     const identity = parseIdentityFromSlug(metadata.slug, `${record.file} front matter slug`);
     const { locale } = identity;
@@ -1001,6 +1011,14 @@ function validateProjection(projection, label) {
     throw new Error(`Schema drift in ${label}.minutes: expected at least 1`);
   if (projection.source !== undefined) {
     normalizePublicHttpsUrl(projection.source, `${label}.source`);
+    if (findLegacyDocumentationUrls(projection.source).length > 0) {
+      throw new Error(
+        `Legacy prefixed documentation URL in ${label}.source: ${projection.source}`
+      );
+    }
+  }
+  if (findLegacyDocumentationUrls(projection.summary).length > 0) {
+    throw new Error(`Legacy prefixed documentation URL in ${label}.summary`);
   }
 }
 
@@ -1097,10 +1115,17 @@ function verifyTechnicalContent(repoRoot = REPOSITORY_ROOT) {
       throw new Error(`Technical content modification date drift for ${entry.slug}`);
     }
     documents.set(entry.slug, { metadata, body });
-    if (metadata.source) normalizePublicHttpsUrl(metadata.source, `${entry.slug} source`);
+    if (metadata.source) {
+      normalizePublicHttpsUrl(metadata.source, `${entry.slug} source`);
+      if (findLegacyDocumentationUrls(metadata.source).length > 0) {
+        throw new Error(
+          `Legacy prefixed documentation URL in ${entry.slug} front matter source: ${metadata.source}`
+        );
+      }
+    }
     extractCitationUrls(body, entry.slug);
     SECRET_PATTERN.lastIndex = 0;
-    // Public default in https://doc.fastgpt.cn/zh-CN/self-host/custom-models/chatglm2.
+    // Public default in https://doc.fastgpt.cn/self-host/custom-models/chatglm2.
     const text = body.replaceAll('sk-aaabbbcccdddeeefffggghhhiiijjjkkk', 'YOUR_API_KEY');
     if (SECRET_PATTERN.test(text))
       throw new Error(`Technical content body contains a secret-shaped value for ${entry.slug}`);

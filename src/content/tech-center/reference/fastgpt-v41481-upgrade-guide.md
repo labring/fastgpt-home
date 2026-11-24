@@ -2,7 +2,7 @@
 title: FastGPT V4.14.8.1版本升级操作说明
 slug: /zh/reference/fastgpt-v41481-upgrade-guide
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41481
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/41481
 source_type: 官方文档小节
 ---
 
@@ -23,4 +23,4 @@ source_type: 官方文档小节
 3. 升级过程需在业务低峰期进行，避免对正常使用造成影响。
 4. 若升级过程中出现异常，可参考官方文档中的故障排查章节进行问题定位。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41481)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-14/41481)

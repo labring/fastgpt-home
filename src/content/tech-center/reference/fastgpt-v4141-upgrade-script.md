@@ -2,7 +2,7 @@
 title: FastGPT V4.14.1版本升级脚本使用说明
 slug: /zh/reference/fastgpt-v4141-upgrade-script
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4141
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/4141
 source_type: 官方文档小节
 ---
 
@@ -22,4 +22,4 @@ FastGPT V4.14.1是4.14.x系列的正式升级版本，该版本附带专用升�
 2.  V4.14.25版本已被弃用，请勿选择该版本进行升级。
 3.  升级脚本仅适用于对应版本的升级流程，请勿跨版本混用。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4141)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-14/4141)

@@ -2,7 +2,7 @@
 title: Configure and Use FastGPT Specified Reply Nodes
 slug: /en/node/fastgpt-specified-reply-nodes
 page_type: Workflow nodes
-source: https://doc.fastgpt.cn/en/guide/build/workflow/nodes/reply
+source: https://doc.fastgpt.io/guide/build/workflow/nodes/reply
 source_type: Official documentation
 ---
 
@@ -28,7 +28,7 @@ Follow these steps to set up and deploy a Specified Reply node in your FastGPT w
 3. Connect the node to other workflow components as needed. Use multiple node instances if your workflow has complex response requirements to maintain clean visual organization.
 4. Save and activate the workflow. The node will output the configured results directly to the client when triggered.
 
-> [FastGPT public documentation](https://doc.fastgpt.cn/en/guide/build/workflow/nodes/reply)
+> [FastGPT public documentation](https://doc.fastgpt.io/guide/build/workflow/nodes/reply)
 
 ## Applicability and version scope
 

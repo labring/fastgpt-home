@@ -2,7 +2,7 @@
 title: Configure FastGPT Pro Environment Variables for v4.15.1
 slug: /en/deploy/fastgpt-pro-environment-variable-updates
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/4151
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/4151
 source_type: Official documentation
 ---
 
@@ -31,7 +31,7 @@ Key configuration notes:
 3. Update the Pro/Admin service’s environment configuration: Use the exact same `PRO_TOKEN` value configured for the main application, and add it to the Pro/Admin service’s environment variables alongside any required existing settings.
 4. Validate your configuration: Ensure no deployment conflicts exist, and confirm that all services reference the correct `PRO_TOKEN` and `FE_DOMAIN` values.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/4151)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-15/4151)
 
 ## Applicability and version scope
 

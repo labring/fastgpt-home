@@ -2,7 +2,7 @@
 title: FastGPT v4.15.05 New Feature Updates for Self-Hosted
 slug: /en/deploy/fastgpt-41505-new-self-hosted-features
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41505
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/41505
 source_type: Official documentation
 ---
 
@@ -27,7 +27,7 @@ Several usability and visual updates have been deployed: chat windows now includ
 ## API & Agent Optimization
 Backend and agent workflow improvements include: dataset search within agent mode now supports permission filtering to ensure only authorized data is used during agent responses, API key management has been unified across the platform with updated request requirements that mandate explicit app context be passed in all requests, and agent context compression has been optimized to reduce payload size and improve processing efficiency.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41505)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-15/41505)
 
 ## Applicability and version scope
 

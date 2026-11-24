@@ -2,7 +2,7 @@
 title: FastGPT 4.8.16后新版猜你想问OpenAPI接口调用指南
 slug: /zh/reference/fastgpt-new-question-guide-api
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/openapi/chat
+source: https://doc.fastgpt.cn/openapi/chat
 source_type: 官方文档小节
 ---
 
@@ -63,4 +63,4 @@ curl --location --request POST 'http://localhost:3000/api/core/ai/agent/v2/creat
 3. 若不传入questionGuide参数，将自动调用应用最新发布版本的猜你想问配置。
 4. 请求头需配置正确的apikey和Content-Type，否则会返回认证或格式错误。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/openapi/chat)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/openapi/chat)

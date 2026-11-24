@@ -2,7 +2,7 @@
 title: FastGPT 4911 Version New Feature Updates
 slug: /en/deploy/fastgpt-4911-new-features
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4911
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/4911
 source_type: 官方文档
 ---
 
@@ -25,4 +25,4 @@ This section includes two critical operational and backend enhancements, detaile
 
 The async document parsing queue processes imported documents in a background queue, so users can submit multiple files for import without waiting for individual parsing jobs to finish. The new audit logs capture additional metadata for every platform action, making it easier to track changes to datasets, workflows, and system configurations.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4911)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/4911)

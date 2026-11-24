@@ -2,7 +2,7 @@
 title: FastGPT 4.15.1版本升级操作与变更说明
 slug: /zh/deploy/upgrade-v4-15-1
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/4151
+source: https://doc.fastgpt.cn/self-host/upgrading/4-15/4151
 source_type: 官方文档
 ---
 
@@ -27,7 +27,7 @@ curl -X POST "{{host}}/api/admin/initv4151" \
 ## 升级后怎么验证
 检查服务启动日志，无PRO_TOKEN或PRO_URL与TOKEN不匹配相关的启动失败报错。访问FastGPT主应用与Pro/Admin服务，确认内部接口调用正常。进入API Key管理页面，确认历史API Key已正确回填appName。测试企微终端登录，确认自动跳转行为符合配置要求。测试插件市场筛选、系统工具卸载与重装、工作流调试等功能，确认修复的问题不再出现。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/4151)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-15/4151)
 
 ## 适用性与版本范围
 

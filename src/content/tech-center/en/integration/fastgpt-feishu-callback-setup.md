@@ -2,7 +2,7 @@
 title: Configure Feishu Publishing Callback URLs
 slug: /en/integration/fastgpt-feishu-callback-setup
 page_type: Integrations
-source: https://doc.fastgpt.cn/en/guide/build/publish/feishu
+source: https://doc.fastgpt.io/guide/build/publish/feishu
 source_type: Official documentation
 ---
 
@@ -28,7 +28,7 @@ The following table maps key stages of the Feishu console configuration to their
 | Editing Feishu subscription method settings | ![Image](/imgs/feishu-bot-11.jpg) |
 | Callback URL input field in the Feishu console | ![Image](/imgs/feishu-bot-6.png) |
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/publish/feishu)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/publish/feishu)
 
 ## Applicability and version scope
 

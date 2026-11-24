@@ -2,7 +2,7 @@
 title: FastGPT v4.16.2 Official New Feature Details
 slug: /en/deploy/fastgpt-v4162-new-features
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-16/4162
+source: https://doc.fastgpt.io/self-host/upgrading/4-16/4162
 source_type: 官方文档
 ---
 
@@ -29,4 +29,4 @@ During parsing, embedded images are extracted and uploaded to the configured obj
 ### BM25 Full-Text Search Integration
 When Milvus is configured as the vector store for the FastGPT deployment, this release adds BM25 full-text search backed by the single-table `modeldata_v2` design. This optimized backend structure improves indexing efficiency and query response times for full-text search operations within the platform.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/4-16/4162)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/4-16/4162)

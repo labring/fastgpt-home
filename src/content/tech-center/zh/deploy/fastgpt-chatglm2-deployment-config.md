@@ -2,7 +2,7 @@
 title: FastGPT中ChatGLM2自定义模型的部署配置说明
 slug: /zh/deploy/fastgpt-chatglm2-deployment-config
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/custom-models/chatglm2
+source: https://doc.fastgpt.cn/self-host/custom-models/chatglm2
 source_type: 官方文档
 ---
 
@@ -23,7 +23,7 @@ source_type: 官方文档
 ## 配置选型指引
 不同量化等级的配置对应不同的硬件要求，可根据实际可用的内存、显存资源选择匹配的类型。启动命令直接使用表格内的对应指令即可，无需额外调整其他参数。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/chatglm2)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/custom-models/chatglm2)
 
 ## 适用性与版本范围
 

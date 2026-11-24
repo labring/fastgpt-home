@@ -2,7 +2,7 @@
 title: FastGPT V4.6.1版本升级的官方操作指引
 slug: /zh/reference/fastgpt-v461-upgrade-guide
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/461
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/461
 source_type: 官方文档小节
 ---
 
@@ -24,4 +24,4 @@ source_type: 官方文档小节
 4. 升级前建议完成系统数据的备份，防止升级过程中出现数据丢失
 5. 升级完成后需核对系统运行状态，确认各项服务正常启动
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/461)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/461)

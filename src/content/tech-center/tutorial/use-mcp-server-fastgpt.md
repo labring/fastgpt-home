@@ -2,7 +2,7 @@
 title: 具体配置并使用MCP server调用FastGPT应用的操作方法
 slug: /zh/tutorial/use-mcp-server-fastgpt
 page_type: 教程
-source: https://doc.fastgpt.cn/zh-CN/guide/build/publish/mcp_server
+source: https://doc.fastgpt.cn/guide/build/publish/mcp_server
 source_type: 官方文档
 ---
 
@@ -23,8 +23,8 @@ FastGPT 提供的 MCP server 地址，可被支持 MCP 协议的客户端用于�
 | -------------------------- | --------------------------- |
 | ![](/imgs/mcp_server9.png) | ![](/imgs/mcp_server10.png) |
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/publish/mcp_server)
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/publish/mcp_server)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/publish/mcp_server)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/publish/mcp_server)
 
 ## 适用性与版本范围
 

@@ -6,7 +6,7 @@ source: https://fastgpt.cn/contact
 source_type: 深度场景内容
 meta_title: 定制 Agent 如何衔接已有系统与模型
 meta_description: 从定制范围、模型沿用、OA 与 ERP 接口、MCP 工具调用到联调验收，说明企业定制 Agent 接入既有系统时的落地顺序、权限边界与常见失败表现。
-delivery_metadata: {"source_front_matter":{"slug":"custom-agent-integration-existing-systems","meta_title":"定制 Agent 如何衔接已有系统与模型","meta_description":"从定制范围、模型沿用、OA 与 ERP 接口、MCP 工具调用到联调验收，说明企业定制 Agent 接入既有系统时的落地顺序、权限边界与常见失败表现。","language":"zh","content_type":"deep","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"custom-agent-integration-existing-systems","keywords":"定制Agent,系统集成,模型接入,MCP,接口联调,验收","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"企业定制 Agent 怎么和已有模型、OA、ERP 与业务接口衔接","需求依据":"客户 2026-11-07 购买诉求第 2 条：定制功能与系统集成是能否落地的关键。","事实来源":"FastGPT 产品知识库·内容收集清单；官方更新说明 4.16.0 至 4.17.3","内链":"https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173","排期":"W18 深度内容第 2 篇；发布日期由发稿安排确认","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["事实来源：见上表所列官方文档与版本说明。核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（官方更新说明口径，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核版本号与接口字段变化。"]}
+delivery_metadata: {"source_front_matter":{"slug":"custom-agent-integration-existing-systems","meta_title":"定制 Agent 如何衔接已有系统与模型","meta_description":"从定制范围、模型沿用、OA 与 ERP 接口、MCP 工具调用到联调验收，说明企业定制 Agent 接入既有系统时的落地顺序、权限边界与常见失败表现。","language":"zh","content_type":"deep","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"custom-agent-integration-existing-systems","keywords":"定制Agent,系统集成,模型接入,MCP,接口联调,验收","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"企业定制 Agent 怎么和已有模型、OA、ERP 与业务接口衔接","需求依据":"客户 2026-11-07 购买诉求第 2 条：定制功能与系统集成是能否落地的关键。","事实来源":"FastGPT 产品知识库·内容收集清单；官方更新说明 4.16.0 至 4.17.3","内链":"https://doc.fastgpt.cn/self-host/upgrading/4-17/4173","排期":"W18 深度内容第 2 篇；发布日期由发稿安排确认","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["事实来源：见上表所列官方文档与版本说明。核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（官方更新说明口径，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核版本号与接口字段变化。"]}
 keywords: 定制Agent,系统集成,模型接入,MCP,接口联调,验收
 schema_type: Article
 date_modified: 2026-11-16
@@ -117,9 +117,9 @@ MCP 是另一条路径。它可以复用外部已有的工具服务，减少重�
 | 主题 | 版本 | 来源 |
 | --- | --- | --- |
 | 授权形态、镜像组成、模型与渠道支持、支持范围 | 当期商业方案 | [FastGPT 商务咨询：授权、部署与支持范围](https://fastgpt.cn/contact) |
-| Agent 工具选择与工作流调用方式 | 现行功能文档 | [选择工具与 Skill](https://doc.fastgpt.cn/zh-CN/guide/build/tools/overview) |
-| 沙盒不混部 | v4.16.0 | [self-host/upgrading/4-16/4160](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/4160) |
-| MCP 配额、成员级模型、分页与导出、辅助生成 | v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173) |
-| HTTP 与 MCP 工具接入 | 现行功能文档 | [HTTP 工具](https://doc.fastgpt.cn/zh-CN/guide/build/tools/http_tools) · [MCP 工具](https://doc.fastgpt.cn/zh-CN/guide/build/tools/mcp_tools) |
-| 文件级检索鉴权条件 | 现行功能文档 | [集合权限](https://doc.fastgpt.cn/zh-CN/guide/dataset/collection_permission) |
-| 文件级权限、发布快照 | v4.17.1 | [self-host/upgrading/4-17/4171](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4171) |
+| Agent 工具选择与工作流调用方式 | 现行功能文档 | [选择工具与 Skill](https://doc.fastgpt.cn/guide/build/tools/overview) |
+| 沙盒不混部 | v4.16.0 | [self-host/upgrading/4-16/4160](https://doc.fastgpt.cn/self-host/upgrading/4-16/4160) |
+| MCP 配额、成员级模型、分页与导出、辅助生成 | v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/self-host/upgrading/4-17/4173) |
+| HTTP 与 MCP 工具接入 | 现行功能文档 | [HTTP 工具](https://doc.fastgpt.cn/guide/build/tools/http_tools) · [MCP 工具](https://doc.fastgpt.cn/guide/build/tools/mcp_tools) |
+| 文件级检索鉴权条件 | 现行功能文档 | [集合权限](https://doc.fastgpt.cn/guide/dataset/collection_permission) |
+| 文件级权限、发布快照 | v4.17.1 | [self-host/upgrading/4-17/4171](https://doc.fastgpt.cn/self-host/upgrading/4-17/4171) |

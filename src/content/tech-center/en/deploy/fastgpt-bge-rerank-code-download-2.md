@@ -2,7 +2,7 @@
 title: Download BGE Rerank Model Code for FastGPT
 slug: /en/deploy/fastgpt-bge-rerank-code-download-2
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/custom-models/bge-rerank
+source: https://doc.fastgpt.io/self-host/custom-models/bge-rerank
 source_type: Official documentation
 ---
 
@@ -45,7 +45,7 @@ Follow these concrete steps to download the desired model code:
     ls /path/to/your/fastgpt/plugins/model/rerank-bge/bge-reranker-base
     ```
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/custom-models/bge-rerank)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/custom-models/bge-rerank)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: FastGPT 4.15.0-beta7版本升级操作与配置调整说明
 slug: /zh/deploy/upgrade-v4-15-0-beta7
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41507
+source: https://doc.fastgpt.cn/self-host/upgrading/4-15/41507
 source_type: 官方文档
 ---
 
@@ -57,7 +57,7 @@ curl -X POST 'https://你的域名/api/admin/dataClean/cleanupDuplicateChats' \
 ## 升级后怎么验证
 检查服务启动日志，确认配置的环境变量正常加载。测试工作流的保存与运行，确认节点渲染与IO类型判断正常。发起Chat会话，确认无重复会话头数据。访问知识库配置页面，确认PDF解析、向量检索参数生效。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41507)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-15/41507)
 
 ## 适用性与版本范围
 

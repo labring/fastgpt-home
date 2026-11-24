@@ -2,7 +2,7 @@
 title: Diagnose and Fix FastGPT Page Crashes
 slug: /en/deploy/fastgpt-page-crash-troubleshooting
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/troubleshooting/faq
+source: https://doc.fastgpt.io/self-host/troubleshooting/faq
 source_type: Official documentation
 ---
 
@@ -21,7 +21,7 @@ This section covers the vast majority of reported page crash scenarios:
 # Rare API Incompatibility Issues
 In infrequent instances, page crashes may be caused by API incompatibility problems. These failures fall outside the most common root causes, and require validation against the official FastGPT supported API specifications to resolve. No generic fixes exist for these incidents beyond verifying alignment with documented API requirements.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/troubleshooting/faq)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/troubleshooting/faq)
 
 ## Applicability and version scope
 

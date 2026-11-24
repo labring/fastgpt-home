@@ -2,7 +2,7 @@
 title: 优化FastGPT中RAG模型的回答生成与输出效果
 slug: /zh/dataset/fastgpt-rag-answer-generation-optimization
 page_type: 知识库与切分
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/rag
+source: https://doc.fastgpt.cn/guide/dataset/rag
 source_type: 官方文档小节
 ---
 
@@ -17,4 +17,4 @@ source_type: 官方文档小节
 ## 优化后的效果与价值
 通过上述配置，可针对性解决现有问题：引入知识图谱可提升生成内容的连贯性与准确性，尤其在专业领域中强化上下文理解；专业领域规则可增强生成内容的领域特征，降低回答偏差；用户反馈机制可帮助生成器优化连续对话的响应质量；协同优化机制可保障生成时拥有充足上下文，避免信息断层；一致性检测与语义校正可提升生成内容的逻辑性与风格统一性，增强输出可信度与用户满意度。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/dataset/rag)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/dataset/rag)

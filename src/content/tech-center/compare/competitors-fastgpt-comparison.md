@@ -2,7 +2,7 @@
 title: 迁移到 FastGPT 前：数据、工作流与集成资产盘点
 slug: /zh/compare/competitors-fastgpt-comparison
 page_type: 对比与迁移
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/api_dataset
+source: https://doc.fastgpt.cn/guide/dataset/third-party/api_dataset
 source_type: 官方文档
 ---
 
@@ -57,4 +57,4 @@ MaxKB 支持选中文档导出 Excel 或 ZIP，并支持批量导出。原文档
 > 来源: [Dify 应用管理与 DSL 导出](https://docs.dify.ai/en/cloud/use-dify/workspace/app-management)
 > 来源: [RAGFlow Agent 导入与导出](https://ragflow.io/docs/import_and_export_agents)
 > 来源: [MaxKB 文档操作与导出](https://maxkb.cn/docs/v2/user_manual/dataset/doclist.html)
-> 来源: [FastGPT API 文件库](https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/api_dataset)
+> 来源: [FastGPT API 文件库](https://doc.fastgpt.cn/guide/dataset/third-party/api_dataset)

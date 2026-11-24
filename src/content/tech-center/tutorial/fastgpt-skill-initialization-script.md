@@ -2,7 +2,7 @@
 title: 配置与运行FastGPT技能初始化脚本的操作指南
 slug: /zh/tutorial/fastgpt-skill-initialization-script
 page_type: 教程/部署
-source: https://doc.fastgpt.cn/zh-CN/guide/build/skill/initialization
+source: https://doc.fastgpt.cn/guide/build/skill/initialization
 source_type: 官方文档
 ---
 
@@ -27,4 +27,4 @@ pip install -r requirements.txt
 3. 将该脚本与技能其他代码文件一同打包为技能压缩包。
 4. 发布技能版本，当引用该技能的应用首次运行时，系统会自动执行该初始化脚本。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/skill/initialization)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/skill/initialization)

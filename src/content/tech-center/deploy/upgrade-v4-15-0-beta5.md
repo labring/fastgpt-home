@@ -2,7 +2,7 @@
 title: FastGPT V4.15.0-beta5版本升级操作与内容解读
 slug: /zh/deploy/upgrade-v4-15-0-beta5
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41505
+source: https://doc.fastgpt.cn/self-host/upgrading/4-15/41505
 source_type: 官方文档
 ---
 
@@ -22,7 +22,7 @@ source_type: 官方文档
 ## 升级后怎么验证
 检查各服务容器正常运行。测试对话标题自动生成功能，确认配置CHAT_TITLE_MODEL后生效。测试HTTP节点调用自签名证书服务，确认TLS校验可忽略。测试ApiKey调用，确认apikey-appId方式兼容OpenAI SDK，原有apikey可正常使用。检查知识库搜索、工作流工具、快速回复功能正常运行，查看系统日志无异常报错。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41505)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-15/41505)
 
 ## 适用性与版本范围
 

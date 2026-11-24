@@ -2,7 +2,7 @@
 title: Run FastGPT Post-Upgrade Initialization API Requests
 slug: /en/deploy/fastgpt-post-upgrade-init-api-requests
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/40
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/40
 source_type: 官方文档
 ---
 
@@ -30,4 +30,4 @@ Three specific HTTP endpoints must be called using your FastGPT deployment's bas
 ## Troubleshooting
 The only documented error condition for these initialization requests is unexpected termination of the `initv4` and `initChat` endpoints. This failure is directly tied to insufficient memory allocated to your FastGPT hosting environment. The only supported resolution is to re-run the failed requests once memory resources are confirmed available, or adjust your environment's memory allocation if the error persists after initial retries.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/40)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/40)

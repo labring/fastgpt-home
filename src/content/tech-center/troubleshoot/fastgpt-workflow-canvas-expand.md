@@ -29,4 +29,4 @@ source_type: GitHub issue
 
 > 来源: [原始讨论：期望可以配置工作流生成的代码块和文章内容或者表格可以通过画布展开显示](https://github.com/labring/FastGPT/issues/3080)
 
-> 来源: [FastGPT 对话 HTML 渲染](https://doc.fastgpt.io/en/guide/chat/htmlRendering)
+> 来源: [FastGPT 对话 HTML 渲染](https://doc.fastgpt.io/guide/chat/htmlRendering)

@@ -2,7 +2,7 @@
 title: FastGPT平台中团队模式的配置规则与参数说明
 slug: /zh/glossary/fastgpt-team-mode-config
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/guide/admin/teamMode
+source: https://doc.fastgpt.cn/guide/admin/teamMode
 source_type: 官方文档
 ---
 
@@ -15,7 +15,7 @@ source_type: 官方文档
 ## 容易搞错的地方
 容易混淆三种模式的成员加入与默认团队创建规则，单团队模式不会创建默认团队，所有用户均加入Root团队；成员同步模式仅支持SSO注册的成员同步规则，其余注册或添加方式无对应团队操作。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/admin/teamMode)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/admin/teamMode)
 
 ## 适用性与版本范围
 

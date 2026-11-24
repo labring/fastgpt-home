@@ -2,7 +2,7 @@
 title: FastGPT V4.6.1版本升级内容与操作说明
 slug: /zh/deploy/upgrade-v4-6-1
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/461
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/461
 source_type: 官方文档
 ---
 
@@ -20,7 +20,7 @@ source_type: 官方文档
 ## 升级后怎么验证
 验证新增功能是否正常运行。可调用GPT4-v模型测试视觉相关任务的处理效果，测试whisper语音输入功能的识别准确性，检查TTS流传输的连贯性与缓存机制的生效情况。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/461)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/461)
 
 ## 适用性与版本范围
 

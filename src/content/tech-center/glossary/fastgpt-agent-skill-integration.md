@@ -2,7 +2,7 @@
 title: 说明FastGPT智能体技能集成功能的使用方法
 slug: /zh/glossary/fastgpt-agent-skill-integration
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/guide/build/skill/integration
+source: https://doc.fastgpt.cn/guide/build/skill/integration
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ FastGPT智能体技能集成功能，用于为智能体绑定技能并提供多�
 ## 容易搞错的地方
 需确保使用的模型足够智能，才可触发智能自动调用功能；未绑定技能或沙盒未启动时，无法使用虚拟机文件查看功能；绑定多个技能时，各技能的代码与配置彼此独立，不会互相干扰。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/skill/integration)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/skill/integration)
 
 ## 适用性与版本范围
 

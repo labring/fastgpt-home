@@ -2,7 +2,7 @@
 title: Configure FastGPT Shared Domain and Runtime Variables
 slug: /en/deploy/fastgpt-shared-domain-runtime-vars
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/env
+source: https://doc.fastgpt.io/self-host/config/env
 source_type: Official documentation
 ---
 
@@ -26,7 +26,7 @@ These variables manage the FastGPT service’s network binding, runtime environm
 | `NEXT_TELEMETRY_DISABLED` | `1`                         | Disables Next.js Telemetry in production images.                                                                                                                              |
 | `NODE_OPTIONS`            | `--max-old-space-size=4096` | Node options used during production image builds to increase the build memory limit.                                                                                          |
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/env)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/env)
 
 ## Applicability and version scope
 

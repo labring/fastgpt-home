@@ -29,4 +29,4 @@ source_type: GitHub issue
 
 > 来源: [原始讨论：获取当前对话人的账号id](https://github.com/labring/FastGPT/issues/5252)
 
-> 来源: [FastGPT 对话 OpenAPI](https://doc.fastgpt.io/en/openapi/chat)
+> 来源: [FastGPT 对话 OpenAPI](https://doc.fastgpt.io/openapi/chat)

@@ -2,7 +2,7 @@
 title: FastGPT知识库图片检索功能的配置与使用方法
 slug: /zh/reference/fastgpt-knowledgebase-image-retrieval
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/dataset_engine
+source: https://doc.fastgpt.cn/guide/dataset/dataset_engine
 source_type: 官方文档小节
 ---
 
@@ -23,4 +23,4 @@ FastGPT的图片检索能力依托原有知识库搜索链路，仅增加了图�
 ## 注意事项
 图片能否被检索到，需同时满足搜索时上传图片与入库时建立对应索引。图搜图效果不理想时，需确认是否配置了视觉模型或支持图片的向量模型，以及入库时是否生成有效图片索引。检索效果还受图片清晰度、图片内容可被模型理解的程度影响。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/dataset/dataset_engine)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/dataset/dataset_engine)

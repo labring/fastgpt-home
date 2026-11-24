@@ -2,7 +2,7 @@
 title: Validate Updated FastGPT Model Preset Changes
 slug: /en/model/fastgpt-model-preset-validation
 page_type: Model guides
-source: https://doc.fastgpt.cn/en/plugin/model-presets
+source: https://doc.fastgpt.io/plugin/model-presets
 source_type: Official documentation
 ---
 
@@ -35,7 +35,7 @@ The final mandatory pre-submission step is reviewing the git diff for the static
 
 This manual review prevents accidental data loss, incorrect model configurations, and missing assets that automated testing might not catch.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/plugin/model-presets)
+> Source: [FastGPT official source](https://doc.fastgpt.io/plugin/model-presets)
 
 ## Applicability and version scope
 

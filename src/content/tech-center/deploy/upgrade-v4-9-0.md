@@ -2,7 +2,7 @@
 title: FastGPT V4.9.0版本升级操作与验证指南
 slug: /zh/deploy/upgrade-v4-9-0
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/490
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/490
 source_type: 官方文档
 ---
 
@@ -36,7 +36,7 @@ curl --location --request POST 'https://{{host}}/api/admin/initv490' \
 ## 升级后怎么验证
 登录FastGPT root账号，进入账号-模型提供商页面，查看模型渠道与调用日志，确认OneAPI渠道正常迁移；检查PG Vector插件版本与知识库集合字段、index type类型更新完成；执行知识库文件上传、批量运行任务，确认功能正常。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/490)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/490)
 
 ## 适用性与版本范围
 

@@ -2,7 +2,7 @@
 title: FastGPT V4.14.30版本升级说明与操作指引
 slug: /zh/deploy/upgrade-v4-14-30
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41430
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/41430
 source_type: 官方文档
 ---
 
@@ -22,7 +22,7 @@ source_type: 官方文档
 ## 升级后怎么验证
 升级完成后，可通过触发MCP SSE fallback相关的业务请求，检查响应头是否仅添加一次，无重复配置的情况。同时查看服务的运行日志，确认无MCP SSE相关的重复响应头报错信息，访问服务控制台确认服务正常启动，无异常报错。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41430)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-14/41430)
 
 ## 适用性与版本范围
 

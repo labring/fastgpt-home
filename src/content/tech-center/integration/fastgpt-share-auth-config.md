@@ -2,7 +2,7 @@
 title: 配置FastGPT分享链接的身份验证与上报接口
 slug: /zh/integration/fastgpt-share-auth-config
 page_type: 集成与发布渠道
-source: https://doc.fastgpt.cn/zh-CN/guide/build/publish/link
+source: https://doc.fastgpt.cn/guide/build/publish/link
 source_type: 官方文档小节
 ---
 
@@ -31,4 +31,4 @@ FastGPT的分享链接支持身份验证配置，可在每次分享链接使用�
 
 对话结果上报接口的`responseData`字段覆盖了对话流程中所有模块的执行数据，包括检索模块、AI对话模块等，可帮助业务方完整追踪对话的资源消耗与执行细节。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/publish/link)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/publish/link)

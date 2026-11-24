@@ -2,7 +2,7 @@
 title: Configure Tencent Cloud COS for FastGPT
 slug: /en/deploy/fastgpt-tencent-cos-config
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/object-storage
+source: https://doc.fastgpt.io/self-host/config/object-storage
 source_type: Official documentation
 ---
 
@@ -46,7 +46,7 @@ STORAGE_COS_PROXY=
 ```
 > Note: Replace placeholder values (e.g. `your_access_key`, `fastgpt-public`) with your actual Tencent Cloud credentials and bucket names, ensuring each bucket name includes your App ID suffix.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/object-storage)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/object-storage)
 
 ## Applicability and version scope
 

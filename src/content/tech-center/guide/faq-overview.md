@@ -119,10 +119,10 @@ date_modified: 2026-10-14
 
 ## 参考资料
 
-- [FastGPT 入门](https://doc.fastgpt.cn/zh-CN/guide/getting-started)
-- [快速开始](https://doc.fastgpt.cn/zh-CN/guide/getting-started/quick-start)
-- [商业版说明](https://doc.fastgpt.cn/zh-CN/guide/version/commercial)
-- [Docker Compose 部署](https://doc.fastgpt.cn/zh-CN/self-host/deploy/docker)
+- [FastGPT 入门](https://doc.fastgpt.cn/guide/getting-started)
+- [快速开始](https://doc.fastgpt.cn/guide/getting-started/quick-start)
+- [商业版说明](https://doc.fastgpt.cn/guide/version/commercial)
+- [Docker Compose 部署](https://doc.fastgpt.cn/self-host/deploy/docker)
 
 ## 需要进一步确认时
 

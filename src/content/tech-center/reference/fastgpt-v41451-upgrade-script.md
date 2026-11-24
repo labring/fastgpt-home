@@ -2,7 +2,7 @@
 title: FastGPT V4.14.5.1版本升级脚本操作指南
 slug: /zh/reference/fastgpt-v41451-upgrade-script
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41451
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/41451
 source_type: 官方文档小节
 ---
 
@@ -24,4 +24,4 @@ source_type: 官方文档小节
 4. 若升级过程中出现报错，可参考文档中的错误排查方式与存储桶问题排查指引
 5. 升级完成后需检查模型配置、对象存储等核心功能是否正常
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41451)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-14/41451)

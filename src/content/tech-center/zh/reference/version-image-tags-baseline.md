@@ -44,5 +44,5 @@ LLM 计价写入 `pricing.tiers`，其他模型写入 `pricing.unitPrice`；Toke
 
 | Source | Version | Document |
 | --- | --- | --- |
-| FastGPT | v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173) |
+| FastGPT | v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/self-host/upgrading/4-17/4173) |
 | FastGPT | v4.17.3 | [GitHub release v4.17.3](https://github.com/labring/FastGPT/releases/tag/v4.17.3) |

@@ -2,7 +2,7 @@
 title: Initialize API Key App Names for 4.15.1 Upgrade
 slug: /en/deploy/fastgpt-api-key-appname-initialization
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/4151
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/4151
 source_type: Official documentation
 ---
 
@@ -31,7 +31,7 @@ The script follows strict, non-destructive rules as defined in the v4.15.1 updat
 - Does not create or bind API key tags
 - Can be run multiple times without causing data issues
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/4151)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-15/4151)
 
 ## Applicability and version scope
 

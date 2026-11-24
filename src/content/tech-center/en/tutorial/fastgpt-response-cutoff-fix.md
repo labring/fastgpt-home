@@ -2,7 +2,7 @@
 title: Fix FastGPT Premature Response Cutoff Issues
 slug: /en/tutorial/fastgpt-response-cutoff-fix
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/dataset/faq
+source: https://doc.fastgpt.io/guide/dataset/faq
 source_type: Official documentation
 ---
 
@@ -28,7 +28,7 @@ Follow these concrete steps to resolve premature response interruptions:
 2.  **Optimize Input Context Size**: Reduce the total input token count by decreasing the number of chat history turns included in the workflow. Fewer historical messages free up critical context window space, allowing longer generated responses without triggering interruptions.
 3.  **Reserve Output Headroom (Self-Hosted Deployments Only)**: For self-hosted FastGPT instances, adjust the model context limit configuration to leave a small buffer. For example, set a 128K context model to use 120K of its total capacity, with the remaining 8K allocated exclusively for output token generation.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/faq)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/faq)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: Locate Valid FastGPT Cloud Service URLs
 slug: /en/tutorial/fastgpt-cloud-service-urls
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/version/cloud/intro
+source: https://doc.fastgpt.io/guide/version/cloud/intro
 source_type: Official documentation
 ---
 
@@ -24,7 +24,7 @@ Each metadata tag pair is used for internal documentation tracking as defined in
 ## Account Isolation Guidelines
 User accounts created on one regional FastGPT cloud deployment cannot be used to access the other deployment. Individuals or organizations requiring access to both the China Mainland and International cloud instances must complete a separate registration process for each instance to gain full access to their respective services.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/version/cloud/intro)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/version/cloud/intro)
 
 ## Applicability and version scope
 

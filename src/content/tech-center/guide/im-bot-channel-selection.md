@@ -3,7 +3,7 @@ title: FastGPT 即时通讯机器人接入渠道选型决策矩阵
 slug: /zh/guide/im-bot-channel-selection
 page_type: 决策矩阵页
 source_type: 官方文档（v4.17.2）与社区线程
-source: https://doc.fastgpt.cn/zh-CN/guide/build/publish/wecom
+source: https://doc.fastgpt.cn/guide/build/publish/wecom
 source_note: "判据取自 FastGPT v4.17.2 官方文档与社区线程，核验日 2026-10-13。"
 check_day: 2026-10-13
 article_section: 选型与评估
@@ -64,12 +64,12 @@ date_modified: 2026-10-14
 
 ## 参考资料
 
-- [企业微信接入](https://doc.fastgpt.cn/zh-CN/guide/build/publish/wecom)
-- [飞书接入](https://doc.fastgpt.cn/zh-CN/guide/build/publish/feishu)
-- [钉钉接入](https://doc.fastgpt.cn/zh-CN/guide/build/publish/dingtalk)
-- [商业版功能差异](https://doc.fastgpt.cn/zh-CN/guide/version/commercial)
-- [公众号接入](https://doc.fastgpt.cn/zh-CN/guide/build/publish/official_account)
-- [微信个人号接入](https://doc.fastgpt.cn/zh-CN/guide/build/publish/wechat)
+- [企业微信接入](https://doc.fastgpt.cn/guide/build/publish/wecom)
+- [飞书接入](https://doc.fastgpt.cn/guide/build/publish/feishu)
+- [钉钉接入](https://doc.fastgpt.cn/guide/build/publish/dingtalk)
+- [商业版功能差异](https://doc.fastgpt.cn/guide/version/commercial)
+- [公众号接入](https://doc.fastgpt.cn/guide/build/publish/official_account)
+- [微信个人号接入](https://doc.fastgpt.cn/guide/build/publish/wechat)
 
 ## 需要进一步确认时
 

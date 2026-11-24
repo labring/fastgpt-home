@@ -2,7 +2,7 @@
 title: FastGPT v4.9.2版本升级操作与变更说明
 slug: /zh/deploy/upgrade-v4-9-2
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/492
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/492
 source_type: 官方文档
 ---
 
@@ -23,7 +23,7 @@ source_type: 官方文档
 ## 升级后怎么验证
 可通过以下场景验证升级效果：验证知识库导入接口新增的三个参数是否生效；验证知识库分块配置、自定义分隔符功能是否正常；验证SSO及成员同步功能（针对商业版）是否正常；验证工作流节点数组类型处理逻辑是否正常；验证修复的飞书/语雀知识库同步、渠道测试、语音识别测试等问题是否解决；验证各优化项如对话日志导出成员名、邀请链接交互等功能是否正常。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/492)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/492)
 
 ## 适用性与版本范围
 

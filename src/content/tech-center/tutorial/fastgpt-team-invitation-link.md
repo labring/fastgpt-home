@@ -2,7 +2,7 @@
 title: FastGPT团队邀请链接的创建、使用与管理规则说明
 slug: /zh/tutorial/fastgpt-team-invitation-link
 page_type: 教程/部署
-source: https://doc.fastgpt.cn/zh-CN/guide/workspace/team/invitation_link
+source: https://doc.fastgpt.cn/guide/workspace/team/invitation_link
 source_type: 官方文档
 ---
 
@@ -17,4 +17,4 @@ FastGPT v4.9.1版本更新后，团队邀请成员改用邀请链接模式，弃
 ### 链接失效与自动清理规则
 邀请链接的失效场景包括三种：手动停用链接、链接到达有效期、有效人数已满（针对设置为1人限制的链接）。停用后的链接无法访问，且无法再次启用。单个用户最多可同时存在10个有效的邀请链接。失效的邀请链接会在30天后自动被清理。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/workspace/team/invitation_link)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/workspace/team/invitation_link)

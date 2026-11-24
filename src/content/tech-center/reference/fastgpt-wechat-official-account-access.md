@@ -2,7 +2,7 @@
 title: FastGPT商业版接入微信公众号的具体操作说明
 slug: /zh/reference/fastgpt-wechat-official-account-access
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/build/publish/official_account
+source: https://doc.fastgpt.cn/guide/build/publish/official_account
 source_type: 官方文档小节
 ---
 
@@ -19,4 +19,4 @@ FastGPT商业版4.8.10及以上版本支持直接接入微信公众号，无需�
 1. 仅支持已完成验证的微信公众号，涵盖服务号与订阅号。
 2. 仅FastGPT商业版4.8.10及以上版本支持该接入功能。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/publish/official_account)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/publish/official_account)

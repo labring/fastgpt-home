@@ -2,7 +2,7 @@
 title: Clarify FastGPT model configuration terminology
 slug: /en/deploy/fastgpt-model-configuration-terms
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/model/intro
+source: https://doc.fastgpt.io/self-host/config/model/intro
 source_type: Official documentation
 ---
 
@@ -23,7 +23,7 @@ The following table lists the standard terms and their exact definitions as used
 ## Operational Usage Guidelines
 Each term serves a distinct purpose in the configuration pipeline, and adhering to their definitions prevents common setup errors. Model ID must be unique across all configured models to ensure API requests route to the correct model endpoint. Model Name can be modified to match internal team naming conventions without impacting API functionality, as it is only used for display purposes. Model Channels allow grouping of provider connections, enabling load balancing for the same model to improve deployment reliability during high-traffic periods. The Custom Request URL/Key option provides a direct integration path for non-standard endpoints, but it requires manual management of both the full request URL and authentication token, which increases long-term operational complexity and is not recommended for most deployments.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/model/intro)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/model/intro)
 
 ## Applicability and version scope
 

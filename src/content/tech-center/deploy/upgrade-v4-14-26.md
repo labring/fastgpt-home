@@ -2,7 +2,7 @@
 title: FastGPT V4.14.26版本升级变更与操作说明
 slug: /zh/deploy/upgrade-v4-14-26
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41426
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/41426
 source_type: 官方文档
 ---
 
@@ -20,7 +20,7 @@ source_type: 官方文档
 ## 升级后怎么验证
 升级完成后，可通过发起包含流式响应的对话测试服务功能，确认服务可正常接收流式响应内容，验证版本升级是否成功。若流式响应可正常接收，则说明升级操作已顺利完成。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41426)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-14/41426)
 
 ## 适用性与版本范围
 

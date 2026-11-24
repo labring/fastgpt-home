@@ -29,4 +29,4 @@ source_type: GitHub issue
 
 > 来源: [原始讨论：ragas 评测体系](https://github.com/labring/FastGPT/issues/2503)
 
-> 来源: [FastGPT 应用评测 Beta](https://doc.fastgpt.io/en/guide/build/evaluation)
+> 来源: [FastGPT 应用评测 Beta](https://doc.fastgpt.io/guide/build/evaluation)

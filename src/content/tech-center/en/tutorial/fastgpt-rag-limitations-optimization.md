@@ -2,7 +2,7 @@
 title: RAG Limitations and Optimization for FastGPT
 slug: /en/tutorial/fastgpt-rag-limitations-optimization
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/dataset/rag
+source: https://doc.fastgpt.io/guide/dataset/rag
 source_type: Official documentation
 ---
 
@@ -20,7 +20,7 @@ This structured workflow addresses semantic retrieval gaps:
 2.  Configure Faiss-powered dense vector search to generate BERT-aligned semantic embeddings for all stored document chunks.
 3.  Merge and rank results from both retrieval pipelines to prioritize semantically relevant fragments over purely keyword-matched content before passing them to the generator.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/rag)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/rag)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: Set Up a Dataset-Powered Legal Q&A Agent
 slug: /en/tutorial/fastgpt-civil-code-qna-agent-setup
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/getting-started/quick-start
+source: https://doc.fastgpt.io/guide/getting-started/quick-start
 source_type: Official documentation
 ---
 
@@ -40,7 +40,7 @@ Output format:
 ```
 This prompt enforces accurate, cited, and accessible legal responses, critical for building trusted Q&A tools.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/getting-started/quick-start)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/getting-started/quick-start)
 
 ## Applicability and version scope
 

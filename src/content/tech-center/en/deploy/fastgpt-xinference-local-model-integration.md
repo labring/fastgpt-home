@@ -2,7 +2,7 @@
 title: Integrate Local Models via Xinference with FastGPT
 slug: /en/deploy/fastgpt-xinference-local-model-integration
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/custom-models/xinference
+source: https://doc.fastgpt.io/self-host/custom-models/xinference
 source_type: Official documentation
 ---
 
@@ -23,7 +23,7 @@ Three core model types are compatible for use with FastGPT via Xinference:
 3. Obtain the deployed model’s endpoint URL and unique identifier from the Xinference dashboard or API response
 4. Configure FastGPT to connect to the local Xinference endpoint, specifying the deployed model type and associated identifier
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/custom-models/xinference)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/custom-models/xinference)
 
 ## Applicability and version scope
 

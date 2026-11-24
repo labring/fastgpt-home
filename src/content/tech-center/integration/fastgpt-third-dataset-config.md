@@ -2,7 +2,7 @@
 title: 为FastGPT添加第三方文档库的配置参数与字段说明
 slug: /zh/integration/fastgpt-third-dataset-config
 page_type: 集成
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/third_dataset
+source: https://doc.fastgpt.cn/guide/dataset/third-party/third_dataset
 source_type: 官方文档
 ---
 
@@ -23,7 +23,7 @@ export type YuqueServer = {
 ## 功能补充说明
 当文档库具备根目录选择功能时，必须添加`basePath`字段，否则无法正常实现根目录选择的配置逻辑。可通过官方文档中的对应链接，查看根目录功能的详细实现说明。配置完成相关类型定义后，即可在系统的知识库管理界面中，选择对应的第三方文档库类型，并填写配置参数。相关的配置操作效果，可参考官方提供的配套图示`/imgs/thirddataset-1.png`进行验证与调整，确保配置的参数能够正常生效。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/third_dataset)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/dataset/third-party/third_dataset)
 
 ## 适用性与版本范围
 

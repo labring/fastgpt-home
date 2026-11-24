@@ -2,7 +2,7 @@
 title: FastGPT 4.14.11 Official Bug Fix Resolutions
 slug: /en/deploy/fastgpt-41411-bug-fixes
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-14/41411
+source: https://doc.fastgpt.io/self-host/upgrading/4-14/41411
 source_type: Official documentation
 ---
 
@@ -35,7 +35,7 @@ All resolved bugs are documented below in a structured reference table for quick
 
 Each fix addresses a specific, reported issue to improve system stability, data integrity, and user experience for self-hosted FastGPT instances. No unvalidated changes or external enhancements are included in this release’s bug fix scope.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-14/41411)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-14/41411)
 
 ## Applicability and version scope
 

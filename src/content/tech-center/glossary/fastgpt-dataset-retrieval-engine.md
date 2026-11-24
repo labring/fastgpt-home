@@ -2,7 +2,7 @@
 title: 说明FastGPT数据集检索引擎的工作原理与使用方式
 slug: /zh/glossary/fastgpt-dataset-retrieval-engine
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/dataset_engine
+source: https://doc.fastgpt.cn/guide/dataset/dataset_engine
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ FastGPT的数据集检索引擎是组合多类检索与优化能力、融合多�
 ## 容易搞错的地方
 1. 误以为PostgreSQL存储知识库原数据，实际MongoDB存储原数据，PostgreSQL仅存储向量数据；2. 误以为一组知识库数据仅能对应一个向量，实际indexes字段为数组，支持一组数据关联多个向量；3. 误以为检索仅为简单向量召回，实际包含多步优化与结果融合流程。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/dataset/dataset_engine)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/dataset/dataset_engine)
 
 ## 适用性与版本范围
 

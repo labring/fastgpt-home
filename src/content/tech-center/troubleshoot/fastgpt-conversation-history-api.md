@@ -12,7 +12,7 @@ FastGPT 已提供对话历史查询 API 和对话日志导出。历史查询从 
 
 ## 适用范围与历史背景
 
-[Issue #450 的维护者答复](https://github.com/labring/FastGPT/issues/450) 将历史 API 需求对应到 v4.8.12。[v4.8.21 更新说明](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4821) 列出了日志按来源分类、标题检索和导出。旧 Issue 中的功能诉求适用于当时的产品状态。
+[Issue #450 的维护者答复](https://github.com/labring/FastGPT/issues/450) 将历史 API 需求对应到 v4.8.12。[v4.8.21 更新说明](https://doc.fastgpt.cn/self-host/upgrading/outdated/4821) 列出了日志按来源分类、标题检索和导出。旧 Issue 中的功能诉求适用于当时的产品状态。
 
 ## 查询会话与消息
 
@@ -20,7 +20,7 @@ FastGPT 已提供对话历史查询 API 和对话日志导出。历史查询从 
 2. 向 `POST /api/core/chat/history/getHistories` 发送 `appId`、`offset: 0`、`pageSize: 20` ，将 `source` 设为 `api`，请求头使用 `Authorization: Bearer YOUR_API_KEY`。该来源筛选面向 API 创建的会话。
 3. 取返回列表中的 `chatId`，向 `POST /api/core/chat/record/getPaginationRecords` 发送 `appId`、`chatId`、`offset` 和 `pageSize`，分页读取消息。
 
-请求字段与响应结构见[官方对话接口](https://doc.fastgpt.cn/zh-CN/openapi/chat)，凭证创建入口见[通过 API 访问应用](https://doc.fastgpt.cn/zh-CN/guide/build/publish/openapi)。
+请求字段与响应结构见[官方对话接口](https://doc.fastgpt.cn/openapi/chat)，凭证创建入口见[通过 API 访问应用](https://doc.fastgpt.cn/guide/build/publish/openapi)。
 
 ## 导出对话日志
 

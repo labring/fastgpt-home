@@ -2,11 +2,11 @@
 title: 原厂培训与内部转训：三种方式的配比
 slug: /zh/compare/vendor-training-vs-internal-transition
 page_type: matrix
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173
+source: https://doc.fastgpt.cn/self-host/upgrading/4-17/4173
 source_type: 深度场景内容
 meta_title: 原厂培训与内部转训怎么安排
 meta_description: 比较原厂培训、集中授课与内部转训三种方式在覆盖人数、上手速度与知识沉淀上的差别，并给出按使用方分布与关键用户数量安排培训的顺序、材料维护方式与效果验收动作。
-delivery_metadata: {"source_front_matter":{"slug":"vendor-training-vs-internal-transition","meta_title":"原厂培训与内部转训怎么安排","meta_description":"比较原厂培训、集中授课与内部转训三种方式在覆盖人数、上手速度与知识沉淀上的差别，并给出按使用方分布与关键用户数量安排培训的顺序、材料维护方式与效果验收动作。","language":"zh","content_type":"matrix","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"vendor-training-vs-internal-transition","keywords":"原厂培训,内部转训,使用手册,覆盖人数,知识沉淀","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"培训是买原厂还是内部自己转训","需求依据":"客户 2026-11-07 购买诉求第 3 条：落地过程要有人跟，含培训。","事实来源":"FastGPT 产品知识库·内容收集清单（培训权益与直播培训）","内链":"https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173","排期":"W18 决策矩阵第 11 篇","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（来源版本，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核培训权益表述。"]}
+delivery_metadata: {"source_front_matter":{"slug":"vendor-training-vs-internal-transition","meta_title":"原厂培训与内部转训怎么安排","meta_description":"比较原厂培训、集中授课与内部转训三种方式在覆盖人数、上手速度与知识沉淀上的差别，并给出按使用方分布与关键用户数量安排培训的顺序、材料维护方式与效果验收动作。","language":"zh","content_type":"matrix","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"vendor-training-vs-internal-transition","keywords":"原厂培训,内部转训,使用手册,覆盖人数,知识沉淀","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"培训是买原厂还是内部自己转训","需求依据":"客户 2026-11-07 购买诉求第 3 条：落地过程要有人跟，含培训。","事实来源":"FastGPT 产品知识库·内容收集清单（培训权益与直播培训）","内链":"https://doc.fastgpt.cn/self-host/upgrading/4-17/4173","排期":"W18 决策矩阵第 11 篇","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（来源版本，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核培训权益表述。"]}
 keywords: 原厂培训,内部转训,使用手册,覆盖人数,知识沉淀
 schema_type: Article
 date_modified: 2026-11-16
@@ -18,7 +18,7 @@ date_modified: 2026-11-16
 
 ## 三种方式
 
-对照材料：[FastGPT 官方说明](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173)。
+对照材料：[FastGPT 官方说明](https://doc.fastgpt.cn/self-host/upgrading/4-17/4173)。
 
 原厂培训分两类：随合同约定的培训权益，以及每月线上直播培训，后者覆盖功能解读与实操教学。集中授课按项目节点安排，通常配合上线。内部转训由关键用户面向本部门开展，产出是本部门的使用手册。
 

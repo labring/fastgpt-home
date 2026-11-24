@@ -2,7 +2,7 @@
 title: FastGPT 4823 Bug Fix Details
 slug: /en/deploy/fastgpt-4823-bug-fixes
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4823
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/4823
 source_type: 官方文档
 ---
 
@@ -26,4 +26,4 @@ This document covers the official bug fixes included in the FastGPT 4823 self-ho
 ## Key Fix Impact Summary
 Each resolved fix targets a specific functional pain point for FastGPT users. The subfolder tag filter fix improves organization of hierarchical dataset collections, the markdown parsing fix prevents broken link rendering in uploaded documents, the team member list fix ensures accurate visibility of active team participants, the PPTX parsing fix restores reliable ingestion of PowerPoint files, the full-text index cleanup fix prevents unused index data from accumulating in the database, and the MongoDB index fix ensures that search queries for dataset entries use the intended text indexes correctly.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4823)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/4823)

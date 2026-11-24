@@ -2,7 +2,7 @@
 title: Verify FastGPT Agent V2 Analysis Outputs
 slug: /en/tutorial/fastgpt-agent-v2-analysis-verification
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/getting-started/quick-start
+source: https://doc.fastgpt.io/guide/getting-started/quick-start
 source_type: Official documentation
 ---
 
@@ -27,7 +27,7 @@ Follow this structured workflow to validate agent outputs:
 
 A reference screenshot illustrating valid output formatting and verification checks is available at `/imgs/guide/getting-started/quick-start/image-40.png`.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/getting-started/quick-start)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/getting-started/quick-start)
 
 ## Applicability and version scope
 

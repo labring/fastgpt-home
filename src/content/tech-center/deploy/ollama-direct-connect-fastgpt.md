@@ -2,7 +2,7 @@
 title: FastGPT 4直接接入Ollama的部署配置指南
 slug: /zh/deploy/ollama-direct-connect-fastgpt
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/custom-models/ollama
+source: https://doc.fastgpt.cn/self-host/custom-models/ollama
 source_type: 官方文档
 ---
 
@@ -20,7 +20,7 @@ source_type: 官方文档
 
 配置完成并保存docker-compose.yml文件后，即可按照FastGPT内置的模型添加流程完成对应Ollama模型的添加，后续即可正常调用接入的Ollama模型完成相关任务。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/ollama)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/custom-models/ollama)
 
 ## 适用性与版本范围
 

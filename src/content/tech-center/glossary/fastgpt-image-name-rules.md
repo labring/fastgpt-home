@@ -2,7 +2,7 @@
 title: 说明FastGPT镜像名的组成、分类与使用规则
 slug: /zh/glossary/fastgpt-image-name-rules
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/self-host/custom-models/xinference
+source: https://doc.fastgpt.cn/self-host/custom-models/xinference
 source_type: 官方文档
 ---
 
@@ -17,9 +17,9 @@ FastGPT镜像分为git版与阿里云版两类，各类镜像的具体名称如�
 ## 容易搞错的地方
 未指定Tag的镜像默认使用latest标签，需注意部分镜像的Tag版本号与实际版本并非直接对应。阿里云商业版镜像的地址格式与其他阿里云镜像不同，需单独确认。镜像的具体版本无法仅通过Tag版本号直接推断，需通过Docker Hub或GitHub仓库核实。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/upgrade-instruction)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/upgrade-instruction)
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/xinference)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/custom-models/xinference)
 
 ## 适用性与版本范围
 

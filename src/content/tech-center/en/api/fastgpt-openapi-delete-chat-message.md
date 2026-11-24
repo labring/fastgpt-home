@@ -2,7 +2,7 @@
 title: Delete FastGPT Chat Messages via OpenAPI
 slug: /en/api/fastgpt-openapi-delete-chat-message
 page_type: API
-source: https://doc.fastgpt.cn/en/openapi/chat
+source: https://doc.fastgpt.io/openapi/chat
 source_type: Official documentation
 ---
 
@@ -39,7 +39,7 @@ A successful request returns a 200 OK HTTP status code, with the following JSON 
 ```
 This response includes no additional operational data beyond the success confirmation, as the delete operation does not return details of the removed message.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/openapi/chat)
+> Source: [FastGPT official source](https://doc.fastgpt.io/openapi/chat)
 
 ## Applicability and version scope
 

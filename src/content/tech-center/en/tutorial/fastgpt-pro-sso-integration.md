@@ -2,7 +2,7 @@
 title: Integrate SSO and Member Sync for FastGPT-pro
 slug: /en/tutorial/fastgpt-pro-sso-integration
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/admin/sso
+source: https://doc.fastgpt.io/guide/admin/sso
 source_type: Official documentation
 ---
 
@@ -28,7 +28,7 @@ Follow this structured workflow to implement SSO and member synchronization:
 3.  **Sync Organizational Data**: Use the /org/list endpoint to pull current organization and team data from the external system, then align this data with FastGPT-pro team settings.
 4.  **Maintain Member Sync**: Schedule regular calls to the /user/list endpoint to pull updated member records, ensuring FastGPT-pro user lists stay synchronized with the external platform.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/admin/sso)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/admin/sso)
 
 ## Applicability and version scope
 

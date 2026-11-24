@@ -2,7 +2,7 @@
 title: FastGPT微信个人号接入的配置步骤与使用方法
 slug: /zh/integration/fastgpt-wechat-personal-access
 page_type: 集成与发布渠道
-source: https://doc.fastgpt.cn/zh-CN/guide/build/publish/wechat
+source: https://doc.fastgpt.cn/guide/build/publish/wechat
 source_type: 官方文档
 ---
 
@@ -18,4 +18,4 @@ source_type: 官方文档
 1. 微信端未找到接入入口：当前该接入方式仅支持IOS系统，且需要将微信升级至最新版本，否则无法找到对应的入口。
 2. 重置聊天记录：若需要清空当前的聊天对话记录，只需在聊天输入框中输入`Reset`或者`/reset`即可完成重置。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/publish/wechat)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/publish/wechat)

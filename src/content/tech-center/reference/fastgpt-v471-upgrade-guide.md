@@ -2,7 +2,7 @@
 title: FastGPT V4.7.1版本升级与环境变量变更处理指南
 slug: /zh/reference/fastgpt-v471-upgrade-guide
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/471
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/471
 source_type: 官方文档小节
 ---
 
@@ -24,4 +24,4 @@ FastGPT V4.7.1版本更新包含环境变量配置变更与配套升级脚本两
 3.  升级脚本执行过程中请勿中断操作，否则可能导致部署文件损坏，无法正常启动服务
 4.  升级完成后需查看服务运行日志，确认无环境变量加载错误、配置不匹配等报错后，再开放对外访问
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/471)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/471)

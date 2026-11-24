@@ -2,7 +2,7 @@
 title: FastGPT v4.14.4版本修复的功能问题速查
 slug: /zh/reference/fastgpt-v4144-fix-quickref
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4144
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/4144
 source_type: 官方文档小节
 ---
 
@@ -39,4 +39,4 @@ source_type: 官方文档小节
 2. 遇到对应异常时，需匹配上述场景
 3. 升级至v4.14.4版本后，相关异常将被修复
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4144)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-14/4144)

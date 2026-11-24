@@ -2,7 +2,7 @@
 title: FastGPT RAG Dataset Core Technical Advantages
 slug: /en/tutorial/fastgpt-rag-dataset-technical-advantages
 page_type: 教程/部署
-source: https://doc.fastgpt.cn/en/guide/dataset/rag
+source: https://doc.fastgpt.io/guide/dataset/rag
 source_type: 官方文档
 ---
 
@@ -28,4 +28,4 @@ The following table maps FastGPT RAG’s core advantages to their intended appli
 | Knowledge Reasoning | Cross-domain/cross-document reasoning, legal case analysis, financial report generation |
 | Domain Adaptability | Healthcare, law, finance |
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/guide/dataset/rag)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/guide/dataset/rag)

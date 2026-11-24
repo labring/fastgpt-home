@@ -2,7 +2,7 @@
 title: FastGPT技能初始化脚本的配置、运行与约束说明
 slug: /zh/tutorial/fastgpt-skill-initialization-script-2
 page_type: 教程/部署
-source: https://doc.fastgpt.cn/zh-CN/guide/build/skill/initialization
+source: https://doc.fastgpt.cn/guide/build/skill/initialization
 source_type: 官方文档
 ---
 
@@ -19,4 +19,4 @@ source_type: 官方文档
 
 同时，技能初始化脚本需遵循执行约束与容错规则：脚本的超时时间限制为默认30秒，执行报错或超时不会阻断主流程，且日志输出会被截断为8KB，相关规则与应用启动脚本保持一致。若技能无额外依赖或配置需求，无需添加该初始化脚本。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/skill/initialization)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/skill/initialization)

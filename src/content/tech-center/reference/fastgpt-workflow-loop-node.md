@@ -2,7 +2,7 @@
 title: FastGPT工作流循环节点的配置与使用方法
 slug: /zh/reference/fastgpt-workflow-loop-node
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/loop_run
+source: https://doc.fastgpt.cn/guide/build/workflow/nodes/loop_run
 source_type: 官方文档小节
 ---
 
@@ -21,4 +21,4 @@ source_type: 官方文档小节
 2. 循环节点的遍历数据源必须为列表类型的变量，非列表变量无法正常触发循环。
 3. 后续连接的节点可获取当前循环项的变量数据，用于执行对应处理逻辑。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/loop_run)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/workflow/nodes/loop_run)

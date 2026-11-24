@@ -2,7 +2,7 @@
 title: FastGPT v4.14.5 Upgrade New Feature Details
 slug: /en/deploy/fastgpt-4145-upgrade-features
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4145
+source: https://doc.fastgpt.io/self-host/upgrading/4-14/4145
 source_type: Official documentation
 ---
 
@@ -25,7 +25,7 @@ All existing email configuration fields remain fully compatible with this update
 ## Security Dependency Upgrade
 To address a critical security vulnerability, MongoDB has been upgraded from version 5.x to 5.0.32, resolving CVE-2025-14847. This upgrade requires no additional user configuration beyond standard deployment procedures for self-hosted FastGPT instances.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4145)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-14/4145)
 
 ## Applicability and version scope
 

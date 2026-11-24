@@ -2,7 +2,7 @@
 title: FastGPT V4.14.9版本升级操作与功能变更说明
 slug: /zh/deploy/upgrade-v4-14-9
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4149
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/4149
 source_type: 官方文档
 ---
 
@@ -21,7 +21,7 @@ source_type: 官方文档
 ## 升级后怎么验证
 升级完成后，可通过以下方式验证：调用 `/api/core/chat/getPaginationRecords` 接口，确认返回结果包含 `useAgentSandbox` 字段；验证代码运行沙盒功能的调用逻辑，确认环境变量配置生效；测试工作流、知识库、微信个人号发布渠道等核心功能，确认无异常报错。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4149)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-14/4149)
 
 ## 适用性与版本范围
 

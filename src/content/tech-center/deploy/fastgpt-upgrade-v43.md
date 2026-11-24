@@ -2,7 +2,7 @@
 title: FastGPT 从旧版本升级到 V4.3 的操作指南
 slug: /zh/deploy/fastgpt-upgrade-v43
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/43
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/43
 source_type: 官方文档
 ---
 
@@ -29,4 +29,4 @@ FILE_TOKEN_KEY=filetokenkey
 ```
 请根据实际业务安全需求，将示例中的`filetokenkey`替换为自定义的高强度密钥值，确保文件预览链接的安全性。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/43)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/43)

@@ -2,7 +2,7 @@
 title: FastGPT 4.14.8 Official Bug Fix Details
 slug: /en/deploy/fastgpt-4-14-8-bug-fixes
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4148
+source: https://doc.fastgpt.io/self-host/upgrading/4-14/4148
 source_type: Official documentation
 ---
 
@@ -27,7 +27,7 @@ Each fix addresses a narrow, reproducible technical scenario:
 3. The variable substitution fix resolves a common template rendering bug where `$1` references were incorrectly replaced, making input variable handling more predictable for users configuring custom prompts and workflows.
 4. The API Dataset response fix standardizes the metadata returned for uploaded files, making it easier for external systems to parse file details without needing to handle missing or inconsistent field data.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4148)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-14/4148)
 
 ## Applicability and version scope
 

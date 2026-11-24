@@ -2,7 +2,7 @@
 title: Download BGE Reranker Models for FastGPT Deployment
 slug: /en/deploy/bge-reranker-model-downloads-fastgpt
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/custom-models/bge-rerank
+source: https://doc.fastgpt.io/self-host/custom-models/bge-rerank
 source_type: Official documentation
 ---
 
@@ -33,7 +33,7 @@ Follow these concrete steps to download and prepare models for FastGPT deploymen
    - v2-m3 model: `git clone https://huggingface.co/BAAI/bge-reranker-v2-m3`
 3. Validate that the cloned model directory matches the required structure. Confirm the directory includes both the model’s core files and the mandatory supporting files: `app.py`, `Dockerfile`, and `requirements.txt`.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/custom-models/bge-rerank)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/custom-models/bge-rerank)
 
 ## Applicability and version scope
 

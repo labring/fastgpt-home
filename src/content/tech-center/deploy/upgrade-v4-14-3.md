@@ -2,7 +2,7 @@
 title: FastGPT V4.14.3版本升级内容与操作验证说明
 slug: /zh/deploy/upgrade-v4-14-3
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4143
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/4143
 source_type: 官方文档
 ---
 
@@ -29,7 +29,7 @@ curl --location --request POST 'https://{{host}}/api/admin/initv4143' \
 ## 升级后怎么验证
 可通过以下方式验证升级是否成功：确认系统插件与插件市场显示新版本更新提示；测试工作流调试预览窗口，输入内容不会因重新渲染丢失；访问知识库文件，确认无404报错；测试全局变量、表单输入节点的文件上传功能正常；确认工作流运行QPM限制生效。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4143)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-14/4143)
 
 ## 适用性与版本范围
 

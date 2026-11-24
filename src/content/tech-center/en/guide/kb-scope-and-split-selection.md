@@ -3,7 +3,7 @@ title: One Knowledge Base or Several: Collection Tags, Merged Search or Splittin
 slug: /en/guide/kb-scope-and-split-selection
 page_type: Decision matrix
 source_type: FastGPT v4.17.2 documentation and community threads
-source: https://doc.fastgpt.cn/en/guide/build/workflow/nodes/dataset_search
+source: https://doc.fastgpt.io/guide/build/workflow/nodes/dataset_search
 source_note: "Criteria taken from the FastGPT v4.17.2 documentation and community threads, verified 2026-10-13."
 check_day: 2026-10-13
 article_section: Selection & Evaluation
@@ -56,9 +56,9 @@ Even so, you should regularly evaluate the size of your knowledge base and your 
 
 ## References
 
-- [Collection tags](https://doc.fastgpt.cn/en/guide/dataset/collection_tags)
-- [Knowledge base search node](https://doc.fastgpt.cn/en/guide/build/workflow/nodes/dataset_search)
-- [Knowledge base search result merge](https://doc.fastgpt.cn/en/guide/build/workflow/nodes/knowledge_base_search_merge)
+- [Collection tags](https://doc.fastgpt.io/guide/dataset/collection_tags)
+- [Knowledge base search node](https://doc.fastgpt.io/guide/build/workflow/nodes/dataset_search)
+- [Knowledge base search result merge](https://doc.fastgpt.io/guide/build/workflow/nodes/knowledge_base_search_merge)
 
 ## Next steps
 

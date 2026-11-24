@@ -2,7 +2,7 @@
 title: FastGPT V4.15版本代码优化内容技术速查
 slug: /zh/reference/fastgpt-v415-code-optimizations
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41500
+source: https://doc.fastgpt.cn/self-host/upgrading/4-15/41500
 source_type: 官方文档小节
 ---
 
@@ -39,4 +39,4 @@ FastGPT V4.15针对代码架构、构建工具、模块拆分等多个维度完�
 4. 插件服务需适配pnpm workspace monorepo的结构调整。
 5. 本次更新存在环境变量变更，需参考对应版本的升级脚本完成配置。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41500)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-15/41500)

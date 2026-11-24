@@ -2,7 +2,7 @@
 title: FastGPT工作流并行执行节点的配置与使用方法
 slug: /zh/reference/fastgpt-workflow-parallel-run-node
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/parallel_run
+source: https://doc.fastgpt.cn/guide/build/workflow/nodes/parallel_run
 source_type: 官方文档小节
 ---
 
@@ -25,4 +25,4 @@ source_type: 官方文档小节
 3. 并行执行节点的最终输出结果为所有子分支的执行结果集合
 4. 请勿在并行执行节点内嵌套其他并行执行节点，避免出现执行异常
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/parallel_run)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/workflow/nodes/parallel_run)

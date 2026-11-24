@@ -2,7 +2,7 @@
 title: FastGPT Dataset Detailed Multi-Step Search Strategy
 slug: /en/tutorial/fastgpt-dataset-search-strategy
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/dataset/dataset_engine
+source: https://doc.fastgpt.io/guide/dataset/dataset_engine
 source_type: Official documentation
 ---
 
@@ -31,7 +31,7 @@ Users can adjust the following parameters to tailor the search pipeline to their
 | Similarity Threshold | Float between 0 and 1 | Filters out candidates with a similarity score below the specified threshold |
 | Maximum Citation Count | Positive integer | Limits the total number of cited content items included in the final output |
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/dataset_engine)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/dataset_engine)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: 在FastGPT中配置接入ChatGLM2与M3E模型的操作方法
 slug: /zh/reference/fastgpt-chatglm2-m3e-config
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/custom-models/chatglm2-m3e
+source: https://doc.fastgpt.cn/self-host/custom-models/chatglm2-m3e
 source_type: 官方文档小节
 ---
 
@@ -41,4 +41,4 @@ source_type: 官方文档小节
 2. 配置的maxToken、quoteMaxToken等参数需与实际部署的模型能力匹配，避免出现内容截断或运行报错。
 3. 请勿修改原有其他模型的配置，防止影响FastGPT原有功能的正常运行。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/chatglm2-m3e)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/custom-models/chatglm2-m3e)

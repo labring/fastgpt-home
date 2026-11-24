@@ -6,7 +6,7 @@ source: https://fastgpt.cn/faq/private-deployment-data-boundary
 source_type: 深度场景内容
 meta_title: 私有化部署核对入口与检查项
 meta_description: 把 FastGPT 私有化部署的核对拆成数据落点、模型调用、分级访问、日志留存与升级约束五组检查项，逐项给出入口位置、核对动作、失败表现与版本边界。
-delivery_metadata: {"source_front_matter":{"slug":"private-deployment-review-hub","meta_title":"私有化部署核对入口与检查项","meta_description":"把 FastGPT 私有化部署的核对拆成数据落点、模型调用、分级访问、日志留存与升级约束五组检查项，逐项给出入口位置、核对动作、失败表现与版本边界。","language":"zh","content_type":"aggregation","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"private-deployment-review-hub","keywords":"私有化部署,核对入口,检查项,数据落点,升级","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"私有化部署要从哪几个入口核、每处核什么","需求依据":"客户 2026-11-07 购买诉求第 1 条：私有化是准入门槛，需要可执行的核对入口。","事实来源":"FastGPT 产品知识库·内容收集清单；官方更新说明 4.16.0 与 4.17.3","内链":"https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173","排期":"W18 聚合导航第 1 篇","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（来源版本，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核入口路径与镜像组合。"]}
+delivery_metadata: {"source_front_matter":{"slug":"private-deployment-review-hub","meta_title":"私有化部署核对入口与检查项","meta_description":"把 FastGPT 私有化部署的核对拆成数据落点、模型调用、分级访问、日志留存与升级约束五组检查项，逐项给出入口位置、核对动作、失败表现与版本边界。","language":"zh","content_type":"aggregation","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"private-deployment-review-hub","keywords":"私有化部署,核对入口,检查项,数据落点,升级","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"私有化部署要从哪几个入口核、每处核什么","需求依据":"客户 2026-11-07 购买诉求第 1 条：私有化是准入门槛，需要可执行的核对入口。","事实来源":"FastGPT 产品知识库·内容收集清单；官方更新说明 4.16.0 与 4.17.3","内链":"https://doc.fastgpt.cn/self-host/upgrading/4-17/4173","排期":"W18 聚合导航第 1 篇","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（来源版本，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核入口路径与镜像组合。"]}
 keywords: 私有化部署,核对入口,检查项,数据落点,升级
 schema_type: Article
 date_modified: 2026-11-16
@@ -32,7 +32,7 @@ date_modified: 2026-11-16
 
 ## 入口三：分级访问
 
-入口：[FastGPT 权限说明](https://doc.fastgpt.cn/zh-CN/guide/dataset/collection_permission)。
+入口：[FastGPT 权限说明](https://doc.fastgpt.cn/guide/dataset/collection_permission)。
 
 位置在组织架构授权与知识库文件权限两处。核对动作是建部门管理员、项目成员、只读成员三个账号，各跑一次应用访问与检索，比较可见条目；文件级权限开关默认关闭，开启后列表与详情按文件鉴权，检索过滤还取决于是否采用当前成员身份。失败表现是同一问题两个账号结果不同却被当成系统不稳定。边界：发布出去的应用，静态资源按发布快照校验，动态资源按实际运行用户校验。做对比测试前先固定身份，再把差异记成表，两个身份各自能看到多少条、差在哪些文件。
 
@@ -44,7 +44,7 @@ date_modified: 2026-11-16
 
 ## 入口五：升级约束
 
-入口：[FastGPT 更新说明](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173)。
+入口：[FastGPT 更新说明](https://doc.fastgpt.cn/self-host/upgrading/4-17/4173)。
 
 位置在部署清单与升级说明。核对动作是确认镜像成套：主服务、商业版、插件、代码执行沙盒、AI Proxy 及实际启用的 Agent 沙盒组件版本对应；启用 Agent 沙盒时，主服务、Agent 沙盒与预览代理须使用配套版本。升级后要核对三项回填任务，其中系统模型价格迁移未完成时，该版本暂按免费处理。失败表现是分两次升级留下预览协议不一致的中间态。升级窗口还要留出回滚余量：镜像成套回退比单镜像回退更容易还原到一致状态。
 
@@ -57,6 +57,6 @@ date_modified: 2026-11-16
 | 主题 | 版本 | 来源 |
 | --- | --- | --- |
 | 授权形态、模型与渠道支持 | 当期商业方案 | [FastGPT 商务咨询：授权、部署与支持范围](https://fastgpt.cn/contact) |
-| 沙盒镜像不混部 | v4.16.0 | [self-host/upgrading/4-16/4160](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/4160) |
-| 文件级权限、发布快照 | v4.17.1 | [self-host/upgrading/4-17/4171](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4171) |
-| 镜像 tag、回填任务、价格迁移 | v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173) |
+| 沙盒镜像不混部 | v4.16.0 | [self-host/upgrading/4-16/4160](https://doc.fastgpt.cn/self-host/upgrading/4-16/4160) |
+| 文件级权限、发布快照 | v4.17.1 | [self-host/upgrading/4-17/4171](https://doc.fastgpt.cn/self-host/upgrading/4-17/4171) |
+| 镜像 tag、回填任务、价格迁移 | v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/self-host/upgrading/4-17/4173) |

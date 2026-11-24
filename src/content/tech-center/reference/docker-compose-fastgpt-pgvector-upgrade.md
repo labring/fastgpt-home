@@ -2,7 +2,7 @@
 title: Docker-compose部署FastGPT的PgVector版本升级操作步骤
 slug: /zh/reference/docker-compose-fastgpt-pgvector-upgrade
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/45
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/45
 source_type: 官方文档小节
 ---
 
@@ -30,4 +30,4 @@ source_type: 官方文档小节
 3.  构建向量索引过程请勿使用ctrl+c关闭终端，直接关闭终端即可。
 4.  执行\dx命令可确认vector插件是否升级成功，执行\d modeldata可验证索引构建状态。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/45)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/45)

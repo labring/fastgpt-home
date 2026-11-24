@@ -2,7 +2,7 @@
 title: FastGPT 配置与开发参考：模型接入与配置（77 篇清单）
 slug: /zh/guide/ref-model-integration
 page_type: 问题清单聚合页
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/model/intro
+source: https://doc.fastgpt.cn/self-host/config/model/intro
 source_type: 站内已发布文档的程序化归类
 check_day: 2026-10-19
 article_section: 配置与开发参考
@@ -126,8 +126,8 @@ date_modified: 2026-10-26
 
 ## 参考资料
 
-- [模型配置说明](https://doc.fastgpt.cn/zh-CN/self-host/config/model/intro)
-- [环境变量](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
+- [模型配置说明](https://doc.fastgpt.cn/self-host/config/model/intro)
+- [环境变量](https://doc.fastgpt.cn/self-host/config/env)
 
 ## 需要进一步确认时
 

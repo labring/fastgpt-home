@@ -2,7 +2,7 @@
 title: Build and Package FastGPT System Tool Plugins
 slug: /en/model/fastgpt-plugin-development-packaging
 page_type: Model guides
-source: https://doc.fastgpt.cn/en/plugin/intro
+source: https://doc.fastgpt.io/plugin/intro
 source_type: Official documentation
 ---
 
@@ -30,7 +30,7 @@ The standard workflow for developing and distributing system tool plugins follow
 
 For full, step-by-step development instructions including code examples and troubleshooting, refer to the [System Tool Development Guide](./system-tool-development.en.mdx).
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/plugin/intro)
+> Source: [FastGPT official source](https://doc.fastgpt.io/plugin/intro)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: FastGPT知识库搜索时集合过滤参数的配置方法
 slug: /zh/reference/fastgpt-dataset-collection-filter
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/collection_tags
+source: https://doc.fastgpt.cn/guide/dataset/collection_tags
 source_type: 官方文档小节
 ---
 
@@ -34,4 +34,4 @@ source_type: 官方文档小节
 1. 标签值支持字符串类型的标签名，也可使用`null`，`null`代表筛选未设置任何标签的集合。
 2. 若同时配置`$and`和`$or`条件，仅`$and`条件会生效。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/dataset/collection_tags)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/dataset/collection_tags)

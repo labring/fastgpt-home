@@ -2,7 +2,7 @@
 title: 在FastGPT沙盒中使用httpRequest发起外部HTTP请求
 slug: /zh/reference/fastgpt-sandbox-http-request
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/sandbox-v2
+source: https://doc.fastgpt.cn/guide/build/workflow/nodes/sandbox-v2
 source_type: 官方文档小节
 ---
 
@@ -49,4 +49,4 @@ return { "status": res["status"], "data": res["data"]}
 - 仅支持http/https协议
 - 自动拦截内网IP请求，包含127.0.0.0/8、10.0.0.0/8、172.16.0.0/12、192.168.0.0/16等网段
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/sandbox-v2)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/workflow/nodes/sandbox-v2)

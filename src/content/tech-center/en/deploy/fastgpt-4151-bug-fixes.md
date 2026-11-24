@@ -2,7 +2,7 @@
 title: FastGPT 4.15.1 Resolved Bug Fix Summary
 slug: /en/deploy/fastgpt-4151-bug-fixes
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/4151
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/4151
 source_type: Official documentation
 ---
 
@@ -26,7 +26,7 @@ The following table lists all fixed issues grouped by their functional category,
 ## Critical Workflow Fix Details
 Two key fixes address workflow execution reliability: the sub-workflow variable initialization fix ensures that sub-workflows can access the full set of global variables configured for the parent tool app, eliminating runtime variable mismatches that broke workflow logic. The loop and parallel node sync fix resolves a state persistence bug, ensuring that only successful workflow segments apply changes to the main workflow, preventing unintended state leakage from failed execution attempts. Additional UI fixes resolve minor usability gaps, including immediate UI refreshes after dataset collection retries and correct login prompt display after credential expiration.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/4151)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-15/4151)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: FastGPT 4911 Bug Fix Resolution Details
 slug: /en/deploy/fastgpt-4911-bug-fixes
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4911
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/4911
 source_type: 官方文档
 ---
 
@@ -33,4 +33,4 @@ To confirm that fixes have been successfully deployed, follow these targeted ste
 ## Security Patch Details
 The Python sandbox vulnerability fix implements strict input validation and sandbox hardening protocols to block unauthorized execution paths and restrict access to sensitive system resources, eliminating the previously undisclosed security risk without impacting normal platform functionality.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4911)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/4911)

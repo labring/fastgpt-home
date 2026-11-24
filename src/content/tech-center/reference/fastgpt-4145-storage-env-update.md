@@ -2,7 +2,7 @@
 title: FastGPT 4.14.5版本存储桶环境变量更新配置方法
 slug: /zh/reference/fastgpt-4145-storage-env-update
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4145
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/4145
 source_type: 官方文档小节
 ---
 
@@ -29,4 +29,4 @@ STORAGE_S3_ENDPOINT=http://fastgpt-minio:9000
 ## 注意事项
 配置STORAGE_EXTERNAL_ENDPOINT时，需使用服务器和客户端均可访问的存储桶地址，不得使用127.0.0.1或localhost等本地回环地址。STORAGE_EXTERNAL_ENDPOINT与STORAGE_S3_ENDPOINT需遵循协议://域名(IP):端口的格式。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4145)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-14/4145)

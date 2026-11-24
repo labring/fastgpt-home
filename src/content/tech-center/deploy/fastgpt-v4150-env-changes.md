@@ -2,7 +2,7 @@
 title: FastGPT V4.15.0版本升级的环境变量与配置变更说明
 slug: /zh/deploy/fastgpt-v4150-env-changes
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41500
+source: https://doc.fastgpt.cn/self-host/upgrading/4-15/41500
 source_type: 官方文档
 ---
 
@@ -21,4 +21,4 @@ FastGPT V4.15.0版本升级包含环境变量变更与配置调整，覆盖fastg
 ### 易错点与边界说明
 部分密钥类环境变量需在fastgpt-app与fastgpt-pro中保持一致，否则会引发接口签名验证失败。code-sandbox的内网IP检查默认开启，可降低SSRF风险，如需关闭需调整CHECK_INTERNAL_IP变量。fastgpt-plugin的AUTH_TOKEN长度不足32位时，服务无法正常启动。开源版不再支持通过volumn挂载config.json文件，所有配置需通过环境变量完成。部分变量如MAX_FOLDER_DEPTH默认值为4，取值范围为2~20，超出范围可能引发配置异常。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41500)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-15/41500)

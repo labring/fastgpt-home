@@ -2,7 +2,7 @@
 title: Install Ollama on Host Machine for FastGPT
 slug: /en/deploy/ollama-host-installation-fastgpt
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/custom-models/ollama
+source: https://doc.fastgpt.io/self-host/custom-models/ollama
 source_type: Official documentation
 ---
 
@@ -66,7 +66,7 @@ launchctl setenv ollama_host "0.0.0.0"
 3. Under System variables, click "New" to create a variable named `OLLAMA_HOST` with the value `0.0.0.0`.
 4. Save all changes, then restart the Ollama service via the Start menu.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/custom-models/ollama)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/custom-models/ollama)
 
 ## Applicability and version scope
 

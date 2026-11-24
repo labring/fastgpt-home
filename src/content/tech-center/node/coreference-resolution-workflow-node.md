@@ -2,7 +2,7 @@
 title: 解决连续对话中代词指代引发的知识库搜索失效问题
 slug: /zh/node/coreference-resolution-workflow-node
 page_type: 工作流节点
-source: https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/coreferenceResolution
+source: https://doc.fastgpt.cn/guide/build/workflow/nodes/coreferenceResolution
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ source_type: 官方文档
 ## 配置说明
 在工作流中添加问题优化节点，将用户原始输入的问题接入该节点，获取补全后的语义完整问题。将补全后的问题作为知识库搜索环节的输入，即可完成该功能的配置。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/coreferenceResolution)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/workflow/nodes/coreferenceResolution)
 
 ## 适用性与版本范围
 

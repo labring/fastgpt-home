@@ -2,7 +2,7 @@
 title: FastGPT 4.15.0-beta4版本升级操作与内容解读
 slug: /zh/deploy/upgrade-v4-15-0-beta4
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41504
+source: https://doc.fastgpt.cn/self-host/upgrading/4-15/41504
 source_type: 官方文档
 ---
 
@@ -22,7 +22,7 @@ source_type: 官方文档
 ## 升级后怎么验证
 确认各服务镜像已更新并启动成功，插件服务运行正常。测试工作流导出功能，确认导出内容包含模板名称与介绍。测试PDF解析与xlsx解析功能，确认解析结果符合预期。测试交互节点后的工具调用，确认MCP工具可正常展开。测试知识库被删除后，应用编排时是否弹出优雅提示。测试openapi文档访问，确认文档可正常加载。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41504)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-15/41504)
 
 ## 适用性与版本范围
 

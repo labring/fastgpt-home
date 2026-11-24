@@ -2,7 +2,7 @@
 title: Optimize Retrieval Performance for FastGPT Datasets
 slug: /en/tutorial/fastgpt-dataset-retrieval-optimization
 page_type: 教程/部署
-source: https://doc.fastgpt.cn/en/guide/dataset/rag
+source: https://doc.fastgpt.io/guide/dataset/rag
 source_type: 官方文档
 ---
 
@@ -35,4 +35,4 @@ Follow these steps to implement optimized retrieval for FastGPT datasets:
 6. Define task-specific retrieval rules: assign semantic search for medical Q&A tasks, and keyword matching for news scenarios
 7. Integrate the Haystack framework to add extensible optimization features
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/guide/dataset/rag)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/guide/dataset/rag)

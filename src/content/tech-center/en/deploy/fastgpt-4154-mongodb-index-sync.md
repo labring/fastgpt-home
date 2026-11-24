@@ -2,7 +2,7 @@
 title: Configure MongoDB Index Sync for FastGPT 4.15.4
 slug: /en/deploy/fastgpt-4154-mongodb-index-sync
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/4154
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/4154
 source_type: 官方文档
 ---
 
@@ -32,4 +32,4 @@ To fully remove obsolete indexes before upgrading to 4.15.4, follow this procedu
 - FastGPT 4.15.4 does not mark any existing historical indexes as deprecated, so upgrading directly to this version will not automatically remove old indexes. Future FastGPT releases will explicitly mark verified obsolete indexes in their schemas and remove them incrementally.
 - Setting `MONGO_DEPRECATE_INDEX=false` skips deprecated-index cleanup that may be introduced in future FastGPT releases, but does not prevent creation of missing schema indexes.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/4154)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/4-15/4154)

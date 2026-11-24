@@ -2,7 +2,7 @@
 title: FastGPT V4.9.6版本升级操作与变更说明
 slug: /zh/deploy/fastgpt-v496-upgrade-notes
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/496
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/496
 source_type: 官方文档
 ---
 
@@ -24,4 +24,4 @@ FastGPT V4.9.6 包含环境变量变更，新增多项功能与优化修复。�
 ## 注意事项与边界
 升级前必须完成数据备份，避免数据丢失。配置MCP服务地址时，需确保地址格式正确，社区版配置的mcpServerProxyEndpoint末尾不能携带斜杠。部分优化项仅针对特定场景生效，例如大表格分块策略调整仅在处理超大表格时生效。修复的completion v1接口参数问题，仅影响使用该接口且需要交互参数的调用场景。如果未使用MCP相关功能，仍需按照步骤部署MCP server服务，否则可能出现功能异常。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/496)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/496)

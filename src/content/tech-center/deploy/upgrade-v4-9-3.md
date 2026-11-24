@@ -2,7 +2,7 @@
 title: FastGPT v4.9.3版本升级内容与操作步骤说明
 slug: /zh/deploy/upgrade-v4-9-3
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/493
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/493
 source_type: 官方文档
 ---
 
@@ -20,7 +20,7 @@ source_type: 官方文档
 ## 升级后怎么验证
 升级完成后，可通过以下方式验证功能是否正常：测试工作流debug模式的交互节点功能，确认可正常与节点交互；测试Python3代码运行功能，确认代码可正常执行；测试工作流格式转化流程，确认格式转化无异常。通过上述测试即可确认升级成功。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/493)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/493)
 
 ## 适用性与版本范围
 

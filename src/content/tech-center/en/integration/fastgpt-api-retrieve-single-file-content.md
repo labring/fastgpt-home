@@ -2,7 +2,7 @@
 title: Retrieve Single File Content via FastGPT API
 slug: /en/integration/fastgpt-api-retrieve-single-file-content
 page_type: Integrations
-source: https://doc.fastgpt.cn/en/guide/dataset/third-party/api_dataset
+source: https://doc.fastgpt.io/guide/dataset/third-party/api_dataset
 source_type: Official documentation
 ---
 
@@ -49,7 +49,7 @@ The `data` object contains file-related details, with the following fields:
 - If both `content` and `previewUrl` are provided, the system will use the direct `content` value instead of fetching content from the URL.
 - When `previewUrl` is used, the system will cache parsed file results to improve performance for subsequent requests.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/third-party/api_dataset)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/third-party/api_dataset)
 
 ## Applicability and version scope
 

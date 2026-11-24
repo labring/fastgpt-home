@@ -76,4 +76,4 @@ keywords: "工作流辅助生成,候选版本,节点输入输出,变量引用,�
 | 主题 | 来源 |
 | --- | --- |
 | 工作流辅助生成、变量与回流、发布要求 | [官方更新说明 4.17.3](https://github.com/labring/FastGPT/releases/tag/v4.17.3) |
-| 节点工具调用与参数生成 | [官方更新说明 4.16.0](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/4160) |
+| 节点工具调用与参数生成 | [官方更新说明 4.16.0](https://doc.fastgpt.cn/self-host/upgrading/4-16/4160) |

@@ -2,7 +2,7 @@
 title: Migrate OneAPI Channels to AI Proxy
 slug: /en/deploy/migrate-oneapi-ai-proxy
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/model/intro
+source: https://doc.fastgpt.io/self-host/config/model/intro
 source_type: Official documentation
 ---
 
@@ -34,7 +34,7 @@ Replace the example `dsn` value with your actual OneAPI database connection stri
 ## Validate Migration Success
 A successful migration will return the JSON response `{"success": true}`. If the command returns an error, confirm that your AI Proxy instance is reachable, the admin key is correct, and the OneAPI MySQL DSN is valid. Since the script only transfers core channel data, manually verify all imported channels to ensure all models, proxy URLs, and API keys are correctly mapped to your AI Proxy environment.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/model/intro)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/model/intro)
 
 ## Applicability and version scope
 

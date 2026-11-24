@@ -2,7 +2,7 @@
 title: FastGPT V4.8.4版本升级脚本的使用说明
 slug: /zh/reference/fastgpt-v4-8-4-upgrade-script
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/484
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/484
 source_type: 官方文档小节
 ---
 
@@ -19,4 +19,4 @@ FastGPT V4.8.4版本升级需使用官方提供的专用升级脚本完成。该
 - 仅可使用官方发布的V4.8.4升级脚本，避免使用非官方脚本
 - 该升级流程仅适用于<4.12.0区间的FastGPT版本升级
 - 升级前可根据需求完成数据迁移与备份操作
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/484)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/484)

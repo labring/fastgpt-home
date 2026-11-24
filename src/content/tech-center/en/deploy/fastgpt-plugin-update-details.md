@@ -2,7 +2,7 @@
 title: FastGPT Plugin Update Fixes and Additions
 slug: /en/deploy/fastgpt-plugin-update-details
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4144
+source: https://doc.fastgpt.io/self-host/upgrading/4-14/4144
 source_type: Official documentation
 ---
 
@@ -29,7 +29,7 @@ Additional resolved bugs include:
 - Fixed a parameter passing error in the WeChat Official Account plugin’s batch Markdown upload feature, which disrupted successful batch imports of Markdown content
 - Fixed an import cache-related bug that prevented successful plugin updates after initial deployment
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4144)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-14/4144)
 
 ## Applicability and version scope
 

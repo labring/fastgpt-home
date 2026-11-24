@@ -2,7 +2,7 @@
 title: Run the FastGPT 4.14.1 Upgrade Script
 slug: /en/deploy/fastgpt-4141-upgrade-script
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4141
+source: https://doc.fastgpt.io/self-host/upgrading/4-14/4141
 source_type: Official documentation
 ---
 
@@ -31,7 +31,7 @@ No request body is required for this endpoint, as defined in the official templa
 # Post-Execution Result
 After the command runs successfully, the FastGPT system will generate a complete copy of your original application directory. This copy is reserved for use during the remainder of the upgrade process to protect your existing deployment data.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4141)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-14/4141)
 
 ## Applicability and version scope
 

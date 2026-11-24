@@ -33,6 +33,6 @@ source_type: GitHub issue
 
 > 来源: [原讨论中的补充回复](https://github.com/labring/FastGPT/issues/5937#issuecomment-3970954171)
 
-> 来源: [FastGPT 工具调用与终止](https://doc.fastgpt.io/en/guide/build/workflow/nodes/tool)
+> 来源: [FastGPT 工具调用与终止](https://doc.fastgpt.io/guide/build/workflow/nodes/tool)
 
-> 来源: [FastGPT 对话 OpenAPI](https://doc.fastgpt.io/en/openapi/chat)
+> 来源: [FastGPT 对话 OpenAPI](https://doc.fastgpt.io/openapi/chat)

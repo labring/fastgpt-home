@@ -2,7 +2,7 @@
 title: Set Up FastGPT Share Link Authentication
 slug: /en/integration/fastgpt-share-link-authentication
 page_type: Integrations
-source: https://doc.fastgpt.cn/en/guide/build/publish/link
+source: https://doc.fastgpt.io/guide/build/publish/link
 source_type: Official documentation
 ---
 
@@ -37,7 +37,7 @@ To enable identity verification for a shared link:
 
 FastGPT will send POST requests to endpoints under the provided root URL for each of the three tracked events. A visual breakdown of the full request workflow is available in the included diagram at `/imgs/sharelink_process.png`.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/publish/link)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/publish/link)
 
 ## Applicability and version scope
 

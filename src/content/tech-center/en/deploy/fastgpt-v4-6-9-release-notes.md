@@ -2,7 +2,7 @@
 title: FastGPT v4.6.9 Feature and Fix Details
 slug: /en/deploy/fastgpt-v4-6-9-release-notes
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/469
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/469
 source_type: 官方文档
 ---
 
@@ -29,4 +29,4 @@ This release addresses three critical platform bugs:
 2. Corrected a QA generation thread count error that caused inconsistent processing resource allocation across batch jobs
 3. Fixed a connection type mismatch error in the question classification node that disrupted workflow execution for certain application configurations
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/469)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/469)

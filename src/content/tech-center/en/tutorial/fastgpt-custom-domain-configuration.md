@@ -2,7 +2,7 @@
 title: Configure Custom Domains for FastGPT Services
 slug: /en/tutorial/fastgpt-custom-domain-configuration
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/workspace/customDomain
+source: https://doc.fastgpt.io/guide/workspace/customDomain
 source_type: Official documentation
 ---
 
@@ -23,7 +23,7 @@ Refer to the provided interface screenshot for visual guidance during configurat
 ### Post-Configuration Access
 After successful setup, you can use your custom domain to access FastGPT services and call FastGPT APIs. No additional adjustments are required for standard usage once the domain status shows as active.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/workspace/customDomain)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/workspace/customDomain)
 
 ## Applicability and version scope
 

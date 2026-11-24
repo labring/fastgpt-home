@@ -2,7 +2,7 @@
 title: FastGPT v4818 Upgrade Feature and Fix Summary
 slug: /en/deploy/fastgpt-v4818-release-notes
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4818
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/4818
 source_type: 官方文档
 ---
 
@@ -41,4 +41,4 @@ Two critical bugs were resolved in this release:
 1. Fixed an issue where Base64-encoded embedded images in uploaded HTML files failed to auto-convert to public image URLs
 2. Resolved incorrect plugin billing calculation errors for commercial deployments
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4818)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/4818)

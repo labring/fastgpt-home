@@ -2,7 +2,7 @@
 title: FastGPT V4.9.12版本升级配置说明
 slug: /zh/deploy/fastgpt-v4912-upgrade-config
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4912
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4912
 source_type: 官方文档
 ---
 
@@ -47,4 +47,4 @@ V4.9.12是FastGPT的一次重要更新，主要涉及环境变量新增、镜像
 - 修复知识库文档中图片TTL字段未清除，导致图片过期的问题。
 - 修复MCP工具存储时，未转义int类型数据的问题。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4912)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/4912)

@@ -2,7 +2,7 @@
 title: FastGPT知识库结果排序与融合的实现逻辑与配置方法
 slug: /zh/tutorial/fastgpt-dataset-rank-fusion
 page_type: 教程
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/dataset_engine
+source: https://doc.fastgpt.cn/guide/dataset/dataset_engine
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ FastGPT融合不同召回路径的结果，不会仅使用单一路径的结果�
 ## 排序结果的核心特点
 FastGPT的结果排序逻辑综合多路召回的信息，不会仅依赖单一向量相似度的计算结果。当某条内容同时被多个召回路径命中时，其排序优先级会得到提升，更容易被排在结果列表的靠前位置。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/dataset/dataset_engine)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/dataset/dataset_engine)
 
 ## 适用性与版本范围
 

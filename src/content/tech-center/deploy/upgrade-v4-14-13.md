@@ -2,7 +2,7 @@
 title: FastGPT V4.14.13版本升级内容解读与操作指引
 slug: /zh/deploy/upgrade-v4-14-13
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41413
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/41413
 source_type: 官方文档
 ---
 
@@ -22,7 +22,7 @@ source_type: 官方文档
 2. 测试opensandbox相关功能，确认鉴权逻辑无绕过风险。
 3. 调用completions接口，传入chatId为null，确认接口可正常响应请求。可通过前端页面或API调试工具完成上述验证操作，确保功能正常。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41413)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-14/41413)
 
 ## 适用性与版本范围
 

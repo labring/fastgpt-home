@@ -2,7 +2,7 @@
 title: FastGPT沙盒v2节点JavaScript白名单模块使用规则说明
 slug: /zh/glossary/fastgpt-sandbox-v2-js-whitelist-modules
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/sandbox-v2
+source: https://doc.fastgpt.cn/guide/build/workflow/nodes/sandbox-v2
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ FastGPT沙盒v2节点中，允许通过require()语法调用的npm模块集合�
 ## 容易搞错的地方
 最常见的错误是尝试引入未列入白名单的模块，例如fs文件系统模块、child_process子进程模块、net网络模块等，这些模块会被系统禁止使用，导致代码执行失败。此外，需严格遵循require()的调用语法，不得使用未在文档中提及的其他模块引入方式，否则同样会触发调用限制，无法正常执行代码。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/sandbox-v2)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/workflow/nodes/sandbox-v2)
 
 ## 适用性与版本范围
 

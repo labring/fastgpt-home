@@ -2,7 +2,7 @@
 title: FastGPT知识库搜索方案和参数的配置与使用说明
 slug: /zh/dataset/knowledge-base-search-params
 page_type: 知识库与切分
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/dataset_engine
+source: https://doc.fastgpt.cn/guide/dataset/dataset_engine
 source_type: 官方文档
 ---
 
@@ -21,4 +21,4 @@ FastGPT基于RAG的Embedding方案构建知识库，向量是可表征文字、�
 ## 使用边界与易错提示
 集合仅用于数据分类，不影响搜索范围，搜索时默认检索整个库。图片检索的生效依赖入库时生成的对应索引，未配置对应模型时无法实现图搜图或图文混合检索。数据长度过长会降低检索精度，需拆分为结构完整、语义单一的chunk。检索词质量不足会影响召回效果，需优化用户问题以提升匹配精度。混合检索会增加计算资源消耗，需根据业务场景选择合适的检索模式。当数据答案较为严格时，可精简index内容以提升检索精度，但会牺牲部分检索范围。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/dataset/dataset_engine)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/dataset/dataset_engine)

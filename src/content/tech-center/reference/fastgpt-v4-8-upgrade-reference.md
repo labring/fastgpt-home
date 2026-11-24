@@ -2,7 +2,7 @@
 title: FastGPT V4.8版本升级的操作与注意事项速查
 slug: /zh/reference/fastgpt-v4-8-upgrade-reference
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/48
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/48
 source_type: 官方文档小节
 ---
 
@@ -21,4 +21,4 @@ source_type: 官方文档小节
 2. 不可混用不同版本的升级脚本，需严格对应目标版本的说明；
 3. 升级前需完成数据备份，避免配置或业务数据丢失。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/48)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/48)

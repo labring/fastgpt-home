@@ -2,7 +2,7 @@
 title: FastGPT中变量引用的使用方法与常见问题
 slug: /zh/glossary/fastgpt-variable-reference-usage
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/toc
+source: https://doc.fastgpt.cn/toc
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ FastGPT的变量引用相关配置文档分布在多个功能模块，官方文�
 ## 容易搞错的地方
 部分用户在配置过程中，误以为变量引用可直接用于调整温度参数与模型选择参数，但实际使用中该场景下变量引用无法生效。此外，不同功能模块的变量使用规则存在差异，需严格参考对应节点的官方文档完成配置，避免因未遵循模块规则导致配置失效。同时，需注意变量引用的调用需依托已预定义的变量，未定义的变量无法被正常调用。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/toc)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/toc)
 
 ## 适用性与版本范围
 

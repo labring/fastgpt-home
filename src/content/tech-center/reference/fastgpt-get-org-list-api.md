@@ -2,7 +2,7 @@
 title: FastGPT获取组织列表的标准接口使用说明
 slug: /zh/reference/fastgpt-get-org-list-api
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/admin/sso
+source: https://doc.fastgpt.cn/guide/admin/sso
 source_type: 官方文档小节
 ---
 
@@ -33,4 +33,4 @@ curl -X GET "https://example.com/org/list" \
 2. 根部门的`parentId`字段必须设置为空字符串，不可填写其他内容。
 3. 响应的`message`字段仅在请求失败时返回有效内容，成功请求时该字段为空字符串。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/admin/sso)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/admin/sso)

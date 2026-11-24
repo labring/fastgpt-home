@@ -2,7 +2,7 @@
 title: FastGPT内容审核与自动改写工作流的配置操作步骤
 slug: /zh/tutorial/fastgpt-content-audit-workflow-config
 page_type: 教程/部署
-source: https://doc.fastgpt.cn/zh-CN/guide/getting-started/quick-start
+source: https://doc.fastgpt.cn/guide/getting-started/quick-start
 source_type: 官方文档小节
 ---
 
@@ -23,4 +23,4 @@ source_type: 官方文档小节
 ## 流程验证与排查
 完成配置后，分别输入安全内容、敏感内容和违规内容进行完整流程验证，记录每条测试的输入、审核分类、进入分支和最终输出。若结果不符合预期，按顺序排查：先确认知识库是否召回正确规则，再检查审核节点分类是否准确，最后核对判断器条件和分支输出配置。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/getting-started/quick-start)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/getting-started/quick-start)

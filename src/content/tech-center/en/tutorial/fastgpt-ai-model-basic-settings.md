@@ -2,7 +2,7 @@
 title: Set Up FastGPT AI Model Basic Settings
 slug: /en/tutorial/fastgpt-ai-model-basic-settings
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/build/general/ai_settings
+source: https://doc.fastgpt.io/guide/build/general/ai_settings
 source_type: Official documentation
 ---
 
@@ -28,7 +28,7 @@ Follow these structured steps to select and apply an AI model:
 4. Select a model aligned with your needs: for example, choose a model with tool calling support for automated workflow tasks, or a model with a larger max context window for processing long documents.
 5. Save your changes to finalize the AI model configuration for your app or node.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/general/ai_settings)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/general/ai_settings)
 
 ## Applicability and version scope
 

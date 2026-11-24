@@ -2,7 +2,7 @@
 title: FastGPT Deployment Edition Feature Comparison Guide
 slug: /en/tutorial/fastgpt-deployment-edition-feature-comparison
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/version/commercial
+source: https://doc.fastgpt.io/guide/version/commercial
 source_type: Official documentation
 ---
 
@@ -51,7 +51,7 @@ Features are grouped by core use case:
 ## License and Deployment Notes
 The Community Edition uses the open source license linked in the comparison table, while Commercial Edition and Cloud Service include full commercial licensing for production deployments.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/version/commercial)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/version/commercial)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: FastGPT并行运行节点的输出参数与结果说明
 slug: /zh/tutorial/parallel-run-node-output-params
 page_type: 教程
-source: https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/parallel_run
+source: https://doc.fastgpt.cn/guide/build/workflow/nodes/parallel_run
 source_type: 官方文档
 ---
 
@@ -23,8 +23,8 @@ source_type: 官方文档
 
 完成状态字段为字符串类型，可表示三种整体执行状态：`success`（全部成功）、`partial_success`（部分失败）、`failed`（全部失败），可用于分支判断。完成状态字段可反映整体任务的执行情况，包含全部成功、部分失败、全部失败三种取值，可作为分支判断的依据，触发对应的后续处理逻辑，根据不同的整体状态调整后续的执行流程。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/parallel_run)
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/parallel_run)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/workflow/nodes/parallel_run)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/workflow/nodes/parallel_run)
 
 ## 适用性与版本范围
 

@@ -2,7 +2,7 @@
 title: FastGPT插件开发CLI命令与API变更说明
 slug: /zh/glossary/fastgpt-plugin-cli-api-changes
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/plugin/system-tool-development
+source: https://doc.fastgpt.cn/plugin/system-tool-development
 source_type: 官方文档
 ---
 
@@ -30,8 +30,8 @@ API相关变更需按以下要求处理：
 5. 未及时更新旧版API接口配置，如文件上传API、`trainingType`字段，导致功能无法正常运行。
 6. 未同步更新私有化部署的旧自定义文件解析方案，造成部署兼容异常。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/plugin/system-tool-development)
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/plugin/system-tool-development)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/plugin/system-tool-development)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/plugin/system-tool-development)
 
 ## 适用性与版本范围
 

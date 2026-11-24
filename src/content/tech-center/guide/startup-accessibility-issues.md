@@ -107,8 +107,8 @@ meta_description: 查阅FastGPT 启动与可访问性 问题清单，按症状�
 
 ## 参考资料
 
-- [FastGPT Docker Compose 部署](https://doc.fastgpt.cn/zh-CN/self-host/deploy/docker)
-- [FastGPT 环境变量](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
+- [FastGPT Docker Compose 部署](https://doc.fastgpt.cn/self-host/deploy/docker)
+- [FastGPT 环境变量](https://doc.fastgpt.cn/self-host/config/env)
 
 ## 问题仍未定位时
 

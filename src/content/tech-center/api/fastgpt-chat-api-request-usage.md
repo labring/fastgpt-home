@@ -2,7 +2,7 @@
 title: FastGPT 发起会话API请求的参数说明与使用示例
 slug: /zh/api/fastgpt-chat-api-request-usage
 page_type: API与文档
-source: https://doc.fastgpt.cn/zh-CN/openapi/chat
+source: https://doc.fastgpt.cn/openapi/chat
 source_type: 官方文档小节
 ---
 
@@ -77,4 +77,4 @@ curl --location --request POST 'http://localhost:3000/api/v1/chat/completions' \
 `variables`为模块变量对象，会替换模块输入框中的`[key]`占位符。
 `messages`结构与GPT接口chat模式一致，支持普通文本或带多媒体内容的数组格式。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/openapi/chat)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/openapi/chat)

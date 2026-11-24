@@ -29,4 +29,4 @@ source_type: GitHub issue
 
 > 来源: [原始讨论：直接获取工具调用结果，而不是大模型总结后的结果](https://github.com/labring/FastGPT/issues/4912)
 
-> 来源: [FastGPT 工具调用与终止](https://doc.fastgpt.io/en/guide/build/workflow/nodes/tool)
+> 来源: [FastGPT 工具调用与终止](https://doc.fastgpt.io/guide/build/workflow/nodes/tool)

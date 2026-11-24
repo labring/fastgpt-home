@@ -2,7 +2,7 @@
 title: FastGPT系统工具在线上传、更新及权限管理操作指南
 slug: /zh/tutorial/fastgpt-system-tool-upload-2
 page_type: 教程/部署
-source: https://doc.fastgpt.cn/zh-CN/guide/build/tools/system-plugins/upload_system_tool
+source: https://doc.fastgpt.cn/guide/build/tools/system-plugins/upload_system_tool
 source_type: 官方文档
 ---
 
@@ -23,4 +23,4 @@ FastGPT 从 4.14.0 版本开始支持通过 Web 界面直接上传、更新系�
 系统工具的管理权限严格区分角色：所有登录用户均可查看已安装的系统工具；仅 root 用户可执行上传新工具、更新已有工具、删除已上传工具的操作。
 在上传工具前，需确认工具文件的来源合法性与安全性，避免引入风险内容。同时需严格遵守文件格式、大小与数量限制，否则上传操作将无法成功。上传后的系统工具将作为全平台可用的公共工具，需确保其适配当前平台版本。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/tools/system-plugins/upload_system_tool)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/tools/system-plugins/upload_system_tool)

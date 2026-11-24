@@ -2,7 +2,7 @@
 title: FastGPT V4.9.9版本升级内容与操作步骤说明
 slug: /zh/deploy/upgrade-v4-9-9
 page_type: 版本解读
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/499
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/499
 source_type: 官方文档
 ---
 
@@ -24,4 +24,4 @@ source_type: 官方文档
 ## 升级后怎么验证
 可通过以下方式验证升级效果：确认登录鉴权逻辑变更，可配置最大登录客户端数量；商业版用户确认管理后台可正常提示输入新License；测试公众号调用，查看是否正常记录chat对话错误；测试API知识库，确认支持BasePath选择；检查应用历史保存/发布记录能否正常获取；测试成员创建MCP工具，确认权限正常；查看来源引用展示，无ID传递错误导致的无权操作提示；测试回答标注，确认前端无数据报错。
 
-> 来源: [FastGPT 官方文档与源码](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/499)
+> 来源: [FastGPT 官方文档与源码](https://doc.fastgpt.cn/self-host/upgrading/outdated/499)

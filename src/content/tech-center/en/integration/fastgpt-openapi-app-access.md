@@ -2,7 +2,7 @@
 title: Authenticate and Access FastGPT Apps via OpenAPI
 slug: /en/integration/fastgpt-openapi-app-access
 page_type: Integrations
-source: https://doc.fastgpt.cn/en/guide/build/publish/openapi
+source: https://doc.fastgpt.io/guide/build/publish/openapi
 source_type: Official documentation
 ---
 
@@ -25,7 +25,7 @@ There are two approved implementation patterns for targeting FastGPT application
 2. For standard OpenAPI calls to the `chat/completions` endpoint, include the `appId` field in the request body alongside your API key authentication.
 3. For third-party tools using OpenAI SDK-style configuration, format your authentication key by combining your member API Key and the target application ID with a hyphen, then use this formatted key for all SDK authentication setup.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/publish/openapi)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/publish/openapi)
 
 ## Applicability and version scope
 

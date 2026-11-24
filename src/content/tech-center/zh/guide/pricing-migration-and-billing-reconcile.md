@@ -74,4 +74,4 @@ keywords: "计价迁移,百万单位,阶梯计价,单价计价,账单对账,免�
 | 主题 | 来源 |
 | --- | --- |
 | 计价字段、单位、迁移规则、回填任务 | [官方更新说明 4.17.3](https://github.com/labring/FastGPT/releases/tag/v4.17.3) |
-| 应用 Token 统计看板 | [官方更新说明 4.17.1](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4171) |
+| 应用 Token 统计看板 | [官方更新说明 4.17.1](https://doc.fastgpt.cn/self-host/upgrading/4-17/4171) |

@@ -29,4 +29,4 @@ source_type: GitHub issue
 
 > 来源: [原始讨论：建议在工具调用的编辑描述里面添加变量](https://github.com/labring/FastGPT/issues/2816)
 
-> 来源: [FastGPT 工具调用与终止](https://doc.fastgpt.io/en/guide/build/workflow/nodes/tool)
+> 来源: [FastGPT 工具调用与终止](https://doc.fastgpt.io/guide/build/workflow/nodes/tool)

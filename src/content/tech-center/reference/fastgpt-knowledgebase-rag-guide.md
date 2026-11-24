@@ -2,7 +2,7 @@
 title: FastGPT知识库RAG搜索参数与存储格式使用说明
 slug: /zh/reference/fastgpt-knowledgebase-rag-guide
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/rag
+source: https://doc.fastgpt.cn/guide/dataset/rag
 source_type: 官方文档小节
 ---
 
@@ -21,4 +21,4 @@ source_type: 官方文档小节
 2. 配置搜索参数时需结合实际业务场景，无需深入理解参数背后的技术细节。
 3. 知识库构建需遵循QA存储格式与多向量映射规则，确保检索效果。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/dataset/rag)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/dataset/rag)

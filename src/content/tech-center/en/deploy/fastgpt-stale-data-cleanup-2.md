@@ -2,7 +2,7 @@
 title: Manually Run FastGPT Stale Data Cleanup
 slug: /en/deploy/fastgpt-stale-data-cleanup-2
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/481
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/481
 source_type: 官方文档
 ---
 
@@ -27,4 +27,4 @@ curl --location --request POST 'https://{{host}}/api/admin/clearInvalidData' \
 ```
 After submitting the request, the FastGPT backend will process the cleanup task, scanning all stored data to remove invalid entries that were not addressed by the prior scheduled cleanup process. No additional optional parameters are supported for this command per the official documentation.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/481)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/481)

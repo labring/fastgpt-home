@@ -2,7 +2,7 @@
 title: Replace OneAPI with AI Proxy for FastGPT
 slug: /en/deploy/fastgpt-replace-oneapi-aiproxy
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/490
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/490
 source_type: 官方文档
 ---
 
@@ -100,4 +100,4 @@ docker-compose down
 docker-compose up -d
 ```
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/490)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/490)

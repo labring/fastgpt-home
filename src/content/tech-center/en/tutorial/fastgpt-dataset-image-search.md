@@ -2,7 +2,7 @@
 title: Configure and Use FastGPT Dataset Image Search
 slug: /en/tutorial/fastgpt-dataset-image-search
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/dataset/dataset_engine
+source: https://doc.fastgpt.io/guide/dataset/dataset_engine
 source_type: Official documentation
 ---
 
@@ -33,7 +33,7 @@ The table below outlines how query behavior varies based on dataset configuratio
 ## Troubleshooting Poor Image Search Performance
 If image-to-image search returns subpar results, do not only adjust search parameters. Instead, validate three critical configuration and ingestion details: first, confirm that a compatible vision model is properly configured for image description generation; second, verify that the selected embedding model supports image vector input; third, check that valid image indexes were created during the initial dataset ingestion process.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/dataset_engine)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/dataset_engine)
 
 ## Applicability and version scope
 

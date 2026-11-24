@@ -2,7 +2,7 @@
 title: FastGPT V4.6.4版本升级脚本操作速查指南
 slug: /zh/reference/fastgpt-v464-upgrade-script-quickref
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/464
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/464
 source_type: 官方文档小节
 ---
 
@@ -23,4 +23,4 @@ FastGPT V4.6.4版本升级需使用官方提供的专属升级脚本完成，该
 3. 升级过程需严格遵循脚本给出的操作提示，不可随意跳过必要的确认步骤
 4. 升级完成后可通过官方文档提供的排查方式，确认系统运行状态正常
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/464)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/464)

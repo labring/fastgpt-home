@@ -2,7 +2,7 @@
 title: FastGPT v4.6.7 Release Feature and Fix Notes
 slug: /en/deploy/fastgpt-v467-release-notes
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/467
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/467
 source_type: 官方文档
 ---
 
@@ -32,4 +32,4 @@ This release addresses two critical reported issues:
 1.  Fixed chatId conflict errors that occurred when initiating or managing conversations via the FastGPT API.
 2.  Resolved potential `window.onLoad` event conflicts that arose when embedding FastGPT within an external iframe.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/467)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/467)

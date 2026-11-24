@@ -2,7 +2,7 @@
 title: Configure Multimodal Recognition Settings in FastGPT
 slug: /en/tutorial/fastgpt-multimodal-recognition-settings
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/build/general/ai_settings
+source: https://doc.fastgpt.io/guide/build/general/ai_settings
 source_type: Official documentation
 ---
 
@@ -31,7 +31,7 @@ All multimodal recognition workflows are subject to these enforced rules:
 3. Regular document files cannot be sent directly to the LLM as multimodal input. All documents must first be parsed into structured text before they can be used by the AI.
 4. Multimodal recognition relies entirely on the selected model’s built-in capabilities. If the system indicates the model does not support multimodal recognition, switch to a model that supports your required media type.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/general/ai_settings)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/general/ai_settings)
 
 ## Applicability and version scope
 

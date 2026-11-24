@@ -2,7 +2,7 @@
 title: FastGPT 4.6.6版本升级配置与功能变更说明
 slug: /zh/deploy/upgrade-v4-6-6
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/466
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/466
 source_type: 官方文档
 ---
 
@@ -28,7 +28,7 @@ source_type: 官方文档
 5. 测试问题分类功能，确认国产商用API模型使用Prompt模式可正常完成分类。
 6. 测试链接读取数据集的同步功能，确认选择器配置已保存并生效，修复的问题已解决。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/466)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/466)
 
 ## 适用性与版本范围
 

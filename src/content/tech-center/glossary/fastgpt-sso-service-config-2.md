@@ -2,7 +2,7 @@
 title: FastGPT SSO服务的部署配置与使用说明
 slug: /zh/glossary/fastgpt-sso-service-config-2
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/guide/admin/sso
+source: https://doc.fastgpt.cn/guide/admin/sso
 source_type: 官方文档
 ---
 
@@ -30,8 +30,8 @@ fastgpt-sso:
 ## 容易搞错的地方
 AUTH_TOKEN仅在fastgpt-pro版本中需要配置，非pro版本添加该变量会导致冗余配置。未根据所选身份提供商配置对应专属环境变量，会导致服务无法完成身份对接。未将SSO服务加入fastgpt网络，会导致与FastGPT主服务的通信失败。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/admin/sso)
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/admin/sso)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/admin/sso)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/admin/sso)
 
 ## 适用性与版本范围
 

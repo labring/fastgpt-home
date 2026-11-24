@@ -2,7 +2,7 @@
 title: Run Official FastGPT v4.14.5 Upgrade Script
 slug: /en/deploy/fastgpt-v4145-upgrade-script
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4145
+source: https://doc.fastgpt.io/self-host/upgrading/4-14/4145
 source_type: Official documentation
 ---
 
@@ -31,7 +31,7 @@ curl --location --request POST 'https://{{host}}/api/admin/initv4145' \
 ```
 Ensure you replace both placeholder values exactly as defined in your environment. No additional command parameters or flags are required to run the migration script successfully.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4145)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-14/4145)
 
 ## Applicability and version scope
 

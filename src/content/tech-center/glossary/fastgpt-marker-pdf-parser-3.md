@@ -2,7 +2,7 @@
 title: FastGPT中Marker自定义PDF解析工具的使用说明
 slug: /zh/glossary/fastgpt-marker-pdf-parser-3
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/self-host/custom-models/marker
+source: https://doc.fastgpt.cn/self-host/custom-models/marker
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ FastGPT v4.9.0及以上版本支持使用Marker解析PDF。社区版用户需在
 ## 容易搞错的地方
 仅FastGPT v4.9.0及以上版本支持该自定义PDF解析配置，低版本无法使用。社区版与商业版的配置方式不同，请勿混淆操作路径。部署Marker时需确保GPU环境可用，且端口映射、进程数配置需符合要求。需重新拉取最新的Marker镜像，旧镜像可能无法适配新的接口格式。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/marker)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/custom-models/marker)
 
 ## 适用性与版本范围
 

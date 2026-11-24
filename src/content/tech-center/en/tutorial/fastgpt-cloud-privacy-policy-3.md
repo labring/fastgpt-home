@@ -2,7 +2,7 @@
 title: FastGPT Cloud Privacy Compliance Technical Details
 slug: /en/tutorial/fastgpt-cloud-privacy-policy-3
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/version/cloud/privacy
+source: https://doc.fastgpt.io/guide/version/cloud/privacy
 source_type: Official documentation
 ---
 
@@ -32,7 +32,7 @@ User data rights include access to personal information, correction of inaccurat
 
 The privacy policy may be updated periodically, with changes posted on the FastGPT Cloud Service page. Continued use of the service constitutes acceptance of updated policy terms. Cross-border data transfers may occur as needed to deliver the service, with servers located across multiple countries or regions, and adequate protection measures implemented for such transfers. Protection of minor personal information requires guardian supervision for minor users, with appropriate handling of personal information by guardians.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/version/cloud/privacy)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/version/cloud/privacy)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: Run the FastGPT 4.13.2 Upgrade Script
 slug: /en/deploy/fastgpt-4132-upgrade-script
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-13/4132
+source: https://doc.fastgpt.io/self-host/upgrading/4-13/4132
 source_type: Official documentation
 ---
 
@@ -27,7 +27,7 @@ This command sends a validated admin request to the FastGPT dedicated 4.13.2 upg
 ## Error Handling Guidelines
 The upgrade script attempts to remove the existing S3 circleLife policy during execution. If your deployment uses an external S3 service that does not support circleLife operations, the script may return an error. Per official documentation, this error is safe to disregard: the intended policy update would have already failed in this unsupported environment, so no additional corrective action is required.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-13/4132)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-13/4132)
 
 ## Applicability and version scope
 

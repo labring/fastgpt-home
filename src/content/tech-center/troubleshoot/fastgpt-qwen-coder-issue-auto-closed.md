@@ -29,4 +29,4 @@ source_type: GitHub issue
 
 > 来源: [原始讨论：建议增加通义千问的coder模型](https://github.com/labring/FastGPT/issues/5333)
 
-> 来源: [FastGPT 模型配置](https://doc.fastgpt.io/en/self-host/config/model/intro)
+> 来源: [FastGPT 模型配置](https://doc.fastgpt.io/self-host/config/model/intro)

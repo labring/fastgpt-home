@@ -2,7 +2,7 @@
 title: 说明FastGPT Agent V2中提示词的定义与配置使用方法
 slug: /zh/glossary/fastgpt-agentv2-prompt-config
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/guide/build/agentv2/settings
+source: https://doc.fastgpt.cn/guide/build/agentv2/settings
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ FastGPT Agent V2中的提示词用于定义Agent的核心人设、工作目标�
 ## 容易搞错的地方
 部分用户易混淆提示词配置与通用AI模型配置，提示词仅负责定义Agent的核心人设、工作目标和具体规则，无法直接设置模型相关参数，相关通用参数需通过独立的AI配置模块完成。另外，通过`@`唤起绑定的仅为编辑器支持的部分工具上下文，并非全部可用工具，无法覆盖所有业务所需的工具类型。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/agentv2/settings)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/agentv2/settings)
 
 ## 适用性与版本范围
 

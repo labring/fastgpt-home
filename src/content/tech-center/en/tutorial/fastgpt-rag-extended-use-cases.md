@@ -2,7 +2,7 @@
 title: Extend FastGPT RAG to Diverse Use Cases
 slug: /en/tutorial/fastgpt-rag-extended-use-cases
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/dataset/rag
+source: https://doc.fastgpt.io/guide/dataset/rag
 source_type: Official documentation
 ---
 
@@ -24,7 +24,7 @@ For enterprise strategic decision-making, FastGPT’s RAG system can rapidly ret
 4.  For enterprise decision support: Set the RAG retrieval trigger to prioritize real-time external resource queries, and enable the forward-looking report generation module to compile retrieved data into structured reports.
 5.  Validate the configuration by running a test query to confirm successful retrieval of external resources and generation of targeted output.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/rag)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/rag)
 
 ## Applicability and version scope
 

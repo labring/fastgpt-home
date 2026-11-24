@@ -2,7 +2,7 @@
 title: FastGPT工作区团队权限与邀请配置
 slug: /zh/tutorial/fastgpt-workspace-team-management
 page_type: 教程/部署
-source: https://doc.fastgpt.cn/zh-CN/toc
+source: https://doc.fastgpt.cn/toc
 source_type: 官方文档
 ---
 
@@ -18,4 +18,4 @@ FastGPT工作区的团队管理功能，用于支持多用户协作开展应用�
 
 除了基础的团队管理，管理员还可通过管理员后台的团队模式配置，优化团队协作的整体流程。该配置需登录管理员后台进入对应页面完成，普通工作区成员无法调整团队模式参数。若需要统一团队成员的身份验证，可参考管理员后台的SSO配置文档，完成相关设置后，团队成员可通过统一的身份验证方式登录工作区。当团队成员遇到无法访问部分工作区资源的情况，可先检查自身的角色权限是否包含对应操作的权限，若权限配置正确仍无法访问，可联系工作区管理员确认团队管理的最新配置。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/toc)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/toc)

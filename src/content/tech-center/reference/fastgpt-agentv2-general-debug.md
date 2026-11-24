@@ -2,7 +2,7 @@
 title: FastGPT AgentV2通用调试功能的使用说明
 slug: /zh/reference/fastgpt-agentv2-general-debug
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/build/agentv2/debug
+source: https://doc.fastgpt.cn/guide/build/agentv2/debug
 source_type: 官方文档小节
 ---
 
@@ -28,4 +28,4 @@ FastGPT AgentV2的通用调试功能无需启用虚拟机即可使用，涵盖�
 3. 步骤规划卡片的颜色状态包括进行中、已完成、待处理、已阻塞，遇到阻塞时可根据提示优化System Prompt或排查工具配置。
 4. 运行详情中的积分消耗可用于性能审计与成本核算。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/agentv2/debug)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/agentv2/debug)

@@ -2,7 +2,7 @@
 title: Resolved Issues and Improvements for FastGPT 4823 Upgrade
 slug: /en/deploy/fastgpt-4823-upgrade-improvements
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4823
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/4823
 source_type: 官方文档
 ---
 
@@ -30,4 +30,4 @@ The following table summarizes all key changes included in the 4823 upgrade:
 ## Dependency Upgrade Details
 The project’s core dependency on the mongoose library has been upgraded to resolve known compatibility and security concerns. This upgrade ensures long-term stability of self-hosted FastGPT instances running the 4823 build.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4823)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/4823)

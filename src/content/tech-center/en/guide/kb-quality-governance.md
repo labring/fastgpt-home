@@ -7,7 +7,7 @@ is_part_of: FastGPT Tech Center
 meta_description: Assign knowledge base owners, schedule content reviews, retire outdated documents, and verify permissions and retrieval after changes.
 delivery_source_type: Open-source repository docs and community threads
 source_type: 深度场景内容
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/env
+source: https://doc.fastgpt.cn/self-host/config/env
 meta_title: Governing Knowledge Base Content: Ownership, Review Cycles and Retirement | FastGPT Technical Center
 schema_type: TechArticle
 date_published: 2026-09-28
@@ -70,8 +70,8 @@ For database or index compatibility issues, investigate against the deployed ver
 
 ## References
 
-- [FastGPT environment variables](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
-- [FastGPT upgrade notes](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/upgrade-instruction)
+- [FastGPT environment variables](https://doc.fastgpt.cn/self-host/config/env)
+- [FastGPT upgrade notes](https://doc.fastgpt.cn/self-host/upgrading/upgrade-instruction)
 
 ## Next steps
 

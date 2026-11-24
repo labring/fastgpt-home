@@ -2,7 +2,7 @@
 title: 配置FastGPT工作流HTTP请求节点的参数与使用方法
 slug: /zh/node/fastgpt-workflow-http-node-pitfalls
 page_type: 工作流节点
-source: https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/http
+source: https://doc.fastgpt.cn/guide/build/workflow/nodes/http
 source_type: 官方文档
 ---
 
@@ -18,4 +18,4 @@ FastGPT工作流中的HTTP请求节点是核心功能模块，可向指定地址
 
 使用该节点时需注意边界场景：测试模式下无法使用chatId与responseChatItemId变量；Body仅在POST、PUT等特定请求类型下生效；JSONPath语法需参考指定文档规则。若需对接外部业务服务，需确保接口格式与配置参数匹配，避免因参数不匹配导致请求失败。该节点适用于需要调用外部API扩展工作流功能的场景，无需外部接口调用时不宜使用。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/http)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/workflow/nodes/http)

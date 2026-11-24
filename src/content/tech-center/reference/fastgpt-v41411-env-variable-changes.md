@@ -2,7 +2,7 @@
 title: FastGPT V4.14.11版本环境变量变更的处理与操作指南
 slug: /zh/reference/fastgpt-v41411-env-variable-changes
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41411
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/41411
 source_type: 官方文档小节
 ---
 
@@ -21,4 +21,4 @@ FastGPT V4.14.11版本存在官方明确的环境变量变更。部署该版本�
 2. 未调整环境变量直接启动V4.14.11版本，可能出现服务启动失败或功能异常；
 3. 配置调整过程中需严格遵循官方给出的变更规则，避免误修改无关参数。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41411)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-14/41411)

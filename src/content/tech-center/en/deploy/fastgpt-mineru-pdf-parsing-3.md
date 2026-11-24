@@ -2,7 +2,7 @@
 title: Configure MinerU PDF Parsing for FastGPT
 slug: /en/deploy/fastgpt-mineru-pdf-parsing-3
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/custom-models/mineru
+source: https://doc.fastgpt.io/self-host/custom-models/mineru
 source_type: Official documentation
 ---
 
@@ -28,7 +28,7 @@ For Community Edition users:
 For Commercial Edition users:
 Configure the MinerU PDF parsing feature directly via the Admin panel using the provided form. Official step-by-step tutorial details for this workflow are referenced in the official documentation.
 
-> [FastGPT public documentation](https://doc.fastgpt.cn/en/self-host/custom-models/mineru)
+> [FastGPT public documentation](https://doc.fastgpt.io/self-host/custom-models/mineru)
 
 ## Applicability and version scope
 

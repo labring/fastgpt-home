@@ -2,7 +2,7 @@
 title: Configure DingTalk Dataset Integration for FastGPT
 slug: /en/integration/dingtalk-fastgpt-dataset-integration
 page_type: Integrations
-source: https://doc.fastgpt.cn/en/guide/dataset/third-party/dingtalk_dataset
+source: https://doc.fastgpt.io/guide/dataset/third-party/dingtalk_dataset
 source_type: Official documentation
 ---
 
@@ -31,7 +31,7 @@ Follow these ordered steps to complete the integration:
 ## Supported Import Content
 Only text content from DingTalk online documents is supported for import. Binary file formats including PDF, Word, Excel, and PPT are not compatible with this integration and cannot be added to the FastGPT dataset.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/third-party/dingtalk_dataset)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/third-party/dingtalk_dataset)
 
 ## Applicability and version scope
 

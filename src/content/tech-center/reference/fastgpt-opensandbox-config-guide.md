@@ -2,7 +2,7 @@
 title: FastGPT OpenSandbox 沙盒运行环境的配置与使用说明
 slug: /zh/reference/fastgpt-opensandbox-config-guide
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/sandbox/opensandbox
+source: https://doc.fastgpt.cn/self-host/config/sandbox/opensandbox
 source_type: 官方文档小节
 ---
 
@@ -20,4 +20,4 @@ OpenSandbox 是 FastGPT 专为自托管 Agent/Skill 沙盒运行环境设计的�
 ## 注意事项
 ⚠️ OpenSandbox 方案默认未配置网络隔离策略。如果有安全隔离的需求，请自行补充对应的网络隔离措施，保障沙盒环境的安全性。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/sandbox/opensandbox)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/config/sandbox/opensandbox)

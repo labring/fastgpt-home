@@ -2,7 +2,7 @@
 title: FastGPT V4.6版本升级操作及升级相关注意事项
 slug: /zh/reference/fastgpt-v46-upgrade-guide
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/46
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/46
 source_type: 官方文档小节
 ---
 
@@ -21,4 +21,4 @@ FastGPT V4.6版本需使用官方配套的升级脚本完成升级。该版本�
 2. 升级完成后无法继续使用旧版本的升级脚本。
 3. 该版本升级后无法执行回退操作。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/46)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/46)

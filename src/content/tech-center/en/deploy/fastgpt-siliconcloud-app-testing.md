@@ -2,7 +2,7 @@
 title: Test FastGPT App Chat and Image Recognition with SiliconCloud
 slug: /en/deploy/fastgpt-siliconcloud-app-testing
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/model/siliconCloud
+source: https://doc.fastgpt.io/self-host/config/model/siliconCloud
 source_type: Official documentation
 ---
 
@@ -27,7 +27,7 @@ A two-column visual reference for key test stages is provided below, matching th
 ## 72B Model Performance Observations
 The 72B parameter variant of the SiliconCloud model delivers strong throughput when hosted via the platform. For teams unable to deploy local infrastructure with multiple 4090 GPUs, direct local execution of this model variant incurs substantial latency: just generating raw model output takes approximately 30 seconds, not including the time required for initial environment setup and dependency configuration. This demonstrates the operational efficiency of leveraging cloud-hosted SiliconCloud models for high-capacity AI workloads within FastGPT.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/model/siliconCloud)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/model/siliconCloud)
 
 ## Applicability and version scope
 

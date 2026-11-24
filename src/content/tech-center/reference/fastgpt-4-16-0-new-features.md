@@ -2,7 +2,7 @@
 title: FastGPT 4.16.0版本新增功能技术速查
 slug: /zh/reference/fastgpt-4-16-0-new-features
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/41601
+source: https://doc.fastgpt.cn/self-host/upgrading/4-16/41601
 source_type: 官方文档小节
 ---
 
@@ -25,4 +25,4 @@ source_type: 官方文档小节
 3. Sandbox的会话隔离仅适用于同一App、同一用户的多对话场景。
 4. 所有新增功能的操作需在FastGPT对应模块中完成，无需额外工具。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/41601)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-16/41601)

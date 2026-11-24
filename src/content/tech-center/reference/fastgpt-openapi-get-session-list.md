@@ -2,7 +2,7 @@
 title: FastGPT通过OpenAPI获取会话列表的操作方法
 slug: /zh/reference/fastgpt-openapi-get-session-list
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/openapi/chat
+source: https://doc.fastgpt.cn/openapi/chat
 source_type: 官方文档小节
 ---
 
@@ -32,4 +32,4 @@ curl --location --request POST 'http://localhost:3000/api/core/chat/history/getH
 2. 响应数据的`list`字段包含会话详情列表，`total`字段为符合查询条件的会话总数量。
 3. 每个会话对象包含chatId、updateTime、appId、customTitle、title、top等字段，chatId为会话唯一标识。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/openapi/chat)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/openapi/chat)

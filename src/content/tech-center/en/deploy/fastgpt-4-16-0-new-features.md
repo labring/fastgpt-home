@@ -2,7 +2,7 @@
 title: Official FastGPT 4.16.0 New Feature Details
 slug: /en/deploy/fastgpt-4-16-0-new-features
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-16/4160
+source: https://doc.fastgpt.io/self-host/upgrading/4-16/4160
 source_type: 官方文档
 ---
 
@@ -29,5 +29,5 @@ The Skill list now includes empty-state guidance to assist new users navigating 
 
 ## References
 
-- [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/4-16/4160)
-- [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/4-16/41601)
+- [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/4-16/4160)
+- [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/4-16/41601)

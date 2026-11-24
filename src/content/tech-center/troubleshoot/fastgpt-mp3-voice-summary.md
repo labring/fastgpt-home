@@ -29,8 +29,8 @@ source_type: GitHub issue
 
 > 来源: [原始讨论：我想从fastgpt对话框上传一段语音对话比如MP3，然后让他直接总结出对话内容，可行吗？](https://github.com/labring/FastGPT/issues/2486)
 
-> 来源: [FastGPT 文件输入与 4.8.13 行为说明](https://doc.fastgpt.io/en/guide/build/general/fileInput)
+> 来源: [FastGPT 文件输入与 4.8.13 行为说明](https://doc.fastgpt.io/guide/build/general/fileInput)
 
-> 来源: [FastGPT 语音输入](https://doc.fastgpt.io/en/guide/build/general/voiceInput)
+> 来源: [FastGPT 语音输入](https://doc.fastgpt.io/guide/build/general/voiceInput)
 
 > 来源: [原讨论中的补充回复](https://github.com/labring/FastGPT/issues/2486#issuecomment-2308363554)

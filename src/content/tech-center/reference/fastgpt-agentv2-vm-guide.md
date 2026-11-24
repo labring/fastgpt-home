@@ -2,7 +2,7 @@
 title: FastGPT Agent V2虚拟机的核心概念与使用说明
 slug: /zh/reference/fastgpt-agentv2-vm-guide
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/build/agentv2/vm
+source: https://doc.fastgpt.cn/guide/build/agentv2/vm
 source_type: 官方文档小节
 ---
 
@@ -20,4 +20,4 @@ FastGPT Agent V2虚拟机是专为每个会话分配的物理隔离轻量Linux�
 2. 运行环境为轻量级Linux沙盒，仅支持Linux兼容的操作。
 3. 需通过Agent调用才能使用虚拟机的相关能力，不可直接手动操作。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/agentv2/vm)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/agentv2/vm)

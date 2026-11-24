@@ -2,7 +2,7 @@
 title: FastGPT 调用官方OpenAPI创建知识库的完整方法速查
 slug: /zh/reference/fastgpt-openapi-create-dataset
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/openapi/dataset
+source: https://doc.fastgpt.cn/openapi/dataset
 source_type: 官方文档小节
 ---
 
@@ -59,4 +59,4 @@ source_type: 官方文档小节
 3.  成功响应的`data`字段为新建知识库的唯一ID。
 4.  若需创建文件夹，可将`type`参数设为`folder`。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/openapi/dataset)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/openapi/dataset)

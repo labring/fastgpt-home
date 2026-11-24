@@ -2,7 +2,7 @@
 title: 在FastGPT中完成ChatGLM2-6B私有化模型的完整接入配置
 slug: /zh/deploy/fastgpt-chatglm2-integration
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/custom-models/chatglm2
+source: https://doc.fastgpt.cn/self-host/custom-models/chatglm2
 source_type: 官方文档
 ---
 
@@ -37,4 +37,4 @@ curl --location --request POST https://your-domain/v1/chat/completions \
 ```
 其中`your-domain`为模型部署的实际地址。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/chatglm2)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/custom-models/chatglm2)

@@ -2,7 +2,7 @@
 title: FastGPT Open Source License Compliance Guidelines
 slug: /en/tutorial/fastgpt-open-source-license-compliance-2
 page_type: 教程/部署
-source: https://doc.fastgpt.cn/en/guide/version/opensource/license
+source: https://doc.fastgpt.io/guide/version/opensource/license
 source_type: 官方文档
 ---
 
@@ -27,4 +27,4 @@ Follow this structured workflow to determine if a commercial license is required
 ## Contributor License Terms
 As a contributor to the FastGPT project, your submitted code is licensed for specific additional uses beyond the base Apache License 2.0 terms. Maintainers retain the right to adjust the open source license for the project to either more restrictive or more permissive terms at their discretion. Additionally, contributed code may be used for commercial purposes, including deployment as part of FastGPT’s official cloud service.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/guide/version/opensource/license)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/guide/version/opensource/license)

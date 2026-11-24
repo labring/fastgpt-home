@@ -2,7 +2,7 @@
 title: Upgrade Pgvector for Docker Compose FastGPT Deployments
 slug: /en/deploy/pgvector-upgrade-docker-compose-fastgpt
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/45
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/45
 source_type: 官方文档
 ---
 
@@ -54,4 +54,4 @@ To confirm the upgrade completed successfully:
 2.  Run the `\dx` command to verify the `vector` extension version is now 0.5.0 (previously 0.4.2).
 3.  Run the `\d modeldata` command to check the status of the `vector_index`: the output should show a valid HNSW index with no `INVALID` suffix, formatted as `vector_index hnsw (vector vector_ip_ops) WITH (m='16', ef_construction='64')`.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/45)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/45)

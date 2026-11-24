@@ -2,7 +2,7 @@
 title: Understand FastGPT Upgrade Script Core Requirements
 slug: /en/deploy/fastgpt-upgrade-script-guide
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/upgrade-instruction
+source: https://doc.fastgpt.io/self-host/upgrading/upgrade-instruction
 source_type: 官方文档
 ---
 
@@ -21,4 +21,4 @@ To ensure a safe and successful deployment update, adhere to these required step
 3.  Allow the upgrade or initialization process to run to completion, even for deployments with large data volumes
 4.  Confirm the upgrade script has executed successfully before restoring full access to the FastGPT service
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/upgrade-instruction)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/upgrade-instruction)

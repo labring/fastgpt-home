@@ -29,4 +29,4 @@ source_type: GitHub issue
 
 > 来源: [原始讨论：普通应用时设置的mcp，AI会偷懒，调用几次就不调用了伪造数据。](https://github.com/labring/FastGPT/issues/5112)
 
-> 来源: [FastGPT 工具调用与终止](https://doc.fastgpt.io/en/guide/build/workflow/nodes/tool)
+> 来源: [FastGPT 工具调用与终止](https://doc.fastgpt.io/guide/build/workflow/nodes/tool)

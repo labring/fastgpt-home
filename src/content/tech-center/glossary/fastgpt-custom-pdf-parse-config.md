@@ -2,7 +2,7 @@
 title: 说明FastGPT中自定义PDF解析配置的使用方法
 slug: /zh/glossary/fastgpt-custom-pdf-parse-config
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/self-host/custom-models/marker
+source: https://doc.fastgpt.cn/self-host/custom-models/marker
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ FastGPT v4.9.0版本及以上支持该配置。社区版用户需在config.json�
 ## 容易搞错的地方
 部分用户会混淆社区版与商业版的配置路径，社区版需修改本地config.json文件，商业版直接在Admin后台操作即可。部分用户未重新拉取对应自定义PDF解析工具的镜像，导致配置无法生效。还有用户未注意接口格式变动，沿用旧的调用逻辑，引发调用异常。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/marker)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/custom-models/marker)
 
 ## 适用性与版本范围
 

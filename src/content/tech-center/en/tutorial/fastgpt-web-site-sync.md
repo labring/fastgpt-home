@@ -2,7 +2,7 @@
 title: Configure FastGPT Web Site Dataset Sync
 slug: /en/tutorial/fastgpt-web-site-sync
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/dataset/websync
+source: https://doc.fastgpt.io/guide/dataset/websync
 source_type: Official documentation
 ---
 
@@ -29,7 +29,7 @@ All FastGPT Web Site Sync operations follow fixed, platform-defined parameters:
 | Domain Matching | Only web pages sharing the exact domain of the entry URL will be included in the crawl | N/A |
 | Maximum Sub-Pages | Total number of automatically discovered pages per sync | 200 |
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/websync)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/websync)
 
 ## Applicability and version scope
 

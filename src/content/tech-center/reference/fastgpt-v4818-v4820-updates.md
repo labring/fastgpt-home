@@ -2,7 +2,7 @@
 title: FastGPT V4.8.18与V4.8.20版本更新内容速查
 slug: /zh/reference/fastgpt-v4818-v4820-updates
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4819
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4819
 source_type: 官方文档小节
 ---
 
@@ -37,4 +37,4 @@ source_type: 官方文档小节
 - 工作流相关功能更新后，需校验对应节点配置是否正常生效
 - 配置飞书机器人时，需确保私有化飞书地址填写正确
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4819)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/4819)

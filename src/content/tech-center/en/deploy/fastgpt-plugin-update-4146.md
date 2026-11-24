@@ -2,7 +2,7 @@
 title: Update FastGPT System Plugins for 4.14.6 Upgrade
 slug: /en/deploy/fastgpt-plugin-update-4146
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4146
+source: https://doc.fastgpt.io/self-host/upgrading/4-14/4146
 source_type: Official documentation
 ---
 
@@ -32,7 +32,7 @@ Follow these official steps to update the listed system plugins:
 ## Post-Update Verification
 After updating all listed plugins, confirm that each plugin operates correctly within your FastGPT deployment. This can include running test workflows for each plugin type, such as decoding a Base64 string, generating a test image, or parsing a sample PDF document. If updates are not visible in the marketplace, refresh the marketplace cache or restart your FastGPT backend services to refresh available plugin data.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4146)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-14/4146)
 
 ## Applicability and version scope
 

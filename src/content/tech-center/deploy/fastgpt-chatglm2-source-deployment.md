@@ -2,7 +2,7 @@
 title: FastGPT平台ChatGLM2模型的源码部署步骤
 slug: /zh/deploy/fastgpt-chatglm2-source-deployment
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/custom-models/chatglm2
+source: https://doc.fastgpt.cn/self-host/custom-models/chatglm2
 source_type: 官方文档
 ---
 
@@ -22,7 +22,7 @@ source_type: 官方文档
 ## 启动连接验证
 启动成功后将显示对应服务地址，其中`http://0.0.0.0:6006`即为可用的模型连接地址，可用于后续平台对接配置。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/chatglm2)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/custom-models/chatglm2)
 
 ## 适用性与版本范围
 

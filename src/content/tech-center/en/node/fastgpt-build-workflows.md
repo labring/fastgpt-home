@@ -2,7 +2,7 @@
 title: Build Complex AI Apps With FastGPT Workflows
 slug: /en/node/fastgpt-build-workflows
 page_type: Workflow nodes
-source: https://doc.fastgpt.cn/en/guide/build/workflow/intro
+source: https://doc.fastgpt.io/guide/build/workflow/intro
 source_type: Official documentation
 ---
 
@@ -23,7 +23,7 @@ The following steps outline the core process to build and deploy a workflow usin
 4. Review and adjust node configurations to match your application’s requirements.
 5. Save the configured workflow and deploy it to launch your custom AI application.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/workflow/intro)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/workflow/intro)
 
 ## Applicability and version scope
 

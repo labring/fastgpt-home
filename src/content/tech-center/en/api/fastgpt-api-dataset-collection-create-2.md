@@ -2,7 +2,7 @@
 title: Create FastGPT Dataset Collections via API
 slug: /en/api/fastgpt-api-dataset-collection-create-2
 page_type: API
-source: https://doc.fastgpt.cn/en/openapi/dataset
+source: https://doc.fastgpt.io/openapi/dataset
 source_type: Official documentation
 ---
 
@@ -63,7 +63,7 @@ A successful request returns a 200 status code with the following JSON structure
 ```
 The `data.collectionId` field contains the unique ID of the newly created collection, while the `results` object provides processing metrics including the number of inserted chunks, entries exceeding token limits, duplicate entries, and processing errors.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/openapi/dataset)
+> Source: [FastGPT official source](https://doc.fastgpt.io/openapi/dataset)
 
 ## Applicability and version scope
 

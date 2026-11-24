@@ -2,7 +2,7 @@
 title: Configure and Use FastGPT Basic Mode File Input
 slug: /en/tutorial/fastgpt-basic-mode-file-input
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/build/general/fileInput
+source: https://doc.fastgpt.io/guide/build/general/fileInput
 source_type: Official documentation
 ---
 
@@ -22,7 +22,7 @@ Two distinct behavioral modes apply to file uploads in Basic Mode, tied to FastG
 - Pre-4.8.13: The system uses pure tool-calling mode, requiring the language model to explicitly invoke a file reading tool to access uploaded content. This could lead to instances where the model skips file content analysis during multi-turn conversations.
 - 4.8.13 and later: The system automatically parses all uploaded file content and injects the parsed text directly into the system prompt. This removes the need for the model to call a file reading tool, ensuring consistent access to file context across all conversation turns and preventing skipped file content analysis.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/general/fileInput)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/general/fileInput)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: FastGPT V4.8.18版本升级步骤与更新说明
 slug: /zh/deploy/fastgpt-4818-upgrade-guide
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4818
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4818
 source_type: 官方文档
 ---
 
@@ -24,4 +24,4 @@ curl --location --request POST https://{{host}}/api/admin/initv4818 \
 ## 升级相关说明
 本次升级仅需更新指定镜像并执行上述升级脚本即可完成版本切换，无需额外修改配置文件。全文检索表迁移完成后，系统将恢复正常功能。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4818)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/4818)

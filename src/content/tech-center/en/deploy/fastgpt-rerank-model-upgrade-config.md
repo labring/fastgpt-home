@@ -2,7 +2,7 @@
 title: Configure and Upgrade FastGPT ReRank Models
 slug: /en/deploy/fastgpt-rerank-model-upgrade-config
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/47
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/47
 source_type: 官方文档
 ---
 
@@ -35,4 +35,4 @@ Replace `Your Cohere API key` with the actual API key obtained in step 1. The `m
 For users deploying a local ReRank model with FastGPT 4.7+, update your container image to the official FastGPT-provided image to ensure compatibility with the revised integration format:
 `registry.cn-hangzhou.aliyuncs.com/fastgpt/bge-rerank-base:v0.1`
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/47)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/47)

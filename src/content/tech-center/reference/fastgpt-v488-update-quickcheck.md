@@ -2,7 +2,7 @@
 title: FastGPT V4.8.8版本更新内容技术速查
 slug: /zh/reference/fastgpt-v488-update-quickcheck
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/488
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/488
 source_type: 官方文档小节
 ---
 
@@ -25,4 +25,4 @@ source_type: 官方文档小节
 3.  简易模式首次进入时，需确保系统可正常获取知识库配置，避免出现配置失效问题。
 4.  Log debug level配置需按官方要求设置，避免配置无效。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/488)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/488)

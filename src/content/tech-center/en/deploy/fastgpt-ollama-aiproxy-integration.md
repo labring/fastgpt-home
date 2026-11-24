@@ -2,7 +2,7 @@
 title: Set Up Ollama AI Proxy Integration for FastGPT
 slug: /en/deploy/fastgpt-ollama-aiproxy-integration
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/custom-models/ollama
+source: https://doc.fastgpt.io/self-host/custom-models/ollama
 source_type: Official documentation
 ---
 
@@ -22,7 +22,7 @@ When using the default FastGPT Docker deployment configuration from the official
 ## Troubleshooting Connectivity
 If your FastGPT instance fails to connect to the Ollama instance, revisit the network validation steps outlined in the prerequisites section. Confirm the Ollama host is not restricted to a loopback interface and that all relevant containers are attached to the same shared network.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/custom-models/ollama)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/custom-models/ollama)
 
 ## Applicability and version scope
 

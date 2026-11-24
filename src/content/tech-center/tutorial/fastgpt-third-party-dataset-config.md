@@ -2,7 +2,7 @@
 title: 为FastGPT添加第三方文档库的类型与配置参数
 slug: /zh/tutorial/fastgpt-third-party-dataset-config
 page_type: 教程
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/third_dataset
+source: https://doc.fastgpt.cn/guide/dataset/third-party/third_dataset
 source_type: 官方文档
 ---
 
@@ -32,7 +32,7 @@ export type YuqueServer = {
 ## 界面配置说明
 完成类型定义后，FastGPT的知识库配置界面会自动加载已定义的第三方文档库类型，可直接在界面中填写对应参数，完成第三方文档库的接入配置。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/third_dataset)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/dataset/third-party/third_dataset)
 
 ## 适用性与版本范围
 

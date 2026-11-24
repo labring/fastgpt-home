@@ -2,7 +2,7 @@
 title: Create and Configure FastGPT Skill Workspaces
 slug: /en/tutorial/fastgpt-skill-creation
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/build/skill/development
+source: https://doc.fastgpt.io/guide/build/skill/development
 source_type: Official documentation
 ---
 
@@ -33,7 +33,7 @@ Follow this structured workflow to set up a FastGPT skill:
    - For automated code and scheme generation, input custom functional requirements into the dedicated field to trigger AI-assisted setup.
 5. Confirm the setup details to finalize creation of the skill workspace. The system will process your request immediately, with completion times varying based on the selected initialization mode.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/skill/development)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/skill/development)
 
 ## Applicability and version scope
 

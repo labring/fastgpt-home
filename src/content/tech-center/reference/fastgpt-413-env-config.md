@@ -2,7 +2,7 @@
 title: FastGPT 4.13版本升级的环境变量更新配置指南
 slug: /zh/reference/fastgpt-413-env-config
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-13/4130
+source: https://doc.fastgpt.cn/self-host/upgrading/4-13/4130
 source_type: 官方文档小节
 ---
 
@@ -35,4 +35,4 @@ source_type: 官方文档小节
 3.  环境变量的名称必须严格使用原文给出的命名，不得自行修改。
 4.  MONGODB_URI和REDIS_URL的格式需严格匹配示例，包含认证信息、服务地址与端口。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-13/4130)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-13/4130)

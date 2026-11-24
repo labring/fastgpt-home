@@ -2,7 +2,7 @@
 title: FastGPT 4.15.0 Key Codebase Improvement Details
 slug: /en/deploy/fastgpt-415-codebase-improvements
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41500
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/41500
 source_type: Official documentation
 ---
 
@@ -24,7 +24,7 @@ Consistent standards have been applied across core platform functionality: Agent
 
 Additional improvements include optimized user-defined API key billing logic and token calculation dependencies, added design documentation and unit tests for stream-resume-related modules, and abstracted the chat API from app-specific handling to a platform-level capability.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41500)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-15/41500)
 
 ## Applicability and version scope
 

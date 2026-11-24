@@ -2,7 +2,7 @@
 title: FastGPT v4.15.2 General Fixes and Improvements
 slug: /en/deploy/fastgpt-4152-general-fixes
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/4152
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/4152
 source_type: Official documentation
 ---
 
@@ -27,7 +27,7 @@ Multiple backend and user-facing issues were resolved across the platform:
 -  Deleting a chat file while it is actively uploading now aborts both the presign and upload requests, preventing deleted files from reappearing in the chat interface or incorrectly overwriting other uploaded files.
 -  File persistence, type detection, and metadata retention issues were resolved across standard uploads, draft uploads, and first-turn media messages, ensuring uploaded file data is correctly stored and accessible without corruption.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/4152)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-15/4152)
 
 ## Applicability and version scope
 

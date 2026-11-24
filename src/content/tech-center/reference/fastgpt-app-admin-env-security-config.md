@@ -2,7 +2,7 @@
 title: FastGPT App/Admin共享变量与安全配置速查
 slug: /zh/reference/fastgpt-app-admin-env-security-config
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/env
+source: https://doc.fastgpt.cn/self-host/config/env
 source_type: 官方文档小节
 ---
 
@@ -38,4 +38,4 @@ source_type: 官方文档小节
 5. DISABLE_CACHE仅用于调试场景，生产环境建议保持默认关闭以提升性能。
 6. MULTIPLE_DATA_TO_BASE64开启会增加模型调用的传输数据量，仅在特定场景下使用。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/config/env)

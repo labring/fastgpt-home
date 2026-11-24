@@ -2,7 +2,7 @@
 title: FastGPT工作流相关环境变量与功能配置说明
 slug: /zh/glossary/fastgpt-workflow-configuration
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41411
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/41411
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ FastGPT工作流配置是用于调整工作流运行参数、流式任务续期�
 ## 容易搞错的地方
 WORKFLOW_PARALLEL_MAX_CONCURRENCY的取值不能超过WORKFLOW_MAX_LOOP_TIMES变量，否则配置无法生效。流式续期相关的Redis内存阈值与检测间隔需结合实际Redis资源配置，避免因内存不足导致服务异常。工作流工具节点的AI生成参数配置需保留原有配置项，不可直接移除固定值、引用等设置。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41411)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-14/41411)
 
 ## 适用性与版本范围
 

@@ -2,7 +2,7 @@
 title: 知识库分块与索引设置估算器：自动与自定义两种模式下每个参数的实际取值
 slug: /zh/guide/kb-chunk-and-index-settings
 page_type: 交互模块页
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset
+source: https://doc.fastgpt.cn/guide/dataset
 source_type: 官方文档
 meta_title: 知识库分块与索引设置估算器
 meta_description: 调整处理方式与分块参数，看自动与自定义两种模式下每个参数实际生效的值，以及预计生成的分块数与索引条数。
@@ -107,5 +107,5 @@ interactive_data: a2-chunk-index-settings.json
 
 ## 参考资料
 
-- [FastGPT 知识库配置说明](https://doc.fastgpt.cn/zh-CN/guide/dataset)
+- [FastGPT 知识库配置说明](https://doc.fastgpt.cn/guide/dataset)
 - [FastGPT 开源仓库](https://github.com/labring/FastGPT)

@@ -2,7 +2,7 @@
 title: Execute FastGPT v4.14.51 Admin Upgrade Script
 slug: /en/deploy/fastgpt-41451-upgrade-script
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-14/41451
+source: https://doc.fastgpt.io/self-host/upgrading/4-14/41451
 source_type: Official documentation
 ---
 
@@ -28,7 +28,7 @@ Substitute `{{host}}` with your FastGPT domain, and `{{rootkey}}` with your envi
 ## Expected Execution Outcome
 Upon successful completion of the request, the script finalizes the migration of system secret key configurations for all integrated system tools. No additional manual steps are required for this specific initialization process.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-14/41451)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-14/41451)
 
 ## Applicability and version scope
 

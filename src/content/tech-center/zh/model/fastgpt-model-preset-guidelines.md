@@ -2,7 +2,7 @@
 title: FastGPT模型预设的配置规则与维护注意事项
 slug: /zh/model/fastgpt-model-preset-guidelines
 page_type: 模型指南
-source: https://doc.fastgpt.cn/zh-CN/plugin/model-presets
+source: https://doc.fastgpt.cn/plugin/model-presets
 source_type: 官方文档
 ---
 
@@ -25,7 +25,7 @@ source_type: 官方文档
 | stt | 语音转文本模型 |
 所有配置需遵循维护规则中的各项要求，确保模型预设的合理性与稳定性。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/plugin/model-presets)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/plugin/model-presets)
 
 ## 适用性与版本范围
 

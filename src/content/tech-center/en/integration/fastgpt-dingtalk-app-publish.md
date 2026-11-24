@@ -2,7 +2,7 @@
 title: Publish FastGPT Apps for DingTalk Access
 slug: /en/integration/fastgpt-dingtalk-app-publish
 page_type: Integrations
-source: https://doc.fastgpt.cn/en/guide/build/publish/dingtalk
+source: https://doc.fastgpt.io/guide/build/publish/dingtalk
 source_type: Official documentation
 ---
 
@@ -25,7 +25,7 @@ Once the app version is successfully published, all authorized users within the 
 2. Group chat integration: Add the bot to a DingTalk group chat and use the `@mention` function to trigger bot responses and start a conversation.
 The accompanying UI screenshot illustrates both private and group chat interaction scenarios for end users.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/publish/dingtalk)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/publish/dingtalk)
 
 ## Applicability and version scope
 

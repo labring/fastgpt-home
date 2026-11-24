@@ -2,7 +2,7 @@
 title: 为FastGPT添加第三方知识库的前端配置与展示
 slug: /zh/reference/fastgpt-third-party-dataset-frontend
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/third_dataset
+source: https://doc.fastgpt.cn/guide/dataset/third-party/third_dataset
 source_type: 官方文档小节
 ---
 
@@ -23,4 +23,4 @@ source_type: 官方文档小节
 3.  需完成全部配置项的修改，缺少任意一步可能导致无法创建或展示该第三方知识库。
 4.  `courseUrl`字段为可选配置，用于添加对应知识库的文档说明链接。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/third_dataset)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/dataset/third-party/third_dataset)

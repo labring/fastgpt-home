@@ -2,7 +2,7 @@
 title: Set Up Third-Party File Library Hook Files
 slug: /en/integration/fastgpt-third-party-hook-files
 page_type: Integrations
-source: https://doc.fastgpt.cn/en/guide/dataset/third-party/third_dataset
+source: https://doc.fastgpt.io/guide/dataset/third-party/third_dataset
 source_type: Official documentation
 ---
 
@@ -28,7 +28,7 @@ All hook implementations must include the following five functions, each with a 
 | `getFilePreviewUrl`   | Generate the original public preview URL for the third-party file |
 | `getFileId`           | Extract the unique real identifier of the original file from the third-party storage system |
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/third-party/third_dataset)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/third-party/third_dataset)
 
 ## Applicability and version scope
 

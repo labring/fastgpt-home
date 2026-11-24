@@ -2,7 +2,7 @@
 title: FastGPT团队邀请链接的使用方法与升级说明
 slug: /zh/reference/fastgpt-team-invitation-link
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/workspace/team/invitation_link
+source: https://doc.fastgpt.cn/guide/workspace/team/invitation_link
 source_type: 官方文档小节
 ---
 
@@ -22,4 +22,4 @@ FastGPT从v4.9.1版本起，团队邀请成员改用邀请链接模式，不再�
 2. 版本升级后，未加入团队的旧邀请将被自动清除，需重新生成邀请链接。
 3. 团队邀请成员不再支持通过输入用户名的方式完成添加。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/workspace/team/invitation_link)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/workspace/team/invitation_link)

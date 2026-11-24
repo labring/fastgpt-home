@@ -2,7 +2,7 @@
 title: FastGPT v4.14.9版本官方修复问题速查
 slug: /zh/reference/fastgpt-v4149-fix-quickcheck
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4149
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/4149
 source_type: 官方文档小节
 ---
 
@@ -35,4 +35,4 @@ source_type: 官方文档小节
 ## 注意事项
 本次修复仅针对FastGPT v4.14.9版本发布的已知问题，未覆盖其他版本的异常。修复内容包含工具调用、变量处理、界面组件、接口安全等多类技术问题。需严格遵循官方升级流程完成版本更新。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4149)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-14/4149)

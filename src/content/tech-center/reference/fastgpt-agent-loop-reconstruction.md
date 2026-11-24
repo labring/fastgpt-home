@@ -2,7 +2,7 @@
 title: FastGPT V4.15.2 Agent Loop重构配置与使用说明
 slug: /zh/reference/fastgpt-agent-loop-reconstruction
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/4152
+source: https://doc.fastgpt.cn/self-host/upgrading/4-15/4152
 source_type: 官方文档小节
 ---
 
@@ -19,4 +19,4 @@ source_type: 官方文档小节
 2. 统一usage收集入口后，需避免同一笔用量被重复计费或统计；
 3. 事件生命周期统一后，SSE、运行详情和错误信息的展示逻辑保持一致。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/4152)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-15/4152)

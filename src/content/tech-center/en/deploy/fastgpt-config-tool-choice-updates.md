@@ -2,7 +2,7 @@
 title: Update FastGPT Configuration for Tool Choice Changes
 slug: /en/deploy/fastgpt-config-tool-choice-updates
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/465
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/465
 source_type: 官方文档
 ---
 
@@ -29,4 +29,4 @@ Follow these concrete steps to update your FastGPT configuration file:
 3.  Add the line `"ReRankModels": []` as a top-level entry in your configuration file
 4.  Review your updated configuration against the current [Model Configuration](../../config/model/intro.en.mdx) documentation to confirm all changes meet latest platform requirements
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/465)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/465)

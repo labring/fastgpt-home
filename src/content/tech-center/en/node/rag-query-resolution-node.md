@@ -2,7 +2,7 @@
 title: Resolve Ambiguous Queries in RAG Workflows
 slug: /en/node/rag-query-resolution-node
 page_type: Workflow nodes
-source: https://doc.fastgpt.cn/en/guide/build/workflow/nodes/coreferenceResolution
+source: https://doc.fastgpt.io/guide/build/workflow/nodes/coreferenceResolution
 source_type: Official documentation
 ---
 
@@ -23,7 +23,7 @@ The Query Rewriting node addresses this gap by expanding the current follow-up q
 3. Pass the generated context-expanded query to the dataset search step to retrieve relevant content.
 4. Proceed with remaining workflow steps using the retrieved relevant data.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/workflow/nodes/coreferenceResolution)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/workflow/nodes/coreferenceResolution)
 
 ## Applicability and version scope
 

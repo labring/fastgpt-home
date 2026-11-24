@@ -2,7 +2,7 @@
 title: Update FastGPT Environment Variables for 4.13.0 Upgrade
 slug: /en/deploy/fastgpt-4130-environment-variable-update
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-13/4130
+source: https://doc.fastgpt.io/self-host/upgrading/4-13/4130
 source_type: Official documentation
 ---
 
@@ -68,7 +68,7 @@ S3_SECRET_KEY=minioadmin
 S3_PLUGIN_BUCKET=fastgpt-plugin
 ```
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-13/4130)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-13/4130)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: Configure Batch Processing Node Input Parameters
 slug: /en/node/batch-processing-node-input-params
 page_type: Workflow nodes
-source: https://doc.fastgpt.cn/en/guide/build/workflow/nodes/loop
+source: https://doc.fastgpt.io/guide/build/workflow/nodes/loop
 source_type: Official documentation
 ---
 
@@ -27,7 +27,7 @@ The Batch Processing node has two mandatory core input parameters:
    c. Place a Loop Body End node after the final processing step to close the iteration loop. If you need to export processed data from each loop cycle, enable and configure the optional output variable on the Loop Body End node.
 4. Validate that both mandatory inputs are connected and the loop body sub-flow is properly bounded by the start and end markers.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/workflow/nodes/loop)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/workflow/nodes/loop)
 
 ## Applicability and version scope
 

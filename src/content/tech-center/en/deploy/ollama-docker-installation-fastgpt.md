@@ -2,7 +2,7 @@
 title: Install Ollama for FastGPT Self-Hosted Deployments
 slug: /en/deploy/ollama-docker-installation-fastgpt
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/custom-models/ollama
+source: https://doc.fastgpt.io/self-host/custom-models/ollama
 source_type: Official documentation
 ---
 
@@ -30,7 +30,7 @@ docker run --rm -d --name ollama --network (your FastGPT container network) -p 1
 ```
 Attaching the Ollama container to the specified network ensures that FastGPT can directly resolve and communicate with the Ollama API without requiring external network routing.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/custom-models/ollama)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/custom-models/ollama)
 
 ## Applicability and version scope
 

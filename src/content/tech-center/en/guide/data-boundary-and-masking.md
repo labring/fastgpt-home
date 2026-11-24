@@ -7,7 +7,7 @@ is_part_of: FastGPT Tech Center
 meta_description: Define what enters an AI knowledge base, mask sensitive data before model calls, and verify access controls, retention, and deletion.
 delivery_source_type: Open-source repository docs and community threads
 source_type: 深度场景内容
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/env
+source: https://doc.fastgpt.cn/self-host/config/env
 meta_title: Decision Guide: What Data Should Not Enter Your Enterprise AI Knowledge Base | FastGPT Technical Center
 schema_type: TechArticle
 date_published: 2026-09-28
@@ -74,8 +74,8 @@ Failing to regularly audit data boundaries and compliance requirements, or updat
 
 ## References
 
-- [FastGPT environment variables](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
-- [FastGPT upgrade notes](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/upgrade-instruction)
+- [FastGPT environment variables](https://doc.fastgpt.cn/self-host/config/env)
+- [FastGPT upgrade notes](https://doc.fastgpt.cn/self-host/upgrading/upgrade-instruction)
 
 ## Next steps
 

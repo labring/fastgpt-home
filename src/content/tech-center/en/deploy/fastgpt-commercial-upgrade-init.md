@@ -2,7 +2,7 @@
 title: Initialize FastGPT Commercial Edition Upgrade Data
 slug: /en/deploy/fastgpt-commercial-upgrade-init
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4812
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/4812
 source_type: 官方文档
 ---
 
@@ -37,4 +37,4 @@ Each part of the command serves a defined purpose:
 ## Post-Initialization Validation
 After executing the command, confirm the initialization completed successfully. The FastGPT server will return a valid JSON response confirming that member group data for applications and datasets has been initialized. If the request fails, verify that the `rootkey` is correct, your FastGPT domain is reachable, and the `curl` command uses the exact header and endpoint format provided.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4812)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/4812)

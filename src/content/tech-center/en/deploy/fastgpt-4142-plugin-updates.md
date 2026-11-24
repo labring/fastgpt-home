@@ -2,7 +2,7 @@
 title: FastGPT 4.14.2 Plugin Update Fixes and Additions
 slug: /en/deploy/fastgpt-4142-plugin-updates
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4142
+source: https://doc.fastgpt.io/self-host/upgrading/4-14/4142
 source_type: Official documentation
 ---
 
@@ -27,7 +27,7 @@ The following new plugins and configuration options are added:
 | Document Comparison Tool | Tool for side-by-side content comparison across multiple documents |
 | Model Presets | Pre-configured presets for Kimi V2 and GPT 5.1 models |
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4142)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-14/4142)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: 说明FastGPT中BGE重排序模型的部署、获取与使用步骤
 slug: /zh/glossary/fastgpt-bge-rerank-models
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/self-host/custom-models/bge-rerank
+source: https://doc.fastgpt.cn/self-host/custom-models/bge-rerank
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ BGE重排序模型是FastGPT支持的文本重排序模型，提供base、large�
 ## 容易搞错的地方
 易混淆代码仓库与模型仓库的对应关系，错误搭配不匹配的代码和模型版本。未在指定代码目录下克隆模型文件，将导致部署流程无法正常读取模型资源。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/bge-rerank)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/custom-models/bge-rerank)
 
 ## 适用性与版本范围
 

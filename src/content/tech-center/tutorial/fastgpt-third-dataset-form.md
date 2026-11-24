@@ -2,7 +2,7 @@
 title: 为FastGPT第三方知识库添加自定义配置表单与根目录选择功能
 slug: /zh/tutorial/fastgpt-third-dataset-form
 page_type: 教程
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/third_dataset
+source: https://doc.fastgpt.cn/guide/dataset/third-party/third_dataset
 source_type: 官方文档
 ---
 
@@ -22,7 +22,7 @@ source_type: 官方文档
 ## 功能使用说明
 配置完成后，创建第三方知识库的表单将包含预设的配置字段与根目录选择功能。其中Base URL字段用于配置第三方知识库的访问地址，根目录选择功能可用于指定同步知识库的根目录范围，适配不同的第三方知识库对接需求。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/third_dataset)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/dataset/third-party/third_dataset)
 
 ## 适用性与版本范围
 

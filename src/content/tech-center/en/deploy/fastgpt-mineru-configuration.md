@@ -2,7 +2,7 @@
 title: Configure FastGPT for MinerU Custom Models
 slug: /en/deploy/fastgpt-mineru-configuration
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/custom-models/mineru
+source: https://doc.fastgpt.io/self-host/custom-models/mineru
 source_type: Official documentation
 ---
 
@@ -27,7 +27,7 @@ For commercial FastGPT deployments, configuration of the MinerU custom PDF parsi
 ## Configuration Activation
 Any changes made to the environment variable configuration file will not take effect until the FastGPT service is fully restarted. This requirement applies to all custom service integrations configured via the file-based environment variable method, per official FastGPT documentation.
 
-> [FastGPT public documentation](https://doc.fastgpt.cn/en/self-host/custom-models/mineru)
+> [FastGPT public documentation](https://doc.fastgpt.io/self-host/custom-models/mineru)
 
 ## Applicability and version scope
 

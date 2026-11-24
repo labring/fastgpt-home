@@ -2,7 +2,7 @@
 title: FastGPT工作流工具调用节点的配置与运行逻辑说明
 slug: /zh/node/fastgpt-workflow-tool-node
 page_type: 工作流节点
-source: https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/tool
+source: https://doc.fastgpt.cn/guide/build/workflow/nodes/tool
 source_type: 官方文档
 ---
 
@@ -18,4 +18,4 @@ source_type: 官方文档
 工具调用的参数包含参数介绍与是否必须两个关键值。无参数的工具可直接根据介绍判断是否调用；有参数的工具中，无必须参数时LLM可能伪造参数调用，有必须参数时若未获取合适参数，LLM可能不会调用该工具。在支持函数调用的模型中，可一次性调用多个工具。
 工具调用节点默认会将工具运行结果返回给AI，由AI总结后输出。若无需AI进一步总结，可将节点接入工作流末尾。工具调用终止节点可接在工具后，执行到该节点时会强制结束本次工具调用，不再调用其他工具或触发AI总结。自定义工具变量可扩展工具的变量输入，为未被视作工具参数的节点添加参数描述，让工具调用节点关联对应节点并执行后续工作流。工具调用会消耗更多tokens，这是其使用的缺点。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/tool)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/workflow/nodes/tool)

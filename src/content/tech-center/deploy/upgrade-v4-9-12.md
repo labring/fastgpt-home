@@ -2,7 +2,7 @@
 title: FastGPT V4.9.12版本升级内容与操作说明
 slug: /zh/deploy/upgrade-v4-9-12
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4912
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4912
 source_type: 官方文档
 ---
 
@@ -25,7 +25,7 @@ source_type: 官方文档
 4. 测试HTTP节点与MCP的鉴权配置，确认配置明文不会返回至客户端。
 5. 测试知识库分块、管理员数据看板、语音输入等功能，确认运行正常。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4912)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/4912)
 
 ## 适用性与版本范围
 

@@ -2,7 +2,7 @@
 title: Prevent Repeated Execution of Skill Scripts
 slug: /en/tutorial/fastgpt-skill-deduplication-mechanism-2
 page_type: 教程/部署
-source: https://doc.fastgpt.cn/en/guide/build/skill/initialization
+source: https://doc.fastgpt.io/guide/build/skill/initialization
 source_type: 官方文档
 ---
 
@@ -29,4 +29,4 @@ The following concrete values and identifiers are used exclusively by the dedupl
 | Condition for script skipping | Reused VM instance + already executed `versionId` |
 | Trigger for new version initialization | New published skill version + next incoming conversation |
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/guide/build/skill/initialization)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/guide/build/skill/initialization)

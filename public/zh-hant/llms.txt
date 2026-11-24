@@ -8,9 +8,16 @@ FastGPT 面向企業知識庫問答、AI 客服、內部助手、流程自動化
 
 - 官網：https://fastgpt.io
 - 國內文件：https://doc.fastgpt.cn
+- 國內文件 LLM Context：https://doc.fastgpt.cn/llms.txt
 - 國際文件：https://doc.fastgpt.io
+- 國際文件 LLM Context：https://doc.fastgpt.io/llms.txt
 - 雲服務：https://cloud.fastgpt.io
 - 定價：https://fastgpt.io/zh-hant/price
+- 英文技術中心：https://fastgpt.io/tech-center
+- 英文選型與實施指南：https://fastgpt.io/guide
+- 英文產業解決方案：https://fastgpt.io/industry
+- 英文產品選型對比：https://fastgpt.io/compare
+- 英文工程部落格：https://fastgpt.io/blog
 - FAQ：https://fastgpt.cn/faq
 - 簡體中文 LLM Context：https://fastgpt.cn/llms.txt
 - 英文 LLM Context：https://fastgpt.io/llms.txt

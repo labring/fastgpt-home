@@ -2,7 +2,7 @@
 title: Configure FastGPT Plugin Local-Pool Runtime Parameters
 slug: /en/model/fastgpt-plugin-local-pool-runtime
 page_type: Model guides
-source: https://doc.fastgpt.cn/en/plugin/intro
+source: https://doc.fastgpt.io/plugin/intro
 source_type: Official documentation
 ---
 
@@ -45,7 +45,7 @@ Environment variables set global default runtime parameters and operational limi
 ## Pod Startup Error Handling
 Pod startup errors are recorded and classified by type. Consecutive non-timeout startup failures trigger startup circuit breaking once the threshold is reached, preventing additional unnecessary Pod creation. Startup timeouts are interpreted as resource pressure, triggering exponential backoff and delayed retries rather than immediate failure loops.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/plugin/intro)
+> Source: [FastGPT official source](https://doc.fastgpt.io/plugin/intro)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: FastGPT V4.8.17版本升级操作与变更说明
 slug: /zh/deploy/upgrade-v4-8-17
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4817
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4817
 source_type: 官方文档
 ---
 
@@ -26,7 +26,7 @@ curl --location --request POST 'https://{{host}}/api/admin/initv4817' \
 ## 升级后怎么验证
 可通过以下方式验证升级效果：调用/api/v1/chat/completions接口，确认返回结果中仅包含inputTokens和outputTokens字段，无tokens字段；测试工作流异常退出后，是否自动保存编辑内容；测试变量更新节点手动输入非字符串类型数据，确认可自动转化；测试豆包模型的工具调用功能，确认可正常使用；检查用户绑定的OpenAI账号是否已移动至团队中。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4817)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/4817)
 
 ## 适用性与版本范围
 

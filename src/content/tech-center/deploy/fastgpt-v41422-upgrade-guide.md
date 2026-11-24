@@ -2,7 +2,7 @@
 title: FastGPT V4.14.22版本升级操作及更新内容说明
 slug: /zh/deploy/fastgpt-v41422-upgrade-guide
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41422
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/41422
 source_type: 官方文档
 ---
 
@@ -23,4 +23,4 @@ source_type: 官方文档
 
 ## 版本升级说明
 本版本属于FastGPT 4.14.x系列的正式更新版本，用户可根据自身当前使用的版本，按照上述步骤完成升级。
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41422)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-14/41422)

@@ -2,7 +2,7 @@
 title: FastGPT V4.9.12版本环境变量变更升级说明
 slug: /zh/reference/fastgpt-v4912-env-vars-update
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4912
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4912
 source_type: 官方文档小节
 ---
 
@@ -22,4 +22,4 @@ FastGPT V4.9.12版本存在环境变量配置变更，该版本的升级适配�
 3. 若当前版本高于4.12.0，无需执行该版本的环境变量变更操作；
 4. 升级过程中若涉及升级脚本，需参考对应版本的官方说明，严格遵循配置调整要求。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4912)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/4912)

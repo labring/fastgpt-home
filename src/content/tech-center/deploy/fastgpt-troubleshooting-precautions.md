@@ -2,7 +2,7 @@
 title: FastGPT自部署故障排查的通用注意事项与操作流程
 slug: /zh/deploy/fastgpt-troubleshooting-precautions
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/troubleshooting/attention
+source: https://doc.fastgpt.cn/self-host/troubleshooting/attention
 source_type: 官方文档
 ---
 
@@ -58,4 +58,4 @@ server {
 ## 问题反馈要求
 若上述步骤无法解决问题，需整理完整信息联系支持：包括当前使用的完整版本号、问题详细描述与复现步骤、相关系统错误日志或截图，可先在GitHub Issues或相关社群搜索类似问题后再反馈。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/troubleshooting/attention)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/troubleshooting/attention)

@@ -2,7 +2,7 @@
 title: Configure External Citation Visibility for FastGPT Shared Links
 slug: /en/tutorial/fastgpt-external-citation-visibility
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/chat/quoteList
+source: https://doc.fastgpt.io/guide/chat/quoteList
 source_type: Official documentation
 ---
 
@@ -32,7 +32,7 @@ To apply citation visibility restrictions for anonymous shared links:
 ## Automatic Chunk Reader Behavior
 The Chunk Reader component integrates natively with the visibility settings, requiring no additional manual configuration beyond selecting the desired mode. When "Citation Content Only" is active, the Chunk Reader filters out all full source document content, rendering only the specific text segments referenced in the chat response. This ensures external visitors cannot access unapproved portions of source material while still allowing them to verify the exact content cited in the chat interaction.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/chat/quoteList)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/chat/quoteList)
 
 ## Applicability and version scope
 

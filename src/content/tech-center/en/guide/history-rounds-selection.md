@@ -2,7 +2,7 @@
 title: Chat History Depth: How Many Rounds to Carry, Where to Cut and When to Use Variables
 slug: /en/guide/history-rounds-selection
 page_type: Decision matrix
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/env
+source: https://doc.fastgpt.cn/self-host/config/env
 source_type: Open-source repository docs and community threads
 article_section: Selection & Evaluation
 is_part_of: FastGPT Tech Center
@@ -58,8 +58,8 @@ You can also delay the decision when the application has an extremely short sess
 
 ## References
 
-- [FastGPT environment variables](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
-- [FastGPT Docker Compose deployment](https://doc.fastgpt.cn/zh-CN/self-host/deploy/docker)
+- [FastGPT environment variables](https://doc.fastgpt.cn/self-host/config/env)
+- [FastGPT Docker Compose deployment](https://doc.fastgpt.cn/self-host/deploy/docker)
 
 ## Next steps
 

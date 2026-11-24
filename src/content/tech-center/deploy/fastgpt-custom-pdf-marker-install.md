@@ -2,7 +2,7 @@
 title: FastGPT自定义PDF解析服务的Marker模型安装方法
 slug: /zh/deploy/fastgpt-custom-pdf-marker-install
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/custom-models/marker
+source: https://doc.fastgpt.cn/self-host/custom-models/marker
 source_type: 官方文档
 ---
 
@@ -18,7 +18,7 @@ docker run --gpus all -itd -p 7231:7232 --name model_pdf_v2 -e PROCESSES_PER_GPU
 以下是命令中各参数的说明：
 1.  `docker pull` 命令用于拉取指定的Marker模型镜像，镜像版本为v0.2，镜像仓库地址为crpi-h3snc261q1dosroc.cn-hangzhou.personal.cr.aliyuncs.com/marker11/marker_images。
 2.  `docker run` 命令用于启动容器，其中`--gpus all` 表示启用宿主机所有可用的GPU资源，`-itd` 参数表示以交互式、后台守护模式运行容器，`-p 7231:7232` 将容器内部的7232端口映射到宿主机的7231端口，`--name model_pdf_v2` 指定容器的名称为model_pdf_v2，`-e PROCESSES_PER_GPU="2"` 设置每个GPU可运行的处理进程数为2。
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/marker)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/custom-models/marker)
 
 ## 适用性与版本范围
 

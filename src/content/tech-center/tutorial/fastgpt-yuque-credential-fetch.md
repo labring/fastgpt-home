@@ -2,7 +2,7 @@
 title: 获取FastGPT集成语雀数据源所需的Token与User ID
 slug: /zh/tutorial/fastgpt-yuque-credential-fetch
 page_type: 教程
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/yuque_dataset
+source: https://doc.fastgpt.cn/guide/dataset/third-party/yuque_dataset
 source_type: 官方文档
 ---
 
@@ -25,7 +25,7 @@ source_type: 官方文档
 | 获取 Token | ![alt text](/imgs/image-109.png) |
 | 获取 User ID | ![alt text](/imgs/image-108.png) |
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/yuque_dataset)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/dataset/third-party/yuque_dataset)
 
 ## 适用性与版本范围
 

@@ -2,7 +2,7 @@
 title: FastGPT V4.14.5版本升级操作与适配指南
 slug: /zh/deploy/upgrade-v4-14-5
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4145
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/4145
 source_type: 官方文档
 ---
 
@@ -28,7 +28,7 @@ curl --location --request POST 'https://{{host}}/api/admin/initv4145' \
 ## 升级后怎么验证
 检查存储配置是否生效，可发起测试文件上传与删除操作。确认MongoDB版本为5.0.32。测试工作流、对话记录、门户配置等新增功能是否正常运行，查看系统日志无相关报错。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4145)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-14/4145)
 
 ## 适用性与版本范围
 

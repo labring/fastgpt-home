@@ -2,7 +2,7 @@
 title: Integrate FastGPT with External SSO Systems
 slug: /en/tutorial/fastgpt-external-sso-integration
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/admin/sso
+source: https://doc.fastgpt.io/guide/admin/sso
 source_type: Official documentation
 ---
 
@@ -26,7 +26,7 @@ Follow these structured steps to deploy the integration:
 3.  Enable SSO login flow: Set up triggers in your external system to send authentication callbacks to FastGPT, which will auto-generate user accounts for valid external users upon their first login attempt.
 4.  Enable member sync: Configure automated or manual sync jobs to pull and update organizational structure and member data from the external system into FastGPT.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/admin/sso)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/admin/sso)
 
 ## Applicability and version scope
 

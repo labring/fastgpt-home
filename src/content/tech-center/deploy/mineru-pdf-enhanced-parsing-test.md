@@ -2,7 +2,7 @@
 title: 配置Mineru自定义PDF增强解析与效果验证流程
 slug: /zh/deploy/mineru-pdf-enhanced-parsing-test
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/custom-models/mineru
+source: https://doc.fastgpt.cn/self-host/custom-models/mineru
 source_type: 官方文档
 ---
 
@@ -16,7 +16,7 @@ Mineru自定义PDF增强解析的效果验证可通过知识库上传与应用�
 
 在两类场景中完成配置后，即可通过日志或应用运行状态确认Mineru自定义PDF增强解析功能是否正常启用，无需额外的复杂操作即可完成验证。
 
-> [FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/mineru)
+> [FastGPT 官方文档](https://doc.fastgpt.cn/self-host/custom-models/mineru)
 
 ## 适用性与版本范围
 

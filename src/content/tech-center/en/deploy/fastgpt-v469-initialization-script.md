@@ -2,7 +2,7 @@
 title: Perform FastGPT v469 Initialization Operations for Self-Hosted Deployments
 slug: /en/deploy/fastgpt-v469-initialization-script
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/469
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/469
 source_type: 官方文档
 ---
 
@@ -32,4 +32,4 @@ Upon successful execution, the script completes two predefined maintenance opera
 1.  **Reset Usage Tracking Table**: Clears and resets the system’s usage tracking database table to ensure accurate tracking of future platform activity.
 2.  **Stale Data Cleanup**: Removes invalid, unused, or orphaned assets including uploaded files, images, dataset collections, and vector embeddings that are no longer linked to valid FastGPT resources.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/469)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/469)

@@ -2,7 +2,7 @@
 title: Configure FastGPT Loop Run Node Input Parameters
 slug: /en/node/fastgpt-loop-run-node-inputs
 page_type: Workflow nodes
-source: https://doc.fastgpt.cn/en/guide/build/workflow/nodes/loop_run
+source: https://doc.fastgpt.io/guide/build/workflow/nodes/loop_run
 source_type: Official documentation
 ---
 
@@ -25,7 +25,7 @@ To configure the Loop Run node using its input parameters:
 2.  If the Array Loop type is selected, the Array parameter becomes visible. Populate this field with a list of data items, which is most often sourced from the array output of a preceding workflow node.
 3.  Define the Loop Body parameter by configuring the sub-workflow that will execute during each loop iteration. This sub-workflow must begin with a **Loop Start** node, and may include a **Loop Break** node to terminate the loop before all iterations complete.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/workflow/nodes/loop_run)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/workflow/nodes/loop_run)
 
 ## Applicability and version scope
 

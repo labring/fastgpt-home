@@ -2,7 +2,7 @@
 title: Understand FastGPT Tool Node Execution Workflow
 slug: /en/node/fastgpt-tool-execution-workflow
 page_type: Workflow nodes
-source: https://doc.fastgpt.cn/en/guide/build/workflow/nodes/tool
+source: https://doc.fastgpt.io/guide/build/workflow/nodes/tool
 source_type: Official documentation
 ---
 
@@ -30,7 +30,7 @@ Models that support function calling can invoke multiple tools in a single conve
 ![FastGPT Tool Execution Flow](/imgs/flow-tool2.png)
 This flow aligns with the decision frameworks outlined above, ensuring consistent tool invocation behavior across supported LLM configurations.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/workflow/nodes/tool)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/workflow/nodes/tool)
 
 ## Applicability and version scope
 

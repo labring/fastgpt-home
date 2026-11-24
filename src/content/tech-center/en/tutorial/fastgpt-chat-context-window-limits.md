@@ -2,7 +2,7 @@
 title: Adjust FastGPT Chat Context Window Limits
 slug: /en/tutorial/fastgpt-chat-context-window-limits
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/dataset/faq
+source: https://doc.fastgpt.io/guide/dataset/faq
 source_type: Official documentation
 ---
 
@@ -22,7 +22,7 @@ The Configured Max Response setting is accessible via two standard FastGPT inter
 # Self-Hosted Deployment Configuration
 For self-hosted FastGPT instances, you can proactively reserve additional space for generated responses by adjusting the model context limit configuration. For example, if using a model with a native 128K context window, set the deployed context limit to 120K. The remaining 8K of reserved space will be automatically allocated to accommodate generated response output, reducing the risk of truncated chat history or incomplete responses.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/faq)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/faq)
 
 ## Applicability and version scope
 

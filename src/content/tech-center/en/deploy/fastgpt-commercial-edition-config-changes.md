@@ -2,7 +2,7 @@
 title: FastGPT Commercial Edition 4.6.6 Configuration Changes
 slug: /en/deploy/fastgpt-commercial-edition-config-changes
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/466
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/466
 source_type: 官方文档
 ---
 
@@ -24,4 +24,4 @@ Follow these exact steps to complete the configuration update without disruption
 ## Centralized Dashboard Configuration
 All platform parameters and model configurations that were previously managed via the `FeConfig` section or other `config.json` entries can now be adjusted directly through the FastGPT Commercial Edition web dashboard. Users are no longer required to edit the `config.json` file for standard platform setup or parameter tweaks, reducing manual configuration errors and simplifying future maintenance.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/466)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/466)

@@ -2,7 +2,7 @@
 title: FastGPT插件local-pool运行时的参数配置与调用流程说明
 slug: /zh/reference/fastgpt-plugin-local-pool-runtime
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/plugin/intro
+source: https://doc.fastgpt.cn/plugin/intro
 source_type: 官方文档小节
 ---
 
@@ -34,4 +34,4 @@ FastGPT默认采用local-pool作为插件运行时，按单插件service维度�
 4. 队列等待超时或队列容量耗尽时，新的插件调用请求会被拒绝或失败
 5. Pod空闲时间超过`POOL_SERVICE_IDLE_TIMEOUT`后会被自动回收
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/plugin/intro)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/plugin/intro)

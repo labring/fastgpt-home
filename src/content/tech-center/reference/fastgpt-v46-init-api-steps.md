@@ -2,7 +2,7 @@
 title: FastGPT v46版本初始化API的标准执行步骤说明
 slug: /zh/reference/fastgpt-v46-init-api-steps
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/46
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/46
 source_type: 官方文档小节
 ---
 
@@ -31,4 +31,4 @@ curl --location --request POST 'https://{{host}}/api/admin/initv46-2' \
 2. 必须严格按顺序执行两个接口，需确认`initv46`执行成功后，再执行`initv46-2`。
 3. 本次初始化包含四项内容：创建默认团队、初始化Mongo所有资源的团队字段、初始化Pg的字段、初始化Mongo Data。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/46)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/46)

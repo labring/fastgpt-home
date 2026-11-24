@@ -2,7 +2,7 @@
 title: Configure Legacy Marker Parsing for FastGPT
 slug: /en/deploy/fastgpt-legacy-marker-parsing
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/custom-models/marker
+source: https://doc.fastgpt.io/self-host/custom-models/marker
 source_type: Official documentation
 ---
 
@@ -27,7 +27,7 @@ Two mandatory environment variables must be adjusted in your FastGPT deployment 
 - `CUSTOM_READ_FILE_URL`: The full endpoint for the custom parsing service. Replace the host portion (e.g., `xxxx.com`) with your deployed Marker service address; the path `/v1/parse/file` must remain unmodified. A sample valid value is `http://xxxx.com/v1/parse/file`.
 - `CUSTOM_READ_FILE_EXTENSION`: A comma-separated list of file extensions that will be routed to the Marker parsing service. Multiple supported types must be separated by commas.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/custom-models/marker)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/custom-models/marker)
 
 ## Applicability and version scope
 

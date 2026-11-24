@@ -2,7 +2,7 @@
 title: FastGPT V4.7.1 Official Release Change Reference
 slug: /en/deploy/fastgpt-v471-release-notes
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/471
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/471
 source_type: 官方文档
 ---
 
@@ -40,4 +40,4 @@ All resolved issues in this release:
 4.  Query rewriting history persistence bug
 5.  Slow shared page loading in edge cases caused by untriggered database connections during server-side rendering (SSR)
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/471)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/471)

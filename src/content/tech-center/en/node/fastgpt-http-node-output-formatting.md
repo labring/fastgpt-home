@@ -2,7 +2,7 @@
 title: Configure FastGPT HTTP Node Output Formatting
 slug: /en/node/fastgpt-http-node-output-formatting
 page_type: Workflow nodes
-source: https://doc.fastgpt.cn/en/guide/build/workflow/nodes/http
+source: https://doc.fastgpt.io/guide/build/workflow/nodes/http
 source_type: Official documentation
 ---
 
@@ -27,7 +27,7 @@ The core function of this feature is converting JSON data to string format. When
 > ⚠️ Warning
 > The HTTP node is extremely versatile. You can integrate public APIs to extend your workflow capabilities.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/workflow/nodes/http)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/workflow/nodes/http)
 
 ## Applicability and version scope
 

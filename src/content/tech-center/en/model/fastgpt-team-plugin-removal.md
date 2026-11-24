@@ -2,7 +2,7 @@
 title: Remove Team Plugins from FastGPT Teams
 slug: /en/model/fastgpt-team-plugin-removal
 page_type: Model guides
-source: https://doc.fastgpt.cn/en/plugin/team-installation
+source: https://doc.fastgpt.io/plugin/team-installation
 source_type: Official documentation
 ---
 
@@ -26,7 +26,7 @@ Upon successful completion of these steps, three definitive changes take effect:
 ## Post-Removal Behavior and Recovery
 Existing workflow and Agent nodes that utilized the removed plugin are not altered or rewritten automatically. These nodes will fail to execute successfully during their next run cycle following the plugin’s removal. To restore full access to the plugin for the team, reinstall it either through the official FastGPT Marketplace or by re-uploading the original plugin package to the team environment.
 
-> [FastGPT team plugin installation guide](https://doc.fastgpt.cn/en/plugin/team-installation)
+> [FastGPT team plugin installation guide](https://doc.fastgpt.io/plugin/team-installation)
 
 ## Applicability and version scope
 

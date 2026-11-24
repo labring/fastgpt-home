@@ -2,7 +2,7 @@
 title: FastGPT AI节点中文档解析的使用方法与适配要点
 slug: /zh/reference/fastgpt-ai-node-document-parsing
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/build/general/fileInput
+source: https://doc.fastgpt.cn/guide/build/general/fileInput
 source_type: 官方文档小节
 ---
 
@@ -25,4 +25,4 @@ source_type: 官方文档小节
 6.  工作流调用插件时，不再自动传递工作流上传的文件到插件，需手动给插件输入指定变量。
 7.  工作流调用子工作流时，不再自动传递工作流上传的文件到子工作流，需手动选择需要传递的文件链接。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/general/fileInput)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/general/fileInput)

@@ -2,7 +2,7 @@
 title: FastGPT V4.15.0-beta6版本升级操作与验证指南
 slug: /zh/deploy/upgrade-v4-15-0-beta6
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41506
+source: https://doc.fastgpt.cn/self-host/upgrading/4-15/41506
 source_type: 官方文档
 ---
 
@@ -23,7 +23,7 @@ source_type: 官方文档
 ## 升级后怎么验证
 检查「模型配置」页面是否可选择「对话标题模型」。验证Agent Sandbox初始化时是否正确写入镜像源配置。验证LLM请求追踪记录可按团队查询，chat/completions接口返回nodeResponse时包含q/a/index字段。验证Skill Edit对话可正常存储与读取，旧Skill Debug对话已被清理。检查PDF解析在linux/arm64 + Alpine/musl架构下可正常工作。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41506)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-15/41506)
 
 ## 适用性与版本范围
 

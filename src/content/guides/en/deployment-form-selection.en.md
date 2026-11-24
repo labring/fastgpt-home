@@ -64,11 +64,11 @@ But note that delaying the decision carries risks: you may encounter deployment 
 
 ## References
 
-- [FastGPT 4.16.2 migration instructions](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/4162)
+- [FastGPT 4.16.2 migration instructions](https://doc.fastgpt.cn/self-host/upgrading/4-16/4162)
 - [FastGPT GitHub star request configuration](https://github.com/labring/FastGPT/blob/5957d06807ff7f984c70c6425c8d0fc40eb1714d/projects/app/src/web/common/system/useSystemStore.ts)
 
-- [FastGPT environment variables](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
-- [FastGPT Docker Compose deployment](https://doc.fastgpt.cn/zh-CN/self-host/deploy/docker)
+- [FastGPT environment variables](https://doc.fastgpt.cn/self-host/config/env)
+- [FastGPT Docker Compose deployment](https://doc.fastgpt.cn/self-host/deploy/docker)
 
 ## Next steps
 

@@ -2,7 +2,7 @@
 title: Deploy ChatGLM2 for FastGPT via Docker
 slug: /en/deploy/chatglm2-docker-deployment-fastgpt
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/custom-models/chatglm2
+source: https://doc.fastgpt.io/self-host/custom-models/chatglm2
 source_type: Official documentation
 ---
 
@@ -33,7 +33,7 @@ A default security token is pre-configured for the container: `[REDACTED_CREDENT
     ```
 Replace `your-custom-security-token` with your desired token value. The container will now run the ChatGLM2 model, accessible via the mapped host port 6006 for FastGPT integration.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/custom-models/chatglm2)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/custom-models/chatglm2)
 
 ## Applicability and version scope
 

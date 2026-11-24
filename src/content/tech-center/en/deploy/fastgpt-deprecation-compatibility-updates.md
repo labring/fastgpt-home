@@ -2,7 +2,7 @@
 title: FastGPT Deprecated Features and Compatibility Updates
 slug: /en/deploy/fastgpt-deprecation-compatibility-updates
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/490
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/490
 source_type: 官方文档
 ---
 
@@ -34,4 +34,4 @@ Documented deprecations and compatibility changes require the following updates:
 2.  Self-hosted deployments must replace custom file parsing solutions with official environment variable configuration, per the Environment Variables documentation.
 3.  All external file library API calls must be replaced with the official API File Library prior to deprecation.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/490)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/490)

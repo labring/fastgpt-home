@@ -2,7 +2,7 @@
 title: FastGPT v4.8.8 Release Feature and Fix Summary
 slug: /en/deploy/fastgpt-v4-8-8-release-notes
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/488
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/488
 source_type: 官方文档
 ---
 
@@ -30,4 +30,4 @@ The following bugs have been addressed in this release:
 | Logging Configuration | Resolved log debug level settings not taking effect |
 | Standalone Plugins | Fixed variable substitution of plugin input values when running plugins standalone, which caused unexpected downstream node variable issues |
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/488)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/488)

@@ -2,7 +2,7 @@
 title: FastGPT工作流循环节点批量处理数组的操作方法
 slug: /zh/reference/fastgpt-loop-batch-array-processing
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/loop
+source: https://doc.fastgpt.cn/guide/build/workflow/nodes/loop
 source_type: 官方文档小节
 ---
 
@@ -33,4 +33,4 @@ return { textArray: texts };
 2. 循环体结束节点需准确选择AI对话节点的回复内容作为输出变量，否则无法正确汇总处理结果
 3. 批量运行节点的数组输入需关联正确的上游节点输出变量，避免选错数据源
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/loop)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/workflow/nodes/loop)

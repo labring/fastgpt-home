@@ -2,7 +2,7 @@
 title: FastGPT知识库向量存储结构的实现与配置说明
 slug: /zh/tutorial/fastgpt-dataset-vector-storage
 page_type: 教程
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/dataset_engine
+source: https://doc.fastgpt.cn/guide/dataset/dataset_engine
 source_type: 官方文档
 ---
 
@@ -19,7 +19,7 @@ FastGPT采用PostgreSQL的PG Vector插件作为向量检索器，索引类型为
 ### 向量检索执行流程
 在向量检索过程中，先通过PostgreSQL召回匹配的向量，再根据向量的ID前往MongoDB中查找对应的原数据内容。若多个向量对应同一组原数据，则将结果合并，最终取最高的向量得分作为该组数据的检索得分。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/dataset/dataset_engine)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/dataset/dataset_engine)
 
 ## 适用性与版本范围
 

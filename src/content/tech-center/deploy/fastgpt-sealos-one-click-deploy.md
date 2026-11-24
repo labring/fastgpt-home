@@ -2,7 +2,7 @@
 title: 指导通过Sealos一键部署FastGPT服务的具体操作流程
 slug: /zh/deploy/fastgpt-sealos-one-click-deploy
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/deploy/sealos
+source: https://doc.fastgpt.cn/self-host/deploy/sealos
 source_type: 官方文档
 ---
 
@@ -18,7 +18,7 @@ source_type: 官方文档
 
 如需绑定自定义域名或修改部署参数，可点击页面右上角的变更按钮，按照系统指引完成相关配置调整。该配置调整的操作界面可参考文档配套的第三张截图。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/deploy/sealos)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/deploy/sealos)
 
 ## 适用性与版本范围
 

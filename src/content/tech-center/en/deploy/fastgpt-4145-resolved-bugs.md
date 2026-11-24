@@ -2,7 +2,7 @@
 title: FastGPT 4.14.5 List of Resolved Bug Fixes
 slug: /en/deploy/fastgpt-4145-resolved-bugs
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4145
+source: https://doc.fastgpt.io/self-host/upgrading/4-14/4145
 source_type: Official documentation
 ---
 
@@ -42,7 +42,7 @@ To confirm all fixes are applied correctly after upgrading to FastGPT 4.14.5, fo
 11. Execute concurrent write operations from multiple custom feedback nodes to confirm no database write conflicts occur.
 12. Place a custom feedback node after an interactive node and submit test data to confirm successful writing to the database.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4145)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-14/4145)
 
 ## Applicability and version scope
 

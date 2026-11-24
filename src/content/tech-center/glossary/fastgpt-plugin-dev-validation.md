@@ -2,7 +2,7 @@
 title: FastGPT插件开发提交前验证事项说明
 slug: /zh/glossary/fastgpt-plugin-dev-validation
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/plugin/system-tool-development
+source: https://doc.fastgpt.cn/plugin/system-tool-development
 source_type: 官方文档
 ---
 
@@ -15,7 +15,7 @@ FastGPT插件开发提交前需完成的一系列合规检查项，用于确保�
 ## 容易搞错的地方
 容易遗漏对secretSchema的敏感字段设置isSecret: true；容易误将Gateway internal HTTP API暴露到公网；容易忽略对外部API超时、鉴权失败等异常场景的处理；可能未确认pnpm run test、build等命令的执行结果。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/plugin/system-tool-development)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/plugin/system-tool-development)
 
 ## 适用性与版本范围
 

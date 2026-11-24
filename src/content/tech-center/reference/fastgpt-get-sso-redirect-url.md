@@ -2,7 +2,7 @@
 title: 获取FastGPT SSO登录重定向地址的技术速查
 slug: /zh/reference/fastgpt-get-sso-redirect-url
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/admin/sso
+source: https://doc.fastgpt.cn/guide/admin/sso
 source_type: 官方文档小节
 ---
 
@@ -25,4 +25,4 @@ source_type: 官方文档小节
 2. 请求中的`redirect_uri`会被自动编码并拼接至返回的`authURL`的查询参数中，无需手动处理编码。
 3. 未携带有效Bearer令牌或参数不合法时，会返回失败响应，`message`字段会展示具体的错误内容。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/admin/sso)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/admin/sso)

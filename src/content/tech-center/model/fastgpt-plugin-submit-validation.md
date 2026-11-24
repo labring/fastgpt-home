@@ -2,7 +2,7 @@
 title: FastGPT系统插件开发完成后的提交验证检查指南
 slug: /zh/model/fastgpt-plugin-submit-validation
 page_type: 模型接入
-source: https://doc.fastgpt.cn/zh-CN/plugin/system-tool-development
+source: https://doc.fastgpt.cn/plugin/system-tool-development
 source_type: 官方文档
 ---
 
@@ -28,4 +28,4 @@ source_type: 官方文档
 ## 验证执行要求
 开发人员需按照上述清单逐一完成检查，对于未通过的验证项需优先修复问题，对于明确无需执行的检查项需标注具体原因，确保所有验证项符合要求后再提交插件。
 
-> 来源: [FastGPT 官方文档与源码](https://doc.fastgpt.cn/zh-CN/plugin/system-tool-development)
+> 来源: [FastGPT 官方文档与源码](https://doc.fastgpt.cn/plugin/system-tool-development)

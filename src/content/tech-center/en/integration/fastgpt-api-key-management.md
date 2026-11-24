@@ -2,7 +2,7 @@
 title: Create and Secure FastGPT API Keys
 slug: /en/integration/fastgpt-api-key-management
 page_type: Integrations
-source: https://doc.fastgpt.cn/en/guide/build/publish/openapi
+source: https://doc.fastgpt.io/guide/build/publish/openapi
 source_type: Official documentation
 ---
 
@@ -30,7 +30,7 @@ After generating your key, copy it immediately using the provided copy button, a
 ## Security Best Practices
 Store your API key securely, avoiding exposure in public code repositories, client-side scripts, or unencrypted storage. If you need to retrieve a previously created key that was not saved locally, use the copy button available in the API list page. Configuring quota limits or an expiration date for your API key adds an additional layer of security by restricting unauthorized or excessive use of the credential.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/publish/openapi)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/publish/openapi)
 
 ## Applicability and version scope
 

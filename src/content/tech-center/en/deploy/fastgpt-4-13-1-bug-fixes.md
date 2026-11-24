@@ -2,7 +2,7 @@
 title: List of Resolved Bugs in FastGPT 4.13.1
 slug: /en/deploy/fastgpt-4-13-1-bug-fixes
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-13/4131
+source: https://doc.fastgpt.io/self-host/upgrading/4-13/4131
 source_type: Official documentation
 ---
 
@@ -28,7 +28,7 @@ To confirm the fixes are successfully applied to your self-hosted FastGPT instan
 4.  Test dotted variable form inputs: Create a form variable with a `.` in its name, submit a test value to the field, and confirm the value is properly stored and processed.
 5.  Confirm shared workflow citations: Share a sub-workflow configured to return dataset citations, then access the shared link and verify the citations are visible to external viewers.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-13/4131)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-13/4131)
 
 ## Applicability and version scope
 

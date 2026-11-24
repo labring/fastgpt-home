@@ -2,7 +2,7 @@
 title: FastGPT本地开发项目的初始配置操作说明
 slug: /zh/reference/fastgpt-local-dev-init-config
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/dev
+source: https://doc.fastgpt.cn/self-host/dev
 source_type: 官方文档小节
 ---
 
@@ -27,4 +27,4 @@ source_type: 官方文档小节
 3. 若修改过`docker-compose.yaml`中的变量，需同步更新`.env.local`中的对应变量，保持一致。
 4. `data/config.local.json`多数场景无需修改，仅需按需调整上述四个参数。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/dev)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/dev)

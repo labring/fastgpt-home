@@ -2,7 +2,7 @@
 title: Delete Single Dataset Data via FastGPT API
 slug: /en/api/fastgpt-api-dataset-data-delete
 page_type: API
-source: https://doc.fastgpt.cn/en/openapi/dataset
+source: https://doc.fastgpt.io/openapi/dataset
 source_type: Official documentation
 ---
 
@@ -43,7 +43,7 @@ The response fields follow a consistent FastGPT OpenAPI format:
 - `message`: Empty string for successful requests per this endpoint's standard response structure.
 - `data`: A confirmation string set to `success` to verify the target data entry was deleted without errors.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/openapi/dataset)
+> Source: [FastGPT official source](https://doc.fastgpt.io/openapi/dataset)
 
 ## Applicability and version scope
 

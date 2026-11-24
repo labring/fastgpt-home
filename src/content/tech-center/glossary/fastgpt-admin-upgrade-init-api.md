@@ -2,7 +2,7 @@
 title: FastGPT版本升级初始化API的使用说明与注意事项
 slug: /zh/glossary/fastgpt-admin-upgrade-init-api
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-13/4132
+source: https://doc.fastgpt.cn/self-host/upgrading/4-13/4132
 source_type: 官方文档
 ---
 
@@ -23,9 +23,9 @@ curl --location --request POST 'https://{{host}}/api/admin/initvX' \
 ## 容易搞错的地方
 使用外部S3存储时，若外部S3不支持circleLife操作，执行`initv4132`脚本会报错，可忽略该错误，因为设置策略本身会失败。`initv4144`的反馈计算操作执行较慢，接口不会返回结果，需通过日志确认完成状态。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-13/4132)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-13/4132)
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4144)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-14/4144)
 
 ## 适用性与版本范围
 

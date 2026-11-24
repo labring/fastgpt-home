@@ -2,7 +2,7 @@
 title: Configure Startup Scripts for FastGPT VM Sandboxes
 slug: /en/tutorial/fastgpt-vm-startup-scripts
 page_type: 教程/部署
-source: https://doc.fastgpt.cn/en/guide/build/agentv2/vm
+source: https://doc.fastgpt.io/guide/build/agentv2/vm
 source_type: 官方文档
 ---
 
@@ -33,4 +33,4 @@ Sample commands matching common use cases include:
 - Install a Python package via `pip`: `pip install scipy`
 - Install a system-level utility: `apt install -y curl`
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/guide/build/agentv2/vm)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/guide/build/agentv2/vm)

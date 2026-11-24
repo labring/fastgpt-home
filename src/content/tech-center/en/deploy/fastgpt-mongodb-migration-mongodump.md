@@ -2,7 +2,7 @@
 title: Migrate FastGPT MongoDB Deployments With mongodump
 slug: /en/deploy/fastgpt-mongodb-migration-mongodump
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/migration/docker_mongo
+source: https://doc.fastgpt.io/self-host/migration/docker_mongo
 source_type: Official documentation
 ---
 
@@ -34,7 +34,7 @@ Follow these ordered steps to complete the MongoDB migration:
 ## NAS Deployment Specific Notes
 If Environment B is a NAS-based FastGPT deployment, confirm that the installed MongoDB version is 4.2 or 4.4 prior to restoring the backup. Mismatched MongoDB versions may cause compatibility issues during the restore process or with the running FastGPT service. Cloud-based Environment B deployments do not require manual MongoDB version selection, as they use the default FastGPT-supported version.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/migration/docker_mongo)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/migration/docker_mongo)
 
 ## Applicability and version scope
 

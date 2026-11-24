@@ -2,7 +2,7 @@
 title: FastGPT V4.9.5版本升级操作方法速查指南
 slug: /zh/reference/fastgpt-v495-upgrade-quick-guide
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/495
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/495
 source_type: 官方文档小节
 ---
 
@@ -18,4 +18,4 @@ source_type: 官方文档小节
 1. 本速查仅适用于FastGPT <4.12.0区间内的版本升级至V4.9.5。
 2. 部分相邻版本升级至V4.9.5时，需适配环境变量变更配置。
 3. 升级前需完成系统数据备份，防止配置或业务数据丢失。
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/495)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/495)

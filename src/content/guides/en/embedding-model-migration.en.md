@@ -63,7 +63,7 @@ At the end of the dual-storage period, handle the old knowledge base and backups
 
 ## References
 
-- [FastGPT M3E integration](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/m3e)
+- [FastGPT M3E integration](https://doc.fastgpt.cn/self-host/custom-models/m3e)
 - [FastGPT knowledge-base API schema](https://github.com/labring/FastGPT/blob/2bab5c1e06c46362f40a454d49d963e8bf0c62bc/packages/global/openapi/core/dataset/api.ts)
 - [FastGPT vector formatting implementation](https://github.com/labring/FastGPT/blob/2bab5c1e06c46362f40a454d49d963e8bf0c62bc/packages/service/core/ai/embedding/index.ts)
 - [pgvector indexing and iterative scans](https://github.com/pgvector/pgvector#indexing)

@@ -2,7 +2,7 @@
 title: FastGPT插件的构建、检查与打包操作速查
 slug: /zh/reference/fastgpt-plugin-build-check-pack
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/plugin/system-tool-development
+source: https://doc.fastgpt.cn/plugin/system-tool-development
 source_type: 官方文档小节
 ---
 
@@ -32,4 +32,4 @@ source_type: 官方文档小节
 3.  自定义命令中的参数名（如`--entry`、`--output`、`--dist`）不可随意修改，需按实际路径填写对应参数值。
 4.  `--minify`参数仅在自定义构建命令中支持，用于开启代码压缩。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/plugin/system-tool-development)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/plugin/system-tool-development)

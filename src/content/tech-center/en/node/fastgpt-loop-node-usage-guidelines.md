@@ -2,7 +2,7 @@
 title: Loop Node Critical Usage Guidelines for FastGPT
 slug: /en/node/fastgpt-loop-node-usage-guidelines
 page_type: Workflow nodes
-source: https://doc.fastgpt.cn/en/guide/build/workflow/nodes/loop_run
+source: https://doc.fastgpt.io/guide/build/workflow/nodes/loop_run
 source_type: Official documentation
 ---
 
@@ -23,7 +23,7 @@ Following each successfully completed iteration, all changes made to global vari
 # Loop Termination Safeguards
 To prevent infinite loop conditions, conditional Loop Node configurations must include a reachable Loop Break node under specific execution conditions. FastGPT enforces a hard maximum iteration limit with a default value of 100. If the loop reaches this limit without exiting via a Loop Break node, it will automatically terminate and throw an explicit execution error.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/workflow/nodes/loop_run)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/workflow/nodes/loop_run)
 
 ## Applicability and version scope
 

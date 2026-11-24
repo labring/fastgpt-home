@@ -2,7 +2,7 @@
 title: Configure FastGPT Supported Object Storage Providers
 slug: /en/deploy/fastgpt-object-storage-config-3
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/object-storage
+source: https://doc.fastgpt.io/self-host/config/object-storage
 source_type: Official documentation
 ---
 
@@ -24,7 +24,7 @@ FastGPT requires two core environment variables to route static file traffic to 
 - `STORAGE_PRIVATE_BUCKET`: Specifies the name of the bucket designated for privately accessible static files hosted via FastGPT.
 In addition to these two variables, each supported object storage provider requires provider-specific environment variables to configure connection details such as endpoint URL, access key, and secret key. The exact requirements for these variables vary based on your chosen storage provider.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/object-storage)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/object-storage)
 
 ## Applicability and version scope
 

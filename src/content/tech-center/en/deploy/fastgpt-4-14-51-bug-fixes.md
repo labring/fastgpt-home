@@ -2,7 +2,7 @@
 title: List of Fixed Bugs in FastGPT 4.14.51
 slug: /en/deploy/fastgpt-4-14-51-bug-fixes
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-14/41451
+source: https://doc.fastgpt.io/self-host/upgrading/4-14/41451
 source_type: Official documentation
 ---
 
@@ -26,7 +26,7 @@ Each fix targets the root cause of the reported issue without altering supported
 ## Deployment Note for Self-Host Operators
 Self-hosted FastGPT instances running versions prior to 4.14.51 can apply the 4.14.51 upgrade to resolve all listed issues. No additional custom configuration changes are required beyond completing the standard FastGPT upgrade process for this release.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-14/41451)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-14/41451)
 
 ## Applicability and version scope
 

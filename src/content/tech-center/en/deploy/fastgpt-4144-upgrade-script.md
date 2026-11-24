@@ -2,7 +2,7 @@
 title: Run the FastGPT 4.14.4 Upgrade Script
 slug: /en/deploy/fastgpt-4144-upgrade-script
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4144
+source: https://doc.fastgpt.io/self-host/upgrading/4-14/4144
 source_type: Official documentation
 ---
 
@@ -30,7 +30,7 @@ The script initiates two distinct data migration workflows:
 ## Verify Migration Completion
 Since the chat feedback recalculation runs asynchronously, you must monitor your FastGPT deployment logs to confirm the task has fully completed. Look for the exact log string: `Migration feedback completed!`. No additional manual steps are required after this message appears in your deployment logs.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4144)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-14/4144)
 
 ## Applicability and version scope
 

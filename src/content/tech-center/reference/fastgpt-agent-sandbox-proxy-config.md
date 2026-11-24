@@ -2,7 +2,7 @@
 title: 配置 FastGPT Agent Sandbox Proxy 服务的环境变量与端口
 slug: /zh/reference/fastgpt-agent-sandbox-proxy-config
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/sandbox/opensandbox
+source: https://doc.fastgpt.cn/self-host/config/sandbox/opensandbox
 source_type: 官方文档小节
 ---
 
@@ -30,4 +30,4 @@ source_type: 官方文档小节
 3. 沙盒冷启动较慢时，可适当调大 FASTGPT_APP_REQUEST_TIMEOUT_SECS 的值。
 4. 4.16 版本默认使用同一端口提供 WebSocket 和 HTTP 预览服务，若网关不支持同端口转发，可设置 PREVIEW_PORT 为其他容器端口，调整 Compose 端口映射，并更新 AGENT_SANDBOX_PREVIEW_PROXY_URL 指向新端口。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/sandbox/opensandbox)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/config/sandbox/opensandbox)

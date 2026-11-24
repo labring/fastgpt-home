@@ -2,7 +2,7 @@
 title: Optimize Data Chunking for FastGPT RAG Workflows
 slug: /en/tutorial/fastgpt-data-chunking-optimization
 page_type: 教程/部署
-source: https://doc.fastgpt.cn/en/guide/dataset/rag
+source: https://doc.fastgpt.io/guide/dataset/rag
 source_type: 官方文档
 ---
 
@@ -26,4 +26,4 @@ This workflow leverages only validated FastGPT-compatible chunking techniques fr
 4. **Topic-Aligned Chunking**: Implement topic-based chunking using topic models such as LDA or embedding-based text clustering to group content by thematic relevance, ensuring related information is stored in contiguous chunks.
 5. **Continuous Feedback Optimization**: Add a feedback mechanism to regularly evaluate chunking performance, then refine chunking rules to address identified gaps over time.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/guide/dataset/rag)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/guide/dataset/rag)

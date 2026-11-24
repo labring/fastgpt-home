@@ -2,7 +2,7 @@
 title: FastGPT V4.8.14版本升级内容与操作步骤说明
 slug: /zh/deploy/upgrade-v4-8-14
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4814
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4814
 source_type: 官方文档
 ---
 
@@ -21,7 +21,7 @@ source_type: 官方文档
 ## 升级后怎么验证
 验证工作流配置页面新增自动触发选项。检查对话测试日志正常生成且刷新后不丢失对话内容。测试分享链接可配置查看原文权限。确认繁体中文界面正常显示。验证分析链接与chat API可传入自定义uid。商业版用户确认微软oauth登录功能可用。检查知识库四级、五级标题处理正常。验证API可正常使用base64图片。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4814)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/4814)
 
 ## 适用性与版本范围
 

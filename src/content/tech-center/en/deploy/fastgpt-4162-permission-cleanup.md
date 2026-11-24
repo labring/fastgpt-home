@@ -2,7 +2,7 @@
 title: Execute FastGPT 4.16.2 Permission Cleanup Tasks
 slug: /en/deploy/fastgpt-4162-permission-cleanup
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-16/4162
+source: https://doc.fastgpt.io/self-host/upgrading/4-16/4162
 source_type: 官方文档
 ---
 
@@ -48,4 +48,4 @@ The API response includes two top-level objects:
 
 Additional behavioral notes: Existing resource owners and child-specific permissions are preserved. Ancestor permission chains are loaded on demand, and historical resources without an inheritance flag are treated as inheriting permissions. During a dry run, migration previews use pre-cleanup permission data, so migration statistics from the full run may differ after invalid permissions are removed. The cleanup and migration process is safe to retry. After applying the changes, run another dry run and confirm that `cleanup.danglingPermissionCount` and `migration.updatedResourceCount` are both `0`, and `migration.errors` is empty. If `migration.errors` is non-empty, repair the affected resources using the provided resource type, resource ID, and parent ID details, then retry the workflow.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/4-16/4162)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/4-16/4162)

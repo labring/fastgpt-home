@@ -2,7 +2,7 @@
 title: FastGPT RAG Pipeline Technical Operational Steps
 slug: /en/tutorial/fastgpt-rag-pipeline-reference
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/dataset/rag
+source: https://doc.fastgpt.io/guide/dataset/rag
 source_type: Official documentation
 ---
 
@@ -31,7 +31,7 @@ The FastGPT RAG pipeline follows five standardized stages:
 ## RAG Domain Applications
 RAG workflows integrated into FastGPT have been widely adopted across multiple operational domains. Curated case studies and reference material for cross-domain RAG implementations are available via the linked external survey resource.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/rag)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/rag)
 
 ## Applicability and version scope
 

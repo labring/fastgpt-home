@@ -2,7 +2,7 @@
 title: 配置FastGPT的API基础地址与密钥参数的使用方法
 slug: /zh/glossary/fastgpt-api-base-url-config
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/guide/build/publish/openapi
+source: https://doc.fastgpt.cn/guide/build/publish/openapi
 source_type: 官方文档
 ---
 
@@ -19,7 +19,7 @@ API基础地址是FastGPT中用于指定API请求目标服务地址的配置项�
 2. OPENAI_API_KEY的两种填写方式易混淆，需根据对接场景选择正确格式。
 3. 第三方知识库的Base URL字段渲染需匹配API的getfiledetail方法，不支持时无需添加该组件。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/publish/openapi)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/publish/openapi)
 
 ## 适用性与版本范围
 

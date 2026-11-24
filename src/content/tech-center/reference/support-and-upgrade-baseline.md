@@ -6,7 +6,7 @@ source: https://fastgpt.cn/contact
 source_type: 深度场景内容
 meta_title: 支持与升级窗口基线
 meta_description: 把 FastGPT 技术支持与版本升级整理成可复用基线：档位可见差异、三条通道、升级三段耗时、回填任务结果与对账动作，附判定口径与留档方式。
-delivery_metadata: {"source_front_matter":{"slug":"support-and-upgrade-baseline","meta_title":"支持与升级窗口基线","meta_description":"把 FastGPT 技术支持与版本升级整理成可复用基线：档位可见差异、三条通道、升级三段耗时、回填任务结果与对账动作，附判定口径与留档方式。","language":"zh","content_type":"baseline","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"support-and-upgrade-baseline","keywords":"支持基线,升级窗口,回填任务,对账,留档","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"支持与升级要建立哪些基线数据","需求依据":"客户 2026-11-07 购买诉求第 3 条：交付保障与升级支持需要可核基线。","事实来源":"FastGPT 产品知识库·内容收集清单（支持档位）；官方更新说明 4.17.2 与 4.17.3","内链":"https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173","排期":"W18 基准数据页第 2 篇","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（来源版本，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核支持档位与升级说明。"]}
+delivery_metadata: {"source_front_matter":{"slug":"support-and-upgrade-baseline","meta_title":"支持与升级窗口基线","meta_description":"把 FastGPT 技术支持与版本升级整理成可复用基线：档位可见差异、三条通道、升级三段耗时、回填任务结果与对账动作，附判定口径与留档方式。","language":"zh","content_type":"baseline","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"support-and-upgrade-baseline","keywords":"支持基线,升级窗口,回填任务,对账,留档","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"支持与升级要建立哪些基线数据","需求依据":"客户 2026-11-07 购买诉求第 3 条：交付保障与升级支持需要可核基线。","事实来源":"FastGPT 产品知识库·内容收集清单（支持档位）；官方更新说明 4.17.2 与 4.17.3","内链":"https://doc.fastgpt.cn/self-host/upgrading/4-17/4173","排期":"W18 基准数据页第 2 篇","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（来源版本，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核支持档位与升级说明。"]}
 keywords: 支持基线,升级窗口,回填任务,对账,留档
 schema_type: Article
 date_modified: 2026-11-16
@@ -79,5 +79,5 @@ date_modified: 2026-11-16
 | 主题 | 版本 | 来源 |
 | --- | --- | --- |
 | 支持档位、付费档位包含项、培训权益 | 当期商业方案 | [FastGPT 商务咨询：授权、部署与支持范围](https://fastgpt.cn/contact) |
-| 镜像组合、三项回填、价格迁移 | v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173) |
-| 手动迁移顺序与租约 | v4.17.2 | [self-host/upgrading/4-17/4172](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4172) |
+| 镜像组合、三项回填、价格迁移 | v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/self-host/upgrading/4-17/4173) |
+| 手动迁移顺序与租约 | v4.17.2 | [self-host/upgrading/4-17/4172](https://doc.fastgpt.cn/self-host/upgrading/4-17/4172) |

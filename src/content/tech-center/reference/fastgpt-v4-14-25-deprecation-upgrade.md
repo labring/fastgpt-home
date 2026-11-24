@@ -2,7 +2,7 @@
 title: FastGPT V4.14.25弃用版本升级操作说明
 slug: /zh/reference/fastgpt-v4-14-25-deprecation-upgrade
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41425
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/41425
 source_type: 官方文档小节
 ---
 
@@ -22,4 +22,4 @@ V4.14.25是FastGPT 4.14.x系列中已被官方弃用的历史版本，不再提�
 2. 执行任何升级或配置操作前，需提前备份现有系统数据与配置文件，避免数据丢失或服务异常；
 3. 由于该版本已弃用，官方不会提供针对性的技术支持，若遇到无法解决的问题，需自行评估解决方案或考虑升级至官方仍支持的版本。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41425)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-14/41425)

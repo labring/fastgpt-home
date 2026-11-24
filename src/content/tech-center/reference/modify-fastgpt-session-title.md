@@ -2,7 +2,7 @@
 title: 使用 FastGPT 官方 OpenAPI 修改会话标题的具体操作步骤
 slug: /zh/reference/modify-fastgpt-session-title
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/openapi/chat
+source: https://doc.fastgpt.cn/openapi/chat
 source_type: 官方文档小节
 ---
 
@@ -68,5 +68,5 @@ curl --location --request PUT 'http://localhost:3000/api/core/chat/history/updat
 4. 需确保appId和chatId与目标会话匹配，否则无法正确执行操作。
 5. 成功调用后，响应的`code`字段值固定为200，`data`字段为null。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/openapi/chat)
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/openapi/chat)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/openapi/chat)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/openapi/chat)

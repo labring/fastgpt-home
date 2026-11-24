@@ -2,7 +2,7 @@
 title: FastGPT沙盒V2可使用的JavaScript第三方模块说明
 slug: /zh/node/fastgpt-sandbox-v2-js-modules
 page_type: 工作流节点
-source: https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/sandbox-v2
+source: https://doc.fastgpt.cn/guide/build/workflow/nodes/sandbox-v2
 source_type: 官方文档
 ---
 
@@ -25,8 +25,8 @@ source_type: 官方文档
 ## 禁用模块说明
 除上述列出的模块外，其他系统级或底层模块均被禁止使用，例如fs、child_process、net等模块无法通过require()引入到沙盒V2节点的JavaScript代码中。此类限制覆盖了文件系统操作、进程管理、网络通信等底层系统操作，可有效防止代码执行可能影响系统安全的行为，保障FastGPT工作流的运行安全。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/sandbox-v2)
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/sandbox-v2)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/workflow/nodes/sandbox-v2)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/workflow/nodes/sandbox-v2)
 
 ## 适用性与版本范围
 

@@ -2,7 +2,7 @@
 title: FastGPT SSO标准接口获取用户信息的具体操作方法
 slug: /zh/reference/fastgpt-sso-get-user-info
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/admin/sso
+source: https://doc.fastgpt.cn/guide/admin/sso
 source_type: 官方文档小节
 ---
 
@@ -26,4 +26,4 @@ source_type: 官方文档小节
 3. `memberName`为非必填字段，成功响应中可能不包含该字段。
 4. 失败响应的`message`字段会返回具体错误信息，可用于排查问题。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/admin/sso)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/admin/sso)

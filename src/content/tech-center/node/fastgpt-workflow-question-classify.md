@@ -2,7 +2,7 @@
 title: FastGPT工作流问题分类节点的配置与使用方法
 slug: /zh/node/fastgpt-workflow-question-classify
 page_type: 工作流节点
-source: https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/question_classify
+source: https://doc.fastgpt.cn/guide/build/workflow/nodes/question_classify
 source_type: 官方文档
 ---
 
@@ -41,4 +41,4 @@ const agentFunction = {
 ```
 4.  节点执行后将返回abc、vvv、aaa中的一个枚举值，可基于该返回值配置后续不同的工作流分支，实现分类后的差异化操作。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/question_classify)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/workflow/nodes/question_classify)

@@ -2,7 +2,7 @@
 title: Troubleshoot FastGPT Milvus BM25 Integration Issues
 slug: /en/deploy/fastgpt-milvus-bm25-troubleshooting
 page_type: 部署场景
-source: https://doc.fastgpt.cn/en/self-host/milvus-bm25
+source: https://doc.fastgpt.io/self-host/milvus-bm25
 source_type: 官方文档
 ---
 
@@ -23,4 +23,4 @@ When a migration remains stuck in a failed state with the error `targetCount < p
 ## Post-Migration Full-Text Search Issues
 If full-text search returns no results after completing a migration, first confirm the migration finished successfully by checking for `status: done` in the migration logs or API response. An empty `modeldata_v2` collection indicates no full-text search data was successfully migrated, which will directly result in no search hits. Always validate migration completion status before testing full-text search functionality.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/milvus-bm25)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/milvus-bm25)

@@ -2,7 +2,7 @@
 title: FastGPT 4.16.0 Operational and UI Improvements
 slug: /en/deploy/fastgpt-4-16-0-improvements
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-16/4160
+source: https://doc.fastgpt.io/self-host/upgrading/4-16/4160
 source_type: 官方文档
 ---
 
@@ -29,4 +29,4 @@ This release includes improved compatibility handling for legacy Workflow data a
 | PDF Content Cropping | Replaced fixed PDF edge cropping with dynamic edge detection, preventing valid content near page boundaries from being removed |
 | Sandbox Thresholds | Suspension and archive thresholds configurable via environment variables |
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/4-16/4160)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/4-16/4160)

@@ -2,7 +2,7 @@
 title: FastGPT V4.5版本升级操作与数据库配置说明
 slug: /zh/deploy/fastgpt-v45-db-upgrade
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/45
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/45
 source_type: 官方文档小节
 ---
 
@@ -17,4 +17,4 @@ FastGPT V4.5版本属于需要进行复杂更新的版本，该版本引入PgVec
 2. 按照PgVector官方文档完成数据库相关配置调整。
 3. 执行数据库并行构建索引的操作，等待构建完成。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/45)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/45)

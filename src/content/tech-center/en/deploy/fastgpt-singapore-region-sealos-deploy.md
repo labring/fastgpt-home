@@ -2,7 +2,7 @@
 title: One-Click FastGPT Deployment in Singapore Region
 slug: /en/deploy/fastgpt-singapore-region-sealos-deploy
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/deploy/sealos
+source: https://doc.fastgpt.io/self-host/deploy/sealos
 source_type: Official documentation
 ---
 
@@ -22,7 +22,7 @@ Users may access the preloaded template via the linked badge, then complete the 
 ## Critical Deployment Considerations
 Two key details apply to this Singapore region deployment: first, direct access to OpenAI services is enabled via the local server infrastructure. Second, mainland China users require a VPN to establish a stable connection to the deployed FastGPT service. All pricing for this international server deployment is slightly higher than domestic regional deployment options.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/deploy/sealos)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/deploy/sealos)
 
 ## Applicability and version scope
 

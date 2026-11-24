@@ -2,7 +2,7 @@
 title: Handle Long Text Translation with FastGPT Loop Nodes
 slug: /en/node/fastgpt-loop-long-text-translation
 page_type: Workflow nodes
-source: https://doc.fastgpt.cn/en/guide/build/workflow/nodes/loop
+source: https://doc.fastgpt.io/guide/build/workflow/nodes/loop
 source_type: Official documentation
 ---
 
@@ -92,7 +92,7 @@ A core set of configurable segmentation parameters from the code includes:
 | MAX_CODE_BLOCK_LENGTH | 1500 | Maximum length of fenced code blocks |
 | MAX_TABLE_CELL_LENGTH | 200 | Maximum length of table cell content |
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/workflow/nodes/loop)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/workflow/nodes/loop)
 
 ## Applicability and version scope
 

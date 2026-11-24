@@ -2,7 +2,7 @@
 title: Generate and Use FastGPT System Tool Debug Links
 slug: /en/model/fastgpt-system-tool-debug-links
 page_type: Model guides
-source: https://doc.fastgpt.cn/en/plugin/system-tool-development
+source: https://doc.fastgpt.io/plugin/system-tool-development
 source_type: Official documentation
 ---
 
@@ -23,7 +23,7 @@ Follow these structured steps to create a valid debug link for your system tool 
 ## Critical Usage Restrictions
 All generated debug links are strictly limited to connecting your local CLI to the FastGPT test environment. To protect the integrity of your test environment, follow these mandatory rules: do not commit debug links to code repositories, do not include debug links in documentation examples, and do not share debug links in chat logs. This ensures that only authorized local developers can utilize the debug link to access the test environment.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/plugin/system-tool-development)
+> Source: [FastGPT official source](https://doc.fastgpt.io/plugin/system-tool-development)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: FastGPT V4.14.20版本升级操作参考指南
 slug: /zh/reference/fastgpt-v41420-upgrade-guide
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41420
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/41420
 source_type: 官方文档小节
 ---
 
@@ -24,4 +24,4 @@ source_type: 官方文档小节
 3. 请勿跳过中间版本直接升级，需按版本顺序逐步执行
 4. 升级过程中需检查配置文件与环境变量的匹配性，避免配置错误
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41420)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-14/41420)

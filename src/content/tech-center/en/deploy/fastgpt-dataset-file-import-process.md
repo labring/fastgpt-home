@@ -2,7 +2,7 @@
 title: FastGPT Dataset File Import Process Details
 slug: /en/deploy/fastgpt-dataset-file-import-process
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/design/dataset
+source: https://doc.fastgpt.io/self-host/design/dataset
 source_type: Official documentation
 ---
 
@@ -25,7 +25,7 @@ Three core storage systems are utilized across the workflow:
 2.  MongoDB `training` Collection: Staging repository for tagged text chunks between client-side preparation and backend vector generation.
 3.  PostgreSQL Database: Final storage layer for vectorized text chunks, enabling efficient retrieval of semantically related content for FastGPT applications.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/design/dataset)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/design/dataset)
 
 ## Applicability and version scope
 

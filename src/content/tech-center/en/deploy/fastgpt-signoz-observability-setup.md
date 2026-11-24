@@ -2,7 +2,7 @@
 title: Set Up SigNoz Observability for FastGPT
 slug: /en/deploy/fastgpt-signoz-observability-setup
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/signoz
+source: https://doc.fastgpt.io/self-host/config/signoz
 source_type: Official documentation
 ---
 
@@ -23,7 +23,7 @@ SigNoz is an open-source Application Performance Monitoring (APM) and observabil
 ## Integration Value for FastGPT
 Each of SigNoz’s core capabilities addresses critical monitoring needs for FastGPT deployments. Distributed tracing provides full visibility into end-to-end user request flows across FastGPT’s distributed service architecture. Performance monitoring tracks key operational metrics to identify system bottlenecks. Error tracking automatically captures and stores system exceptions to streamline troubleshooting workflows. Log aggregation centralizes application logs for structured querying, and real-time alerts allow operators to set threshold-based rules to detect and respond to anomalies before they impact end users.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/signoz)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/signoz)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: Execute FastGPT 4.15 Upgrade Migration Scripts
 slug: /en/deploy/fastgpt-415-migration-scripts
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41500
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/41500
 source_type: Official documentation
 ---
 
@@ -81,7 +81,7 @@ This optional step fixes historical sandbox status fields and optionally archive
 curl -X POST 'https://{{host}}/api/admin/dataClean/initSandboxArchive'
 ```
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41500)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-15/41500)
 
 ## Applicability and version scope
 

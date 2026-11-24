@@ -2,7 +2,7 @@
 title: FastGPT的RAG工作流程、配置方法与应用场景详细说明
 slug: /zh/tutorial/fastgpt-rag-workflow-guide
 page_type: 教程/部署
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/rag
+source: https://doc.fastgpt.cn/guide/dataset/rag
 source_type: 官方文档
 ---
 
@@ -28,4 +28,4 @@ FastGPT的RAG流程支持多种技术工具选型，核心配置参数如下：
 | 答案生成 | GPT、BART、T5 |
 系统可通过微调模型参数、调整检索权重，优化整体性能。
 
-> 来源: [FastGPT 官方文档与源码](https://doc.fastgpt.cn/zh-CN/guide/dataset/rag)
+> 来源: [FastGPT 官方文档与源码](https://doc.fastgpt.cn/guide/dataset/rag)

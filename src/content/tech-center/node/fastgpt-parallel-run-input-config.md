@@ -2,7 +2,7 @@
 title: 配置FastGPT并行运行节点的输入参数与执行逻辑
 slug: /zh/node/fastgpt-parallel-run-input-config
 page_type: 工作流节点
-source: https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/parallel_run
+source: https://doc.fastgpt.cn/guide/build/workflow/nodes/parallel_run
 source_type: 官方文档
 ---
 
@@ -20,8 +20,8 @@ source_type: 官方文档
 
 所有参数均为必填项，需根据实际业务需求完成配置。最大并发数的取值范围为1至部署方设置的上限，默认上限为10，过高的并发数可能会对系统资源造成压力。单轮报错重试次数的取值范围为0至5，设为0时，单个任务失败后不会触发自动重试，需通过其他逻辑处理失败结果。执行逻辑的配置需严格遵循边界规则，必须使用节点内置的开始与结束锚点作为子流程的起止标记，中间可根据需求编排任意数量的其他节点，完成单个任务的完整处理流程。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/parallel_run)
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/parallel_run)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/workflow/nodes/parallel_run)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/workflow/nodes/parallel_run)
 
 ## 适用性与版本范围
 

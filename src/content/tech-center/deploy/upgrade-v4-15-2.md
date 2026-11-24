@@ -2,7 +2,7 @@
 title: FastGPT V4.15.2版本升级操作步骤与功能变化说明
 slug: /zh/deploy/upgrade-v4-15-2
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/4152
+source: https://doc.fastgpt.cn/self-host/upgrading/4-15/4152
 source_type: 官方文档
 ---
 
@@ -22,7 +22,7 @@ source_type: 官方文档
 ## 升级后怎么验证
 检查FastGPT服务正常启动，无环境变量校验失败报错。测试OpenSandbox功能，确认中文文件名文件可正常下载。测试文件上传下载，确认使用短链接且无异常。测试工作流节点，确认实时错误提示正常，判断器节点排序删除后分支保持稳定。测试自定义工具参数节点，确认可手动输入JSONSchema并配置必填选项。检查企业认证、门户页AgentV2应用对话功能正常启用。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/4152)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-15/4152)
 
 ## 适用性与版本范围
 

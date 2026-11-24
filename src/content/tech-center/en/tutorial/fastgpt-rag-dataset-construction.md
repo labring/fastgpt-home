@@ -2,7 +2,7 @@
 title: Optimize FastGPT RAG Dataset Quality and Coverage
 slug: /en/tutorial/fastgpt-rag-dataset-construction
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/dataset/rag
+source: https://doc.fastgpt.io/guide/dataset/rag
 source_type: Official documentation
 ---
 
@@ -23,7 +23,7 @@ To address these challenges, standardized improvement strategies include expandi
 6. Standardize Storage Formats: Store processed dataset entries in JSON, XML, or knowledge graph formats for structured, accessible storage.
 7. Integrate Feedback Loops: Collect and incorporate user feedback to continuously refine and update dataset content.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/rag)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/rag)
 
 ## Applicability and version scope
 

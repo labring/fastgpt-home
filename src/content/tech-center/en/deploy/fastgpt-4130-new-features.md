@@ -2,7 +2,7 @@
 title: FastGPT 4.13.0 New Feature Details
 slug: /en/deploy/fastgpt-4130-new-features
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-13/4130
+source: https://doc.fastgpt.io/self-host/upgrading/4-13/4130
 source_type: Official documentation
 ---
 
@@ -22,7 +22,7 @@ Two critical configuration updates improve resource management and workflow effi
 | Open-source     | `config.json` file        | `systemEnv.datasetParseMaxProcess` |
 | Commercial      | Admin Dashboard           | N/A (UI-managed) |
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-13/4130)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-13/4130)
 
 ## Applicability and version scope
 

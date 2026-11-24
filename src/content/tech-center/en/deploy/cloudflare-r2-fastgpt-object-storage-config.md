@@ -2,7 +2,7 @@
 title: Configure Cloudflare R2 for FastGPT Object Storage
 slug: /en/deploy/cloudflare-r2-fastgpt-object-storage-config
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/object-storage
+source: https://doc.fastgpt.io/self-host/config/object-storage
 source_type: Official documentation
 ---
 
@@ -40,7 +40,7 @@ STORAGE_S3_FORCE_PATH_STYLE=false
 ## Production Deployment Requirements
 For production deployments, avoid using the rate-limited `r2.dev` development URL, and instead use a custom HTTPS domain bound to your R2 bucket. You must pre-create both the public and private R2 buckets prior to starting the FastGPT service. FastGPT will validate that these buckets exist during startup, and will not automatically create missing buckets.
 
-> [FastGPT public documentation](https://doc.fastgpt.cn/en/self-host/config/object-storage)
+> [FastGPT public documentation](https://doc.fastgpt.io/self-host/config/object-storage)
 
 ## Applicability and version scope
 

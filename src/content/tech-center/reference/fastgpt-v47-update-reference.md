@@ -2,7 +2,7 @@
 title: FastGPT V4.7版本更新内容及配置操作指引
 slug: /zh/reference/fastgpt-v47-update-reference
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/47
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/47
 source_type: 官方文档小节
 ---
 
@@ -29,4 +29,4 @@ source_type: 官方文档小节
 5. 自定义分割规则现在可输入正则特殊字符，不会再导致前端崩溃。
 6. 本次更新修复了社区版重排选不上、Safari浏览器语音输入、469提取提示词幻觉等问题。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/47)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/47)

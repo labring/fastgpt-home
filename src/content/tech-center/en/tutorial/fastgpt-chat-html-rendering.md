@@ -2,7 +2,7 @@
 title: Secure HTML Rendering for FastGPT Chat
 slug: /en/tutorial/fastgpt-chat-html-rendering
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/chat/htmlRendering
+source: https://doc.fastgpt.io/guide/chat/htmlRendering
 source_type: Official documentation
 ---
 
@@ -24,7 +24,7 @@ Below is a structured breakdown of the core components used in FastGPT’s HTML 
 
 This implementation balances flexible HTML embedding with strict security safeguards, resolving the limitations of native Markdown HTML support across most platforms.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/chat/htmlRendering)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/chat/htmlRendering)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: Add Multilingual Model Provider Display Names
 slug: /en/model/model-provider-multilingual-display-names
 page_type: Model guides
-source: https://doc.fastgpt.cn/en/plugin/model-presets
+source: https://doc.fastgpt.io/plugin/model-presets
 source_type: Official documentation
 ---
 
@@ -28,7 +28,7 @@ Replace the placeholder `NewProvider` key with your internal provider identifier
 ## Unregistered Provider Fallback Behavior
 If a provider identifier is not included in the `ModelProviderMap`, FastGPT will automatically fall back to using the raw provider string as its display name. This fallback is intended for temporary testing or internal prototyping, as unlocalized raw strings may appear inconsistent across multilingual deployments. All formal, production-ready model providers must include full multilingual entries in `ModelProviderMap` to deliver a polished user experience.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/plugin/model-presets)
+> Source: [FastGPT official source](https://doc.fastgpt.io/plugin/model-presets)
 
 ## Applicability and version scope
 

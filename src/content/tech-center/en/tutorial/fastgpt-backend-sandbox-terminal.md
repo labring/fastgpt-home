@@ -2,7 +2,7 @@
 title: Manage and Use FastGPT Backend Sandbox Terminal
 slug: /en/tutorial/fastgpt-backend-sandbox-terminal
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/build/skill/development
+source: https://doc.fastgpt.io/guide/build/skill/development
 source_type: Official documentation
 ---
 
@@ -23,7 +23,7 @@ Follow these structured steps to utilize the terminal effectively:
 # Debugging Support Details
 All debugging-relevant information is delivered directly through the terminal’s real-time log stream. When an error occurs, no additional workspace navigation is required to access failure details, as error messages are printed immediately in the terminal output pane alongside standard execution logs.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/skill/development)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/skill/development)
 
 ## Applicability and version scope
 

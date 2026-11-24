@@ -2,7 +2,7 @@
 title: Update FastGPT OpenSandbox for 4.15 Deployment
 slug: /en/deploy/fastgpt-opensandbox-upgrade-415
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41500
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/41500
 source_type: Official documentation
 ---
 
@@ -21,7 +21,7 @@ The `fastgpt-app` and `fastgpt-pro` services require updated OpenSandbox-related
 ## Key Implementation Notes
 When overwriting your existing deployment configuration with the new 4.15 template, ensure you preserve any custom environment variables or port mappings that are not related to OpenSandbox services to avoid disrupting non-sandbox core application functionality. This ensures your unique deployment settings remain intact while adopting the updated OpenSandbox components.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41500)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-15/41500)
 
 ## Applicability and version scope
 

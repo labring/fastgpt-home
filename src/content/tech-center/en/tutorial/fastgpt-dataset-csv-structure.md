@@ -2,7 +2,7 @@
 title: Specify valid FastGPT dataset CSV file structure
 slug: /en/tutorial/fastgpt-dataset-csv-structure
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/dataset/template
+source: https://doc.fastgpt.io/guide/dataset/template
 source_type: Official documentation
 ---
 
@@ -30,7 +30,7 @@ The following table displays the official sample dataset entries, formatted corr
 
 Each row in the CSV file represents a single standalone knowledge base entry, with all fields populated as required. No optional fields are included in the official template, and all columns must be present in every import file to avoid import errors.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/template)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/template)
 
 ## Applicability and version scope
 

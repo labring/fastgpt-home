@@ -2,7 +2,7 @@
 title: Modify FastGPT Env Vars and Configs on Sealos
 slug: /en/deploy/fastgpt-sealos-config-env-adjustment
 page_type: 部署场景
-source: https://doc.fastgpt.cn/en/self-host/deploy/sealos
+source: https://doc.fastgpt.io/self-host/deploy/sealos
 source_type: 官方文档
 ---
 
@@ -25,4 +25,4 @@ Follow these structured steps to adjust deployment settings:
 ## Operational and Cost Guidance
 A highlighted success alert outlines critical operational rules for this deployment: 🤖 On Sealos, FastGPT runs 1 service and 2 databases. When pausing or deleting the deployment, you must handle all three components together to avoid orphaned resources. To reduce operational costs, you can start the full stack during active work hours and pause all components during inactive periods, such as overnight or non-business days.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/deploy/sealos)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/deploy/sealos)

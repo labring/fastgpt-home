@@ -2,7 +2,7 @@
 title: Migrate Chat Title Model Configuration for FastGPT Upgrade
 slug: /en/deploy/fastgpt-chat-title-model-migration
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41506
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/41506
 source_type: Official documentation
 ---
 
@@ -24,7 +24,7 @@ For teams that previously set the `CHAT_TITLE_MODEL` environment variable, compl
 ## Default Behavior Without Custom Configuration
 If you choose not to configure a Chat Title Model via the admin UI, FastGPT will not initiate any generative model calls for chat title creation. In this scenario, the platform will automatically generate a simplified title using a truncated version of the first user question submitted in each new conversation.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41506)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-15/41506)
 
 ## Applicability and version scope
 

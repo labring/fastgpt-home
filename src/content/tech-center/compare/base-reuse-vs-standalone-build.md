@@ -2,11 +2,11 @@
 title: 复用底座还是每场景单搭：看四个条件
 slug: /zh/compare/base-reuse-vs-standalone-build
 page_type: matrix
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173
+source: https://doc.fastgpt.cn/self-host/upgrading/4-17/4173
 source_type: 深度场景内容
 meta_title: 复用底座还是每场景单独搭
 meta_description: 比较复用同一套工作流、插件与知识库结构，与每个场景从零搭建，在交付周期、维护成本、权限治理与升级影响上的差别，并给出复用的四个判断条件与落地顺序。
-delivery_metadata: {"source_front_matter":{"slug":"base-reuse-vs-standalone-build","meta_title":"复用底座还是每场景单独搭","meta_description":"比较复用同一套工作流、插件与知识库结构，与每个场景从零搭建，在交付周期、维护成本、权限治理与升级影响上的差别，并给出复用的四个判断条件与落地顺序。","language":"zh","content_type":"matrix","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"base-reuse-vs-standalone-build","keywords":"底座复用,场景复制,插件共享,权限治理,升级影响","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"多个场景要不要复用同一套底座","需求依据":"客户 2026-11-07 购买诉求第 5 条：可复用底座降低重复开发。","事实来源":"FastGPT 产品知识库·内容收集清单；官方更新说明 4.16.2 至 4.17.3","内链":"https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173","排期":"W18 决策矩阵第 9 篇","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（来源版本，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核权限与插件入口。"]}
+delivery_metadata: {"source_front_matter":{"slug":"base-reuse-vs-standalone-build","meta_title":"复用底座还是每场景单独搭","meta_description":"比较复用同一套工作流、插件与知识库结构，与每个场景从零搭建，在交付周期、维护成本、权限治理与升级影响上的差别，并给出复用的四个判断条件与落地顺序。","language":"zh","content_type":"matrix","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"base-reuse-vs-standalone-build","keywords":"底座复用,场景复制,插件共享,权限治理,升级影响","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"多个场景要不要复用同一套底座","需求依据":"客户 2026-11-07 购买诉求第 5 条：可复用底座降低重复开发。","事实来源":"FastGPT 产品知识库·内容收集清单；官方更新说明 4.16.2 至 4.17.3","内链":"https://doc.fastgpt.cn/self-host/upgrading/4-17/4173","排期":"W18 决策矩阵第 9 篇","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（来源版本，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核权限与插件入口。"]}
 keywords: 底座复用,场景复制,插件共享,权限治理,升级影响
 schema_type: Article
 date_modified: 2026-11-16
@@ -18,7 +18,7 @@ date_modified: 2026-11-16
 
 ## 复用的对象是什么
 
-对照材料：[FastGPT 官方说明](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173)。
+对照材料：[FastGPT 官方说明](https://doc.fastgpt.cn/self-host/upgrading/4-17/4173)。
 
 可复用的是工作流编排、插件与工具、知识库结构、变量命名规则、发布渠道配置与版本回滚路径。需要重做的是各部门的语料、接口地址、业务字段与可见范围。
 
@@ -80,5 +80,5 @@ date_modified: 2026-11-16
 | 主题 | 版本 | 来源 |
 | --- | --- | --- |
 | 插件机制、发布渠道、应用与知识库授权 | 当期商业方案 | [FastGPT 商务咨询：授权、部署与支持范围](https://fastgpt.cn/contact) |
-| 工具调用覆盖各节点 | v4.16.2 | [self-host/upgrading/4-16/4160](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/4160) |
-| 文件级权限逐条鉴权、动态选项 | v4.17.1 / v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173) |
+| 工具调用覆盖各节点 | v4.16.2 | [self-host/upgrading/4-16/4160](https://doc.fastgpt.cn/self-host/upgrading/4-16/4160) |
+| 文件级权限逐条鉴权、动态选项 | v4.17.1 / v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/self-host/upgrading/4-17/4173) |

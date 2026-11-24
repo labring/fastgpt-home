@@ -2,7 +2,7 @@
 title: Resolved Issues in FastGPT 4.14 Upgrade Scripts
 slug: /en/deploy/fastgpt-414-upgrade-script-fixes
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-14/41427
+source: https://doc.fastgpt.io/self-host/upgrading/4-14/41427
 source_type: Official documentation
 ---
 
@@ -23,7 +23,7 @@ To confirm the fixes are applied correctly, follow these steps:
 2.  For image migration workflows: After running the V4.14.3 upgrade script, review migration log entries to confirm that completed image migrations are tagged with `dataset_image` instead of the prior `data_image` value.
 3.  For rerun upgrade scenarios: After deploying the V4.14.4 fix, run the upgrade script a second time and confirm that images already marked with `dataset_image` in logs are not reprocessed during the rerun.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-14/41427)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-14/41427)
 
 ## Applicability and version scope
 

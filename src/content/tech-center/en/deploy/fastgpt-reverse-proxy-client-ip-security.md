@@ -2,7 +2,7 @@
 title: Prevent Spoofed Client IPs for FastGPT Behind Proxies
 slug: /en/deploy/fastgpt-reverse-proxy-client-ip-security
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/troubleshooting/attention
+source: https://doc.fastgpt.io/self-host/troubleshooting/attention
 source_type: Official documentation
 ---
 
@@ -84,7 +84,7 @@ curl -H 'X-Forwarded-For: 6.6.6.6' -H 'X-Real-IP: 6.6.6.6' https://fastgpt.examp
 ```
 A correct configuration will record and validate the real client IP instead of the spoofed `6.6.6.6` value.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/troubleshooting/attention)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/troubleshooting/attention)
 
 ## Applicability and version scope
 

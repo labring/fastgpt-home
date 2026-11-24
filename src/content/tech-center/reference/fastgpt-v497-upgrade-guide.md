@@ -2,7 +2,7 @@
 title: FastGPT V4.9.7版本升级操作与注意事项速查
 slug: /zh/reference/fastgpt-v497-upgrade-guide
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/497
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/497
 source_type: 官方文档小节
 ---
 
@@ -22,4 +22,4 @@ FastGPT V4.9.7版本升级适用于FastGPT版本低于4.12.0的自部署场景�
 2. 升级前需确认当前版本对应的环境变量变更、升级脚本要求；
 3. 需严格按照官方文档的升级流程操作，避免部署异常。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/497)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/497)

@@ -2,7 +2,7 @@
 title: Upgrade FastGPT Docker Deployment to Version 4.10.0-fix
 slug: /en/deploy/fastgpt-docker-upgrade-4100
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4100
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/4100
 source_type: 官方文档
 ---
 
@@ -34,4 +34,4 @@ Follow these ordered steps to complete the upgrade:
     docker-compose up -d
     ```
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4100)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/4100)

@@ -2,7 +2,7 @@
 title: 创建FastGPT知识库训练订单的API使用方法
 slug: /zh/reference/create-fastgpt-dataset-training-order
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/openapi/dataset
+source: https://doc.fastgpt.cn/openapi/dataset
 source_type: 官方文档小节
 ---
 
@@ -39,4 +39,4 @@ curl --location --request POST 'http://localhost:3000/api/support/wallet/usage/c
 2. 请求体中的`datasetId`为必填参数，未提供将无法创建训练订单。
 3. 响应返回的`data`字段为订单ID，仅用于账单聚合场景。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/openapi/dataset)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/openapi/dataset)

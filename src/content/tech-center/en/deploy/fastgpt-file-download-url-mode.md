@@ -2,7 +2,7 @@
 title: Configure FastGPT File Download URL Mode
 slug: /en/deploy/fastgpt-file-download-url-mode
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/4152
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/4152
 source_type: Official documentation
 ---
 
@@ -30,7 +30,7 @@ Two distinct modes are available for file download URL handling:
 - `short-proxy`: This default mode returns a FastGPT-generated short URL. All file download requests are routed through the FastGPT application, which proxies the file transfer to the underlying storage service.
 - `short-redirect`: This mode returns a FastGPT short URL that validates incoming download requests, then redirects the client to a temporary, direct S3/CDN storage URL. This eliminates the need to route file traffic through the FastGPT application, reducing proxy-related overhead for large file transfers. Note that this mode requires the `STORAGE_EXTERNAL_ENDPOINT` variable to be properly configured to ensure valid redirects to your storage service.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/4152)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-15/4152)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: FastGPT通过AI Proxy接入Ollama模型的配置步骤
 slug: /zh/reference/fastgpt-ollama-proxy-configuration
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/custom-models/ollama
+source: https://doc.fastgpt.cn/self-host/custom-models/ollama
 source_type: 官方文档小节
 ---
 
@@ -23,4 +23,4 @@ source_type: 官方文档小节
 2. 若无法访问Ollama，需检查主机是否监听0.0.0.0，或容器是否与FastGPT处于同一网络。
 3. 主机安装Ollama时，代理地址不可使用localhost。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/ollama)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/custom-models/ollama)

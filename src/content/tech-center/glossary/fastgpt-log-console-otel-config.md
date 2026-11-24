@@ -2,7 +2,7 @@
 title: FastGPT日志控制台与OTEL日志收集配置参数说明
 slug: /zh/glossary/fastgpt-log-console-otel-config
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/signoz
+source: https://doc.fastgpt.cn/self-host/config/signoz
 source_type: 官方文档
 ---
 
@@ -24,7 +24,7 @@ source_type: 官方文档
 ## 容易搞错的地方
 配置`LOG_OTEL_URL`时，容易遗漏末尾的`/v1/logs`路径，导致日志收集失败。日志等级需使用指定的枚举值，不可使用自定义等级。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/config/signoz)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/config/signoz)
 
 ## 适用性与版本范围
 

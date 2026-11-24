@@ -2,7 +2,7 @@
 title: FastGPT接入钉钉机器人的商业版配置流程
 slug: /zh/integration/fastgpt-dingtalk-bot-setup
 page_type: 集成与发布渠道
-source: https://doc.fastgpt.cn/zh-CN/guide/build/publish/dingtalk
+source: https://doc.fastgpt.cn/guide/build/publish/dingtalk
 source_type: 官方文档
 ---
 
@@ -20,4 +20,4 @@ source_type: 官方文档
 ## 常见使用问题
 若需要重置当前聊天记录，可向机器人发送大小写敏感的「Reset」消息，机器人将自动新开一个独立的聊天会话。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/publish/dingtalk)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/publish/dingtalk)

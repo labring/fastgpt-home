@@ -2,7 +2,7 @@
 title: Explain FastGPT RAG System Core Workflow
 slug: /en/tutorial/fastgpt-rag-core-workflow
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/dataset/rag
+source: https://doc.fastgpt.io/guide/dataset/rag
 source_type: Official documentation
 ---
 
@@ -23,7 +23,7 @@ This standardized workflow outlines how FastGPT’s RAG system processes user qu
 3. The collected content fragments are passed as contextual input to the generator component
 4. The generator synthesizes the retrieved data into a polished, relevant natural language response that meets standards for accuracy, relevance, and fluency
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/rag)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/rag)
 
 ## Applicability and version scope
 

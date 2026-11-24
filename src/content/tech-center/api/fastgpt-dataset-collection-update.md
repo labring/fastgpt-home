@@ -2,7 +2,7 @@
 title: 使用FastGPT OpenAPI更新数据集集合的信息
 slug: /zh/api/fastgpt-dataset-collection-update
 page_type: API与文档
-source: https://doc.fastgpt.cn/zh-CN/openapi/dataset
+source: https://doc.fastgpt.cn/openapi/dataset
 source_type: 官方文档小节
 ---
 
@@ -66,4 +66,4 @@ curl --location --request POST 'http://localhost:3000/api/core/dataset/collectio
 ```
 当`code`字段值为200时，表示集合信息更新成功，其余字段无额外返回内容。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/openapi/dataset)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/openapi/dataset)

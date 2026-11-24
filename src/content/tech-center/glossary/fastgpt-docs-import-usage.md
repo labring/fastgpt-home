@@ -2,7 +2,7 @@
 title: 解释FastGPT官方文档中import语句的含义与使用规则
 slug: /zh/glossary/fastgpt-docs-import-usage
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/guide/getting-started
+source: https://doc.fastgpt.cn/guide/getting-started
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ import是FastGPT官方文档页面中用于导入内置组件的ES模块导入�
 ## 容易搞错的地方
 需注意两种导入语法的区别：解构导入需使用大括号包裹组件名称，默认导入则无需大括号。同时，导入路径必须为FastGPT官方文档项目内部的`@/components/docs/`目录下的路径，不可替换为外部非官方组件路径，否则会导致文档页面无法正常加载对应组件。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/getting-started)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/getting-started)
 
 ## 适用性与版本范围
 

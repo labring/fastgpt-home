@@ -2,7 +2,7 @@
 title: 为FastGPT部署、配置并接入M3E私有化向量模型
 slug: /zh/deploy/fastgpt-m3e-vector-model-setup
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/custom-models/m3e
+source: https://doc.fastgpt.cn/self-host/custom-models/m3e
 source_type: 官方文档
 ---
 
@@ -44,4 +44,4 @@ FastGPT 默认使用 OpenAI 的 embedding 向量模型，私有部署场景下�
 ```
 完成配置后，创建知识库时可选择 M3E 模型，需注意以下限制：知识库一旦选择向量模型后无法修改；应用仅能绑定使用同一向量模型的知识库；不同向量模型的相似度计算逻辑存在差异，需自行测试调整相似度阈值。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/m3e)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/custom-models/m3e)

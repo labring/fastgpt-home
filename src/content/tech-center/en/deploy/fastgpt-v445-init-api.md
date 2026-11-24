@@ -2,7 +2,7 @@
 title: Run FastGPT v445 Variable Node Initialization
 slug: /en/deploy/fastgpt-v445-init-api
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/445
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/445
 source_type: 官方文档
 ---
 
@@ -30,4 +30,4 @@ curl --location --request POST 'https://{{host}}/api/admin/initv445' \
 ```
 No request body is required for this endpoint. The `--location` flag included in the command ensures any automatic URL redirects are handled correctly during the request.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/445)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/445)

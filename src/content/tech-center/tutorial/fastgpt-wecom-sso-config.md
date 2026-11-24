@@ -2,7 +2,7 @@
 title: 配置FastGPT企业微信SSO单点登录的具体操作步骤
 slug: /zh/tutorial/fastgpt-wecom-sso-config
 page_type: 教程/部署
-source: https://doc.fastgpt.cn/zh-CN/guide/admin/sso
+source: https://doc.fastgpt.cn/guide/admin/sso
 source_type: 官方文档小节
 ---
 
@@ -50,4 +50,4 @@ environment:
 ### 配置注意事项
 在配置过程中，需确保应用的可见范围为全部根部门，否则无法同步完整的组织与成员信息。挂载静态文件完成域名归属认证后，可及时删除该文件以避免安全风险。所有预设的接口URL均为企业微信官方固定地址，请勿随意修改，否则将无法正常调用接口获取用户与组织信息。AUTH_TOKEN需设置为自定义的认证令牌，用于保障SSO服务的访问安全。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/admin/sso)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/admin/sso)

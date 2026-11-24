@@ -2,11 +2,11 @@
 title: 跟版本升级还是冻结：先看三件事
 slug: /zh/compare/upgrade-vs-freeze-version
 page_type: matrix
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173
+source: https://doc.fastgpt.cn/self-host/upgrading/4-17/4173
 source_type: 深度场景内容
 meta_title: 跟版本升级还是冻结版本
 meta_description: 比较跟随版本升级与冻结当前版本在缺陷修复、安全补丁、兼容性与运维成本上的差别，并给出按镜像成套、回填任务与变更窗口判断的顺序与回滚方案写法。
-delivery_metadata: {"source_front_matter":{"slug":"upgrade-vs-freeze-version","meta_title":"跟版本升级还是冻结版本","meta_description":"比较跟随版本升级与冻结当前版本在缺陷修复、安全补丁、兼容性与运维成本上的差别，并给出按镜像成套、回填任务与变更窗口判断的顺序与回滚方案写法。","language":"zh","content_type":"matrix","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"upgrade-vs-freeze-version","keywords":"版本升级,冻结版本,安全补丁,回填任务,变更窗口","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"私有部署要不要跟着版本升级","需求依据":"客户 2026-11-07 购买诉求第 4 条：后期更新包能否持续迭代。","事实来源":"FastGPT 产品知识库·内容收集清单；官方更新说明 4.16.0 至 4.17.3","内链":"https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173","排期":"W18 决策矩阵第 8 篇","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（来源版本，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核镜像组合与回填任务。"]}
+delivery_metadata: {"source_front_matter":{"slug":"upgrade-vs-freeze-version","meta_title":"跟版本升级还是冻结版本","meta_description":"比较跟随版本升级与冻结当前版本在缺陷修复、安全补丁、兼容性与运维成本上的差别，并给出按镜像成套、回填任务与变更窗口判断的顺序与回滚方案写法。","language":"zh","content_type":"matrix","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"upgrade-vs-freeze-version","keywords":"版本升级,冻结版本,安全补丁,回填任务,变更窗口","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"私有部署要不要跟着版本升级","需求依据":"客户 2026-11-07 购买诉求第 4 条：后期更新包能否持续迭代。","事实来源":"FastGPT 产品知识库·内容收集清单；官方更新说明 4.16.0 至 4.17.3","内链":"https://doc.fastgpt.cn/self-host/upgrading/4-17/4173","排期":"W18 决策矩阵第 8 篇","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（来源版本，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核镜像组合与回填任务。"]}
 keywords: 版本升级,冻结版本,安全补丁,回填任务,变更窗口
 schema_type: Article
 date_modified: 2026-11-16
@@ -18,7 +18,7 @@ date_modified: 2026-11-16
 
 ## 两种策略的实际差别
 
-对照材料：[FastGPT 官方说明](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173)。
+对照材料：[FastGPT 官方说明](https://doc.fastgpt.cn/self-host/upgrading/4-17/4173)。
 
 跟版本升级意味着每个稳定版本都跟，好处是缺陷修复、安全补丁与新能力持续到位，坏处是每次升级都要安排窗口、做回归、核回填。冻结版本意味着停在某个版本长期运行，好处是环境稳定、变更少，坏处是缺陷与补丁要靠回移，越往后回移成本越高。
 
@@ -70,6 +70,6 @@ date_modified: 2026-11-16
 
 | 主题 | 版本 | 来源 |
 | --- | --- | --- |
-| 镜像组合、三项回填任务、价格迁移 | v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173) |
-| 沙盒不混版 | v4.16.0 | [self-host/upgrading/4-16/4160](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/4160) |
-| 手动迁移顺序与租约 | v4.17.2 | [self-host/upgrading/4-17/4172](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4172) |
+| 镜像组合、三项回填任务、价格迁移 | v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/self-host/upgrading/4-17/4173) |
+| 沙盒不混版 | v4.16.0 | [self-host/upgrading/4-16/4160](https://doc.fastgpt.cn/self-host/upgrading/4-16/4160) |
+| 手动迁移顺序与租约 | v4.17.2 | [self-host/upgrading/4-17/4172](https://doc.fastgpt.cn/self-host/upgrading/4-17/4172) |

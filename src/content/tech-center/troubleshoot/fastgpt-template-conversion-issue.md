@@ -29,6 +29,6 @@ source_type: GitHub issue
 
 > 来源: [原始讨论：能不能增加一个模版转换的组件，可以渲染html动态生成表单](https://github.com/labring/FastGPT/issues/5054)
 
-> 来源: [FastGPT 表单输入](https://doc.fastgpt.io/en/guide/build/workflow/nodes/form_input)
+> 来源: [FastGPT 表单输入](https://doc.fastgpt.io/guide/build/workflow/nodes/form_input)
 
-> 来源: [FastGPT 对话 HTML 渲染](https://doc.fastgpt.io/en/guide/chat/htmlRendering)
+> 来源: [FastGPT 对话 HTML 渲染](https://doc.fastgpt.io/guide/chat/htmlRendering)

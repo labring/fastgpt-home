@@ -6,7 +6,7 @@ source: https://fastgpt.cn/contact
 source_type: 深度场景内容
 meta_title: 定制 Agent 交付入口与范围核对
 meta_description: 把定制 Agent 的交付拆成三层范围、三档接口、五类模型清点与六步联调四组入口，逐项给出核对动作、责任划分、失败表现与商业版边界，供实施与采购双方对齐。
-delivery_metadata: {"source_front_matter":{"slug":"custom-agent-delivery-hub","meta_title":"定制 Agent 交付入口与范围核对","meta_description":"把定制 Agent 的交付拆成三层范围、三档接口、五类模型清点与六步联调四组入口，逐项给出核对动作、责任划分、失败表现与商业版边界，供实施与采购双方对齐。","language":"zh","content_type":"aggregation","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"custom-agent-delivery-hub","keywords":"定制Agent,交付范围,接口分档,模型清点,联调","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"定制 Agent 项目从哪几个入口核范围与交付","需求依据":"客户 2026-11-07 购买诉求第 2 条：定制功能与 Agent 能力是落地关键。","事实来源":"FastGPT 产品知识库·内容收集清单；官方更新说明 4.16.2 与 4.17.3","内链":"https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173","排期":"W18 聚合导航第 3 篇","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（来源版本，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核接口与模型配置入口。"]}
+delivery_metadata: {"source_front_matter":{"slug":"custom-agent-delivery-hub","meta_title":"定制 Agent 交付入口与范围核对","meta_description":"把定制 Agent 的交付拆成三层范围、三档接口、五类模型清点与六步联调四组入口，逐项给出核对动作、责任划分、失败表现与商业版边界，供实施与采购双方对齐。","language":"zh","content_type":"aggregation","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"custom-agent-delivery-hub","keywords":"定制Agent,交付范围,接口分档,模型清点,联调","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"定制 Agent 项目从哪几个入口核范围与交付","需求依据":"客户 2026-11-07 购买诉求第 2 条：定制功能与 Agent 能力是落地关键。","事实来源":"FastGPT 产品知识库·内容收集清单；官方更新说明 4.16.2 与 4.17.3","内链":"https://doc.fastgpt.cn/self-host/upgrading/4-17/4173","排期":"W18 聚合导航第 3 篇","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（来源版本，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核接口与模型配置入口。"]}
 keywords: 定制Agent,交付范围,接口分档,模型清点,联调
 schema_type: Article
 date_modified: 2026-11-16
@@ -28,7 +28,7 @@ date_modified: 2026-11-16
 
 外部工具构建的 Agent，先登记交付的是服务还是源码。服务接入核 HTTP／MCP 的输入输出与鉴权，源码项目先安排部署，再把调用接口加入联调清单。
 
-入口：[FastGPT HTTP说明](https://doc.fastgpt.cn/zh-CN/guide/build/tools/http_tools)。
+入口：[FastGPT HTTP说明](https://doc.fastgpt.cn/guide/build/tools/http_tools)。
 
 位置在接口清单。读、写、审批三档按风险排列，读操作配只读凭据与字段白名单，写操作配幂等键、回滚与人工确认，审批类操作保留人在原系统里点确认。
 
@@ -61,5 +61,5 @@ date_modified: 2026-11-16
 | 主题 | 版本 | 来源 |
 | --- | --- | --- |
 | 镜像组成与商业版边界、模型与渠道支持、定制范围 | 当期商业方案 | [FastGPT 商务咨询：授权、部署与支持范围](https://fastgpt.cn/contact) |
-| 所有节点支持工具调用 | v4.16.2 | [self-host/upgrading/4-16/4160](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/4160) |
-| 辅助生成、MCP 配额、成员级模型 | v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173) |
+| 所有节点支持工具调用 | v4.16.2 | [self-host/upgrading/4-16/4160](https://doc.fastgpt.cn/self-host/upgrading/4-16/4160) |
+| 辅助生成、MCP 配额、成员级模型 | v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/self-host/upgrading/4-17/4173) |

@@ -2,7 +2,7 @@
 title: New Features Added in FastGPT 4.14.10
 slug: /en/deploy/fastgpt-4-14-10-new-features
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-14/41410
+source: https://doc.fastgpt.io/self-host/upgrading/4-14/41410
 source_type: Official documentation
 ---
 
@@ -24,7 +24,7 @@ Two critical system constraints are now adjustable via environment variables, pr
 ## LLM Billing and Reporting Updates
 This release introduces tiered billing mode for large language model (LLM) usage, aligning billing calculations with actual resource consumption tiers. Additionally, the billing push method has been unified across all billing events, ensuring a consistent delivery format for usage reports and billing notifications across the platform. This standardization simplifies integration with internal billing tracking systems for self-hosted deployments.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-14/41410)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-14/41410)
 
 ## Applicability and version scope
 

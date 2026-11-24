@@ -2,7 +2,7 @@
 title: FastGPT V4.8.11版本升级操作及更新内容说明
 slug: /zh/deploy/fastgpt-v4811-upgrade-steps
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4811
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4811
 source_type: 官方文档
 ---
 
@@ -71,4 +71,4 @@ curl --location --request POST "https://{{host}}/api/admin/init/4811" \
 ```
 该请求将初始化团队成员组。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4811)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/4811)

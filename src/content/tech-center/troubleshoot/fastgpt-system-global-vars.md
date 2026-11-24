@@ -12,7 +12,7 @@ source_type: GitHub issue
 
 ## 历史范围与已知事实
 
-[Issue #4609](https://github.com/labring/FastGPT/issues/4609) 于 2025 年 4 月提出系统级变量管理需求，原记录列举了定期获取 token、跨应用共享和长期记忆三个场景。当前[HTTP 节点文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/http) 将 `variables` 定义为当前对话的全局变量，并支持引用前方节点输出。
+[Issue #4609](https://github.com/labring/FastGPT/issues/4609) 于 2025 年 4 月提出系统级变量管理需求，原记录列举了定期获取 token、跨应用共享和长期记忆三个场景。当前[HTTP 节点文档](https://doc.fastgpt.cn/guide/build/workflow/nodes/http) 将 `variables` 定义为当前对话的全局变量，并支持引用前方节点输出。
 
 ## 诊断与接入步骤
 

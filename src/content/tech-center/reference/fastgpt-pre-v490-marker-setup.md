@@ -2,7 +2,7 @@
 title: FastGPT V4.9.0前旧版Marker解析服务的部署与配置方法
 slug: /zh/reference/fastgpt-pre-v490-marker-setup
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/custom-models/marker
+source: https://doc.fastgpt.cn/self-host/custom-models/marker
 source_type: 官方文档小节
 ---
 
@@ -30,4 +30,4 @@ docker run --gpus all -itd -p 7231:7231 --name model_pdf_v1 -e PROCESSES_PER_GPU
 3. `CUSTOM_READ_FILE_URL`的path部分必须保留为`/v1/parse/file`，不可修改。
 4. 可通过`CUSTOM_READ_FILE_EXTENSION`配置需要支持的文件后缀类型。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/marker)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/custom-models/marker)

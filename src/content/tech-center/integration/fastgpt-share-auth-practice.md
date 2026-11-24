@@ -2,7 +2,7 @@
 title: 配置FastGPT分享链接身份验证及实践案例
 slug: /zh/integration/fastgpt-share-auth-practice
 page_type: 集成与发布渠道
-source: https://doc.fastgpt.cn/zh-CN/guide/build/publish/link
+source: https://doc.fastgpt.cn/guide/build/publish/link
 source_type: 官方文档小节
 ---
 
@@ -16,4 +16,4 @@ source_type: 官方文档小节
 2. 修改源分享链接，添加`authToken=fastgpt`参数。例如源链接`https://share.fastgpt.io/chat/share?shareId=64be36376a438af0311e599c`，修改后为`https://share.fastgpt.io/chat/share?shareId=64be36376a438af0311e599c&authToken=fastgpt`。
 3. 测试验证效果：打开未携带authToken或authToken不等于`fastgpt`的链接，会提示“身份错误”；发送内容包含“你”字的提问，会提示“内容不合规”。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/publish/link)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/publish/link)

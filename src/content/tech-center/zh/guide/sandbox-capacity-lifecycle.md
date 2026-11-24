@@ -80,5 +80,5 @@ CPU 与内存的超卖倍率默认为 1，取值不低于 1，限 Kubernetes 运
 | 主题 | 来源 |
 | --- | --- |
 | 沙盒额度、超卖倍率、回填任务 | [官方更新说明 4.17.3](https://github.com/labring/FastGPT/releases/tag/v4.17.3) |
-| 用户级实例、资源规格、生命周期、不混部 | [官方更新说明 4.16.0](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/4160) |
-| Agent 沙盒存储、暂停与归档参数 | [环境变量说明](https://doc.fastgpt.io/zh-CN/self-host/config/env) |
+| 用户级实例、资源规格、生命周期、不混部 | [官方更新说明 4.16.0](https://doc.fastgpt.cn/self-host/upgrading/4-16/4160) |
+| Agent 沙盒存储、暂停与归档参数 | [环境变量说明](https://doc.fastgpt.cn/self-host/config/env) |

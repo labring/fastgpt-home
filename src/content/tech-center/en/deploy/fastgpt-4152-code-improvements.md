@@ -2,7 +2,7 @@
 title: FastGPT 4.15.2 Technical Code Improvements
 slug: /en/deploy/fastgpt-4152-code-improvements
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/4152
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/4152
 source_type: Official documentation
 ---
 
@@ -25,7 +25,7 @@ A new environment variable has been added to control secure cookie behavior for 
 
 This parameter allows self-hosted administrators to enforce stricter security for user login sessions, aligning with modern web security best practices for production deployments.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/4152)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-15/4152)
 
 ## Applicability and version scope
 

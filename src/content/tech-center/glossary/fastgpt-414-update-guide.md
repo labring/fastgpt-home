@@ -2,7 +2,7 @@
 title: FastGPT 4.14版本更新修复与系统插件使用指南
 slug: /zh/glossary/fastgpt-414-update-guide
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41411
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/41411
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ source_type: 官方文档
 ## 容易搞错的地方
 部分场景易出现配置偏差或操作误区：一是完成4.14.6版本升级后，无需重复执行系统插件更新步骤；二是知识库上传Markdown文档时，若文件前部英文占比较高，升级前可能触发中文乱码，升级至4.14.11版本后该问题已修复；三是工作流中删除全局变量多选框的enum选项时，需确认默认值已被清理，避免残留配置导致异常；四是python代码执行节点若传入空入参，对应参数会被直接忽略，需避免该类空入参配置。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41411)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-14/41411)
 
 ## 适用性与版本范围
 

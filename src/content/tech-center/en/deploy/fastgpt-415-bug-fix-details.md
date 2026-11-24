@@ -2,7 +2,7 @@
 title: Official FastGPT 4.15 Bug Fix Details
 slug: /en/deploy/fastgpt-415-bug-fix-details
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41502
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/41502
 source_type: Official documentation
 ---
 
@@ -33,7 +33,7 @@ Fixed the v1/completions API endpoint to ensure `quoteList` within `nodeResponse
 |------------------|--------------|---------------------|
 | `nodeResponse`   | `quoteList`  | Now returns both `q` and `a` fields |
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41502)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-15/41502)
 
 ## Applicability and version scope
 

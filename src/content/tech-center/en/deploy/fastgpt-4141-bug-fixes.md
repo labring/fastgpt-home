@@ -2,7 +2,7 @@
 title: List of Resolved Bugs in FastGPT 4.14.1
 slug: /en/deploy/fastgpt-4141-bug-fixes
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4141
+source: https://doc.fastgpt.io/self-host/upgrading/4-14/4141
 source_type: Official documentation
 ---
 
@@ -44,7 +44,7 @@ Use this step-by-step process to confirm all resolved bugs are fixed after upgra
 9.  Use the rich text editor to add tabbed content and verify spacing aligns properly.
 10. Submit a request containing real-time date data from your browser and confirm the server receives the correct value.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4141)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-14/4141)
 
 ## Applicability and version scope
 

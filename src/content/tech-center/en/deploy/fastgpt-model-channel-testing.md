@@ -2,7 +2,7 @@
 title: Verify Operational Status of Configured FastGPT Model Channels
 slug: /en/deploy/fastgpt-model-channel-testing
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/model/intro
+source: https://doc.fastgpt.io/self-host/config/model/intro
 source_type: Official documentation
 ---
 
@@ -22,7 +22,7 @@ The final test report provides two core data points for each configured model ch
 - Test outcome: A clear indication of whether the channel passed validation (successful connection and valid model response) or failed validation due to a testing issue.
 - Response time: The elapsed time between sending a standardized test prompt and receiving a complete model response, measured in milliseconds.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/model/intro)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/model/intro)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: FastGPT V4.8.23版本升级内容与操作步骤说明
 slug: /zh/deploy/upgrade-v4-8-23
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4823
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4823
 source_type: 官方文档
 ---
 
@@ -30,7 +30,7 @@ curl --location --request POST 'https://{{host}}/api/admin/initv4823' \
 ## 升级后怎么验证
 升级完成后可通过以下方式验证：检查模型配置表单的必填项校验功能是否正常生效；确认系统中已显示工单入口；验证删除知识库单条数据时，全文索引是否同步移除；查看数学公式是否正确转义为Markdown格式；确认集合列表的大数据量统计功能运行正常。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4823)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/4823)
 
 ## 适用性与版本范围
 

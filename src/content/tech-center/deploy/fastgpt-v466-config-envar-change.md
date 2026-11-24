@@ -2,7 +2,7 @@
 title: FastGPT V4.6.6版本配置、环境变量变更及升级说明
 slug: /zh/deploy/fastgpt-v466-config-envar-change
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/466
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/466
 source_type: 官方文档
 ---
 
@@ -21,4 +21,4 @@ V4.6.6版本新增多项功能：Http模块请求头支持Json编辑器、ReRank
 4.  将商业版镜像更新至V4.6.6版本；
 5.  后续所有FastGPT参数与模型配置，均通过商业版镜像的外网页面进行调整，无需再修改本地config.json。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/466)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/466)

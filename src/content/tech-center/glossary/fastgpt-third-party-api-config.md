@@ -2,7 +2,7 @@
 title: FastGPT第三方应用对接的API参数配置说明
 slug: /zh/glossary/fastgpt-third-party-api-config
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/guide/build/publish/openapi
+source: https://doc.fastgpt.cn/guide/build/publish/openapi
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ source_type: 官方文档
 ## 容易搞错的地方
 部分用户未将OPENAI_API_BASE_URL替换为自身部署的实际域名，仍使用示例地址导致对接失败。部分场景下未区分OPENAI_API_KEY的两种使用条件，未在第三方应用仅支持配置密钥时使用apiKey-appId兼容格式，引发配置错误。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/publish/openapi)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/publish/openapi)
 
 ## 适用性与版本范围
 

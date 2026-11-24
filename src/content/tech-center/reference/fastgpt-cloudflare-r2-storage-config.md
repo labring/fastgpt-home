@@ -2,7 +2,7 @@
 title: 配置FastGPT对接Cloudflare R2对象存储的参数与步骤
 slug: /zh/reference/fastgpt-cloudflare-r2-storage-config
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/object-storage
+source: https://doc.fastgpt.cn/self-host/config/object-storage
 source_type: 官方文档小节
 ---
 
@@ -31,4 +31,4 @@ FastGPT支持通过S3兼容API对接Cloudflare R2对象存储。完成对应环�
 3. 生产环境建议使用自定义域名，不建议使用受速率限制的`r2.dev`公共开发URL。
 4. 需提前创建公开与私有Bucket，FastGPT启动时仅检查Bucket是否存在，不会自动创建。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/object-storage)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/config/object-storage)

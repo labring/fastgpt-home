@@ -2,7 +2,7 @@
 title: Set up FastGPT content review and rewrite workflow
 slug: /en/tutorial/fastgpt-content-compliance-rewrite-workflow
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/getting-started/quick-start
+source: https://doc.fastgpt.io/guide/getting-started/quick-start
 source_type: Official documentation
 ---
 
@@ -42,7 +42,7 @@ The rule base does not need to be complex for initial testing. For quick validat
 3. Organize the uploaded rules into three core categories for initial validation: Safe Content, Sensitive Wording, and Prohibited Content.
 4. For production use, extend the rule base with industry, brand, channel, or region-specific compliance rules as required.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/getting-started/quick-start)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/getting-started/quick-start)
 
 ## Applicability and version scope
 

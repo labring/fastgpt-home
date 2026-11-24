@@ -2,7 +2,7 @@
 title: Run FastGPT 4.8.5 Upgrade Initialization Commands
 slug: /en/deploy/fastgpt-485-upgrade-initialization
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/485
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/485
 source_type: 官方文档
 ---
 
@@ -38,4 +38,4 @@ curl --location --request POST 'https://{{host}}/api/admin/init/485' \
 2. The commercial edition initialization only modifies the Dataset permission system, with no unintended changes to application or plugin data.
 3. Both commands require valid authentication using the rootkey from your environment variables.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/485)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/485)

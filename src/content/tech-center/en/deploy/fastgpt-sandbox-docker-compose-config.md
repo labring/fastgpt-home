@@ -2,7 +2,7 @@
 title: Set up FastGPT Sandbox with Docker Compose
 slug: /en/deploy/fastgpt-sandbox-docker-compose-config
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/sandbox/opensandbox
+source: https://doc.fastgpt.io/self-host/config/sandbox/opensandbox
 source_type: Official documentation
 ---
 
@@ -29,7 +29,7 @@ All required sandbox services and runtime assets are bundled directly in the off
 ## Supplementary Configuration Guidance
 The linked Docker Compose deployment documentation covers additional adjustments beyond the default global registry and PgVector setup, including support for alternative vector databases and region-specific container registry configurations. All sandbox-related settings are pre-configured in the main compose file, so no separate sandbox configuration files need to be added.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/sandbox/opensandbox)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/sandbox/opensandbox)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: FastGPT App与Admin共享变量的服务地址与集成配置速查
 slug: /zh/reference/fastgpt-app-admin-shared-env-config
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/env
+source: https://doc.fastgpt.cn/self-host/config/env
 source_type: 官方文档小节
 ---
 
@@ -37,4 +37,4 @@ source_type: 官方文档小节
 3. CRM_API_URL为空时，不会进行官网访客身份上报。
 4. 私有化飞书部署时，可修改FEISHU_BASE_URL为对应私有域名。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/config/env)

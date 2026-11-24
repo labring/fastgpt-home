@@ -3,7 +3,7 @@ title: 工具来源选型：系统工具、团队安装插件与自行开发工�
 slug: /zh/guide/plugin-source-selection
 page_type: 决策矩阵页
 source_type: 官方文档（v4.17.2）与社区线程
-source: https://doc.fastgpt.cn/zh-CN/plugin/intro
+source: https://doc.fastgpt.cn/plugin/intro
 source_note: "判据取自 FastGPT v4.17.2 官方文档与社区线程，核验日 2026-10-13。"
 check_day: 2026-10-13
 article_section: 选型与评估
@@ -49,9 +49,9 @@ date_modified: 2026-10-14
 
 ## 参考资料
 
-- [插件简介](https://doc.fastgpt.cn/zh-CN/plugin/intro)
-- [团队安装插件](https://doc.fastgpt.cn/zh-CN/plugin/team-installation)
-- [系统工具开发](https://doc.fastgpt.cn/zh-CN/plugin/system-tool-development)
+- [插件简介](https://doc.fastgpt.cn/plugin/intro)
+- [团队安装插件](https://doc.fastgpt.cn/plugin/team-installation)
+- [系统工具开发](https://doc.fastgpt.cn/plugin/system-tool-development)
 
 ## 需要进一步确认时
 

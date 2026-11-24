@@ -2,7 +2,7 @@
 title: Check FastGPT Version and Upgrade to Resolve Issues
 slug: /en/deploy/fastgpt-version-check-upgrade
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/troubleshooting/attention
+source: https://doc.fastgpt.io/self-host/troubleshooting/attention
 source_type: Official documentation
 ---
 
@@ -22,7 +22,7 @@ If your installed FastGPT version is not the latest stable release, you must com
 ### Best Practices for Version Maintenance
 Regularly checking your FastGPT version and upgrading to the latest stable release minimizes the risk of encountering common, already-fixed problems. Only use the official upgrade guide linked above to perform updates; unauthorized modifications to core instance files may introduce unexpected issues or break existing functionality.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/troubleshooting/attention)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/troubleshooting/attention)
 
 ## Applicability and version scope
 

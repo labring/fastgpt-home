@@ -2,7 +2,7 @@
 title: FastGPT V4.8.7 Release Change Details
 slug: /en/deploy/fastgpt-v487-release-notes
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/487
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/487
 source_type: 官方文档
 ---
 
@@ -35,4 +35,4 @@ All reported bugs addressed in this release include:
 1. Fixed an issue where global variables could not be modified while using the Simple Mode application builder.
 2. Resolved a conflict where GPT-4o models could not simultaneously utilize tool calling and image input features during chat interactions.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/487)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/487)

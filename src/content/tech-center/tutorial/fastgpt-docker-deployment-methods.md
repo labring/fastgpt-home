@@ -2,7 +2,7 @@
 title: FastGPT Docker版本部署配置与三种部署方法
 slug: /zh/tutorial/fastgpt-docker-deployment-methods
 page_type: 教程/部署
-source: https://doc.fastgpt.cn/zh-CN/self-host
+source: https://doc.fastgpt.cn/self-host
 source_type: 官方文档小节
 ---
 
@@ -19,5 +19,5 @@ FastGPT Docker版本的部署支持三种方式：AI Agent代部署、交互式�
 ## 手动部署与自定义镜像源
 手动下载部署适用于需要固定使用特定docker-compose.yml文件的场景。以Pgvector中国大陆镜像源为例，执行命令：`curl -fsSL https://doc.fastgpt.cn/deploy/docker/v4.15/cn/docker-compose.pg.yml -o docker-compose.source.yml`。其他数据库可替换对应下载地址，如Oceanbase对应docker-compose.oceanbase.yml等。下载install.sh文件：`curl -fsSL https://doc.fastgpt.cn/deploy/install.sh -o install.sh`，执行`FASTGPT_LOCAL_COMPOSE_PATH=./docker-compose.source.yml bash install.sh`生成最终部署配置。完全离线环境需提前准备docker-compose.yml和install.sh，无法运行脚本则需手动修改DEFAULT_ROOT_PSW、服务Token、数据库密码、S3/MCP地址等配置。自定义镜像源部署时，先下载docker-compose.yml，修改所有image地址为私有镜像源地址，再执行本地compose模式命令。若启用Agent/Skill沙盒，还需替换沙盒相关镜像及AGENT_SANDBOX_SEALOS_IMAGE或AGENT_SANDBOX_OPENSANDBOX_IMAGE配置，具体参考OpenSandbox配置说明。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host)
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/deploy/docker)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/deploy/docker)

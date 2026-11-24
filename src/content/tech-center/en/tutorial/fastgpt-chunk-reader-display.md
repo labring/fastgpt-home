@@ -2,7 +2,7 @@
 title: Enable Traceable Source Display for AI Chat Responses
 slug: /en/tutorial/fastgpt-chunk-reader-display
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/chat/quoteList
+source: https://doc.fastgpt.io/guide/chat/quoteList
 source_type: Official documentation
 ---
 
@@ -24,7 +24,7 @@ Within the standard FastGPT conversation interface, a standardized source inform
 ## Functional Validation Benefits
 This design ensures full answer traceability, making it straightforward for technical teams and decision makers to validate the accuracy of AI responses and review the surrounding contextual information of the cited Dataset content. This supports both independent verification of AI output and formal compliance review processes for deployed FastGPT chat deployments. A reference visual demonstrating the Chunk Reader popup and highlighted cited text is available in the associated documentation assets.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/chat/quoteList)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/chat/quoteList)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: FastGPT工作流中文本内容提取节点的使用方法
 slug: /zh/reference/fastgpt-text-content-extract-node
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/content_extract
+source: https://doc.fastgpt.cn/guide/build/workflow/nodes/content_extract
 source_type: 官方文档小节
 ---
 
@@ -19,4 +19,4 @@ source_type: 官方文档小节
 ## 注意事项
 该节点仅用于文本内容提取相关场景，属于工作流&插件分类下的节点。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/content_extract)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/workflow/nodes/content_extract)

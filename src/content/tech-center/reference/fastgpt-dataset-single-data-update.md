@@ -2,7 +2,7 @@
 title: FastGPT 数据集单条数据修改API的使用说明
 slug: /zh/reference/fastgpt-dataset-single-data-update
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/openapi/dataset
+source: https://doc.fastgpt.cn/openapi/dataset
 source_type: 官方文档小节
 ---
 
@@ -36,4 +36,4 @@ curl --location --request PUT 'http://localhost:3000/api/core/dataset/data/updat
 2. indexes数组为选填，传入已有dataId的索引项将更新该索引，未传入dataId的自定义索引项将被新增
 3. 自定义索引的类型参考集合批量添加数据接口的说明
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/openapi/dataset)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/openapi/dataset)

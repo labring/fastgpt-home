@@ -2,7 +2,7 @@
 title: Initialize Missing Fields in FastGPT Database Collections
 slug: /en/deploy/fastgpt-db-field-initialization
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/40
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/40
 source_type: 官方文档
 ---
 
@@ -55,4 +55,4 @@ db.outlinks.find({ shareId: { $exists: false } }).forEach(function (item) {
 });
 ```
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/40)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/40)

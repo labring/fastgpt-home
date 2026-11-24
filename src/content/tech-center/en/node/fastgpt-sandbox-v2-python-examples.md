@@ -2,7 +2,7 @@
 title: Run Custom Python Code in FastGPT Sandbox V2
 slug: /en/node/fastgpt-sandbox-v2-python-examples
 page_type: Workflow nodes
-source: https://doc.fastgpt.cn/en/guide/build/workflow/nodes/sandbox-v2
+source: https://doc.fastgpt.io/guide/build/workflow/nodes/sandbox-v2
 source_type: Official documentation
 ---
 
@@ -123,7 +123,7 @@ A standardized parameter table outlines the required inputs and returned outputs
 | JSON Data Processing       | `json_str` (valid JSON string) | Raises `json.JSONDecodeError` for invalid input | `names` (list of extracted "name" fields), `count` (total items in input) |
 | Regular Expression Matching | `text` (string) | None | `emails` (list of matched emails), `count` (number of matches) |
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/workflow/nodes/sandbox-v2)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/workflow/nodes/sandbox-v2)
 
 ## Applicability and version scope
 

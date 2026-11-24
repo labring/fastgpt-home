@@ -2,7 +2,7 @@
 title: FastGPT四种应用类型的选型判断与使用参考
 slug: /zh/reference/fastgpt-four-app-type-selection
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/getting-started/quick-start
+source: https://doc.fastgpt.cn/guide/getting-started/quick-start
 source_type: 官方文档小节
 ---
 
@@ -31,4 +31,4 @@ FastGPT的四类应用类型按能力递进划分，可根据任务复杂度单�
 ## 注意事项
 工作流仅适配固定流程场景，无法处理开放的动态规划任务。Agent V2 需具备自主规划能力，不适用于流程固定的标准化任务。组合使用时需明确各模块的分工，避免功能重叠。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/getting-started/quick-start)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/getting-started/quick-start)

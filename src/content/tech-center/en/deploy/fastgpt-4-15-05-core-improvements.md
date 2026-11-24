@@ -2,7 +2,7 @@
 title: FastGPT 4.15.05 Core Platform Improvements
 slug: /en/deploy/fastgpt-4-15-05-core-improvements
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41505
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/41505
 source_type: Official documentation
 ---
 
@@ -26,7 +26,7 @@ When a connected tool returns an empty response, FastGPT automatically inserts t
 ## Dataset Indexing & Error Handling Enhancements
 Dataset management and error resolution workflows are streamlined in this update. Improved error prompts now provide clear, actionable details for dataset indexing failures, and include a one-click retry option for all failed indexing items. Additionally, SSRF checks are optimized to account for redirect responses, strengthening the security of outbound network requests made during dataset processing and other platform operations.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41505)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-15/41505)
 
 ## Applicability and version scope
 

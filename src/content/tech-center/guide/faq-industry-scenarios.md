@@ -170,8 +170,8 @@ date_modified: 2026-10-14
 
 ## 参考资料
 
-- [快速开始](https://doc.fastgpt.cn/zh-CN/guide/getting-started/quick-start)
-- [FastGPT 入门](https://doc.fastgpt.cn/zh-CN/guide/getting-started)
+- [快速开始](https://doc.fastgpt.cn/guide/getting-started/quick-start)
+- [FastGPT 入门](https://doc.fastgpt.cn/guide/getting-started)
 
 ## 需要进一步确认时
 

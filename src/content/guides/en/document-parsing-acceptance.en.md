@@ -65,6 +65,6 @@ Record the file identifier, type, parser configuration, error location, affected
 
 ## References
 
-- [FastGPT enhanced PDF parsing configuration](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
-- [FastGPT knowledge-base FAQ](https://doc.fastgpt.cn/zh-CN/guide/dataset/faq)
-- [FastGPT retrieval principles](https://doc.fastgpt.cn/zh-CN/guide/dataset/dataset_engine)
+- [FastGPT enhanced PDF parsing configuration](https://doc.fastgpt.cn/self-host/config/env)
+- [FastGPT knowledge-base FAQ](https://doc.fastgpt.cn/guide/dataset/faq)
+- [FastGPT retrieval principles](https://doc.fastgpt.cn/guide/dataset/dataset_engine)

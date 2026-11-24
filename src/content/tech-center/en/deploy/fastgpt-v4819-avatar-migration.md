@@ -2,7 +2,7 @@
 title: Migrate User Avatars for FastGPT v4819 Upgrade
 slug: /en/deploy/fastgpt-v4819-avatar-migration
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4819
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/4819
 source_type: 官方文档
 ---
 
@@ -27,4 +27,4 @@ curl --location --request POST 'https://{{host}}/api/admin/initv4819' \
 ```
 After submitting the request, the migration process will run automatically without requiring additional user input. The script will complete the transfer of all existing user avatar records from the user table to the member table, ensuring the database structure matches the requirements of the FastGPT v4819 release.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4819)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/4819)

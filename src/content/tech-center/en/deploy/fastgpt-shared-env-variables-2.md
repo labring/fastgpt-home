@@ -2,7 +2,7 @@
 title: Set Up FastGPT Shared Environment Variables
 slug: /en/deploy/fastgpt-shared-env-variables-2
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/env
+source: https://doc.fastgpt.io/self-host/config/env
 source_type: Official documentation
 ---
 
@@ -48,7 +48,7 @@ Several variables have interdependent rules to ensure platform stability:
 - User-specific plan limits will override the global `CHAT_MAX_QPM` value if configured.
 - The `SYSTEM_MAX_STRING_LENGTH_M` unit is 1,000,000 characters per unit, so a value of 1 equals 1,000,000 total characters.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/env)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/env)
 
 ## Applicability and version scope
 

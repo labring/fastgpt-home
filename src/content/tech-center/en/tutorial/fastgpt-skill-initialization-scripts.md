@@ -2,7 +2,7 @@
 title: Set Up FastGPT Skill Initialization Scripts
 slug: /en/tutorial/fastgpt-skill-initialization-scripts
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/build/skill/initialization
+source: https://doc.fastgpt.io/guide/build/skill/initialization
 source_type: Official documentation
 ---
 
@@ -26,7 +26,7 @@ Follow this structured process to use the initialization script with your FastGP
 ## Isolated Execution Environment
 All initialization script execution occurs within an isolated virtual machine, ensuring that setup tasks do not impact the main application or other deployed skills. The script runs exactly once per skill deployment cycle, with no repeated execution unless the skill is re-deployed or re-extracted.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/skill/initialization)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/skill/initialization)
 
 ## Applicability and version scope
 

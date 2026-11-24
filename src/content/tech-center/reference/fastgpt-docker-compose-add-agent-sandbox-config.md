@@ -2,7 +2,7 @@
 title: FastGPT docker compose部署新增agent-sandbox配置指南
 slug: /zh/reference/fastgpt-docker-compose-add-agent-sandbox-config
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41410
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/41410
 source_type: 官方文档小节
 ---
 
@@ -38,4 +38,4 @@ AGENT_SANDBOX_VOLUME_MANAGER_TOKEN: *x-volume-manager-auth-token
 3. AGENT_SANDBOX_OPENSANDBOX_API_KEY留空即可，无需额外填写。
 4. 镜像仓库地址和标签为官方指定值，请勿随意修改。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41410)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-14/41410)

@@ -2,7 +2,7 @@
 title: FastGPT V4.10.0版本环境变量变更的升级操作说明
 slug: /zh/reference/fastgpt-v4100-env-upgrade
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4100
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4100
 source_type: 官方文档小节
 ---
 
@@ -22,4 +22,4 @@ FastGPT V4.10.0版本更新包含环境变量变更内容，自部署升级至�
 3. 需严格按照官方给出的变更规则修改参数，避免误改无关配置。
 4. 升级前需确认当前部署版本低于V4.10.0，避免重复执行变更操作。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4100)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/4100)

@@ -2,7 +2,7 @@
 title: FastGPT对话删除接口的使用与参数说明
 slug: /zh/api/fastgpt-delete-chat-api
 page_type: API
-source: https://doc.fastgpt.cn/zh-CN/openapi/chat
+source: https://doc.fastgpt.cn/openapi/chat
 source_type: 官方文档
 ---
 
@@ -35,7 +35,7 @@ curl --location --request DELETE 'http://localhost:3000/api/core/chat/record/del
 ```
 该响应结构包含四个固定字段：code为状态码，调用成功时固定返回200；statusText为状态文本，成功时为空字符串；message为提示信息，成功时为空字符串，失败时包含具体错误提示；data为返回数据，成功时为null，表示删除操作已顺利完成。若调用失败，将返回对应非200的code值与对应的错误信息，具体错误内容可通过message字段查看。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/openapi/chat)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/openapi/chat)
 
 ## 适用性与版本范围
 

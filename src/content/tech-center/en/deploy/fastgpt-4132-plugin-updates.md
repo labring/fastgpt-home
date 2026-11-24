@@ -2,7 +2,7 @@
 title: New Plugin Additions and Configurations for FastGPT 4.13.2
 slug: /en/deploy/fastgpt-4132-plugin-updates
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-13/4132
+source: https://doc.fastgpt.io/self-host/upgrading/4-13/4132
 source_type: Official documentation
 ---
 
@@ -35,7 +35,7 @@ Prior to this release, the execution environment for system tools was fixed with
 |-----------------------|---------|
 | Worker execution toggle | Enables or disables running system tools within a Worker node |
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-13/4132)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-13/4132)
 
 ## Applicability and version scope
 

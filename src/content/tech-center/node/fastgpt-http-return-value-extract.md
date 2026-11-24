@@ -2,7 +2,7 @@
 title: 配置FastGPT HTTP节点的接口返回值提取规则与方法
 slug: /zh/node/fastgpt-http-return-value-extract
 page_type: 工作流节点
-source: https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/http
+source: https://doc.fastgpt.cn/guide/build/workflow/nodes/http
 source_type: 官方文档小节
 ---
 
@@ -44,4 +44,4 @@ FastGPT的HTTP节点支持配置多组返回值提取规则，用于解析调用
 - `$.data.list[1][0].test` 提取结果为`22`
 每个提取项配置的key会作为后续节点引用该值的标识，例如配置key为`data.user.name`后，后续节点可以通过该key获取提取到的用户名内容。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/http)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/workflow/nodes/http)

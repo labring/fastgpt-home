@@ -2,7 +2,7 @@
 title: FastGPT V4.14.28版本升级操作与变更说明
 slug: /zh/deploy/upgrade-v4-14-28
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41428
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/41428
 source_type: 官方文档
 ---
 
@@ -23,7 +23,7 @@ source_type: 官方文档
 ## 升级后怎么验证
 升级完成后，可通过检查admin服务的运行日志，确认无因Node.js版本不匹配导致的服务异常报错。同时可验证admin服务的基础功能是否正常运行，确保服务未出现因版本兼容问题引发的异常状态。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41428)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-14/41428)
 
 ## 适用性与版本范围
 

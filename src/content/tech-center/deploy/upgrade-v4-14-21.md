@@ -2,7 +2,7 @@
 title: FastGPT V4.14.21版本升级内容与操作说明
 slug: /zh/deploy/upgrade-v4-14-21
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41421
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/41421
 source_type: 官方文档
 ---
 
@@ -20,7 +20,7 @@ source_type: 官方文档
 ## 升级后怎么验证
 升级完成后，可通过以下方式验证：确认fastgpt-app与fastgpt-pro服务正常启动；调用completions API的文件类型接口，验证不传name参数时接口可正常响应；检查OSS初始化相关日志，确认无异常报错。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41421)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-14/41421)
 
 ## 适用性与版本范围
 

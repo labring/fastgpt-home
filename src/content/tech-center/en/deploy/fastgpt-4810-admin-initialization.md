@@ -2,7 +2,7 @@
 title: Run FastGPT 4810 Administrative Initialization Tasks
 slug: /en/deploy/fastgpt-4810-admin-initialization
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4810
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/4810
 source_type: 官方文档
 ---
 
@@ -34,4 +34,4 @@ Each component of the command serves a specific function:
 ## Successful Execution Confirmation
 When the command runs successfully, the FastGPT server will complete the two predefined initialization tasks. The endpoint does not return a visible success message in the terminal. If the request fails, the server will return a structured JSON error response with details about the issue.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4810)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/4810)

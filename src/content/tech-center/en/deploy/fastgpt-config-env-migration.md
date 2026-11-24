@@ -2,7 +2,7 @@
 title: Migrate FastGPT config.json to environment variables
 slug: /en/deploy/fastgpt-config-env-migration
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41507
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/41507
 source_type: Official documentation
 ---
 
@@ -39,7 +39,7 @@ Complete the following steps to migrate your configuration from `config.json` to
    - For manual server deployments: Export the variables using `export VARIABLE_NAME=value` prior to starting FastGPT services.
 4. Restart all FastGPT backend and frontend services to apply the new configuration settings.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41507)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-15/41507)
 
 ## Applicability and version scope
 

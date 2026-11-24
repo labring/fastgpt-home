@@ -2,7 +2,7 @@
 title: 配置FastGPT自部署场景下OpenSandbox服务的环境变量
 slug: /zh/reference/fastgpt-opensandbox-env-config
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/sandbox/opensandbox
+source: https://doc.fastgpt.cn/self-host/config/sandbox/opensandbox
 source_type: 官方文档小节
 ---
 
@@ -21,4 +21,4 @@ source_type: 官方文档小节
 ## 注意事项
 如果服务器配置了`HTTP_PROXY` / `HTTPS_PROXY`，需为OpenSandbox Server和Volume Manager显式配置`NO_PROXY` / `no_proxy`，至少包含`localhost,127.0.0.1,127.0.0.0/8,fastgpt-app,fastgpt-opensandbox-server,fastgpt-volume-manager,fastgpt-agent-sandbox-proxy,host.docker.internal`，避免内部服务调用经过代理。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/sandbox/opensandbox)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/config/sandbox/opensandbox)

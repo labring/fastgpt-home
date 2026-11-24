@@ -2,7 +2,7 @@
 title: FastGPT V4.14.28版本升级操作与配置说明
 slug: /zh/reference/fastgpt-4-14-28-upgrade-guide
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41428
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/41428
 source_type: 官方文档小节
 ---
 
@@ -23,4 +23,4 @@ V4.14.28是FastGPT 4.14.x系列的正式更新版本，面向自部署用户提�
 3. 升级前建议完成系统数据与配置的备份，防止升级过程中出现数据丢失
 4. 升级过程中若出现异常，可参考官方给出的故障排查文档
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41428)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-14/41428)

@@ -2,7 +2,7 @@
 title: 说明FastGPT中Tab组件value属性与接口参数的使用方法
 slug: /zh/glossary/fastgpt-tab-value-interface-usage
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/api_dataset
+source: https://doc.fastgpt.cn/guide/dataset/third-party/api_dataset
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ FastGPT文档中Tabs组件的Tab标签的value属性，用于标识对应标签�
 ## 容易搞错的地方
 一是混淆Tab的value属性与items数组的项文本，需确保两者完全一致；二是接口请求需携带所有必填参数，例如获取文件阅读链接接口必须携带id参数，删除会话接口必须携带chatId和appId参数，缺少参数将导致接口调用失败；三是请求头的Authorization令牌格式需为Bearer加空格加令牌值，格式错误将无法通过接口验证。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/api_dataset)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/dataset/third-party/api_dataset)
 
 ## 适用性与版本范围
 

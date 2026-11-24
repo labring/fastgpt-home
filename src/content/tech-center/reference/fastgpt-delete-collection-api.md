@@ -2,7 +2,7 @@
 title: FastGPT 集合删除接口的调用方法与参数说明
 slug: /zh/reference/fastgpt-delete-collection-api
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/openapi/dataset
+source: https://doc.fastgpt.cn/openapi/dataset
 source_type: 官方文档小节
 ---
 
@@ -33,4 +33,4 @@ source_type: 官方文档小节
 - 传入的`collectionIds`需为有效的集合ID字符串数组
 - 未配置正确的Authorization令牌将无法完成接口鉴权
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/openapi/dataset)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/openapi/dataset)

@@ -2,7 +2,7 @@
 title: Run FastGPT v4.8.18 Full-Text Migration Script
 slug: /en/deploy/fastgpt-v4818-fulltext-migration-script
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4818
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/4818
 source_type: 官方文档
 ---
 
@@ -34,4 +34,4 @@ The command sends an authenticated administrative POST request to the FastGPT ba
 ## Monitor Migration Progress
 The migration process will take a measurable amount of time, with the exact duration dependent on the size of your deployed dataset. During the migration, full-text search capabilities for your FastGPT instance will be temporarily unavailable. Real-time progress updates will print to the terminal during execution, showing the total volume of data that has been successfully migrated at each interval. Once the migration finishes, the API request will return a final confirmation response indicating successful completion.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4818)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/4818)

@@ -2,7 +2,7 @@
 title: FastGPT v4.15.1及以上Pro版环境变量配置要求
 slug: /zh/reference/fastgpt-pro-env-config
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/4151
+source: https://doc.fastgpt.cn/self-host/upgrading/4-15/4151
 source_type: 官方文档小节
 ---
 
@@ -23,4 +23,4 @@ FastGPT v4.15.1版本起，Pro/Admin服务的内部接口鉴权方式更新，�
 - rootkey不再作为FastGPT主应用访问Pro/Admin内部接口的凭证，仅作为系统管理员密钥，用于调用`/api/admin/**`接口。
 - 开源版部署配置文件不会内置PRO_TOKEN，Pro部署需在私有部署环境变量中手动添加该配置。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/4151)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-15/4151)

@@ -2,7 +2,7 @@
 title: 说明FastGPT中数据集导出功能的定义、用法与异常处理
 slug: /zh/glossary/fastgpt-dataset-export-guide
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/third_dataset
+source: https://doc.fastgpt.cn/guide/dataset/third-party/third_dataset
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ export是FastGPT中用于将配置完成的数据集导出为可下载文件的�
 ## 容易搞错的地方
 一是配置第三方文档库时，遗漏根目录选择所需的`basePath`字段；二是导出数据集失败后，未通过Docker日志查看具体报错信息；三是未正确配置第三方文档库的鉴权参数，导致导出流程异常。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/third_dataset)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/dataset/third-party/third_dataset)
 
 ## 适用性与版本范围
 

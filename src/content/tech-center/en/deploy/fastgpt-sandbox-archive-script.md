@@ -2,7 +2,7 @@
 title: Archive and Clean Up Legacy FastGPT Sandboxes
 slug: /en/deploy/fastgpt-sandbox-archive-script
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41505
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/41505
 source_type: Official documentation
 ---
 
@@ -29,7 +29,7 @@ Additional request headers are required for valid authentication and content par
 ## Execution and Verification
 Before running the script, confirm that your FastGPT deployment has a properly configured S3 storage integration, as the script will transmit archived sandbox data to this storage location. If you choose to delete old sandboxes directly instead of running the archive script, no additional command is needed, though this will permanently remove all associated legacy sandbox data rather than moving it to archival storage. After executing the modified script, you can verify successful archiving via your FastGPT admin dashboard or S3 storage console to confirm that inactive sandboxes have been transferred to archival storage.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41505)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-15/41505)
 
 ## Applicability and version scope
 

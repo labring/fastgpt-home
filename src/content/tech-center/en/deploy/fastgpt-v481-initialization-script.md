@@ -2,7 +2,7 @@
 title: Run the FastGPT v4.8.1 Initialization Script
 slug: /en/deploy/fastgpt-v481-initialization-script
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/481
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/481
 source_type: 官方文档
 ---
 
@@ -37,4 +37,4 @@ curl --location --request POST 'https://{{host}}/api/admin/initv481' \
 ## Critical Usage Guidelines
 This initialization process resets database table names to resolve prior collection name inconsistencies. It does not handle existing data in the `dataset.trainings` table, so failing to clear this table prior to execution may cause unintended data loss or deployment errors. Pausing active operations ensures no concurrent database modifications interfere with the initialization workflow, preserving data integrity.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/481)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/481)

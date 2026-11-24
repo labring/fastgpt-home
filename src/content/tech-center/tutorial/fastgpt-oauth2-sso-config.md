@@ -2,7 +2,7 @@
 title: 为FastGPT配置标准OAuth2.0单点登录的完整接入参数
 slug: /zh/tutorial/fastgpt-oauth2-sso-config
 page_type: 教程/部署
-source: https://doc.fastgpt.cn/zh-CN/guide/admin/sso
+source: https://doc.fastgpt.cn/guide/admin/sso
 source_type: 官方文档小节
 ---
 
@@ -59,4 +59,4 @@ fastgpt-sso:
 ```
 需注意，`OAUTH2_USERNAME_MAP`为必填的字段映射参数，用于将第三方系统的用户名字段映射至FastGPT的用户标识。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/admin/sso)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/admin/sso)

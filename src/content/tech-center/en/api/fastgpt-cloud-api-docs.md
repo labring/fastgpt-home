@@ -2,7 +2,7 @@
 title: Access FastGPT Cloud API Official Documentation
 slug: /en/api/fastgpt-cloud-api-docs
 page_type: API
-source: https://doc.fastgpt.cn/en/openapi/intro
+source: https://doc.fastgpt.io/openapi/intro
 source_type: Official documentation
 ---
 
@@ -27,7 +27,7 @@ System OpenAPI documentation covers administrative platform operations, includin
 2. Select the appropriate API category: choose Dev API for custom end-user application integrations, or System OpenAPI for platform administration and configuration work.
 3. Navigate to the matching regional documentation URL using the provided links for your chosen category and region.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/openapi/intro)
+> Source: [FastGPT official source](https://doc.fastgpt.io/openapi/intro)
 
 ## Applicability and version scope
 

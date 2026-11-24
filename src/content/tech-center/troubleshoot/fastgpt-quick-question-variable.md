@@ -29,4 +29,4 @@ source_type: GitHub issue
 
 > 来源: [原始讨论：猜你想问的提示词编辑增加变量](https://github.com/labring/FastGPT/issues/5097)
 
-> 来源: [FastGPT 对话 OpenAPI](https://doc.fastgpt.io/en/openapi/chat)
+> 来源: [FastGPT 对话 OpenAPI](https://doc.fastgpt.io/openapi/chat)

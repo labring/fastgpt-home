@@ -2,7 +2,7 @@
 title: Key FastGPT Plugin Repository Responsibilities Explained
 slug: /en/model/fastgpt-plugin-repo-responsibilities
 page_type: Model guides
-source: https://doc.fastgpt.cn/en/plugin/intro
+source: https://doc.fastgpt.io/plugin/intro
 source_type: Official documentation
 ---
 
@@ -24,7 +24,7 @@ The following table outlines the core purpose of each repository in the FastGPT 
 ## fastgpt-plugin Repository Constraints
 The `labring/fastgpt-plugin` repository does not host any end-user plugin source code. Its supported functionality is limited to core development tooling and runtime infrastructure: it provides local plugin debugging via the integrated CLI, automated build workflows, static code checking to enforce standards, packaging of distributable plugin artifacts, and running a local plugin service server for testing. All production-ready plugin implementations must be stored in one of the dedicated plugin repositories: the official, community, or business-specific plugin repos. This separation ensures the core toolkit remains focused on development workflows rather than hosting finished plugin assets.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/plugin/intro)
+> Source: [FastGPT official source](https://doc.fastgpt.io/plugin/intro)
 
 ## Applicability and version scope
 

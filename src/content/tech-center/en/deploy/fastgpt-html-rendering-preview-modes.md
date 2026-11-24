@@ -2,7 +2,7 @@
 title: Use HTML Rendering Preview Modes in FastGPT
 slug: /en/deploy/fastgpt-html-rendering-preview-modes
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4815
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/4815
 source_type: 官方文档
 ---
 
@@ -27,4 +27,4 @@ Users interact with HTML content blocks in assistant responses via dedicated too
 ## Deployment Notes
 This feature is included natively in the 4815 FastGPT self-hosted upgrade. No additional configuration, custom environment variables, or separate setup steps are required to activate the three preview modes after completing the standard upgrade process.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4815)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/4815)

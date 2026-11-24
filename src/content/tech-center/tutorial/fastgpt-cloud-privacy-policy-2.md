@@ -2,7 +2,7 @@
 title: FastGPT云服务个人信息处理与隐私保护说明
 slug: /zh/tutorial/fastgpt-cloud-privacy-policy-2
 page_type: 教程
-source: https://doc.fastgpt.cn/zh-CN/guide/version/cloud/privacy
+source: https://doc.fastgpt.cn/guide/version/cloud/privacy
 source_type: 官方文档
 ---
 
@@ -22,7 +22,7 @@ source_type: 官方文档
 ## 合规与安全保护规则
 个人信息披露需符合以下条件：用户事先同意、法律法规要求、维护合法权益。可与关联公司、合作伙伴分享信息，并采取保密措施。安全保护措施包括加密、访问控制等技术手段，定期进行安全评估；发生信息泄露时将启动应急预案并按法律法规要求告知。收集的信息不会用于额外备份存储或模型训练。隐私政策修改后将在服务页面发布，继续使用服务视为同意修改后的政策。未成年人需在监护人指导下使用服务。服务器可能位于不同国家或地区，个人信息可能被传输至其他国家或地区存储处理以提供服务，将采取适当措施确保数据安全。如有疑问、建议或投诉，可发送邮件至[REDACTED_PRIVATE_DATA]，将尽快处理相关问题。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/version/cloud/privacy)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/version/cloud/privacy)
 
 ## 适用性与版本范围
 

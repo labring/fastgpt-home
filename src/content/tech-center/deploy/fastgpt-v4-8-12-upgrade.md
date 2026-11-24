@@ -2,7 +2,7 @@
 title: FastGPT V4.8.12版本升级操作与更新内容说明
 slug: /zh/deploy/fastgpt-v4-8-12-upgrade
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4812
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4812
 source_type: 官方文档
 ---
 
@@ -31,4 +31,4 @@ curl --location --request POST https://{{host}}/api/admin/resetMilvus \
 优化内容包括循环节点支持选择外部节点变量，Docx文件读取的HTML转Markdown逻辑优化，提升速度并降低内存消耗。
 修复的问题包括文件后缀判断逻辑、AI响应为空时的历史记录合并异常、用户交互节点未阻塞流程、新建APP时的空指针报错、多循环节点错误运行、循环变量传递失效、非stream模式下子应用响应获取失败、数据分块策略优化等。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4812)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/4812)

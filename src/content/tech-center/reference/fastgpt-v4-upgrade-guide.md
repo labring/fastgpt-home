@@ -2,7 +2,7 @@
 title: FastGPT从旧版本升级到V4.0的操作说明
 slug: /zh/reference/fastgpt-v4-upgrade-guide
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/40
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/40
 source_type: 官方文档小节
 ---
 
@@ -21,4 +21,4 @@ FastGPT从旧版本升级到V4.0时，因新版MongoDB表变更幅度较大，�
 2. 执行初始化脚本时需确保服务器拥有足够的操作权限
 3. 脚本执行过程中请勿中断，避免引发数据异常
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/40)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/40)

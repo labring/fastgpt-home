@@ -2,7 +2,7 @@
 title: FastGPT 4.12.2 New Admin Configuration Features
 slug: /en/deploy/fastgpt-4122-admin-config-features
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-12/4122
+source: https://doc.fastgpt.io/self-host/upgrading/4-12/4122
 source_type: Official documentation
 ---
 
@@ -23,7 +23,7 @@ This update adds three admin-only customization options for the team chat interf
 2. **Common Team App Shortcuts**: Administrators can configure shortcut links for frequently used team applications, which appear prominently on the chat page homepage for quick one-click access.
 3. **Disable Team Chat Homepage**: A new administrative toggle allows authorized admins to fully disable the team chat homepage, adjusting the default workspace layout to align with specific team workflow needs.
 
-> [FastGPT 4.12.2 upgrade notes](https://doc.fastgpt.cn/en/self-host/upgrading/4-12/4122)
+> [FastGPT 4.12.2 upgrade notes](https://doc.fastgpt.io/self-host/upgrading/4-12/4122)
 
 ## Applicability and version scope
 

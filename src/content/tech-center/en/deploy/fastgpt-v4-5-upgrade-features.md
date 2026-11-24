@@ -2,7 +2,7 @@
 title: FastGPT V4.5 New Features and Improvements
 slug: /en/deploy/fastgpt-v4-5-upgrade-features
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/45
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/45
 source_type: 官方文档
 ---
 
@@ -25,4 +25,4 @@ Several workflow-related improvements expand customization and control:
 ## Resolved Bug Fixes
 A critical authentication issue affecting shared links has been fixed. This update resolves cases where shared dataset or chat links failed to properly validate user access permissions, ensuring secure and consistent access to shared FastGPT resources without unexpected access denials or unauthorized viewing.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/45)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/45)

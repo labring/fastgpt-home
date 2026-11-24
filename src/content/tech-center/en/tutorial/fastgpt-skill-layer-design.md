@@ -2,7 +2,7 @@
 title: FastGPT Skill Layer Core Design Philosophy
 slug: /en/tutorial/fastgpt-skill-layer-design
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/build/skill/intro
+source: https://doc.fastgpt.io/guide/build/skill/intro
 source_type: Official documentation
 ---
 
@@ -23,7 +23,7 @@ A skill is defined as a self-contained modular package that bundles two mandator
 # Skill vs Tool Practical Distinction
 To clarify the difference between tools and skills, use a common household analogy: a tool is equivalent to a single screwdriver in a workshop, designed for one specific, simple isolated action. A skill, by contrast, is a complete furniture assembly guide, which combines step-by-step instructional context and pre-written execution code to deliver a fully completed complex workflow. When presented with a relevant task context, the AI system will automatically retrieve the appropriate skill from its stored skill library, run the embedded scripts in the secure background sandbox, and execute the full end-to-end workflow without additional manual intervention.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/skill/intro)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/skill/intro)
 
 ## Applicability and version scope
 

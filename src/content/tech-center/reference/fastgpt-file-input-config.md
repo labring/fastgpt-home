@@ -2,7 +2,7 @@
 title: FastGPT 4.8.9及以上版本文件输入功能配置使用说明
 slug: /zh/reference/fastgpt-file-input-config
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/build/general/fileInput
+source: https://doc.fastgpt.cn/guide/build/general/fileInput
 source_type: 官方文档小节
 ---
 
@@ -20,4 +20,4 @@ FastGPT 4.8.9及以上版本支持在简易模式与工作流中配置用户上�
 2. 功能适配范围仅限简易模式与工作流两种应用构建模式。
 3. 需明确文档解析与多模态文件处理的不同应用场景。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/general/fileInput)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/general/fileInput)

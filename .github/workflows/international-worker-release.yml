@@ -131,3 +131,7 @@ jobs:
           include-hidden-files: true
           retention-days: 90
           if-no-files-found: ignore
+
+      - name: Notify IndexNow for fastgpt.io
+        continue-on-error: true
+        run: node scripts/submit-indexnow.js --variant io

@@ -2,7 +2,7 @@
 title: FastGPT V4.14.6版本升级操作参考
 slug: /zh/reference/fastgpt-v4146-upgrade-reference
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4146
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/4146
 source_type: 官方文档小节
 ---
 
@@ -20,4 +20,4 @@ source_type: 官方文档小节
 2. 带有「环境变量变更」备注的版本，升级前必须完成对应环境变量的配置调整。
 3. 带有「升级脚本」备注的版本，需严格执行官方提供的升级脚本。
 4. 不宜跨大版本升级（如从4.13.x直接升级至V4.14.6）。
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4146)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-14/4146)

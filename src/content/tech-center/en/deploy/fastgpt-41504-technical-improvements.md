@@ -2,7 +2,7 @@
 title: FastGPT 4.15.04 Technical Improvement Details
 slug: /en/deploy/fastgpt-41504-technical-improvements
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41504
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/41504
 source_type: Official documentation
 ---
 
@@ -31,7 +31,7 @@ The updated local-pool system exposes the following configurable parameters for 
 | retry_backoff_policy | Logic for delayed retries of failed tasks |
 | runtime_metrics_enabled | Toggle for real-time execution performance metrics collection |
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41504)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-15/41504)
 
 ## Applicability and version scope
 

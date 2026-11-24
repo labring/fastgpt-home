@@ -2,7 +2,7 @@
 title: Configure FastGPT AI Reasoning Effort Settings
 slug: /en/tutorial/fastgpt-ai-reasoning-effort-settings
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/build/general/ai_settings
+source: https://doc.fastgpt.io/guide/build/general/ai_settings
 source_type: Official documentation
 ---
 
@@ -47,7 +47,7 @@ Some Gemini models cannot fully disable thinking, so the `none` option falls bac
 ### Claude & Anthropic Platforms
 For Anthropic Claude, AWS Bedrock Claude, and Vertex AI Claude, settings map to native `thinking` and `output_config` parameters. The following partial mapping applies: `none` uses `thinking.type=disabled`, while `minimal` uses `thinking.type=enabled` with a 1024 token budget. Full adaptive mode mappings are available via the ai-proxy compatibility guide.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/general/ai_settings)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/general/ai_settings)
 
 ## Applicability and version scope
 

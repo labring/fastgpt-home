@@ -2,7 +2,7 @@
 title: 详细介绍FastGPT自定义系统工具集的开发配置方法
 slug: /zh/tutorial/fastgpt-custom-toolset-config
 page_type: 教程/部署
-source: https://doc.fastgpt.cn/zh-CN/plugin/system-tool-development
+source: https://doc.fastgpt.cn/plugin/system-tool-development
 source_type: 官方文档小节
 ---
 
@@ -20,4 +20,4 @@ FastGPT 的系统工具集通过 `defineToolSet()` 函数实现，将共用的�
 ## 关键配置项说明
 `manifest` 中的 `pluginId` 为插件的唯一标识，`version` 为版本号，`name` 和 `description` 支持多语言配置，适配不同语言的展示需求。每个子工具的 `id` 为唯一标识，不能重复，`name` 和 `description` 同样支持多语言，`toolDescription` 用于补充说明工具的具体功能。输入和输出 schema 通过 zod 定义，并使用 `meta` 方法配置字段的标题信息，`secretSchema` 中标记 `isSecret: true` 的字段会被视为敏感信息，不会在前端明文展示。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/plugin/system-tool-development)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/plugin/system-tool-development)

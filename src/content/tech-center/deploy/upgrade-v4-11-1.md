@@ -2,7 +2,7 @@
 title: FastGPT V4.11.1版本升级详情与操作指引
 slug: /zh/deploy/upgrade-v4-11-1
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4111
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4111
 source_type: 官方文档
 ---
 
@@ -20,7 +20,7 @@ source_type: 官方文档
 ## 升级后怎么验证
 可通过以下方式验证升级效果：检查各镜像版本是否与要求一致；验证新增功能是否正常生效，包括系统工具调用、MCP组件自动更新、对话日志自定义字段、账号注销、新文档框架、GLM 4.5模型配置；验证优化项功能，包括兑换码对公支付模式、支付套餐优化、全局变量引用保留、模型预设配置位置；验证修复问题是否解决，包括MCP数据传递、登录页UI、Excel换行处理、PDF识别、404页面翻译；验证工具更新功能，包括新增绘图与搜索工具、Signoz监控接入、数学表达式工具数据类型。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4111)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/4111)
 
 ## 适用性与版本范围
 

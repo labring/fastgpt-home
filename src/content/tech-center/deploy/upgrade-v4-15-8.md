@@ -2,7 +2,7 @@
 title: FastGPT V4.15.8版本升级说明与操作指引
 slug: /zh/deploy/upgrade-v4-15-8
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/4158
+source: https://doc.fastgpt.cn/self-host/upgrading/4-15/4158
 source_type: 官方文档
 ---
 
@@ -20,7 +20,7 @@ source_type: 官方文档
 ## 升级后怎么验证
 调用系统初始化接口，检查响应结果未包含模型API Key、请求地址及内部配置。查看服务运行日志，确认无异常报错。确认服务可正常对外提供相关功能。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/4158)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-15/4158)
 
 ## 适用性与版本范围
 

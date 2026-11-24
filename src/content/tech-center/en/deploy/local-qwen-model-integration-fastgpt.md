@@ -2,7 +2,7 @@
 title: Integrate Qwen Local Model with FastGPT
 slug: /en/deploy/local-qwen-model-integration-fastgpt
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/custom-models/xinference
+source: https://doc.fastgpt.io/self-host/custom-models/xinference
 source_type: Official documentation
 ---
 
@@ -65,7 +65,7 @@ All supported parameters for the custom LLM entry are defined below, using exact
 ## Activate the Configured Model
 After saving your modified `config.json` file, restart your FastGPT service to apply the new configuration. Once the service is back online, navigate to the FastGPT application configuration panel, where you can now select the Qwen model from the list of available large language models.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/custom-models/xinference)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/custom-models/xinference)
 
 ## Applicability and version scope
 

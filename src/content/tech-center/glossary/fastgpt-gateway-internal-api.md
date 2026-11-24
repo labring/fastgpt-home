@@ -2,7 +2,7 @@
 title: 说明FastGPT网关内部HTTP API的配置与访问规则要求
 slug: /zh/glossary/fastgpt-gateway-internal-api
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/remote-debug-suite
+source: https://doc.fastgpt.cn/self-host/config/remote-debug-suite
 source_type: 官方文档
 ---
 
@@ -28,7 +28,7 @@ Gateway internal HTTP API需保持内网访问，不得直接暴露至公网。�
 ## 容易搞错的地方
 误将`/internal/*`、`/metrics`及Gateway HTTP端口直接暴露至公网，会导致内部接口被非法访问。未按4.14.9版本要求替换SANDBOX相关环境变量，会导致代码沙盒无法正常连接。未正确设置CHECK_INTERNAL_IP变量，可能无法触发内网安全校验。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/config/remote-debug-suite)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/config/remote-debug-suite)
 
 ## 适用性与版本范围
 

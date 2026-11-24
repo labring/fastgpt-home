@@ -2,7 +2,7 @@
 title: FastGPT 4.2版本QAModel配置格式变更升级说明
 slug: /zh/deploy/upgrade-v4-2
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/42
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/42
 source_type: 官方文档
 ---
 
@@ -29,7 +29,7 @@ source_type: 官方文档
 ## 升级后怎么验证
 启动FastGPT服务后，检查服务日志，确认无QAModel相关的格式错误日志。测试QA任务的执行流程，确认任务可以正常完成且使用配置中指定的模型。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/42)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/42)
 
 ## 适用性与版本范围
 

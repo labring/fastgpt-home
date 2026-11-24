@@ -2,7 +2,7 @@
 title: Run the FastGPT 4.90 Upgrade Script
 slug: /en/deploy/fastgpt-490-upgrade-script
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/490
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/490
 source_type: 官方文档
 ---
 
@@ -34,4 +34,4 @@ The upgrade script performs three specific database updates:
 3.  Modifies the `type` field across all Dataset data entries. This final update may take an extended period to process fully.
 You may observe a timeout error message at the conclusion of the script’s initial run. This timeout does not indicate failure of the ongoing update process: the database changes will continue incrementally so long as your FastGPT database remains active and connected. No further user action is required after running the initial command beyond monitoring your database performance if needed.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/490)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/490)

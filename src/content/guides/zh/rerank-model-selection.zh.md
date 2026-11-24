@@ -61,7 +61,7 @@ FastGPT 官方检索文档说明了向量、全文、混合检索与重排之间
 
 ## 参考资料
 
-- [FastGPT 模型配置](https://doc.fastgpt.cn/zh-CN/self-host/config/model/intro)
-- [FastGPT 检索原理](https://doc.fastgpt.cn/zh-CN/guide/dataset/dataset_engine)
+- [FastGPT 模型配置](https://doc.fastgpt.cn/self-host/config/model/intro)
+- [FastGPT 检索原理](https://doc.fastgpt.cn/guide/dataset/dataset_engine)
 - [FastGPT 重排失败回退实现](https://github.com/labring/FastGPT/blob/2bab5c1e06c46362f40a454d49d963e8bf0c62bc/packages/service/core/dataset/search/defaultRecall/rerank.ts)
 - [BAAI BGE Reranker v2 M3 模型卡](https://huggingface.co/BAAI/bge-reranker-v2-m3)

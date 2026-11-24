@@ -2,7 +2,7 @@
 title: Critical Bug Fixes for FastGPT 4.12.2
 slug: /en/deploy/fastgpt-4122-bug-fixes
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-12/4122
+source: https://doc.fastgpt.io/self-host/upgrading/4-12/4122
 source_type: Official documentation
 ---
 
@@ -35,7 +35,7 @@ To confirm key fixes are active post-upgrade:
 2.  For system plans: Navigate to system plans settings, fully disable all plans, and confirm no authentication error logs appear in server outputs
 3.  For workflow team app search: Open a workflow builder, search for team apps, and confirm search results load without failure.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-12/4122)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-12/4122)
 
 ## Applicability and version scope
 

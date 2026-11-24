@@ -2,7 +2,7 @@
 title: Set Up ChatGLM2-6B For FastGPT Integration
 slug: /en/deploy/chatglm2-6b-fastgpt-integration
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/custom-models/chatglm2
+source: https://doc.fastgpt.io/self-host/custom-models/chatglm2
 source_type: Official documentation
 ---
 
@@ -26,7 +26,7 @@ All use of ChatGLM2-6B model weights must adhere to the licensing terms set fort
 3. Configure FastGPT’s custom model integration settings to point to the hosted ChatGLM2-6B API endpoint, including any required authentication parameters if applicable
 4. Test the integrated setup by sending a sample chat message through the FastGPT interface to verify successful model communication
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/custom-models/chatglm2)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/custom-models/chatglm2)
 
 ## Applicability and version scope
 

@@ -3,7 +3,7 @@ title: FastGPT OpenAPI Endpoint Reference (v4.17.2)
 slug: /en/reference/openapi-endpoint-reference
 page_type: reference-data
 source_type: Official documentation
-source: https://doc.fastgpt.cn/en/openapi/app
+source: https://doc.fastgpt.io/openapi/app
 description: The 33 endpoints in the FastGPT v4.17.2 OpenAPI documentation: method, path and purpose, each checked against the route files in the open-source repository.
 language: en
 check_day: 2026-10-13
@@ -81,7 +81,7 @@ The endpoint list comes from the FastGPT v4.17.2 official OpenAPI documentation 
 
 ## Sources
 
-- [FastGPT v4.17.2 OpenAPI documentation: Apps](https://doc.fastgpt.cn/en/openapi/app)
-- [FastGPT v4.17.2 OpenAPI documentation: Chat](https://doc.fastgpt.cn/en/openapi/chat)
-- [FastGPT v4.17.2 OpenAPI documentation: Datasets](https://doc.fastgpt.cn/en/openapi/dataset)
+- [FastGPT v4.17.2 OpenAPI documentation: Apps](https://doc.fastgpt.io/openapi/app)
+- [FastGPT v4.17.2 OpenAPI documentation: Chat](https://doc.fastgpt.io/openapi/chat)
+- [FastGPT v4.17.2 OpenAPI documentation: Datasets](https://doc.fastgpt.io/openapi/dataset)
 - [FastGPT v4.17.2 API route tree](https://github.com/labring/FastGPT/tree/v4.17.2/projects/app/src/pages/api)

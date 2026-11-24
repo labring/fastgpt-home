@@ -2,7 +2,7 @@
 title: 通过Docker安装Ollama并配置FastGPT可正常访问的服务
 slug: /zh/deploy/deploy-ollama-docker-fastgpt
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/custom-models/ollama
+source: https://doc.fastgpt.cn/self-host/custom-models/ollama
 source_type: 官方文档
 ---
 
@@ -22,7 +22,7 @@ docker run --rm -d --name ollama --network （你的 Fastgpt 容器所在网络�
 
 本次部署涉及的核心配置参数包括固定的容器名称ollama、默认映射端口11434、官方镜像源ollama/ollama。当FastGPT采用Docker部署时，需将命令中的`（你的 Fastgpt 容器所在网络）`替换为实际的FastGPT容器所属网络名称，以确保两个服务间的正常通信。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/ollama)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/custom-models/ollama)
 
 ## 适用性与版本范围
 

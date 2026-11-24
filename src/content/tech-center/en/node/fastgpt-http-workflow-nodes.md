@@ -2,7 +2,7 @@
 title: Configure and use FastGPT HTTP workflow nodes
 slug: /en/node/fastgpt-http-workflow-nodes
 page_type: Workflow nodes
-source: https://doc.fastgpt.cn/en/guide/build/workflow/nodes/http
+source: https://doc.fastgpt.io/guide/build/workflow/nodes/http
 source_type: Official documentation
 ---
 
@@ -31,7 +31,7 @@ Variables used in these fields are limited to three approved inputs: global work
 5. Connect upstream workflow nodes to the HTTP node to pass their output data as variables, or use preconfigured global or system variables directly in the configuration fields.
 6. Validate the configured HTTP node by running a test execution of the workflow to confirm the request sends correctly and returns expected data.
 
-> [FastGPT public documentation](https://doc.fastgpt.cn/en/guide/build/workflow/nodes/http)
+> [FastGPT public documentation](https://doc.fastgpt.io/guide/build/workflow/nodes/http)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: Migrate FastGPT Agent Sandbox Data for 4.16.0
 slug: /en/deploy/fastgpt-4160-agent-sandbox-migration
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-16/4160
+source: https://doc.fastgpt.io/self-host/upgrading/4-16/4160
 source_type: 官方文档
 ---
 
@@ -44,4 +44,4 @@ For dry run responses, focus on `normalization.pendingCount`: this value must be
 
 For full migration responses, first confirm `normalization.pendingCount` is 0 and `normalizationBlocked` is `false`, then verify `failedCount` is 0. If all three conditions are met, all non-skipped sandboxes have been successfully migrated. A `failedCount` greater than 0 indicates formal migration failures, which can be inspected via the `failures` response field.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/4-16/4160)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/4-16/4160)

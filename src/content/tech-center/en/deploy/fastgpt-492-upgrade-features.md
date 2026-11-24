@@ -2,7 +2,7 @@
 title: FastGPT 492 Self-Hosted New Feature Details
 slug: /en/deploy/fastgpt-492-upgrade-features
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/492
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/492
 source_type: 官方文档
 ---
 
@@ -23,4 +23,4 @@ The team member management system has been overhauled: support for mainstream IM
 |----------------------|----------|---------|
 | OCEANBASE_URL        | Yes      | Connection string for the OceanBase vector database, enables the integration when set |
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/492)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/492)

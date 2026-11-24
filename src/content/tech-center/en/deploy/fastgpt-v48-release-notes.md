@@ -2,7 +2,7 @@
 title: FastGPT V4.8 Feature Updates and Fixes
 slug: /en/deploy/fastgpt-v48-release-notes
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/48
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/48
 source_type: 官方文档
 ---
 
@@ -51,4 +51,4 @@ All reported issues from the pre-release cycle have been addressed:
 - Fixed tool calling field compatibility issues (resolved issue #1253)
 - Fixed HTTP node URL cursor positioning bug (resolved issue #1334, contributed by @maquannene)
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/48)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/48)

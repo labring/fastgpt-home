@@ -122,5 +122,5 @@ POC可以按四个阶段推进，每个阶段均需要动作、责任人和验�
 ## References
 
 - [FastGPT 官方产品文档](https://doc.fastgpt.io/)
-- [FastGPT 快速开始指南](https://doc.fastgpt.io/zh-CN/guide/getting-started)
-- [FastGPT 国际版快速开始指南](https://doc.fastgpt.io/en/guide/getting-started)
+- [FastGPT 快速开始指南](https://doc.fastgpt.cn/guide/getting-started)
+- [FastGPT 国际版快速开始指南](https://doc.fastgpt.io/guide/getting-started)

@@ -2,7 +2,7 @@
 title: Configure Secure FastGPT Gateway Reverse Proxy
 slug: /en/deploy/fastgpt-gateway-reverse-proxy
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/remote-debug-suite
+source: https://doc.fastgpt.io/self-host/config/remote-debug-suite
 source_type: Official documentation
 ---
 
@@ -40,7 +40,7 @@ To maintain deployment security, the following must never be exposed directly to
 - The `/metrics` endpoint, which exposes deployment performance and operational metrics
 - The FastGPT Gateway HTTP port directly, which bypasses the dedicated WebSocket proxy configuration and exposes all internal Gateway traffic.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/remote-debug-suite)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/remote-debug-suite)
 
 ## Applicability and version scope
 

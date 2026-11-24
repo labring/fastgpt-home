@@ -2,7 +2,7 @@
 title: 介绍FastGPT知识库导入CSV与Excel模板的使用规范
 slug: /zh/glossary/fastgpt-kb-import-template
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/template
+source: https://doc.fastgpt.cn/guide/dataset/template
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ FastGPT知识库导入模板是用于批量导入知识库数据的CSV或.xlsx�
 ## 容易搞错的地方
 容易出现的错误包括：使用.xls格式的Excel文件，无法被系统识别；文件包含多个工作表，不符合导入要求；存在合并单元格，导致格式校验失败；未将第一行设置为规定的模板表头，或缺失必要字段。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/dataset/template)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/dataset/template)
 
 ## 适用性与版本范围
 

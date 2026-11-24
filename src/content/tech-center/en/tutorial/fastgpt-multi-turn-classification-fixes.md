@@ -2,7 +2,7 @@
 title: Fix Multi-Turn Question Classification Accuracy Issues
 slug: /en/tutorial/fastgpt-multi-turn-classification-fixes
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/build/faq
+source: https://doc.fastgpt.io/guide/build/faq
 source_type: Official documentation
 ---
 
@@ -26,7 +26,7 @@ This structured workflow addresses reduced accuracy for unrelated sequential que
 ## Accuracy Validation Testing
 To formally evaluate classification performance, users can build batch test scripts to systematically assess question classification accuracy across diverse query sequences, including both related and unrelated consecutive questions. This testing enables identification of edge cases where the mitigation workflow may need refinement to align with specific use case requirements.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/faq)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/faq)
 
 ## Applicability and version scope
 

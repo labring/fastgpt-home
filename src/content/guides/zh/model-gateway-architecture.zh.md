@@ -60,6 +60,6 @@ FastGPT 模型配置中的字段使用 `requestUrl` 与 `requestAuth`。配置�
 
 ## 参考资料
 
-- [FastGPT 模型配置与 OneAPI 迁移](https://doc.fastgpt.cn/zh-CN/self-host/config/model/intro)
+- [FastGPT 模型配置与 OneAPI 迁移](https://doc.fastgpt.cn/self-host/config/model/intro)
 - [AIProxy 官方仓库](https://github.com/labring/aiproxy)
 - [FastGPT embedding 请求实现](https://github.com/labring/FastGPT/blob/2bab5c1e06c46362f40a454d49d963e8bf0c62bc/packages/service/core/ai/embedding/index.ts)

@@ -2,7 +2,7 @@
 title: FastGPT V4.15.4版本环境变量变更的升级处理指南
 slug: /zh/reference/fastgpt-v4154-env-upgrade
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/4154
+source: https://doc.fastgpt.cn/self-host/upgrading/4-15/4154
 source_type: 官方文档小节
 ---
 
@@ -21,4 +21,4 @@ FastGPT V4.15.4版本属于4.15.x系列升级版本，本次更新核心调整�
 2. 未完成环境变量调整的情况下启动服务，可能出现无法正常初始化的问题
 3. 升级前需确认当前部署环境与V4.15.4版本的兼容性，避免出现配置不匹配的情况
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/4154)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-15/4154)

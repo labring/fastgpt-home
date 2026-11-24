@@ -124,4 +124,4 @@ team.teamMemberOverSize、user.unAuthRole 这两个名字出现在枚举定义�
 ## 参考资料
 
 - [FastGPT 开源仓库](https://github.com/labring/FastGPT)
-- [FastGPT 部署与配置文档](https://doc.fastgpt.cn/zh-CN/self-host)
+- [FastGPT 部署与配置文档](https://doc.fastgpt.cn/self-host)

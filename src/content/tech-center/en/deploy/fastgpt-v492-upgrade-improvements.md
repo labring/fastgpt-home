@@ -2,7 +2,7 @@
 title: Key FastGPT v492 Version Upgrade Improvements
 slug: /en/deploy/fastgpt-v492-upgrade-improvements
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/492
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/492
 source_type: 官方文档
 ---
 
@@ -37,4 +37,4 @@ Minor adjustments were made to the document chunking algorithm to improve conten
 | Code block handling | Uses the LLM model’s context window as the chunk size to better preserve full code block integrity |
 | Table handling | Uses the LLM model’s context window as the chunk size to maintain complete table structure during splitting |
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/492)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/492)

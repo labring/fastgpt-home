@@ -2,7 +2,7 @@
 title: 说明FastGPT第三方与开放API的调用方法
 slug: /zh/glossary/fastgpt-api-usage-guide
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/api_dataset
+source: https://doc.fastgpt.cn/guide/dataset/third-party/api_dataset
 source_type: 官方文档
 ---
 
@@ -22,7 +22,7 @@ FastGPT的第三方API与开放API支持自动化调用数据集文件访问、�
 3. 删除单个会话接口的`chatId`与`appId`需匹配对应会话与应用，参数不匹配将无法执行删除操作。
 4. 请求地址中的`{{baseURL}}`、`[chatId]`、`[appId]`、`[apikey]`等占位符需替换为实际部署或获取的值，否则请求无效。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/api_dataset)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/dataset/third-party/api_dataset)
 
 ## 适用性与版本范围
 

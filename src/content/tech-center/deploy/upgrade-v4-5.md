@@ -2,7 +2,7 @@
 title: FastGPT V4.5版本升级操作与功能说明
 slug: /zh/deploy/upgrade-v4-5
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/45
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/45
 source_type: 官方文档
 ---
 
@@ -53,7 +53,7 @@ CREATE INDEX CONCURRENTLY vector_index ON modeldata USING hnsw (vector vector_ip
 2. 索引状态验证：执行 `\d modeldata` 命令，若结果中显示 `"vector_index" hnsw (vector vector_ip_ops) WITH (m='16', ef_construction='64')` 且无 INVALID 后缀，则索引构建完成。
 3. 功能验证：测试知识库搜索速度，确认 AI 对话模块【返回 AI 内容】选项、问题分类选择模型功能正常，分享链接鉴权功能正常。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/45)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/45)
 
 ## 适用性与版本范围
 

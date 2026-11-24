@@ -2,7 +2,7 @@
 title: FastGPT v497 Detailed Bug Fix Summary
 slug: /en/deploy/fastgpt-v497-bug-fixes
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/497
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/497
 source_type: 官方文档
 ---
 
@@ -37,4 +37,4 @@ This section covers workflow, LLM, and data node improvements, including a valid
 6.  Resolved a share link bug where nested applications would forcibly return citation content unexpectedly.
 7.  Fixed app list permission configuration that previously caused index refresh issues.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/497)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/497)

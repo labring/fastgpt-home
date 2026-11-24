@@ -6,7 +6,7 @@ source: https://fastgpt.cn/api/fastgpt-chat-api-guide
 source_type: 深度场景内容
 meta_title: 系统集成接口核对入口
 meta_description: 把 FastGPT 与企业已有系统的接口集成拆成接口清单、凭据归属、调用身份与配额四条核对入口，逐项给出配置位置、核对动作、失败表现与升级影响范围。
-delivery_metadata: {"source_front_matter":{"slug":"system-integration-interface-hub","meta_title":"系统集成接口核对入口","meta_description":"把 FastGPT 与企业已有系统的接口集成拆成接口清单、凭据归属、调用身份与配额四条核对入口，逐项给出配置位置、核对动作、失败表现与升级影响范围。","language":"zh","content_type":"aggregation","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"system-integration-interface-hub","keywords":"接口集成,凭据管理,调用身份,配额,升级影响","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"已有系统接 FastGPT 时从哪几个入口核接口","需求依据":"客户 2026-11-07 购买诉求第 3 条（尚）：接入已有模型和业务系统，关注 API 对接与工具调用。","事实来源":"FastGPT 产品知识库·内容收集清单；官方更新说明 4.17.0 至 4.17.3","内链":"https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173","排期":"W18 聚合导航第 4 篇","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（来源版本，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核接口字段与配额规则。"]}
+delivery_metadata: {"source_front_matter":{"slug":"system-integration-interface-hub","meta_title":"系统集成接口核对入口","meta_description":"把 FastGPT 与企业已有系统的接口集成拆成接口清单、凭据归属、调用身份与配额四条核对入口，逐项给出配置位置、核对动作、失败表现与升级影响范围。","language":"zh","content_type":"aggregation","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"system-integration-interface-hub","keywords":"接口集成,凭据管理,调用身份,配额,升级影响","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"已有系统接 FastGPT 时从哪几个入口核接口","需求依据":"客户 2026-11-07 购买诉求第 3 条（尚）：接入已有模型和业务系统，关注 API 对接与工具调用。","事实来源":"FastGPT 产品知识库·内容收集清单；官方更新说明 4.17.0 至 4.17.3","内链":"https://doc.fastgpt.cn/self-host/upgrading/4-17/4173","排期":"W18 聚合导航第 4 篇","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（来源版本，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核接口字段与配额规则。"]}
 keywords: 接口集成,凭据管理,调用身份,配额,升级影响
 schema_type: Article
 date_modified: 2026-11-16
@@ -34,7 +34,7 @@ date_modified: 2026-11-16
 
 ## 入口三：调用身份
 
-入口：[FastGPT 权限说明](https://doc.fastgpt.cn/zh-CN/guide/dataset/collection_permission)。
+入口：[FastGPT 权限说明](https://doc.fastgpt.cn/guide/dataset/collection_permission)。
 
 位置在接口鉴权与日志。以服务账号调用，日志只记到服务账号；以用户身份调用，日志能追到人。两种做法各有代价：前者实现简单，后者审计完整。
 
@@ -42,7 +42,7 @@ date_modified: 2026-11-16
 
 ## 入口四：配额与限流
 
-入口：[FastGPT 更新说明](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173)。
+入口：[FastGPT 更新说明](https://doc.fastgpt.cn/self-host/upgrading/4-17/4173)。
 
 位置在团队配额与调用记录。MCP 应用工具调用与外部渠道消息统一纳入团队每分钟请求数限制，超限返回额度与重试等待时间，外部渠道消息去重后计数。通用分页参数超过上限按上限处理，分页取数脚本要据此调整。
 
@@ -61,5 +61,5 @@ date_modified: 2026-11-16
 | 主题 | 版本 | 来源 |
 | --- | --- | --- |
 | 模型与渠道支持、插件机制、接口衔接 | 当期商业方案 | [FastGPT 商务咨询：授权、部署与支持范围](https://fastgpt.cn/contact) |
-| CSRF 防御 | v4.17.0 | [self-host/upgrading/4-17/4170](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4170) |
-| 分页上限、导出范围、MCP 配额 | v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173) |
+| CSRF 防御 | v4.17.0 | [self-host/upgrading/4-17/4170](https://doc.fastgpt.cn/self-host/upgrading/4-17/4170) |
+| 分页上限、导出范围、MCP 配额 | v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/self-host/upgrading/4-17/4173) |

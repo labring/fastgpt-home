@@ -2,7 +2,7 @@
 title: Configure Agent Sandbox Package Registry Mirrors
 slug: /en/deploy/agent-sandbox-package-registry-mirrors
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41506
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/41506
 source_type: Official documentation
 ---
 
@@ -23,7 +23,7 @@ Each variable accepts a valid, fully qualified registry URL. If left unset, the 
 ## Configuration Caching Logic
 The Agent Sandbox tracks registry mirror configurations using a content hash of the values provided in the supported environment variables. This caching mechanism ensures that only when the actual registry URL values change will FastGPT rewrite the mirror configuration files within the sandbox. For existing sandboxes that are restarted or reinitialized without updates to the registry mirror variables, no changes to the sandbox’s package manager config files will be made. This reduces unnecessary file system operations and speeds up sandbox startup times for unchanged deployments.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41506)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-15/41506)
 
 ## Applicability and version scope
 

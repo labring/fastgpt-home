@@ -2,7 +2,7 @@
 title: 说明FastGPT中Type类型定义的两种场景与配置规则
 slug: /zh/glossary/fastgpt-type-definition-scenarios
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/third_dataset
+source: https://doc.fastgpt.cn/guide/dataset/third-party/third_dataset
 source_type: 官方文档
 ---
 
@@ -25,7 +25,7 @@ export type YuqueServer = {
 ## 容易搞错的地方
 易混淆两种场景下Type的定义位置与用途，例如将第三方文档库的类型定义写入模型预设的type.ts文件中，导致类型校验失败。另外，在第三方文档库配置中，易混淆参数的必填与可选属性，例如将`token`标记为必填字段，增加用户配置成本；在模型预设场景中，易错误配置目录结构，导致供应商列表无法正常加载。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/third_dataset)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/dataset/third-party/third_dataset)
 
 ## 适用性与版本范围
 

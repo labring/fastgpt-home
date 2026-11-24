@@ -2,7 +2,7 @@
 title: Troubleshoot FastGPT Local and Remote Database Failures
 slug: /en/deploy/fastgpt-database-connection-troubleshooting
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/dev
+source: https://doc.fastgpt.io/self-host/dev
 source_type: Official documentation
 ---
 
@@ -27,7 +27,7 @@ Use supported tools to validate database connections prior to deploying FastGPT:
 | PostgreSQL    | `navicat`        |
 These tools provide visual connection testing and database management capabilities, allowing you to identify configuration mistakes before they disrupt FastGPT functionality.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/dev)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/dev)
 
 ## Applicability and version scope
 

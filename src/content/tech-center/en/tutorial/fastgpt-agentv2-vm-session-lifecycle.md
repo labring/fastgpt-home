@@ -2,7 +2,7 @@
 title: FastGPT Agent V2 VM Session Isolation and Lifecycle
 slug: /en/tutorial/fastgpt-agentv2-vm-session-lifecycle
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/build/agentv2/vm
+source: https://doc.fastgpt.io/guide/build/agentv2/vm
 source_type: Official documentation
 ---
 
@@ -20,7 +20,7 @@ The idle timeout period is fully configurable to align with specific operational
 |----------------|---------------|-------------|
 | Session Idle Timeout | A few minutes | Maximum duration a virtual machine container can remain inactive prior to automatic destruction and resource reclamation |
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/agentv2/vm)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/agentv2/vm)
 
 ## Applicability and version scope
 

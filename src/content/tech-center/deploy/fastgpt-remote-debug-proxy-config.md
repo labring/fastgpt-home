@@ -2,7 +2,7 @@
 title: 为FastGPT远程调试套件配置安全的反向代理访问规则
 slug: /zh/deploy/fastgpt-remote-debug-proxy-config
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/remote-debug-suite
+source: https://doc.fastgpt.cn/self-host/config/remote-debug-suite
 source_type: 官方文档
 ---
 
@@ -29,8 +29,8 @@ location /connection-gateway/v1 {
 
 系统插件远程调试功能套件仅商业版支持，仅适用于系统插件开发、联调和验收，不适合作为生产插件运行时。自部署该套件需额外维护Plugin Server、Connection Gateway、Redis、反向代理、TLS和密钥轮换，运维成本较高，优先推荐使用FastGPT云服务版本的远程调试能力。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/config/remote-debug-suite)
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/config/remote-debug-suite)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/config/remote-debug-suite)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/config/remote-debug-suite)
 
 ## 适用性与版本范围
 

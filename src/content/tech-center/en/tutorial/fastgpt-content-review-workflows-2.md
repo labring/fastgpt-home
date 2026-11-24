@@ -2,7 +2,7 @@
 title: Build Standardized Content Review and Rewriting Workflows
 slug: /en/tutorial/fastgpt-content-review-workflows-2
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/getting-started/quick-start
+source: https://doc.fastgpt.io/guide/getting-started/quick-start
 source_type: Official documentation
 ---
 
@@ -26,7 +26,7 @@ Follow this structured process to deploy the content review and rewriting workfl
 4. Enable user confirmation triggers for the sensitive/rewritable gray-area branch to retain mandatory human oversight.
 5. Test the workflow with sample content across all target use cases to validate processing logic and compliance outcomes.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/getting-started/quick-start)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/getting-started/quick-start)
 
 ## Applicability and version scope
 

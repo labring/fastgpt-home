@@ -2,7 +2,7 @@
 title: FastGPT团队邀请链接的创建与使用完整操作说明
 slug: /zh/tutorial/fastgpt-team-invite-link
 page_type: 教程
-source: https://doc.fastgpt.cn/zh-CN/guide/workspace/team/invitation_link
+source: https://doc.fastgpt.cn/guide/workspace/team/invitation_link
 source_type: 官方文档
 ---
 
@@ -23,7 +23,7 @@ source_type: 官方文档
 ## 受邀人员访问流程
 受邀人员访问邀请链接后，若未登录或未注册FastGPT账号，将自动跳转至登录页面完成登录。登录成功后，进入团队邀请处理页面，可选择接受邀请加入对应团队，或选择忽略邀请。选择忽略后，再次访问该邀请链接仍可重新选择是否加入团队。标准邀请链接格式为`fastgpt.cn/account/team?invitelinkid=xxxx`。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/workspace/team/invitation_link)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/workspace/team/invitation_link)
 
 ## 适用性与版本范围
 

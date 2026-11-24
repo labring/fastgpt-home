@@ -2,7 +2,7 @@
 title: 说明FastGPT平台中应用ID（appId）的配置与调用方法
 slug: /zh/glossary/fastgpt-appid-configuration-usage
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/guide/build/publish/openapi
+source: https://doc.fastgpt.cn/guide/build/publish/openapi
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ appId是FastGPT平台中用于标识单个应用的唯一身份标识，用于�
 ## 容易搞错的地方
 一是混淆appId与apiKey的使用逻辑，错误将apiKey直接作为appId传递。二是在仅支持密钥配置的第三方场景中，未使用apiKey-appId的兼容格式，导致配置无法生效。三是接口调用时遗漏appId参数，导致请求无法匹配对应应用，无法完成预期操作。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/publish/openapi)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/publish/openapi)
 
 ## 适用性与版本范围
 

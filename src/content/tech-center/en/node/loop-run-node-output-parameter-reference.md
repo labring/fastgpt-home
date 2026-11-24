@@ -2,7 +2,7 @@
 title: Loop Run Node Output Parameter Reference
 slug: /en/node/loop-run-node-output-parameter-reference
 page_type: Workflow nodes
-source: https://doc.fastgpt.cn/en/guide/build/workflow/nodes/loop_run
+source: https://doc.fastgpt.io/guide/build/workflow/nodes/loop_run
 source_type: Official documentation
 ---
 
@@ -22,7 +22,7 @@ This documentation details the official output parameters and custom output conf
 3. Bind the entered variable name to a variable reference from an internal node within the workflow loop.
 4. Save the updated node configuration. Once the loop run node finishes running, either after completing the final iteration or terminating early, it will emit the configured custom output values and any generated error text.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/workflow/nodes/loop_run)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/workflow/nodes/loop_run)
 
 ## Applicability and version scope
 

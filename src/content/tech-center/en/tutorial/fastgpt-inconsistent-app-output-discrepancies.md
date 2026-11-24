@@ -2,7 +2,7 @@
 title: Resolve Inconsistent FastGPT App Output Discrepancies
 slug: /en/tutorial/fastgpt-inconsistent-app-output-discrepancies
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/build/faq
+source: https://doc.fastgpt.io/guide/build/faq
 source_type: Official documentation
 ---
 
@@ -20,7 +20,7 @@ To identify and resolve inconsistent results, follow this structured workflow:
 ## Dataset Response Prompt Configuration
 FastGPT’s dataset response behavior is governed by prompt settings. If no custom prompt is defined for a dataset’s response configuration, the system automatically uses a default prompt that includes explicit Markdown formatting instructions. Inconsistent outputs can arise if custom prompts are enabled in one environment (such as debug mode) but disabled in another (such as production), or if different custom prompts are used across environments. Ensuring that dataset prompt configurations are consistent across all deployment and invocation methods will eliminate this specific source of output variation.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/faq)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/faq)
 
 ## Applicability and version scope
 

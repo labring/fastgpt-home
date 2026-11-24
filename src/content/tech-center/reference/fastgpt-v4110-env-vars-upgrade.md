@@ -2,7 +2,7 @@
 title: FastGPT V4.11.0版本环境变量变更的升级处理方法
 slug: /zh/reference/fastgpt-v4110-env-vars-upgrade
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4110
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4110
 source_type: 官方文档小节
 ---
 
@@ -24,4 +24,4 @@ FastGPT V4.11.0版本存在环境变量配置变更，从低于V4.12.0的版本�
 3. 升级后需检查服务日志，确认环境变量加载正常
 4. 请勿跳过环境变量适配步骤直接升级，否则会触发启动错误
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4110)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/4110)

@@ -2,7 +2,7 @@
 title: Update FastGPT Application Images on Sealos
 slug: /en/deploy/fastgpt-sealos-image-update
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/upgrade-instruction
+source: https://doc.fastgpt.io/self-host/upgrading/upgrade-instruction
 source_type: 官方文档
 ---
 
@@ -23,4 +23,4 @@ Follow these structured steps to update your FastGPT application:
 ### Modifying Configuration Files During Update
 If you need to adjust your FastGPT application configuration as part of the update process, wait to confirm changes until you have modified the required settings. Scroll down within the update modal to the `Configuration File` section, make any necessary adjustments to the configuration content directly in this section, then proceed to confirm your changes to apply both the image update and configuration modifications. A reference screenshot showing the Configuration File section within the update modal is available for reference.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/upgrade-instruction)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/upgrade-instruction)

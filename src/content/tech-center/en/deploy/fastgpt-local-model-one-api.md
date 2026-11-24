@@ -2,7 +2,7 @@
 title: Integrate Local Models For FastGPT Via One API
 slug: /en/deploy/fastgpt-local-model-one-api
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/custom-models/xinference
+source: https://doc.fastgpt.io/self-host/custom-models/xinference
 source_type: Official documentation
 ---
 
@@ -33,7 +33,7 @@ Important parameter notes:
 - Replace `[oneapi_token]` with your valid One API authentication token.
 - The `model` field in the request JSON must exactly match the custom model name you entered when creating the One API channel. This ensures One API routes the request to the correct Xinference model.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/custom-models/xinference)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/custom-models/xinference)
 
 ## Applicability and version scope
 

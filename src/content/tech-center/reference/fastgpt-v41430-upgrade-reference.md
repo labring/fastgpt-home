@@ -2,7 +2,7 @@
 title: FastGPT V4.14.30版本升级操作参考速查
 slug: /zh/reference/fastgpt-v41430-upgrade-reference
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41930
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/41930
 source_type: 官方文档小节
 ---
 
@@ -24,4 +24,4 @@ source_type: 官方文档小节
 4. 已弃用的V4.14.25版本不建议使用
 5. 升级过程中可参考故障排查相关文档处理异常情况
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41930)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-14/41930)

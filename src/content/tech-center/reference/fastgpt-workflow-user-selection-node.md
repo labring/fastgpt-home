@@ -2,7 +2,7 @@
 title: FastGPT工作流用户选择节点的使用方法说明
 slug: /zh/reference/fastgpt-workflow-user-selection-node
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/user-selection
+source: https://doc.fastgpt.cn/guide/build/workflow/nodes/user-selection
 source_type: 官方文档小节
 ---
 
@@ -19,4 +19,4 @@ source_type: 官方文档小节
 ## 注意事项
 该节点属于交互类工作流节点，仅可用于需要用户输入的场景。使用时需确保工作流的后续链路匹配用户选择后的分支逻辑，避免出现执行异常。该节点无法在无用户交互的自动化工作流中生效。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/user-selection)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/workflow/nodes/user-selection)

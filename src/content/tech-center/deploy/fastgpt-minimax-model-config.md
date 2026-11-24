@@ -2,7 +2,7 @@
 title: 在FastGPT自部署环境中配置MiniMax大语言模型API接入
 slug: /zh/deploy/fastgpt-minimax-model-config
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/model/minimax
+source: https://doc.fastgpt.cn/self-host/config/model/minimax
 source_type: 官方文档
 ---
 
@@ -21,4 +21,4 @@ MiniMax是提供高性能大语言模型API服务的厂商，其API兼容OpenAI�
 
 完成上述配置后，该MiniMax模型渠道即可正式投入使用，可在FastGPT的各类应用流程中调用该模型完成相关任务。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/model/minimax)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/config/model/minimax)

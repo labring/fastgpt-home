@@ -2,7 +2,7 @@
 title: Complete Required FastGPT Commercial Edition Initialization
 slug: /en/deploy/fastgpt-commercial-edition-initialization
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/468
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/468
 source_type: 官方文档
 ---
 
@@ -31,4 +31,4 @@ The target API endpoint is `/api/init/v468`, which specifies the commercial edit
 ## Post-Initialization Behavior
 Upon successful execution of the command, the FastGPT commercial billing system will be fully initialized. For internal-only FastGPT deployments, you may adjust the free storage quota to meet your team's needs without external billing configuration.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/468)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/468)

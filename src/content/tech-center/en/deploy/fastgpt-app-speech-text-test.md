@@ -2,7 +2,7 @@
 title: Configure and Test Speech-to-Text in FastGPT Apps
 slug: /en/deploy/fastgpt-app-speech-text-test
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/model/siliconCloud
+source: https://doc.fastgpt.io/self-host/config/model/siliconCloud
 source_type: Official documentation
 ---
 
@@ -26,7 +26,7 @@ Two screenshots illustrate the active voice input state and post-capture interfa
 ## Validate Transcription Output
 Once the speech capture process finishes, the fully transcribed text will automatically populate the chat input box. Users may review the transcribed text, make minor adjustments if needed, then send the message to the FastGPT chatbot using standard input workflows. This integrated voice input feature provides a hands-free alternative to typed text interactions within the FastGPT app.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/model/siliconCloud)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/model/siliconCloud)
 
 ## Applicability and version scope
 

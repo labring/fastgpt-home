@@ -2,7 +2,7 @@
 title: Configure Parallel Task Execution in FastGPT Workflows
 slug: /en/node/parallel-run-node-parameters
 page_type: Workflow nodes
-source: https://doc.fastgpt.cn/en/guide/build/workflow/nodes/parallel_run
+source: https://doc.fastgpt.io/guide/build/workflow/nodes/parallel_run
 source_type: Official documentation
 ---
 
@@ -25,7 +25,7 @@ The Execution Logic parameter defines the core task run for each array item. Thi
 - Max concurrency ranges from a minimum of 1 up to a deployment-defined upper limit (default 10)
 - Max retries per task ranges from 0 (no automatic retries for failed tasks) to a maximum of 5 total attempts per failed task
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/workflow/nodes/parallel_run)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/workflow/nodes/parallel_run)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: FastGPT从旧版本升级至V4.3的完整操作指南
 slug: /zh/reference/fastgpt-upgrade-v43
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/43
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/43
 source_type: 官方文档小节
 ---
 
@@ -23,4 +23,4 @@ FastGPT从旧版本升级到V4.3需处理两项核心调整：环境变量变更
 2.  V4.3存在环境变量变更，原有配置可能失效，需提前核对变更内容
 3.  执行升级脚本前需确认部署环境拥有足够的操作权限，避免执行失败
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/43)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/43)

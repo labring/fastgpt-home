@@ -2,7 +2,7 @@
 title: 为FastGPT自部署环境配置系统插件远程调试功能
 slug: /zh/deploy/fastgpt-self-host-plugin-debug-suite
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/remote-debug-suite
+source: https://doc.fastgpt.cn/self-host/config/remote-debug-suite
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ source_type: 官方文档
 2. 检查默认Docker Compose部署脚本的现有配置，确认未包含Connection Gateway的公网WebSocket接入相关配置项。
 3. 额外部署Plugin Server、Connection Gateway、Redis三个核心组件，并完成反向代理、TLS证书配置与密钥轮换规则的设置。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/config/remote-debug-suite)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/config/remote-debug-suite)
 
 ## 适用性与版本范围
 

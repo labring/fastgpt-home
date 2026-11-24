@@ -2,7 +2,7 @@
 title: Manage System and Team Plugin Copies
 slug: /en/model/system-team-plugin-copies
 page_type: Model guides
-source: https://doc.fastgpt.cn/en/plugin/team-installation
+source: https://doc.fastgpt.io/plugin/team-installation
 source_type: Official documentation
 ---
 
@@ -25,7 +25,7 @@ Follow these standardized steps to manage dual plugin installations per platform
 3. Document any version or configuration discrepancies between system and team copies to align with internal conventions.
 4. Remove a team-level plugin copy only after verifying no active Workflows or Agents are assigned to it; deletion will not impact the system-level copy.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/plugin/team-installation)
+> Source: [FastGPT official source](https://doc.fastgpt.io/plugin/team-installation)
 
 ## Applicability and version scope
 

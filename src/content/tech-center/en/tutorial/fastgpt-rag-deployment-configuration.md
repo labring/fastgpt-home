@@ -2,7 +2,7 @@
 title: Optimize and Configure FastGPT RAG Deployments
 slug: /en/tutorial/fastgpt-rag-deployment-configuration
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/dataset/rag
+source: https://doc.fastgpt.io/guide/dataset/rag
 source_type: Official documentation
 ---
 
@@ -27,7 +27,7 @@ FastGPT RAG deployments face three core documented challenges: inconsistent data
 ## Future RAG Expansion Paths
 FastGPT RAG has demonstrated strong potential in intelligent Q&A, information retrieval, and text generation, with ongoing expansion into multimodal generation and enterprise decision support. Through hybrid retrieval techniques, knowledge graph integration, and dynamic feedback mechanisms, the framework can flexibly address complex user needs, generating factually grounded and logically coherent answers. Going forward, FastGPT RAG will further improve trustworthiness and practicality in specialized domains through enhanced model transparency and controllability, supporting broader use cases for intelligent information retrieval and content generation.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/rag)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/rag)
 
 ## Applicability and version scope
 

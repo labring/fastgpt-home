@@ -2,7 +2,7 @@
 title: FastGPT V4.15.2版本环境变量变更相关说明
 slug: /zh/reference/fastgpt-v4152-env-changes
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/4152
+source: https://doc.fastgpt.cn/self-host/upgrading/4-15/4152
 source_type: 官方文档小节
 ---
 
@@ -21,4 +21,4 @@ FastGPT V4.15.2版本存在环境变量变更，自部署用户升级至该版�
 2. 4.15.x系列的其他版本（如V4.15.1、V4.15.0等）也存在环境变量变更，需分别核对对应版本的说明。
 3. 部分4.15.x低版本升级可使用官方提供的升级脚本完成配置迁移。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/4152)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-15/4152)

@@ -2,7 +2,7 @@
 title: FastGPT Plugin Repository Structure and Dependency Rules
 slug: /en/model/fastgpt-plugin-repo-structure-2
 page_type: Model guides
-source: https://doc.fastgpt.cn/en/plugin/intro
+source: https://doc.fastgpt.io/plugin/intro
 source_type: Official documentation
 ---
 
@@ -53,7 +53,7 @@ The `apps/cli` directory provides a dedicated command line interface for plugin 
 
 Additional guidance is available for system tool development and model presets.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/plugin/intro)
+> Source: [FastGPT official source](https://doc.fastgpt.io/plugin/intro)
 
 ## Applicability and version scope
 

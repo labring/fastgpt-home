@@ -86,8 +86,8 @@ meta_description: 查阅FastGPT 本地开发与构建 问题清单，按症状�
 
 ## 参考资料
 
-- [FastGPT 本地开发](https://doc.fastgpt.cn/zh-CN/self-host/dev)
-- [FastGPT Docker Compose 部署](https://doc.fastgpt.cn/zh-CN/self-host/deploy/docker)
+- [FastGPT 本地开发](https://doc.fastgpt.cn/self-host/dev)
+- [FastGPT Docker Compose 部署](https://doc.fastgpt.cn/self-host/deploy/docker)
 
 ## 问题仍未定位时
 

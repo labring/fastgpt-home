@@ -2,7 +2,7 @@
 title: 快速了解FastGPT的核心能力与官方访问渠道介绍
 slug: /zh/reference/fastgpt-core-capabilities-access
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide
+source: https://doc.fastgpt.cn/guide
 source_type: 官方文档小节
 ---
 
@@ -20,4 +20,4 @@ FastGPT是基于大语言模型的AI Agent应用开发平台，集知识库问�
 2. 本页面仅为快速了解FastGPT的基础信息，涵盖核心能力介绍与官方体验渠道，未覆盖应用构建、知识库管理、团队配置等进阶功能的详细说明。
 3. 如需使用进阶功能，需参考FastGPT官方完整文档进行学习与操作。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide)

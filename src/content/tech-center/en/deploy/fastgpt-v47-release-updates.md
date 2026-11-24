@@ -2,7 +2,7 @@
 title: FastGPT V4.7 Technical Release Updates
 slug: /en/deploy/fastgpt-v47-release-updates
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/47
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/47
 source_type: 官方文档
 ---
 
@@ -43,4 +43,4 @@ This release resolves critical and quality-of-life issues, plus enhances core pe
 - Updated Docker deployment to auto-initialize replica sets
 - Added automatic encoding detection for browser file reading to reduce garbled text output
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/47)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/47)

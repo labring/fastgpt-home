@@ -2,7 +2,7 @@
 title: FastGPT Version 4819 Release Updates
 slug: /en/deploy/fastgpt-4819-release-notes
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4819
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/4819
 source_type: 官方文档
 ---
 
@@ -41,4 +41,4 @@ The following configurable options are available for this release:
 | Private Lark Server URL | Sets a custom API endpoint for self-hosted Lark bot integrations |
 | Standalone Chat Page | Toggles whether the chat interface loads as a dedicated standalone page |
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4819)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/4819)

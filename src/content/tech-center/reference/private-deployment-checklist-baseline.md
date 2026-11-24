@@ -2,11 +2,11 @@
 title: 私有部署检查项基线：五组二十项
 slug: /zh/reference/private-deployment-checklist-baseline
 page_type: baseline
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173
+source: https://doc.fastgpt.cn/self-host/upgrading/4-17/4173
 source_type: 深度场景内容
 meta_title: 私有部署检查项基线清单
 meta_description: 把 FastGPT 私有部署的检查项整理成可复用的基线：部署交付物、数据落点、权限验证、日志导出与升级演练五组，每组给出判定口径与留档位置。
-delivery_metadata: {"source_front_matter":{"slug":"private-deployment-checklist-baseline","meta_title":"私有部署检查项基线清单","meta_description":"把 FastGPT 私有部署的检查项整理成可复用的基线：部署交付物、数据落点、权限验证、日志导出与升级演练五组，每组给出判定口径与留档位置。","language":"zh","content_type":"baseline","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"private-deployment-checklist-baseline","keywords":"私有部署基线,检查项,部署交付物,权限验证,升级演练","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"私有部署要按哪些检查项做基线","需求依据":"客户 2026-11-07 购买诉求第 1 条：私有化是准入门槛，需要可复用基线。","事实来源":"FastGPT 产品知识库·内容收集清单；官方更新说明 4.16.0 至 4.17.3","内链":"https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173","排期":"W18 基准数据页第 1 篇","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（来源版本，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核检查项与版本对应关系。"]}
+delivery_metadata: {"source_front_matter":{"slug":"private-deployment-checklist-baseline","meta_title":"私有部署检查项基线清单","meta_description":"把 FastGPT 私有部署的检查项整理成可复用的基线：部署交付物、数据落点、权限验证、日志导出与升级演练五组，每组给出判定口径与留档位置。","language":"zh","content_type":"baseline","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"private-deployment-checklist-baseline","keywords":"私有部署基线,检查项,部署交付物,权限验证,升级演练","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"私有部署要按哪些检查项做基线","需求依据":"客户 2026-11-07 购买诉求第 1 条：私有化是准入门槛，需要可复用基线。","事实来源":"FastGPT 产品知识库·内容收集清单；官方更新说明 4.16.0 至 4.17.3","内链":"https://doc.fastgpt.cn/self-host/upgrading/4-17/4173","排期":"W18 基准数据页第 1 篇","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（来源版本，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核检查项与版本对应关系。"]}
 keywords: 私有部署基线,检查项,部署交付物,权限验证,升级演练
 schema_type: Article
 date_modified: 2026-11-16
@@ -92,6 +92,6 @@ date_modified: 2026-11-16
 
 | 主题 | 版本 | 来源 |
 | --- | --- | --- |
-| 镜像组合、三项回填、价格迁移 | v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173) |
-| 沙盒不混版 | v4.16.0 | [self-host/upgrading/4-16/4160](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/4160) |
-| 文件级权限、发布快照 | v4.17.1 | [self-host/upgrading/4-17/4171](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4171) |
+| 镜像组合、三项回填、价格迁移 | v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/self-host/upgrading/4-17/4173) |
+| 沙盒不混版 | v4.16.0 | [self-host/upgrading/4-16/4160](https://doc.fastgpt.cn/self-host/upgrading/4-16/4160) |
+| 文件级权限、发布快照 | v4.17.1 | [self-host/upgrading/4-17/4171](https://doc.fastgpt.cn/self-host/upgrading/4-17/4171) |

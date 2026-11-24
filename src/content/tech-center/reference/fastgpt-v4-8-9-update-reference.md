@@ -2,7 +2,7 @@
 title: FastGPT V4.8.9版本更新内容技术速查
 slug: /zh/reference/fastgpt-v4-8-9-update-reference
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/489
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/489
 source_type: 官方文档小节
 ---
 
@@ -30,4 +30,4 @@ source_type: 官方文档小节
 2. 商业版功能仅对授权用户开放。
 3. 升级该版本前，需确认对应版本的升级脚本与环境变量配置要求，文档中提及V4.8.8、V4.8.10存在相关升级说明。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/489)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/489)

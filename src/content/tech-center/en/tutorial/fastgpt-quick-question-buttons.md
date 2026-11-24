@@ -2,7 +2,7 @@
 title: Implement Quick Question Buttons in FastGPT Welcome Text
 slug: /en/tutorial/fastgpt-quick-question-buttons
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/build/general/welcomeText
+source: https://doc.fastgpt.io/guide/build/general/welcomeText
 source_type: Official documentation
 ---
 
@@ -25,7 +25,7 @@ Each line wrapped in single square brackets will be converted to an individual q
 ## User Interaction Behavior
 When a user clicks a quick question button, FastGPT automatically sends the text contained within the brackets as the official user message for that conversation turn. No additional configuration steps are required beyond defining the welcome text and quick question entries. The rendered appearance of the quick question buttons in a live chat interface is shown in the referenced asset: `![Quick questions in chat](../../../../public/imgs/image-27.png)`. All interactions follow the standard FastGPT conversation flow, with the sent quick question treated identically to a manually typed user prompt.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/general/welcomeText)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/general/welcomeText)
 
 ## Applicability and version scope
 

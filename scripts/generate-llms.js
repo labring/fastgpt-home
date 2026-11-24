@@ -61,9 +61,16 @@ FastGPT is designed for enterprise knowledge base Q&A, AI customer service, inte
 
 - Website: ${links.website}
 - Documentation: ${links.documentation}
+- Documentation LLM Context: ${links.documentation}/llms.txt
+- Simplified Chinese Documentation LLM Context: ${links.chineseDocumentation}/llms.txt
 - Cloud Service: ${links.cloud}
 - Pricing: ${links.pricingEn}
 - FAQ: ${links.faqEn}
+- Technical Center: ${ioBaseUrl}/tech-center
+- Enterprise Guides: ${ioBaseUrl}/guide
+- Industry Solutions: ${ioBaseUrl}/industry
+- Product Comparisons: ${ioBaseUrl}/compare
+- Engineering Blog: ${ioBaseUrl}/blog
 - Simplified Chinese FAQ: ${links.faqZh}
 - Simplified Chinese LLM Context: ${chineseLlmUrl}
 - Traditional Chinese LLM Context: ${traditionalLlmUrl}
@@ -169,10 +176,19 @@ FastGPT 面向企业知识库问答、AI 客服、内部助手、流程自动化
 
 - 官网：${links.chineseWebsite}
 - 国内文档：${links.chineseDocumentation}
+- 国内文档 LLM Context：${links.chineseDocumentation}/llms.txt
 - 国际文档：${links.documentation}
+- 国际文档 LLM Context：${links.documentation}/llms.txt
 - 云服务：${links.chineseCloud}
 - 定价：${links.pricingZh}
 - FAQ：${links.faqZh}
+- 技术中心：${cnBaseUrl}/tech-center
+- 选型与实施指南：${cnBaseUrl}/guide
+- 行业解决方案：${cnBaseUrl}/industry
+- 产品选型对比：${cnBaseUrl}/compare
+- 工程博客：${cnBaseUrl}/blog
+- 百科知识：${cnBaseUrl}/wiki
+- 学习视频中心：${cnBaseUrl}/videos
 - 繁体中文 LLM Context：${traditionalLlmUrl}
 - 英文 LLM Context：${englishLlmUrl}
 - GitHub：https://github.com/labring/FastGPT
@@ -238,9 +254,16 @@ FastGPT 面向企業知識庫問答、AI 客服、內部助手、流程自動化
 
 - 官網：${links.website}
 - 國內文件：${links.chineseDocumentation}
+- 國內文件 LLM Context：${links.chineseDocumentation}/llms.txt
 - 國際文件：${links.documentation}
+- 國際文件 LLM Context：${links.documentation}/llms.txt
 - 雲服務：${links.cloud}
 - 定價：${links.pricingZhHant}
+- 英文技術中心：${ioBaseUrl}/tech-center
+- 英文選型與實施指南：${ioBaseUrl}/guide
+- 英文產業解決方案：${ioBaseUrl}/industry
+- 英文產品選型對比：${ioBaseUrl}/compare
+- 英文工程部落格：${ioBaseUrl}/blog
 - FAQ：${links.faqZh}
 - 簡體中文 LLM Context：${chineseLlmUrl}
 - 英文 LLM Context：${englishLlmUrl}

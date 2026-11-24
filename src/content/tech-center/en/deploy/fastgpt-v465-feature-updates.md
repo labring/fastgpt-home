@@ -2,7 +2,7 @@
 title: FastGPT V4.6.5 New Features and Fixes
 slug: /en/deploy/fastgpt-v465-feature-updates
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/465
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/465
 source_type: 官方文档
 ---
 
@@ -34,4 +34,4 @@ This release addresses two key workflow interface and functionality issues:
 1. Fixed inaccurate or incomplete prompt extraction descriptions within the advanced orchestration interface, correcting context gaps for prompt-based workflow steps
 2. Improved advanced orchestration connection line interactions to streamline visual workflow design and reduce user friction when building complex pipelines
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/465)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/465)

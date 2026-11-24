@@ -2,7 +2,7 @@
 title: Attach Structured Metadata to FastGPT Dataset Entries
 slug: /en/tutorial/fastgpt-dataset-metadata
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/dataset/template
+source: https://doc.fastgpt.io/guide/dataset/template
 source_type: Official documentation
 ---
 
@@ -32,7 +32,7 @@ FastGPT supports two common dataset file formats for metadata attachment, each w
 2. Enter the raw, unescaped JSON string directly into the cell assigned to the `metadata` field
 3. Confirm that no extraneous whitespace is added outside the JSON structure that could disrupt parsing when the file is imported
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/template)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/template)
 
 ## Applicability and version scope
 

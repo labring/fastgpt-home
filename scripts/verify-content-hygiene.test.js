@@ -681,7 +681,7 @@ test('source CLI keeps cross-line HTTPS citations intact and catches JSX express
 test('source CLI rejects bare labelled URLs and accepts descriptive technical citations', () => {
   withFixture(
     {
-      'src/content/guides/zh/dirty.md': '# 指南\n\n> 来源：https://doc.fastgpt.cn/zh-CN/guide\n'
+      'src/content/guides/zh/dirty.md': '# 指南\n\n> 来源：https://doc.fastgpt.cn/guide\n'
     },
     (root) => {
       const result = runFixture(root);
@@ -694,7 +694,7 @@ test('source CLI rejects bare labelled URLs and accepts descriptive technical ci
       'src/content/guides/zh/clean.md': [
         '# 指南',
         '',
-        '> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide)',
+        '> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide)',
         '> 来源：[FastGPT GitHub Issue #42](https://github.com/labring/FastGPT/issues/42)',
         ''
       ].join('\n')
@@ -709,12 +709,12 @@ test('source CLI rejects bare labelled URLs and accepts descriptive technical ci
 test('source CLI excludes byte-zero YAML front matter across Markdown surfaces', () => {
   const frontMatter = [
     '---',
-    'source: https://doc.fastgpt.cn/zh-CN/guide',
+    'source: https://doc.fastgpt.cn/guide',
     '---',
     '<!-- internal metadata -->',
     ''
   ].join('\n');
-  const citation = '> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide)\n';
+  const citation = '> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide)\n';
   withFixture(
     {
       'src/content/tech-center/tutorial/metadata.md': `${frontMatter}${citation}`,
@@ -734,7 +734,7 @@ test('source CLI enforces citation policy for source labels in reader bodies', (
       'src/content/tech-center/tutorial/reader-body.md': [
         '# Guide',
         '',
-        'source: https://doc.fastgpt.cn/zh-CN/guide',
+        'source: https://doc.fastgpt.cn/guide',
         ''
       ].join('\n')
     },
@@ -742,6 +742,27 @@ test('source CLI enforces citation policy for source labels in reader bodies', (
       const result = runFixture(root);
       assert.equal(result.status, 1);
       assert.match(result.stderr, /D-07 citation-policy/);
+    }
+  );
+});
+
+test('source CLI rejects legacy locale-prefixed documentation URLs in markdown and structured copy', () => {
+  withFixture(
+    {
+      'src/content/guides/zh/prefixed.md':
+        '# 指南\n\n参考 [环境变量](https://doc.fastgpt.cn/zh-CN/self-host/config/env)\n',
+      'src/content/guides/en/prefixed.md':
+        '# Guide\n\nSee [Nodes](https://doc.fastgpt.cn/en/guide/build/workflow/variables)\n',
+      'src/locales/zh.json':
+        '{"docs":"https://doc.fastgpt.io/zh-CN/guide/getting-started"}\n'
+    },
+    (root) => {
+      const result = runFixture(root);
+      assert.equal(result.status, 1);
+      assert.equal((result.stderr.match(/D-08 canonical-doc-url/g) || []).length, 3);
+      assert.match(result.stderr, /D-08 canonical-doc-url \| markdown-body .*zh\/prefixed\.md/);
+      assert.match(result.stderr, /D-08 canonical-doc-url \| markdown-body .*en\/prefixed\.md/);
+      assert.match(result.stderr, /D-08 canonical-doc-url \| structured-copy .*zh\.json/);
     }
   );
 });

@@ -29,6 +29,6 @@ source_type: GitHub issue
 
 > 来源: [原始讨论：4.8.6版本无法获取appid](https://github.com/labring/FastGPT/issues/2074)
 
-> 来源: [FastGPT 对话 OpenAPI](https://doc.fastgpt.io/en/openapi/chat)
+> 来源: [FastGPT 对话 OpenAPI](https://doc.fastgpt.io/openapi/chat)
 
 > 来源: [原讨论中的补充回复](https://github.com/labring/FastGPT/issues/2074#issuecomment-2242296377)

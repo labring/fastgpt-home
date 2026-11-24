@@ -2,7 +2,7 @@
 title: FastGPT 钉钉内置通用SSO协议的配置步骤速查
 slug: /zh/reference/fastgpt-dingtalk-sso-quick-ref
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/admin/sso
+source: https://doc.fastgpt.cn/guide/admin/sso
 source_type: 官方文档小节
 ---
 
@@ -44,4 +44,4 @@ fastgpt-sso:
 3. 配置项中的AUTH_TOKEN、DINGTALK_CLIENT_ID、DINGTALK_CLIENT_SECRET需替换为真实值，不可使用占位符。
 4. 镜像版本需与FastGPT版本匹配，当前示例版本为v4.14.16。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/admin/sso)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/admin/sso)

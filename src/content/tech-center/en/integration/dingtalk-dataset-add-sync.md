@@ -2,7 +2,7 @@
 title: Add and Sync DingTalk Dataset Files in FastGPT
 slug: /en/integration/dingtalk-dataset-add-sync
 page_type: Integrations
-source: https://doc.fastgpt.cn/en/guide/dataset/third-party/dingtalk_dataset
+source: https://doc.fastgpt.io/guide/dataset/third-party/dingtalk_dataset
 source_type: Official documentation
 ---
 
@@ -29,7 +29,7 @@ To sync changes made to imported DingTalk documents:
 
 FastGPT will retrieve the latest version of the document’s content from the connected DingTalk workspace and refresh the dataset’s search indexes to incorporate the updated data. This ensures that all edits to the original DingTalk documents are reflected in the FastGPT dataset’s search and retrieval functionality.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/third-party/dingtalk_dataset)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/third-party/dingtalk_dataset)
 
 ## Applicability and version scope
 

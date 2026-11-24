@@ -2,7 +2,7 @@
 title: FastGPT并行执行节点的使用规范与注意事项
 slug: /zh/tutorial/fastgpt-parallel-run-notes
 page_type: 教程
-source: https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/parallel_run
+source: https://doc.fastgpt.cn/guide/build/workflow/nodes/parallel_run
 source_type: 官方文档
 ---
 
@@ -17,8 +17,8 @@ source_type: 官方文档
 ## AI节点输出配置步骤
 执行逻辑内的【AI 对话】节点需按规范配置输出。正确配置流程为：进入并行逻辑内的AI节点设置界面，关闭「返回 AI 内容」（流式输出）开关，仅在并行节点之后的【指定回复】节点中统一输出汇总结果。若保留流式输出功能，多个任务的输出会同时推送至对话窗口，引发内容交错、显示混乱。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/parallel_run)
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/parallel_run)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/workflow/nodes/parallel_run)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/workflow/nodes/parallel_run)
 
 ## 适用性与版本范围
 

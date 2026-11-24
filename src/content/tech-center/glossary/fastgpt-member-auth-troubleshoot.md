@@ -2,7 +2,7 @@
 title: FastGPT团队成员身份认证与MongoDB报错排查指南
 slug: /zh/glossary/fastgpt-member-auth-troubleshoot
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/guide/build/publish/mcp_server
+source: https://doc.fastgpt.cn/guide/build/publish/mcp_server
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ FastGPT中的member包含两类场景，一是用于MCP服务身份认证的团�
 ## 容易搞错的地方
 MCP身份认证的两个请求头不可同时使用非同一成员的信息，否则会导致身份验证失败。SSE模式下修改代理身份后必须断开重连，否则新的请求头不会生效。MongoDB单机部署无法支持事务操作，当通过URL导入知识库出现指定报错时，需调整MongoDB部署架构至副本集或mongos模式。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/publish/mcp_server)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/publish/mcp_server)
 
 ## 适用性与版本范围
 

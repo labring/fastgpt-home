@@ -2,7 +2,7 @@
 title: Implement Content Review and Auto Rewriting Workflows
 slug: /en/tutorial/fastgpt-content-review-workflows
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/getting-started/quick-start
+source: https://doc.fastgpt.io/guide/getting-started/quick-start
 source_type: Official documentation
 ---
 
@@ -30,7 +30,7 @@ To assess if a task is suitable for FastGPT workflows, verify it meets three cor
 7.  **Add Human Confirmation (Optional)**: Insert a manual approval step to review rewritten or high-risk content before finalization.
 8.  **Output Results**: Deliver standardized outputs including approved content, revised content, or rejection notices with explanations.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/getting-started/quick-start)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/getting-started/quick-start)
 
 ## Applicability and version scope
 

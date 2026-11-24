@@ -2,7 +2,7 @@
 title: Validate FastGPT System Plugin Submissions Before Deployment
 slug: /en/model/fastgpt-plugin-submission-checklist
 page_type: Model guides
-source: https://doc.fastgpt.cn/en/plugin/system-tool-development
+source: https://doc.fastgpt.io/plugin/system-tool-development
 source_type: Official documentation
 ---
 
@@ -32,7 +32,7 @@ After packaging the plugin, confirm final deployment readiness:
 - Complete remote debugging: perform a real invocation of the plugin in a FastGPT test environment, or document the explicit reason remote debugging is not required for this change.
 - Install the packaged `.pkg` plugin file in a test FastGPT environment, then run a full real-world invocation to confirm the plugin operates as intended.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/plugin/system-tool-development)
+> Source: [FastGPT official source](https://doc.fastgpt.io/plugin/system-tool-development)
 
 ## Applicability and version scope
 

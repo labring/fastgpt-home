@@ -29,4 +29,4 @@ source_type: GitHub issue
 
 > 来源: [原始讨论：上传docx文档包含的页眉页脚不会被传给大模型](https://github.com/labring/FastGPT/issues/4135)
 
-> 来源: [FastGPT 文件输入与 4.8.13 行为说明](https://doc.fastgpt.io/en/guide/build/general/fileInput)
+> 来源: [FastGPT 文件输入与 4.8.13 行为说明](https://doc.fastgpt.io/guide/build/general/fileInput)

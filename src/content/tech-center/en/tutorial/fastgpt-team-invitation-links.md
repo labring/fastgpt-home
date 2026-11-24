@@ -2,7 +2,7 @@
 title: Generate and use FastGPT team invitation links
 slug: /en/tutorial/fastgpt-team-invitation-links
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/workspace/team/invitation_link
+source: https://doc.fastgpt.io/guide/workspace/team/invitation_link
 source_type: Official documentation
 ---
 
@@ -29,7 +29,7 @@ When a recipient visits the shared invitation link, the following automated work
     - Click "Accept" to formally join the linked team workspace, gaining all assigned permissions for the team’s resources.
     - Click "Ignore" to close the invitation dialog. The invitation remains valid for its configured lifespan, and the recipient can revisit the link at any time to attempt acceptance later.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/workspace/team/invitation_link)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/workspace/team/invitation_link)
 
 ## Applicability and version scope
 

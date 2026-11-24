@@ -2,7 +2,7 @@
 title: Configure FastGPT OpenSandbox Runtime Environment Settings
 slug: /en/deploy/fastgpt-opensandbox-runtime-config
 page_type: 部署场景
-source: https://doc.fastgpt.cn/en/self-host/config/sandbox/opensandbox
+source: https://doc.fastgpt.io/self-host/config/sandbox/opensandbox
 source_type: 官方文档
 ---
 
@@ -34,4 +34,4 @@ Preview URLs are temporary, read-only bearer capabilities. Anyone with a valid p
 
 When upgrading from an earlier Volume Manager release, set `AGENT_SANDBOX_OPENSANDBOX_VOLUME_NAME_PREFIX` to the previous `VM_VOLUME_NAME_PREFIX` value to ensure existing persistent volumes can still be cleaned up using their original names.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/config/sandbox/opensandbox)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/config/sandbox/opensandbox)

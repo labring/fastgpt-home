@@ -9,7 +9,7 @@ meta_description: 面向企业技术负责人与采购方的FastGPT对外接入�
 keywords: FastGPT,对外接入,渠道选型,决策矩阵,MCP
 delivery_source_type: 开源仓库文档与社区线程
 source_type: 深度场景内容
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/env
+source: https://doc.fastgpt.cn/self-host/config/env
 schema_type: TechArticle
 date_published: 2026-09-28
 date_modified: 2026-09-28
@@ -56,8 +56,8 @@ API文档支持影响集成效率。接口调用提供DevAPI和System OpenAPI文
 - [Chat persistence with shareId and outLinkUid](https://github.com/labring/FastGPT/blob/v4.17.0/packages/service/core/chat/saveChat.ts)
 - [OpenAPI local server example](https://github.com/labring/FastGPT/blob/v4.17.0/document/content/openapi/intro.mdx)
 
-- [FastGPT 环境变量](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
-- [FastGPT Docker Compose 部署](https://doc.fastgpt.cn/zh-CN/self-host/deploy/docker)
+- [FastGPT 环境变量](https://doc.fastgpt.cn/self-host/config/env)
+- [FastGPT Docker Compose 部署](https://doc.fastgpt.cn/self-host/deploy/docker)
 
 ## 需要进一步确认时
 

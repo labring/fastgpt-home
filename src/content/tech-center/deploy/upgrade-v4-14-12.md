@@ -2,7 +2,7 @@
 title: FastGPT V4.14.12版本升级内容、步骤与验证方法
 slug: /zh/deploy/upgrade-v4-14-12
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41412
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/41412
 source_type: 官方文档
 ---
 
@@ -21,7 +21,7 @@ source_type: 官方文档
 ## 升级后怎么验证
 可通过以下方式验证升级效果：调用知识库三级目录相关接口，确认无zod校验报错；调用v1/completions接口并传入dataId参数，确认对话日志可正常获取运行详情；进入对话Agent应用，确认敏感信息过滤勾选框可正常取消勾选；测试响应值配置自定义HttpStatus状态码功能正常；测试Agent调度器的PI Agent模式（beta）功能可用；调用skill接口，确认错误处理逻辑符合预期。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41412)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-14/41412)
 
 ## 适用性与版本范围
 

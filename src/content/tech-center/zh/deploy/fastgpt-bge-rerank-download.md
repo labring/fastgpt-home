@@ -2,7 +2,7 @@
 title: 介绍FastGPT源码部署中下载BGE重排序模型的操作步骤
 slug: /zh/deploy/fastgpt-bge-rerank-download
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/custom-models/bge-rerank
+source: https://doc.fastgpt.cn/self-host/custom-models/bge-rerank
 source_type: 官方文档
 ---
 
@@ -27,7 +27,7 @@ requirements.txt
 ```
 该目录结构适用于所有三款BGE重排序模型。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/bge-rerank)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/custom-models/bge-rerank)
 
 ## 适用性与版本范围
 

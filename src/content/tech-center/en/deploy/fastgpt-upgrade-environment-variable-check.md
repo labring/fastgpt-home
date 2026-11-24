@@ -2,7 +2,7 @@
 title: Validate Required Environment Variables for FastGPT Upgrade
 slug: /en/deploy/fastgpt-upgrade-environment-variable-check
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41501
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/41501
 source_type: Official documentation
 ---
 
@@ -37,7 +37,7 @@ Follow this structured process to confirm your configuration meets the 4.15 upgr
 4.  Check that the `INVOKE_TOKEN_SECRET` value is at least 32 characters long, then confirm it matches across both service files.
 5.  Resolve any identified discrepancies, such as missing values, mismatched keys, or insufficiently short secrets, before proceeding with the upgrade.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41501)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-15/41501)
 
 ## Applicability and version scope
 

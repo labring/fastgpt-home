@@ -2,7 +2,7 @@
 title: Add MiniMax Models to FastGPT Self-Hosted Deployments
 slug: /en/deploy/fastgpt-minimax-model-config-3
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/model/minimax
+source: https://doc.fastgpt.io/self-host/config/model/minimax
 source_type: Official documentation
 ---
 
@@ -22,7 +22,7 @@ The following table outlines all officially supported built-in MiniMax models, w
 **Configuration and Usage Notes**
 When setting up models in the FastGPT administrative interface, each listed Model ID can be directly entered into the custom model ID or selection field. The `MiniMax-M3` model is automatically designated as the default MiniMax model unless a different model is explicitly specified in your deployment’s configuration files. All context window and maximum output token limits defined in the table are enforced natively by FastGPT’s model handling logic, so no manual adjustment of these parameters is needed for standard deployments. Administrators can reference the Description column to select the optimal model for their workload, whether prioritizing large context capacity, low latency, or legacy model compatibility.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/model/minimax)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/model/minimax)
 
 ## Applicability and version scope
 

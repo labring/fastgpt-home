@@ -2,7 +2,7 @@
 title: FastGPT V4.16.2版本升级内容与操作指引
 slug: /zh/deploy/upgrade-v4-16-2
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/4162
+source: https://doc.fastgpt.cn/self-host/upgrading/4-16/4162
 source_type: 官方文档
 ---
 
@@ -20,7 +20,7 @@ source_type: 官方文档
 ## 升级后怎么验证
 升级完成后，可通过以下方式验证更新效果是否符合预期。首先检查韩语语言支持功能是否正常启用，可在系统设置界面切换至韩语语言，查看界面文本是否全部转换为韩语。其次检查admin模板市场的头像是否正常显示，进入后台管理的模板市场模块，确认所有头像均可正常加载与展示。最后查看账号页的UI表现及移动端适配效果，在电脑端确认页面UI布局合理，在移动设备上确认页面可正常滚动、交互元素可正常点击，确保使用体验符合优化目标。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/4162)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-16/4162)
 
 ## 适用性与版本范围
 

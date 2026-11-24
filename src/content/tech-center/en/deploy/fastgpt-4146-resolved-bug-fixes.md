@@ -2,7 +2,7 @@
 title: FastGPT 4.14.6 List of Resolved Bug Fixes
 slug: /en/deploy/fastgpt-4146-resolved-bug-fixes
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4146
+source: https://doc.fastgpt.io/self-host/upgrading/4-14/4146
 source_type: Official documentation
 ---
 
@@ -31,7 +31,7 @@ To confirm all fixes are applied correctly in your self-hosted FastGPT deploymen
 6. View a model card that uses the default Hugging Face avatar, and check that the avatar image loads correctly without broken link errors.
 7. Test the date picker component on any scheduling or configuration page, and confirm it does not overflow its container when resizing the browser window.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4146)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-14/4146)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: Retrieve Single FastGPT Dataset Data Details
 slug: /en/api/fastgpt-dataset-data-detail
 page_type: API
-source: https://doc.fastgpt.cn/en/openapi/dataset
+source: https://doc.fastgpt.io/openapi/dataset
 source_type: Official documentation
 ---
 
@@ -46,7 +46,7 @@ A successful request returns a JSON object with a 200 status code. The top-level
 - `canWrite`: Boolean indicating if the requesting user has write permissions for the entry
 
 The `indexes` array contains objects with fields `type`, `dataId`, `text`, and `_id`, matching the structure shown in the sample response.
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/openapi/dataset)
+> Source: [FastGPT official source](https://doc.fastgpt.io/openapi/dataset)
 
 ## Applicability and version scope
 

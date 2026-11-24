@@ -2,7 +2,7 @@
 title: FastGPT V4.8.22版本升级脚本操作指南
 slug: /zh/reference/fastgpt-v4822-upgrade-script
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4822
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4822
 source_type: 官方文档小节
 ---
 
@@ -20,4 +20,4 @@ FastGPT V4.8.22版本的自部署升级需使用该版本专属的升级脚本�
 2. 该升级脚本仅适配V4.8.22版本的升级，请勿用于其他版本的FastGPT升级操作
 3. 执行升级脚本前，需确认当前部署环境的配置参数符合FastGPT官方的环境变量说明要求
 4. 升级过程中请勿中断服务器或相关容器的运行，以免导致部署异常或版本升级失败
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4822)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/4822)

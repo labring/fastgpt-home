@@ -2,7 +2,7 @@
 title: FastGPT 4.15版本官方优化功能技术速查
 slug: /zh/reference/fastgpt-415-optimization-quickref
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41500
+source: https://doc.fastgpt.cn/self-host/upgrading/4-15/41500
 source_type: 官方文档小节
 ---
 
@@ -23,4 +23,4 @@ source_type: 官方文档小节
 5. 非管理员/访客触发余额不足时会收到优化后的提示，无创建权限时模板功能会被隐藏。
 6. 应用、知识库、文件和文件夹等长名称超出宽度时自动省略，hover时展示完整内容。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41500)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-15/41500)

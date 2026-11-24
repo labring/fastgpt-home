@@ -2,7 +2,7 @@
 title: Match FastGPT Channel IDs to AIProxy Protocols
 slug: /en/model/fastgpt-channel-id-aiproxy-mapping
 page_type: Model guides
-source: https://doc.fastgpt.cn/en/plugin/model-presets
+source: https://doc.fastgpt.io/plugin/model-presets
 source_type: Official documentation
 ---
 
@@ -34,7 +34,7 @@ The following table lists common, widely used AIProxy channel type mappings as a
 
 Each entry in this table shows the exact `channelId` value required for FastGPT to correctly associate a model configuration with the corresponding AIProxy protocol. Using an incorrect ID will result in failed model calls or configuration errors.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/plugin/model-presets)
+> Source: [FastGPT official source](https://doc.fastgpt.io/plugin/model-presets)
 
 ## Applicability and version scope
 

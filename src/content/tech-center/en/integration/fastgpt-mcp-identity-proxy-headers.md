@@ -2,7 +2,7 @@
 title: Configure Identity Proxy Headers for FastGPT MCP Servers
 slug: /en/integration/fastgpt-mcp-identity-proxy-headers
 page_type: Integrations
-source: https://doc.fastgpt.cn/en/guide/build/publish/mcp_server
+source: https://doc.fastgpt.io/guide/build/publish/mcp_server
 source_type: Official documentation
 ---
 
@@ -47,7 +47,7 @@ There are key differences in how header values are processed between Streamable 
 - Streamable HTTP endpoints read and validate proxy identity headers for every individual request, so header changes take effect immediately for new requests.
 - SSE connections capture proxy identity at the time the connection is established. If you update your proxy identity headers, you must reconnect the SSE session to apply the new authentication settings.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/publish/mcp_server)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/publish/mcp_server)
 
 ## Applicability and version scope
 

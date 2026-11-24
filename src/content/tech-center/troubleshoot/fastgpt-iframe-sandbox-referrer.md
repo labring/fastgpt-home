@@ -29,6 +29,6 @@ source_type: GitHub issue
 
 > 来源: [原始讨论：聊天框中可通过markdown语法自定义iframe的属性](https://github.com/labring/FastGPT/issues/3977)
 
-> 来源: [FastGPT 对话 HTML 渲染](https://doc.fastgpt.io/en/guide/chat/htmlRendering)
+> 来源: [FastGPT 对话 HTML 渲染](https://doc.fastgpt.io/guide/chat/htmlRendering)
 
 > 来源: [原讨论中的补充回复](https://github.com/labring/FastGPT/issues/3977#issuecomment-2702788157)

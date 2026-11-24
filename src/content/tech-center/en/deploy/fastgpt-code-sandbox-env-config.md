@@ -2,7 +2,7 @@
 title: Configure FastGPT Code Sandbox Environment Variables
 slug: /en/deploy/fastgpt-code-sandbox-env-config
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/env
+source: https://doc.fastgpt.io/self-host/config/env
 source_type: Official documentation
 ---
 
@@ -42,7 +42,7 @@ To optimize sandbox performance and security for your deployment:
 - Use `SANDBOX_QUEUE_ID_CONCURRENCY` to limit concurrent executions for specific queue IDs, preventing resource contention across multiple concurrent requests.
 - For non-production development environments, set `NODE_ENV` to `development` to relax internal IP address checks, though this configuration should never be used in live deployments.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/env)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/env)
 
 ## Applicability and version scope
 

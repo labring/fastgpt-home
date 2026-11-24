@@ -2,7 +2,7 @@
 title: Optimize Multi-Turn RAG Retrieval With Query Rewriting
 slug: /en/tutorial/fastgpt-dataset-query-rewriting
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/dataset/dataset_engine
+source: https://doc.fastgpt.io/guide/dataset/dataset_engine
 source_type: Official documentation
 ---
 
@@ -30,7 +30,7 @@ Query rewriting is an optional workflow feature. The following framework and val
 3.  Confirm that dataset search returns relevant matching content for the optimized query
 4.  Monitor total response times to balance accuracy and latency for your deployment
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/dataset_engine)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/dataset_engine)
 
 ## Applicability and version scope
 

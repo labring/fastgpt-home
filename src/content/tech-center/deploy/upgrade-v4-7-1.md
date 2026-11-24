@@ -2,7 +2,7 @@
 title: FastGPT V4.7.1版本升级内容及操作步骤说明
 slug: /zh/deploy/upgrade-v4-7-1
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/471
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/471
 source_type: 官方文档
 ---
 
@@ -27,7 +27,7 @@ curl --location --request POST 'https://{{host}}/api/admin/clearInvalidData' \
 ## 升级后怎么验证
 可通过以下方式验证升级效果：测试语音输入功能，包括分享页面的语音输入、自动发送与自动流式语音播放是否正常。测试pptx和xlsx文件的上传与读取是否正常。测试csv文件导入，确认无需header校验且自动获取前两列。测试工具调用模块连线、自定义索引输入、rerank模型、问题补全历史记录等功能是否正常。测试分享页面在特殊场景下的加载速度是否正常。商业版用户可测试后台系统通知配置功能是否可用。测试IP模式导出知识库是否正常。可调用clearInvalidData接口验证脏数据清理功能是否正常运行，确认定时器垃圾数据清理按预期执行。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/471)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/471)
 
 ## 适用性与版本范围
 

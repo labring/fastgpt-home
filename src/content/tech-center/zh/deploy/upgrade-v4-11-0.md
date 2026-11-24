@@ -2,7 +2,7 @@
 title: FastGPT V4.11.0版本升级内容与操作说明
 slug: /zh/deploy/upgrade-v4-11-0
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4110
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4110
 source_type: 官方文档
 ---
 
@@ -16,7 +16,7 @@ source_type: 官方文档
 1. 商业版用户添加环境变量EVAL_CONCURRENCY=3和EVAL_LINE_LIMIT=1000；2. 更新对应镜像的tag：FastGPT镜像为v4.11.0，商业版FastGPT镜像为v4.11.0，fastgpt-plugin镜像为v0.1.5，不更新mcp_server、Sandbox、AIProxy；3. 完成镜像更新并启动服务后，商业版用户在管理端点击一次保存。
 ## 升级后怎么验证
 1. 商业版用户可查看应用评测（Beta版）功能是否可用；2. 测试工作流的问题分类和内容提取节点，确认可通过前端校验，正常运行、保存和发布；3. 测试知识库训练功能，确认可全部重试异常数据；4. 查看模型调用日志，确认包含首字响应时长和请求IP；5. 测试Markdown转Docx、Xlsx功能是否正常；6. 确认应用和知识库数量无上限限制。
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4110)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/4110)
 
 ## 适用性与版本范围
 

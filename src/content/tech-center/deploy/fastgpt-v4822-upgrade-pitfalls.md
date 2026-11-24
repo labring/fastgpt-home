@@ -2,7 +2,7 @@
 title: FastGPT V4.8.22版本升级操作与更新内容说明
 slug: /zh/deploy/fastgpt-v4822-upgrade-pitfalls
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4822
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4822
 source_type: 官方文档
 ---
 
@@ -28,4 +28,4 @@ AI对话节点可解析think/think标签内容作为思考链，需主动开启�
 ### 修复内容
 修复思考内容未计入输出Tokens的问题；修复思考链流输出时偶现与正文顺序偏差的问题；修复API调用工作流中，不支持Head检测的图片被错误过滤的问题，新增该类错误检测；修复模板市场部分模板错误；修复免登录窗口无法正常判断语言识别是否开启的问题；修复对话日志导出未兼容sub path的问题；修复切换团队时未刷新成员列表的联查member空指针问题；修复工作流基础节点无法升级的问题；修复向量检索结果未去重的问题；修复用户选择节点无法正常连线的问题；修复对话记录保存时source未正常记录的问题。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4822)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/4822)

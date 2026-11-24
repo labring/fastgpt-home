@@ -2,7 +2,7 @@
 title: FastGPT文档解析节点的工作原理与使用规则
 slug: /zh/tutorial/fastgpt-document-parsing-node
 page_type: 教程
-source: https://doc.fastgpt.cn/zh-CN/guide/build/general/fileInput
+source: https://doc.fastgpt.cn/guide/build/general/fileInput
 source_type: 官方文档
 ---
 
@@ -24,7 +24,7 @@ ${content}
 ## 使用注意事项
 配置文档解析节点时，需注意输入的文件URL数组仅包含文档类型文件，避免多模态文件混入导致被系统忽略。同时需确保输入的文件为当前工作流接收的文件，历史记录中的文件无法被该节点解析，以免影响工作流执行结果。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/general/fileInput)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/general/fileInput)
 
 ## 适用性与版本范围
 

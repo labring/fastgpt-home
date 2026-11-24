@@ -2,7 +2,7 @@
 title: 介绍FastGPT商业版语雀文件库的导入配置与使用方法
 slug: /zh/reference/fastgpt-yuque-file-library-import
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/yuque_dataset
+source: https://doc.fastgpt.cn/guide/dataset/third-party/yuque_dataset
 source_type: 官方文档小节
 ---
 
@@ -19,4 +19,4 @@ FastGPT v4.8.16及以上的商业版支持语雀文件库导入功能，该功�
 ## 注意事项
 仅FastGPT v4.8.16及以上的商业版用户可使用该功能。当前功能处于测试阶段，存在部分待优化的交互环节。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/yuque_dataset)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/dataset/third-party/yuque_dataset)

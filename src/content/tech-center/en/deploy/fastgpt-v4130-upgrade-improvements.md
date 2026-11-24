@@ -2,7 +2,7 @@
 title: FastGPT v4.13.0 Core Technical Upgrade Improvements
 slug: /en/deploy/fastgpt-v4130-upgrade-improvements
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-13/4130
+source: https://doc.fastgpt.io/self-host/upgrading/4-13/4130
 source_type: Official documentation
 ---
 
@@ -21,7 +21,7 @@ Client-side performance for the workflow builder has been enhanced by minimizing
 ## Metered Billing Logic Updates
 The metered billing tracking logic has been updated to standardize push and merge operations for usage metrics. This ensures that self-hosted deployments accurately record and aggregate usage data without creating duplicate billing entries, improving the reliability of cost tracking for team and enterprise deployments. No additional configuration is required to enable this updated logic; it activates automatically upon completing the upgrade to FastGPT v4.13.0.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-13/4130)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-13/4130)
 
 ## Applicability and version scope
 

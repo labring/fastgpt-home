@@ -2,7 +2,7 @@
 title: FastGPT OpenSandbox运行环境配置与CPU架构适配
 slug: /zh/deploy/fastgpt-opensandbox-env-config-2
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/sandbox/opensandbox
+source: https://doc.fastgpt.cn/self-host/config/sandbox/opensandbox
 source_type: 官方文档
 ---
 
@@ -34,8 +34,8 @@ fastgpt-pro版本不提供Sandbox Editor和WebSocket Proxy链路，无需配置`
 预览代理需部署在与FastGPT主站不同的origin（协议、域名或端口至少一项不同）。Sandbox中的HTML可能包含用户生成的脚本，若预览地址与主站同源，脚本可能访问主站凭证或接口。预览链接为短期只读Bearer [REDACTED_CREDENTIAL]，获得链接的用户可在有效期内通过修改URL路径读取同一Sandbox Workspace中的其他文件，请勿将链接分享给无权访问该Workspace的用户。
 部分环境变量需严格匹配对应配置，配置不一致会导致服务调用失败。从旧版Volume Manager升级时，需将原`VM_VOLUME_NAME_PREFIX`的值配置到`AGENT_SANDBOX_OPENSANDBOX_VOLUME_NAME_PREFIX`，避免历史持久卷无法按原名称清理。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/config/sandbox/opensandbox)
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/config/sandbox/opensandbox)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/config/env)
 
 ## 适用性与版本范围
 

@@ -2,7 +2,7 @@
 title: FastGPT私有部署模型问题排查与修复方法
 slug: /zh/deploy/fastgpt-private-model-troubleshooting
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/troubleshooting/model-errors
+source: https://doc.fastgpt.cn/self-host/troubleshooting/model-errors
 source_type: 官方文档
 ---
 
@@ -32,4 +32,4 @@ curl --location --request POST https://oneapi.xxx/v1/chat/completions \n  --head
 ```
 正常响应会包含`tool_calls`相关字段，如`id`、`type`、`function`等信息。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/troubleshooting/model-errors)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/troubleshooting/model-errors)

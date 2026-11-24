@@ -2,7 +2,7 @@
 title: FastGPT V4.15.0-beta2版本环境变量变更升级指引
 slug: /zh/reference/fastgpt-v4-15-beta2-env-updates
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41502
+source: https://doc.fastgpt.cn/self-host/upgrading/4-15/41502
 source_type: 官方文档小节
 ---
 
@@ -26,4 +26,4 @@ source_type: 官方文档小节
 3. 不同子版本的环境变量变更内容存在差异，需严格确认目标版本的具体说明，不可直接套用其他版本的配置。
 4. 若使用本地开发或其他部署方式，需同步调整对应环境下的变量配置。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41502)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-15/41502)

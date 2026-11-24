@@ -2,7 +2,7 @@
 title: Set Up FastGPT Sealos Devbox Environment Variables
 slug: /en/deploy/fastgpt-sealos-devbox-env-config
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/sandbox/sealosdevbox
+source: https://doc.fastgpt.io/self-host/config/sandbox/sealosdevbox
 source_type: Official documentation
 ---
 
@@ -34,7 +34,7 @@ All required environment variables must be added to the service configuration fo
 ## Required Network Access
 The FastGPT main service must have outbound network connectivity to the URL specified in `AGENT_SANDBOX_SEALOS_BASEURL` to successfully provision and manage sandbox instances. No additional inbound ports need to be exposed on the FastGPT services for this functionality.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/sandbox/sealosdevbox)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/sandbox/sealosdevbox)
 
 ## Applicability and version scope
 

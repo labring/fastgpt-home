@@ -2,7 +2,7 @@
 title: FastGPT系统插件开发与旧版机制的区别说明
 slug: /zh/model/fastgpt-plugin-old-mechanism-differences
 page_type: 模型指南
-source: https://doc.fastgpt.cn/zh-CN/plugin/system-tool-development
+source: https://doc.fastgpt.cn/plugin/system-tool-development
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ FastGPT与FastGPT Plugin保持外置扩展的微服务架构，整体架构未�
 ## 开发流程变更说明
 工具开发需使用@fastgpt-plugin/cli和@fastgpt-plugin/sdk-factory作为核心开发工具。旧版开发所依赖的config.ts、versionList配置文件，以及bun run build:pkg构建命令，不再作为主要的开发方式。开发过程需遵循新工具的使用规范，完成插件的开发与构建流程。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/plugin/system-tool-development)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/plugin/system-tool-development)
 
 ## 适用性与版本范围
 

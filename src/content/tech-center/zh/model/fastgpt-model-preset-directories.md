@@ -2,7 +2,7 @@
 title: FastGPT模型预设相关目录的结构与各文件的作用说明
 slug: /zh/model/fastgpt-model-preset-directories
 page_type: 模型指南
-source: https://doc.fastgpt.cn/zh-CN/plugin/model-presets
+source: https://doc.fastgpt.cn/plugin/model-presets
 source_type: 官方文档
 ---
 
@@ -40,7 +40,7 @@ packages/infrastructure/src/static-data/models/
 5.  在`model.ts`中，将该供应商的显示名补充至`ModelProviderMap`，如需接入AIProxy渠道，同步将其添加至`aiproxyChannels`。
 6.  在`type.ts`中，补充该供应商对应的配置与模型预设的输入schema定义。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/plugin/model-presets)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/plugin/model-presets)
 
 ## 适用性与版本范围
 

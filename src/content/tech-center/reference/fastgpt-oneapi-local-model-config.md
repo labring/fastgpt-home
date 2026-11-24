@@ -2,7 +2,7 @@
 title: 通过One API将本地模型接入FastGPT自定义模型的配置步骤
 slug: /zh/reference/fastgpt-oneapi-local-model-config
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/custom-models/xinference
+source: https://doc.fastgpt.cn/self-host/custom-models/xinference
 source_type: 官方文档小节
 ---
 
@@ -31,4 +31,4 @@ curl --location --request POST 'https://[oneapi_url]/v1/chat/completions' \
 3. 执行测试命令时，需完全替换所有占位符，保留方括号会导致请求失败。
 4. 测试前需确保One API与Xinference服务均处于正常运行状态。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/xinference)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/custom-models/xinference)

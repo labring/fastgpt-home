@@ -2,7 +2,7 @@
 title: FastGPT Official Documentation Table of Contents Reference
 slug: /en/tutorial/fastgpt-documentation-toc-reference
 page_type: 教程/部署
-source: https://doc.fastgpt.cn/en/toc
+source: https://doc.fastgpt.io/toc
 source_type: 官方文档
 ---
 
@@ -31,4 +31,4 @@ The following table maps official documentation paths to their functional catego
 ## Practical Navigation Workflow Example
 For engineers building a custom workflow-based FastGPT application, the recommended documentation path follows a linear workflow: start with the workflow introduction at `/en/guide/build/workflow/intro`, then reference individual node documentation such as `/en/guide/build/workflow/nodes/dataset_search` for knowledge base retrieval and `/en/guide/build/workflow/nodes/http` for external API integration. Once the workflow is configured, use the publishing guides at `/en/guide/build/publish/openapi` to deploy the application via OpenAPI, or `/en/guide/build/publish/wecom` for WeChat Work integration. Additional configuration for chat interface behavior can be found in `/en/guide/chat/quoteList` and `/en/guide/chat/htmlRendering` to customize response formatting and citation display. For team-based deployments, reference the team mode settings at `/en/guide/admin/teamMode` and SSO configuration at `/en/guide/admin/sso` to manage access controls.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/toc)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/toc)

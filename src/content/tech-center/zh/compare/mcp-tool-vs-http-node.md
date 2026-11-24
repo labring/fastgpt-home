@@ -43,5 +43,5 @@ MCP 的应用工具调用纳入团队每分钟请求数，与外部渠道消息�
 
 | Source | Version | Document |
 | --- | --- | --- |
-| FastGPT | v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173) |
-| FastGPT | v4.16.2 | [self-host/upgrading/4-16/4162](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/4162) |
+| FastGPT | v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/self-host/upgrading/4-17/4173) |
+| FastGPT | v4.16.2 | [self-host/upgrading/4-16/4162](https://doc.fastgpt.cn/self-host/upgrading/4-16/4162) |

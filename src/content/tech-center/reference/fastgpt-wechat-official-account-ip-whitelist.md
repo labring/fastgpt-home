@@ -2,7 +2,7 @@
 title: 配置FastGPT对接微信公众号所需的IP白名单
 slug: /zh/reference/fastgpt-wechat-official-account-ip-whitelist
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/build/publish/official_account
+source: https://doc.fastgpt.cn/guide/build/publish/official_account
 source_type: 官方文档小节
 ---
 
@@ -24,4 +24,4 @@ source_type: 官方文档小节
 2. 仅在对接微信公众号发布功能时需要配置该白名单，其他场景无需操作。
 3. 需完整添加对应场景的所有IP，遗漏可能导致接口调用失败。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/publish/official_account)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/publish/official_account)

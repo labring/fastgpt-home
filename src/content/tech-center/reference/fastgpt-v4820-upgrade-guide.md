@@ -2,7 +2,7 @@
 title: FastGPT V4.8.20版本升级与环境变量变更操作说明
 slug: /zh/reference/fastgpt-v4820-upgrade-guide
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4820
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4820
 source_type: 官方文档小节
 ---
 
@@ -20,4 +20,4 @@ FastGPT V4.8.20版本更新包含环境变量变更与配套升级脚本两项�
 ## 注意事项
 升级V4.8.20需同时完成环境变量变更与升级脚本的执行操作，不可遗漏任意一项。仅可从<4.12.0的版本直接升级至V4.8.20，请勿跨多个版本越级升级。升级完成后需确认服务正常启动，验证版本更新结果。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4820)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/4820)

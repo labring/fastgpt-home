@@ -2,7 +2,7 @@
 title: 在FastGPT中使用Xinference接入本地模型的具体操作方法
 slug: /zh/reference/fastgpt-xinference-local-model
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/custom-models/xinference
+source: https://doc.fastgpt.cn/self-host/custom-models/xinference
 source_type: 官方文档小节
 ---
 
@@ -19,4 +19,4 @@ Xinference是适配FastGPT的开源模型推理平台，可用于接入本地模
 ## 注意事项
 仅支持Xinference兼容的LLM、Embedding与ReRank模型。如需扩展能力，可通过分布式部署实现水平扩展。接入的模型需适配FastGPT的企业级RAG构建场景。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/xinference)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/custom-models/xinference)

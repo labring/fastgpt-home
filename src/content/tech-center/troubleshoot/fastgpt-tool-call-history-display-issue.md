@@ -29,6 +29,6 @@ source_type: GitHub issue
 
 > 来源: [原始讨论：工具调用模式，在聊天历史和查看详情中无法查看思考过程](https://github.com/labring/FastGPT/issues/5227)
 
-> 来源: [FastGPT 对话 OpenAPI](https://doc.fastgpt.io/en/openapi/chat)
+> 来源: [FastGPT 对话 OpenAPI](https://doc.fastgpt.io/openapi/chat)
 
-> 来源: [FastGPT 模型配置](https://doc.fastgpt.io/en/self-host/config/model/intro)
+> 来源: [FastGPT 模型配置](https://doc.fastgpt.io/self-host/config/model/intro)

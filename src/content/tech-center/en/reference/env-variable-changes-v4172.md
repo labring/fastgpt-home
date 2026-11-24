@@ -3,7 +3,7 @@ title: FastGPT Environment Variable Changes: v4.16.2 to v4.17.2
 slug: /en/reference/env-variable-changes-v4172
 page_type: reference-data
 source_type: Official documentation
-source: https://doc.fastgpt.cn/en/self-host/config/env
+source: https://doc.fastgpt.io/self-host/config/env
 description: Environment variables added, removed or given a new default between FastGPT v4.16.2 and v4.17.2: 5 added, 2 removed, 4 new defaults, each checked against the source.
 language: en
 check_day: 2026-10-13
@@ -67,7 +67,7 @@ Values come from the official documentation and open-source repository code of F
 
 ## Sources
 
-- [FastGPT environment variable documentation (current)](https://doc.fastgpt.cn/en/self-host/config/env)
+- [FastGPT environment variable documentation (current)](https://doc.fastgpt.io/self-host/config/env)
 - [FastGPT v4.16.2 service environment definitions](https://github.com/labring/FastGPT/blob/v4.16.2/packages/service/env.ts)
 - [FastGPT v4.16.2 app environment definitions](https://github.com/labring/FastGPT/blob/v4.16.2/projects/app/src/env.ts)
 - [FastGPT v4.16.2 code sandbox environment definitions](https://github.com/labring/FastGPT/blob/v4.16.2/projects/code-sandbox/src/env.ts)

@@ -2,7 +2,7 @@
 title: Add Sandbox Container to Docker FastGPT Deployment
 slug: /en/deploy/fastgpt-docker-sandbox-setup
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/482
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/482
 source_type: 官方文档
 ---
 
@@ -29,4 +29,4 @@ Follow these structured steps to complete the setup:
 ## Security Guidance
 The sandbox container does not include built-in credential verification, so exposing it to public networks is not recommended. All traffic to the sandbox container should be restricted to internal FastGPT service networks only.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/482)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/482)

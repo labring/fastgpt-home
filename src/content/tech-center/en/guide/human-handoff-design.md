@@ -7,7 +7,7 @@ is_part_of: FastGPT Tech Center
 meta_description: Design human handoff for AI workflows: define triggers, route requests, pass authorized context, and review solutions before reuse.
 delivery_source_type: Open-source repository docs and community threads
 source_type: 深度场景内容
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/env
+source: https://doc.fastgpt.cn/self-host/config/env
 meta_title: Decision Guide for Human Handoff in Open-Source Enterprise AI Platforms | FastGPT Technical Center
 schema_type: TechArticle
 date_published: 2026-09-28
@@ -72,8 +72,8 @@ This handoff framework relies on specific external conditions, and may not work 
 
 ## References
 
-- [FastGPT environment variables](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
-- [FastGPT upgrade notes](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/upgrade-instruction)
+- [FastGPT environment variables](https://doc.fastgpt.cn/self-host/config/env)
+- [FastGPT upgrade notes](https://doc.fastgpt.cn/self-host/upgrading/upgrade-instruction)
 
 ## Next steps
 

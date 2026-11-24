@@ -2,7 +2,7 @@
 title: Properly Terminate FastGPT Remote Debug Sessions
 slug: /en/model/fastgpt-debug-session-termination
 page_type: Model guides
-source: https://doc.fastgpt.cn/en/plugin/system-tool-development
+source: https://doc.fastgpt.io/plugin/system-tool-development
 source_type: Official documentation
 ---
 
@@ -22,7 +22,7 @@ The FastGPT platform includes a native End Debugging action for managing active 
 ### Debug Link Refresh
 In scenarios where the debug link has been exposed, the signed-in member changes, or authorization needs to be renewed, use the Refresh Link function. This function generates a new valid debug link to replace the existing exposed, expired, or invalid link.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/plugin/system-tool-development)
+> Source: [FastGPT official source](https://doc.fastgpt.io/plugin/system-tool-development)
 
 ## Applicability and version scope
 

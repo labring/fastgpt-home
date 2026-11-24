@@ -2,7 +2,7 @@
 title: Core FastGPT Plugin Design Goals Overview
 slug: /en/model/fastgpt-plugin-design-goals
 page_type: Model guides
-source: https://doc.fastgpt.cn/en/plugin/intro
+source: https://doc.fastgpt.io/plugin/intro
 source_type: Official documentation
 ---
 
@@ -25,7 +25,7 @@ Contributors can complete plugin development independently using the FastGPT CLI
 ## Runtime Isolation Framework
 Plugin execution is fully managed by a unified runtime environment. Each individual plugin version operates within its own isolated process pool, dedicated task queue, and custom runtime configuration. This structure prevents cross-plugin interference and supports granular resource management per plugin deployment.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/plugin/intro)
+> Source: [FastGPT official source](https://doc.fastgpt.io/plugin/intro)
 
 ## Applicability and version scope
 

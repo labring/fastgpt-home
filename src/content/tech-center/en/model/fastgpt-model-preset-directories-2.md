@@ -2,7 +2,7 @@
 title: Understand FastGPT Model Preset Directory Structures
 slug: /en/model/fastgpt-model-preset-directories-2
 page_type: Model guides
-source: https://doc.fastgpt.cn/en/plugin/model-presets
+source: https://doc.fastgpt.io/plugin/model-presets
 source_type: Official documentation
 ---
 
@@ -31,7 +31,7 @@ The `channel-avatar/` top-level subdirectory stores avatar assets exclusively fo
 | `provider/{Provider}/logo.svg` | Branded logo asset for the associated AI provider |
 | `channel-avatar/` | Directory storing custom avatar assets for AIProxy communication channels |
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/plugin/model-presets)
+> Source: [FastGPT official source](https://doc.fastgpt.io/plugin/model-presets)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: Eliminate Repeated Command Execution Latency
 slug: /en/tutorial/fastgpt-vm-status-deduplication
 page_type: 教程/部署
-source: https://doc.fastgpt.cn/en/guide/build/agentv2/vm
+source: https://doc.fastgpt.io/guide/build/agentv2/vm
 source_type: 官方文档
 ---
 
@@ -32,4 +32,4 @@ For validation of the deduplication behavior:
 5. Submit a new chat turn: confirm that the script executes again during the cold start.
 6. Access the sandbox environment to view `~/.fastgpt/agent-skill-entrypoints/state.json` and verify updated hash or version ID entries after reruns.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/guide/build/agentv2/vm)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/guide/build/agentv2/vm)

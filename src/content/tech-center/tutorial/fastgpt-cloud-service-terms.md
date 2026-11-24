@@ -2,7 +2,7 @@
 title: 详细说明FastGPT云服务使用协议的关键条款与合规要求
 slug: /zh/tutorial/fastgpt-cloud-service-terms
 page_type: 教程/部署
-source: https://doc.fastgpt.cn/zh-CN/guide/version/cloud/terms
+source: https://doc.fastgpt.cn/guide/version/cloud/terms
 source_type: 官方文档小节
 ---
 
@@ -20,4 +20,4 @@ source_type: 官方文档小节
 3. 发现他人使用您的账户时，立即修改账号密码并联系官方客服。
 4. 若收到账户异常或合规审查通知，配合完成相关审查流程。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/version/cloud/terms)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/version/cloud/terms)

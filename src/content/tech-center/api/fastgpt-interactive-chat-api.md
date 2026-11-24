@@ -2,7 +2,7 @@
 title: 详细说明调用包含交互节点的FastGPT会话API接口方法
 slug: /zh/api/fastgpt-interactive-chat-api
 page_type: API与文档
-source: https://doc.fastgpt.cn/zh-CN/openapi/chat
+source: https://doc.fastgpt.cn/openapi/chat
 source_type: 官方文档小节
 ---
 
@@ -70,4 +70,4 @@ source_type: 官方文档小节
 }
 ```
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/openapi/chat)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/openapi/chat)

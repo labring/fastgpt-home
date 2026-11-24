@@ -2,7 +2,7 @@
 title: Detailed FastGPT V4.6.2 Feature Update Overview
 slug: /en/deploy/fastgpt-v462-feature-updates
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/462
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/462
 source_type: 官方文档
 ---
 
@@ -28,4 +28,4 @@ The following table outlines mandatory requirements and associated notes for ena
 ## Text Splitter Function Refinements
 The TextSplitter function has been fixed and improved in this release, with refined logic that resolves prior edge-case errors and streamlines text segmentation workflows for document processing and query handling.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/462)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/462)

@@ -2,7 +2,7 @@
 title: FastGPT Milvus 部署与迁移常见问题排查指南
 slug: /zh/deploy/fastgpt-milvus-troubleshooting
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/milvus-bm25
+source: https://doc.fastgpt.cn/self-host/milvus-bm25
 source_type: 官方文档
 ---
 
@@ -18,4 +18,4 @@ source_type: 官方文档
 - 迁移持续失败且`targetCount < processedCount`：需检查Milvus运行状态，确认是否存在OOM或已释放集合的情况，若存在此类问题可使用`resumeMigrationId`参数续跑迁移任务。
 - 迁移完成后全文检索为空：需确认迁移任务已执行完毕且状态为`done`；若`modeldata_v2`为空，则全文检索无命中结果，需重新执行或检查迁移流程。
 
-> 来源: [FastGPT 官方文档与源码](https://doc.fastgpt.cn/zh-CN/self-host/milvus-bm25)
+> 来源: [FastGPT 官方文档与源码](https://doc.fastgpt.cn/self-host/milvus-bm25)

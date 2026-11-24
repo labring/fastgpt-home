@@ -29,6 +29,6 @@ source_type: GitHub issue
 
 > 来源: [原始讨论：Add an additional field to the data in the knowledge base to store custom attributes of the data.](https://github.com/labring/FastGPT/issues/773)
 
-> 来源: [FastGPT 知识库 OpenAPI](https://doc.fastgpt.io/en/openapi/dataset)
+> 来源: [FastGPT 知识库 OpenAPI](https://doc.fastgpt.io/openapi/dataset)
 
-> 来源: [FastGPT 商业版集合标签与过滤](https://doc.fastgpt.io/en/guide/dataset/collection_tags)
+> 来源: [FastGPT 商业版集合标签与过滤](https://doc.fastgpt.io/guide/dataset/collection_tags)

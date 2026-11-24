@@ -2,7 +2,7 @@
 title: Run FastGPT v4.12.0 Commercial Migration Script
 slug: /en/deploy/fastgpt-commercial-4120-migration
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-12/4120
+source: https://doc.fastgpt.io/self-host/upgrading/4-12/4120
 source_type: Official documentation
 ---
 
@@ -25,7 +25,7 @@ Two placeholders must be updated before running the command:
 ## Script Core Functionality
 The migration script completes a single critical post-upgrade setup task: initializing chat log permissions for team members. This process updates the access control settings for existing chat logs to match the v4.12.0 permission model, ensuring that all team members have the correct level of access to chat logs based on their assigned workspace roles. Without running this script, team members may experience unexpected permission errors when accessing pre-upgrade chat logs.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-12/4120)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-12/4120)
 
 ## Applicability and version scope
 

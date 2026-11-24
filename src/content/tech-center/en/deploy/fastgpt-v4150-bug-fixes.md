@@ -2,7 +2,7 @@
 title: Resolved Bug Fixes for FastGPT v4.15.0
 slug: /en/deploy/fastgpt-v4150-bug-fixes
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41500
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/41500
 source_type: Official documentation
 ---
 
@@ -50,7 +50,7 @@ All core platform and tooling issues have been fully resolved:
 - Workflow tool call parameter schemas for array and object types no longer exhibit abnormal behavior.
 - UI offset issues in publish channel portals have been resolved.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41500)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-15/41500)
 
 ## Applicability and version scope
 

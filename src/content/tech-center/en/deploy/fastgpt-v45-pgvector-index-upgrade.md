@@ -2,7 +2,7 @@
 title: FastGPT V4.5 PgVector Index Upgrade Guide
 slug: /en/deploy/fastgpt-v45-pgvector-index-upgrade
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/45
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/45
 source_type: 官方文档
 ---
 
@@ -22,4 +22,4 @@ This FastGPT V4.5 upgrade requires targeted database operations to deploy the ne
 | HNSW | 3x to 10x faster than IVFFlat, millisecond-level queries | 4C16G server, 5 million dataset records | `~48 hours` (parallel build) |
 | IVFFlat | Legacy slower query speeds | Not specified | Not specified |
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/45)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/45)

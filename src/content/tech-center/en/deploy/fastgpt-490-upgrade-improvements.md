@@ -2,7 +2,7 @@
 title: Key Technical Improvements for FastGPT 490 Upgrade
 slug: /en/deploy/fastgpt-490-upgrade-improvements
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/490
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/490
 source_type: 官方文档
 ---
 
@@ -35,4 +35,4 @@ Two key backend changes have been implemented to streamline large file handling:
 | File Read Performance           | Merged Mongo file read streams; optimized storage chunks for faster large file reads (50MB PDF read time improved 3x) |
 | HTTP Body Adaptation            | Adds support for string object types |
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/490)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/490)

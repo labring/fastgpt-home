@@ -2,7 +2,7 @@
 title: FastGPT工作流节点知识库搜索的使用与配置方法
 slug: /zh/reference/fastgpt-workflow-dataset-search
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/dataset_search
+source: https://doc.fastgpt.cn/guide/build/workflow/nodes/dataset_search
 source_type: 官方文档小节
 ---
 
@@ -22,4 +22,4 @@ source_type: 官方文档小节
 2. 具体参数与内部逻辑需严格遵循官方知识库搜索方案，不可自行随意配置；
 3. 需确保关联的知识库集合已正常创建并配置完成，否则节点运行可能出现异常。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/dataset_search)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/workflow/nodes/dataset_search)

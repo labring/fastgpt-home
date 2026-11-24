@@ -2,7 +2,7 @@
 title: 使用FastGPT OpenAPI创建网络链接类型的知识库集合
 slug: /zh/reference/fastgpt-create-link-collection
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/openapi/dataset
+source: https://doc.fastgpt.cn/openapi/dataset
 source_type: 官方文档小节
 ---
 
@@ -51,4 +51,4 @@ curl --location --request POST 'http://localhost:3000/api/core/dataset/collectio
 4. 成功调用后返回状态码200，响应数据包含`collectionId`与`insertLen`（成功插入的文本条数）。
 5. 请求体需符合JSON语法规范，避免格式错误。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/openapi/dataset)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/openapi/dataset)

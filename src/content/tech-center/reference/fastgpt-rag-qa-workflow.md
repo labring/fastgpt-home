@@ -2,7 +2,7 @@
 title: FastGPT智能问答系统RAG应用的操作流程与注意事项
 slug: /zh/reference/fastgpt-rag-qa-workflow
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/rag
+source: https://doc.fastgpt.cn/guide/dataset/rag
 source_type: 官方文档小节
 ---
 
@@ -22,4 +22,4 @@ RAG通过实时检索外部知识库生成准确详细的答案，可避免传�
 1. 输入文档需预先通过文档智能处理完成索引，才可被检索使用。
 2. 系统仅允许经过Azure AD身份验证且拥有对应组权限的用户访问内容。
 3. 流程通过权限管控、检索与生成环节保障数据安全与合规性。
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/dataset/rag)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/dataset/rag)

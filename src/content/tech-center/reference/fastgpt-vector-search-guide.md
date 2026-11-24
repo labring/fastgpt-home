@@ -2,7 +2,7 @@
 title: FastGPT向量搜索的原理与优化使用要点
 slug: /zh/reference/fastgpt-vector-search-guide
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/dataset_engine
+source: https://doc.fastgpt.cn/guide/dataset/dataset_engine
 source_type: 官方文档小节
 ---
 
@@ -19,4 +19,4 @@ FastGPT通过Embedding向量实现知识库的相似度匹配。向量距离越�
 2. 向量匹配无法完全保障精确性，需通过topk召回补充关键环节；
 3. 相较于复杂的向量模型训练，优先优化数据与检索词质量可有效提升向量搜索效果。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/dataset/dataset_engine)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/dataset/dataset_engine)

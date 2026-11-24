@@ -2,7 +2,7 @@
 title: FastGPT V4.6.1版本升级操作与功能说明
 slug: /zh/deploy/fastgpt-v461-upgrade-feature
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/461
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/461
 source_type: 官方文档
 ---
 
@@ -23,4 +23,4 @@ source_type: 官方文档
 ## 使用注意事项
 部分历史版本升级至V4.6.1时，若涉及环境变量变更，需同步更新对应配置项，否则可能出现服务启动异常的情况。若升级后出现功能异常，需检查对应服务的适配性与原有配置是否正确。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/461)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/461)

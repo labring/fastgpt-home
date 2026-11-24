@@ -2,7 +2,7 @@
 title: Configure FastGPT Self-Hosted Deployment Environment Variables
 slug: /en/deploy/fastgpt-self-hosted-deployment-env-vars
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/env
+source: https://doc.fastgpt.io/self-host/config/env
 source_type: Official documentation
 ---
 
@@ -26,7 +26,7 @@ A structured breakdown of the shared variable categories is below:
 ## Component-Specific Variables
 Some environment variables are only read by either `projects/app` or `pro/admin`, and are not shared between the two components. These variables are documented separately to ensure deployers can correctly configure only the components they have deployed, eliminating potential configuration conflicts or unintended behavior.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/env)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/env)
 
 ## Applicability and version scope
 

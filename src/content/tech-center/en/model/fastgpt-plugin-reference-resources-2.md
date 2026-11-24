@@ -2,7 +2,7 @@
 title: Official FastGPT Plugin Development Reference Resources
 slug: /en/model/fastgpt-plugin-reference-resources-2
 page_type: Model guides
-source: https://doc.fastgpt.cn/en/plugin/intro
+source: https://doc.fastgpt.io/plugin/intro
 source_type: Official documentation
 ---
 
@@ -27,7 +27,7 @@ To effectively use these resources, follow this structured sequence aligned with
 3.  Consult the FastGPT Plugin Architecture specification to ensure custom plugin components align with official runtime requirements and compatibility rules.
 4.  Use the System Plugin Development Guide to implement custom plugin logic, test integrations, and prepare deployable plugin packages.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/plugin/intro)
+> Source: [FastGPT official source](https://doc.fastgpt.io/plugin/intro)
 
 ## Applicability and version scope
 

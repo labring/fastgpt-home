@@ -2,7 +2,7 @@
 title: Delete Legacy Milvus modeldata Tables Post Migration
 slug: /en/deploy/delete-legacy-milvus-modeldata
 page_type: 部署场景
-source: https://doc.fastgpt.cn/en/self-host/milvus-bm25
+source: https://doc.fastgpt.io/self-host/milvus-bm25
 source_type: 官方文档
 ---
 
@@ -28,4 +28,4 @@ If direct API access is restricted, the legacy `modeldata` table can be dropped 
 ## Post-Deletion System Behavior
 Once the legacy `modeldata` table has been removed, restarting FastGPT will not attempt to recreate or access the old table. The platform’s standard initialization routine will only create and load the `modeldata_v2` table, and will not reference the original `modeldata` table unless the migration script is re-executed. This ensures no unintended resource consumption or data conflicts after the cleanup process is complete.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/milvus-bm25)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/milvus-bm25)

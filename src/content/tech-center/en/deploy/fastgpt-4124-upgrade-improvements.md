@@ -2,7 +2,7 @@
 title: FastGPT 4.12.4 Key Functional Upgrade Improvements
 slug: /en/deploy/fastgpt-4124-upgrade-improvements
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-12/4124
+source: https://doc.fastgpt.io/self-host/upgrading/4-12/4124
 source_type: Official documentation
 ---
 
@@ -32,7 +32,7 @@ The app deletion workflow has been optimized to reduce unnecessary database tran
 | Performance | Reduced transaction operations during app deletion |
 | UI/UX | User selection UI refined for better usability |
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-12/4124)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-12/4124)
 
 ## Applicability and version scope
 

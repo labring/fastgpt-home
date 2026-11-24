@@ -2,7 +2,7 @@
 title: Install and Configure MinerU for FastGPT Parsing
 slug: /en/deploy/mineru-installation-fastgpt
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/custom-models/mineru
+source: https://doc.fastgpt.io/self-host/custom-models/mineru
 source_type: Official documentation
 ---
 
@@ -33,7 +33,7 @@ The following table lists the critical parameters used in the deployment command
 | Container Name | `--name mode_pdf_minerU` | Assigns a fixed, human-readable name to the service container |
 | Image Version | `v1` | Specifies the supported, validated version of the MinerU Docker image |
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/custom-models/mineru)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/custom-models/mineru)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: Migrate FastGPT Config to Environment Variables
 slug: /en/deploy/fastgpt-config-migration-env
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/env
+source: https://doc.fastgpt.io/self-host/config/env
 source_type: Official documentation
 ---
 
@@ -76,7 +76,7 @@ The open-source edition supports multiple enhanced PDF parsing services, with a 
 ### Final Notes
 After updating any environment variables, restart the FastGPT service. To use the configured enhanced parsing service, enable **Enhanced PDF Parsing** when importing files into a Dataset or configuring App file uploads. If this option is disabled, FastGPT uses its built-in PDF parser.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/env)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/env)
 
 ## Applicability and version scope
 

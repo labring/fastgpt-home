@@ -2,7 +2,7 @@
 title: FastGPT Resource Permission Reference
 slug: /en/tutorial/fastgpt-resource-permission-reference-2
 page_type: 教程/部署
-source: https://doc.fastgpt.cn/en/guide/workspace/team/team_roles_permissions
+source: https://doc.fastgpt.io/guide/workspace/team/team_roles_permissions
 source_type: 官方文档
 ---
 
@@ -35,4 +35,4 @@ App permissions are scoped to individual application assets. The three permissio
 ### Dataset Permissions
 Dataset permissions mirror the tiered structure of app permissions. Can Use allows the dataset to be called in compatible team apps, Can Edit permits modifying the dataset's stored content, and Can Manage allows adding or removing collaborators for the specific dataset.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/guide/workspace/team/team_roles_permissions)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/guide/workspace/team/team_roles_permissions)

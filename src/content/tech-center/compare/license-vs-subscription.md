@@ -2,11 +2,11 @@
 title: 单机授权与订阅：两种付费节奏怎么比
 slug: /zh/compare/license-vs-subscription
 page_type: matrix
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173
+source: https://doc.fastgpt.cn/self-host/upgrading/4-17/4173
 source_type: 深度场景内容
 meta_title: 单机授权与订阅怎么选
 meta_description: 从数据位置、许可期限、资源投入与运维责任比较私有部署授权和云服务订阅，说明长期预算、扩展条件与退出迁移的核对方法，帮助采购方在同一业务规模下评估。
-delivery_metadata: {"source_front_matter":{"slug":"license-vs-subscription","meta_title":"单机授权与订阅怎么选","meta_description":"从数据位置、许可期限、资源投入与运维责任比较私有部署授权和云服务订阅，说明长期预算、扩展条件与退出迁移的核对方法，帮助采购方在同一业务规模下评估。","language":"zh","content_type":"matrix","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"license-vs-subscription","keywords":"单机授权,订阅,付费节奏,数据位置,退出安排","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"买断授权和按订阅付费怎么比","需求依据":"客户 2026-11-07 购买诉求第 4 条：授权与长期使用成本。","事实来源":"FastGPT 产品知识库·内容收集清单（两条产品线与计费结构）","内链":"https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173","排期":"W18 决策矩阵第 7 篇","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（来源版本，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核计费结构与导出范围。"]}
+delivery_metadata: {"source_front_matter":{"slug":"license-vs-subscription","meta_title":"单机授权与订阅怎么选","meta_description":"从数据位置、许可期限、资源投入与运维责任比较私有部署授权和云服务订阅，说明长期预算、扩展条件与退出迁移的核对方法，帮助采购方在同一业务规模下评估。","language":"zh","content_type":"matrix","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"license-vs-subscription","keywords":"单机授权,订阅,付费节奏,数据位置,退出安排","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"买断授权和按订阅付费怎么比","需求依据":"客户 2026-11-07 购买诉求第 4 条：授权与长期使用成本。","事实来源":"FastGPT 产品知识库·内容收集清单（两条产品线与计费结构）","内链":"https://doc.fastgpt.cn/self-host/upgrading/4-17/4173","排期":"W18 决策矩阵第 7 篇","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（来源版本，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核计费结构与导出范围。"]}
 keywords: 单机授权,订阅,付费节奏,数据位置,退出安排
 schema_type: Article
 date_modified: 2026-11-16
@@ -18,7 +18,7 @@ date_modified: 2026-11-16
 
 ## 两种形态的口径
 
-对照材料：[FastGPT 官方说明](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173)。
+对照材料：[FastGPT 官方说明](https://doc.fastgpt.cn/self-host/upgrading/4-17/4173)。
 
 私有部署版以单台服务器 License 为基础授权，分标准版、专业版、旗舰版，租户上限分别是一百、一千与不限，专业版起支持单点登录与 OA 集成。云服务版分国际版与国内版，按订阅费、模型调用量与资源消耗计费，不需要客户准备服务器。
 
@@ -74,4 +74,4 @@ date_modified: 2026-11-16
 | --- | --- | --- |
 | 两条产品线、计费结构、版本差异 | 当期商业方案 | [FastGPT 商务咨询：授权、部署与支持范围](https://fastgpt.cn/contact) |
 | 授权与数据条款、期限与版本范围 | 合同约定 | [FastGPT 商务咨询：授权、部署与支持范围](https://fastgpt.cn/contact) |
-| 导出范围规则 | v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173) |
+| 导出范围规则 | v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/self-host/upgrading/4-17/4173) |

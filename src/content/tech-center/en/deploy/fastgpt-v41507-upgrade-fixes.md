@@ -2,7 +2,7 @@
 title: Resolved Issues in FastGPT v4.15.07 Upgrade
 slug: /en/deploy/fastgpt-v41507-upgrade-fixes
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41507
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/41507
 source_type: Official documentation
 ---
 
@@ -28,7 +28,7 @@ To confirm all resolved fixes are active after upgrading to v4.15.07, follow the
 3.  Deploy an AgentV2 integration with MCP, then confirm the schema list loads without failure.
 4.  Select text within any workflow text input field, press Ctrl+C, and paste the text into an external editor to confirm the copy operation works as expected.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41507)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-15/41507)
 
 ## Applicability and version scope
 

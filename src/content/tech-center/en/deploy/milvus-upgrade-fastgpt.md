@@ -2,7 +2,7 @@
 title: Upgrade Milvus to 2.5.16+ for FastGPT
 slug: /en/deploy/milvus-upgrade-fastgpt
 page_type: 部署场景
-source: https://doc.fastgpt.cn/en/self-host/milvus-bm25
+source: https://doc.fastgpt.io/self-host/milvus-bm25
 source_type: 官方文档
 ---
 
@@ -27,4 +27,4 @@ Following the service restart, it is critical to validate the integrity of the `
 2. Verify that the collection contains non-empty vector data, as an empty or missing collection will break subsequent migration workflows.
 If the `modeldata` collection is either missing or entirely empty, stop all migration operations immediately and restore your Milvus data from a pre-upgrade backup to recover the required vector source data.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/milvus-bm25)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/milvus-bm25)

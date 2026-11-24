@@ -2,7 +2,7 @@
 title: Resolved Issues and New Features in FastGPT v4110
 slug: /en/deploy/fastgpt-v4110-upgrade-improvements
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4110
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/4110
 source_type: 官方文档
 ---
 
@@ -28,4 +28,4 @@ This update introduces the `valueTypeFormat` parameter for workflow nodes, desig
 ## Regex Special Character Escaping in Dataset Search
 Previous versions of the dataset list search functionality failed to properly escape special regex characters, leading to unintended search behavior when querying terms containing regex operators such as `\`, `^`, `$`, or `*`. This update adds proper escaping for all special regex characters in dataset list searches, ensuring that search terms are interpreted literally as entered, rather than parsed as active regex syntax. This resolves cases where valid search terms failed to return expected results due to unescaped regex operators.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4110)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/4110)

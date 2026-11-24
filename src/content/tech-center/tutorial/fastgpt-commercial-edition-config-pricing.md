@@ -2,7 +2,7 @@
 title: 介绍FastGPT商业版的功能差异、部署配置与收费规则
 slug: /zh/tutorial/fastgpt-commercial-edition-config-pricing
 page_type: 教程/部署
-source: https://doc.fastgpt.cn/zh-CN/guide/version/commercial
+source: https://doc.fastgpt.cn/guide/version/commercial
 source_type: 官方文档
 ---
 
@@ -21,4 +21,4 @@ FastGPT商业版是社区版的增强版本，仅需安装商业版镜像并配�
 4. 访问商业版后台即可使用全部增强功能。
 大部分更新升级仅需重新拉取镜像并执行初始化脚本即可完成；跨版本或复杂更新可自行参考文档或付费支持，费用与技术服务费一致（2000~3000元/人/天）。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/version/commercial)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/version/commercial)

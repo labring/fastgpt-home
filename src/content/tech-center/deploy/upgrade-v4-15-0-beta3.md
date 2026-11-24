@@ -2,7 +2,7 @@
 title: FastGPT V4.15.0-beta3版本升级说明与操作指南
 slug: /zh/deploy/upgrade-v4-15-0-beta3
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41503
+source: https://doc.fastgpt.cn/self-host/upgrading/4-15/41503
 source_type: 官方文档
 ---
 
@@ -20,7 +20,7 @@ source_type: 官方文档
 ## 升级后怎么验证
 验证多模态模型是否支持音视频输入功能；验证分享链接或门户页是否支持语言切换，不再自动识别浏览器语言；验证Skill模块弹窗样式是否更新、Skill list接口性能是否正常；验证工作流编辑页登录失效后是否自动保存草稿；验证登录页UI是否更新；验证TTS语音播放是否适配最新OpenAI SDK无报错；验证知识库数据分块处理代码块时是否避免超大分块；验证Code Sandbox的新增环境变量配置是否按预期生效。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41503)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-15/41503)
 
 ## 适用性与版本范围
 

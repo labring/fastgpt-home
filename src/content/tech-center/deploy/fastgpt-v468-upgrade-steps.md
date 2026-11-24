@@ -2,7 +2,7 @@
 title: FastGPT V4.6.8版本升级步骤与更新内容说明
 slug: /zh/deploy/fastgpt-v468-upgrade-steps
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/468
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/468
 source_type: 官方文档
 ---
 
@@ -56,4 +56,4 @@ curl --location --request POST https://{{host}}/api/init/v468 \
 --header "Content-Type: application/json"
 ```
 该请求会初始化计费系统，内部使用场景可免费扩容存储容量。
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/468)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/468)

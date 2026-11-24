@@ -2,7 +2,7 @@
 title: Configure FastGPT dataset search parameters and modes
 slug: /en/tutorial/fastgpt-dataset-search-modes
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/dataset/dataset_engine
+source: https://doc.fastgpt.io/guide/dataset/dataset_engine
 source_type: Official documentation
 ---
 
@@ -28,7 +28,7 @@ FastGPT’s dataset search system provides four configurable retrieval modes to 
 4.  Merge initial vector search, full-text search, and reranked results using the RRF formula to produce the final sorted result set.
 5.  Filter results using rerank scores if granular relevance filtering is required.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/dataset_engine)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/dataset_engine)
 
 ## Applicability and version scope
 

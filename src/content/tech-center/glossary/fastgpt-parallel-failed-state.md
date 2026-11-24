@@ -2,7 +2,7 @@
 title: FastGPT并行运行节点failed状态的定义与用法说明
 slug: /zh/glossary/fastgpt-parallel-failed-state
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/parallel_run
+source: https://doc.fastgpt.cn/guide/build/workflow/nodes/parallel_run
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ failed属于并行运行节点完成状态字段的可选值之一，该字段�
 ## 容易搞错的地方
 需区分failed与partial_success的适用场景，failed特指所有并行任务均失败的情况，partial_success对应部分任务失败的场景。当出现export dataset failed报错时，需结合Docker运行日志排查具体异常原因。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/parallel_run)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/workflow/nodes/parallel_run)
 
 ## 适用性与版本范围
 

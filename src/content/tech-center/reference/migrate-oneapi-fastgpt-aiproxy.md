@@ -2,7 +2,7 @@
 title: 将OneAPI渠道配置迁移到FastGPT AI Proxy的操作方法
 slug: /zh/reference/migrate-oneapi-fastgpt-aiproxy
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/model/intro
+source: https://doc.fastgpt.cn/self-host/config/model/intro
 source_type: 官方文档小节
 ---
 
@@ -30,4 +30,4 @@ curl --location --request POST '{{host}}/api/channels/import/oneapi' \
 2. 迁移完成后建议手动检查配置。
 3. 脚本并非完全准确，存在局限性。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/model/intro)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/config/model/intro)

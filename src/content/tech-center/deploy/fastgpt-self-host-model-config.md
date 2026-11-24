@@ -2,7 +2,7 @@
 title: FastGPT 自部署环境下的模型配置方法与参数说明
 slug: /zh/deploy/fastgpt-self-host-model-config
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/model/intro
+source: https://doc.fastgpt.cn/self-host/config/model/intro
 source_type: 官方文档
 ---
 
@@ -31,4 +31,4 @@ curl --location --request POST {{host}}/api/channels/import/oneapi \
 ```
 执行成功会返回`success: true`，脚本仅做简单数据映射，建议迁移后手动检查。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/model/intro)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/config/model/intro)

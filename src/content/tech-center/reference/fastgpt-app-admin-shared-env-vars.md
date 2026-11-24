@@ -2,7 +2,7 @@
 title: FastGPT App与Admin共享环境变量配置参数速查
 slug: /zh/reference/fastgpt-app-admin-shared-env-vars
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/env
+source: https://doc.fastgpt.cn/self-host/config/env
 source_type: 官方文档小节
 ---
 
@@ -30,4 +30,4 @@ source_type: 官方文档小节
 3. PRO_TOKEN需与pro/admin服务的配置保持一致，当配置PRO_URL时，必须填写PRO_TOKEN。
 4. 密钥类参数需严格遵守文档指定的长度限制，否则会引发加解密、鉴权失败等问题。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/config/env)

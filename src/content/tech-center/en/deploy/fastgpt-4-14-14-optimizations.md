@@ -2,7 +2,7 @@
 title: FastGPT 4.14.14 Performance and Compatibility Optimizations
 slug: /en/deploy/fastgpt-4-14-14-optimizations
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-14/41414
+source: https://doc.fastgpt.io/self-host/upgrading/4-14/41414
 source_type: Official documentation
 ---
 
@@ -26,7 +26,7 @@ The internal network address detection logic has been significantly improved. Th
 ## DeepSeek Tool Calling and Thinking Mode Compatibility
 A critical API compatibility issue has been resolved for users integrating DeepSeek models. Prior to this update, combining DeepSeek tool calling functionality with the thinking mode feature would trigger 400 errors from the DeepSeek API. This release adds full compatibility for this combined workflow, ensuring that users can leverage both tool calling and thinking mode without encountering API errors, with no manual adjustments needed to their existing model configurations.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-14/41414)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-14/41414)
 
 ## Applicability and version scope
 

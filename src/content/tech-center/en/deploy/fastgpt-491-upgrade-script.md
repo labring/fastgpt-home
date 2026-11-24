@@ -2,7 +2,7 @@
 title: Execute the FastGPT 4.9.1 Upgrade Script
 slug: /en/deploy/fastgpt-491-upgrade-script
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/491
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/491
 source_type: 官方文档
 ---
 
@@ -32,4 +32,4 @@ Each component of the command serves a defined purpose:
 ## Script Function and Monitoring
 The primary function of this upgrade script is to reprocess tokenization using the latest jieba dictionary. This data reprocessing step may take a significant amount of time, with the total duration dependent on the volume of data stored in your FastGPT deployment. To track the progress of the reprocessing, you can monitor the runtime logs of your FastGPT application, which will output periodic status updates throughout the script's execution.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/491)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/491)

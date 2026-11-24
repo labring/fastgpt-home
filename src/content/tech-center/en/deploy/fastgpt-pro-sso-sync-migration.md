@@ -2,7 +2,7 @@
 title: Migrate FastGPT Pro SSO and Sync Configurations
 slug: /en/deploy/fastgpt-pro-sso-sync-migration
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/492
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/492
 source_type: 官方文档
 ---
 
@@ -27,4 +27,4 @@ Follow these required steps to complete the migration:
 ## Validation and Post-Upgrade Checks
 After deploying the updated `sso-service` and upgrading your FastGPT images, verify that your SSO login flow and member sync functionality operate as expected. If you used WeCom org sync, confirm the team mode is set to "Sync Mode" in the Pro admin panel to restore full organizational structure synchronization.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/492)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/492)

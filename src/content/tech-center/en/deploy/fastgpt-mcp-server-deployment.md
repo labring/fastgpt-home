@@ -2,7 +2,7 @@
 title: Deploy FastGPT MCP Server for Self-Hosted Upgrades
 slug: /en/deploy/fastgpt-mcp-server-deployment
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/496
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/496
 source_type: 官方文档
 ---
 
@@ -46,4 +46,4 @@ The following table lists all mandatory and critical parameters for FastGPT MCP 
 | `restart` | Yes | `always` | Configures automatic container restart on failure or host reboot |
 | `FASTGPT_ENDPOINT` | Yes | `http://fastgpt:3000` (Docker) / Custom URL | Specifies the endpoint for the core FastGPT service to enable MCP server connectivity |
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/496)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/496)

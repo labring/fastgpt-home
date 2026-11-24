@@ -2,7 +2,7 @@
 title: Set up and run FastGPT local development server
 slug: /en/deploy/fastgpt-local-dev-run
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/dev
+source: https://doc.fastgpt.io/self-host/dev
 source_type: Official documentation
 ---
 
@@ -30,7 +30,7 @@ Follow these exact commands in order to start the local development environment,
 ## Access the Running Instance
 After the compilation process completes and the server starts, the FastGPT local development instance will use the default Next.js port, 3000. To access the web interface, open a web browser and navigate to `http://localhost:3000`.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/dev)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/dev)
 
 ## Applicability and version scope
 

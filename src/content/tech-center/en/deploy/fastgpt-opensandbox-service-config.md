@@ -2,7 +2,7 @@
 title: Configure OpenSandbox Settings for FastGPT Services
 slug: /en/deploy/fastgpt-opensandbox-service-config
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/sandbox/opensandbox
+source: https://doc.fastgpt.io/self-host/config/sandbox/opensandbox
 source_type: Official documentation
 ---
 
@@ -35,7 +35,7 @@ All required and optional environment variables for OpenSandbox configuration ar
 ## Deployment & Validation
 After replacing all placeholder values (such as `replace_with_opensandbox_api_key` and `replace_with_volume_manager_token`) with secure, unique values, apply the updated Docker Compose configuration. Confirm successful deployment by checking that sandbox services start without authentication errors and that persistent session volumes are created with the `fastgpt-session` prefix.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/sandbox/opensandbox)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/sandbox/opensandbox)
 
 ## Applicability and version scope
 

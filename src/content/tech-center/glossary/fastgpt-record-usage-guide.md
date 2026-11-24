@@ -2,7 +2,7 @@
 title: FastGPT中record术语的定义与使用方法说明
 slug: /zh/glossary/fastgpt-record-usage-guide
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/openapi/chat
+source: https://doc.fastgpt.cn/openapi/chat
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ FastGPT中的record包含对话记录与LLM请求追踪记录两类数据实体�
 ## 容易搞错的地方
 对话记录的contentId、chatId参数不可混淆，contentId为单条对话的ID，chatId为整个会话的ID。LLM请求追踪记录升级前写入的旧记录无teamId字段，升级后无法仅通过requestId查询，会被按过期处理。该LLM请求追踪记录带有TTL，仅用于临时排查模型调用详情，不可用于长期历史问题排查。使用对话记录删除接口时，需确保所有必填参数均已正确替换，否则请求会失败。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/openapi/chat)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/openapi/chat)
 
 ## 适用性与版本范围
 

@@ -3,7 +3,7 @@ title: FastGPT 环境变量变化表：v4.16.2 → v4.17.2
 slug: /zh/reference/env-variable-changes-v4172
 page_type: 基准数据页
 source_type: 官方文档
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/env
+source: https://doc.fastgpt.cn/self-host/config/env
 description: 对比 FastGPT v4.16.2 与 v4.17.2 两个发布版本的官方环境变量说明：新增 5 项、移除 2 项、默认值变化 4 项，逐项回到源码核对。
 language: zh
 check_day: 2026-10-13
@@ -67,7 +67,7 @@ check_day: 2026-10-13
 
 ## 来源
 
-- [FastGPT 环境变量说明（现行文档）](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
+- [FastGPT 环境变量说明（现行文档）](https://doc.fastgpt.cn/self-host/config/env)
 - [FastGPT v4.16.2 service 环境变量定义](https://github.com/labring/FastGPT/blob/v4.16.2/packages/service/env.ts)
 - [FastGPT v4.16.2 app 环境变量定义](https://github.com/labring/FastGPT/blob/v4.16.2/projects/app/src/env.ts)
 - [FastGPT v4.16.2 code-sandbox 环境变量定义](https://github.com/labring/FastGPT/blob/v4.16.2/projects/code-sandbox/src/env.ts)

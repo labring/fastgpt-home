@@ -2,7 +2,7 @@
 title: FastGPT V4.8.14版本更新内容技术速查
 slug: /zh/reference/fastgpt-v4-8-14-update-ref
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4813
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4813
 source_type: 官方文档小节
 ---
 
@@ -44,4 +44,4 @@ source_type: 官方文档小节
 5. Dockerfile构建时需确认代理配置，以支持pnpm install正常执行
 6. 拖拽文件上传需确认浏览器支持对应交互功能
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4813)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/4813)

@@ -2,7 +2,7 @@
 title: FastGPT V4.15.5版本升级内容解读与操作指引
 slug: /zh/deploy/upgrade-v4-15-5
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/4155
+source: https://doc.fastgpt.cn/self-host/upgrading/4-15/4155
 source_type: 官方文档
 ---
 
@@ -23,7 +23,7 @@ source_type: 官方文档
 ## 升级后怎么验证
 配置Cloudflare R2对象存储并完成文件上传下载，确认功能正常。配置SOMARK_API_KEY并上传PDF文件，确认解析正常。上传文件至阿里云OSS，确认ETag正常读取。上传不存在的S3/MinIO源文件，确认返回文件找不到及HTTP 404。升级旧插件节点，确认输入框正常显示。上传头像，确认URL未被重复编码。检查服务运行状态，确认无异常报错。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/4155)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-15/4155)
 
 ## 适用性与版本范围
 

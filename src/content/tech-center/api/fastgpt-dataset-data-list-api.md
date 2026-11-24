@@ -2,7 +2,7 @@
 title: 获取FastGPT数据集集合数据列表的API调用指南
 slug: /zh/api/fastgpt-dataset-data-list-api
 page_type: API与文档
-source: https://doc.fastgpt.cn/zh-CN/openapi/dataset
+source: https://doc.fastgpt.cn/openapi/dataset
 source_type: 官方文档小节
 ---
 
@@ -52,4 +52,4 @@ source_type: 官方文档小节
 }
 ```
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/openapi/dataset)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/openapi/dataset)

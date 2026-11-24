@@ -2,7 +2,7 @@
 title: Resolve Duplicate FastGPT Chat Header Records
 slug: /en/deploy/fastgpt-cleanup-duplicate-chat-headers
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41507
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/41507
 source_type: Official documentation
 ---
 
@@ -40,7 +40,7 @@ The script follows these fixed execution rules:
 3. In non-dry-run mode, only deletes duplicate `chats` header records. Messages stored in `chatitems` and `chat_item_responses` collections are not modified or deleted.
 4. The API response includes duplicate group count, estimated delete count, actual delete count, and sample duplicate group data.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41507)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-15/41507)
 
 ## Applicability and version scope
 

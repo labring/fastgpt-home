@@ -2,7 +2,7 @@
 title: 为FastGPT自部署环境接入MinerU以实现PDF文档解析功能
 slug: /zh/reference/fastgpt-mineru-pdf-parsing
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/custom-models/mineru
+source: https://doc.fastgpt.cn/self-host/custom-models/mineru
 source_type: 官方文档小节
 ---
 
@@ -19,4 +19,4 @@ source_type: 官方文档小节
 1. 该功能仅支持FastGPT自部署场景，不适用于其他部署模式；
 2. 接入需在FastGPT的本地模型使用模块中完成；
 3. 若出现配置异常，可参考官方文档的模型问题排查流程。
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/mineru)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/custom-models/mineru)

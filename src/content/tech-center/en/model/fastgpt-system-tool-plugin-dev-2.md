@@ -2,7 +2,7 @@
 title: Develop FastGPT System Tool Plugins Post v4.15.0
 slug: /en/model/fastgpt-system-tool-plugin-dev-2
 page_type: Model guides
-source: https://doc.fastgpt.cn/en/plugin/system-tool-development
+source: https://doc.fastgpt.io/plugin/system-tool-development
 source_type: Official documentation
 ---
 
@@ -26,7 +26,7 @@ Follow this structured workflow to create a valid system tool plugin:
 3. **Define Plugin Specifications**: Use `@fastgpt-plugin/sdk-factory` to outline input parameters, expected output formats, required secret configurations, and the core execution logic for your tool(s).
 4. **Package Plugin**: Compile the completed plugin code into a `.pkg` file for deployment to the FastGPT Plugin service.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/plugin/system-tool-development)
+> Source: [FastGPT official source](https://doc.fastgpt.io/plugin/system-tool-development)
 
 ## Applicability and version scope
 

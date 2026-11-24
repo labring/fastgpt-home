@@ -2,7 +2,7 @@
 title: Upgrade FastGPT System Plugins for 4.14.7
 slug: /en/deploy/fastgpt-system-plugins-upgrade
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4147
+source: https://doc.fastgpt.io/self-host/upgrading/4-14/4147
 source_type: Official documentation
 ---
 
@@ -35,7 +35,7 @@ For manual updates, use the official upgrade zip package:
 3. Extract the downloaded zip package to the plugin directory to overwrite existing outdated files.
 4. Restart your FastGPT service to apply the updated plugins.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4147)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-14/4147)
 
 ## Applicability and version scope
 

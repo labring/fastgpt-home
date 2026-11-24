@@ -2,7 +2,7 @@
 title: 解决FastGPT自部署时Mongo副本集自动初始化失败问题
 slug: /zh/reference/fastgpt-mongo-replica-init-fix
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/deploy/docker
+source: https://doc.fastgpt.cn/self-host/deploy/docker
 source_type: 官方文档小节
 ---
 
@@ -39,4 +39,4 @@ FastGPT部署时Mongo副本集自动初始化失败，常见原因是CPU不支�
 2.  若需外网访问Mongo，需添加连接参数`directConnection=true`。
 3.  自动初始化失败时，优先排查CPU是否支持AVX指令集。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/deploy/docker)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/deploy/docker)

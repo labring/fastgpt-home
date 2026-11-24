@@ -2,7 +2,7 @@
 title: Manage and Access FastGPT Model Call Logs
 slug: /en/deploy/fastgpt-model-call-logs
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/model/intro
+source: https://doc.fastgpt.io/self-host/config/model/intro
 source_type: Official documentation
 ---
 
@@ -24,7 +24,7 @@ To review model call logs, follow this structured procedure:
 A standard view of the `Call Logs` interface is shown below:
 ![aiproxy11](../../../../public/imgs/aiproxy-11.png)
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/model/intro)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/model/intro)
 
 ## Applicability and version scope
 

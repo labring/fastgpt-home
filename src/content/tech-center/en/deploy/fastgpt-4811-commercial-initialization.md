@@ -2,7 +2,7 @@
 title: Perform FastGPT 4811 Commercial Edition Initialization
 slug: /en/deploy/fastgpt-4811-commercial-initialization
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4811
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/4811
 source_type: 官方文档
 ---
 
@@ -34,4 +34,4 @@ curl --location --request POST 'https://{{host}}/api/admin/init/4811' \
 ```
 5. Validate completion: A successful request will finalize the initialization of team member groups for your FastGPT commercial deployment. No default success message is returned by default; confirm setup by reviewing your FastGPT team group configurations. If the request fails, an error response will be returned to the terminal.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4811)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/4811)

@@ -2,7 +2,7 @@
 title: Migrate FastGPT Docker MongoDB Data
 slug: /en/deploy/fastgpt-docker-mongodb-migration
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/migration/docker_mongo
+source: https://doc.fastgpt.io/self-host/migration/docker_mongo
 source_type: Official documentation
 ---
 
@@ -59,7 +59,7 @@ Upload the archive to the target host’s designated backup directory (do not us
 scp -rfv [local-path]/Downloads/fastgpt/fastgptbackup-2024-05-03.tar.gz root@[new-server-ip]:/Downloads/fastgpt/backup
 ```
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/migration/docker_mongo)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/migration/docker_mongo)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: 使用FastGPT OpenAPI获取知识库列表的详细操作指南
 slug: /zh/reference/fastgpt-get-dataset-list
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/openapi/dataset
+source: https://doc.fastgpt.cn/openapi/dataset
 source_type: 官方文档小节
 ---
 
@@ -38,4 +38,4 @@ curl --location --request POST 'http://localhost:3000/api/core/dataset/list?pare
 2. `parentId`仅支持传空字符串或`null`，用于获取根目录知识库。
 3. 接口运行端口固定为3000，请求路径不可修改。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/openapi/dataset)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/openapi/dataset)

@@ -2,7 +2,7 @@
 title: FastGPT 4817 Full Official Release Notes
 slug: /en/deploy/fastgpt-4817-release-notes
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4817
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/4817
 source_type: 官方文档
 ---
 
@@ -40,4 +40,4 @@ Four critical and minor bugs are resolved in this release:
 - Fixed a variable update node bug where non-string data types could not be automatically converted when manually entering update content.
 - Resolved an issue where Doubao models were unable to execute tool calls properly.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4817)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/4817)

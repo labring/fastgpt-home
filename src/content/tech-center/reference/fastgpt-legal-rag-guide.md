@@ -2,7 +2,7 @@
 title: FastGPT中RAG法律领域检索增强生成的操作说明
 slug: /zh/reference/fastgpt-legal-rag-guide
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/rag
+source: https://doc.fastgpt.cn/guide/dataset/rag
 source_type: 官方文档小节
 ---
 
@@ -23,4 +23,4 @@ FastGPT的RAG功能可基于检索到的文档生成总结、报告等内容。�
 3. LegalBench-RAG基准包含6858个查询-答案对，涵盖合同、隐私政策等法律文档，仅适用于法律领域的检索效果评估
 4. 该基准的数据集经过多次人工校验，可保障文本精确性与注释质量
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/dataset/rag)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/dataset/rag)

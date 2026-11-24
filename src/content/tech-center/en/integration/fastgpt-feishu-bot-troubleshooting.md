@@ -2,7 +2,7 @@
 title: Resolve FastGPT FeiShu Bot Message Non-Response Issues
 slug: /en/integration/fastgpt-feishu-bot-troubleshooting
 page_type: Integrations
-source: https://doc.fastgpt.cn/en/guide/build/publish/feishu
+source: https://doc.fastgpt.io/guide/build/publish/feishu
 source_type: Official documentation
 ---
 
@@ -21,7 +21,7 @@ Follow this step-by-step diagnostic process to identify the root cause of unresp
 ## Permission Scope Verification
 When confirming bot permissions, ensure all scopes needed for sending messages and interacting with user chats are enabled in the FeiShu bot management console. Without these scopes, the FeiShu platform will block any outgoing messages from the bot, even if FastGPT successfully generates a response.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/publish/feishu)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/publish/feishu)
 
 ## Applicability and version scope
 

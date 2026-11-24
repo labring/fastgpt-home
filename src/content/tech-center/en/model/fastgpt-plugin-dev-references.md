@@ -2,7 +2,7 @@
 title: Retrieve Official FastGPT Plugin Development References
 slug: /en/model/fastgpt-plugin-dev-references
 page_type: Model guides
-source: https://doc.fastgpt.cn/en/plugin/system-tool-development
+source: https://doc.fastgpt.io/plugin/system-tool-development
 source_type: Official documentation
 ---
 
@@ -26,7 +26,7 @@ Follow this sequential process to utilize the listed development resources:
 3. Reference the SDK Factory Guide when building custom software development kits to extend FastGPT plugin functionality beyond core system capabilities.
 4. Consult the CLI Guide for detailed instructions on using the official FastGPT plugin command-line tools for build, test, and deployment tasks.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/plugin/system-tool-development)
+> Source: [FastGPT official source](https://doc.fastgpt.io/plugin/system-tool-development)
 
 ## Applicability and version scope
 

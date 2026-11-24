@@ -2,7 +2,7 @@
 title: Clarify FastGPT Team Permission Management Logic
 slug: /en/tutorial/fastgpt-team-permission-management-logic
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/workspace/team/team_roles_permissions
+source: https://doc.fastgpt.io/guide/workspace/team/team_roles_permissions
 source_type: Official documentation
 ---
 
@@ -23,7 +23,7 @@ The formal permission evaluation process follows a strict sequential order to ca
 ## Authorization Logic Reference
 The official FastGPT authorization logic for team permissions is documented in an accompanying reference diagram. This diagram visually maps the sequential evaluation steps and union aggregation process to provide a clear visual reference for configuration validation and troubleshooting. All standard FastGPT team permission setups adhere to this fixed logic framework.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/workspace/team/team_roles_permissions)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/workspace/team/team_roles_permissions)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: FastGPT远程调试套件安全配置与注意事项说明
 slug: /zh/deploy/fastgpt-remote-debug-security
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/remote-debug-suite
+source: https://doc.fastgpt.cn/self-host/config/remote-debug-suite
 source_type: 官方文档
 ---
 
@@ -16,7 +16,7 @@ source_type: 官方文档
 ## 多副本部署适配要求
 多副本 Gateway 部署场景下，需确保 session 删除请求能够正确路由到持有 WebSocket 连接的节点，或接受 Redis 存储的 session 删除后，后续相关调用出现失败的情况。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/config/remote-debug-suite)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/config/remote-debug-suite)
 
 ## 适用性与版本范围
 

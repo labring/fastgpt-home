@@ -2,7 +2,7 @@
 title: FastGPT v4.15.0自托管升级的迁移脚本执行指南
 slug: /zh/deploy/fastgpt-selfhost-upgrade-migration
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41500
+source: https://doc.fastgpt.cn/self-host/upgrading/4-15/41500
 source_type: 官方文档小节
 ---
 
@@ -63,4 +63,4 @@ curl -X POST 'https://{{host}}/api/admin/dataClean/initSandboxArchive' \
 ## 后续验证
 所有迁移脚本执行完成后，需确认服务正常启动，可通过MongoDB索引检查、业务功能测试等方式验证迁移结果，确保数据一致性与服务稳定性。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41500)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-15/41500)

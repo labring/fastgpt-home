@@ -2,7 +2,7 @@
 title: Understand FastGPT Workflow V2 Upgrade Changes
 slug: /en/deploy/fastgpt-workflow-v2-upgrade
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/48
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/48
 source_type: 官方文档
 ---
 
@@ -27,4 +27,4 @@ Follow these required steps to migrate existing workflows to V2:
 ## Post-Upgrade Operational Behavior
 Workflows invoked via API calls or shared public links will continue to function without interruption until you save them for the first time following the upgrade. No immediate additional action is required for these active workflows beyond saving them once to adopt the new workflow version when next accessing the editor.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/48)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/48)

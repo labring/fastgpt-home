@@ -2,7 +2,7 @@
 title: FastGPT 4.15版本优化功能的技术速查参考
 slug: /zh/reference/fastgpt-415-optimization-reference
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41502
+source: https://doc.fastgpt.cn/self-host/upgrading/4-15/41502
 source_type: 官方文档小节
 ---
 
@@ -30,4 +30,4 @@ source_type: 官方文档小节
 3. 工作流未收尾时输入区会保持禁发并提示「停止中」，请勿重复发送请求
 4. 所有优化均为FastGPT 4.15版本内置更新，升级后自动生效
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41502)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-15/41502)

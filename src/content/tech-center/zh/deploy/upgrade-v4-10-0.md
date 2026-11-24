@@ -2,7 +2,7 @@
 title: FastGPT V4.10.0版本升级操作与新增内容说明
 slug: /zh/deploy/upgrade-v4-10-0
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4100
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4100
 source_type: 官方文档
 ---
 
@@ -54,7 +54,7 @@ PLUGIN_TOKEN=刚修改的AUTH_TOKEN值
 ## 升级后怎么验证
 升级完成后，可通过查看服务运行状态确认各组件是否正常启动。可尝试使用系统工具功能，验证相关功能是否正常生效，同时确认存储相关功能可正常调用。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4100)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/4100)
 
 ## 适用性与版本范围
 

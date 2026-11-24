@@ -2,7 +2,7 @@
 title: Bind Skills to FastGPT Agent Applications
 slug: /en/tutorial/fastgpt-agent-skill-binding-2
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/build/skill/integration
+source: https://doc.fastgpt.io/guide/build/skill/integration
 source_type: Official documentation
 ---
 
@@ -24,7 +24,7 @@ FastGPT mandates secure, isolated execution for all associated skill code. When 
 
 > 💡 **Warning Note**: Skill code execution requires a secure isolated environment. When associating a skill, the system will automatically enable the Virtual Machine setting. This setting cannot be disabled while a skill remains linked to the Agent app.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/skill/integration)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/skill/integration)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: Upgrade OpenSandbox to Fix Chinese File Downloads
 slug: /en/deploy/opensandbox-image-upgrade-fix-chinese-filenames
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/4152
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/4152
 source_type: Official documentation
 ---
 
@@ -34,7 +34,7 @@ Follow these steps to complete the image upgrade:
 ## Post-Upgrade Validation
 After restarting services, validate the fix by downloading a file with a Chinese filename. Confirm the download completes without errors, verifying the resolved issue is no longer present. If you encounter problems, review the linked OpenSandbox Configuration documentation for setup and troubleshooting guidance.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/4152)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-15/4152)
 
 ## Applicability and version scope
 

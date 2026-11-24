@@ -2,7 +2,7 @@
 title: FastGPT系统插件旧架构问题与拆分重构说明
 slug: /zh/model/fastgpt-plugin-split-background
 page_type: 模型指南
-source: https://doc.fastgpt.cn/zh-CN/plugin/intro
+source: https://doc.fastgpt.cn/plugin/intro
 source_type: 官方文档
 ---
 
@@ -24,7 +24,7 @@ source_type: 官方文档
 3. 自定义插件可独立管理版本，无需维护FastGPT fork并手动合并升级
 4. 适配运行时挂载新插件的构建模型
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/plugin/intro)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/plugin/intro)
 
 ## 适用性与版本范围
 

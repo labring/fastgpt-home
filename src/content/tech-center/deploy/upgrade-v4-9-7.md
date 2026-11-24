@@ -2,7 +2,7 @@
 title: FastGPT V4.9.7版本升级内容与操作指引
 slug: /zh/deploy/upgrade-v4-9-7
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/497
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/497
 source_type: 官方文档
 ---
 
@@ -30,7 +30,7 @@ source_type: 官方文档
 4. 测试工作流右键对齐节点功能是否正常
 5. 测试LLM模型测试接口，验证未启用模型可正常测试且自定义请求地址保留
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/497)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/497)
 
 ## 适用性与版本范围
 

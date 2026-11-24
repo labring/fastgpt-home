@@ -2,7 +2,7 @@
 title: FastGPT V4.9.0版本自部署升级操作与配置说明
 slug: /zh/reference/fastgpt-v490-upgrade-guide
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/490
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/490
 source_type: 官方文档小节
 ---
 
@@ -20,4 +20,4 @@ FastGPT V4.9.0版本的自部署升级包含环境变量变更与专属升级脚
 ## 注意事项
 该升级流程仅适用于FastGPT V4.9.0版本的自部署场景，不可直接用于其他版本的升级操作。升级过程中请勿中断升级脚本的执行，否则可能导致系统部署异常或数据损坏。需严格遵循官方给出的环境变量变更规则，不可随意修改或遗漏配置项，否则可能引发系统启动失败。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/490)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/490)

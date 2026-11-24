@@ -2,7 +2,7 @@
 title: Troubleshoot Common FastGPT Frontend Page Crashes
 slug: /en/deploy/fastgpt-frontend-page-crash-troubleshooting
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/troubleshooting/faq
+source: https://doc.fastgpt.io/self-host/troubleshooting/faq
 source_type: Official documentation
 ---
 
@@ -23,7 +23,7 @@ A small subset of crashes stem from browser limitations. The FastGPT frontend us
 ## Disable Browser Translation Tools
 Built-in or third-party browser translation tools can interfere with FastGPT’s frontend rendering, leading to unexpected crashes. Turn off translation for the FastGPT deployment domain, or disable all translation extensions in your browser to resolve this issue.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/troubleshooting/faq)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/troubleshooting/faq)
 
 ## Applicability and version scope
 

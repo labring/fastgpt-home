@@ -145,8 +145,8 @@ date_modified: 2026-10-14
 
 ## 参考资料
 
-- [知识库基础原理](https://doc.fastgpt.cn/zh-CN/guide/dataset/rag)
-- [知识库搜索方案和参数](https://doc.fastgpt.cn/zh-CN/guide/dataset/dataset_engine)
+- [知识库基础原理](https://doc.fastgpt.cn/guide/dataset/rag)
+- [知识库搜索方案和参数](https://doc.fastgpt.cn/guide/dataset/dataset_engine)
 
 ## 需要进一步确认时
 

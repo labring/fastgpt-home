@@ -2,7 +2,7 @@
 title: FastGPT V4.8.3版本升级操作步骤速查
 slug: /zh/reference/fastgpt-v483-upgrade-quickref
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/483
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/483
 source_type: 官方文档小节
 ---
 
@@ -25,4 +25,4 @@ V4.8.3是FastGPT的历史正式版本，属于<4.12.0版本升级范畴。该版
 3. 升级过程中若出现异常，可参考官方故障排查、通用问题排查流程处理
 4. 请勿直接升级至非相邻版本，需按官方版本升级说明逐步执行
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/483)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/483)

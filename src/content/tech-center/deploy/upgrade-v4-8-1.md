@@ -2,7 +2,7 @@
 title: FastGPT V4.8.1版本升级流程与验证方法说明
 slug: /zh/deploy/upgrade-v4-8-1
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/481
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/481
 source_type: 官方文档
 ---
 
@@ -31,7 +31,7 @@ V4.8.1版本新增Chat API的event: updateVariables事件，用于更新变量�
 ## 升级后怎么验证
 升级完成后，可通过调用Chat API触发event: updateVariables事件，验证变量更新功能正常运行；可核对dataset.trainings表的结构，确认表名已完成重置；同时可核查无效数据的清理结果，确保业务运行无数据冲突异常。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/481)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/481)
 
 ## 适用性与版本范围
 

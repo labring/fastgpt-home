@@ -2,7 +2,7 @@
 title: 介绍MinerU在FastGPT中的文档解析效果与合规使用方法
 slug: /zh/deploy/mineru-fastgpt-document-parsing
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/custom-models/mineru
+source: https://doc.fastgpt.cn/self-host/custom-models/mineru
 source_type: 官方文档
 ---
 
@@ -23,7 +23,7 @@ MinerU可用于FastGPT的自定义模型文档解析，以清华团队发布的C
 ## 使用注意事项
 使用MinerU需严格遵守其开源协议GPL-3.0 license。如需获取工具与更多相关文档，可访问MinerU官方仓库。在FastGPT中使用该工具时，需确保所有操作符合协议要求，避免违规使用。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/mineru)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/custom-models/mineru)
 
 ## 适用性与版本范围
 

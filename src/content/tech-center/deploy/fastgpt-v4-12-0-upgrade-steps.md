@@ -2,7 +2,7 @@
 title: FastGPT V4.12.0版本升级操作与配置说明
 slug: /zh/deploy/fastgpt-v4-12-0-upgrade-steps
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-12/4120
+source: https://doc.fastgpt.cn/self-host/upgrading/4-12/4120
 source_type: 官方文档
 ---
 
@@ -32,4 +32,4 @@ curl --location --request POST https://{{host}}/api/admin/initv4120 \
 ### 工具更新
 系统工具可返回citeLinks响应值，实现对话框内引用链接展示。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-12/4120)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-12/4120)

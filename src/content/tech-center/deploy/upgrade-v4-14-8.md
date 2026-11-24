@@ -2,7 +2,7 @@
 title: FastGPT V4.14.8版本升级内容与操作说明
 slug: /zh/deploy/upgrade-v4-14-8
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4148
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/4148
 source_type: 官方文档
 ---
 
@@ -31,7 +31,7 @@ source_type: 官方文档
 6. 验证sandbox服务支持网络请求和内置依赖包。
 7. 确认FastGPT服务可正常访问与使用。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4148)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-14/4148)
 
 ## 适用性与版本范围
 

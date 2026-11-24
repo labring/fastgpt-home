@@ -2,7 +2,7 @@
 title: 知识库内容存在却检索不到：从检索词到引用的逐层排查指南
 slug: /zh/guide/kb-retrieval-miss-diagnosis
 page_type: 深度场景内容
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/env
+source: https://doc.fastgpt.cn/self-host/config/env
 source_type: 开源仓库文档与社区线程
 article_section: 选型与评估
 is_part_of: FastGPT 技术中心
@@ -56,8 +56,8 @@ date_modified: 2026-10-15
 
 ## 参考资料
 
-- [FastGPT 环境变量](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
-- [FastGPT 升级说明](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/upgrade-instruction)
+- [FastGPT 环境变量](https://doc.fastgpt.cn/self-host/config/env)
+- [FastGPT 升级说明](https://doc.fastgpt.cn/self-host/upgrading/upgrade-instruction)
 
 ## 需要进一步确认时
 

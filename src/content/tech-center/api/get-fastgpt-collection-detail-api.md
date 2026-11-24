@@ -2,7 +2,7 @@
 title: 获取FastGPT知识库集合详情的OpenAPI调用指南
 slug: /zh/api/get-fastgpt-collection-detail-api
 page_type: API与文档
-source: https://doc.fastgpt.cn/zh-CN/openapi/dataset
+source: https://doc.fastgpt.cn/openapi/dataset
 source_type: 官方文档小节
 ---
 
@@ -36,4 +36,4 @@ curl --location --request GET 'http://localhost:3000/api/core/dataset/collection
 
 完整的响应示例可参考官方文档提供的标准返回格式，若请求参数缺失或无效，将返回对应错误码及提示信息。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/openapi/dataset)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/openapi/dataset)

@@ -2,7 +2,7 @@
 title: Configure AWS S3 for FastGPT Storage
 slug: /en/deploy/fastgpt-aws-s3-storage-config
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/object-storage
+source: https://doc.fastgpt.io/self-host/config/object-storage
 source_type: Official documentation
 ---
 
@@ -40,7 +40,7 @@ STORAGE_S3_FORCE_PATH_STYLE=false
 STORAGE_S3_MAX_RETRIES=3
 ```
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/object-storage)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/object-storage)
 
 ## Applicability and version scope
 

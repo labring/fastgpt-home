@@ -2,7 +2,7 @@
 title: Properly Upgrade FastGPT on Sealos
 slug: /en/deploy/fastgpt-upgrade-sealos
 page_type: 部署场景
-source: https://doc.fastgpt.cn/en/self-host/deploy/sealos
+source: https://doc.fastgpt.io/self-host/deploy/sealos
 source_type: 官方文档
 ---
 
@@ -24,4 +24,4 @@ Follow these structured steps to upgrade your FastGPT deployment:
 6.  Click the **Change/Restart** button to automatically pull the latest container image for the target version and apply the upgrade. Wait for the upgrade process to fully complete before moving forward with additional changes.
 7.  If the target version requires an initialization script, run the corresponding script from the official upgrade documentation immediately after the application restarts successfully.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/deploy/sealos)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/deploy/sealos)

@@ -2,7 +2,7 @@
 title: Run the Required FastGPT v43 Initialization API
 slug: /en/deploy/fastgpt-v43-init-api
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/43
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/43
 source_type: 官方文档
 ---
 
@@ -34,4 +34,4 @@ curl --location --request POST 'https://{{host}}/api/admin/initv43' \
 ```
 No request body is required for this API call. After successful execution, the `modeldata` PostgreSQL table will include the new `file_id` column.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/43)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/43)

@@ -2,7 +2,7 @@
 title: Import Yuque File Libraries to FastGPT
 slug: /en/integration/fastgpt-yuque-library-import
 page_type: Integrations
-source: https://doc.fastgpt.cn/en/guide/dataset/third-party/yuque_dataset
+source: https://doc.fastgpt.io/guide/dataset/third-party/yuque_dataset
 source_type: Official documentation
 ---
 
@@ -24,7 +24,7 @@ Follow these exact steps to configure and initiate Yuque library imports:
 ## Beta Feature Considerations
 The Yuque file library import feature is currently marked as beta. During the beta period, some user interactions related to library synchronization, post-import management, or error handling may still be in active refinement. No additional configuration options beyond the required token and UID parameters are available in this release. All imported content will follow the default dataset processing rules configured for your FastGPT instance.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/third-party/yuque_dataset)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/third-party/yuque_dataset)
 
 ## Applicability and version scope
 

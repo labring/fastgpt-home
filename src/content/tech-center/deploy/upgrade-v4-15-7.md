@@ -2,7 +2,7 @@
 title: FastGPT V4.15.7版本升级内容与操作指南
 slug: /zh/deploy/upgrade-v4-15-7
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/4157
+source: https://doc.fastgpt.cn/self-host/upgrading/4-15/4157
 source_type: 官方文档
 ---
 
@@ -20,7 +20,7 @@ source_type: 官方文档
 ## 升级后怎么验证
 依次完成三项验证：测试MCP使用Streamable HTTP连接，确认连接失败回退到SSE时无请求头重复发送的问题；访问门户页，确认快捷应用数量上限为3个，且历史配置中超过上限的快捷应用可正常展示；发布应用并配置文件变量，尝试上传文件，确认预签名上传接口可正确识别文件上传功能已开启，上传流程正常。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/4157)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-15/4157)
 
 ## 适用性与版本范围
 

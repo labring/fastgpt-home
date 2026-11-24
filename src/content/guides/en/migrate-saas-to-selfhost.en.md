@@ -78,6 +78,6 @@ After migration is complete, a periodic effect validation mechanism must be esta
 
 ## References
 
-- [FastGPT self-hosted deployment documentation](https://doc.fastgpt.io/en/self-host/)
-- [FastGPT Docker database migration documentation](https://doc.fastgpt.io/en/self-host/migration/docker_db)
-- [FastGPT OpenAPI chat documentation](https://doc.fastgpt.io/en/openapi/chat)
+- [FastGPT self-hosted deployment documentation](https://doc.fastgpt.io/self-host/)
+- [FastGPT Docker database migration documentation](https://doc.fastgpt.io/self-host/migration/docker_db)
+- [FastGPT OpenAPI chat documentation](https://doc.fastgpt.io/openapi/chat)

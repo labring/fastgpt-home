@@ -76,5 +76,5 @@ Verified on 2026-11-09. Product version: FastGPT v4.17.3.
 | Topic | Source |
 | --- | --- |
 | Sandbox quotas, oversell multiplier, backfill jobs | [Release notes 4.17.3](https://github.com/labring/FastGPT/releases/tag/v4.17.3) |
-| User-level instances, resource specifications, lifecycle, no mixed versions | [Release notes 4.16.0](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/4160) |
-| Agent sandbox storage and lifecycle settings | [Environment variables](https://doc.fastgpt.io/zh-CN/self-host/config/env) |
+| User-level instances, resource specifications, lifecycle, no mixed versions | [Release notes 4.16.0](https://doc.fastgpt.cn/self-host/upgrading/4-16/4160) |
+| Agent sandbox storage and lifecycle settings | [Environment variables](https://doc.fastgpt.cn/self-host/config/env) |

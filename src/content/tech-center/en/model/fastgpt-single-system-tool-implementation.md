@@ -2,7 +2,7 @@
 title: Implement Valid Single FastGPT System Tools
 slug: /en/model/fastgpt-single-system-tool-implementation
 page_type: Model guides
-source: https://doc.fastgpt.cn/en/plugin/system-tool-development
+source: https://doc.fastgpt.io/plugin/system-tool-development
 source_type: Official documentation
 ---
 
@@ -29,7 +29,7 @@ Break down the official reference implementation:
 3. **Build Handler Function**: Write an async handler function that accepts input parameters and execution context, then returns a response matching the defined output schema. The reference example returns the input query string as a test response.
 4. **Export Final Tool**: Wrap the configured handler and manifest details in `defineTool()` to export the complete tool. The manifest includes required fields including `pluginId: 'example-search'`, version `1.0.0`, multilingual names and descriptions, and a `tools` category tag.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/plugin/system-tool-development)
+> Source: [FastGPT official source](https://doc.fastgpt.io/plugin/system-tool-development)
 
 ## Applicability and version scope
 

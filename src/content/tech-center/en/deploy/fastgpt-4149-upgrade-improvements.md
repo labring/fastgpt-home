@@ -2,7 +2,7 @@
 title: FastGPT 4.14.9 Upgrade Key Improvement Details
 slug: /en/deploy/fastgpt-4149-upgrade-improvements
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4149
+source: https://doc.fastgpt.io/self-host/upgrading/4-14/4149
 source_type: Official documentation
 ---
 
@@ -28,7 +28,7 @@ Below is a structured table summarizing all documented improvements in FastGPT 4
 | Workflow Edge Grouping | Replaced DFS with Tarjan's SCC algorithm, fixing cyclic workflow failures |
 | System Toolkits | Removed version number display |
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4149)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-14/4149)
 
 ## Applicability and version scope
 

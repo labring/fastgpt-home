@@ -2,7 +2,7 @@
 title: 使用FastGPT搭建并配置民法典知识库问答助手
 slug: /zh/tutorial/fastgpt-civil-code-qa-assistant
 page_type: 教程/部署
-source: https://doc.fastgpt.cn/zh-CN/guide/getting-started/quick-start
+source: https://doc.fastgpt.cn/guide/getting-started/quick-start
 source_type: 官方文档小节
 ---
 
@@ -16,4 +16,4 @@ source_type: 官方文档小节
 ### 对话Agent与问答配置
 新建对话Agent，名称同样填写为"民法典问答助手"，在应用配置中关联已创建的民法典知识库。配置问答Prompt需明确基于知识库回答并引用原文，具体规则包括严格基于检索到的民法典条文回答、每条回答需引用编章节条号、无对应规定时如实说明、涉及案件适用时添加免责声明、对法律术语做通俗解释。输出格式包含法律结论、相关法条引用、通俗解读、实务建议、免责声明五个部分。配置开场白时，内置可一键提问的示例问题，如租房合同到期相关、网购售后相关、楼上漏水相关问题，并添加免责提示。验证问答效果时，测试资料内、资料外、模糊三类问题，确认回答包含法条引用、免责声明等要求内容。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/getting-started/quick-start)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/getting-started/quick-start)

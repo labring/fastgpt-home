@@ -2,7 +2,7 @@
 title: 在Sealos上部署Signoz并对接FastGPT的配置方法
 slug: /zh/deploy/signoz-deployment-sealos-fastgpt
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/signoz
+source: https://doc.fastgpt.cn/self-host/config/signoz
 source_type: 官方文档
 ---
 
@@ -24,7 +24,7 @@ source_type: 官方文档
 
 完成上述配置后，即可完成Signoz与FastGPT的对接，满足服务连接需求。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/config/signoz)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/config/signoz)
 
 ## 适用性与版本范围
 

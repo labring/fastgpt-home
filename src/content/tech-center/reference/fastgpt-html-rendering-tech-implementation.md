@@ -2,7 +2,7 @@
 title: FastGPT平台的HTML渲染与互动功能的详细具体技术实现细节和使用方式速查
 slug: /zh/reference/fastgpt-html-rendering-tech-implementation
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/chat/htmlRendering
+source: https://doc.fastgpt.cn/guide/chat/htmlRendering
 source_type: 官方文档小节
 ---
 
@@ -21,4 +21,4 @@ FastGPT的HTML渲染与互动功能通过iframe技术实现。该功能结合自
 ## 注意事项
 使用sandbox属性时，需根据实际需求配置允许的功能，避免过度限制或开放过多权限。嵌入的HTML内容无法直接执行未授权的操作，确保不会对系统造成威胁。iframe的宽度会自动适配父容器，需注意父容器的尺寸设置以保证内容正常显示。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/chat/htmlRendering)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/chat/htmlRendering)

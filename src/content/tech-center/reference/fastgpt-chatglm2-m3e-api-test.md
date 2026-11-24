@@ -2,7 +2,7 @@
 title: FastGPT中调用ChatGLM2与M3E自定义模型的API测试方法
 slug: /zh/reference/fastgpt-chatglm2-m3e-api-test
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/custom-models/chatglm2-m3e
+source: https://doc.fastgpt.cn/self-host/custom-models/chatglm2-m3e
 source_type: 官方文档小节
 ---
 
@@ -38,5 +38,5 @@ curl --location --request POST 'https://domain/v1/chat/completions' \
 4. 示例中的`https://domain`需替换为实际部署的API服务域名，请求地址需与FastGPT部署的接口路径匹配，不可随意修改。
 5. 向量请求的input需为字符串数组格式，对话请求的messages需符合role与content的格式要求。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/chatglm2-m3e)
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/chatglm2)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/custom-models/chatglm2-m3e)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/custom-models/chatglm2)

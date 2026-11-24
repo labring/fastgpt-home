@@ -29,6 +29,6 @@ source_type: GitHub issue
 
 > 来源: [原始讨论：(Suggestion) Can historical records be carried when searching in the knowledge base?](https://github.com/labring/FastGPT/issues/755)
 
-> 来源: [FastGPT 问题优化节点](https://doc.fastgpt.io/en/guide/build/workflow/nodes/coreferenceResolution)
+> 来源: [FastGPT 问题优化节点](https://doc.fastgpt.io/guide/build/workflow/nodes/coreferenceResolution)
 
 > 来源: [原讨论中的补充回复](https://github.com/labring/FastGPT/issues/755#issuecomment-1902062903)

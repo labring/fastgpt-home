@@ -29,4 +29,4 @@ source_type: GitHub issue
 
 > 来源: [原始讨论：语雀空间token问题](https://github.com/labring/FastGPT/issues/5080)
 
-> 来源: [FastGPT 语雀知识库配置](https://doc.fastgpt.io/en/guide/dataset/third-party/yuque_dataset)
+> 来源: [FastGPT 语雀知识库配置](https://doc.fastgpt.io/guide/dataset/third-party/yuque_dataset)

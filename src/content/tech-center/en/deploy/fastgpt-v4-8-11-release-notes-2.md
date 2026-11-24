@@ -2,7 +2,7 @@
 title: Official FastGPT v4.8.11 Release Notes
 slug: /en/deploy/fastgpt-v4-8-11-release-notes-2
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4811
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/4811
 source_type: 官方文档
 ---
 
@@ -26,4 +26,4 @@ Plugin system expansions include support for uploading system files and designat
 ## Resolved Bug Fixes
 Critical and minor bugs are resolved, including dataset selection permission issues, errors triggered by empty `chatId` session starts with user selections, null `function` and `type` fields in toolCall during stream mode with toolChoice, non-synced site custom separators, tool call history storage issues, infinite redirect loops on the chat page, non-persisting global variables across tool calls, incorrect rerank documentation URLs, and chat dialog rendering performance issues.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4811)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/4811)

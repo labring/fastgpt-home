@@ -2,7 +2,7 @@
 title: Configure Third-Party App Variables for FastGPT
 slug: /en/integration/fastgpt-thirdparty-app-vars
 page_type: Integrations
-source: https://doc.fastgpt.cn/en/guide/build/publish/openapi
+source: https://doc.fastgpt.io/guide/build/publish/openapi
 source_type: Official documentation
 ---
 
@@ -23,7 +23,7 @@ Two widely used third-party chat applications support FastGPT integration via th
 1. **ChatGPT Next Web**: For full setup documentation, visit the project repository at https://github.com/Yidadaa/ChatGPT-Next-Web. When configuring the app, substitute the default OpenAI API base URL and key with the FastGPT-specific values listed above. A reference setup screenshot is hosted at `/imgs/chatgptnext.png`.
 2. **ChatGPT Web**: Access official setup guidance from the project repository at https://github.com/Chanzhaoyu/chatgpt-web. Use the same FastGPT configuration parameters to replace the default OpenAI service settings, with a reference setup screenshot available at `/imgs/chatgptweb.png`.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/publish/openapi)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/publish/openapi)
 
 ## Applicability and version scope
 

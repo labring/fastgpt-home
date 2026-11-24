@@ -2,7 +2,7 @@
 title: List of FastGPT 4.16.1 Bug Fixes
 slug: /en/deploy/fastgpt-4161-bug-fixes
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-16/4161
+source: https://doc.fastgpt.io/self-host/upgrading/4-16/4161
 source_type: 官方文档
 ---
 
@@ -27,4 +27,4 @@ To confirm all fixes are active on your self-hosted instance, follow these targe
 4.  Open the Usage records page, launch the date picker component, and confirm no extra day is displayed in calendar previews or selected date ranges.
 5.  Edit an existing Dataset with no custom image model configured, upload a test image, and confirm the client does not display a fallback image model by default.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/4-16/4161)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/4-16/4161)

@@ -2,7 +2,7 @@
 title: Prepare FastGPT App Evaluation Data and Tasks
 slug: /en/tutorial/fastgpt-app-evaluation-workflow
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/build/evaluation
+source: https://doc.fastgpt.io/guide/build/evaluation
 source_type: Official documentation
 ---
 
@@ -32,7 +32,7 @@ Follow these sequential steps to launch an evaluation task:
 5. Upload the fully completed CSV dataset file to the FastGPT evaluation interface.
 6. Click the "Start Evaluation" button to initialize the automated evaluation task.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/evaluation)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/evaluation)
 
 ## Applicability and version scope
 

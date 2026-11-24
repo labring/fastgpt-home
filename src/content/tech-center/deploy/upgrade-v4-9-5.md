@@ -2,7 +2,7 @@
 title: FastGPT V4.9.5版本升级内容与操作指南
 slug: /zh/deploy/upgrade-v4-9-5
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/495
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/495
 source_type: 官方文档
 ---
 
@@ -20,7 +20,7 @@ source_type: 官方文档
 ## 升级后怎么验证
 可通过验证新增功能与修复问题的场景完成版本验证。检查团队成员权限配置是否生效，嵌套工作流中交互节点是否可正常使用，查看团队成员操作日志，测试用户输入节点的多选框功能。验证繁体中文翻译显示正常，Arm架构环境下镜像可正常启动。测试password检测规则、分享链接隐藏知识库检索结果、IOS低版本访问兼容性、问答提取队列运行、Debug模式交互节点流程是否正常。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/495)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/495)
 
 ## 适用性与版本范围
 

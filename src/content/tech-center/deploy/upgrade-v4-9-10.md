@@ -2,7 +2,7 @@
 title: FastGPT V4.9.10版本升级操作及变更说明
 slug: /zh/deploy/upgrade-v4-9-10
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4910
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4910
 source_type: 官方文档
 ---
 
@@ -51,7 +51,7 @@ source_type: 官方文档
 6. 上传xlsx文件转换为Markdown，确认无前置多余空格。
 7. 上传包含Base64图片的Markdown文件，确认图片可正常保存。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4910)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/4910)
 
 ## 适用性与版本范围
 

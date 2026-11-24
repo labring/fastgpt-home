@@ -2,7 +2,7 @@
 title: FastGPT V4.8.13版本升级操作及功能变更说明
 slug: /zh/deploy/upgrade-v4-8-13
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4813
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4813
 source_type: 官方文档
 ---
 
@@ -16,7 +16,7 @@ source_type: 官方文档
 1. 完成数据备份。2. 修改镜像标签：FastGPT镜像tag改为`v4.8.13-fix`，商业版fastgpt-pro镜像tag改为`v4.8.13-fix`，Sandbox镜像无需更新。3. 添加环境变量：为fastgpt和fastgpt-pro镜像添加环境变量`FE_DOMAIN=http://xx.com`，值为FastGPT前端访问地址，末尾不得添加/。4. 调整文件上传编排，适配最新逻辑，嵌套应用的文件传递需手动指定传递文件。
 ## 升级后怎么验证
 可通过以下方式验证升级效果：查看对话记录是否显示时间；测试拖拽文件至对话输入框上传是否正常；触发工作流校验错误，确认是否跳转至对应错误节点；测试分享链接的实时运行状态配置是否生效；检查BI图表生成是否可正常写入文件；查看对话日志来源是否正确显示分享链接或API名称；测试数组变量多选合并功能是否正常；导入csv文件确认自动识别编码无乱码。
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4813)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/4813)
 
 ## 适用性与版本范围
 

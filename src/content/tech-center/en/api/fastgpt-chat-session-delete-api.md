@@ -2,7 +2,7 @@
 title: Delete FastGPT Chat Sessions via OpenAPI
 slug: /en/api/fastgpt-chat-session-delete-api
 page_type: API
-source: https://doc.fastgpt.cn/en/openapi/chat
+source: https://doc.fastgpt.io/openapi/chat
 source_type: Official documentation
 ---
 
@@ -38,7 +38,7 @@ All successful requests return a JSON response with a 200 OK HTTP status code. T
 ```
 The `code` field returns 200 to confirm successful session deletion. The `statusText` and `message` fields will be empty strings for successful requests, while the `data` field will always be null upon a successful deletion.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/openapi/chat)
+> Source: [FastGPT official source](https://doc.fastgpt.io/openapi/chat)
 
 ## Applicability and version scope
 

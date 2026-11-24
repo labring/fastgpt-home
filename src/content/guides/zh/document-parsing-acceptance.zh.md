@@ -65,6 +65,6 @@ FastGPT 的文件读取能力、解析服务和聊天文件输入存在不同入
 
 ## 参考资料
 
-- [FastGPT PDF 增强解析配置](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
-- [FastGPT 知识库常见问题](https://doc.fastgpt.cn/zh-CN/guide/dataset/faq)
-- [FastGPT 检索原理](https://doc.fastgpt.cn/zh-CN/guide/dataset/dataset_engine)
+- [FastGPT PDF 增强解析配置](https://doc.fastgpt.cn/self-host/config/env)
+- [FastGPT 知识库常见问题](https://doc.fastgpt.cn/guide/dataset/faq)
+- [FastGPT 检索原理](https://doc.fastgpt.cn/guide/dataset/dataset_engine)

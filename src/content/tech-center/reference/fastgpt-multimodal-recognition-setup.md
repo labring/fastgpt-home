@@ -2,7 +2,7 @@
 title: FastGPT多模态识别功能的配置与使用注意事项
 slug: /zh/reference/fastgpt-multimodal-recognition-setup
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/build/general/ai_settings
+source: https://doc.fastgpt.cn/guide/build/general/ai_settings
 source_type: 官方文档小节
 ---
 
@@ -22,4 +22,4 @@ FastGPT的多模态识别功能可控制AI读取用户输入中的图片、音�
 3. 普通文档文件不会作为多模态输入直接发送给LLM，文档内容需通过文件解析转成文本；
 4. 若弹窗显示「该模型不支持多模态识别」，需更换支持对应多模态输入的模型。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/general/ai_settings)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/general/ai_settings)

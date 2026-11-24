@@ -2,7 +2,7 @@
 title: FastGPT 4.15.0版本各服务环境变量变更配置说明
 slug: /zh/deploy/fastgpt-4-15-env-vars-changes
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41500
+source: https://doc.fastgpt.cn/self-host/upgrading/4-15/41500
 source_type: 官方文档小节
 ---
 
@@ -17,4 +17,4 @@ Code Sandbox服务新增了多个安全相关环境变量，默认配置如下�
 ## 插件服务环境变量配置步骤
 fastgpt-plugin服务进行了重构，需按以下步骤配置环境变量：1. 必须新增AUTH_TOKEN（长度至少32位）和FASTGPT_BASE_URL变量；2. 修改MONGODB_URI变量，数据库名需与fastgpt服务的Mongo数据库名不重名，例如mongodb://myusername:mypassword@fastgpt-mongo:27017/fastgpt-plugin?authSource=admin；3. 修改fastgpt和fastgpt-pro服务的PLUGIN_TOKEN变量，值需与fastgpt-plugin的AUTH_TOKEN保持一致。此外可按需配置MAX_API_SIZE、POOL相关参数、对象存储及日志相关变量。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41500)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-15/41500)

@@ -2,7 +2,7 @@
 title: FastGPT自托管部署与运行常见问题排查速查
 slug: /zh/reference/fastgpt-self-hosted-faq-check
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host
+source: https://doc.fastgpt.cn/self-host
 source_type: 官方文档小节
 ---
 
@@ -35,4 +35,4 @@ source_type: 官方文档小节
 - 报错处理优先匹配官方文档对应问题，不得自行修改系统核心配置
 - 本地模型镜像、语音功能等场景需按官方指引完成配置
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host)

@@ -2,7 +2,7 @@
 title: FastGPT Agent虚拟机生命周期脚本配置与执行方法
 slug: /zh/reference/fastgpt-agent-vm-script-lifecycle
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/build/agentv2/vm
+source: https://doc.fastgpt.cn/guide/build/agentv2/vm
 source_type: 官方文档小节
 ---
 
@@ -23,4 +23,4 @@ source_type: 官方文档小节
 2.  技能初始化脚本仅在应用启动脚本执行完毕后运行，且执行目录为对应技能包的部署目录
 3.  技能包采用原子部署逻辑，可避免解压失败导致出现损坏的半截目录
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/agentv2/vm)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/agentv2/vm)

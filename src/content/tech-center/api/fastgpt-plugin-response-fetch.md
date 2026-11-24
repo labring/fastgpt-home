@@ -2,7 +2,7 @@
 title: 获取FastGPT插件请求的非流式与流式响应数据
 slug: /zh/api/fastgpt-plugin-response-fetch
 page_type: API与文档
-source: https://doc.fastgpt.cn/zh-CN/openapi/chat
+source: https://doc.fastgpt.cn/openapi/chat
 source_type: 官方文档小节
 ---
 
@@ -19,4 +19,4 @@ source_type: 官方文档小节
 2.  非流式场景下，直接解析完整的HTTP响应体，提取`responseData`数组，过滤出`moduleType="pluginOutput"`的元素，读取其`pluginOutput`字段即可得到插件输出。
 3.  流式场景下，按SSE协议逐行解析响应内容，当遇到`event: flowResponses`时，将其后的`data`字符串反序列化为数组，按非流式的方式提取插件输出；当遇到`event: answer`时，直接解析`data`中的`choices[0].delta.content`获取流式的对话文本。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/openapi/chat)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/openapi/chat)

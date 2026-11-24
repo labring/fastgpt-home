@@ -2,7 +2,7 @@
 title: 获取FastGPT数据集单条数据详情的接口使用说明
 slug: /zh/api/fastgpt-dataset-single-data-detail
 page_type: API与文档
-source: https://doc.fastgpt.cn/zh-CN/openapi/dataset
+source: https://doc.fastgpt.cn/openapi/dataset
 source_type: 官方文档小节
 ---
 
@@ -54,4 +54,4 @@ curl --location --request GET 'http://localhost:3000/api/core/dataset/data/detai
 ```
 响应的`data`字段包含了目标数据的全部元信息，各核心字段含义如下：`id`为数据唯一标识，`q`为存储的问题文本，`a`为关联回答内容，`chunkIndex`为数据块索引，`indexes`为关联索引列表，`datasetId`为所属数据集ID，`collectionId`为所属知识库集合ID，`sourceName`为原始上传文件名，`sourceId`为原始文件标识，`isOwner`和`canWrite`分别标识调用者的所有权和编辑权限。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/openapi/dataset)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/openapi/dataset)

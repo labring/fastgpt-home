@@ -2,7 +2,7 @@
 title: FastGPT V4.8.3版本升级相关事项解读与操作指引
 slug: /zh/deploy/upgrade-v4-8-3
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/483
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/483
 source_type: 官方文档
 ---
 
@@ -20,7 +20,7 @@ source_type: 官方文档
 ## 升级后怎么验证
 升级完成后可通过以下方式验证：1. 确认服务正常启动，系统界面可正常访问；2. 发起chat请求，当返回empty answer时，查看对应日志是否生成，验证日志排查功能正常；3. 创建ifelse判断器，配置字符串正则匹配规则，验证功能生效；4. 运行包含console.log的代码，确认调试输出可正常查看；5. 进入Debug模式，修改变量并确认操作无报错；6. 若启用Milvus数据库，验证向量存储与检索功能正常。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/483)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/483)
 
 ## 适用性与版本范围
 

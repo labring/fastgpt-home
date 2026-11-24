@@ -2,7 +2,7 @@
 title: FastGPT部署中SeekDB的推荐配置说明
 slug: /zh/deploy/fastgpt-seekdb-recommended-config
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/deploy/docker
+source: https://doc.fastgpt.cn/self-host/deploy/docker
 source_type: 官方文档
 ---
 
@@ -22,7 +22,7 @@ SeekDB是基于MySQL协议的高性能向量数据库，与OceanBase协议完全
 ## 核心特性说明
 SeekDB使用MySQL协议，与OceanBase完全兼容，具备以下特性：支持1536维向量检索，内置HNSW索引算法，提供批量插入和查询优化，自动重试和连接池管理。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/deploy/docker)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/deploy/docker)
 
 ## 适用性与版本范围
 

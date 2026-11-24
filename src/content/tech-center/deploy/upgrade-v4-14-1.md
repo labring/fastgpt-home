@@ -2,7 +2,7 @@
 title: FastGPT V4.14.1版本升级内容与操作步骤说明
 slug: /zh/deploy/upgrade-v4-14-1
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4141
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/4141
 source_type: 官方文档
 ---
 
@@ -27,7 +27,7 @@ curl --location --request POST 'https://{{host}}/api/admin/initv4141' \
 ## 升级后怎么验证
 可通过验证新增功能与修复问题对应的场景确认升级完成，包括检查工作台插件分类是否显示"工作流工具"、测试工作流欠费后继续运行功能、验证MCP Client实例持久化效果、测试模型重载流程、检查自动保存的团队云端记录，以及各修复问题对应的功能场景是否正常运行。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4141)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-14/4141)
 
 ## 适用性与版本范围
 

@@ -2,7 +2,7 @@
 title: FastGPT私有部署模型问题排查与测试方法
 slug: /zh/deploy/fastgpt-self-host-model-troubleshooting
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/troubleshooting/model-errors
+source: https://doc.fastgpt.cn/self-host/troubleshooting/model-errors
 source_type: 官方文档
 ---
 
@@ -61,4 +61,4 @@ curl --location --request POST https://oneapi.xxx/v1/chat/completions \
 ```
 2. 检查响应参数：若能正常调用工具，会返回包含`tool_calls`的参数内容，示例响应片段包含`id`、`choices`等字段。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/troubleshooting/model-errors)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/troubleshooting/model-errors)

@@ -2,7 +2,7 @@
 title: FastGPT V4.14.14版本升级内容与操作说明
 slug: /zh/deploy/upgrade-v4-14-14
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41414
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/41414
 source_type: 官方文档
 ---
 
@@ -20,7 +20,7 @@ source_type: 官方文档
 ## 升级后怎么验证
 检查fastgpt-app与fastgpt-pro的镜像tag是否为v4.14.14。若使用微信发布渠道，验证消息拉取与回复流程无阻塞。调用deepseek工具调用+思考模式接口，确认接口无400错误。检查内网地址检测功能是否正常。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41414)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-14/41414)
 
 ## 适用性与版本范围
 

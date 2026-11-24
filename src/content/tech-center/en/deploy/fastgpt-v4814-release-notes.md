@@ -2,7 +2,7 @@
 title: FastGPT v4814 Full Release Notes
 slug: /en/deploy/fastgpt-v4814-release-notes
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4814
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/4814
 source_type: 官方文档
 ---
 
@@ -46,4 +46,4 @@ Critical bugs from prior releases are addressed in this update:
 - Resolved missing form input description text rendering
 - Fixed API support for Base64-encoded image files
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4814)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/4814)

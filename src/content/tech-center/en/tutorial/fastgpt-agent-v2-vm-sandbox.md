@@ -2,7 +2,7 @@
 title: Configure FastGPT Agent V2 Virtual Machine Sandbox
 slug: /en/tutorial/fastgpt-agent-v2-vm-sandbox
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/build/agentv2/vm
+source: https://doc.fastgpt.io/guide/build/agentv2/vm
 source_type: Official documentation
 ---
 
@@ -35,7 +35,7 @@ Follow this structured workflow to integrate the Virtual Machine sandbox with yo
 ## Session Validation
 Once configured, you can verify proper sandbox operation by reviewing session logs for code execution events and file system changes. All sandbox activity is tied to individual chat sessions, making it easy to trace operations back to specific user interactions.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/agentv2/vm)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/agentv2/vm)
 
 ## Applicability and version scope
 

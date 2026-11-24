@@ -2,7 +2,7 @@
 title: Detailed Breakdown of FastGPT RAG Workflow
 slug: /en/tutorial/fastgpt-rag-workflow-breakdown
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/dataset/rag
+source: https://doc.fastgpt.io/guide/dataset/rag
 source_type: Official documentation
 ---
 
@@ -24,7 +24,7 @@ Each stage of the workflow relies on dedicated system components:
 - Answer generation leverages the retrieved context and original query to produce coherent, contextually appropriate responses.
 - Response delivery ensures all outputs are returned clearly without extraneous processing steps.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/rag)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/rag)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: 解决连续对话中上下文缺失导致知识库搜索失效的问题
 slug: /zh/tutorial/rag-coreference-resolution
 page_type: 教程
-source: https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/coreferenceResolution
+source: https://doc.fastgpt.cn/guide/build/workflow/nodes/coreferenceResolution
 source_type: 官方文档
 ---
 
@@ -18,7 +18,7 @@ source_type: 官方文档
 
 补全后的问题可准确覆盖上下文语义，让知识库搜索返回匹配的相关内容，解决连续对话中的检索失效问题。例如上述场景中，补全后的问题为"QA结构的第二点是什么"，可直接匹配知识库中对应的内容，完成有效检索。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/coreferenceResolution)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/workflow/nodes/coreferenceResolution)
 
 ## 适用性与版本范围
 

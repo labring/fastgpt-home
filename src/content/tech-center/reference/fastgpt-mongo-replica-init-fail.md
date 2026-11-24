@@ -2,7 +2,7 @@
 title: 解决FastGPT自托管部署Mongo副本集自动初始化失败问题
 slug: /zh/reference/fastgpt-mongo-replica-init-fail
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host
+source: https://doc.fastgpt.cn/self-host
 source_type: 官方文档小节
 ---
 
@@ -59,4 +59,4 @@ FastGPT部署中Mongo副本集自动初始化失败，多数情况是CPU不支�
 ## 注意事项
 该方案在Ubuntu20/22、CentOS7、WSL2、Mac、Windows环境均通过测试。配置Mongo密钥时，需确保权限为`chmod 600`，所有者可设置为`999:root`，部分系统需调整为`admin`。初始化时需使用配置的用户名和密码，若仍无法启动，优先排查CPU是否支持AVX指令集，可切换Mongo4.x版本。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host)

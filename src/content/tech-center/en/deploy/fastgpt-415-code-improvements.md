@@ -2,7 +2,7 @@
 title: FastGPT 4.15 Codebase Improvement and Tooling Updates
 slug: /en/deploy/fastgpt-415-code-improvements
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41501
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/41501
 source_type: Official documentation
 ---
 
@@ -24,7 +24,7 @@ The server-side environment loading system has been fully migrated to `@t3-oss/e
 
 All environment variable access now uses this centralized config object, eliminating inconsistent references across backend API routes and server-side rendering workflows.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41501)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-15/41501)
 
 ## Applicability and version scope
 

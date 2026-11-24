@@ -2,7 +2,7 @@
 title: Run FastGPT v447 Initialization API
 slug: /en/deploy/fastgpt-v447-initialization-api
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/447
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/447
 source_type: 官方文档
 ---
 
@@ -32,4 +32,4 @@ curl --location --request POST 'https://{{host}}/api/admin/initv447' \
 3. Run the modified curl command in a terminal or command line interface with access to your FastGPT deployment network.
 4. Monitor your FastGPT deployment logs to confirm successful completion of the initialization tasks.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/447)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/447)

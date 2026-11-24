@@ -2,7 +2,7 @@
 title: FastGPT V4.6版本升级操作说明与功能解读
 slug: /zh/deploy/upgrade-v4-6
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/46
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/46
 source_type: 官方文档
 ---
 
@@ -39,7 +39,7 @@ source_type: 官方文档
 ## 升级后怎么验证
 可通过查看部署日志确认initv46和initv46-2执行成功。验证团队空间功能是否可用，测试知识库导出是否支持流下载，测试文件导入后知识库数据是否正常显示。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/46)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/46)
 
 ## 适用性与版本范围
 

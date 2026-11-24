@@ -2,7 +2,7 @@
 title: FastGPT V4.15.6版本升级说明解读
 slug: /zh/deploy/upgrade-v4-15-6
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/4156
+source: https://doc.fastgpt.cn/self-host/upgrading/4-15/4156
 source_type: 官方文档
 ---
 
@@ -20,7 +20,7 @@ source_type: 官方文档
 ## 升级后怎么验证
 升级完成后，打开对话页面的直接链接，首次访问时检查历史对话是否可正常加载，确认该异常已被修复。同时可检查对应服务的运行状态，确保服务正常启动。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/4156)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-15/4156)
 
 ## 适用性与版本范围
 

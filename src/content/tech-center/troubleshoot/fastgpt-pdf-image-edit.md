@@ -29,6 +29,6 @@ source_type: GitHub issue
 
 > 来源: [原始讨论：建议增加知识库图片临时上传](https://github.com/labring/FastGPT/issues/4619)
 
-> 来源: [FastGPT 文件输入与 4.8.13 行为说明](https://doc.fastgpt.io/en/guide/build/general/fileInput)
+> 来源: [FastGPT 文件输入与 4.8.13 行为说明](https://doc.fastgpt.io/guide/build/general/fileInput)
 
-> 来源: [FastGPT 对象存储配置](https://doc.fastgpt.io/en/self-host/config/object-storage)
+> 来源: [FastGPT 对象存储配置](https://doc.fastgpt.io/self-host/config/object-storage)

@@ -2,7 +2,7 @@
 title: FastGPT v4.15.2 General Technical Improvement Details
 slug: /en/deploy/fastgpt-v4152-general-improvements
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/4152
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/4152
 source_type: Official documentation
 ---
 
@@ -31,7 +31,7 @@ Deployment and API layer improvements reduce redundant traffic and streamline ma
 - The user registration button is now hidden by default when the platform is running in Sync Mode, reducing UI clutter for self-hosted managed deployments.
 - Compatibility with the latest WeChat publishing channel SDK has been added, supporting updated integration requirements for official WeChat publishing workflows.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/4152)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-15/4152)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: FastGPT知识库介绍字段更新异常问题说明
 slug: /zh/glossary/fastgpt-knowledge-base-intro-issue
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/toc
+source: https://doc.fastgpt.cn/toc
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ source_type: 官方文档
 ## 容易搞错的地方
 容易混淆知识库配置页的intro介绍字段与其他配置项的保存逻辑，误以为保存后立即在列表页生效。需注意特定部署版本可能存在已知的展示异常问题，需核对部署版本信息。需确认知识库配置的保存操作已正确完成，避免因操作失误导致字段未生效。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/toc)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/toc)
 
 ## 适用性与版本范围
 

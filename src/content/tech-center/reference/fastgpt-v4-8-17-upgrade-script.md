@@ -2,7 +2,7 @@
 title: FastGPT V4.8.17版本升级操作速查
 slug: /zh/reference/fastgpt-v4-8-17-upgrade-script
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4817
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4817
 source_type: 官方文档小节
 ---
 
@@ -25,4 +25,4 @@ FastGPT V4.8.17版本升级需使用官方提供的专属升级脚本完成。�
 4. 升级过程中请勿中断脚本执行，避免导致部署环境异常
 5. 升级完成后需检查系统插件与配置是否正常生效
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4817)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/4817)

@@ -2,7 +2,7 @@
 title: FastGPT V4.14.29版本升级步骤与变更说明
 slug: /zh/deploy/fastgpt-v41429-upgrade
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41429
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/41429
 source_type: 官方文档
 ---
 
@@ -21,4 +21,4 @@ source_type: 官方文档
 第一，修复了微信发布渠道的权限校验逻辑，原有的校验方式存在安全风险，本次更新将鉴权方式改为使用发布渠道ID进行校验，并增加了渠道类型校验，能够有效避免非微信发布渠道被误执行登录、登出或修改二维码状态等操作，提升了发布渠道的操作安全性。
 第二，适配了最新的微信发布渠道SDK，确保与微信官方的接口更新保持兼容，避免因SDK版本过旧导致的发布渠道功能异常。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41429)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-14/41429)

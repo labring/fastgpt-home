@@ -29,4 +29,4 @@ source_type: GitHub issue
 
 > 来源: [原始讨论：加入搜索工具后AI结果不显示了](https://github.com/labring/FastGPT/issues/4155)
 
-> 来源: [FastGPT 对话 OpenAPI](https://doc.fastgpt.io/en/openapi/chat)
+> 来源: [FastGPT 对话 OpenAPI](https://doc.fastgpt.io/openapi/chat)

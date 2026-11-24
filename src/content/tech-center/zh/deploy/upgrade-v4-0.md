@@ -2,7 +2,7 @@
 title: FastGPT V4.0从旧版本升级的完整操作指引
 slug: /zh/deploy/upgrade-v4-0
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/40
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/40
 source_type: 官方文档
 ---
 
@@ -58,7 +58,7 @@ db.outlinks.find({ shareId: { $exists: false } }).forEach(function (item) {
 ## 升级后怎么验证
 可通过以下方式验证升级是否成功：1. 检查MongoDB中apps表已重命名为models，outlinks表已重命名为sharechats；2. 查看chats、collections、outlinks表，确认已正确生成appId字段，outlinks表已生成shareId字段；3. 访问FastGPT对应业务功能，确认知识库、聊天对话、分享链接功能可正常使用。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/40)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/40)
 
 ## 适用性与版本范围
 

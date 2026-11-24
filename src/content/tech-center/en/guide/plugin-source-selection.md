@@ -3,7 +3,7 @@ title: Where Tools Come From: System Tools, Team-Installed Plugins or Your Own
 slug: /en/guide/plugin-source-selection
 page_type: Decision matrix
 source_type: FastGPT v4.17.2 documentation and community threads
-source: https://doc.fastgpt.cn/en/plugin/intro
+source: https://doc.fastgpt.io/plugin/intro
 source_note: "Criteria taken from the FastGPT v4.17.2 documentation and community threads, verified 2026-10-13."
 check_day: 2026-10-13
 article_section: Selection & Evaluation
@@ -53,9 +53,9 @@ You can delay this decision when existing tools fully cover current business nee
 
 ## References
 
-- [Plugin overview](https://doc.fastgpt.cn/en/plugin/intro)
-- [Installing plugins for a team](https://doc.fastgpt.cn/en/plugin/team-installation)
-- [Developing system tools](https://doc.fastgpt.cn/en/plugin/system-tool-development)
+- [Plugin overview](https://doc.fastgpt.io/plugin/intro)
+- [Installing plugins for a team](https://doc.fastgpt.io/plugin/team-installation)
+- [Developing system tools](https://doc.fastgpt.io/plugin/system-tool-development)
 
 ## Next steps
 

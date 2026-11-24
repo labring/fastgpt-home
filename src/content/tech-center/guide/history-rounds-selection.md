@@ -2,7 +2,7 @@
 title: 对话历史携带策略选型决策矩阵：轮数、截断与变量传递
 slug: /zh/guide/history-rounds-selection
 page_type: 决策矩阵页
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/env
+source: https://doc.fastgpt.cn/self-host/config/env
 source_type: 开源仓库文档与社区线程
 article_section: 选型与评估
 is_part_of: FastGPT 技术中心
@@ -60,8 +60,8 @@ API请求负载直接影响应用的响应速度与调用成本。传递大量�
 
 ## 参考资料
 
-- [FastGPT 环境变量](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
-- [FastGPT Docker Compose 部署](https://doc.fastgpt.cn/zh-CN/self-host/deploy/docker)
+- [FastGPT 环境变量](https://doc.fastgpt.cn/self-host/config/env)
+- [FastGPT Docker Compose 部署](https://doc.fastgpt.cn/self-host/deploy/docker)
 
 ## 需要进一步确认时
 

@@ -2,7 +2,7 @@
 title: FastGPT商业版飞书知识库导入配置及使用方法
 slug: /zh/reference/fastgpt-lark-dataset-import
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/lark_dataset
+source: https://doc.fastgpt.cn/guide/dataset/third-party/lark_dataset
 source_type: 官方文档小节
 ---
 
@@ -22,4 +22,4 @@ FastGPT v4.8.16及以上版本的商业版用户，可配置飞书应用的appId
 3. 目前仅支持导入云文档类型的内容。
 4. 功能处于测试阶段，部分交互有待优化。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/lark_dataset)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/dataset/third-party/lark_dataset)

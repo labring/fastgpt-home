@@ -2,7 +2,7 @@
 title: FastGPT系统插件骨架的创建流程与生成文件说明
 slug: /zh/model/fastgpt-plugin-skeleton-creation
 page_type: 模型指南
-source: https://doc.fastgpt.cn/zh-CN/plugin/system-tool-development
+source: https://doc.fastgpt.cn/plugin/system-tool-development
 source_type: 官方文档
 ---
 
@@ -26,7 +26,7 @@ CLI 工具执行完成后，会自动创建插件专属目录，并生成以下�
 ## 补充说明
 该 CLI 工具生成的文件均遵循 FastGPT 插件的开发规范，包含基础的依赖配置、编译脚本与测试配置，可直接用于后续的插件功能开发。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/plugin/system-tool-development)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/plugin/system-tool-development)
 
 ## 适用性与版本范围
 

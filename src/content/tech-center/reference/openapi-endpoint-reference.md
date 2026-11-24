@@ -3,7 +3,7 @@ title: FastGPT OpenAPI 接口速查表（v4.17.2）
 slug: /zh/reference/openapi-endpoint-reference
 page_type: 基准数据页
 source_type: 官方文档
-source: https://doc.fastgpt.cn/zh-CN/openapi/app
+source: https://doc.fastgpt.cn/openapi/app
 description: FastGPT v4.17.2 官方 OpenAPI 文档中的 33 个接口：方法、路径、用途，并逐个核对开源仓库里的路由文件。
 language: zh
 check_day: 2026-10-13
@@ -81,7 +81,7 @@ check_day: 2026-10-13
 
 ## 来源
 
-- [FastGPT v4.17.2 OpenAPI 文档：应用接口](https://doc.fastgpt.cn/zh-CN/openapi/app)
-- [FastGPT v4.17.2 OpenAPI 文档：对话接口](https://doc.fastgpt.cn/zh-CN/openapi/chat)
-- [FastGPT v4.17.2 OpenAPI 文档：知识库接口](https://doc.fastgpt.cn/zh-CN/openapi/dataset)
+- [FastGPT v4.17.2 OpenAPI 文档：应用接口](https://doc.fastgpt.cn/openapi/app)
+- [FastGPT v4.17.2 OpenAPI 文档：对话接口](https://doc.fastgpt.cn/openapi/chat)
+- [FastGPT v4.17.2 OpenAPI 文档：知识库接口](https://doc.fastgpt.cn/openapi/dataset)
 - [FastGPT v4.17.2 API 路由目录](https://github.com/labring/FastGPT/tree/v4.17.2/projects/app/src/pages/api)

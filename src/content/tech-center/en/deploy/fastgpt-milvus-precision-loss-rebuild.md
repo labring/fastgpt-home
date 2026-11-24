@@ -2,7 +2,7 @@
 title: Resolve FastGPT Milvus Data Precision Loss
 slug: /en/deploy/fastgpt-milvus-precision-loss-rebuild
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4812
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/4812
 source_type: 官方文档
 ---
 
@@ -27,4 +27,4 @@ curl --location --request POST 'https://{{host}}/api/admin/resetMilvus' \
 ```
 Substitute `{{rootkey}}` with your environment’s root key, and `{{host}}` with your FastGPT domain (omit any trailing slashes). This command sends a validated request to the FastGPT admin API, which automatically rebuilds all affected Milvus data to resolve the int64 precision loss issue. No additional user input is required after initiating the command.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4812)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/4812)

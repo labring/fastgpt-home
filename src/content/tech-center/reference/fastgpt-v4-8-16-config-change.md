@@ -2,7 +2,7 @@
 title: FastGPT V4.8.16版本配置变更的操作指南
 slug: /zh/reference/fastgpt-v4-8-16-config-change
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4816
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4816
 source_type: 官方文档小节
 ---
 
@@ -21,4 +21,4 @@ FastGPT V4.8.16版本存在配置变更项，归类在版本升级的<4.12.0板�
 ## 注意事项
 该配置变更仅适用于V4.8.16版本。升级前需确认当前版本是否属于需适配该变更的范围，避免因配置遗漏导致系统启动异常。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4816)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/4816)

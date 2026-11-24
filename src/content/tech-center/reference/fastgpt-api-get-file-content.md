@@ -2,7 +2,7 @@
 title: 获取FastGPT第三方API数据集的单个文件内容
 slug: /zh/reference/fastgpt-api-get-file-content
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/api_dataset
+source: https://doc.fastgpt.cn/guide/dataset/third-party/api_dataset
 source_type: 官方文档小节
 ---
 
@@ -22,4 +22,4 @@ source_type: 官方文档小节
 3. `title`为可选字段，未提供时系统会尝试从`previewUrl`中解析文件名。
 4. 当返回`previewUrl`时，系统会自动访问该链接下载文件并提取内容，同时缓存解析结果以提升性能。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/api_dataset)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/dataset/third-party/api_dataset)

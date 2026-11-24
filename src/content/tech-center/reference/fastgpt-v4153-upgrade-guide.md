@@ -2,7 +2,7 @@
 title: FastGPT V4.15.3版本升级操作步骤说明
 slug: /zh/reference/fastgpt-v4153-upgrade-guide
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/4153
+source: https://doc.fastgpt.cn/self-host/upgrading/4-15/4153
 source_type: 官方文档小节
 ---
 
@@ -24,4 +24,4 @@ V4.15.3是FastGPT 4.15.x系列的正式版本，该系列部分版本存在环�
 3. 升级前必须完成数据备份，防止升级过程中数据丢失。
 4. 升级过程中请勿中断服务，避免系统损坏。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/4153)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-15/4153)

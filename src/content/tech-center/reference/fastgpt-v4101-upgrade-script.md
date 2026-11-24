@@ -2,7 +2,7 @@
 title: FastGPT V4.10.1版本升级脚本的使用操作说明
 slug: /zh/reference/fastgpt-v4101-upgrade-script
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4101
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4101
 source_type: 官方文档小节
 ---
 
@@ -21,4 +21,4 @@ FastGPT V4.10.1版本升级需使用专属升级脚本完成。该版本的升�
 2. 升级操作仅支持版本低于4.12.0的FastGPT实例，不适用于更高版本的升级；
 3. 升级前可参考官方迁移备份相关文档完成数据备份，避免升级过程中出现数据丢失或异常。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4101)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/4101)

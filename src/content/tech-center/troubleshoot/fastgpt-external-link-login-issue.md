@@ -29,4 +29,4 @@ source_type: GitHub issue
 
 > 来源: [原始讨论：Generate "next step guidance" and it will pop up to the login interface in the external link chat](https://github.com/labring/FastGPT/issues/381)
 
-> 来源: [FastGPT 对话 OpenAPI](https://doc.fastgpt.io/en/openapi/chat)
+> 来源: [FastGPT 对话 OpenAPI](https://doc.fastgpt.io/openapi/chat)

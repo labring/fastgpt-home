@@ -2,7 +2,7 @@
 title: Retrieve FastGPT Chat Message Run Details
 slug: /en/api/fastgpt-chat-message-run-details
 page_type: API
-source: https://doc.fastgpt.cn/en/openapi/chat
+source: https://doc.fastgpt.io/openapi/chat
 source_type: Official documentation
 ---
 
@@ -52,7 +52,7 @@ For AI chat module runs, additional properties are available:
 ## Sample Response
 The complete response structure matches the official documentation example, including sample data for a workflow start module and an AI chat module run.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/openapi/chat)
+> Source: [FastGPT official source](https://doc.fastgpt.io/openapi/chat)
 
 ## Applicability and version scope
 

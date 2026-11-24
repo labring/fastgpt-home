@@ -2,7 +2,7 @@
 title: FastGPT V4.14.26版本升级操作与变更说明
 slug: /zh/deploy/fastgpt-v41426-upgrade-guide
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41426
+source: https://doc.fastgpt.cn/self-host/upgrading/4-14/41426
 source_type: 官方文档
 ---
 
@@ -18,4 +18,4 @@ source_type: 官方文档
 
 需要注意的是，本升级仅适用于V4.14.x分支的现有版本，其中V4.14.25版本已被官方弃用，请勿使用该版本进行部署或升级。若你当前运行的是更早的V4.14.x版本（如带有环境变量变更、升级脚本要求的版本），需先参考对应版本的官方升级说明完成前置适配后，再执行本次V4.14.26版本的升级操作。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41426)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-14/41426)

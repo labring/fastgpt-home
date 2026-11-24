@@ -2,7 +2,7 @@
 title: Troubleshoot Unexpected FastGPT Search Results
 slug: /en/tutorial/fastgpt-dataset-search-troubleshooting
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/dataset/dataset_engine
+source: https://doc.fastgpt.io/guide/dataset/dataset_engine
 source_type: Official documentation
 ---
 
@@ -28,7 +28,7 @@ The following table maps specific search symptoms to their recommended first-ste
 # Key Parameter Context
 Each adjustment in the table maps to native FastGPT dataset search parameters, including minimum relevance threshold, citation limit, search mode (full-text, semantic, hybrid), query rewriting settings, and reranking candidate counts. For example, increasing the citation limit expands the number of retrieved text chunks, while lowering the minimum relevance threshold broadens the search scope to return more results when initial queries yield no matches.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/dataset_engine)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/dataset_engine)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: Configure FastGPT Plugin Server for Remote Debugging
 slug: /en/deploy/fastgpt-plugin-server-remote-debug-config
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/remote-debug-suite
+source: https://doc.fastgpt.io/self-host/config/remote-debug-suite
 source_type: Official documentation
 ---
 
@@ -26,7 +26,7 @@ All Gateway-related configuration parameters must be added to the `fastgpt-plugi
 2. Insert all four environment variables listed in the table above, replacing the placeholder example values with secure, unique tokens and secrets tailored to your deployment.
 3. Restart the `fastgpt-plugin` service to apply the updated configuration changes.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/remote-debug-suite)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/remote-debug-suite)
 
 ## Applicability and version scope
 

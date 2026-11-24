@@ -2,7 +2,7 @@
 title: Control Tool Call Cycles and Workflow Variables
 slug: /en/node/tool-calling-additional-nodes
 page_type: Workflow nodes
-source: https://doc.fastgpt.cn/en/guide/build/workflow/nodes/tool
+source: https://doc.fastgpt.io/guide/build/workflow/nodes/tool
 source_type: Official documentation
 ---
 
@@ -23,7 +23,7 @@ The Tool Calling Termination node is designed to forcibly halt the current tool 
 ## Custom Variable Node
 The Custom Variable node is automatically made available when a Tool Calling node is added to the workflow. This node supports expanded data management for tool call sequences, allowing users to handle custom workflow variables tied to tool input and output data. All configuration for this node is completed via the standard FastGPT workflow variable editing interface, aligned with the platform's native variable handling rules.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/workflow/nodes/tool)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/workflow/nodes/tool)
 
 ## Applicability and version scope
 

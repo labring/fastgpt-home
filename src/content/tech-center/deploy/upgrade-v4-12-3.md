@@ -2,7 +2,7 @@
 title: FastGPT V4.12.3版本升级说明与操作指南
 slug: /zh/deploy/upgrade-v4-12-3
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-12/4123
+source: https://doc.fastgpt.cn/self-host/upgrading/4-12/4123
 source_type: 官方文档
 ---
 
@@ -20,7 +20,7 @@ source_type: 官方文档
 ## 升级后怎么验证
 可通过以下方式验证功能正常：测试提示词编辑器的列表、tab渲染等富文本交互功能；查看应用全局变量是否包含密码、多选、内部变量类型；验证RRF权重合并算法是否符合标准公式；确认多选组件可根据可见tag动态调整宽度；检查变量更新组件渲染与全局变量保持一致；测试单团队模式下用户离开后能否重新进入团队；验证工作流文件上传、分支运行、变量更新数组选择器功能正常；确认应用评测可获取所有输出文本；检查系统工具类型、模型提供商配置、应用模板的插件迁移配置生效。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-12/4123)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-12/4123)
 
 ## 适用性与版本范围
 

@@ -29,6 +29,6 @@ source_type: GitHub issue
 
 > 来源: [原始讨论：是否可以实现知识库搜索完毕后，罗列引用的数据集，由用户手动排除不需要引用的数据集？](https://github.com/labring/FastGPT/issues/2371)
 
-> 来源: [FastGPT 用户选择节点](https://doc.fastgpt.io/en/guide/build/workflow/nodes/user-selection)
+> 来源: [FastGPT 用户选择节点](https://doc.fastgpt.io/guide/build/workflow/nodes/user-selection)
 
-> 来源: [FastGPT 商业版集合标签与过滤](https://doc.fastgpt.io/en/guide/dataset/collection_tags)
+> 来源: [FastGPT 商业版集合标签与过滤](https://doc.fastgpt.io/guide/dataset/collection_tags)

@@ -2,7 +2,7 @@
 title: Configure FastGPT Logging and OTEL Collection
 slug: /en/deploy/fastgpt-logging-otel-config
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/signoz
+source: https://doc.fastgpt.io/self-host/config/signoz
 source_type: Official documentation
 ---
 
@@ -26,7 +26,7 @@ All logging settings are adjusted via environment variables, which can be set in
 ## Deploy Updated Configuration
 After updating your environment variables, apply the changes by restarting the FastGPT service. For file-based deployments, restart the background service running FastGPT. For containerized deployments, restart the FastGPT container instances to load the new configuration.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/signoz)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/signoz)
 
 ## Applicability and version scope
 

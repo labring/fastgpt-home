@@ -2,11 +2,11 @@
 title: 功能验收与效果验收：分两段做
 slug: /zh/compare/feature-vs-outcome-acceptance
 page_type: matrix
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173
+source: https://doc.fastgpt.cn/self-host/upgrading/4-17/4173
 source_type: 深度场景内容
 meta_title: 功能验收与效果验收怎么定
 meta_description: 区分功能可用与业务效果两类验收，列出接口、权限、异常处理及检索引用的验证材料，说明观察期、统计口径与责任分工如何衔接，便于实施方和业务方共同确认。
-delivery_metadata: {"source_front_matter":{"slug":"feature-vs-outcome-acceptance","meta_title":"功能验收与效果验收怎么定","meta_description":"区分功能可用与业务效果两类验收，列出接口、权限、异常处理及检索引用的验证材料，说明观察期、统计口径与责任分工如何衔接，便于实施方和业务方共同确认。","language":"zh","content_type":"matrix","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"feature-vs-outcome-acceptance","keywords":"功能验收,效果验收,验收判据,证据清单,返工成本","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"项目验收按功能还是按效果","需求依据":"客户 2026-11-07 购买诉求第 3 条：获得可落地的交付与技术支持。","事实来源":"FastGPT 产品知识库·内容收集清单；官方更新说明 4.17.3","内链":"https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173","排期":"W18 决策矩阵第 12 篇","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（来源版本，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核发布与索引能力表述。"]}
+delivery_metadata: {"source_front_matter":{"slug":"feature-vs-outcome-acceptance","meta_title":"功能验收与效果验收怎么定","meta_description":"区分功能可用与业务效果两类验收，列出接口、权限、异常处理及检索引用的验证材料，说明观察期、统计口径与责任分工如何衔接，便于实施方和业务方共同确认。","language":"zh","content_type":"matrix","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"feature-vs-outcome-acceptance","keywords":"功能验收,效果验收,验收判据,证据清单,返工成本","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"项目验收按功能还是按效果","需求依据":"客户 2026-11-07 购买诉求第 3 条：获得可落地的交付与技术支持。","事实来源":"FastGPT 产品知识库·内容收集清单；官方更新说明 4.17.3","内链":"https://doc.fastgpt.cn/self-host/upgrading/4-17/4173","排期":"W18 决策矩阵第 12 篇","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（来源版本，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核发布与索引能力表述。"]}
 keywords: 功能验收,效果验收,验收判据,证据清单,返工成本
 schema_type: Article
 date_modified: 2026-11-16
@@ -18,7 +18,7 @@ date_modified: 2026-11-16
 
 ## 两种验收的对象
 
-对照材料：[FastGPT 官方说明](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173)。
+对照材料：[FastGPT 官方说明](https://doc.fastgpt.cn/self-host/upgrading/4-17/4173)。
 
 功能验收的对象是能力与配置：应用能否发布、知识库能否检索、接口能否调用、权限是否按设计生效。效果验收的对象是业务结果：检索命中率、引用可追溯比例、使用量、处理时长。
 
@@ -74,6 +74,6 @@ date_modified: 2026-11-16
 
 | 主题 | 版本 | 来源 |
 | --- | --- | --- |
-| 发布快照与运行身份 | v4.17.1 | [self-host/upgrading/4-17/4171](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4171) |
-| 索引三态与召回 | v4.17.2 | [self-host/upgrading/4-17/4172](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4172) |
+| 发布快照与运行身份 | v4.17.1 | [self-host/upgrading/4-17/4171](https://doc.fastgpt.cn/self-host/upgrading/4-17/4171) |
+| 索引三态与召回 | v4.17.2 | [self-host/upgrading/4-17/4172](https://doc.fastgpt.cn/self-host/upgrading/4-17/4172) |
 | 支持与交付范围 | 当期商业方案 | [FastGPT 商务咨询：授权、部署与支持范围](https://fastgpt.cn/contact) |

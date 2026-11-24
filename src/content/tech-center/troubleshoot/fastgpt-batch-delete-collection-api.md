@@ -29,4 +29,4 @@ source_type: GitHub issue
 
 > 来源: [原始讨论：功能请求：希望FastGPT能够提供批量根据集合ID删除知识的API接口](https://github.com/labring/FastGPT/issues/3732)
 
-> 来源: [FastGPT 知识库 OpenAPI](https://doc.fastgpt.io/en/openapi/dataset)
+> 来源: [FastGPT 知识库 OpenAPI](https://doc.fastgpt.io/openapi/dataset)

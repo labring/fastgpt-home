@@ -63,7 +63,7 @@ FastGPT 官方 M3E 接入文档说明知识库模型在创建时确定，绑定�
 
 ## 参考资料
 
-- [FastGPT M3E 接入说明](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/m3e)
+- [FastGPT M3E 接入说明](https://doc.fastgpt.cn/self-host/custom-models/m3e)
 - [FastGPT 知识库 API 定义](https://github.com/labring/FastGPT/blob/2bab5c1e06c46362f40a454d49d963e8bf0c62bc/packages/global/openapi/core/dataset/api.ts)
 - [FastGPT 向量格式化实现](https://github.com/labring/FastGPT/blob/2bab5c1e06c46362f40a454d49d963e8bf0c62bc/packages/service/core/ai/embedding/index.ts)
 - [pgvector 索引与迭代扫描](https://github.com/pgvector/pgvector#indexing)

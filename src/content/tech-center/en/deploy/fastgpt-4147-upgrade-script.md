@@ -2,7 +2,7 @@
 title: Execute Self-Hosted FastGPT 4.14.7 Upgrade Script
 slug: /en/deploy/fastgpt-4147-upgrade-script
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4147
+source: https://doc.fastgpt.io/self-host/upgrading/4-14/4147
 source_type: Official documentation
 ---
 
@@ -30,7 +30,7 @@ Follow these exact steps to run the upgrade script:
 ## Post-Execution Behavior
 After a successful request, the FastGPT platform will populate the statistics table with all relevant error-containing chat session logs. This ensures administrative users have access to complete error data for troubleshooting and monitoring. No additional configuration steps are required beyond running the modified command.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4147)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-14/4147)
 
 ## Applicability and version scope
 

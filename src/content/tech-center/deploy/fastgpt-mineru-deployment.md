@@ -2,7 +2,7 @@
 title: 在FastGPT自托管环境中部署MinerU文档解析服务的教程
 slug: /zh/deploy/fastgpt-mineru-deployment
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/custom-models/mineru
+source: https://doc.fastgpt.cn/self-host/custom-models/mineru
 source_type: 官方文档
 ---
 
@@ -23,7 +23,7 @@ docker run --gpus all -itd -p 7231:8001 --name mode_pdf_minerU crpi-h3snc261q1do
 
 完成容器启动后，获取部署服务器的公网或内网IP地址，拼接为服务URL（格式为http://{服务器IP}:7231），将该URL接入FastGPT的配置文件中，即可完成MinerU服务的对接。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/mineru)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/custom-models/mineru)
 
 ## 适用性与版本范围
 

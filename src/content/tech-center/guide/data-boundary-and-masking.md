@@ -7,7 +7,7 @@ is_part_of: FastGPT 技术中心
 meta_description: 面向企业技术与运维负责人，讲解如何划定知识库数据边界，明确脱敏规则与留存范围，规避违规数据纳入风险，保障AI知识库系统合规性与应用效果。
 delivery_source_type: 开源仓库文档与社区线程
 source_type: 深度场景内容
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/env
+source: https://doc.fastgpt.cn/self-host/config/env
 meta_title: 企业AI知识库数据边界管控：不该纳入的内容、脱敏口径与留存范围｜FastGPT 技术中心
 schema_type: TechArticle
 date_published: 2026-09-28
@@ -66,8 +66,8 @@ delivery_note: 判据取自开源仓库文档与社区线程，核验日 2026-09
 
 ## 参考资料
 
-- [FastGPT 环境变量](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
-- [FastGPT 升级说明](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/upgrade-instruction)
+- [FastGPT 环境变量](https://doc.fastgpt.cn/self-host/config/env)
+- [FastGPT 升级说明](https://doc.fastgpt.cn/self-host/upgrading/upgrade-instruction)
 
 ## 需要进一步确认时
 

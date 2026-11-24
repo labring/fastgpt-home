@@ -2,7 +2,7 @@
 title: Update VectorModels Config for FastGPT v4.2.1
 slug: /en/deploy/fastgpt-v421-vector-models-update
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/421
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/421
 source_type: 官方文档
 ---
 
@@ -43,4 +43,4 @@ This example uses the `text-embedding-ada-002` model, but the structural format 
 ## Configuration Rationale
 This update simplifies model configuration by removing redundant multiple-choice options for embedding tasks. Administrators only need to select the single most suitable model for their deployment’s needs, reducing configuration complexity while enforcing consistent token handling across all embedding operations.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/421)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/421)

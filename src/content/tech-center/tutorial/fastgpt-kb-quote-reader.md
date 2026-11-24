@@ -2,7 +2,7 @@
 title: 配置FastGPT知识库引用分块阅读器，实现AI引用可溯源
 slug: /zh/tutorial/fastgpt-kb-quote-reader
 page_type: 教程/部署
-source: https://doc.fastgpt.cn/zh-CN/guide/chat/quoteList
+source: https://doc.fastgpt.cn/guide/chat/quoteList
 source_type: 官方文档
 ---
 
@@ -21,4 +21,4 @@ source_type: 官方文档
 分块阅读器右上角设有导航控制按钮，可在多个引用间切换浏览，导航区会直观显示当前查看的引用序号与总数量，例如7/10，帮助用户掌握浏览进度。每条引用内容旁配有智能评分标签，鼠标悬停在标签上即可查看完整的评分详情，了解该片段被选中的原因与相关性构成。
 管理员可通过灵活的可见度控制配置外部访问者的查看范围。当设置为仅引用内容可见时，外部用户点击引用链接仅能查看AI引用的特定文本片段，无法访问完整原文档。授权用户可在浏览过程中对引用内容进行即时标注与修正，修改后的内容会通过已更新标签清晰标识，且不会打断当前对话体验。系统采用按需渲染机制，根据索引排序与数据库ID仅加载用户实际需要查看的内容，保障超长文档浏览的流畅性，避免因文档体积庞大出现卡顿延迟。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/chat/quoteList)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/chat/quoteList)

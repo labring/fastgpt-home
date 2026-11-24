@@ -2,7 +2,7 @@
 title: Update FastGPT 4.16.0 Environment Variables
 slug: /en/deploy/fastgpt-4160-environment-variable-updates
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-16/4160
+source: https://doc.fastgpt.io/self-host/upgrading/4-16/4160
 source_type: 官方文档
 ---
 
@@ -36,4 +36,4 @@ You can configure optional environment variables to adjust Agent Sandbox resourc
 | `AGENT_SANDBOX_SUSPEND_MINUTES`       | `60`    | Number of minutes an active Sandbox can remain idle before it is automatically suspended.                                             |
 | `AGENT_SANDBOX_ARCHIVE_INACTIVE_DAYS` | `7`     | Number of days a suspended Sandbox can remain inactive before it is automatically archived.                                           |
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/4-16/4160)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/4-16/4160)

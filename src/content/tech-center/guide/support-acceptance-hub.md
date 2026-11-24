@@ -6,7 +6,7 @@ source: https://fastgpt.cn/faq/private-deployment-data-boundary
 source_type: 深度场景内容
 meta_title: 技术支持与验收入口核对
 meta_description: 把 FastGPT 技术支持拆成部署协助、培训、故障通道、升级与验收五条核对入口，逐项给出可见差异、交付物清单、失败表现与需要合同确认的边界。
-delivery_metadata: {"source_front_matter":{"slug":"support-acceptance-hub","meta_title":"技术支持与验收入口核对","meta_description":"把 FastGPT 技术支持拆成部署协助、培训、故障通道、升级与验收五条核对入口，逐项给出可见差异、交付物清单、失败表现与需要合同确认的边界。","language":"zh","content_type":"aggregation","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"support-acceptance-hub","keywords":"技术支持,验收,培训,故障通道,升级","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"技术支持怎么核、验收清单怎么写","需求依据":"客户 2026-11-07 购买诉求第 3 条：落地过程要有人跟，支持属于交付保障。","事实来源":"FastGPT 产品知识库·内容收集清单（支持档位）；官方更新说明 4.17.2 与 4.17.3","内链":"https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173","排期":"W18 聚合导航第 5 篇","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（来源版本，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核支持档位表述与升级说明。"]}
+delivery_metadata: {"source_front_matter":{"slug":"support-acceptance-hub","meta_title":"技术支持与验收入口核对","meta_description":"把 FastGPT 技术支持拆成部署协助、培训、故障通道、升级与验收五条核对入口，逐项给出可见差异、交付物清单、失败表现与需要合同确认的边界。","language":"zh","content_type":"aggregation","product_version":"v4.17.3","review_date":"2026-11-16","translation_group":"support-acceptance-hub","keywords":"技术支持,验收,培训,故障通道,升级","结构化数据":"Article；绝对路由由站点模板在部署时生成","对应元语义题":"技术支持怎么核、验收清单怎么写","需求依据":"客户 2026-11-07 购买诉求第 3 条：落地过程要有人跟，支持属于交付保障。","事实来源":"FastGPT 产品知识库·内容收集清单（支持档位）；官方更新说明 4.17.2 与 4.17.3","内链":"https://doc.fastgpt.cn/self-host/upgrading/4-17/4173","排期":"W18 聚合导航第 5 篇","配图需求":"本次文字稿未指定独立配图","签发":"待发布责任人确认"},"editorial_notes":["核验日期：2026-11-16。版本与套餐：FastGPT v4.17.3（来源版本，客户部署版本以实际环境为准）。更新记录：见上表来源页。90 天复核：2027-02-14 前复核支持档位表述与升级说明。"]}
 keywords: 技术支持,验收,培训,故障通道,升级
 schema_type: Article
 date_modified: 2026-11-16
@@ -42,7 +42,7 @@ date_modified: 2026-11-16
 
 ## 入口四：升级
 
-入口：[FastGPT 更新说明](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173)。
+入口：[FastGPT 更新说明](https://doc.fastgpt.cn/self-host/upgrading/4-17/4173)。
 
 位置在升级说明与维护窗口。升级要处理三件事：镜像成套、回填任务、兼容性回归。以 v4.17.3 为例，主服务、商业版、插件、代码执行沙盒、AI Proxy 及实际启用的 Agent 沙盒组件要对应版本，启用 Agent 沙盒时，主服务、Agent 沙盒与预览代理须配套更新；三项后台回填任务最多三个并发，失败可重试，其中系统模型价格迁移未完成时该版本暂按免费处理。
 
@@ -64,5 +64,5 @@ date_modified: 2026-11-16
 | --- | --- | --- |
 | 支持档位、培训权益、首次部署协助范围 | 当期商业方案 | [FastGPT 商务咨询：授权、部署与支持范围](https://fastgpt.cn/contact) |
 | 每月线上直播培训与实操 | 双源印证 | [客户补充材料可用性判定](https://fastgpt.cn/contact) |
-| 手动迁移顺序与租约 | v4.17.2 | [self-host/upgrading/4-17/4172](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4172) |
-| 镜像成套与三项回填 | v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-17/4173) |
+| 手动迁移顺序与租约 | v4.17.2 | [self-host/upgrading/4-17/4172](https://doc.fastgpt.cn/self-host/upgrading/4-17/4172) |
+| 镜像成套与三项回填 | v4.17.3 | [self-host/upgrading/4-17/4173](https://doc.fastgpt.cn/self-host/upgrading/4-17/4173) |

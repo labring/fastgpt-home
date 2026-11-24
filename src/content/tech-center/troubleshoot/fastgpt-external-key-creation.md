@@ -12,7 +12,7 @@ source_type: GitHub issue
 
 ## 历史范围与凭证规范
 
-[Issue #4029](https://github.com/labring/FastGPT/issues/4029) 于 2025 年 3 月提出外部创建密钥的需求，原线程的自动关闭记录只反映维护状态，具体管理接口仍需按部署版本确认。[v4.15.0 更新说明](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41500) 记录了统一 APIKey 管理的调整；当前[API 发布文档](https://doc.fastgpt.cn/zh-CN/guide/build/publish/openapi) 将 APIKey 定义为团队成员凭证，调用应用时显式传入 `appId`。
+[Issue #4029](https://github.com/labring/FastGPT/issues/4029) 于 2025 年 3 月提出外部创建密钥的需求，原线程的自动关闭记录只反映维护状态，具体管理接口仍需按部署版本确认。[v4.15.0 更新说明](https://doc.fastgpt.cn/self-host/upgrading/4-15/41500) 记录了统一 APIKey 管理的调整；当前[API 发布文档](https://doc.fastgpt.cn/guide/build/publish/openapi) 将 APIKey 定义为团队成员凭证，调用应用时显式传入 `appId`。
 
 ## 集成检查
 
@@ -23,4 +23,4 @@ source_type: GitHub issue
 
 ## 验证结果
 
-用两个测试用户分别创建会话，检查各自的历史记录，再尝试访问另一用户的会话，确认业务服务拒绝越权请求。删除测试凭证后复测调用失败。会话参数规则见[官方对话接口](https://doc.fastgpt.cn/zh-CN/openapi/chat)。
+用两个测试用户分别创建会话，检查各自的历史记录，再尝试访问另一用户的会话，确认业务服务拒绝越权请求。删除测试凭证后复测调用失败。会话参数规则见[官方对话接口](https://doc.fastgpt.cn/openapi/chat)。

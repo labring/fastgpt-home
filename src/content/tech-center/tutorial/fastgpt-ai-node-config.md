@@ -2,7 +2,7 @@
 title: 说明FastGPT应用与工作流的AI配置项和使用方法
 slug: /zh/tutorial/fastgpt-ai-node-config
 page_type: 教程/部署
-source: https://doc.fastgpt.cn/zh-CN/guide/build/general/ai_settings
+source: https://doc.fastgpt.cn/guide/build/general/ai_settings
 source_type: 官方文档
 ---
 
@@ -31,4 +31,4 @@ AI模型项会展示积分价格、最大上下文、工具调用、多模态能
 5. 若需固定格式回复，选择`json_schema`并填写对应的格式要求；
 6. 若模型支持多模态识别，按需开启对应媒体类型的识别功能。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/general/ai_settings)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/general/ai_settings)

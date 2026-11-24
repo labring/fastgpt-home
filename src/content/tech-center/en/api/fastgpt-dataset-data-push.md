@@ -2,7 +2,7 @@
 title: Push Dataset Data to FastGPT Processing Queue
 slug: /en/api/fastgpt-dataset-data-push
 page_type: API
-source: https://doc.fastgpt.cn/en/openapi/dataset
+source: https://doc.fastgpt.io/openapi/dataset
 source_type: Official documentation
 ---
 
@@ -87,7 +87,7 @@ My text:"""{{text}}"""
 ```
 The `[theme]` placeholder can be replaced with a specific data theme; the default value is "They may contain multiple theme contents".
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/openapi/dataset)
+> Source: [FastGPT official source](https://doc.fastgpt.io/openapi/dataset)
 
 ## Applicability and version scope
 

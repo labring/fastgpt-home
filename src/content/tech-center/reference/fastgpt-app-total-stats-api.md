@@ -2,7 +2,7 @@
 title: 获取FastGPT应用总体数据统计的日志接口使用参考
 slug: /zh/reference/fastgpt-app-total-stats-api
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/openapi/app
+source: https://doc.fastgpt.cn/openapi/app
 source_type: 官方文档小节
 ---
 
@@ -42,4 +42,4 @@ source_type: 官方文档小节
 3. 成功响应的`code`字段值为200，若`code`非200则表示请求失败
 4. 未产生业务数据时，响应的`data`字段三项统计值均为0
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/openapi/app)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/openapi/app)

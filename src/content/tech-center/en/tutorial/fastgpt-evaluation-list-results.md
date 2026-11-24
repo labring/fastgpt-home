@@ -2,7 +2,7 @@
 title: View and Analyze FastGPT Evaluation List Results
 slug: /en/tutorial/fastgpt-evaluation-list-results
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/build/evaluation
+source: https://doc.fastgpt.io/guide/build/evaluation
 source_type: Official documentation
 ---
 
@@ -24,7 +24,7 @@ Every evaluation task entry includes the following standardized fields, displaye
 ## Leverage Evaluation Lists for App Refinement
 A primary use case for the evaluation list is comparing task results across multiple iterations of your FastGPT application. As you make adjustments to improve app performance, you can use the list to track how each change impacts overall scores and other key metrics over time. This structured comparison eliminates guesswork from the app improvement process, allowing you to validate that modifications deliver intended positive outcomes. Each entry’s complete metadata set also supports targeted deep dives into individual task runs, helping identify consistent trends or unexpected variations in evaluation performance.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/evaluation)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/evaluation)
 
 ## Applicability and version scope
 

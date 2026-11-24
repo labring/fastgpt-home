@@ -2,7 +2,7 @@
 title: FastGPT知识库数据采集与构建的优化方法与实践
 slug: /zh/dataset/fastgpt-knowledgebase-rag-optimization
 page_type: 知识库与切分
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/rag
+source: https://doc.fastgpt.cn/guide/dataset/rag
 source_type: 官方文档小节
 ---
 
@@ -25,4 +25,4 @@ RAG模型的核心效果依赖FastGPT知识库的数据质量与覆盖广度，�
 ## 优化后的效果提升
 通过上述配置，知识库的覆盖广度与深度将得到增强，可支撑多场景问答需求；低质量、偏见数据的干扰将减少，提升回答的权威性与准确性；知识库可保持及时更新，适配快速变化的领域；数据处理效率与准确性提升，回答更流畅连贯；敏感数据得到合规保护，保障系统安全；数据检索效率提升，模型可高效调用关键信息；知识库将持续贴合用户需求，优化输出内容。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/dataset/rag)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/dataset/rag)

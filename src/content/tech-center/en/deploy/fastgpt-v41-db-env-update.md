@@ -2,7 +2,7 @@
 title: Update FastGPT Database Connection Variables for V4.1
 slug: /en/deploy/fastgpt-v41-db-env-update
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/41
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/41
 source_type: 官方文档
 ---
 
@@ -35,4 +35,4 @@ A supported troubleshooting action: If your MongoDB connection fails after apply
 5. If you encounter MongoDB connection errors, edit the `MONGODB_URI` to remove the `?authSource=admin` query string.
 6. Restart your FastGPT deployment to activate the updated environment variables.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/41)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/41)

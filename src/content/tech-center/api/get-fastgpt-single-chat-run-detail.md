@@ -2,7 +2,7 @@
 title: 获取FastGPT单个对话运行详情的API调用方法
 slug: /zh/api/get-fastgpt-single-chat-run-detail
 page_type: API与文档
-source: https://doc.fastgpt.cn/zh-CN/openapi/chat
+source: https://doc.fastgpt.cn/openapi/chat
 source_type: 官方文档小节
 ---
 
@@ -74,4 +74,4 @@ curl --location --request GET 'http://localhost:3000/api/core/chat/record/getRes
 ```
 响应的`data`数组包含所有对话执行过的节点详情，不同类型的模块包含的字段有所差异：例如`workflowStart`类型的节点仅包含基础的标识与运行时长字段；`chatNode`类型的节点则会额外包含消耗点数、使用模型、请求token数、用户查询内容、上下文预览等详细信息。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/openapi/chat)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/openapi/chat)

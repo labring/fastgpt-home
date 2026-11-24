@@ -2,7 +2,7 @@
 title: 为FastGPT添加第三方知识库对接的自定义配置表单
 slug: /zh/integration/fastgpt-third-party-dataset-config
 page_type: 集成
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/third_dataset
+source: https://doc.fastgpt.cn/guide/dataset/third-party/third_dataset
 source_type: 官方文档
 ---
 
@@ -18,7 +18,7 @@ source_type: 官方文档
 
 仅保留基础字段渲染或添加根目录选择组件，均可适配不同的第三方知识库对接需求。所有配置均基于对接API的对应方法实现，无需额外调整其他配置项。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/third_dataset)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/dataset/third-party/third_dataset)
 
 ## 适用性与版本范围
 

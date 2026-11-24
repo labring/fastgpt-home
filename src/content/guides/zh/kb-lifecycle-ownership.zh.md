@@ -72,6 +72,6 @@ FastGPT 提供文档导入、分段与检索相关能力。接入网站或其他
 
 ## 参考资料
 
-- [FastGPT 团队与资源权限](https://doc.fastgpt.cn/zh-CN/guide/workspace/team/team_roles_permissions)
-- [FastGPT API 文件库](https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/api_dataset)
-- [FastGPT 检索原理](https://doc.fastgpt.cn/zh-CN/guide/dataset/dataset_engine)
+- [FastGPT 团队与资源权限](https://doc.fastgpt.cn/guide/workspace/team/team_roles_permissions)
+- [FastGPT API 文件库](https://doc.fastgpt.cn/guide/dataset/third-party/api_dataset)
+- [FastGPT 检索原理](https://doc.fastgpt.cn/guide/dataset/dataset_engine)

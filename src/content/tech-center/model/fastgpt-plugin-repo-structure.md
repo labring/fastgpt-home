@@ -2,7 +2,7 @@
 title: FastGPT Plugin生态各仓库的功能划分与使用指引说明
 slug: /zh/model/fastgpt-plugin-repo-structure
 page_type: 模型指南
-source: https://doc.fastgpt.cn/zh-CN/plugin/intro
+source: https://doc.fastgpt.cn/plugin/intro
 source_type: 官方文档
 ---
 
@@ -21,7 +21,7 @@ FastGPT Plugin生态主要涉及四类核心仓库，不同仓库承担差异化
 ## 插件开发资源使用说明
 `fastgpt-plugin`仓库仅提供开发、构建、检查、打包和服务端运行能力，不承载具体插件的业务代码。具体插件的源码需根据其属性，存放至对应的专用仓库中：官方维护或审核通过的插件存放至`fastgpt-official-plugins`，社区第三方插件存放至`fastgpt-community-plugins`，私有、客户定制及商业交付插件存放至`fastgpt-business-plugins`。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/plugin/intro)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/plugin/intro)
 
 ## 适用性与版本范围
 

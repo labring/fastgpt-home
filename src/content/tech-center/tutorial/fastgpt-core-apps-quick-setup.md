@@ -2,7 +2,7 @@
 title: FastGPT四类核心应用的快速搭建与效果验证指南
 slug: /zh/tutorial/fastgpt-core-apps-quick-setup
 page_type: 教程
-source: https://doc.fastgpt.cn/zh-CN/guide/getting-started/quick-start
+source: https://doc.fastgpt.cn/guide/getting-started/quick-start
 source_type: 官方文档
 ---
 
@@ -26,7 +26,7 @@ source_type: 官方文档
 5.  Agent V2搭建：上传Excel或CSV示例文件，配置数据分析指令，运行后查看生成的分析结果。
 若测试邮箱工具，需提前准备邮箱SMTP授权码完成通知渠道配置。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/getting-started/quick-start)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/getting-started/quick-start)
 
 ## 适用性与版本范围
 

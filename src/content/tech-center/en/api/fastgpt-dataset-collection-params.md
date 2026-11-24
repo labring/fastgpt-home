@@ -2,7 +2,7 @@
 title: Configure FastGPT Dataset Collection Creation Parameters
 slug: /en/api/fastgpt-dataset-collection-params
 page_type: API
-source: https://doc.fastgpt.cn/en/openapi/dataset
+source: https://doc.fastgpt.io/openapi/dataset
 source_type: Official documentation
 ---
 
@@ -39,7 +39,7 @@ Upon successful creation of the dataset collection, the API returns two core fie
 # Key Usage Notes
 All mandatory parameters must be included in the request to avoid validation errors. Optional parameters will use their default values if omitted. Commercial-exclusive parameters will not function on non-commercial FastGPT deployments. Chunk configuration parameters only apply when `chunkSettingMode` is set to `custom`.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/openapi/dataset)
+> Source: [FastGPT official source](https://doc.fastgpt.io/openapi/dataset)
 
 ## Applicability and version scope
 

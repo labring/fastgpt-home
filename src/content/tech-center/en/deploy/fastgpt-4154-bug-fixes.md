@@ -2,7 +2,7 @@
 title: FastGPT 4.15.4 Official Bug Fix Documentation
 slug: /en/deploy/fastgpt-4154-bug-fixes
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/4154
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/4154
 source_type: 官方文档
 ---
 
@@ -32,4 +32,4 @@ To confirm all fixes are successfully applied after upgrading to FastGPT 4.15.4,
 6.  Configure an Agent V2 assistant, review the configured tool list and associated prompt text to confirm alignment between both fields.
 7.  Validate your deployment `.yaml` script files using your standard infrastructure orchestration tools to confirm no syntax errors are resolved.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/4154)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/4-15/4154)

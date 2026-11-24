@@ -2,7 +2,7 @@
 title: Configure Associated Skills and Tools for FastGPT Agent V2
 slug: /en/tutorial/fastgpt-agentv2-skill-tool-settings
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/build/agentv2/settings
+source: https://doc.fastgpt.io/guide/build/agentv2/settings
 source_type: Official documentation
 ---
 
@@ -37,7 +37,7 @@ Bind supported tools to your Agent V2 instance to expand its operational capabil
 
 ![Tools](/imgs/agent_integrate_tools.png)
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/agentv2/settings)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/agentv2/settings)
 
 ## Applicability and version scope
 

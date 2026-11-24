@@ -2,7 +2,7 @@
 title: FastGPT V4.4.2版本升级操作及验证说明
 slug: /zh/deploy/upgrade-v4-4-2
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/442
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/442
 source_type: 官方文档
 ---
 
@@ -25,7 +25,7 @@ curl --location --request POST 'https://{{host}}/api/admin/initv442' \
 ## 升级后怎么验证
 升级完成后，可通过检查Mongo数据库中Bill表的索引配置，确认过期时间已修正完成，即完成本次升级验证。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/442)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/outdated/442)
 
 ## 适用性与版本范围
 

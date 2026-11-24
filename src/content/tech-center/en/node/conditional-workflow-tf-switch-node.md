@@ -2,7 +2,7 @@
 title: Implement conditional workflow branching via TF Switch node
 slug: /en/node/conditional-workflow-tf-switch-node
 page_type: Workflow nodes
-source: https://doc.fastgpt.cn/en/guide/build/workflow/nodes/tfswitch
+source: https://doc.fastgpt.io/guide/build/workflow/nodes/tfswitch
 source_type: Official documentation
 ---
 
@@ -22,7 +22,7 @@ Follow these steps to set up the TF Switch node using the reference example:
 ## Conditional Branch Guidelines
 All conditional logic for the TF Switch node adheres to standard programming IF statement conventions. Each added condition targets a specific workflow variable and evaluates a boolean check. You can configure multiple conditional branches beyond the default IF and ELSE pair, with each branch triggering only when its associated condition is satisfied. The ELSE branch acts as the default fallback for any scenario where none of the defined conditional checks pass.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/workflow/nodes/tfswitch)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/workflow/nodes/tfswitch)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: FastGPT知识库搜索结果不符合预期的参数调参方法
 slug: /zh/reference/fastgpt-dataset-search-params-tuning
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/dataset_engine
+source: https://doc.fastgpt.cn/guide/dataset/dataset_engine
 source_type: 官方文档小节
 ---
 
@@ -24,4 +24,4 @@ source_type: 官方文档小节
 ## 注意事项
 不宜一次性调整所有搜索参数，应先定位具体异常现象再修改。问题优化会额外调用模型资源，需按需选择开启场景。所有调整需严格遵循原文给出的配置项，不得添加未提及的参数。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/dataset/dataset_engine)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/dataset/dataset_engine)

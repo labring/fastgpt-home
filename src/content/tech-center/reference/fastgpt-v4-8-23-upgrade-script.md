@@ -2,7 +2,7 @@
 title: FastGPT V4.8.23版本升级脚本使用操作指南
 slug: /zh/reference/fastgpt-v4-8-23-upgrade-script
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4823
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/4823
 source_type: 官方文档小节
 ---
 
@@ -22,4 +22,4 @@ source_type: 官方文档小节
 2. 该版本升级属于<4.12.0的升级范畴，需遵循该分类下的通用升级规则。
 3. 升级操作需在FastGPT的自部署环境中进行，不适用于其他部署方式。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4823)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/4823)

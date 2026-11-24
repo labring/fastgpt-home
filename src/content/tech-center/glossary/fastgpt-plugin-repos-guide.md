@@ -2,7 +2,7 @@
 title: FastGPT插件生态相关仓库的含义与使用方法说明
 slug: /zh/glossary/fastgpt-plugin-repos-guide
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/plugin/intro
+source: https://doc.fastgpt.cn/plugin/intro
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ FastGPT插件生态包含四类代码仓库，分别承载插件开发工具、�
 ## 容易搞错的地方
 易混淆`labring/fastgpt-plugin`与其余三类插件仓库的功能，前者不存储具体插件源码，仅提供开发相关工具能力。此外，仅在插件服务升级后才需要执行系统工具重装操作，且默认无需手动配置插件市场相关环境变量。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/plugin/intro)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/plugin/intro)
 
 ## 适用性与版本范围
 

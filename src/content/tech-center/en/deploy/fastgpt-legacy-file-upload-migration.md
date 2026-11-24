@@ -2,7 +2,7 @@
 title: Migrate Legacy FastGPT File Upload Workflows
 slug: /en/deploy/fastgpt-legacy-file-upload-migration
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4813
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/4813
 source_type: 官方文档
 ---
 
@@ -25,4 +25,4 @@ Prior to this update, file inputs were automatically passed between nested appli
 ## Official Reference Documentation
 For full, detailed instructions on updating your file upload workflows to the new standardized logic, refer to the official FastGPT File Upload Changes documentation. This resource covers all required parameter adjustments, workflow step updates, and validation checks to ensure a smooth and error-free migration. The official documentation link is: `../../../guide/build/general/fileInput.en.mdx#4813%E7%89%88%E6%9C%AC%E8%B5%B7%E5%85%B3%E4%BA%8E%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E7%9A%84%E6%9B%B4%E6%96%B0`
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4813)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/4813)

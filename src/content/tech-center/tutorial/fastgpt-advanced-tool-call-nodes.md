@@ -2,7 +2,7 @@
 title: 详细介绍FastGPT高级编排中工具调用节点的配置与使用方法
 slug: /zh/tutorial/fastgpt-advanced-tool-call-nodes
 page_type: 教程
-source: https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/tool
+source: https://doc.fastgpt.cn/guide/build/workflow/nodes/tool
 source_type: 官方文档
 ---
 
@@ -18,8 +18,8 @@ source_type: 官方文档
 
 工具调用节点的核心用途分为两种默认场景。默认配置下，工具调用节点在确定调用工具后，会将工具运行的完整结果返回给AI，由AI对结果进行总结后输出。若业务场景中无需AI进行进一步的总结输出，可将工具调用节点接入工具流程的末尾。例如，在执行知识库搜索后接入HTTP请求节点，此时搜索得到的结果不会被返回至工具调用节点供AI进行总结处理。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/tool)
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/tool)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/workflow/nodes/tool)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/guide/build/workflow/nodes/tool)
 
 ## 适用性与版本范围
 

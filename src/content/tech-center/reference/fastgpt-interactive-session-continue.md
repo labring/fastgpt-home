@@ -2,7 +2,7 @@
 title: FastGPT交互节点后发起会话继续工作流的操作方法
 slug: /zh/reference/fastgpt-interactive-session-continue
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/openapi/chat
+source: https://doc.fastgpt.cn/openapi/chat
 source_type: 官方文档小节
 ---
 
@@ -33,4 +33,4 @@ source_type: 官方文档小节
 3. 需严格使用指定的API地址、请求头和参数格式，否则请求将失败
 4. `stream`和`detail`参数需固定设为`true`，以符合后续工作流的调用要求
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/openapi/chat)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/openapi/chat)

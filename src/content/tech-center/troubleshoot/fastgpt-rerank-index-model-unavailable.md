@@ -29,6 +29,6 @@ source_type: GitHub issue
 
 > 来源: [原始讨论：不能对接XINFERENCE的索引模型和重排模型](https://github.com/labring/FastGPT/issues/3933)
 
-> 来源: [FastGPT 的 Xinference 接入](https://doc.fastgpt.io/en/self-host/custom-models/xinference)
+> 来源: [FastGPT 的 Xinference 接入](https://doc.fastgpt.io/self-host/custom-models/xinference)
 
-> 来源: [FastGPT 模型配置](https://doc.fastgpt.io/en/self-host/config/model/intro)
+> 来源: [FastGPT 模型配置](https://doc.fastgpt.io/self-host/config/model/intro)

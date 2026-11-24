@@ -2,7 +2,7 @@
 title: FastGPT RAG流程的完整操作步骤说明
 slug: /zh/reference/fastgpt-rag-workflow-steps
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/dataset/rag
+source: https://doc.fastgpt.cn/guide/dataset/rag
 source_type: 官方文档小节
 ---
 
@@ -23,4 +23,4 @@ FastGPT的RAG流程包含五个核心执行环节，可基于知识库生成符�
 - 生成器需基于检索到的文档片段与查询内容生成回答，不可脱离知识库独立生成。
 - 用户反馈可用于调整模型参数与检索权重，需定期执行以持续优化流程。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/dataset/rag)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/dataset/rag)

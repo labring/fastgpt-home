@@ -2,7 +2,7 @@
 title: Run the FastGPT v463 Initialization API
 slug: /en/deploy/fastgpt-v463-init-api
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/463
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/463
 source_type: 官方文档
 ---
 
@@ -28,4 +28,4 @@ Substitute `{{host}}` with your deployment’s actual base URL (e.g., `https://y
 ## API Functional Purpose
 The initialization API performs a single targeted database update: it initializes required fields across relevant MongoDB datasets, collections, and individual data documents. This step aligns your existing data with the schema requirements of FastGPT v463, preventing compatibility issues following your upgrade. No additional changes are made to your deployment beyond these necessary field initializations.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/463)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/463)

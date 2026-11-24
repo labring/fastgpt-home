@@ -2,7 +2,7 @@
 title: Build a Corporate Email Writing Assistant with FastGPT
 slug: /en/tutorial/fastgpt-corporate-email-assistant-2
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/getting-started/quick-start
+source: https://doc.fastgpt.io/guide/getting-started/quick-start
 source_type: Official documentation
 ---
 
@@ -21,7 +21,7 @@ This workflow follows the minimal closed-loop configuration pattern outlined for
 3.  **Integrate Execution Tool**: Link the pre-built Email tool to the assistant to extend its functionality and align generated content with real-world email delivery requirements.
 4.  **Validate Configuration**: Test the deployed assistant with sample email generation requests to confirm adherence to all defined standards without requiring additional setup steps beyond model configuration, prompt setup, and tool integration.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/getting-started/quick-start)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/getting-started/quick-start)
 
 ## Applicability and version scope
 

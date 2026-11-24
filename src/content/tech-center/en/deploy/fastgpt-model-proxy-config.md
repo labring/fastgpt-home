@@ -2,7 +2,7 @@
 title: Configure FastGPT model provider connections
 slug: /en/deploy/fastgpt-model-proxy-config
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/config/model/intro
+source: https://doc.fastgpt.io/self-host/config/model/intro
 source_type: Official documentation
 ---
 
@@ -23,7 +23,7 @@ To confirm your model configuration is complete and compliant, follow these stru
 3. Check that the AI Proxy’s logging and analytics dashboards are capturing and displaying model usage data correctly
 4. Run a basic connectivity test to confirm that FastGPT can invoke the configured models without errors
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/config/model/intro)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/config/model/intro)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: FastGPT 阿里云OSS对象存储配置方法速查
 slug: /zh/reference/fastgpt-aliyun-oss-config-guide
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/object-storage
+source: https://doc.fastgpt.cn/self-host/config/object-storage
 source_type: 官方文档小节
 ---
 
@@ -44,4 +44,4 @@ STORAGE_OSS_INTERNAL = false
 3. 若使用自定义域名，需将`STORAGE_OSS_CNAME`设为`true`，并将域名填入`STORAGE_OSS_ENDPOINT`。
 4. 未配置TLS证书时，需将`STORAGE_OSS_SECURE`设为`false`。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/object-storage)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/config/object-storage)

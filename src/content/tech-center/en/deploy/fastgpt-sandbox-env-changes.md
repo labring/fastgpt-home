@@ -2,7 +2,7 @@
 title: FastGPT Sandbox Environment Variable Changes for 4.15.03 Upgrade
 slug: /en/deploy/fastgpt-sandbox-env-changes
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41503
+source: https://doc.fastgpt.io/self-host/upgrading/4-15/41503
 source_type: Official documentation
 ---
 
@@ -30,7 +30,7 @@ The complete list of sandbox-related environment variables, with their default v
 **Queueing Configuration**
 The new `queueId` parameter supports grouped request queuing for run APIs. The `SANDBOX_QUEUE_ID_CONCURRENCY` variable defines the maximum number of concurrent requests that share a `queueId` and are allowed to enter sandbox execution. If this variable is left unset, the request queuing feature is completely disabled.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-15/41503)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-15/41503)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: Configure Max Conversation Histories for FastGPT
 slug: /en/tutorial/fastgpt-max-history-configuration
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/build/general/ai_settings
+source: https://doc.fastgpt.io/guide/build/general/ai_settings
 source_type: Official documentation
 ---
 
@@ -23,7 +23,7 @@ If no specific operational requirements are defined for your application, use th
 3. Input a valid non-negative integer to specify the maximum number of prior conversation rounds the AI may reference.
 4. Save the application configuration to apply the updated Max Histories setting.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/general/ai_settings)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/general/ai_settings)
 
 ## Applicability and version scope
 

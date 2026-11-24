@@ -2,7 +2,7 @@
 title: FastGPT 4.8.13 Release Feature and Fix Updates
 slug: /en/deploy/fastgpt-4813-release-updates
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4813
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/4813
 source_type: 官方文档
 ---
 
@@ -46,4 +46,4 @@ Resolved issues include:
 3. Share link titles now display correctly on the first page load, resolving an initial rendering bug.
 4. Potential garbled text when importing chat starters via CSV has been fixed.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4813)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/4813)

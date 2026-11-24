@@ -2,7 +2,7 @@
 title: Key FastGPT Self-Hosted Upgrade Performance Improvements
 slug: /en/deploy/fastgpt-upgrade-performance-improvements
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/497
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/497
 source_type: 官方文档
 ---
 
@@ -23,4 +23,4 @@ The AI model token count calculation logic has been updated to prioritize accura
 | API usage values present | Official API-reported token counts |
 | No API usage values available | GPT-3.5 estimation model |
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/497)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/497)

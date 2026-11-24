@@ -2,7 +2,7 @@
 title: Set Up and Manage FastGPT Team Collaborator Permissions
 slug: /en/tutorial/fastgpt-team-collaborator-permissions-2
 page_type: Tutorials
-source: https://doc.fastgpt.cn/en/guide/workspace/team/team_roles_permissions
+source: https://doc.fastgpt.io/guide/workspace/team/team_roles_permissions
 source_type: Official documentation
 ---
 
@@ -28,7 +28,7 @@ For specific FastGPT resources such as apps and datasets, you can skip the centr
 The dedicated team permissions page is the primary hub for all cross-resource team permission administration. This page consolidates all configured access settings, enabling you to review, edit, or revoke permissions across all team resources in a single interface. The visual reference for this centralized page is shown below:
 ![](/imgs/guide/team_permissions/team_roles_permissions/image5.png)
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/workspace/team/team_roles_permissions)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/workspace/team/team_roles_permissions)
 
 ## Applicability and version scope
 

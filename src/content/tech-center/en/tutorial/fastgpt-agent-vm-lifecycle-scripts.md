@@ -2,7 +2,7 @@
 title: Configure and Manage FastGPT Agent VM Lifecycle Scripts
 slug: /en/tutorial/fastgpt-agent-vm-lifecycle-scripts
 page_type: 教程/部署
-source: https://doc.fastgpt.cn/en/guide/build/agentv2/vm
+source: https://doc.fastgpt.io/guide/build/agentv2/vm
 source_type: 官方文档
 ---
 
@@ -32,4 +32,4 @@ This chart illustrates triggers for script execution, including new session laun
 4. Access the virtual machine’s `/workspace` directory to confirm the `startup-log.txt` file exists and contains the test message.
 5. For agents linked to skills, verify the skill entrypoint script runs by checking logs in the skill’s deployment directory.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/guide/build/agentv2/vm)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/guide/build/agentv2/vm)

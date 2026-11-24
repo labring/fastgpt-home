@@ -2,7 +2,7 @@
 title: Official FastGPT v4.14.9 New Feature Updates
 slug: /en/deploy/fastgpt-v4149-new-feature-updates
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4149
+source: https://doc.fastgpt.io/self-host/upgrading/4-14/4149
 source_type: Official documentation
 ---
 
@@ -24,7 +24,7 @@ A critical update to dataset management has been implemented: when a single data
 ## Observability Tooling Improvements
 FastGPT v4.14.9 introduces a new logger SDK integrated with metrics tracking, providing enhanced operational visibility for self-hosted deployments. This tooling allows administrators to collect and monitor system metrics and logs, simplifying troubleshooting and performance optimization for self-hosted instances.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4149)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-14/4149)
 
 ## Applicability and version scope
 

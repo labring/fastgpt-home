@@ -2,7 +2,7 @@
 title: 使用Docker Compose完成FastGPT自部署的操作指南
 slug: /zh/deploy/fastgpt-docker-compose-deploy-pitfalls
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/deploy/docker
+source: https://doc.fastgpt.cn/self-host/deploy/docker
 source_type: 官方文档
 ---
 
@@ -17,4 +17,4 @@ FastGPT的Docker Compose部署包含三类核心组件：MongoDB用于存储除�
 ## 正式部署流程
 部署提供三种方式：一是通过AI Agent代部署，将提示词复制给对应Agent即可；二是使用交互式脚本部署，在Linux/MacOS/Windows WSL环境下执行`bash <(curl -fsSL https://doc.fastgpt.cn/deploy/install.sh)`，脚本会自动下载配置文件、引导配置S3与MCP外部访问地址、生成随机的root登录密码、服务间Token等密钥、检测宿主机Docker socket路径并调整挂载配置，执行完成后终端会输出root登录密码，需妥善保存，后续升级建议基于生成的配置文件调整；三是手动下载部署，可先下载对应向量库的docker-compose.yml文件与install.sh，通过脚本的本地compose模式生成最终配置。不同向量库的docker-compose.yml下载地址可参考官方文档，例如PgVector中国大陆镜像源对应docker-compose.pg.yml，全球镜像源同理。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/deploy/docker)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/deploy/docker)

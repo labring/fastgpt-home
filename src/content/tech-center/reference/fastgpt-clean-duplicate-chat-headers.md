@@ -2,7 +2,7 @@
 title: FastGPT升级后清理重复Chat会话头的操作方法
 slug: /zh/reference/fastgpt-clean-duplicate-chat-headers
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41507
+source: https://doc.fastgpt.cn/self-host/upgrading/4-15/41507
 source_type: 官方文档小节
 ---
 
@@ -39,4 +39,4 @@ curl -X POST 'https://你的域名/api/admin/dataClean/cleanupDuplicateChats' \
 3. 需使用正确的rootkey进行接口调用，否则会导致请求失败。
 4. sampleLimit参数的取值范围为0~100，超出范围可能导致接口异常。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41507)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-15/41507)

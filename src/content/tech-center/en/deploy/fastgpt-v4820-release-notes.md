@@ -2,7 +2,7 @@
 title: FastGPT v4820 Feature and Fix Updates
 slug: /en/deploy/fastgpt-v4820-release-notes
 page_type: 版本解读
-source: https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4820
+source: https://doc.fastgpt.io/self-host/upgrading/outdated/4820
 source_type: 官方文档
 ---
 
@@ -38,4 +38,4 @@ Two critical deployment issues have been fixed in this release:
 - Member list bottom-loading functionality now works correctly in all supported scenarios
 - Workflow recursive execution failures under specific conditional states have been resolved.
 
-> Source: [FastGPT official documentation and source](https://doc.fastgpt.cn/en/self-host/upgrading/outdated/4820)
+> Source: [FastGPT official documentation and source](https://doc.fastgpt.io/self-host/upgrading/outdated/4820)

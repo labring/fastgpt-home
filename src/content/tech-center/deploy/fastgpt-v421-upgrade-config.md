@@ -2,7 +2,7 @@
 title: FastGPT V4.2.1版本升级的向量模型配置调整指南
 slug: /zh/deploy/fastgpt-v421-upgrade-config
 page_type: 部署场景
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/421
+source: https://doc.fastgpt.cn/self-host/upgrading/outdated/421
 source_type: 官方文档小节
 ---
 
@@ -26,4 +26,4 @@ source_type: 官方文档小节
 
 此次配置调整的核心设计思路是统一向量模型的使用规则，确保系统自动选择适配的模型完成相关任务，无需用户额外进行模型选择操作，简化后续的配置维护流程。完成配置修改后，需按照FastGPT私有部署的标准流程重启服务，使新配置生效。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/421)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/outdated/421)

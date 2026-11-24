@@ -2,7 +2,7 @@
 title: 配置FastGPT智能数据分析Agent V2的具体操作步骤
 slug: /zh/tutorial/fastgpt-data-analysis-agent-v2-setup
 page_type: 教程/部署
-source: https://doc.fastgpt.cn/zh-CN/guide/getting-started/quick-start
+source: https://doc.fastgpt.cn/guide/getting-started/quick-start
 source_type: 官方文档小节
 ---
 
@@ -18,4 +18,4 @@ FastGPT的对话Agent V2可用于搭建智能数据分析工具，支持读取�
 
 上传销售数据示例文件，输入具体分析问题，例如"帮我分析这份销售数据，看看哪些产品卖得好，哪个渠道ROI最高"。Agent会先拆解任务，逐步执行分析，过程中可观察到任务在虚拟机中运行。测试时需重点确认Agent是否先识别表格字段、解释分析计划、按需运行代码、给出业务建议，若问题描述模糊，Agent应主动追问关键口径，不强行分析。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/getting-started/quick-start)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/getting-started/quick-start)

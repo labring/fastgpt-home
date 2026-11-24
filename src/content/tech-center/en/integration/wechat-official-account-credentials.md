@@ -2,7 +2,7 @@
 title: Obtain WeChat Official Account Credentials for FastGPT
 slug: /en/integration/wechat-official-account-credentials
 page_type: Integrations
-source: https://doc.fastgpt.cn/en/guide/build/publish/official_account
+source: https://doc.fastgpt.io/guide/build/publish/official_account
 source_type: Official documentation
 ---
 
@@ -22,7 +22,7 @@ Follow this sequential workflow to retrieve the three required credentials:
 ## Critical Configuration Constraints
 Note that test accounts cannot be used for AES Key configuration, so this setting must be disabled when using a test account with FastGPT. All three credentials (AppID, Secret, Token) are mandatory to complete the WeChat Official Account integration with FastGPT. Ensure that each credential is stored securely to prevent unauthorized access to your official account's messaging and development functionality. The included image provides a clear visual reference for the location of core credential values within the official dashboard interface.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/build/publish/official_account)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/build/publish/official_account)
 
 ## Applicability and version scope
 

@@ -2,7 +2,7 @@
 title: Retrieve FastGPT fields for DingTalk integration
 slug: /en/integration/dingtalk-fastgpt-field-retrieval
 page_type: Integrations
-source: https://doc.fastgpt.cn/en/guide/dataset/third-party/dingtalk_dataset
+source: https://doc.fastgpt.io/guide/dataset/third-party/dingtalk_dataset
 source_type: Official documentation
 ---
 
@@ -30,7 +30,7 @@ Observe these constraints to ensure secure and successful integration:
 - Use a dedicated DingTalk member account as the FastGPT sync account, and grant this account read-only access to all target workspaces.
 - Any workspace inaccessible to the dedicated sync account will not be available for synchronization in FastGPT.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/guide/dataset/third-party/dingtalk_dataset)
+> Source: [FastGPT official source](https://doc.fastgpt.io/guide/dataset/third-party/dingtalk_dataset)
 
 ## Applicability and version scope
 

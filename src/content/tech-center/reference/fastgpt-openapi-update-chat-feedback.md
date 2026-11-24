@@ -2,7 +2,7 @@
 title: FastGPT OpenAPI更新对话点赞与点踩反馈的操作方法
 slug: /zh/reference/fastgpt-openapi-update-chat-feedback
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/openapi/chat
+source: https://doc.fastgpt.cn/openapi/chat
 source_type: 官方文档小节
 ---
 
@@ -62,4 +62,4 @@ source_type: 官方文档小节
 3. 接口地址固定为`http://localhost:3000/api/core/chat/feedback/updateUserFeedback`。
 4. 请求必须携带正确的Authorization头，格式为`Bearer [apikey]`。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/openapi/chat)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/openapi/chat)

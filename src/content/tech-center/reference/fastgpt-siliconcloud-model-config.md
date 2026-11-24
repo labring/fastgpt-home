@@ -2,7 +2,7 @@
 title: FastGPT硅基流动平台模型接入配置操作说明
 slug: /zh/reference/fastgpt-siliconcloud-model-config
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/model/siliconCloud
+source: https://doc.fastgpt.cn/self-host/config/model/siliconCloud
 source_type: 官方文档小节
 ---
 
@@ -20,4 +20,4 @@ source_type: 官方文档小节
 2. 仅可使用硅基流动平台提供的语言、向量、重排、TTS、STT、绘图、视频生成模型。
 3. 需确保硅基流动平台的调用权限正常，避免出现模型调用失败的问题。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/model/siliconCloud)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/config/model/siliconCloud)

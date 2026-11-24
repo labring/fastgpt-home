@@ -2,7 +2,7 @@
 title: 配置FastGPT插件图标以符合CLI构建与manifest.json写入要求
 slug: /zh/model/fastgpt-plugin-icon-spec
 page_type: 模型指南
-source: https://doc.fastgpt.cn/zh-CN/plugin/system-tool-development
+source: https://doc.fastgpt.cn/plugin/system-tool-development
 source_type: 官方文档
 ---
 
@@ -19,7 +19,7 @@ CLI构建插件时，会扫描插件根目录中的图标文件，并将相关�
 ## 图标配置注意事项
 图标配置需遵循以下规范。图标文件需放置在插件根目录。子工具图标的`<childId>`需与`children[].id`完全一致。同一个图标仅保留一个扩展名，避免扫描结果不明确。子工具无独立图标时，默认复用主插件图标。构建完成后需检查`dist/manifest.json`中的`icon`字段。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/plugin/system-tool-development)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/plugin/system-tool-development)
 
 ## 适用性与版本范围
 

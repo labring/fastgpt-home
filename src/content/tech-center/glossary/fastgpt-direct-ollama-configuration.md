@@ -2,7 +2,7 @@
 title: 说明FastGPT直接接入Ollama模型的配置方法与注意事项
 slug: /zh/glossary/fastgpt-direct-ollama-configuration
 page_type: 术语表
-source: https://doc.fastgpt.cn/zh-CN/self-host/custom-models/ollama
+source: https://doc.fastgpt.cn/self-host/custom-models/ollama
 source_type: 官方文档
 ---
 
@@ -17,7 +17,7 @@ source_type: 官方文档
 ## 容易搞错的地方
 容易出错的细节包括：OPENAI_BASE_URL必须添加/v1后缀，不可省略；KEY字段不能留空，即使Ollama默认无鉴权也需填入内容；拉取镜像时可能出现error pulling image configuration: download failed after attempts=6: dialing cdn03.quay.io:443这类报错，需更换镜像地址解决。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/ollama)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/custom-models/ollama)
 
 ## 适用性与版本范围
 

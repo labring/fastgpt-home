@@ -2,7 +2,7 @@
 title: Migrate FastGPT Datasets for 4.14.3 Upgrade
 slug: /en/deploy/fastgpt-4143-dataset-migration
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4143
+source: https://doc.fastgpt.io/self-host/upgrading/4-14/4143
 source_type: Official documentation
 ---
 
@@ -32,7 +32,7 @@ curl --location --request POST 'https://{{host}}/api/admin/initv4143' \
 
 Once the command is executed successfully, the script will automatically process and migrate all eligible dataset files from MongoDB GridFS to your configured S3 storage. No additional user intervention is required during the active migration phase.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/upgrading/4-14/4143)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/upgrading/4-14/4143)
 
 ## Applicability and version scope
 

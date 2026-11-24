@@ -2,7 +2,7 @@
 title: FastGPT知识库集合创建的通用入参与出参说明
 slug: /zh/reference/fastgpt-dataset-collection-create-params
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/openapi/dataset
+source: https://doc.fastgpt.cn/openapi/dataset
 source_type: 官方文档小节
 ---
 
@@ -44,4 +44,4 @@ source_type: 官方文档小节
 5. indexSize默认值为512，必须小于索引模型最大token。
 6. chunkSize默认值为1500。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/openapi/dataset)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/openapi/dataset)

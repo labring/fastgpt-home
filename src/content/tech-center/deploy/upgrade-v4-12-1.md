@@ -2,7 +2,7 @@
 title: FastGPT V4.12.1版本升级内容与操作指南
 slug: /zh/deploy/upgrade-v4-12-1
 page_type: 部署与升级
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-12/4121
+source: https://doc.fastgpt.cn/self-host/upgrading/4-12/4121
 source_type: 官方文档
 ---
 
@@ -54,7 +54,7 @@ curl --location --request POST 'https://{{host}}/api/admin/initv4121' \
 7. 若配置`SIGNOZ_STORE_LEVEL`参数，确认日志存储级别符合预期。
 8. 测试系统工具的Tool description配置，确认配置生效。
 
-> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-12/4121)
+> 来源： [FastGPT 官方来源](https://doc.fastgpt.cn/self-host/upgrading/4-12/4121)
 
 ## 适用性与版本范围
 

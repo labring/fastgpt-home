@@ -2,7 +2,7 @@
 title: FastGPT沙盒v2节点的JavaScript代码示例使用指南
 slug: /zh/reference/fastgpt-sandbox-v2-js-examples
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/sandbox-v2
+source: https://doc.fastgpt.cn/guide/build/workflow/nodes/sandbox-v2
 source_type: 官方文档小节
 ---
 
@@ -62,4 +62,4 @@ source_type: 官方文档小节
 4. 异步函数需使用`async`关键字声明，确保异步请求正常执行。
 5. 示例中的API地址为占位符，实际使用时需替换为真实可用的接口地址。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/sandbox-v2)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/guide/build/workflow/nodes/sandbox-v2)

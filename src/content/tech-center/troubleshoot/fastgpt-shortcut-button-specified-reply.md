@@ -29,6 +29,6 @@ source_type: GitHub issue
 
 > 来源: [原始讨论：快捷按钮可用在指定回复组件中](https://github.com/labring/FastGPT/issues/4286)
 
-> 来源: [FastGPT 开场白与快捷问题](https://doc.fastgpt.io/en/guide/build/general/welcomeText)
+> 来源: [FastGPT 开场白与快捷问题](https://doc.fastgpt.io/guide/build/general/welcomeText)
 
-> 来源: [FastGPT 用户选择节点](https://doc.fastgpt.io/en/guide/build/workflow/nodes/user-selection)
+> 来源: [FastGPT 用户选择节点](https://doc.fastgpt.io/guide/build/workflow/nodes/user-selection)

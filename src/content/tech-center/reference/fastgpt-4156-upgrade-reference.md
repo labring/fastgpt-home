@@ -2,7 +2,7 @@
 title: FastGPT V4.15.6版本升级操作参考指南
 slug: /zh/reference/fastgpt-4156-upgrade-reference
 page_type: 技术速查
-source: https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/4156
+source: https://doc.fastgpt.cn/self-host/upgrading/4-15/4156
 source_type: 官方文档小节
 ---
 
@@ -23,4 +23,4 @@ source_type: 官方文档小节
 3. 升级过程中出现异常，可参考官方通用问题排查、模型问题排查或存储桶问题排查流程处理。
 4. 升级操作需遵循官方部署文档的对应步骤，避免遗漏关键配置。
 
-> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/4156)
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/self-host/upgrading/4-15/4156)

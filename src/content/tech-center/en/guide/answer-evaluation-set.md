@@ -7,7 +7,7 @@ is_part_of: FastGPT Tech Center
 meta_description: Build a fixed RAG evaluation set with target passages, negative samples, repeatable regression runs, and scoring rules for answer quality.
 delivery_source_type: Open-source repository docs and community threads
 source_type: 深度场景内容
-source: https://doc.fastgpt.cn/zh-CN/self-host/config/env
+source: https://doc.fastgpt.cn/self-host/config/env
 meta_title: Building an Evaluation Set for Enterprise Open-Source AI Platforms: Pre-Launch Samples, Post-Launch Regression, and Scoring | FastGPT Technical Center
 schema_type: TechArticle
 date_published: 2026-09-28
@@ -76,8 +76,8 @@ Additionally, if the evaluation set has insufficient sample size to cover all bu
 
 ## References
 
-- [FastGPT environment variables](https://doc.fastgpt.cn/zh-CN/self-host/config/env)
-- [FastGPT upgrade notes](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/upgrade-instruction)
+- [FastGPT environment variables](https://doc.fastgpt.cn/self-host/config/env)
+- [FastGPT upgrade notes](https://doc.fastgpt.cn/self-host/upgrading/upgrade-instruction)
 
 ## Next steps
 

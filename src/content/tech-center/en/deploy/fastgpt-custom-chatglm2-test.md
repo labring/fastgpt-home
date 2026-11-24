@@ -2,7 +2,7 @@
 title: Test Custom ChatGLM2 Models on FastGPT
 slug: /en/deploy/fastgpt-custom-chatglm2-test
 page_type: Deployment and upgrades
-source: https://doc.fastgpt.cn/en/self-host/custom-models/chatglm2
+source: https://doc.fastgpt.io/self-host/custom-models/chatglm2
 source_type: Official documentation
 ---
 
@@ -34,7 +34,7 @@ There are two non-negotiable requirements for successful testing:
 1.  The `Authorization` header must use a valid token with the `sk-` prefix format, matching your FastGPT API credentials.
 2.  The `model` field in the request body must exactly match the custom model name configured in the One API panel. Using an incorrect model name will cause the request to fail.
 
-> Source: [FastGPT official source](https://doc.fastgpt.cn/en/self-host/custom-models/chatglm2)
+> Source: [FastGPT official source](https://doc.fastgpt.io/self-host/custom-models/chatglm2)
 
 ## Applicability and version scope
 

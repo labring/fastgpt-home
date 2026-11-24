@@ -1,16 +1,4 @@
 {
-  "endpoint": "https://api.indexnow.org/indexnow",
-  "maxBatchSize": 10000,
-  "defaultChunkSize": 2000,
-  "defaultAutoLimit": 10000,
-  "variants": {
-    "cn": {
-      "host": "fastgpt.cn",
-      "key": "4f78d38cb894954ed848bc130e9ed26d"
-    },
-    "io": {
-      "host": "fastgpt.io",
-      "key": "1f1f512c50e445439859d7e8a268f451"
-    }
-  }
+  "cn": "4f78d38cb894954ed848bc130e9ed26d",
+  "io": "1f1f512c50e445439859d7e8a268f451"
 }

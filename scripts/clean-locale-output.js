@@ -15,7 +15,7 @@ const {
   readUrlAliasAuthority
 } = require('./lib/url-alias-authority');
 const { getPublishedLocaleCodes, localeCodes, resolveSiteVariant } = require('./lib/site-variant');
-const { emitIndexNowKeyFile } = require('./lib/indexnow');
+const indexnowKeys = require('../src/config/indexnow.json');
 
 const rootDir = path.join(__dirname, '..');
 const outDir = path.join(rootDir, 'out');
@@ -147,10 +147,16 @@ if (variant === 'preview') {
   fs.writeFileSync(path.join(outDir, '.assetsignore'), '_worker.js\n');
 }
 
-const indexnow = emitIndexNowKeyFile(outDir, variant);
+for (const key of Object.values(indexnowKeys)) {
+  removePath(path.join(outDir, `${key}.txt`));
+}
+const activeIndexNowKey = Object.hasOwn(indexnowKeys, variant) ? indexnowKeys[variant] : null;
+if (activeIndexNowKey) {
+  fs.writeFileSync(path.join(outDir, `${activeIndexNowKey}.txt`), activeIndexNowKey, 'utf8');
+}
 
 console.log(
   `[clean-locale-output] variant=${variant}; kept=${[...allowedLocales].join(
     ','
-  )}; removed=${removed}; previewHtmlPatched=${previewHtmlPatched}; indexnow=${indexnow.keyFileName || 'disabled'}`
+  )}; removed=${removed}; previewHtmlPatched=${previewHtmlPatched}; indexnow=${activeIndexNowKey ? `${activeIndexNowKey}.txt` : 'disabled'}`
 );

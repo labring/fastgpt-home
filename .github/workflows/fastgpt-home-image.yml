@@ -108,12 +108,7 @@ jobs:
       - uses: azure/setup-kubectl@v4
 
       - name: Snapshot live CN sitemap before rollout
-        run: |
-          node scripts/submit-indexnow.js \
-            --snapshot-live \
-            --variant cn \
-            --out .release-artifacts/indexnow-cn-before.json \
-            --soft-fail
+        run: node scripts/submit-indexnow.js --snapshot --variant cn --out .release-artifacts/indexnow-cn-before.json --soft-fail
 
       - name: Deploy image and verify rollout
         env:
@@ -136,30 +131,4 @@ jobs:
           fi
 
       - name: Submit changed CN URLs to IndexNow
-        env:
-          GIT_BEFORE_SHA: ${{ github.event.before }}
-          GIT_HEAD_SHA: ${{ github.sha }}
-        run: |
-          if [[ "$GIT_BEFORE_SHA" =~ ^[a-f0-9]{40}$ ]] && [[ ! "$GIT_BEFORE_SHA" =~ ^0+$ ]]; then
-            git fetch --no-tags --depth=1 origin "$GIT_BEFORE_SHA" || true
-          fi
-          node scripts/submit-indexnow.js \
-            --mode diff \
-            --variant cn \
-            --out-dir .release-artifacts/site/cn-configured/payload/out \
-            --before-snapshot .release-artifacts/indexnow-cn-before.json \
-            --git-base "$GIT_BEFORE_SHA" \
-            --git-head "$GIT_HEAD_SHA" \
-            --max-urls 10000 \
-            --chunk-size 2000 \
-            --receipt-out .release-artifacts/indexnow-cn-receipt.json \
-            --soft-fail
-
-      - name: Upload CN IndexNow submission receipt
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: indexnow-receipt-cn-${{ github.run_id }}
-          path: .release-artifacts/indexnow-cn-receipt.json
-          retention-days: 30
-          if-no-files-found: ignore
+        run: node scripts/submit-indexnow.js --diff --variant cn --out-dir .release-artifacts/site/cn-configured/payload/out --before .release-artifacts/indexnow-cn-before.json --soft-fail

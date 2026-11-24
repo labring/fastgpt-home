@@ -1,50 +1,268 @@
 #!/usr/bin/env node
 
-const { execFileSync } = require('node:child_process');
 const fs = require('node:fs');
 const path = require('node:path');
-const {
-  GIT_SHA_PATTERN,
-  ZERO_SHA,
-  diffSitemapSnapshots,
-  fetchLiveSitemapSnapshot,
-  filterAndPrioritizeUrls,
-  loadLocalSitemapEntries,
-  mapGitChangedFilesToCoreUrls,
-  resolveIndexNowConfig,
-  selectBackfillUrls,
-  submitToIndexNow,
-  verifyLiveKeyFile
-} = require('./lib/indexnow');
+const indexnowKeys = require('../src/config/indexnow.json');
+const { getProductionBaseUrls } = require('./lib/site-variant');
+const { bucketForLoc, parseSitemapIndex, parseUrlset } = require('./split-sitemap');
 
-const VALID_MODES = ['diff', 'recent', 'content', 'urls', 'all'];
+const INDEXNOW_ENDPOINT = 'https://api.indexnow.org/indexnow';
+const MAX_URLS_PER_BATCH = 10_000;
+const ISO_DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
+
+function sleep(ms) {
+  return ms > 0 ? new Promise((resolve) => setTimeout(resolve, ms)) : Promise.resolve();
+}
+
+function isEligibleUrl(rawUrl, host) {
+  try {
+    const parsed = new URL(String(rawUrl).trim());
+    if (parsed.protocol !== 'https:' || parsed.hostname !== host || parsed.search || parsed.hash) {
+      return false;
+    }
+    const pathname = parsed.pathname.toLowerCase();
+    if (/^\/(?:[a-z]{2}(?:-[a-z0-9]+)?\/)?ads(?:\/|$)/.test(pathname)) return false;
+    if (pathname === '/_next' || pathname.startsWith('/_next/')) return false;
+    return !/\.(?:txt|xml|json|md|gz|ico|png|svg|jpe?g|webp|avif|gif|js|css|woff2?|map)$/.test(
+      pathname
+    );
+  } catch {
+    return false;
+  }
+}
+
+function withCacheBuster(rawUrl, stamp) {
+  const parsed = new URL(rawUrl);
+  parsed.searchParams.set('v', String(stamp));
+  return parsed.href;
+}
+
+function extractLastmods(xml, site, host) {
+  const { entries } = parseUrlset(xml, site);
+  const result = {};
+  for (const entry of entries) {
+    if (!isEligibleUrl(entry.loc, host)) continue;
+    const match = entry.xml.match(/<lastmod\b[^>]*>([^<]+)<\/lastmod>/i);
+    result[entry.loc] = match ? match[1].trim() : null;
+  }
+  return result;
+}
+
+async function fetchText(
+  url,
+  { fetchImpl = globalThis.fetch, retries = 2, retryDelayMs = 500, timeoutMs = 15_000 } = {}
+) {
+  let lastError;
+  for (let attempt = 0; attempt <= retries; attempt += 1) {
+    try {
+      const response = await fetchImpl(url, {
+        method: 'GET',
+        cache: 'no-store',
+        headers: {
+          'cache-control': 'no-cache',
+          'user-agent': 'FastGPT-IndexNow-CI/1.0'
+        },
+        signal: AbortSignal.timeout(timeoutMs)
+      });
+      if (response.status === 429 || response.status >= 500) {
+        throw new Error(`HTTP ${response.status} fetching ${url}`);
+      }
+      if (!response.ok) {
+        const error = new Error(`HTTP ${response.status} fetching ${url}`);
+        error.nonRetryable = true;
+        throw error;
+      }
+      return await response.text();
+    } catch (error) {
+      lastError = error;
+      if (error.nonRetryable || attempt >= retries) break;
+      await sleep(retryDelayMs * 2 ** attempt);
+    }
+  }
+  throw lastError;
+}
+
+async function fetchLiveSitemap(baseUrl, options = {}) {
+  const origin = new URL(baseUrl).origin;
+  const host = new URL(baseUrl).hostname;
+  const stamp = options.stamp ?? Date.now();
+  const rootXml = await fetchText(withCacheBuster(`${origin}/sitemap.xml`, stamp), options);
+
+  if (!/<sitemapindex\b/.test(rootXml)) {
+    return extractLastmods(rootXml, origin, host);
+  }
+
+  const shardUrls = parseSitemapIndex(rootXml, origin);
+  const shardXmls = await Promise.all(
+    shardUrls.map((shardUrl) => fetchText(withCacheBuster(shardUrl, stamp), options))
+  );
+  const entries = {};
+  for (const xml of shardXmls) {
+    Object.assign(entries, extractLastmods(xml, origin, host));
+  }
+  return entries;
+}
+
+function readLocalSitemap(outDir, baseUrl) {
+  const resolvedOut = path.resolve(outDir);
+  const origin = new URL(baseUrl).origin;
+  const host = new URL(baseUrl).hostname;
+  const rootXml = fs.readFileSync(path.join(resolvedOut, 'sitemap.xml'), 'utf8');
+
+  if (!/<sitemapindex\b/.test(rootXml)) {
+    return extractLastmods(rootXml, origin, host);
+  }
+
+  const entries = {};
+  for (const shardUrl of parseSitemapIndex(rootXml, origin)) {
+    const relPath = new URL(shardUrl).pathname.replace(/^\/+/, '');
+    const shardPath = path.resolve(resolvedOut, relPath);
+    if (!shardPath.startsWith(`${resolvedOut}${path.sep}`)) {
+      throw new Error(`Refusing shard path outside outDir: ${relPath}`);
+    }
+    Object.assign(entries, extractLastmods(fs.readFileSync(shardPath, 'utf8'), origin, host));
+  }
+  return entries;
+}
+
+function diffSitemaps(before = {}, after = {}) {
+  const added = [];
+  const modified = [];
+  const removed = [];
+  for (const [url, lastmod] of Object.entries(after)) {
+    if (!Object.hasOwn(before, url)) added.push(url);
+    else if (lastmod && lastmod !== before[url]) modified.push(url);
+  }
+  for (const url of Object.keys(before)) {
+    if (!Object.hasOwn(after, url)) removed.push(url);
+  }
+  return { added, modified, removed };
+}
+
+function prioritizeAndCap(urls, host, limit = MAX_URLS_PER_BATCH) {
+  const seen = new Set();
+  const eligible = [];
+  for (const rawUrl of urls) {
+    const url = String(rawUrl || '').trim();
+    if (!url || seen.has(url) || !isEligibleUrl(url, host)) continue;
+    seen.add(url);
+    eligible.push(url);
+  }
+
+  eligible.sort(
+    (left, right) =>
+      (bucketForLoc(left) === 'industry' ? 1 : 0) - (bucketForLoc(right) === 'industry' ? 1 : 0)
+  );
+
+  const cap = Number.isFinite(limit) && limit > 0 ? Math.floor(limit) : 0;
+  const capped = cap > 0 ? eligible.slice(0, cap) : eligible;
+  return { urls: capped, total: eligible.length, truncated: eligible.length - capped.length };
+}
+
+function selectSubmitUrls({ since, urls, entries = {}, host, limit = MAX_URLS_PER_BATCH }) {
+  if (urls !== undefined) {
+    const list = (Array.isArray(urls) ? urls : String(urls).split(/[\s,]+/))
+      .map((entry) => entry.trim())
+      .filter(Boolean);
+    if (!list.length) throw new Error('--urls must contain at least one URL');
+    const invalid = list.filter((entry) => !isEligibleUrl(entry, host));
+    if (invalid.length) {
+      throw new Error(`Invalid or out-of-scope URL(s) for ${host}: ${invalid.slice(0, 5).join(', ')}`);
+    }
+    return prioritizeAndCap(list, host, limit);
+  }
+
+  if (since !== undefined) {
+    const cutoff = String(since).trim();
+    if (!ISO_DATE_RE.test(cutoff)) {
+      throw new Error(`Invalid --since "${since}": expected YYYY-MM-DD`);
+    }
+    const matched = Object.entries(entries)
+      .filter(([, lastmod]) => typeof lastmod === 'string' && lastmod.slice(0, 10) >= cutoff)
+      .sort(([, left], [, right]) => (right || '').slice(0, 10).localeCompare((left || '').slice(0, 10)))
+      .map(([url]) => url);
+    return prioritizeAndCap(matched, host, limit);
+  }
+
+  throw new Error('--submit requires --since YYYY-MM-DD or --urls "..."');
+}
+
+async function postIndexNow({
+  host,
+  key,
+  keyLocation,
+  urls,
+  endpoint = INDEXNOW_ENDPOINT,
+  dryRun = false,
+  fetchImpl = globalThis.fetch,
+  retries = 2,
+  retryDelayMs = 1_000,
+  timeoutMs = 15_000
+}) {
+  if (!urls.length) return { status: 'skipped', planned: 0, submitted: 0, statuses: [] };
+  if (dryRun) return { status: 'dry-run', planned: urls.length, submitted: 0, statuses: [] };
+
+  let submitted = 0;
+  const statuses = [];
+  for (let offset = 0; offset < urls.length; offset += MAX_URLS_PER_BATCH) {
+    const batch = urls.slice(offset, offset + MAX_URLS_PER_BATCH);
+    let batchStatus = null;
+    let lastError = null;
+    let ok = false;
+
+    for (let attempt = 0; attempt <= retries; attempt += 1) {
+      try {
+        const response = await fetchImpl(endpoint, {
+          method: 'POST',
+          headers: {
+            'content-type': 'application/json; charset=utf-8',
+            'user-agent': 'FastGPT-IndexNow-CI/1.0'
+          },
+          body: JSON.stringify({ host, key, keyLocation, urlList: batch }),
+          signal: AbortSignal.timeout(timeoutMs)
+        });
+        batchStatus = response.status;
+        if (response.status >= 200 && response.status < 300) {
+          ok = true;
+          submitted += batch.length;
+          break;
+        }
+        const detail = (await response.text().catch(() => '')).slice(0, 200);
+        lastError = `HTTP ${response.status}${detail ? `: ${detail}` : ''}`;
+        if (response.status !== 429 && response.status < 500) break;
+      } catch (error) {
+        batchStatus = null;
+        lastError = error.message;
+      }
+      if (attempt < retries) await sleep(retryDelayMs * 2 ** attempt);
+    }
+
+    statuses.push(batchStatus);
+    if (!ok) {
+      return { status: 'failed', planned: urls.length, submitted, statuses, error: lastError };
+    }
+  }
+
+  return { status: 'submitted', planned: urls.length, submitted, statuses };
+}
 
 function parseArgs(argv) {
   const options = {
-    snapshotLive: false,
-    fromLive: false,
-    dryRun: false,
-    verifyLiveKey: false,
-    softFail: false,
     mode: undefined,
     variant: undefined,
     out: undefined,
     outDir: undefined,
-    beforeSnapshot: undefined,
-    gitBase: undefined,
-    gitHead: 'HEAD',
-    sinceDays: 45,
-    sinceDate: undefined,
+    before: undefined,
+    since: undefined,
     urls: undefined,
-    urlsFile: undefined,
-    maxUrls: undefined,
-    chunkSize: undefined,
-    receiptOut: undefined
+    limit: MAX_URLS_PER_BATCH,
+    dryRun: false,
+    softFail: false
   };
 
   for (let index = 0; index < argv.length; index += 1) {
     const token = argv[index];
-    const nextValue = () => {
+    const readVal = () => {
       const value = argv[++index];
       if (value === undefined || value.startsWith('--')) {
         throw new Error(`${token} requires a value`);
@@ -52,373 +270,160 @@ function parseArgs(argv) {
       return value;
     };
 
-    if (token === '--snapshot-live') options.snapshotLive = true;
-    else if (token === '--from-live') options.fromLive = true;
+    if (token === '--snapshot' || token === '--diff' || token === '--submit') {
+      if (options.mode) throw new Error(`Conflicting modes: --${options.mode} and ${token}`);
+      options.mode = token.slice(2);
+    } else if (token === '--variant') options.variant = readVal();
+    else if (token === '--out') options.out = readVal();
+    else if (token === '--out-dir') options.outDir = readVal();
+    else if (token === '--before') options.before = readVal();
+    else if (token === '--since') options.since = readVal();
+    else if (token === '--urls') options.urls = readVal();
+    else if (token === '--limit') options.limit = Number(readVal());
     else if (token === '--dry-run') options.dryRun = true;
-    else if (token === '--verify-live-key') options.verifyLiveKey = true;
     else if (token === '--soft-fail') options.softFail = true;
-    else if (token === '--mode') options.mode = nextValue();
-    else if (token === '--variant') options.variant = nextValue();
-    else if (token === '--out') options.out = nextValue();
-    else if (token === '--out-dir') options.outDir = nextValue();
-    else if (token === '--before-snapshot') options.beforeSnapshot = nextValue();
-    else if (token === '--git-base') options.gitBase = nextValue();
-    else if (token === '--git-head') options.gitHead = nextValue();
-    else if (token === '--since-days') options.sinceDays = Number(nextValue());
-    else if (token === '--since-date') options.sinceDate = nextValue();
-    else if (token === '--urls') options.urls = nextValue();
-    else if (token === '--urls-file') options.urlsFile = nextValue();
-    else if (token === '--max-urls') options.maxUrls = Number(nextValue());
-    else if (token === '--chunk-size') options.chunkSize = Number(nextValue());
-    else if (token === '--receipt-out') options.receiptOut = nextValue();
     else throw new Error(`Unknown argument: ${token}`);
   }
 
   return options;
 }
 
-function writeJsonFile(filePath, data) {
-  const resolved = path.resolve(filePath);
-  fs.mkdirSync(path.dirname(resolved), { recursive: true });
-  fs.writeFileSync(resolved, `${JSON.stringify(data, null, 2)}\n`, 'utf8');
-}
-
-function appendStepSummary(markdown) {
-  const summaryPath = process.env.GITHUB_STEP_SUMMARY;
-  if (!summaryPath) return;
-  try {
-    fs.appendFileSync(summaryPath, `${markdown}\n`, 'utf8');
-  } catch (error) {
-    console.warn(`[indexnow] Unable to append GITHUB_STEP_SUMMARY: ${error.message}`);
-  }
-}
-
-function getGitChangedFiles(baseSha, headSha, cwd = process.cwd()) {
-  if (!baseSha || ZERO_SHA.test(baseSha) || !GIT_SHA_PATTERN.test(baseSha)) {
-    return { files: [], warning: 'git base SHA missing or all-zero; skipping git core-route diff' };
-  }
-  const resolvedHead = headSha || 'HEAD';
-  try {
-    const output = execFileSync('git', ['diff', '--name-only', `${baseSha}..${resolvedHead}`], {
-      cwd,
-      encoding: 'utf8',
-      stdio: ['ignore', 'pipe', 'pipe']
-    });
-    const files = output
-      .split(/\r?\n/)
-      .map((line) => line.trim())
-      .filter(Boolean);
-    return { files, warning: null };
-  } catch (error) {
-    return {
-      files: [],
-      warning: `git diff ${baseSha}..${resolvedHead} unavailable (${error.message.split('\n')[0]})`
-    };
-  }
-}
-
-function readExplicitUrls(options) {
-  const parts = [];
-  if (options.urls) parts.push(options.urls);
-  if (options.urlsFile) {
-    const resolved = path.resolve(options.urlsFile);
-    parts.push(fs.readFileSync(resolved, 'utf8'));
-  }
-  return parts.join('\n');
-}
-
-function formatReceiptSummary(receipt) {
-  const sampleLines = receipt.sampleUrls.length
-    ? receipt.sampleUrls.map((url) => `- \`${url}\``).join('\n')
-    : '- _(none)_';
-  const batchLines = receipt.batches.length
-    ? receipt.batches
-        .map(
-          (batch) =>
-            `| ${batch.index} | ${batch.count} | ${batch.status ?? 'dry-run'} | ${batch.attempts} | ${batch.ok ? 'ok' : batch.error || 'failed'} |`
-        )
-        .join('\n')
-    : '| - | 0 | - | 0 | skipped |';
-
-  return [
-    `### IndexNow (${receipt.variant} / ${receipt.mode})`,
-    '',
-    `- **Host**: \`${receipt.host}\``,
-    `- **Outcome**: \`${receipt.outcome}\`${receipt.dryRun ? ' (dry-run)' : ''}`,
-    `- **Key Verified**: \`${receipt.keyVerified === null ? 'skipped' : receipt.keyVerified}\``,
-    `- **Candidates**: ${receipt.selection?.totalCandidates ?? receipt.counts.planned} (planned: ${receipt.counts.planned}, submitted: ${receipt.counts.submitted}, truncated: ${receipt.selection?.truncatedCount ?? 0})`,
-    ...(receipt.warnings?.length
-      ? ['', '**Warnings**:', ...receipt.warnings.map((warning) => `- ${warning}`)]
-      : []),
-    '',
-    '| Batch | URLs | HTTP Status | Attempts | Result |',
-    '| --- | ---: | ---: | ---: | --- |',
-    batchLines,
-    '',
-    '<details><summary>Sample URLs (up to 20)</summary>',
-    '',
-    sampleLines,
-    '',
-    '</details>',
-    ''
-  ].join('\n');
-}
-
-async function runSnapshotMode(options, config) {
-  if (!options.out) {
-    throw new Error('--snapshot-live requires --out <file>');
+async function main(argv = process.argv.slice(2), deps = {}) {
+  const options = parseArgs(argv);
+  if (!options.mode) throw new Error('Specify one mode: --snapshot, --diff, or --submit');
+  if (!Object.hasOwn(indexnowKeys, options.variant || '')) {
+    throw new Error(`--variant must be one of: ${Object.keys(indexnowKeys).join(', ')}`);
   }
 
-  const snapshot = await fetchLiveSitemapSnapshot(config.baseUrl);
-  writeJsonFile(options.out, snapshot);
-
-  if (!snapshot.ok) {
-    const message = `[indexnow] Failed to snapshot live sitemap for ${config.baseUrl}: ${snapshot.error}`;
+  const key = indexnowKeys[options.variant];
+  const baseUrl = getProductionBaseUrls()[options.variant];
+  const host = new URL(baseUrl).hostname;
+  const keyLocation = `${baseUrl}/${key}.txt`;
+  const failOrWarn = (message) => {
     if (options.softFail) {
       console.warn(`::warning::${message}`);
       return 0;
     }
     console.error(message);
     return 1;
-  }
-
-  console.log(
-    `[indexnow] Snapshot saved: ${options.out} (${Object.keys(snapshot.urls).length} URLs across ${snapshot.shardCount} shards)`
-  );
-  return 0;
-}
-
-async function loadAfterEntries(options, config) {
-  if (options.outDir) {
-    const local = loadLocalSitemapEntries(path.resolve(options.outDir), config.baseUrl);
-    return { entries: local.entries, source: 'out-dir', shardCount: local.shardCount };
-  }
-  if (options.fromLive) {
-    const live = await fetchLiveSitemapSnapshot(config.baseUrl);
-    if (!live.ok) {
-      throw new Error(`Unable to fetch live sitemap from ${config.baseUrl}: ${live.error}`);
-    }
-    return { entries: live.urls, source: 'live-sitemap', shardCount: live.shardCount };
-  }
-  if (options.mode === 'urls') {
-    return { entries: {}, source: 'explicit-urls', shardCount: 0 };
-  }
-  throw new Error(`--mode ${options.mode} requires either --out-dir <dir> or --from-live`);
-}
-
-async function runSubmitMode(options, config) {
-  if (!VALID_MODES.includes(options.mode)) {
-    throw new Error(`--mode is required and must be one of: ${VALID_MODES.join(', ')}`);
-  }
-
-  const warnings = [];
-  const defaultMax = options.mode === 'diff' ? config.defaultAutoLimit : 0;
-  const maxUrls =
-    options.maxUrls !== undefined && !Number.isNaN(options.maxUrls) ? options.maxUrls : defaultMax;
-
-  const { entries: afterEntries, source: sitemapSource, shardCount } = await loadAfterEntries(
-    options,
-    config
-  );
-
-  let selected;
-  let diffCounts = null;
-  let gitCoreCount = 0;
-
-  if (options.mode === 'diff') {
-    let diff = { added: [], modified: [], removed: [] };
-    let beforeSnapshotOk = false;
-
-    if (options.beforeSnapshot && fs.existsSync(path.resolve(options.beforeSnapshot))) {
-      try {
-        const before = JSON.parse(fs.readFileSync(path.resolve(options.beforeSnapshot), 'utf8'));
-        if (before?.ok && before.urls && typeof before.urls === 'object') {
-          diff = diffSitemapSnapshots(before.urls, afterEntries);
-          beforeSnapshotOk = true;
-        } else {
-          warnings.push(
-            `Pre-deploy live sitemap snapshot unusable (${before?.error || 'ok=false'}); falling back to git diff core URLs only`
-          );
-        }
-      } catch (error) {
-        warnings.push(
-          `Unable to parse pre-deploy snapshot (${error.message}); falling back to git diff core URLs only`
-        );
-      }
-    } else {
-      warnings.push(
-        'Pre-deploy live sitemap snapshot missing; falling back to git diff core URLs only'
-      );
-    }
-
-    const gitDiff = getGitChangedFiles(options.gitBase, options.gitHead);
-    if (gitDiff.warning) warnings.push(gitDiff.warning);
-
-    const gitCoreUrls = mapGitChangedFilesToCoreUrls(
-      gitDiff.files,
-      config.variant,
-      config.baseUrl,
-      afterEntries
-    );
-    gitCoreCount = gitCoreUrls.length;
-    diffCounts = {
-      beforeSnapshotOk,
-      added: diff.added.length,
-      modified: diff.modified.length,
-      removed: diff.removed.length,
-      gitCore: gitCoreUrls.length
-    };
-
-    selected = filterAndPrioritizeUrls({
-      added: diff.added,
-      modified: diff.modified,
-      removed: diff.removed,
-      gitCoreUrls,
-      afterEntries,
-      host: config.host,
-      maxUrls
-    });
-  } else {
-    selected = selectBackfillUrls({
-      mode: options.mode,
-      afterEntries,
-      host: config.host,
-      sinceDays: options.sinceDays,
-      sinceDate: options.sinceDate,
-      explicitUrls: readExplicitUrls(options),
-      maxUrls
-    });
-  }
-
-  if (selected.truncatedCount > 0) {
-    warnings.push(
-      `Candidate URL count (${selected.totalCandidates}) exceeded maxUrls=${maxUrls}; truncated ${selected.truncatedCount} lower-priority URL(s). Use indexnow-backfill workflow to push the remainder.`
-    );
-  }
-
-  let keyVerified = null;
-  let keyVerification = null;
-  let submissionReceipt;
-
-  const shouldVerifyKey =
-    options.verifyLiveKey || (!options.dryRun && selected.urls.length > 0);
-
-  if (shouldVerifyKey) {
-    keyVerification = await verifyLiveKeyFile(config);
-    keyVerified = keyVerification.ok;
-    if (!keyVerification.ok && !options.dryRun && selected.urls.length > 0) {
-      warnings.push(
-        `Live IndexNow key file verification failed at ${config.keyLocation}: ${keyVerification.error}`
-      );
-      submissionReceipt = {
-        schemaVersion: 1,
-        timestamp: new Date().toISOString(),
-        variant: config.variant,
-        host: config.host,
-        mode: options.mode,
-        endpoint: config.endpoint,
-        keyLocation: config.keyLocation,
-        dryRun: false,
-        counts: {
-          submitted: 0,
-          planned: selected.urls.length,
-          batches: 0
-        },
-        batches: [],
-        sampleUrls: selected.urls.slice(0, 20),
-        outcome: 'failed'
-      };
-    }
-  }
-
-  if (!submissionReceipt) {
-    submissionReceipt = await submitToIndexNow({
-      config,
-      urls: selected.urls,
-      mode: options.mode,
-      dryRun: options.dryRun,
-      chunkSize: options.chunkSize
-    });
-  }
-
-  const receipt = {
-    ...submissionReceipt,
-    sitemapSource,
-    shardCount,
-    keyVerified,
-    keyVerification,
-    selection: {
-      totalCandidates: selected.totalCandidates,
-      truncatedCount: selected.truncatedCount,
-      cutoffDate: selected.cutoffDate ?? null,
-      diffCounts,
-      gitCoreCount
-    },
-    warnings
   };
 
-  if (options.receiptOut) {
-    writeJsonFile(options.receiptOut, receipt);
+  if (options.mode === 'snapshot') {
+    if (!options.out) throw new Error('--snapshot requires --out <file>');
+    try {
+      const snapshot = await fetchLiveSitemap(baseUrl, deps);
+      const outPath = path.resolve(options.out);
+      fs.mkdirSync(path.dirname(outPath), { recursive: true });
+      fs.writeFileSync(outPath, `${JSON.stringify(snapshot, null, 2)}\n`, 'utf8');
+      console.log(`[indexnow] snapshot variant=${options.variant} urls=${Object.keys(snapshot).length}`);
+      return 0;
+    } catch (error) {
+      return failOrWarn(`[indexnow] snapshot failed for ${baseUrl}: ${error.message}`);
+    }
   }
 
-  for (const warning of warnings) {
-    const prefix = options.softFail ? '::warning::' : '[indexnow] warning: ';
-    console.warn(`${prefix}${warning}`);
-  }
-
-  appendStepSummary(formatReceiptSummary(receipt));
-
-  console.log(
-    `[indexnow] variant=${receipt.variant} mode=${receipt.mode} outcome=${receipt.outcome} planned=${receipt.counts.planned} submitted=${receipt.counts.submitted} truncated=${receipt.selection.truncatedCount}`
-  );
-
-  if (receipt.outcome === 'failed') {
-    const errorMessage = `[indexnow] Submission failed for ${config.host}`;
-    if (options.softFail) {
-      console.warn(`::warning::${errorMessage}`);
+  let selected;
+  if (options.mode === 'diff') {
+    if (!options.outDir || !options.before) {
+      throw new Error('--diff requires --out-dir <dir> and --before <file>');
+    }
+    const beforePath = path.resolve(options.before);
+    if (!fs.existsSync(beforePath)) {
+      console.warn(`[indexnow] Missing pre-deploy snapshot ${beforePath}; skipping diff submission`);
       return 0;
     }
-    console.error(errorMessage);
-    return 1;
+    let before;
+    try {
+      before = JSON.parse(fs.readFileSync(beforePath, 'utf8'));
+    } catch (error) {
+      console.warn(`[indexnow] Unreadable pre-deploy snapshot ${beforePath} (${error.message}); skipping`);
+      return 0;
+    }
+    if (!before || typeof before !== 'object' || Array.isArray(before)) {
+      console.warn(`[indexnow] Invalid pre-deploy snapshot ${beforePath}; skipping`);
+      return 0;
+    }
+    const after = readLocalSitemap(options.outDir, baseUrl);
+    const diff = diffSitemaps(before, after);
+    selected = prioritizeAndCap(
+      [...diff.added, ...diff.modified, ...diff.removed],
+      host,
+      options.limit
+    );
+  } else {
+    const entries =
+      options.urls !== undefined
+        ? {}
+        : options.outDir
+          ? readLocalSitemap(options.outDir, baseUrl)
+          : await fetchLiveSitemap(baseUrl, deps);
+    selected = selectSubmitUrls({
+      since: options.since,
+      urls: options.urls,
+      entries,
+      host,
+      limit: options.limit
+    });
   }
 
-  return 0;
-}
+  const result = await postIndexNow({
+    host,
+    key,
+    keyLocation,
+    urls: selected.urls,
+    dryRun: options.dryRun,
+    ...deps
+  });
 
-async function main(argv = process.argv.slice(2)) {
-  const options = parseArgs(argv);
-  const config = resolveIndexNowConfig(options.variant);
-  if (!config) {
-    throw new Error(
-      `--variant must be a production site variant (cn or io); received "${options.variant || ''}"`
+  if (selected.truncated > 0) {
+    console.warn(
+      `[indexnow] truncated ${selected.truncated} URL(s) above limit=${options.limit} (total=${selected.total})`
     );
   }
-
-  if (options.snapshotLive) {
-    return runSnapshotMode(options, config);
+  console.log(
+    `[indexnow] variant=${options.variant} mode=${options.mode} status=${result.status} planned=${result.planned} submitted=${result.submitted} truncated=${selected.truncated}`
+  );
+  if (selected.urls.length) {
+    for (const sample of selected.urls.slice(0, 10)) {
+      console.log(`  - ${sample}`);
+    }
   }
-  return runSubmitMode(options, config);
+
+  if (result.status === 'failed') {
+    return failOrWarn(`[indexnow] submit failed for ${host}: ${result.error}`);
+  }
+  return 0;
 }
 
 if (require.main === module) {
-  main()
-    .then((code) => {
+  main().then(
+    (code) => {
       process.exitCode = code;
-    })
-    .catch((error) => {
-      const softFail = process.argv.includes('--soft-fail');
-      if (softFail) {
+    },
+    (error) => {
+      if (process.argv.includes('--soft-fail')) {
         console.warn(`::warning::[indexnow] ${error.message}`);
         process.exitCode = 0;
       } else {
         console.error(`[indexnow] ${error.message}`);
         process.exitCode = 1;
       }
-    });
+    }
+  );
 }
 
 module.exports = {
-  getGitChangedFiles,
+  INDEXNOW_ENDPOINT,
+  MAX_URLS_PER_BATCH,
+  diffSitemaps,
+  extractLastmods,
+  fetchLiveSitemap,
+  isEligibleUrl,
   main,
-  parseArgs
+  parseArgs,
+  postIndexNow,
+  prioritizeAndCap,
+  readLocalSitemap,
+  selectSubmitUrls,
+  withCacheBuster
 };

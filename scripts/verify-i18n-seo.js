@@ -15,7 +15,7 @@ const {
   getProductionBaseUrls,
   resolveSiteVariant
 } = require('./lib/site-variant');
-const { getConfiguredIndexNowKeys, resolveIndexNowConfig } = require('./lib/indexnow');
+const indexnowKeys = require('../src/config/indexnow.json');
 const { locales } = require('../src/config/site-routing.json');
 const guideRegistry = require('../src/content/guides/registry.json').entries;
 
@@ -226,36 +226,17 @@ function verifyRobotsFile() {
 }
 
 function verifyIndexNowKeyFile() {
-  const configuredKeys = new Set(getConfiguredIndexNowKeys());
-  const activeConfig = resolveIndexNowConfig(variant);
-
-  if (!activeConfig) {
-    for (const key of configuredKeys) {
+  for (const [owner, key] of Object.entries(indexnowKeys)) {
+    const keyPath = path.join(outDir, `${key}.txt`);
+    if (owner === variant) {
       assert(
-        !fs.existsSync(path.join(outDir, `${key}.txt`)),
-        `${variant} build must not emit IndexNow key file ${key}.txt`
+        fs.existsSync(keyPath) && fs.statSync(keyPath).isFile(),
+        `Missing IndexNow key file for ${variant}: ${key}.txt`
       );
+      assert.equal(fs.readFileSync(keyPath, 'utf8'), key, `IndexNow key ${key}.txt mismatch`);
+    } else {
+      assert(!fs.existsSync(keyPath), `${variant} build must not expose ${key}.txt`);
     }
-    return;
-  }
-
-  const keyFilePath = path.join(outDir, activeConfig.keyFileName);
-  assert(
-    fs.existsSync(keyFilePath) && fs.statSync(keyFilePath).isFile(),
-    `Missing IndexNow key file for ${variant}: ${activeConfig.keyFileName}`
-  );
-  assert.equal(
-    fs.readFileSync(keyFilePath, 'utf8'),
-    activeConfig.key,
-    `IndexNow key file ${activeConfig.keyFileName} contents must match exact key`
-  );
-
-  for (const key of configuredKeys) {
-    if (key === activeConfig.key) continue;
-    assert(
-      !fs.existsSync(path.join(outDir, `${key}.txt`)),
-      `${variant} build must not expose cross-variant IndexNow key file ${key}.txt`
-    );
   }
 }
 

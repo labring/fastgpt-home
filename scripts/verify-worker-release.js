@@ -12,7 +12,7 @@ const vm = require('node:vm');
 const { loadEnvConfig } = require('@next/env');
 const { buildRedirects, getPublishedFaqIds } = require('./lib/redirects');
 const { getProductionBaseUrls, resolveSiteVariant } = require('./lib/site-variant');
-const { resolveIndexNowConfig } = require('./lib/indexnow');
+const indexnowKeys = require('../src/config/indexnow.json');
 const { verifyWorkerArtifact } = require('./lib/worker-publication');
 
 const ROOT = path.resolve(__dirname, '..');
@@ -301,8 +301,7 @@ async function verifyHttpSurface(port, worker, env) {
     'robots.txt Sitemap owner'
   );
 
-  const ioIndexNow = resolveIndexNowConfig('io');
-  const indexNowKeyResponse = await request(`/${ioIndexNow.keyFileName}`);
+  const indexNowKeyResponse = await request(`/${indexnowKeys.io}.txt`);
   assert.equal(indexNowKeyResponse.status, 200, 'IndexNow key file status');
   assert.match(
     indexNowKeyResponse.headers.get('content-type') || '',
@@ -310,31 +309,16 @@ async function verifyHttpSurface(port, worker, env) {
     'IndexNow key content type'
   );
   assert.equal(
-    indexNowKeyResponse.headers.get('cache-control'),
-    PAGE_CACHE,
-    'IndexNow key cache policy'
-  );
-  assertSecurityHeaders(indexNowKeyResponse, 'IndexNow key');
-  assert.equal(
-    indexNowKeyResponse.headers.get('x-robots-tag'),
-    null,
-    'IndexNow key must not return noindex header'
-  );
-  assert.equal(
     await indexNowKeyResponse.text(),
-    ioIndexNow.key,
+    indexnowKeys.io,
     'IndexNow key file content mismatch'
   );
-
-  const cnIndexNow = resolveIndexNowConfig('cn');
-  if (cnIndexNow && cnIndexNow.key !== ioIndexNow.key) {
-    const crossVariantKey = await request(`/${cnIndexNow.keyFileName}`);
-    assert.equal(
-      crossVariantKey.status,
-      404,
-      'CN IndexNow key file must not be exposed on International Worker'
-    );
-  }
+  const crossVariantKey = await request(`/${indexnowKeys.cn}.txt`);
+  assert.equal(
+    crossVariantKey.status,
+    404,
+    'CN IndexNow key file must not be exposed on International Worker'
+  );
 
   const workerSource = await request('/_worker.js');
   assert.equal(

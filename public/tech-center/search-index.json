@@ -50808,5 +50808,275 @@
     "publicPath": "/reference/support-and-upgrade-baseline",
     "sourceType": "深度场景内容",
     "minutes": 5
+  },
+  {
+    "identity": "zh|/compare/dataset-shape-update-path",
+    "title": "文档与问答对：按资料形态组织企业知识",
+    "description": "文档与问答对：按资料形态组织企业知识 先看知识有没有必须保留的上下文 制度、合同和产品手册常有定义、例外与章节引用；一条常见问题则可能只需一段稳定解释。选择资料形态，应从这些关系出发。整理为问答条目可以帮助集中回答具体问题，保留完整文档则便于查看相邻条件，两者也可以共同使用。FastGPT检索所返回的片段是…",
+    "category": "compare",
+    "locale": "zh",
+    "publicPath": "/compare/dataset-shape-update-path",
+    "sourceType": "深度场景内容",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/compare/fastgpt-decision-matrix-07",
+    "title": "FastGPT 机房部署与私有云部署对照",
+    "description": "FastGPT 机房部署与私有云部署对照 先确认应用运行的位置 先把需要比较的两套方案画出来。一套由企业在自己的机房运行 FastGPT，另一套使用企业控制的私有云网络。两种方案都需要描述应用、数据库和文件存储的位置，以及用户从哪个网络入口到达。部署图应标出访问代理与管理入口，让团队能够追查员工用浏览器访问…",
+    "category": "compare",
+    "locale": "zh",
+    "publicPath": "/compare/fastgpt-decision-matrix-07",
+    "sourceType": "深度场景内容",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/compare/fastgpt-decision-matrix-08",
+    "title": "FastGPT 模型部署和调用路径矩阵",
+    "description": "FastGPT 模型部署和调用路径矩阵 为同一应用列出三种模型路径 先确定应用要处理的输入，例如根据内部手册回答问题，再通过企业接口查看设备状态。团队可以比较模型与应用在同一网络、模型走受控的远程端点，或按任务使用不同模型端点。评估时逐项登记问题、引用、对话上下文和业务记录可能出现在哪次调用。 按资源和访问…",
+    "category": "compare",
+    "locale": "zh",
+    "publicPath": "/compare/fastgpt-decision-matrix-08",
+    "sourceType": "深度场景内容",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/compare/fastgpt-decision-matrix-09",
+    "title": "FastGPT 社区版、商业版与云服务版选型",
+    "description": "FastGPT 社区版、商业版与云服务版选型 把采购要求写成能验证的任务 先列几项必须由应用完成的工作。例如研发组和售后组共用一个问答入口，但两组查看的手册不同。另一项可能是由企业维护运行环境，应用迁移时要能核对数据库和配置。每项要求都要写下具体任务、使用者和验证结果，采购人员才能沿同一清单比较安装方式、团…",
+    "category": "compare",
+    "locale": "zh",
+    "publicPath": "/compare/fastgpt-decision-matrix-09",
+    "sourceType": "深度场景内容",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/compare/fastgpt-decision-matrix-10",
+    "title": "FastGPT 业务查询、确认与提交矩阵",
+    "description": "FastGPT 业务查询、确认与提交矩阵 先把查询和写入列成不同动作 在订单变更场景，客服可能先查看这张订单能否修改，接着向客户确认修改内容，再向系统提交。查询只需要读取权限，提交需要写入权限和待变更字段。确认则需要把即将提交的字段让用户看清楚。把这几个动作及可能结果放进矩阵，才能安排每一步由谁执行。 查询…",
+    "category": "compare",
+    "locale": "zh",
+    "publicPath": "/compare/fastgpt-decision-matrix-10",
+    "sourceType": "深度场景内容",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/compare/fastgpt-decision-matrix-11",
+    "title": "FastGPT 文档复核的证据与规则矩阵",
+    "description": "FastGPT 文档复核的证据与规则矩阵 先区分材料和需要做出的结论 例如核对一份设备采购申请，原文写有型号、交付日期和说明附件。审核人需要知道字段是否齐全、引用的是哪一版流程，以及有例外时由谁确认。可以把核对拆成记录原文、找到参考规则、按明确条件分流和人工确认。每一个步骤都要能回到具体材料。 提取值先交给…",
+    "category": "compare",
+    "locale": "zh",
+    "publicPath": "/compare/fastgpt-decision-matrix-11",
+    "sourceType": "深度场景内容",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/compare/fastgpt-decision-matrix-12",
+    "title": "FastGPT 模板写作、文件制作与回写矩阵",
+    "description": "FastGPT 模板写作、文件制作与回写矩阵 把章节稿和最终文件分别定义 例如周度运行说明既要交一份有页眉和表格的文档，也要把说明摘要和存档地址写入记录系统。开工前列清哪些内容来自台账，哪些需要写作，哪些交给排版和保存工具。用下表安排责任，数据来源、章节稿、最终文件与受理结果各有检查对象。 保留数据和章节的…",
+    "category": "compare",
+    "locale": "zh",
+    "publicPath": "/compare/fastgpt-decision-matrix-12",
+    "sourceType": "深度场景内容",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/compare/fastgpt-knowledge-scope-by-audience-and-identity",
+    "title": "产品客服与员工问答：资料范围和访问身份怎样划分",
+    "description": "产品客服与员工问答：资料范围和访问身份怎样划分 服务对象决定能采用哪些资料 产品客服可能面向外部客户，员工问答通常服务内部人员，二者对资料适用性和可见范围的要求不同。一个入口能够检索文件，并不能说明这些文件都适合交给当前读者。规划时应列出问题类别、服务对象和资料维护人，再分别决定搜索范围与访问方式。分别记录…",
+    "category": "compare",
+    "locale": "zh",
+    "publicPath": "/compare/fastgpt-knowledge-scope-by-audience-and-identity",
+    "sourceType": "深度场景内容",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/compare/fastgpt-v4-17-4-change-dept-identity-monitoring",
+    "title": "复制应用还是增加流程分支：部门复用的判断矩阵",
+    "description": "复制应用还是增加流程分支：部门复用的判断矩阵 比较的是变更安排 多个部门使用相似应用时，独立保留一份流程与在共用流程中增加分支，是两种维护设计。选择应看差异是否稳定、由谁修改以及一次变更会影响哪些使用者。FastGPT 工作流可将节点编排成不同路径。先看各部门是否采用同一个处理顺序。把输入、资料、接口和输出…",
+    "category": "compare",
+    "locale": "zh",
+    "publicPath": "/compare/fastgpt-v4-17-4-change-dept-identity-monitoring",
+    "sourceType": "深度场景内容",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/compare/fastgpt-v4-17-4-task-decision-matrix",
+    "title": "知识问答与多步骤Agent：按输出和业务动作选择",
+    "description": "知识问答与多步骤Agent：按输出和业务动作选择 先写用户要拿到什么 用户希望理解一条制度，和希望提交一项申请，所需处理不同。前者通常以可核对的答复结束，后者还要将资料送到业务系统并查看受理结果。FastGPT 的工作流可把检索、交互和接口连接起来。先写清实际任务的结果与责任人，再判断需要哪些节点。 用任务…",
+    "category": "compare",
+    "locale": "zh",
+    "publicPath": "/compare/fastgpt-v4-17-4-task-decision-matrix",
+    "sourceType": "深度场景内容",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/compare/fastgpt-v4174-history-vs-live-data-source-monitoring",
+    "title": "知识库检索与业务接口查询：按资料和当前状态分工",
+    "description": "知识库检索与业务接口查询：按资料和当前状态分工 先判断问题问的是哪一种事实 用户问某项功能如何使用，通常需要产品资料；问某客户是否已经开通该功能，则需要当前业务记录。两个问题可能出现在同一次对话中，但来源的维护方式不同。FastGPT知识库搜索返回文档引用，HTTP请求可调用已有业务接口。先把问题拆成资料说…",
+    "category": "compare",
+    "locale": "zh",
+    "publicPath": "/compare/fastgpt-v4174-history-vs-live-data-source-monitoring",
+    "sourceType": "深度场景内容",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/compare/fastgpt-v4174-node-api-custom-code-boundary",
+    "title": "可视化编排与定制开发：按现有能力和接口缺口分工",
+    "description": "可视化编排与定制开发：按现有能力和接口缺口分工 从缺口清单确定工作量 团队已经有业务接口时，连接工作可能集中在字段映射和节点配置；如果接口尚未提供，或者登录身份无法传递，就还需要业务系统侧准备。可视化编排与定制开发能够共同完成任务，先让两侧负责人按现有工具和接口确认分工。先列已具备的输入、接口和工具，再把缺…",
+    "category": "compare",
+    "locale": "zh",
+    "publicPath": "/compare/fastgpt-v4174-node-api-custom-code-boundary",
+    "sourceType": "深度场景内容",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/guide/fastgpt-ai-agent-entry-guide",
+    "title": "智能体从哪里开始：FastGPT认知、搭建与验证入口",
+    "description": "智能体从哪里开始：FastGPT认知、搭建与验证入口 先选一个能说清结果的任务 智能体搭建可以从一个具体任务开始，例如回答产品手册问题，或者查询一条客户记录。先写下使用者会提供什么材料、希望拿到什么结果，再选择需要阅读的功能说明。FastGPT工作流把任务拆成有输入和输出的步骤，适合把检索、交互和接口调用连…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/fastgpt-ai-agent-entry-guide",
+    "sourceType": "深度场景内容",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/guide/fastgpt-v4-17-4-application-navigation",
+    "title": "产品客服与员工制度问答：按服务对象选择资料入口",
+    "description": "产品客服与员工制度问答：按服务对象选择资料入口 同样是问答，资料边界各不相同 产品客服需要回答型号、使用条件和故障处理；员工问答通常需要解释岗位、制度生效时间及办理材料。两者都能使用资料检索与回答组织，但应该采用哪些文件由服务对象决定。先列实际咨询问题，区分可公开手册与内部制度，再为每类问题找到维护人，避免…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/fastgpt-v4-17-4-application-navigation",
+    "sourceType": "深度场景内容",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/guide/fastgpt-v4-17-4-doc-input-retrieval-answer-source-navigation",
+    "title": "企业文档问答入口：从文件处理到引用原文",
+    "description": "企业文档问答入口：从文件处理到引用原文 先确认资料准备进入哪条路径 团队说要把PDF或Word做成问答，可能指长期维护的企业知识库，也可能指用户在某次对话中上传附件。两种路径需要的资料处理和保留方式不同。先确认文件是否持续更新、由谁维护以及服务哪些问题，再选择输入方式。FastGPT提供文件处理与知识库检索…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/fastgpt-v4-17-4-doc-input-retrieval-answer-source-navigation",
+    "sourceType": "深度场景内容",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/guide/fastgpt-v4-17-4-private-cloud-local-deployment-workflow-data-flow-monitoring",
+    "title": "私有部署与模型接入：先核位置、数据流和维护责任",
+    "description": "私有部署与模型接入：先核位置、数据流和维护责任 把部署位置和服务位置分开 私有部署需求常来自资料控制、已有算力或内部系统接入。决定应用放在哪里之前，先列出文件、数据库、模型和业务接口分别由谁提供。应用运行在企业服务器时，仍需查看实际模型请求经过哪些网络。FastGPT可采用自托管部署并配置模型服务，评估时应…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/fastgpt-v4-17-4-private-cloud-local-deployment-workflow-data-flow-monitoring",
+    "sourceType": "深度场景内容",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/guide/fastgpt-v4174-citation-traceability",
+    "title": "FastGPT 企业知识库引用与原文核对",
+    "description": "FastGPT 企业知识库引用与原文核对 企业问答验收应逐条核对文件版本、引用位置、回答中的条件，以及使用者能打开哪些原文。 用业务问题定义什么算有出处 例如员工想了解某类设备在停机维护时能否使用一款替换零件。资料负责人应先登记设备型号、手册版本、适用章节和限制条件，同时保留能引到维修说明的原始问题。回答将…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/fastgpt-v4174-citation-traceability",
+    "sourceType": "深度场景内容",
+    "minutes": 6
+  },
+  {
+    "identity": "zh|/guide/fastgpt-v4174-controlled-action-path",
+    "title": "在 FastGPT 接入已有模型和 CRM 审批接口",
+    "description": "在 FastGPT 接入已有模型和 CRM 审批接口 分别验证引用依据、用户确认、系统受理和审批结果。每个环节应当有可回查的记录和负责人。 先定义什么叫业务办理成功 处理合同资料里的服务变更时，客服先需要知道有哪些材料应提交，之后才向业务系统发出申请。开工前让负责受理的团队定义有哪些返回状态、哪一个字段能查…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/fastgpt-v4174-controlled-action-path",
+    "sourceType": "深度场景内容",
+    "minutes": 6
+  },
+  {
+    "identity": "zh|/guide/fastgpt-v4174-org-maintainer-resource-version-cost",
+    "title": "自己维护FastGPT应用：资料、资源与使用成本入口",
+    "description": "自己维护FastGPT应用：资料、资源与使用成本入口 把维护任务落到具体对象 应用上线后，资料、配置和外部服务仍会变化。知识库负责人更新文件，技术人员维护部署，业务系统团队调整接口，各自可能影响同一条回答。持续维护应先列对象与责任人，再安排检查节奏。FastGPT应用的日常工作可以沿资料处理、知识检索、模型…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/fastgpt-v4174-org-maintainer-resource-version-cost",
+    "sourceType": "深度场景内容",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/guide/fastgpt-v4174-private-deployment-maintenance-cost",
+    "title": "FastGPT 私有部署的维护分工与成本",
+    "description": "FastGPT 私有部署的维护分工与成本 私有部署的维护责任和投入，取决于实际运行的组件、跨网调用、备份恢复要求及采购约定。 画出实际运行边界 私有部署的讨论可以从两份记录开始，一份记服务部署位置，另一份记每次请求的实际调用。部署位置应包含用户访问入口、应用、存储、模型与业务接口，并标注哪些在自有机房、哪些…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/fastgpt-v4174-private-deployment-maintenance-cost",
+    "sourceType": "深度场景内容",
+    "minutes": 6
+  },
+  {
+    "identity": "zh|/guide/fastgpt-workflow-agent-build-reuse",
+    "title": "FastGPT 企业智能体搭建与复用",
+    "description": "FastGPT 企业智能体搭建与复用 先定义一个能验收的业务任务，再决定使用哪些节点。复用时核对字段、权限、接口和输出约定。 先把工单查询写成一项任务 以内部客服工单查询为例，使用者说想了解上次工单处理情况时，团队先明确“上次”按创建时间还是最近一次处理时间计算，工单来自哪个系统，当前使用者能看哪些记录。把…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/fastgpt-workflow-agent-build-reuse",
+    "sourceType": "深度场景内容",
+    "minutes": 6
+  },
+  {
+    "identity": "zh|/guide/fastgpt-workflow-data-form-approval-writeback",
+    "title": "连接CRM与审批系统：按查询、确认、提交选择入口",
+    "description": "连接CRM与审批系统：按查询、确认、提交选择入口 先区分要查资料还是办理业务 用户问客户当前服务状态，与申请一次变更，是两类任务。前者需要查询记录，后者还涉及业务权限、提交字段与受理结果。FastGPT工作流可以连接资料检索、交互节点和业务接口。应用应说明准备了什么、发送了哪项请求，以及业务系统实际受理到了…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/fastgpt-workflow-data-form-approval-writeback",
+    "sourceType": "深度场景内容",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/guide/fastgpt-workflow-reuse-branch-permission",
+    "title": "多部门复用FastGPT应用：资料、分支与权限入口",
+    "description": "多部门复用FastGPT应用：资料、分支与权限入口 把共享结构与部门变化列开 把客服应用用到人事部门前，先核对两边的工作步骤和资料范围。两边可能使用不同资料、人员身份和业务字段，回答的适用范围也不同。复用前把共同步骤和部门变化分别列出，例如都要检索文件，但文件集合与版本维护人各不相同。FastGPT的节点和…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/fastgpt-workflow-reuse-branch-permission",
+    "sourceType": "深度场景内容",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/guide/fastgpt-workflow-task-navigation-monitoring",
+    "title": "日报、文档审核与模板写作：按交付结果选择工作流",
+    "description": "日报、文档审核与模板写作：按交付结果选择工作流 先确定交付的是数据、文字还是文件 日报需要口径清楚的数字与说明，合同审核需要原文及待确认差异，模板写作需要章节与资料对应。三类任务各自准备输入，日报用接口字段，审核用文档和参考规则，写作用章节及相关资料。先列最终读者要检查什么，再选择输入和输出。FastGPT…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/fastgpt-workflow-task-navigation-monitoring",
+    "sourceType": "深度场景内容",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/reference/fastgpt-review-log-01",
+    "title": "知识库问答的预期来源与实际引用记录",
+    "description": "知识库问答的预期来源与实际引用记录 先登记应该找到的资料 从实际问答任务挑一个可以用原文判定的问题，例如核对某个型号的操作条件。测试前写下问题、对象、适用文件和文件版本。保留应该引用的段落或章节号，方便其他人复核。遇到有两份文件适用的任务，把各自解释的内容分开登记。确实没有资料覆盖的问题也可以单独保留，用来…",
+    "category": "reference",
+    "locale": "zh",
+    "publicPath": "/reference/fastgpt-review-log-01",
+    "sourceType": "深度场景内容",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/reference/fastgpt-review-log-02",
+    "title": "FastGPT 私有部署的数据路径记录",
+    "description": "FastGPT 私有部署的数据路径记录 从请求入口画到实际服务 先记录这次核对的应用、环境和入口，再画出使用者怎样到达 FastGPT。把代理、应用、业务数据库、向量存储和保存原始文件的服务按实际位置标在图上。每个环境单独画一张，避免把测试环境接入的解析服务当作生产条件。团队可以参考Docker Compo…",
+    "category": "reference",
+    "locale": "zh",
+    "publicPath": "/reference/fastgpt-review-log-02",
+    "sourceType": "深度场景内容",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/reference/fastgpt-review-log-03",
+    "title": "工作流请求、返回与业务受理记录",
+    "description": "工作流请求、返回与业务受理记录 确定一条业务动作的起点 选一个已确定受理接口的任务，例如提交设备借用申请。先对照业务系统的字段清单，标明哪些由申请人确认，哪些由当前身份或系统记录提供。可通过表单输入收集需确认的信息，提交前核对读取的值和展示给申请人的值。若业务对象允许修改，记录修改后的字段来源，再发出请求。…",
+    "category": "reference",
+    "locale": "zh",
+    "publicPath": "/reference/fastgpt-review-log-03",
+    "sourceType": "深度场景内容",
+    "minutes": 3
   }
 ]

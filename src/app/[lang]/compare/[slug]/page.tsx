@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import { notFound } from 'next/navigation';
 import { ComparisonRoute, getComparisonMetadata } from '@/components/compare/ComparisonRoute';
 import { comparisonSlugs } from '@/content/competitor';
 import TechArticleRoute, {
@@ -14,13 +13,12 @@ export default async function CompetitorComparisonPage({
 }) {
   const { lang, slug } = await params;
   const langName = lang || 'zh';
-  if (langName !== 'zh') notFound();
-  if (!comparisonSlugs.some((comparisonSlug) => comparisonSlug === slug)) {
-    return TechArticleRoute({
-      params: Promise.resolve({ lang: langName, section: 'compare', slug })
-    });
+  if (langName === 'zh' && comparisonSlugs.some((comparisonSlug) => comparisonSlug === slug)) {
+    return <ComparisonRoute locale="zh" slug={slug} />;
   }
-  return <ComparisonRoute locale="zh" slug={slug} />;
+  return TechArticleRoute({
+    params: Promise.resolve({ lang: langName, section: 'compare', slug })
+  });
 }
 
 export async function generateStaticParams() {
@@ -39,13 +37,10 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang, slug } = await params;
   const langName = lang || 'zh';
-  if (langName !== 'zh') {
-    return { title: 'Comparison page not found', robots: { index: false, follow: false } };
+  if (langName === 'zh' && comparisonSlugs.some((comparisonSlug) => comparisonSlug === slug)) {
+    return getComparisonMetadata('zh', slug, { indexable: false });
   }
-  if (!comparisonSlugs.some((comparisonSlug) => comparisonSlug === slug)) {
-    return generateTechArticleMetadata({
-      params: Promise.resolve({ lang: langName, section: 'compare', slug })
-    });
-  }
-  return getComparisonMetadata('zh', slug, { indexable: false });
+  return generateTechArticleMetadata({
+    params: Promise.resolve({ lang: langName, section: 'compare', slug })
+  });
 }

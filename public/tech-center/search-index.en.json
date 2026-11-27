@@ -8068,5 +8068,275 @@
     "publicPath": "/guide/vendor-support-in-project-acceptance",
     "sourceType": "深度场景内容",
     "minutes": 22
+  },
+  {
+    "identity": "en|/compare/dataset-shape-update-path",
+    "title": "Full Documents and Question-Answer Entries in FastGPT",
+    "description": "Full Documents and Question-Answer Entries in FastGPT Identify the context that must stay together Policies, contracts and manuals often contain definitio…",
+    "category": "compare",
+    "locale": "en",
+    "publicPath": "/compare/dataset-shape-update-path",
+    "sourceType": "深度场景内容",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/compare/fastgpt-decision-matrix-07",
+    "title": "FastGPT On-Site and Private Cloud Deployment Matrix",
+    "description": "FastGPT On-Site and Private Cloud Deployment Matrix Locate the application first Draw both proposed environments. In one, the company runs FastGPT in its…",
+    "category": "compare",
+    "locale": "en",
+    "publicPath": "/compare/fastgpt-decision-matrix-07",
+    "sourceType": "深度场景内容",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/compare/fastgpt-decision-matrix-08",
+    "title": "FastGPT Model Hosting and Request Path Matrix",
+    "description": "FastGPT Model Hosting and Request Path Matrix List three model paths for one application Define what the application handles, such as answering from an in…",
+    "category": "compare",
+    "locale": "en",
+    "publicPath": "/compare/fastgpt-decision-matrix-08",
+    "sourceType": "深度场景内容",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/compare/fastgpt-decision-matrix-09",
+    "title": "FastGPT Community, Commercial and Cloud Edition Matrix",
+    "description": "FastGPT Community, Commercial and Cloud Edition Matrix Turn requirements into testable tasks List the required tasks first. Engineering and support might…",
+    "category": "compare",
+    "locale": "en",
+    "publicPath": "/compare/fastgpt-decision-matrix-09",
+    "sourceType": "深度场景内容",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/compare/fastgpt-decision-matrix-10",
+    "title": "FastGPT Lookup, Confirmation and Submission Matrix",
+    "description": "FastGPT Lookup, Confirmation and Submission Matrix List lookups and writes as distinct operations For an order change, a support worker might first look u…",
+    "category": "compare",
+    "locale": "en",
+    "publicPath": "/compare/fastgpt-decision-matrix-10",
+    "sourceType": "深度场景内容",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/compare/fastgpt-decision-matrix-11",
+    "title": "FastGPT Document Evidence and Rule Review Matrix",
+    "description": "FastGPT Document Evidence and Rule Review Matrix Start with the material and required decisions For a purchase request, the source may list a model, deliv…",
+    "category": "compare",
+    "locale": "en",
+    "publicPath": "/compare/fastgpt-decision-matrix-11",
+    "sourceType": "深度场景内容",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/compare/fastgpt-decision-matrix-12",
+    "title": "FastGPT Drafting, File Production and Write-Back Matrix",
+    "description": "FastGPT Drafting, File Production and Write-Back Matrix Define the section draft and final file separately A weekly operations summary may need both a for…",
+    "category": "compare",
+    "locale": "en",
+    "publicPath": "/compare/fastgpt-decision-matrix-12",
+    "sourceType": "深度场景内容",
+    "minutes": 7
+  },
+  {
+    "identity": "en|/compare/fastgpt-knowledge-scope-by-audience-and-identity",
+    "title": "Source Scope for FastGPT Support and Employee Answers",
+    "description": "Source Scope for FastGPT Support and Employee Answers Let the audience determine source eligibility Product support may serve external customers, while em…",
+    "category": "compare",
+    "locale": "en",
+    "publicPath": "/compare/fastgpt-knowledge-scope-by-audience-and-identity",
+    "sourceType": "深度场景内容",
+    "minutes": 7
+  },
+  {
+    "identity": "en|/compare/fastgpt-v4-17-4-change-dept-identity-monitoring",
+    "title": "Copy Applications or Add Workflow Branches in FastGPT",
+    "description": "Copy Applications or Add Workflow Branches in FastGPT Compare the arrangements for change When departments use similar applications, separate workflows an…",
+    "category": "compare",
+    "locale": "en",
+    "publicPath": "/compare/fastgpt-v4-17-4-change-dept-identity-monitoring",
+    "sourceType": "深度场景内容",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/compare/fastgpt-v4-17-4-task-decision-matrix",
+    "title": "Knowledge Answers or Multi-Step Agents in FastGPT",
+    "description": "Knowledge Answers or Multi-Step Agents in FastGPT Define the result the user needs Understanding a policy and submitting an application require different…",
+    "category": "compare",
+    "locale": "en",
+    "publicPath": "/compare/fastgpt-v4-17-4-task-decision-matrix",
+    "sourceType": "深度场景内容",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/compare/fastgpt-v4174-history-vs-live-data-source-monitoring",
+    "title": "Knowledge Retrieval and Business APIs in FastGPT",
+    "description": "Knowledge Retrieval and Business APIs in FastGPT Identify the kind of fact being requested A question about using a feature usually needs product document…",
+    "category": "compare",
+    "locale": "en",
+    "publicPath": "/compare/fastgpt-v4174-history-vs-live-data-source-monitoring",
+    "sourceType": "深度场景内容",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/compare/fastgpt-v4174-node-api-custom-code-boundary",
+    "title": "FastGPT Workflow Configuration and Custom Development",
+    "description": "FastGPT Workflow Configuration and Custom Development Use a gap inventory to define the work An existing business API may leave mainly field mapping and n…",
+    "category": "compare",
+    "locale": "en",
+    "publicPath": "/compare/fastgpt-v4174-node-api-custom-code-boundary",
+    "sourceType": "深度场景内容",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/guide/fastgpt-ai-agent-entry-guide",
+    "title": "Where to Start Building an Agent with FastGPT",
+    "description": "Where to Start Building an Agent with FastGPT Start with a task that has a clear result An agent can begin with a concrete task, such as answering a produ…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/fastgpt-ai-agent-entry-guide",
+    "sourceType": "深度场景内容",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/guide/fastgpt-v4-17-4-application-navigation",
+    "title": "FastGPT for Product Support and Policy Questions",
+    "description": "FastGPT for Product Support and Policy Questions Define the audience before arranging answers Product support answers depend on models, operating conditio…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/fastgpt-v4-17-4-application-navigation",
+    "sourceType": "深度场景内容",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/guide/fastgpt-v4-17-4-doc-input-retrieval-answer-source-navigation",
+    "title": "FastGPT File Handling and Citation Guide",
+    "description": "FastGPT File Handling and Citation Guide Choose the document path first Turning PDFs or Word files into a question-answering application can mean maintain…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/fastgpt-v4-17-4-doc-input-retrieval-answer-source-navigation",
+    "sourceType": "深度场景内容",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/guide/fastgpt-v4-17-4-private-cloud-local-deployment-workflow-data-flow-monitoring",
+    "title": "FastGPT Deployment and Model Integration",
+    "description": "FastGPT Deployment and Model Integration Distinguish application hosting from service locations Private deployment can be motivated by document control, e…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/fastgpt-v4-17-4-private-cloud-local-deployment-workflow-data-flow-monitoring",
+    "sourceType": "深度场景内容",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/guide/fastgpt-v4174-citation-traceability",
+    "title": "Traceable Knowledge Base Answers in FastGPT",
+    "description": "Traceable Knowledge Base Answers in FastGPT Verify knowledge base answers against the file version, cited passage, conditions in the answer, and the sourc…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/fastgpt-v4174-citation-traceability",
+    "sourceType": "深度场景内容",
+    "minutes": 17
+  },
+  {
+    "identity": "en|/guide/fastgpt-v4174-controlled-action-path",
+    "title": "Connect Existing Models and CRM Approvals in FastGPT",
+    "description": "Connect Existing Models and CRM Approvals in FastGPT Verify source evidence, user confirmation, system receipt, and approval separately. Each step should…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/fastgpt-v4174-controlled-action-path",
+    "sourceType": "深度场景内容",
+    "minutes": 18
+  },
+  {
+    "identity": "en|/guide/fastgpt-v4174-org-maintainer-resource-version-cost",
+    "title": "FastGPT Application Maintenance and Cost Review",
+    "description": "FastGPT Application Maintenance and Cost Review Give each maintenance task a concrete object Documents, configurations and external services continue to c…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/fastgpt-v4174-org-maintainer-resource-version-cost",
+    "sourceType": "深度场景内容",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/guide/fastgpt-v4174-private-deployment-maintenance-cost",
+    "title": "Who Maintains a Private FastGPT Deployment?",
+    "description": "Who Maintains a Private FastGPT Deployment? Maintenance and operating costs in a private deployment follow the running components, network paths, recovery…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/fastgpt-v4174-private-deployment-maintenance-cost",
+    "sourceType": "深度场景内容",
+    "minutes": 18
+  },
+  {
+    "identity": "en|/guide/fastgpt-workflow-agent-build-reuse",
+    "title": "Build and Reuse Enterprise Agents in FastGPT",
+    "description": "Build and Reuse Enterprise Agents in FastGPT Define one business task with an observable result. Then choose its nodes and check fields, permissions, inte…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/fastgpt-workflow-agent-build-reuse",
+    "sourceType": "深度场景内容",
+    "minutes": 16
+  },
+  {
+    "identity": "en|/guide/fastgpt-workflow-data-form-approval-writeback",
+    "title": "Connect FastGPT to CRM and Approval Systems",
+    "description": "Connect FastGPT to CRM and Approval Systems Distinguish information requests from business actions Asking for a customer’s current service status differs…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/fastgpt-workflow-data-form-approval-writeback",
+    "sourceType": "深度场景内容",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/guide/fastgpt-workflow-reuse-branch-permission",
+    "title": "Reusing FastGPT Across Departments",
+    "description": "Reusing FastGPT Across Departments Separate shared structure from departmental changes Before reusing a support application in HR, check each department’s…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/fastgpt-workflow-reuse-branch-permission",
+    "sourceType": "深度场景内容",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/guide/fastgpt-workflow-task-navigation-monitoring",
+    "title": "FastGPT for Reports, Review and Template Drafting",
+    "description": "FastGPT for Reports, Review and Template Drafting Identify the intended deliverable An operating report needs defined figures and commentary. Contract rev…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/fastgpt-workflow-task-navigation-monitoring",
+    "sourceType": "深度场景内容",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/reference/fastgpt-review-log-01",
+    "title": "Knowledge Base Answer and Citation Review Log",
+    "description": "Knowledge Base Answer and Citation Review Log Record the expected material first Choose a real question whose answer can be checked against a source, such…",
+    "category": "reference",
+    "locale": "en",
+    "publicPath": "/reference/fastgpt-review-log-01",
+    "sourceType": "深度场景内容",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/reference/fastgpt-review-log-02",
+    "title": "FastGPT Self-Hosted Deployment Data Path Log",
+    "description": "FastGPT Self-Hosted Deployment Data Path Log Start at the request entry point Record the application, environment and entry point, then map how people rea…",
+    "category": "reference",
+    "locale": "en",
+    "publicPath": "/reference/fastgpt-review-log-02",
+    "sourceType": "深度场景内容",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/reference/fastgpt-review-log-03",
+    "title": "Workflow Request, Response and Business Receipt Log",
+    "description": "Workflow Request, Response and Business Receipt Log Define the start of a business action Choose a task with an identified receiving API, such as submitti…",
+    "category": "reference",
+    "locale": "en",
+    "publicPath": "/reference/fastgpt-review-log-03",
+    "sourceType": "深度场景内容",
+    "minutes": 6
   }
 ]
